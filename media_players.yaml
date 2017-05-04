@@ -1,0 +1,15 @@
+- platform: samsungtv
+  host: 10.0.220.3
+  port: 55000
+  mac: !secret samsung_tv_mac_address
+
+
+# - platform: cast
+
+- platform: yamaha
+  host: 10.0.221.23
+
+- platform: kodi
+  host: 10.0.221.25
+  username: !secret kodi_username
+  password: !secret kodi_password

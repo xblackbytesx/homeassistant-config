@@ -1,0 +1,56 @@
+# Vieuws
+default_view:
+  view: yes
+  name: Home
+  entities:
+    - group.living_room
+    - group.hallway
+    - camera.foscam_camera
+    - media_player.kodi
+    - media_player.yamaha_receiver
+
+ground_floor_view:
+  view: yes
+  name: Ground floor
+  entities:
+    - group.living_room
+    - group.hallway
+    - group.all_ground_floor_lights
+
+security_view:
+  view: yes
+  name: Security
+  entities:
+    - camera.foscam_camera
+    - camera.xiaofang1
+
+# Groups
+living_room:
+  name: Living room
+  entities:
+    - light.kitchen
+    - light.sitting_area
+    - climate.living_room
+
+hallway:
+  name: Hallway
+  entities:
+    - light.hallway
+
+all_ground_floor_lights:
+  name: All ground floor lights
+  entities:
+    - light.hue__bulb__kitchen_table__l
+    - light.hue__bulb__kitchen_table__r
+    - light.hue__bulb__standing_lamp
+    - light.hue__iris__tv_cabinet
+    - light.innr__downstairs__hallway
+
+hidden_crap:
+  name: Hidden crap
+  entities:
+    - light.kitchen_do_not_use
+    - light.living_room_do_not_use
+    - light.downstairs_hallway_do_not_use
+    - light.living_room
+    - group.living_room
