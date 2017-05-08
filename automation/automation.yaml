@@ -1,7 +1,7 @@
 - alias: Turn on the hallway light when there is movement
   trigger:
     platform: state
-    entity_id: sensor.livingroom_motion
+    entity_id: sensor.motion_in_hallwaystairs
     state: 'on'
   action:
     service: homeassistant.turn_on
@@ -10,7 +10,7 @@
 - alias: Turn off the hallway light 2 minutes after last movement
   trigger:
     platform: state
-    entity_id: sensor.livingroom_motion
+    entity_id: sensor.motion_in_hallwaystairs
     state: 'off'
     for:
       minutes: 2
