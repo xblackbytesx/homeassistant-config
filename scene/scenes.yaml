@@ -1,0 +1,15 @@
+- name: Sitting area normal
+  entities:
+    light.sitting_area:
+      state: on
+      transition: 2
+      brightness: 150
+      xy_color: [ 0.4448, 0.4066 ]
+
+- name: Sitting area dim
+  entities:
+    light.sitting_area:
+      state: on
+      transition: 2
+      brightness: 75
+      xy_color: [ 0.5926, 0.3814 ]

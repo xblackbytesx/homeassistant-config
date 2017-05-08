@@ -3,6 +3,7 @@ living_room_lighting:
   entities:
     - light.kitchen
     - light.sitting_area
+    - scene.sitting_area_dim
 
 living_room_climate:
   name: Living room climate
