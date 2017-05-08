@@ -44,31 +44,22 @@ logbook:
 # Track the sun
 sun:
 
-sensor: !include sensors.yaml
-
-notify:
-  - name: Pushbullet
-    platform: pushbullet
-    api_key: !secret pushbullet_api_key
-
 light:
   platform: hue
   host: 10.0.221.30
 
 nest:
-  client_id: !secret nest_client_id 
-  client_secret: !secret nest_client_secret 
-
-media_player: !include media_players.yaml
-
-camera: !include cameras.yaml
-
-# mqtt: !include mqtt/hass.yaml
-
-automation: !include automation.yaml
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
 
 # Text to speech
 tts:
   platform: google
 
-group: !include groups.yaml
+# mqtt: !include mqtt/hass.yaml
+automation: !include automation/automation.yaml
+sensor: !include_dir_merge_list sensor/
+notify: !include_dir_merge_list notify/
+media_player: !include_dir_merge_list media_players/
+camera: !include_dir_merge_list camera/
+group: !include_dir_merge_named layout/

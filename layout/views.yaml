@@ -1,0 +1,29 @@
+default_view:
+  view: yes
+  name: Home
+  entities:
+    - group.living_room_lighting
+    - group.hallway_lighting
+    - group.living_room_climate
+    - group.automation
+    - group.exterior
+    - group.internet_health_check
+    - camera.foscam_camera
+    - media_player.kodi
+    - media_player.yamaha_receiver
+    - sensor.motion_in_hallwaystairs
+
+ground_floor_view:
+  view: yes
+  name: Ground floor
+  entities:
+    - group.living_room_lighting
+    - group.hallway_lighting
+    - group.all_ground_floor_lights
+
+security_view:
+  view: yes
+  name: Security
+  entities:
+    - camera.foscam_camera
+    - camera.xiaofang1
