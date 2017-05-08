@@ -1,0 +1,6 @@
+# Motion sensor
+- platform: rest
+  resource: !secret hallway_stairs_motion_url
+  value_template: '{{ value_json.state.status }}'
+  scan_interval: 2
+  name: 'Motion in hallway/stairs'
