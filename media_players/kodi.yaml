@@ -1,0 +1,4 @@
+- platform: kodi
+  host: 10.0.221.25
+  username: !secret kodi_username
+  password: !secret kodi_password

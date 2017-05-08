@@ -1,0 +1,20 @@
+# Lightlevel sensor
+- platform: rest
+  resource: !secret hallway_stairs_lux_url
+  value_template: '{{ (10 ** (float(value_json.state.lightlevel - 1) / 10000))|round(1) }}'
+  unit_of_measurement: Lux
+  name: 'Illumination in hallway/stairs'
+
+# Temperature sensor
+- platform: rest
+  resource: !secret hallway_stairs_temp_url
+  value_template: '{{ value_json.state.temperature | float / 100 }}'
+  unit_of_measurement: °C
+  name: 'Temperature in hallway/stairs'
+
+# Motion sensor
+- platform: rest
+  resource: !secret hallway_stairs_motion_url
+  value_template: '{{ value_json.state.status }}'
+  scan_interval: 2
+  name: 'Motion in hallway/stairs'
