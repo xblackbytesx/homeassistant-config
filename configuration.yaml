@@ -44,7 +44,7 @@ logbook:
 # Track the sun
 sun:
 
-# sensor: !include_dir_list sensor
+sensor: !include sensors.yaml
 
 notify:
   - name: Pushbullet
@@ -61,12 +61,11 @@ nest:
 
 media_player: !include media_players.yaml
 
-ffmpeg:
-  ffmpeg_bin: /usr/bin/ffmpeg
-
 camera: !include cameras.yaml
 
 # mqtt: !include mqtt/hass.yaml
+
+automation: !include automation.yaml
 
 # Text to speech
 tts:

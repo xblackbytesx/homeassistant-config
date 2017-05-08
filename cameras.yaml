@@ -3,7 +3,21 @@
   username: !secret foscam1_username
   password: !secret foscam1_password
 
+# - platform: ffmpeg
+#   ffmpeg_bin: /usr/bin/ffmpeg
+#   name: XiaoFang1
+#   input: -rtsp_transport tcp -i rtsp://10.0.221.34/unicast
+#   extra_arguments: -q:v 2-32
+
 - platform: ffmpeg
-  name: XiaoFang1
   input: -rtsp_transport tcp -i rtsp://10.0.221.34/unicast
-  extra_arguments: -pred 1
+  name: XiaoFang1
+  ffmpeg_bin: /usr/bin/ffmpeg
+  extra_arguments: -q:v 2-32
+
+- platform: synology
+  url: https://10.0.221.20:5001
+  username: !secret synology_username
+  password: !secret synology_password
+  timeout: 15
+  verify_ssl: False

@@ -3,18 +3,23 @@ default_view:
   view: yes
   name: Home
   entities:
-    - group.living_room
-    - group.hallway
+    - group.living_room_lighting
+    - group.hallway_lighting
+    - group.living_room_climate
+    - group.automation
+    - group.exterior
+    - group.internet_health_check
     - camera.foscam_camera
     - media_player.kodi
     - media_player.yamaha_receiver
+    - sensor.motion_in_hallwaystairs
 
 ground_floor_view:
   view: yes
   name: Ground floor
   entities:
-    - group.living_room
-    - group.hallway
+    - group.living_room_lighting
+    - group.hallway_lighting
     - group.all_ground_floor_lights
 
 security_view:
@@ -24,16 +29,33 @@ security_view:
     - camera.foscam_camera
     - camera.xiaofang1
 
+
 # Groups
-living_room:
-  name: Living room
+living_room_lighting:
+  name: Living room lighting
   entities:
     - light.kitchen
     - light.sitting_area
-    - climate.living_room
 
-hallway:
-  name: Hallway
+living_room_climate:
+  name: Living room climate
+  entities:
+    - climate.living_room
+    - sensor.temperature_in_hallwaydoor
+    - sensor.temperature_in_hallwaystairs
+    - sensor.temperature_in_sitting_area
+    - sensor.illumination_in_hallwaydoor
+    - sensor.illumination_in_hallwaystairs
+    - sensor.illumination_in_sitting_area
+
+media_players:
+  name: Media player
+  entities:
+    - media_player.kodi
+    - media_player.yamaha_receiver
+
+hallway_lighting:
+  name: Hallway lighting
   entities:
     - light.hallway
 
@@ -45,6 +67,27 @@ all_ground_floor_lights:
     - light.hue__bulb__standing_lamp
     - light.hue__iris__tv_cabinet
     - light.innr__downstairs__hallway
+
+internet_health_check:
+  name: Internet health check
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+
+automation:
+  name: Automation
+  entities:
+    - automation.turn_off_the_hallway_light_2_minutes_after_last_movement
+    - automation.turn_on_the_hallway_light_when_there_is_movement
+
+exterior:
+  name: Exterior
+  entities:
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_apparent_temperature
+    - sensor.dark_sky_wind_speed
 
 hidden_crap:
   name: Hidden crap
