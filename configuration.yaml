@@ -57,9 +57,10 @@ tts:
   platform: google
 
 # mqtt: !include mqtt/hass.yaml
-automation: !include automation/automation.yaml
+automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/
 notify: !include_dir_merge_list notify/
 media_player: !include_dir_merge_list media_players/
 camera: !include_dir_merge_list camera/
 group: !include_dir_merge_named layout/
+scene: !include_dir_merge_list scene/

@@ -1,4 +1,4 @@
-- platform: foscam
-  ip: 10.0.221.32
-  username: !secret foscam1_username
-  password: !secret foscam1_password
+# - platform: foscam
+#   ip: 10.0.221.32
+#   username: !secret foscam1_username
+#   password: !secret foscam1_password

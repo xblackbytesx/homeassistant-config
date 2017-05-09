@@ -8,10 +8,11 @@ default_view:
     - group.automation
     - group.exterior
     - group.internet_health_check
-    - camera.foscam_camera
     - media_player.kodi
     - media_player.yamaha_receiver
     - sensor.motion_in_hallwaystairs
+    - sensor.motion_in_hallwaydoor
+    - sensor.motion_in_sitting_area
 
 ground_floor_view:
   view: yes
@@ -25,5 +26,6 @@ security_view:
   view: yes
   name: Security
   entities:
-    - camera.foscam_camera
+    - camera.foscam1
     - camera.xiaofang1
+    - camera.xiaofang2
