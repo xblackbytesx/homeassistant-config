@@ -11,6 +11,8 @@ default_view:
     - media_player.kodi
     - media_player.yamaha_receiver
     - sensor.motion_in_hallwaystairs
+    - sensor.motion_in_hallwaydoor
+    - sensor.motion_in_sitting_area
 
 ground_floor_view:
   view: yes
