@@ -2,7 +2,7 @@
   trigger:
     platform: state
     entity_id: sensor.motion_in_hallwaystairs
-    state: 'on'
+    state: '1'
   action:
     service: homeassistant.turn_on
     entity_id: light.hallway
@@ -11,7 +11,7 @@
   trigger:
     platform: state
     entity_id: sensor.motion_in_hallwaystairs
-    state: 'off'
+    state: '0'
     for:
       minutes: 2
   action:
