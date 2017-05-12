@@ -49,8 +49,8 @@ automation:
     - automation.turn_on_the_hallway_light_when_there_is_movement_and_its_dark
     - automation.turn_off_the_hallway_light_5_minutes_after_last_movement
     - automation.turn_on_the_living_room_lights_when_there_is_movement_and_its_dark
-    - automation.turn_off_the_living_room_lights_10_minutes_after_last_movement
     - automation.if_motion_continuously_active_set_a_timer_to_check_for_lux
+    - automation.turn_off_the_living_room_lights_10_minutes_after_last_movement
 
 exterior:
   name: Exterior
