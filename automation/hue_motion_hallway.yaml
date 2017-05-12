@@ -13,10 +13,10 @@
   action:
     - service: homeassistant.turn_on
       entity_id: light.hallway
-    - service: notify.pushbullet
-      data_template:
-        title: "Home Assistant"
-        message: "Hallway turned on with lux {{ states.sensor.illumination_in_hallwaystairs.state }}"
+    # - service: notify.pushbullet
+    #   data_template:
+    #     title: "Home Assistant"
+    #     message: "Hallway turned on with lux {{ states.sensor.illumination_in_hallwaystairs.state }}"
 
 - alias: Turn off the hallway light 5 minutes after last movement
   trigger:
@@ -33,7 +33,7 @@
   action:
     - service: homeassistant.turn_off
       entity_id: light.hallway
-    - service: notify.pushbullet
-      data:
-        title: "Home Assistent"
-        message: "Hallway turned off after 5 minutes."
+    # - service: notify.pushbullet
+    #   data:
+    #     title: "Home Assistent"
+    #     message: "Hallway turned off after 5 minutes."
