@@ -5,6 +5,16 @@ living_room_lighting:
     - light.sitting_area
     - scene.sitting_area_dim
 
+corridor_lighting:
+  name: Corridor lighting
+  entities:
+    - light.corridor
+
+master_bedroom_lighting:
+  name: Master Bedroom lighting
+  entities:
+    - light.master_bedroom
+
 living_room_climate:
   name: Living room climate
   entities:
@@ -35,6 +45,12 @@ all_ground_floor_lights:
     - light.hue__bulb__standing_lamp
     - light.hue__iris__tv_cabinet
     - light.innr__downstairs__hallway
+
+all_first_floor_lights:
+  name: All first floor lights
+  entities:
+    - light.innr__corridor
+    - light.innr__master_bedroom
 
 internet_health_check:
   name: Internet health check

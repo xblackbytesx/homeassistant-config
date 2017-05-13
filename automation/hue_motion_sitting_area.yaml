@@ -6,7 +6,7 @@
   condition:
     condition: numeric_state
     entity_id: sensor.illumination_in_sitting_area
-    below: 15
+    below: 18
   action:
     service: homeassistant.turn_on
     entity_id: light.living_room
@@ -24,7 +24,7 @@
         state: '1'
       - condition: numeric_state
         entity_id: sensor.illumination_in_sitting_area
-        below: 15
+        below: 18
       - condition: state
         entity_id: light.living_room
         state: 'off'
