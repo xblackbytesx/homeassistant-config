@@ -9,7 +9,7 @@
   condition:
     condition: numeric_state
     entity_id: sensor.illumination_in_hallwaystairs
-    below: 15
+    below: 18
   action:
     - service: homeassistant.turn_on
       entity_id: light.hallway

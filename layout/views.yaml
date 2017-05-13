@@ -22,6 +22,14 @@ ground_floor_view:
     - group.hallway_lighting
     - group.all_ground_floor_lights
 
+first_floor_view:
+  view: yes
+  name: First Floor
+  entities:
+    - group.master_bedroom_lighting
+    - group.corridor_lighting
+    - group.all_first_floor_lights
+
 security_view:
   view: yes
   name: Security
