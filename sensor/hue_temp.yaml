@@ -18,3 +18,10 @@
   value_template: '{{ value_json.state.temperature | float / 100 }}'
   unit_of_measurement: °C
   name: 'Temperature in sitting area'
+
+# Temperature sensor
+- platform: rest
+  resource: !secret corridor_temp_url
+  value_template: '{{ value_json.state.temperature | float / 100 }}'
+  unit_of_measurement: °C
+  name: 'Temperature in corridor'

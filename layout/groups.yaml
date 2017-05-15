@@ -26,6 +26,12 @@ living_room_climate:
     - sensor.illumination_in_hallwaystairs
     - sensor.illumination_in_sitting_area
 
+first_floor_climate:
+  name: First floor climate
+  entities:
+    - sensor.temperature_in_corridor
+    - sensor.illumination_in_corridor
+
 media_players:
   name: Media player
   entities:
@@ -67,6 +73,8 @@ automation:
     - automation.turn_on_the_living_room_lights_when_there_is_movement_and_its_dark
     - automation.if_motion_continuously_active_set_a_timer_to_check_for_lux
     - automation.turn_off_the_living_room_lights_10_minutes_after_last_movement
+    - automation.turn_on_the_corridor_light_when_there_is_movement_and_its_dark
+    - automation.turn_off_the_corridor_light_5_minutes_after_last_movement
 
 exterior:
   name: Exterior
