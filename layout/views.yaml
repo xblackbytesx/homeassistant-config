@@ -5,7 +5,6 @@ default_view:
     - group.living_room_lighting
     - group.hallway_lighting
     - group.living_room_climate
-    - group.automation
     - group.exterior
     - group.internet_health_check
     - media_player.kodi
@@ -39,3 +38,9 @@ security_view:
     - camera.foscam1
     - camera.xiaofang1
     - camera.xiaofang2
+
+settings_view:
+  view: yes
+  icon: mdi:settings
+  entities:
+    - group.automation 

@@ -75,6 +75,8 @@ automation:
     - automation.turn_off_the_living_room_lights_10_minutes_after_last_movement
     - automation.turn_on_the_corridor_light_when_there_is_movement_and_its_dark
     - automation.turn_off_the_corridor_light_5_minutes_after_last_movement
+    - automation.turn_on_the_master_bedroom_light_when_there_is_movement_and_its_dark
+    - automation.turn_off_the_master_bedroom_light_5_minutes_after_last_movement
 
 exterior:
   name: Exterior
