@@ -37,6 +37,7 @@ media_players:
   entities:
     - media_player.kodi
     - media_player.yamaha_receiver
+    - media_player.chromecast
 
 hallway_lighting:
   name: Hallway lighting
