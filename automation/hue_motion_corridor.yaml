@@ -23,7 +23,7 @@
         minutes: 0
     - platform: state
       entity_id: sensor.motion_in_corridor
-      state: '0' 
+      state: '0'
       for:
         minutes: 0
   action:
