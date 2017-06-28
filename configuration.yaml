@@ -63,6 +63,13 @@ mqtt:
 device_tracker:
   - platform: owntracks
 
+zone:
+  name: Home
+  latitude: !secret zone_home_latitude
+  longitude: !secret zone_home_logitude
+  radius: 100
+  icon: mdi:home
+
 # Text to speech
 tts:
   platform: google
