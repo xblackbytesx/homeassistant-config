@@ -4,11 +4,11 @@ default_view:
   entities:
     - group.living_room_lighting
     - group.hallway_lighting
+    - group.corridor_lighting
+    - group.master_bedroom_lighting
     - group.living_room_climate
     - group.exterior
     - group.internet_health_check
-    - media_player.kodi
-    - media_player.yamaha_receiver
     - sensor.motion_in_hallwaystairs
     - sensor.motion_in_hallwaydoor
     - sensor.motion_in_sitting_area
@@ -30,6 +30,12 @@ first_floor_view:
     - group.corridor_lighting
     - group.first_floor_climate
     - group.all_first_floor_lights
+
+media_view:
+  view: yes
+  name: Media
+  entities:
+    - group.media_players
 
 security_view:
   view: yes

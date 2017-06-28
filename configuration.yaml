@@ -52,11 +52,21 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
+mqtt:
+  broker: !secret mqtt_broker_url
+  port: !secret mqtt_broker_port
+  client_id: home-assistant-1
+  keepalive: 60
+  username: !secret mqtt_broker_username
+  password: !secret mqtt_broker_password
+
+device_tracker:
+  - platform: owntracks
+
 # Text to speech
 tts:
   platform: google
 
-# mqtt: !include mqtt/hass.yaml
 automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/
 notify: !include_dir_merge_list notify/
