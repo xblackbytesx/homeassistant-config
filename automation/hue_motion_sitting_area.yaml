@@ -2,7 +2,7 @@
   trigger:
     platform: state
     entity_id: sensor.motion_in_sitting_area
-    state: '1'
+    to: '1'
   condition:
     condition: numeric_state
     entity_id: sensor.illumination_in_sitting_area
@@ -36,11 +36,9 @@
   trigger:
     platform: state
     entity_id: sensor.motion_in_sitting_area
-    state: '0'
+    to: '0'
     for:
       minutes: 5
   action:
     service: homeassistant.turn_off
     entity_id: light.living_room
-
-

@@ -2,10 +2,10 @@
   trigger:
     - platform: state
       entity_id: sensor.motion_in_hallwaydoor
-      state: '1'
+      to: '1'
     - platform: state
       entity_id: sensor.motion_in_hallwaystairs
-      state: '1'
+      to: '1'
   condition:
     condition: numeric_state
     entity_id: sensor.illumination_in_hallwaystairs
@@ -22,12 +22,12 @@
   trigger:
     - platform: state
       entity_id: sensor.motion_in_hallwaydoor
-      state: '0'
+      to: '0'
       for:
         minutes: 0
     - platform: state
       entity_id: sensor.motion_in_hallwaystairs
-      state: '0' 
+      to: '0'
       for:
         minutes: 0
   action:

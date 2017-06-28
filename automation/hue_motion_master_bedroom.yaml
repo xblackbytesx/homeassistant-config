@@ -1,4 +1,4 @@
-- alias: Turn on the corridor light when there is movement and it's dark
+- alias: Turn on the master bedroom light when there is movement and it's dark
   trigger:
     - platform: state
       entity_id: sensor.motion_in_corridor
@@ -12,9 +12,9 @@
     below: 18
   action:
     - service: homeassistant.turn_on
-      entity_id: light.corridor
+      entity_id: light.master_bedroom
 
-- alias: Turn off the corridor light 5 minutes after last movement
+- alias: Turn off the master bedroom light 5 minutes after last movement
   trigger:
     - platform: state
       entity_id: sensor.motion_in_corridor
@@ -28,4 +28,4 @@
         minutes: 0
   action:
     - service: homeassistant.turn_off
-      entity_id: light.corridor
+      entity_id: light.master_bedroom
