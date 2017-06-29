@@ -66,9 +66,15 @@ device_tracker:
 zone:
   name: Home
   latitude: !secret zone_home_latitude
-  longitude: !secret zone_home_logitude
+  longitude: !secret zone_home_longitude
   radius: 100
   icon: mdi:home
+
+zone 2:
+  name: Work
+  latitude: !secret zone_work_latitude
+  longitude: !secret zone_work_longitude
+  radius: 100
 
 # Text to speech
 tts:
