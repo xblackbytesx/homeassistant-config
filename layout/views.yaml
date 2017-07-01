@@ -13,7 +13,8 @@ default_view:
     - sensor.motion_in_hallwaydoor
     - sensor.motion_in_sitting_area
     - sensor.motion_in_corridor
-    - device_tracker.phonefabio_oneplus5
+    - device_tracker.phonefabio_op5fabio
+    - device_tracker.phonelianne_op5lianne
 
 ground_floor_view:
   view: yes
