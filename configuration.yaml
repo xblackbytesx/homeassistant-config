@@ -45,8 +45,15 @@ logbook:
 sun:
 
 light:
-  platform: hue
-  host: 10.0.221.30
+  - platform: hue
+    host: 10.0.221.30
+
+  - platform: flux_led
+    devices:
+      10.0.221.31:
+        name: Ledstrip TV Cabinet
+        protocol: 'ledenet'
+        mode: "rgbw"
 
 nest:
   client_id: !secret nest_client_id
