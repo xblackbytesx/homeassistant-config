@@ -3,7 +3,7 @@ living_room_lighting:
   entities:
     - light.kitchen
     - light.sitting_area
-    - scene.sitting_area_dim
+    - light.ledstrip_tv_cabinet
 
 corridor_lighting:
   name: Corridor lighting
@@ -52,6 +52,7 @@ all_ground_floor_lights:
     - light.hue__bulb__kitchen_table__r
     - light.hue__bulb__standing_lamp
     - light.hue__iris__tv_cabinet
+    - light.ledstrip_tv_cabinet
     - light.innr__downstairs__hallway
 
 all_first_floor_lights:
