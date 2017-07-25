@@ -1,4 +1,4 @@
-- alias: If motion continuously active set a timer to check for lux
+- alias: Re-evaluate lighting in living room periodically and turn off accordingly
   trigger:
     platform: time
     minutes: '/5'
@@ -11,12 +11,12 @@
         state: '1'
       - condition: numeric_state
         entity_id: sensor.illumination_in_sitting_area
-        below: 18
+        above: 18
       - condition: state
         entity_id: light.living_room
-        state: 'off'
+        state: 'on'
   action:
-    - service: homeassistant.turn_on
+    - service: homeassistant.turn_off
       entity_id: light.living_room
-    - service: homeassistant.turn_on
+    - service: homeassistant.turn_off
       entity_id: light.ledstrip_tv_cabinet
