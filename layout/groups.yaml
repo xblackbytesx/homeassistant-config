@@ -22,9 +22,11 @@ living_room_climate:
     - sensor.temperature_in_hallwaydoor
     - sensor.temperature_in_hallwaystairs
     - sensor.temperature_in_sitting_area
+    - sensor.temperature_in_kitchen
     - sensor.illumination_in_hallwaydoor
     - sensor.illumination_in_hallwaystairs
     - sensor.illumination_in_sitting_area
+    - sensor.illumination_in_kitchen
 
 first_floor_climate:
   name: First floor climate

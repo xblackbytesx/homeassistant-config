@@ -21,6 +21,13 @@
 
 # Motion sensor
 - platform: rest
+  resource: !secret kitchen_motion_url
+  value_template: '{{ value_json.state.status }}'
+  scan_interval: 2
+  name: 'Motion in kitchen'
+
+# Motion sensor
+- platform: rest
   resource: !secret corridor_motion_url
   value_template: '{{ value_json.state.status }}'
   scan_interval: 2
