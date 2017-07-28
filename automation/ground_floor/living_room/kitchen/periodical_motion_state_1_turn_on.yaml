@@ -1,0 +1,20 @@
+- alias: Re-evaluate lighting in kitchen periodically and turn on accordingly
+  trigger:
+    platform: time
+    minutes: '/5'
+    seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.motion_in_kitchen
+        state: '1'
+      - condition: numeric_state
+        entity_id: sensor.illumination_in_kitchen
+        below: 18
+      - condition: state
+        entity_id: light.kitchen
+        state: 'off'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: light.kitchen

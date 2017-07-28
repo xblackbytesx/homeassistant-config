@@ -1,0 +1,12 @@
+- alias: Turn on the kitchen lights when there is movement and it's dark
+  trigger:
+    platform: state
+    entity_id: sensor.motion_in_kitchen
+    to: '1'
+  condition:
+    condition: numeric_state
+    entity_id: sensor.illumination_in_kitchen
+    below: 18
+  action:
+    - service: homeassistant.turn_on
+      entity_id: light.kitchen
