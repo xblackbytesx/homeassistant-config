@@ -11,7 +11,7 @@
         state: '1'
       - condition: numeric_state
         entity_id: sensor.illumination_in_kitchen
-        below: 18
+        below: 23
       - condition: state
         entity_id: light.kitchen
         state: 'off'

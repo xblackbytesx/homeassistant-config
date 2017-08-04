@@ -1,7 +1,7 @@
 - alias: Re-evaluate lighting in kitchen periodically and turn off accordingly
   trigger:
     platform: time
-    minutes: '/5'
+    minutes: '/10'
     seconds: 00
   condition:
     condition: and
@@ -11,7 +11,7 @@
         state: '1'
       - condition: numeric_state
         entity_id: sensor.illumination_in_kitchen
-        above: 18
+        above: 23
       - condition: state
         entity_id: light.kitchen
         state: 'on'

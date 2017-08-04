@@ -1,7 +1,7 @@
 - alias: Re-evaluate lighting in sitting area periodically and turn off accordingly
   trigger:
     platform: time
-    minutes: '/5'
+    minutes: '/10'
     seconds: 00
   condition:
     condition: and
