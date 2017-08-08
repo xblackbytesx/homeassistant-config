@@ -1,4 +1,4 @@
-- alias: Turn on the living room lights when there is movement and it's dark
+- alias: Turn on the sitting area lights when there is movement and it's dark
   trigger:
     platform: state
     entity_id: sensor.motion_in_sitting_area
@@ -9,6 +9,6 @@
     below: 18
   action:
     - service: homeassistant.turn_on
-      entity_id: light.living_room
+      entity_id: light.sitting_area
     - service: homeassistant.turn_on
       entity_id: light.ledstrip_tv_cabinet

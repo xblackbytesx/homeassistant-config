@@ -21,6 +21,13 @@
 
 # Lightlevel sensor
 - platform: rest
+  resource: !secret kitchen_lux_url
+  value_template: '{{ (10 ** (float(value_json.state.lightlevel - 1) / 10000))|round(1) }}'
+  unit_of_measurement: Lux
+  name: 'Illumination in kitchen'
+
+# Lightlevel sensor
+- platform: rest
   resource: !secret corridor_lux_url
   value_template: '{{ (10 ** (float(value_json.state.lightlevel - 1) / 10000))|round(1) }}'
   unit_of_measurement: Lux

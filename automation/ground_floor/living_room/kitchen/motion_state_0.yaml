@@ -1,0 +1,10 @@
+- alias: Turn off the kitchen lights 10 minutes after last movement
+  trigger:
+    platform: state
+    entity_id: sensor.motion_in_kitchen
+    to: '0'
+    for:
+      minutes: 5
+  action:
+    - service: homeassistant.turn_off
+      entity_id: light.kitchen

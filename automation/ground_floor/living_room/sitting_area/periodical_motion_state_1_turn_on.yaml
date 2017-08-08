@@ -1,4 +1,4 @@
-- alias: If motion continuously active set a timer to check for lux
+- alias: Re-evaluate lighting in sitting area periodically and turn on accordingly
   trigger:
     platform: time
     minutes: '/5'
@@ -13,10 +13,10 @@
         entity_id: sensor.illumination_in_sitting_area
         below: 18
       - condition: state
-        entity_id: light.living_room
+        entity_id: light.sitting_area
         state: 'off'
   action:
     - service: homeassistant.turn_on
-      entity_id: light.living_room
+      entity_id: light.sitting_area
     - service: homeassistant.turn_on
       entity_id: light.ledstrip_tv_cabinet

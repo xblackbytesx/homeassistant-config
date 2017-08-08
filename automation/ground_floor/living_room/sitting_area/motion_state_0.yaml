@@ -1,4 +1,4 @@
-- alias: Turn off the living room lights 10 minutes after last movement
+- alias: Turn off the sitting area lights 10 minutes after last movement
   trigger:
     platform: state
     entity_id: sensor.motion_in_sitting_area
@@ -7,6 +7,6 @@
       minutes: 5
   action:
     - service: homeassistant.turn_off
-      entity_id: light.living_room
+      entity_id: light.sitting_area
     - service: homeassistant.turn_off
       entity_id: light.ledstrip_tv_cabinet
