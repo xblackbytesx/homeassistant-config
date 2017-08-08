@@ -54,6 +54,8 @@ all_ground_floor_lights:
     - light.hue__bulb__kitchen_table__r
     - light.hue__bulb__standing_lamp
     - light.hue__iris__tv_cabinet
+    - light.hue__go__closet__l
+    - light.hue__go__closet__r
     - light.ledstrip_tv_cabinet
     - light.innr__downstairs__hallway
 
