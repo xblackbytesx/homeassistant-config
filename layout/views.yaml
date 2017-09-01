@@ -43,6 +43,7 @@ media_view:
 security_view:
   view: yes
   name: Security
+  icon: mdi:lock
   entities:
     - camera.foscam1
     - camera.xiaofang1
@@ -52,4 +53,5 @@ settings_view:
   view: yes
   icon: mdi:settings
   entities:
-    - group.automation 
+    - group.main_automation
+    - group.security_automation
