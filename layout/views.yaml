@@ -24,6 +24,7 @@ ground_floor_view:
     - group.living_room_lighting
     - group.hallway_lighting
     - group.all_ground_floor_lights
+    - group.ground_floor_automation
 
 first_floor_view:
   view: yes
@@ -33,6 +34,7 @@ first_floor_view:
     - group.corridor_lighting
     - group.first_floor_climate
     - group.all_first_floor_lights
+    - group.first_floor_automation
 
 media_view:
   view: yes
@@ -53,5 +55,9 @@ settings_view:
   view: yes
   icon: mdi:settings
   entities:
-    - group.main_automation
-    - group.security_automation
+    - group.hallway_automation
+    - group.sitting_area_automation
+    - group.kitchen_automation
+    - group.corridor_automation
+    - group.master_bedroom_automation
+    - group.all_automation

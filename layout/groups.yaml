@@ -72,8 +72,8 @@ internet_health_check:
     - sensor.speedtest_upload
     - sensor.speedtest_ping
 
-main_automation:
-  name: Main automations
+all_automation:
+  name: All automations
   entities:
     - automation.turn_on_the_hallway_light_when_there_is_movement_and_its_dark
     - automation.turn_off_the_hallway_light_5_minutes_after_last_movement
@@ -87,9 +87,61 @@ main_automation:
     - automation.turn_off_the_kitchen_lights_10_minutes_after_last_movement
     - automation.turn_on_the_corridor_light_when_there_is_movement_and_its_dark
     - automation.turn_off_the_corridor_light_5_minutes_after_last_movement
+    - automation.turn_on_the_master_bedroom_light_when_there_is_movement_and_its_dark
+    - automation.turn_off_the_master_bedroom_light_5_minutes_after_last_movement
 
-security_automation:
-  name: Security automations
+ground_floor_automation:
+  name: Ground floor automations
+  entities:
+    - automation.turn_on_the_hallway_light_when_there_is_movement_and_its_dark
+    - automation.turn_off_the_hallway_light_5_minutes_after_last_movement
+    - automation.turn_on_the_sitting_area_lights_when_there_is_movement_and_its_dark
+    - automation.reevaluate_lighting_in_sitting_area_periodically_and_turn_on_accordingly
+    - automation.reevaluate_lighting_in_sitting_area_periodically_and_turn_off_accordingly
+    - automation.turn_off_the_sitting_area_lights_10_minutes_after_last_movement
+    - automation.turn_on_the_kitchen_lights_when_there_is_movement_and_its_dark
+    - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_on_accordingly
+    - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_off_accordingly
+    - automation.turn_off_the_kitchen_lights_10_minutes_after_last_movement
+
+hallway_automation:
+  name: Hallway automations
+  entities:
+    - automation.turn_on_the_hallway_light_when_there_is_movement_and_its_dark
+    - automation.turn_off_the_hallway_light_5_minutes_after_last_movement
+
+sitting_area_automation:
+  name: Sitting area automations
+  entities:
+    - automation.turn_on_the_sitting_area_lights_when_there_is_movement_and_its_dark
+    - automation.reevaluate_lighting_in_sitting_area_periodically_and_turn_on_accordingly
+    - automation.reevaluate_lighting_in_sitting_area_periodically_and_turn_off_accordingly
+    - automation.turn_off_the_sitting_area_lights_10_minutes_after_last_movement
+
+kitchen_automation:
+  name: Kitchen automations
+  entities:
+    - automation.turn_on_the_kitchen_lights_when_there_is_movement_and_its_dark
+    - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_on_accordingly
+    - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_off_accordingly
+    - automation.turn_off_the_kitchen_lights_10_minutes_after_last_movement
+
+first_floor_automation:
+  name: First floor automations
+  entities:
+    - automation.turn_on_the_corridor_light_when_there_is_movement_and_its_dark
+    - automation.turn_off_the_corridor_light_5_minutes_after_last_movement
+    - automation.turn_on_the_master_bedroom_light_when_there_is_movement_and_its_dark
+    - automation.turn_off_the_master_bedroom_light_5_minutes_after_last_movement
+
+corridor_automation:
+  name: Corridor automations
+  entities:
+    - automation.turn_on_the_corridor_light_when_there_is_movement_and_its_dark
+    - automation.turn_off_the_corridor_light_5_minutes_after_last_movement
+
+master_bedroom_automation:
+  name: Master bedroom automations
   entities:
     - automation.turn_on_the_master_bedroom_light_when_there_is_movement_and_its_dark
     - automation.turn_off_the_master_bedroom_light_5_minutes_after_last_movement
