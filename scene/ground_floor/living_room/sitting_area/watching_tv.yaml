@@ -9,5 +9,5 @@
     light.ledstrip_tv_cabinet:
       state: on
 
-    light.light.sa__closet:
+    light.sa__closet:
       state: off
