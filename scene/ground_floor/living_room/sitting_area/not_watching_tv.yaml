@@ -33,5 +33,5 @@
     light.ledstrip_tv_cabinet:
       state: on
       transition: 2
-      rgb_color: [ 6, 64, 31 ]
+      rgb_color: [ 64, 6, 0 ]
       brightness: 65
