@@ -17,6 +17,9 @@
           - condition: state
             entity_id: media_player.living_room
             state: 'idle'
+          - condition: state
+            entity_id: media_player.living_room
+            state: 'off'
   action:
     service: scene.turn_on
     entity_id: scene.sitting_area_not_watching_tv
