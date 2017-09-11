@@ -1,7 +1,7 @@
 - alias: Re-evaluate lighting in kitchen periodically and turn off accordingly
   trigger:
     platform: time
-    minutes: '/10'
+    minutes: '/15'
     seconds: 00
   condition:
     condition: and
