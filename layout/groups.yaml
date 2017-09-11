@@ -72,6 +72,12 @@ internet_health_check:
     - sensor.speedtest_upload
     - sensor.speedtest_ping
 
+sitting_area_scenes:
+  name: Living room scenes
+  entities:
+    - scene.sitting_area_watching_tv
+    - scene.sitting_area_not_watching_tv
+
 all_automation:
   name: All automations
   entities:

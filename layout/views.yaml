@@ -51,9 +51,15 @@ security_view:
     - camera.xiaofang1
     - camera.xiaofang2
 
-settings_view:
+scenes_view:
   view: yes
-  icon: mdi:settings
+  icon: mdi:image-filter-hdr
+  entities:
+    - group.sitting_area_scenes
+
+automation_view:
+  view: yes
+  icon: mdi:robot
   entities:
     - group.hallway_automation
     - group.sitting_area_automation
