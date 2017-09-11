@@ -1,0 +1,12 @@
+- alias: SA | Media paused | Dark | Scene on
+  trigger:
+    platform: state
+    entity_id: media_player.living_room
+    to: 'paused'
+  condition:
+    condition: numeric_state
+      entity_id: sensor.illumination_in_sitting_area
+      below: 18
+  action:
+    service: scene.turn_on
+    entity_id: scene.sitting_area_not_watching_tv

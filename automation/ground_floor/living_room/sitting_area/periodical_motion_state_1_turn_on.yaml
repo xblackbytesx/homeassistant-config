@@ -1,4 +1,4 @@
-- alias: Re-evaluate lighting in sitting area periodically and turn on accordingly
+- alias: SA | Time | Motion | Dark | No Media | Scene on
   trigger:
     platform: time
     minutes: '/5'
@@ -15,8 +15,14 @@
       - condition: state
         entity_id: light.sitting_area
         state: 'off'
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: media_player.living_room
+            state: 'paused'
+          - condition: state
+            entity_id: media_player.living_room
+            state: 'idle'
   action:
-    - service: homeassistant.turn_on
-      entity_id: light.sitting_area
-    - service: homeassistant.turn_on
-      entity_id: light.ledstrip_tv_cabinet
+    service: scene.turn_on
+      entity_id: scene.sitting_area_not_watching_tv
