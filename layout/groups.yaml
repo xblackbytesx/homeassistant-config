@@ -83,10 +83,13 @@ all_automation:
   entities:
     - automation.turn_on_the_hallway_light_when_there_is_movement_and_its_dark
     - automation.turn_off_the_hallway_light_5_minutes_after_last_movement
-    - automation.turn_on_the_sitting_area_lights_when_there_is_movement_and_its_dark
-    - automation.reevaluate_lighting_in_sitting_area_periodically_and_turn_on_accordingly
-    - automation.reevaluate_lighting_in_sitting_area_periodically_and_turn_off_accordingly
-    - automation.turn_off_the_sitting_area_lights_10_minutes_after_last_movement
+    - automation.sa__media_idle__dark__scene_on
+    - automation.sa__media_paused__dark__scene_on
+    - automation.sa__media_playing__dark__scene_on
+    - automation.sa__motion__dark__no_media__scene_on
+    - automation.sa__no_motion__5_minutes__lights_off
+    - automation.sa__time__motion__dark__no_media__scene_on
+    - automation.sa__time__motion__light__lights_off
     - automation.turn_on_the_kitchen_lights_when_there_is_movement_and_its_dark
     - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_on_accordingly
     - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_off_accordingly
