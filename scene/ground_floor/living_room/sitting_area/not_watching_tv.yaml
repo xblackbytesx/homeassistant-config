@@ -5,3 +5,6 @@
       transition: 2
       brightness: 150
       xy_color: [ 0.4448, 0.4066 ]
+
+    - light.ledstrip_tv_cabinet:
+      state: on
