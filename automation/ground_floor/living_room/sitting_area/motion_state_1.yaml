@@ -1,14 +1,37 @@
-- alias: Turn on the sitting area lights when there is movement and it's dark
+- alias: SA | Motion | Dark | No Media | Scene on
   trigger:
     platform: state
     entity_id: sensor.motion_in_sitting_area
     to: '1'
   condition:
-    condition: numeric_state
-    entity_id: sensor.illumination_in_sitting_area
-    below: 18
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.illumination_in_sitting_area
+        below: 18
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: media_player.living_room
+            state: 'paused'
+          - condition: state
+            entity_id: media_player.living_room
+            state: 'idle'
+          - condition: state
+            entity_id: media_player.living_room
+            state: 'off'
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: media_player.kodi
+            state: 'paused'
+          - condition: state
+            entity_id: media_player.kodi
+            state: 'idle'
+          - condition: state
+            entity_id: media_player.kodi
+            state: 'off'
   action:
-    - service: homeassistant.turn_on
-      entity_id: light.sitting_area
-    - service: homeassistant.turn_on
-      entity_id: light.ledstrip_tv_cabinet
+    service: scene.turn_on
+    entity_id: scene.sitting_area_not_watching_tv
+

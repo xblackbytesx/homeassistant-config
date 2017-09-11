@@ -1,4 +1,4 @@
-- alias: Turn off the sitting area lights 10 minutes after last movement
+- alias: SA | No Motion | 5 minutes | Lights off
   trigger:
     platform: state
     entity_id: sensor.motion_in_sitting_area

@@ -1,0 +1,22 @@
+- name: Sitting area watching TV
+  entities:
+    light.hue__iris__tv_cabinet:
+      state: on
+      transition: 2
+      xy_color: [ 0.6352, 0.3436 ]
+      brightness: 120
+
+    light.hue__candle__salt_lamp:
+      state: on
+      transition: 2
+      xy_color: [ 0.6349, 0.3413 ]
+      brightness: 120
+
+    light.ledstrip_tv_cabinet:
+      state: on
+      transition: 2
+      rgb_color: [ 64, 6, 0 ]
+      brightness: 45
+
+    light.sa__closet:
+      state: off
