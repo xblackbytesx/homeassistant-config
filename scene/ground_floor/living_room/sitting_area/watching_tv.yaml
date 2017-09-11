@@ -1,13 +1,13 @@
 - name: Sitting area watching TV
   entities:
-    - light.sa__tv_cabinet:
+    light.sa__tv_cabinet:
       state: on
       transition: 2
       brightness: 150
       xy_color: [ 0.4448, 0.4066 ]
 
-    - light.ledstrip_tv_cabinet:
+    light.ledstrip_tv_cabinet:
       state: on
 
-    - light.light.sa__closet:
+    light.light.sa__closet:
       state: off

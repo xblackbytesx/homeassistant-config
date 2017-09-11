@@ -1,10 +1,10 @@
 - name: Sitting area not watching TV
   entities:
-    - light.sitting_area:
+    light.sitting_area:
       state: on
       transition: 2
       brightness: 150
       xy_color: [ 0.4448, 0.4066 ]
 
-    - light.ledstrip_tv_cabinet:
+    light.ledstrip_tv_cabinet:
       state: on
