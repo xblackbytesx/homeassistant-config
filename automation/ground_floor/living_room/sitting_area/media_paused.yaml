@@ -1,4 +1,4 @@
-- alias: SA | Media paused | Dark | Scene on
+- alias: SA | Media paused | Bright scene
   trigger:
     platform: state
     entity_id: input_boolean.sa_tv_media_playing

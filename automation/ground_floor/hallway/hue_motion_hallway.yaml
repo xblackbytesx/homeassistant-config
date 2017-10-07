@@ -1,4 +1,4 @@
-- alias: Turn on the hallway light when there is movement and it's dark
+- alias: HW | Motion | Lights on
   trigger:
     - platform: state
       entity_id: sensor.motion_in_hallwaydoor
@@ -7,9 +7,9 @@
       entity_id: sensor.motion_in_hallwaystairs
       to: '1'
   condition:
-    condition: numeric_state
-    entity_id: sensor.illumination_in_hallwaystairs
-    below: 18
+    condition: state
+    entity_id: input_boolean.hw_meets_darkness_cutoff
+    state: 'on'
   action:
     - service: homeassistant.turn_on
       entity_id: light.hallway
@@ -18,7 +18,7 @@
     #     title: "Home Assistant"
     #     message: "Hallway turned on with lux {{ states.sensor.illumination_in_hallwaystairs.state }}"
 
-- alias: Turn off the hallway light 5 minutes after last movement
+- alias: HW | Motion | Lights off
   trigger:
     - platform: state
       entity_id: sensor.motion_in_hallwaydoor

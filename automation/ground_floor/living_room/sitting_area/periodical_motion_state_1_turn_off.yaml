@@ -1,4 +1,4 @@
-- alias: SA | Time | Motion | Light | Lights off
+- alias: SA | Time | Lights off
   trigger:
     platform: time
     minutes: '/15'

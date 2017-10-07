@@ -1,4 +1,4 @@
-- alias: SA | Motion | Dark | No Media | Scene on
+- alias: SA | Motion | Bright scene
   trigger:
     platform: state
     entity_id: sensor.motion_in_sitting_area

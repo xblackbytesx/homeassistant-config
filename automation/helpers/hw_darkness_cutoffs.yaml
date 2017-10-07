@@ -1,0 +1,28 @@
+- alias: HW | Darkness cutoff | On
+  trigger:
+    platform: time
+    minutes: '/5'
+    seconds: 00
+  condition:
+    condition: numeric_state
+    entity_id: sensor.illumination_in_hallwaystairs
+    below: 18
+  action:
+    service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.hw_meets_darkness_cutoff
+
+
+- alias: HW | Darkness cutoff | Off
+  trigger:
+    platform: time
+    minutes: '/5'
+    seconds: 00
+  condition:
+    condition: numeric_state
+    entity_id: sensor.illumination_in_hallwaystairs
+    above: 18
+  action:
+    service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.hw_meets_darkness_cutoff

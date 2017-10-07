@@ -1,4 +1,4 @@
-- alias: SA | Time | Motion | Dark | No Media | Scene on
+- alias: SA | Time | Bright scene
   trigger:
     platform: time
     minutes: '/5'
