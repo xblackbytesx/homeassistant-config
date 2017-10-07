@@ -1,0 +1,11 @@
+input_boolean:
+  sa_tv_media_playing:
+    name: Is video content playing on sitting area TV
+    initial: off
+    icon: mdi:television-classic
+
+input_boolean:
+  sa_meets_darkness_cutoff:
+    name: Is it dark enough to engage the lighting
+    initial: off
+    icon: mdi:theme-light-dark

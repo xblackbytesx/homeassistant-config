@@ -9,9 +9,9 @@
       - condition: state
         entity_id: sensor.motion_in_sitting_area
         state: '1'
-      - condition: numeric_state
-        entity_id: sensor.illumination_in_sitting_area
-        above: 18
+      - condition: state
+        entity_id: input_boolean.sa_meets_darkness_cutoff
+        state: 'off'
       - condition: state
         entity_id: light.sitting_area
         state: 'on'
