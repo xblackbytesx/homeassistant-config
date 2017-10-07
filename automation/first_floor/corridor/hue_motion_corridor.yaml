@@ -1,31 +1,23 @@
-- alias: Turn on the corridor light when there is movement and it's dark
+- alias: CO | Motion | Lights on
   trigger:
-    - platform: state
-      entity_id: sensor.motion_in_corridor
-      to: '1'
-    - platform: state
-      entity_id: sensor.motion_in_corridor
-      to: '1'
+    platform: state
+    entity_id: sensor.motion_in_corridor
+    to: '1'
   condition:
-    condition: numeric_state
-    entity_id: sensor.illumination_in_corridor
-    below: 18
+    condition: state
+    entity_id: input_boolean.co_meets_darkness_cutoff
+    state: 'on'
   action:
     - service: homeassistant.turn_on
       entity_id: light.corridor
 
-- alias: Turn off the corridor light 5 minutes after last movement
+- alias: CO | Motion | Lights off
   trigger:
-    - platform: state
-      entity_id: sensor.motion_in_corridor
-      to: '0'
-      for:
-        minutes: 0
-    - platform: state
-      entity_id: sensor.motion_in_corridor
-      to: '0'
-      for:
-        minutes: 0
+    platform: state
+    entity_id: sensor.motion_in_corridor
+    to: '0'
+    for:
+      minutes: 0
   action:
     - service: homeassistant.turn_off
       entity_id: light.corridor

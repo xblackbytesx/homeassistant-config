@@ -1,4 +1,4 @@
-- alias: SA | Media playing | Dark | Scene on
+- alias: SA | Media playing | Dim scene
   trigger:
     platform: state
     entity_id: input_boolean.sa_tv_media_playing

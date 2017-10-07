@@ -1,4 +1,4 @@
-- alias: Turn off the kitchen lights 10 minutes after last movement
+- alias: Kitchen | No Motion | Lights off
   trigger:
     platform: state
     entity_id: sensor.motion_in_kitchen

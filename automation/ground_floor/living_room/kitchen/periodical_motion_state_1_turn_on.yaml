@@ -1,4 +1,4 @@
-- alias: Re-evaluate lighting in kitchen periodically and turn on accordingly
+- alias: Kitchen | Time | Lights on
   trigger:
     platform: time
     minutes: '/5'
@@ -9,9 +9,9 @@
       - condition: state
         entity_id: sensor.motion_in_kitchen
         state: '1'
-      - condition: numeric_state
-        entity_id: sensor.illumination_in_kitchen
-        below: 23
+      - condition: state
+        entity_id: input_boolean.kitchen_meets_darkness_cutoff
+        state: 'on'
       - condition: state
         entity_id: light.kitchen
         state: 'off'
