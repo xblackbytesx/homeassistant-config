@@ -38,9 +38,9 @@ media_players:
   name: Media player
   entities:
     - media_player.yamaha_receiver
+    - media_player.kodi
     - media_player.living_room
     - media_player.living_room_audio
-    - media_player.kodi
 
 hallway_lighting:
   name: Hallway lighting
@@ -83,7 +83,6 @@ all_automation:
   entities:
     - automation.turn_on_the_hallway_light_when_there_is_movement_and_its_dark
     - automation.turn_off_the_hallway_light_5_minutes_after_last_movement
-    - automation.sa__media_idle__dark__scene_on
     - automation.sa__media_paused__dark__scene_on
     - automation.sa__media_playing__dark__scene_on
     - automation.sa__motion__dark__no_media__scene_on
@@ -104,7 +103,6 @@ ground_floor_automation:
   entities:
     - automation.turn_on_the_hallway_light_when_there_is_movement_and_its_dark
     - automation.turn_off_the_hallway_light_5_minutes_after_last_movement
-    - automation.sa__media_idle__dark__scene_on
     - automation.sa__media_paused__dark__scene_on
     - automation.sa__media_playing__dark__scene_on
     - automation.sa__motion__dark__no_media__scene_on
@@ -125,7 +123,6 @@ hallway_automation:
 sitting_area_automation:
   name: Sitting area automations
   entities:
-    - automation.sa__media_idle__dark__scene_on
     - automation.sa__media_paused__dark__scene_on
     - automation.sa__media_playing__dark__scene_on
     - automation.sa__motion__dark__no_media__scene_on

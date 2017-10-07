@@ -1,26 +1,12 @@
-- alias: SA | Chromecast playing | Dark | Scene on
+- alias: SA | Media playing | Dark | Scene on
   trigger:
     platform: state
-    entity_id: media_player.living_room
-    to: 'playing'
+    entity_id: input_boolean.sa_tv_media_playing
+    to: 'on'
   condition:
-    condition: numeric_state
-    entity_id: sensor.illumination_in_sitting_area
-    below: 18
-  action:
-    service: scene.turn_on
-    entity_id: scene.sitting_area_watching_tv
-
-
-- alias: SA | Kodi playing | Dark | Scene on
-  trigger:
-    platform: state
-    entity_id: media_player.kodi
-    to: 'playing'
-  condition:
-    condition: numeric_state
-    entity_id: sensor.illumination_in_sitting_area
-    below: 18
+    condition: state
+    entity_id: input_boolean.sa_meets_darkness_cutoff
+    state: 'on'
   action:
     service: scene.turn_on
     entity_id: scene.sitting_area_watching_tv
