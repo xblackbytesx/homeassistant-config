@@ -1,4 +1,4 @@
-- alias: sa_tv_media_playing:
+sa_tv_media_playing:
   name: Is video content playing on sitting area TV
   initial: off
   icon: mdi:television-classic
