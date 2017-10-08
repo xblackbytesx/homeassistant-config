@@ -52,7 +52,7 @@ light:
     devices:
       10.0.221.31:
         name: Ledstrip TV Cabinet
-        protocol: 'ledenet'
+	protocol: 'ledenet'
         mode: "rgbw"
 
 nest:
