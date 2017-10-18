@@ -5,6 +5,11 @@ living_room_lighting:
     - light.sitting_area
     - light.ledstrip_tv_cabinet
 
+front_porch_lighting:
+  name: Front porch lighting
+  entities:
+    - light.front_porch
+
 corridor_lighting:
   name: Corridor lighting
   entities:
@@ -93,6 +98,8 @@ all_automation:
     - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_on_accordingly
     - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_off_accordingly
     - automation.turn_off_the_kitchen_lights_10_minutes_after_last_movement
+    - automation.fp__time__lights_on
+    - automation.fp__time__lights_off
     - automation.turn_on_the_corridor_light_when_there_is_movement_and_its_dark
     - automation.turn_off_the_corridor_light_5_minutes_after_last_movement
     - automation.turn_on_the_master_bedroom_light_when_there_is_movement_and_its_dark
@@ -113,6 +120,8 @@ ground_floor_automation:
     - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_on_accordingly
     - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_off_accordingly
     - automation.turn_off_the_kitchen_lights_10_minutes_after_last_movement
+    - automation.fp__time__lights_on
+    - automation.fp__time__lights_off
 
 hallway_automation:
   name: Hallway automations
@@ -137,6 +146,12 @@ kitchen_automation:
     - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_on_accordingly
     - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_off_accordingly
     - automation.turn_off_the_kitchen_lights_10_minutes_after_last_movement
+
+front_porch_automation:
+  name: Front porch automations
+  entities:
+    - automation.fp__time__lights_on
+    - automation.fp__time__lights_off
 
 first_floor_automation:
   name: First floor automations

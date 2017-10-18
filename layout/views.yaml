@@ -4,6 +4,7 @@ default_view:
   entities:
     - group.living_room_lighting
     - group.hallway_lighting
+    - group.front_porch_lighting
     - group.corridor_lighting
     - group.master_bedroom_lighting
     - group.living_room_climate
@@ -23,6 +24,7 @@ ground_floor_view:
   entities:
     - group.living_room_lighting
     - group.hallway_lighting
+    - group.front_porch_lighting
     - group.all_ground_floor_lights
     - group.ground_floor_automation
 
@@ -64,6 +66,7 @@ automation_view:
     - group.hallway_automation
     - group.sitting_area_automation
     - group.kitchen_automation
+    - group.front_porch_automation
     - group.corridor_automation
     - group.master_bedroom_automation
     - group.all_automation
