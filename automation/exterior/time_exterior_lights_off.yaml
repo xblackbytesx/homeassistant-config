@@ -1,9 +1,7 @@
-- alias: "FP | Time | Lights off"
+- alias: "EX | Time | Lights off"
   trigger:
     - platform: time
       at: '3:30:00'
   action:
     - service: homeassistant.turn_off
-      data:
-        entity_id:
-          - light.front_porch
+      entity_id: light.exterior

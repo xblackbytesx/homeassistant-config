@@ -1,3 +1,7 @@
+###############################
+####### LIGHTING GROUPS #######
+###############################
+
 living_room_lighting:
   name: Living room lighting
   entities:
@@ -5,10 +9,11 @@ living_room_lighting:
     - light.sitting_area
     - light.ledstrip_tv_cabinet
 
-front_porch_lighting:
-  name: Front porch lighting
+exterior_lighting:
+  name: Exterior lighting
   entities:
     - light.front_porch
+    - light.backyard
 
 corridor_lighting:
   name: Corridor lighting
@@ -70,18 +75,21 @@ all_first_floor_lights:
     - light.innr__corridor
     - light.innr__master_bedroom
 
-internet_health_check:
-  name: Internet health check
-  entities:
-    - sensor.speedtest_download
-    - sensor.speedtest_upload
-    - sensor.speedtest_ping
+
+############################
+####### SCENE GROUPS #######
+############################
 
 sitting_area_scenes:
   name: Living room scenes
   entities:
     - scene.sitting_area_watching_tv
     - scene.sitting_area_not_watching_tv
+
+
+#################################
+####### AUTOMATION GROUPS #######
+#################################
 
 all_automation:
   name: All automations
@@ -98,8 +106,8 @@ all_automation:
     - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_on_accordingly
     - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_off_accordingly
     - automation.turn_off_the_kitchen_lights_10_minutes_after_last_movement
-    - automation.fp__time__lights_on
-    - automation.fp__time__lights_off
+    - automation.ex__time__lights_on
+    - automation.ex__time__lights_off
     - automation.turn_on_the_corridor_light_when_there_is_movement_and_its_dark
     - automation.turn_off_the_corridor_light_5_minutes_after_last_movement
     - automation.turn_on_the_master_bedroom_light_when_there_is_movement_and_its_dark
@@ -120,8 +128,6 @@ ground_floor_automation:
     - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_on_accordingly
     - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_off_accordingly
     - automation.turn_off_the_kitchen_lights_10_minutes_after_last_movement
-    - automation.fp__time__lights_on
-    - automation.fp__time__lights_off
 
 hallway_automation:
   name: Hallway automations
@@ -147,11 +153,11 @@ kitchen_automation:
     - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_off_accordingly
     - automation.turn_off_the_kitchen_lights_10_minutes_after_last_movement
 
-front_porch_automation:
-  name: Front porch automations
+exterior_automation:
+  name: Exterior automations
   entities:
-    - automation.fp__time__lights_on
-    - automation.fp__time__lights_off
+    - automation.ex__time__lights_on
+    - automation.ex__time__lights_off
 
 first_floor_automation:
   name: First floor automations
@@ -173,19 +179,22 @@ master_bedroom_automation:
     - automation.turn_on_the_master_bedroom_light_when_there_is_movement_and_its_dark
     - automation.turn_off_the_master_bedroom_light_5_minutes_after_last_movement
 
-exterior:
-  name: Exterior
+
+#############################
+####### SENSOR GROUPS #######
+#############################
+
+internet_health_check:
+  name: Internet health check
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+
+weather:
+  name: Weather
   entities:
     - sensor.dark_sky_summary
     - sensor.dark_sky_temperature
     - sensor.dark_sky_apparent_temperature
     - sensor.dark_sky_wind_speed
-
-hidden_crap:
-  name: Hidden crap
-  entities:
-    - light.kitchen_do_not_use
-    - light.living_room_do_not_use
-    - light.downstairs_hallway_do_not_use
-    - light.living_room
-    - group.living_room
