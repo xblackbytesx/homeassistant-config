@@ -25,25 +25,6 @@ master_bedroom_lighting:
   entities:
     - light.master_bedroom
 
-living_room_climate:
-  name: Living room climate
-  entities:
-    - climate.living_room
-    - sensor.temperature_in_hallwaydoor
-    - sensor.temperature_in_hallwaystairs
-    - sensor.temperature_in_sitting_area
-    - sensor.temperature_in_kitchen
-    - sensor.illumination_in_hallwaydoor
-    - sensor.illumination_in_hallwaystairs
-    - sensor.illumination_in_sitting_area
-    - sensor.illumination_in_kitchen
-
-first_floor_climate:
-  name: First floor climate
-  entities:
-    - sensor.temperature_in_corridor
-    - sensor.illumination_in_corridor
-
 media_players:
   name: Media player
   entities:
@@ -180,16 +161,24 @@ master_bedroom_automation:
     - automation.turn_off_the_master_bedroom_light_5_minutes_after_last_movement
 
 
-#############################
-####### SENSOR GROUPS #######
-#############################
+##############################
+####### CLIMATE GROUPS #######
+##############################
 
-internet_health_check:
-  name: Internet health check
+living_room_climate:
+  name: Living room climate
   entities:
-    - sensor.speedtest_download
-    - sensor.speedtest_upload
-    - sensor.speedtest_ping
+    - climate.living_room
+    - sensor.temperature_in_hallwaydoor
+    - sensor.temperature_in_hallwaystairs
+    - sensor.temperature_in_sitting_area
+    - sensor.temperature_in_kitchen
+
+first_floor_climate:
+  name: First floor climate
+  entities:
+    - sensor.temperature_in_corridor
+    - sensor.illumination_in_corridor
 
 weather:
   name: Weather
@@ -198,3 +187,23 @@ weather:
     - sensor.dark_sky_temperature
     - sensor.dark_sky_apparent_temperature
     - sensor.dark_sky_wind_speed
+
+
+############################
+####### MISC SENSORS #######
+############################
+
+living_room_brightness:
+  name: Living room brightness
+  entities:
+    - sensor.illumination_in_hallwaydoor
+    - sensor.illumination_in_hallwaystairs
+    - sensor.illumination_in_sitting_area
+    - sensor.illumination_in_kitchen
+
+internet_health_check:
+  name: Internet health check
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping

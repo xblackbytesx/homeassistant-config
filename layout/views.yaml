@@ -38,6 +38,9 @@ first_floor_view:
     - group.first_floor_automation
 
 exterior_view:
+  view: yes
+  name: Exterior
+  entities:
     - camera.foscam1
     - group.exterior_lighting
     - group.exterior_automation
