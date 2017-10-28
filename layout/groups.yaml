@@ -222,7 +222,7 @@ internet_health_check:
 ####### MANUAL OVERRIDES #######
 ################################
 
-binary_overrides:
-  name: Binary value overrides
+boolean_overrides:
+  name: Boolean value overrides
   entities:
     - input_boolean.sa_media_status_override
