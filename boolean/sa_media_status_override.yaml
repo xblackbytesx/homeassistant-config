@@ -1,0 +1,4 @@
+sa_media_status_override:
+  name: Override the media_playing status
+  initial: off
+  icon: mdi:television-classic

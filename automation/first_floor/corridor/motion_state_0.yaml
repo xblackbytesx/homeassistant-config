@@ -1,0 +1,10 @@
+- alias: CO | Motion | Lights off
+  trigger:
+    platform: state
+    entity_id: sensor.motion_in_corridor
+    to: '0'
+    for:
+      minutes: 0
+  action:
+    - service: homeassistant.turn_off
+      entity_id: light.corridor

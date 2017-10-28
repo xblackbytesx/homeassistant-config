@@ -77,3 +77,9 @@ automation_view:
     - group.corridor_automation
     - group.master_bedroom_automation
     - group.exterior_automation
+
+overrides_view:
+  view: yes
+  icon: mdi:settings
+  entities:
+    - group.boolean_overrides
