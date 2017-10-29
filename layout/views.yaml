@@ -2,12 +2,13 @@ default_view:
   view: yes
   name: Home
   entities:
-    - group.living_room_lighting
     - group.hallway_lighting
+    - group.living_room_lighting
     - group.corridor_lighting
     - group.master_bedroom_lighting
+    - group.exterior_lighting
     - group.living_room_climate
-    - group.exterior
+    - group.weather
     - group.internet_health_check
     - sensor.motion_in_hallwaystairs
     - sensor.motion_in_hallwaydoor
@@ -36,6 +37,14 @@ first_floor_view:
     - group.all_first_floor_lights
     - group.first_floor_automation
 
+exterior_view:
+  view: yes
+  name: Exterior
+  entities:
+    - camera.foscam1
+    - group.exterior_lighting
+    - group.exterior_automation
+
 media_view:
   view: yes
   name: Media
@@ -61,9 +70,16 @@ automation_view:
   view: yes
   icon: mdi:robot
   entities:
+    - group.all_automation
     - group.hallway_automation
     - group.sitting_area_automation
     - group.kitchen_automation
     - group.corridor_automation
     - group.master_bedroom_automation
-    - group.all_automation
+    - group.exterior_automation
+
+overrides_view:
+  view: yes
+  icon: mdi:settings
+  entities:
+    - group.boolean_overrides

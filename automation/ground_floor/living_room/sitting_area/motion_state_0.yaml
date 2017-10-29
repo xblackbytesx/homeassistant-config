@@ -1,4 +1,4 @@
-- alias: SA | No Motion | Lights off
+- alias: SA | Motion | Lights off
   trigger:
     platform: state
     entity_id: sensor.motion_in_sitting_area

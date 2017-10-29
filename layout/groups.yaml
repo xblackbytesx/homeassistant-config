@@ -1,9 +1,19 @@
+###############################
+####### LIGHTING GROUPS #######
+###############################
+
 living_room_lighting:
   name: Living room lighting
   entities:
     - light.kitchen
     - light.sitting_area
     - light.ledstrip_tv_cabinet
+
+exterior_lighting:
+  name: Exterior lighting
+  entities:
+    - light.front_porch
+    - light.backyard
 
 corridor_lighting:
   name: Corridor lighting
@@ -14,25 +24,6 @@ master_bedroom_lighting:
   name: Master Bedroom lighting
   entities:
     - light.master_bedroom
-
-living_room_climate:
-  name: Living room climate
-  entities:
-    - climate.living_room
-    - sensor.temperature_in_hallwaydoor
-    - sensor.temperature_in_hallwaystairs
-    - sensor.temperature_in_sitting_area
-    - sensor.temperature_in_kitchen
-    - sensor.illumination_in_hallwaydoor
-    - sensor.illumination_in_hallwaystairs
-    - sensor.illumination_in_sitting_area
-    - sensor.illumination_in_kitchen
-
-first_floor_climate:
-  name: First floor climate
-  entities:
-    - sensor.temperature_in_corridor
-    - sensor.illumination_in_corridor
 
 media_players:
   name: Media player
@@ -65,12 +56,10 @@ all_first_floor_lights:
     - light.innr__corridor
     - light.innr__master_bedroom
 
-internet_health_check:
-  name: Internet health check
-  entities:
-    - sensor.speedtest_download
-    - sensor.speedtest_upload
-    - sensor.speedtest_ping
+
+############################
+####### SCENE GROUPS #######
+############################
 
 sitting_area_scenes:
   name: Living room scenes
@@ -78,99 +67,162 @@ sitting_area_scenes:
     - scene.sitting_area_watching_tv
     - scene.sitting_area_not_watching_tv
 
+
+#################################
+####### AUTOMATION GROUPS #######
+#################################
+
 all_automation:
   name: All automations
   entities:
-    - automation.turn_on_the_hallway_light_when_there_is_movement_and_its_dark
-    - automation.turn_off_the_hallway_light_5_minutes_after_last_movement
-    - automation.sa__media_paused__dark__scene_on
-    - automation.sa__media_playing__dark__scene_on
-    - automation.sa__motion__dark__no_media__scene_on
-    - automation.sa__no_motion__5_minutes__lights_off
-    - automation.sa__time__motion__dark__no_media__scene_on
-    - automation.sa__time__motion__light__lights_off
-    - automation.turn_on_the_kitchen_lights_when_there_is_movement_and_its_dark
-    - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_on_accordingly
-    - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_off_accordingly
-    - automation.turn_off_the_kitchen_lights_10_minutes_after_last_movement
-    - automation.turn_on_the_corridor_light_when_there_is_movement_and_its_dark
-    - automation.turn_off_the_corridor_light_5_minutes_after_last_movement
-    - automation.turn_on_the_master_bedroom_light_when_there_is_movement_and_its_dark
-    - automation.turn_off_the_master_bedroom_light_5_minutes_after_last_movement
+    - automation.hw__motion__lights_on
+    - automation.hw__motion__lights_off
+
+    - automation.sa__motion__bright_scene
+    - automation.sa__motion__lights_off
+    - automation.sa__time__bright_scene
+    - automation.sa__time__lights_off
+    - automation.sa__media_paused__bright_scene
+    - automation.sa__media_playing__dim_scene
+
+    - automation.kitchen__motion__lights_on
+    - automation.kitchen__motion__lights_off
+    - automation.kitchen__time__lights_on
+    - automation.kitchen__time__lights_off
+
+    - automation.ex__time__lights_on
+    - automation.ex__time__lights_off
+
+    - automation.co__motion__lights_on
+    - automation.co__motion__lights_off
+
+    - automation.mb__motion__lights_on
+    - automation.mb__motion__lights_off
 
 ground_floor_automation:
   name: Ground floor automations
   entities:
-    - automation.turn_on_the_hallway_light_when_there_is_movement_and_its_dark
-    - automation.turn_off_the_hallway_light_5_minutes_after_last_movement
-    - automation.sa__media_paused__dark__scene_on
-    - automation.sa__media_playing__dark__scene_on
-    - automation.sa__motion__dark__no_media__scene_on
-    - automation.sa__no_motion__5_minutes__lights_off
-    - automation.sa__time__motion__dark__no_media__scene_on
-    - automation.sa__time__motion__light__lights_off
-    - automation.turn_on_the_kitchen_lights_when_there_is_movement_and_its_dark
-    - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_on_accordingly
-    - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_off_accordingly
-    - automation.turn_off_the_kitchen_lights_10_minutes_after_last_movement
+    - automation.hw__motion__lights_on
+    - automation.hw__motion__lights_off
+
+    - automation.sa__motion__bright_scene
+    - automation.sa__motion__lights_off
+    - automation.sa__time__bright_scene
+    - automation.sa__time__lights_off
+    - automation.sa__media_paused__bright_scene
+    - automation.sa__media_playing__dim_scene
+
+    - automation.kitchen__motion__lights_on
+    - automation.kitchen__motion__lights_off
+    - automation.kitchen__time__lights_on
+    - automation.kitchen__time__lights_off
+
 
 hallway_automation:
   name: Hallway automations
   entities:
-    - automation.turn_on_the_hallway_light_when_there_is_movement_and_its_dark
-    - automation.turn_off_the_hallway_light_5_minutes_after_last_movement
+    - automation.hw__motion__lights_on
+    - automation.hw__motion__lights_off
 
 sitting_area_automation:
   name: Sitting area automations
   entities:
-    - automation.sa__media_paused__dark__scene_on
-    - automation.sa__media_playing__dark__scene_on
-    - automation.sa__motion__dark__no_media__scene_on
-    - automation.sa__no_motion__5_minutes__lights_off
-    - automation.sa__time__motion__dark__no_media__scene_on
-    - automation.sa__time__motion__light__lights_off
+    - automation.sa__motion__bright_scene
+    - automation.sa__motion__lights_off
+    - automation.sa__time__bright_scene
+    - automation.sa__time__lights_off
+    - automation.sa__media_paused__bright_scene
+    - automation.sa__media_playing__dim_scene
 
 kitchen_automation:
   name: Kitchen automations
   entities:
-    - automation.turn_on_the_kitchen_lights_when_there_is_movement_and_its_dark
-    - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_on_accordingly
-    - automation.reevaluate_lighting_in_kitchen_periodically_and_turn_off_accordingly
-    - automation.turn_off_the_kitchen_lights_10_minutes_after_last_movement
+    - automation.kitchen__motion__lights_on
+    - automation.kitchen__motion__lights_off
+    - automation.kitchen__time__lights_on
+    - automation.kitchen__time__lights_off
+
+exterior_automation:
+  name: Exterior automations
+  entities:
+    - automation.ex__time__lights_on
+    - automation.ex__time__lights_off
 
 first_floor_automation:
   name: First floor automations
   entities:
-    - automation.turn_on_the_corridor_light_when_there_is_movement_and_its_dark
-    - automation.turn_off_the_corridor_light_5_minutes_after_last_movement
-    - automation.turn_on_the_master_bedroom_light_when_there_is_movement_and_its_dark
-    - automation.turn_off_the_master_bedroom_light_5_minutes_after_last_movement
+    - automation.co__motion__lights_on
+    - automation.co__motion__lights_off
+
+    - automation.mb__motion__lights_on
+    - automation.mb__motion__lights_off
 
 corridor_automation:
   name: Corridor automations
   entities:
-    - automation.turn_on_the_corridor_light_when_there_is_movement_and_its_dark
-    - automation.turn_off_the_corridor_light_5_minutes_after_last_movement
+    - automation.co__motion__lights_on
+    - automation.co__motion__lights_off
 
 master_bedroom_automation:
   name: Master bedroom automations
   entities:
-    - automation.turn_on_the_master_bedroom_light_when_there_is_movement_and_its_dark
-    - automation.turn_off_the_master_bedroom_light_5_minutes_after_last_movement
+    - automation.mb__motion__lights_on
+    - automation.mb__motion__lights_off
 
-exterior:
-  name: Exterior
+
+##############################
+####### CLIMATE GROUPS #######
+##############################
+
+living_room_climate:
+  name: Living room climate
+  entities:
+    - climate.living_room
+    - sensor.temperature_in_hallwaydoor
+    - sensor.temperature_in_hallwaystairs
+    - sensor.temperature_in_sitting_area
+    - sensor.temperature_in_kitchen
+
+first_floor_climate:
+  name: First floor climate
+  entities:
+    - sensor.temperature_in_corridor
+    - sensor.illumination_in_corridor
+
+weather:
+  name: Weather
   entities:
     - sensor.dark_sky_summary
     - sensor.dark_sky_temperature
     - sensor.dark_sky_apparent_temperature
     - sensor.dark_sky_wind_speed
 
-hidden_crap:
-  name: Hidden crap
+
+############################
+####### MISC SENSORS #######
+############################
+
+living_room_brightness:
+  name: Living room brightness
   entities:
-    - light.kitchen_do_not_use
-    - light.living_room_do_not_use
-    - light.downstairs_hallway_do_not_use
-    - light.living_room
-    - group.living_room
+    - sensor.illumination_in_hallwaydoor
+    - sensor.illumination_in_hallwaystairs
+    - sensor.illumination_in_sitting_area
+    - sensor.illumination_in_kitchen
+
+internet_health_check:
+  name: Internet health check
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+
+
+################################
+####### MANUAL OVERRIDES #######
+################################
+
+boolean_overrides:
+  name: Boolean value overrides
+  entities:
+    - input_boolean.sa_media_status_override

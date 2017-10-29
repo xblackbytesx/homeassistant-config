@@ -6,6 +6,10 @@
     - platform: state
       entity_id: media_player.kodi
       to: 'playing'
+    - platform: state
+      entity_id: input_boolean.sa_media_status_override
+      to: 'on'
+
   action:
     service: input_boolean.turn_on
     data:
@@ -26,6 +30,9 @@
     - platform: state
       entity_id: media_player.kodi
       to: 'idle'
+    - platform: state
+      entity_id: input_boolean.sa_media_status_override
+      to: 'off'
   action:
     service: input_boolean.turn_off
     data:

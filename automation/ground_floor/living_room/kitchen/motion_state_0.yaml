@@ -1,4 +1,4 @@
-- alias: Kitchen | No Motion | Lights off
+- alias: Kitchen | Motion | Lights off
   trigger:
     platform: state
     entity_id: sensor.motion_in_kitchen
