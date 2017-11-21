@@ -19,5 +19,5 @@
         entity_id: input_boolean.sa_tv_media_playing
         state: 'off'
   action:
-    service: scene.turn_on
-    entity_id: scene.sitting_area_not_watching_tv
+    service: script.turn_on
+    entity_id: script.scene_not_watching_tv

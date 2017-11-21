@@ -1,0 +1,25 @@
+scene_watching_tv:
+  sequence:
+    - service: light.hue_activate_scene
+      data:
+        group_name: "Sitting Area"
+        scene_name: "LR | Watching TV"
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_tv_cabinet
+        rgb_color: [ 8, 0, 0 ]
+        brightness: 8
+
+
+scene_not_watching_tv:
+  sequence:
+    - service: light.hue_activate_scene
+      data:
+        group_name: "Sitting Area"
+        scene_name: "LR | Not watching TV"
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_tv_cabinet
+        rgb_color: [ 0, 7, 8 ]
+        brightness: 8
+
