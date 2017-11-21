@@ -94,4 +94,5 @@ notify: !include_dir_merge_list notify/
 media_player: !include_dir_merge_list media_players/
 camera: !include_dir_merge_list camera/
 group: !include_dir_merge_named layout/
+scene: !include_dir_merge_list script/
 scene: !include_dir_merge_list scene/
