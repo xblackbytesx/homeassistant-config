@@ -60,11 +60,11 @@ security_view:
     - camera.xiaofang1
     - camera.xiaofang2
 
-scenes_view:
-  view: yes
-  icon: mdi:image-filter-hdr
-  entities:
-    - group.sitting_area_scenes
+#scenes_view:
+#  view: yes
+#  icon: mdi:image-filter-hdr
+#  entities:
+#    - group.sitting_area_scenes
 
 automation_view:
   view: yes

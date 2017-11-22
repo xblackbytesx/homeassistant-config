@@ -61,11 +61,11 @@ all_first_floor_lights:
 ####### SCENE GROUPS #######
 ############################
 
-sitting_area_scenes:
-  name: Living room scenes
-  entities:
-    - scene.sitting_area_watching_tv
-    - scene.sitting_area_not_watching_tv
+#sitting_area_scenes:
+#  name: Living room scenes
+#  entities:
+#    - scene.sitting_area_watching_tv
+#    - scene.sitting_area_not_watching_tv
 
 
 #################################
