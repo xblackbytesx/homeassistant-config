@@ -57,15 +57,40 @@ all_first_floor_lights:
     - light.innr__master_bedroom
 
 
+#############################
+####### SWITCH GROUPS #######
+#############################
+
+power_socket_switches:
+  name: Power Sockets
+  entities:
+    - switch.power_socket_one
+    - switch.power_socket_two
+    - switch.power_socket_three
+
+ground_floor_switches:
+  name: Ground floor switches
+  entities:
+    - switch.power_socket_one
+    - switch.power_socket_two
+    - switch.power_socket_three
+    - switch.beamer_screen
+
+exterior_switches:
+  name: Exterior switches
+  entities:
+    - switch.sun_screen
+
+
 ############################
 ####### SCENE GROUPS #######
 ############################
 
-sitting_area_scenes:
-  name: Living room scenes
-  entities:
-    - scene.sitting_area_watching_tv
-    - scene.sitting_area_not_watching_tv
+#sitting_area_scenes:
+#  name: Living room scenes
+#  entities:
+#    - scene.sitting_area_watching_tv
+#    - scene.sitting_area_not_watching_tv
 
 
 #################################

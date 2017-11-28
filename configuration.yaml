@@ -44,6 +44,25 @@ logbook:
 # Track the sun
 sun:
 
+# Rfxtrx
+rfxtrx:
+  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11D2A5T-if00-port0
+
+switch:
+  platform: rfxtrx
+  automatic_add: True
+  devices:
+    0b11000001a4c3fa01000060:
+      name: power_socket_one
+    0b11000001a4c3fa02010f70:
+      name: power_socket_two
+    0b11000801a4c3fa03010f60:
+      name: power_socket_three
+    0710010048050160:
+      name: beamer_screen
+    0710010448060160:
+      name: sun_screen
+
 light:
   - platform: hue
     host: 10.0.221.30
@@ -95,4 +114,4 @@ media_player: !include_dir_merge_list media_players/
 camera: !include_dir_merge_list camera/
 group: !include_dir_merge_named layout/
 script: !include_dir_merge_named script/
-scene: !include_dir_merge_list scene/
+#scene: !include_dir_merge_list scene/

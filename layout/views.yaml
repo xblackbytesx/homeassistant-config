@@ -17,6 +17,9 @@ default_view:
     - sensor.motion_in_corridor
     - device_tracker.phonefabio_op5fabio
     - device_tracker.phonelianne_op5lianne
+    - group.power_socket_switches
+    - switch.beamer_screen
+    - switch.sun_screen
 
 ground_floor_view:
   view: yes
@@ -25,6 +28,7 @@ ground_floor_view:
     - group.living_room_lighting
     - group.hallway_lighting
     - group.all_ground_floor_lights
+    - group.ground_floor_switches
     - group.ground_floor_automation
 
 first_floor_view:
@@ -43,6 +47,7 @@ exterior_view:
   entities:
     - camera.foscam1
     - group.exterior_lighting
+    - group.exterior_switches
     - group.exterior_automation
 
 media_view:
@@ -60,17 +65,17 @@ security_view:
     - camera.xiaofang1
     - camera.xiaofang2
 
-scenes_view:
-  view: yes
-  icon: mdi:image-filter-hdr
-  entities:
-    - group.sitting_area_scenes
+#scenes_view:
+#  view: yes
+#  icon: mdi:image-filter-hdr
+#  entities:
+#    - group.sitting_area_scenes
 
 automation_view:
   view: yes
   icon: mdi:robot
   entities:
-    - group.all_automation
+    - group.all_automations
     - group.hallway_automation
     - group.sitting_area_automation
     - group.kitchen_automation
