@@ -17,6 +17,9 @@ default_view:
     - sensor.motion_in_corridor
     - device_tracker.phonefabio_op5fabio
     - device_tracker.phonelianne_op5lianne
+    - group.power_socket_switches
+    - switch.beamer_screen
+    - switch.sun_screen
 
 ground_floor_view:
   view: yes
@@ -70,7 +73,7 @@ automation_view:
   view: yes
   icon: mdi:robot
   entities:
-    - group.all_automation
+    - group.all_automations
     - group.hallway_automation
     - group.sitting_area_automation
     - group.kitchen_automation

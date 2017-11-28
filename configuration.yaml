@@ -46,20 +46,22 @@ sun:
 
 # Rfxtrx
 rfxtrx:
-device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A1HD1QG-if00-port0
-debug: True
-dummy: False
+  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11D2A5T-if00-port0
 
 switch:
   platform: rfxtrx
   automatic_add: True
-#  devices:
-#    0b11000102ef9f210010f70:
-#      name: power_socket_one
-#    0b11000a02ef2gf210010f50:
-#      name: power_socket_two
-#    0b11000a02ef2gf210010f50:
-#      name: power_socket_three
+  devices:
+    0b11000001a4c3fa01000060:
+      name: power_socket_one
+    0b11000001a4c3fa02010f70:
+      name: power_socket_two
+    0b11000801a4c3fa03010f60:
+      name: power_socket_three
+    0710010048050160:
+      name: beamer_screen
+    0710010448060160:
+      name: sun_screen
 
 light:
   - platform: hue

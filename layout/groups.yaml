@@ -57,6 +57,17 @@ all_first_floor_lights:
     - light.innr__master_bedroom
 
 
+#############################
+####### SWITCH GROUPS #######
+#############################
+
+power_socket_switches:
+  name: Power Sockets
+  entities:
+    - switch.power_socket_one
+    - switch.power_socket_two
+    - switch.power_socket_three
+
 ############################
 ####### SCENE GROUPS #######
 ############################
