@@ -44,6 +44,23 @@ logbook:
 # Track the sun
 sun:
 
+# Rfxtrx
+rfxtrx:
+device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A1HD1QG-if00-port0
+debug: True
+dummy: False
+
+switch:
+  platform: rfxtrx
+  automatic_add: True
+#  devices:
+#    0b11000102ef9f210010f70:
+#      name: power_socket_one
+#    0b11000a02ef2gf210010f50:
+#      name: power_socket_two
+#    0b11000a02ef2gf210010f50:
+#      name: power_socket_three
+
 light:
   - platform: hue
     host: 10.0.221.30
