@@ -50,7 +50,7 @@ rfxtrx:
 
 switch:
   platform: rfxtrx
-  automatic_add: True
+  automatic_add: False
   devices:
     0b11000001a4c3fa01000060:
       name: power_socket_one
@@ -62,6 +62,12 @@ switch:
       name: beamer_screen
     0710010448060160:
       name: sun_screen
+    0710010048070170:
+      name: programmable_one
+    0710010148080170:
+      name: programmable_two
+    0710010248100670:
+      name: programmable_three
 
 light:
   - platform: hue

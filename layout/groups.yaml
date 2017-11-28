@@ -68,6 +68,13 @@ power_socket_switches:
     - switch.power_socket_two
     - switch.power_socket_three
 
+programmable_switches:
+  name: Programmable switches
+  entities:
+    - switch.programmable_one
+    - switch.programmable_two
+    - switch.programmable_three
+
 ground_floor_switches:
   name: Ground floor switches
   entities:

@@ -18,6 +18,7 @@ default_view:
     - device_tracker.phonefabio_op5fabio
     - device_tracker.phonelianne_op5lianne
     - group.power_socket_switches
+    - group.programmable_switches
     - switch.beamer_screen
     - switch.sun_screen
 
