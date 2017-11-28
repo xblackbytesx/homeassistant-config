@@ -1,8 +1,8 @@
 - alias: Trigger media status override with hardware button
-   trigger:
-     platform: event
-     event_type: button_pressed
-     event_data: {"state": "on", "entity_id": "switch.programmable_one"}
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "on", "entity_id": "switch.programmable_one"}
 
   action:
     service: input_boolean.turn_on
