@@ -28,6 +28,7 @@ ground_floor_view:
     - group.living_room_lighting
     - group.hallway_lighting
     - group.all_ground_floor_lights
+    - group.ground_floor_switches
     - group.ground_floor_automation
 
 first_floor_view:
@@ -46,6 +47,7 @@ exterior_view:
   entities:
     - camera.foscam1
     - group.exterior_lighting
+    - group.exterior_switches
     - group.exterior_automation
 
 media_view:

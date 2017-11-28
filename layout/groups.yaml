@@ -68,6 +68,20 @@ power_socket_switches:
     - switch.power_socket_two
     - switch.power_socket_three
 
+ground_floor_switches:
+  name: Ground floor switches
+  entities:
+    - switch.power_socket_one
+    - switch.power_socket_two
+    - switch.power_socket_three
+    - switch.beamer_screen
+
+exterior_switches:
+  name: Exterior switches
+  entities:
+    - switch.sun_screen
+
+
 ############################
 ####### SCENE GROUPS #######
 ############################
