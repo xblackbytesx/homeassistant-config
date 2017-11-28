@@ -8,6 +8,7 @@
       to: 'playing'
     - platform: state
       entity_id: input_boolean.sa_media_status_override
+      from: 'off'
       to: 'on'
 
   action:
@@ -32,6 +33,7 @@
       to: 'idle'
     - platform: state
       entity_id: input_boolean.sa_media_status_override
+      from: 'on'
       to: 'off'
   action:
     service: input_boolean.turn_off
