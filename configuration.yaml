@@ -64,10 +64,13 @@ switch:
       name: sun_screen
     0710010048070170:
       name: programmable_one
+      fire_event: true
     0710010148080170:
       name: programmable_two
+      fire_event: true
     0710010248100670:
       name: programmable_three
+      fire_event: true
 
 light:
   - platform: hue
