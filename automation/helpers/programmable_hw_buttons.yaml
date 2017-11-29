@@ -1,4 +1,4 @@
-- alias: Trigger media status override with hardware button
+- alias: Trigger media status override with hardware button | on
   trigger:
     platform: event
     event_type: button_pressed
@@ -10,7 +10,7 @@
       entity_id: input_boolean.sa_media_status_override
 
 
-- alias: Trigger media status override with hardware button
+- alias: Trigger media status override with hardware button | off
   trigger:
     platform: event
     event_type: button_pressed
