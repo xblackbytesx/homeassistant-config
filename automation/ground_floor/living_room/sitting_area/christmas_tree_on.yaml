@@ -6,7 +6,8 @@
     - platform: state
       entity_id: sensor.motion_in_kitchen
       to: '1'
-  condition: time
+  condition:
+    condition: time
     after: '07:00:00'
     before: '04:00:00'
   action:
