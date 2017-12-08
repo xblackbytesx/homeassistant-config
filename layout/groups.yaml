@@ -117,6 +117,9 @@ all_automation:
     - automation.sa__media_paused__bright_scene
     - automation.sa__media_playing__dim_scene
 
+    - automation.sa__motion__christmas_tree_on
+    - automation.sa__motion__christmas_tree_off
+
     - automation.kitchen__motion__lights_on
     - automation.kitchen__motion__lights_off
     - automation.kitchen__time__lights_on
@@ -143,6 +146,9 @@ ground_floor_automation:
     - automation.sa__time__lights_off
     - automation.sa__media_paused__bright_scene
     - automation.sa__media_playing__dim_scene
+
+    - automation.sa__motion__christmas_tree_on
+    - automation.sa__motion__christmas_tree_off
 
     - automation.kitchen__motion__lights_on
     - automation.kitchen__motion__lights_off

@@ -15,4 +15,3 @@
   action:
     service: script.turn_on
     entity_id: script.scene_not_watching_tv
-
