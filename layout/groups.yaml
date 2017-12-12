@@ -67,6 +67,8 @@ power_socket_switches:
     - switch.power_socket_one
     - switch.power_socket_two
     - switch.power_socket_three
+    - switch.dimmable_socket_one
+    - switch.dimmable_socket_two
 
 programmable_switches:
   name: Programmable switches
@@ -81,6 +83,8 @@ ground_floor_switches:
     - switch.power_socket_one
     - switch.power_socket_two
     - switch.power_socket_three
+    - switch.dimmable_socket_one
+    - switch.dimmable_socket_two
     - switch.beamer_screen
 
 exterior_switches:
