@@ -58,6 +58,10 @@ switch:
       name: power_socket_two
     0b11000801a4c3fa03010f60:
       name: power_socket_three
+    0b110000019c0be201000070:
+      name: dimmable_socket_one
+    0b110002019c0be202010f70:
+      name: dimmable_socket_two
     0710010048050160:
       name: beamer_screen
     0710010448060160:
