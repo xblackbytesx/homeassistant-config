@@ -49,6 +49,8 @@ all_ground_floor_lights:
     - light.hue__go__closet__r
     - light.ledstrip_tv_cabinet
     - light.innr__downstairs__hallway
+    - light.dimmable_socket_one
+    - light.dimmable_socket_two
 
 all_first_floor_lights:
   name: All first floor lights
@@ -67,8 +69,8 @@ power_socket_switches:
     - switch.power_socket_one
     - switch.power_socket_two
     - switch.power_socket_three
-    - switch.dimmable_socket_one
-    - switch.dimmable_socket_two
+    - light.dimmable_socket_one
+    - light.dimmable_socket_two
 
 programmable_switches:
   name: Programmable switches
@@ -83,8 +85,8 @@ ground_floor_switches:
     - switch.power_socket_one
     - switch.power_socket_two
     - switch.power_socket_three
-    - switch.dimmable_socket_one
-    - switch.dimmable_socket_two
+    - light.dimmable_socket_one
+    - light.dimmable_socket_two
     - switch.beamer_screen
 
 exterior_switches:
