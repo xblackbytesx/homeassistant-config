@@ -13,7 +13,3 @@
   action:
     - service: homeassistant.turn_on
       entity_id: light.hallway
-    # - service: notify.pushbullet
-    #   data_template:
-    #     title: "Home Assistant"
-    #     message: "Hallway turned on with lux {{ states.sensor.illumination_in_hallwaystairs.state }}"
