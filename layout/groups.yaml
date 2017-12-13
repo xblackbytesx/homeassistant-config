@@ -116,9 +116,11 @@ all_automation:
     - automation.hw__motion__lights_on
     - automation.hw__motion__lights_off
 
-    - automation.sa__motion__bright_scene
+    - automation.sa__motion__no_media__bright_scene
+    - automation.sa__motion__media_playing__bright_scene
     - automation.sa__motion__lights_off
-    - automation.sa__time__bright_scene
+    - automation.sa__time__no_media__bright_scene
+    - automation.sa__time__media_playing__bright_scene
     - automation.sa__time__lights_off
     - automation.sa__media_paused__bright_scene
     - automation.sa__media_playing__dim_scene
@@ -146,9 +148,11 @@ ground_floor_automation:
     - automation.hw__motion__lights_on
     - automation.hw__motion__lights_off
 
-    - automation.sa__motion__bright_scene
+    - automation.sa__motion__no_media__bright_scene
+    - automation.sa__motion__media_playing__bright_scene
     - automation.sa__motion__lights_off
-    - automation.sa__time__bright_scene
+    - automation.sa__time__no_media__bright_scene
+    - automation.sa__time__media_playing__bright_scene
     - automation.sa__time__lights_off
     - automation.sa__media_paused__bright_scene
     - automation.sa__media_playing__dim_scene
@@ -171,9 +175,11 @@ hallway_automation:
 sitting_area_automation:
   name: Sitting area automations
   entities:
-    - automation.sa__motion__bright_scene
+    - automation.sa__motion__no_media__bright_scene
+    - automation.sa__motion__media_playing__bright_scene
     - automation.sa__motion__lights_off
-    - automation.sa__time__bright_scene
+    - automation.sa__time__no_media__bright_scene
+    - automation.sa__time__media_playing__bright_scene
     - automation.sa__time__lights_off
     - automation.sa__media_paused__bright_scene
     - automation.sa__media_playing__dim_scene

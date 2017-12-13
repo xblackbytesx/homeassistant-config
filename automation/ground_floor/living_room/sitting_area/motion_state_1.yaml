@@ -1,4 +1,4 @@
-- alias: SA | Motion | Bright scene
+- alias: SA | Motion | No media | Bright scene
   trigger:
     platform: state
     entity_id: sensor.motion_in_sitting_area
@@ -15,3 +15,22 @@
   action:
     service: script.turn_on
     entity_id: script.scene_not_watching_tv
+
+
+- alias: SA | Motion | Media playing | Bright scene
+  trigger:
+    platform: state
+    entity_id: sensor.motion_in_sitting_area
+    to: '1'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.sa_meets_darkness_cutoff
+        state: 'on'
+      - condition: state
+        entity_id: input_boolean.sa_tv_media_playing
+        state: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.scene_watching_tv
