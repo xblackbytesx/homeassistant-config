@@ -171,7 +171,7 @@ sitting_area_automation:
     - automation.sa__media_playing__state_one
     - automation.sa__media_playing__state_two
     - automation.sa__time__lights_off
-    
+
     - automation.sa__motion__christmas_tree_on
     - automation.sa__motion__christmas_tree_off
 

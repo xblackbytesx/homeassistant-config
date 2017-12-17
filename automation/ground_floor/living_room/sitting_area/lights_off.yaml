@@ -8,7 +8,7 @@
     conditions:
       - condition: state
         entity_id: sensor.motion_in_sitting_area
-        to: '0'
+        state: '0'
       - condition: state
         entity_id: input_boolean.sa_meets_darkness_cutoff
         state: 'off'
