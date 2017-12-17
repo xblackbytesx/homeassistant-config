@@ -4,17 +4,14 @@
     minutes: '/15'
     seconds: 00
   condition:
-    condition: and
+    condition: or
     conditions:
       - condition: state
         entity_id: sensor.motion_in_sitting_area
-        state: '1'
+        to: '0'
       - condition: state
         entity_id: input_boolean.sa_meets_darkness_cutoff
         state: 'off'
-      - condition: state
-        entity_id: light.sitting_area
-        state: 'on'
   action:
     - service: homeassistant.turn_off
       entity_id: light.sitting_area

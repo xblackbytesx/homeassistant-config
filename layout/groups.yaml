@@ -116,14 +116,10 @@ all_automation:
     - automation.hw__motion__lights_on
     - automation.hw__motion__lights_off
 
-    - automation.sa__motion__no_media__bright_scene
-    - automation.sa__motion__media_playing__bright_scene
-    - automation.sa__motion__lights_off
-    - automation.sa__time__no_media__bright_scene
-    - automation.sa__time__media_playing__bright_scene
+    - automation.sa__no_media
+    - automation.sa__media_playing__state_one
+    - automation.sa__media_playing__state_two
     - automation.sa__time__lights_off
-    - automation.sa__media_paused__bright_scene
-    - automation.sa__media_playing__dim_scene
 
     - automation.sa__motion__christmas_tree_on
     - automation.sa__motion__christmas_tree_off
@@ -148,14 +144,10 @@ ground_floor_automation:
     - automation.hw__motion__lights_on
     - automation.hw__motion__lights_off
 
-    - automation.sa__motion__no_media__bright_scene
-    - automation.sa__motion__media_playing__bright_scene
-    - automation.sa__motion__lights_off
-    - automation.sa__time__no_media__bright_scene
-    - automation.sa__time__media_playing__bright_scene
+    - automation.sa__no_media
+    - automation.sa__media_playing__state_one
+    - automation.sa__media_playing__state_two
     - automation.sa__time__lights_off
-    - automation.sa__media_paused__bright_scene
-    - automation.sa__media_playing__dim_scene
 
     - automation.sa__motion__christmas_tree_on
     - automation.sa__motion__christmas_tree_off
@@ -175,14 +167,13 @@ hallway_automation:
 sitting_area_automation:
   name: Sitting area automations
   entities:
-    - automation.sa__motion__no_media__bright_scene
-    - automation.sa__motion__media_playing__bright_scene
-    - automation.sa__motion__lights_off
-    - automation.sa__time__no_media__bright_scene
-    - automation.sa__time__media_playing__bright_scene
+    - automation.sa__no_media
+    - automation.sa__media_playing__state_one
+    - automation.sa__media_playing__state_two
     - automation.sa__time__lights_off
-    - automation.sa__media_paused__bright_scene
-    - automation.sa__media_playing__dim_scene
+    
+    - automation.sa__motion__christmas_tree_on
+    - automation.sa__motion__christmas_tree_off
 
 kitchen_automation:
   name: Kitchen automations
