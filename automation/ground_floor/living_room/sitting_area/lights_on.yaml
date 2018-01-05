@@ -19,9 +19,6 @@
         entity_id: input_boolean.sa_meets_darkness_cutoff
         state: 'on'
       - condition: state
-        entity_id: light.sitting_area
-        state: 'off'
-      - condition: state
         entity_id: input_boolean.sa_tv_media_playing
         state: 'off'
   action:
@@ -49,9 +46,6 @@
       - condition: state
         entity_id: input_boolean.sa_meets_darkness_cutoff
         state: 'on'
-      - condition: state
-        entity_id: light.sitting_area
-        state: 'off'
       - condition: state
         entity_id: input_boolean.sa_tv_media_playing
         state: 'on'
@@ -83,9 +77,6 @@
       - condition: state
         entity_id: input_boolean.sa_meets_darkness_cutoff
         state: 'on'
-      - condition: state
-        entity_id: light.sitting_area
-        state: 'off'
       - condition: state
         entity_id: input_boolean.sa_tv_media_playing
         state: 'on'

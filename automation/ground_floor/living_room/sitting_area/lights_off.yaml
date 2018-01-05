@@ -1,7 +1,7 @@
 - alias: SA | Time | Lights off
   trigger:
     platform: time
-    minutes: '/15'
+    minutes: '/5'
     seconds: 00
   condition:
     condition: or
