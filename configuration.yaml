@@ -72,10 +72,11 @@ switch:
       name: programmable_three
       fire_event: true
 
-light:
-  - platform: hue
-    host: 10.0.221.30
+hue:
+  bridges:
+    - host: 10.0.221.30
 
+light:
   - platform: flux_led
     devices:
       10.0.221.31:
