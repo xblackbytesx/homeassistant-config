@@ -1,20 +1,25 @@
 - alias: SA | Time | Lights off
   trigger:
     platform: time
-    minutes: '/15'
+    minutes: '/5'
     seconds: 00
   condition:
-    condition: and
+    condition: or
     conditions:
+      - condition: and
+        conditions:
+          - condition: state
+            entity_id: sensor.motion_in_sitting_area
+            state: '0'
+          - condition: state
+            entity_id: binary_sensor.motion_sensor_sa
+            state: 'off'
       - condition: state
         entity_id: sensor.motion_in_sitting_area
-        state: '1'
+        state: '0'
       - condition: state
         entity_id: input_boolean.sa_meets_darkness_cutoff
         state: 'off'
-      - condition: state
-        entity_id: light.sitting_area
-        state: 'on'
   action:
     - service: homeassistant.turn_off
       entity_id: light.sitting_area

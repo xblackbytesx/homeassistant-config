@@ -11,9 +11,7 @@
     entity_id: input_boolean.hw_meets_darkness_cutoff
     state: 'on'
   action:
-    - service: homeassistant.turn_on
-      entity_id: light.hallway
-    # - service: notify.pushbullet
-    #   data_template:
-    #     title: "Home Assistant"
-    #     message: "Hallway turned on with lux {{ states.sensor.illumination_in_hallwaystairs.state }}"
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Hallway"
+        scene_name: "HW | Relax"

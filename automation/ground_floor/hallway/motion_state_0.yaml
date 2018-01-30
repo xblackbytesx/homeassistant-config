@@ -1,19 +1,17 @@
 - alias: HW | Motion | Lights off
   trigger:
-    - platform: state
-      entity_id: sensor.motion_in_hallwaydoor
-      to: '0'
-      for:
-        minutes: 0
-    - platform: state
-      entity_id: sensor.motion_in_hallwaystairs
-      to: '0'
-      for:
-        minutes: 0
+    platform: time
+    minutes: '/5'
+    seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.motion_in_hallwaydoor
+        state: '0'
+      - condition: state
+        entity_id: sensor.motion_in_hallwaystairs
+        state: '0'
   action:
     - service: homeassistant.turn_off
       entity_id: light.hallway
-    # - service: notify.pushbullet
-    #   data:
-    #     title: "Home Assistent"
-    #     message: "Hallway turned off after 5 minutes."

@@ -30,7 +30,7 @@ http:
 updater:
 
 # Discover some devices automatically
-discovery:
+# discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -50,7 +50,7 @@ rfxtrx:
 
 switch:
   platform: rfxtrx
-  automatic_add: True
+  automatic_add: False
   devices:
     0b11000001a4c3fa01000060:
       name: power_socket_one
@@ -62,17 +62,41 @@ switch:
       name: beamer_screen
     0710010448060160:
       name: sun_screen
+    0710010048070170:
+      name: programmable_one
+      fire_event: true
+    0710010148080170:
+      name: programmable_two
+      fire_event: true
+    0710010248100670:
+      name: programmable_three
+      fire_event: true
+
+binary_sensor:
+  platform: rfxtrx
+  devices:
+    0b11000001a1dbda0a010f70:
+      name: motion_sensor_sa
+      device_class: motion
+
+hue:
+  bridges:
+    - host: 10.0.221.30
 
 light:
-  - platform: hue
-    host: 10.0.221.30
-
   - platform: flux_led
     devices:
       10.0.221.31:
         name: Ledstrip TV Cabinet
         protocol: 'ledenet'
         mode: "rgbw"
+
+  - platform: rfxtrx
+    devices:
+      0b110000019c0be201000070:
+        name: dimmable_socket_one
+      0b110002019c0be202010f70:
+        name: dimmable_socket_two
 
 nest:
   client_id: !secret nest_client_id

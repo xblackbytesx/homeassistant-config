@@ -49,6 +49,8 @@ all_ground_floor_lights:
     - light.hue__go__closet__r
     - light.ledstrip_tv_cabinet
     - light.innr__downstairs__hallway
+    - light.dimmable_socket_one
+    - light.dimmable_socket_two
 
 all_first_floor_lights:
   name: All first floor lights
@@ -67,6 +69,15 @@ power_socket_switches:
     - switch.power_socket_one
     - switch.power_socket_two
     - switch.power_socket_three
+    - light.dimmable_socket_one
+    - light.dimmable_socket_two
+
+programmable_switches:
+  name: Programmable switches
+  entities:
+    - switch.programmable_one
+    - switch.programmable_two
+    - switch.programmable_three
 
 ground_floor_switches:
   name: Ground floor switches
@@ -74,6 +85,8 @@ ground_floor_switches:
     - switch.power_socket_one
     - switch.power_socket_two
     - switch.power_socket_three
+    - light.dimmable_socket_one
+    - light.dimmable_socket_two
     - switch.beamer_screen
 
 exterior_switches:
@@ -103,12 +116,13 @@ all_automation:
     - automation.hw__motion__lights_on
     - automation.hw__motion__lights_off
 
-    - automation.sa__motion__bright_scene
-    - automation.sa__motion__lights_off
-    - automation.sa__time__bright_scene
+    - automation.sa__no_media
+    - automation.sa__media_playing__state_one
+    - automation.sa__media_playing__state_two
     - automation.sa__time__lights_off
-    - automation.sa__media_paused__bright_scene
-    - automation.sa__media_playing__dim_scene
+
+    - automation.sa__motion__christmas_tree_on
+    - automation.sa__motion__christmas_tree_off
 
     - automation.kitchen__motion__lights_on
     - automation.kitchen__motion__lights_off
@@ -130,12 +144,13 @@ ground_floor_automation:
     - automation.hw__motion__lights_on
     - automation.hw__motion__lights_off
 
-    - automation.sa__motion__bright_scene
-    - automation.sa__motion__lights_off
-    - automation.sa__time__bright_scene
+    - automation.sa__no_media
+    - automation.sa__media_playing__state_one
+    - automation.sa__media_playing__state_two
     - automation.sa__time__lights_off
-    - automation.sa__media_paused__bright_scene
-    - automation.sa__media_playing__dim_scene
+
+    - automation.sa__motion__christmas_tree_on
+    - automation.sa__motion__christmas_tree_off
 
     - automation.kitchen__motion__lights_on
     - automation.kitchen__motion__lights_off
@@ -152,12 +167,13 @@ hallway_automation:
 sitting_area_automation:
   name: Sitting area automations
   entities:
-    - automation.sa__motion__bright_scene
-    - automation.sa__motion__lights_off
-    - automation.sa__time__bright_scene
+    - automation.sa__no_media
+    - automation.sa__media_playing__state_one
+    - automation.sa__media_playing__state_two
     - automation.sa__time__lights_off
-    - automation.sa__media_paused__bright_scene
-    - automation.sa__media_playing__dim_scene
+
+    - automation.sa__motion__christmas_tree_on
+    - automation.sa__motion__christmas_tree_off
 
 kitchen_automation:
   name: Kitchen automations

@@ -8,5 +8,7 @@
     entity_id: input_boolean.co_meets_darkness_cutoff
     state: 'on'
   action:
-    - service: homeassistant.turn_on
-      entity_id: light.corridor
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Corridor"
+        scene_name: "Co | Relax"
