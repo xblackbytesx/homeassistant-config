@@ -4,6 +4,9 @@
       entity_id: sensor.motion_in_sitting_area
       to: '1'
     - platform: state
+      entity_id: switch.motion_sensor_sa
+      to: 'on'
+    - platform: state
       entity_id: input_boolean.sa_tv_media_playing
       to: 'off'
     - platform: time
@@ -12,6 +15,15 @@
   condition:
     condition: and
     conditions:
+      - condition:
+          condition: or
+          conditions:
+            - condition: state
+              entity_id: sensor.motion_in_sitting_area
+              state: '1'
+            - condition: state
+              entity_id: sensor.motion_sensor_sa
+              state: 'on'
       - condition: state
         entity_id: sensor.motion_in_sitting_area
         state: '1'
@@ -32,6 +44,9 @@
       entity_id: sensor.motion_in_sitting_area
       to: '1'
     - platform: state
+      entity_id: switch.motion_sensor_sa
+      to: 'on'
+    - platform: state
       entity_id: input_boolean.sa_tv_media_playing
       to: 'on'
     - platform: time
@@ -40,9 +55,15 @@
   condition:
     condition: and
     conditions:
-      - condition: state
-        entity_id: sensor.motion_in_sitting_area
-        state: '1'
+      - condition:
+          condition: or
+          conditions:
+            - condition: state
+              entity_id: sensor.motion_in_sitting_area
+              state: '1'
+            - condition: state
+              entity_id: sensor.motion_sensor_sa
+              state: 'on'
       - condition: state
         entity_id: input_boolean.sa_meets_darkness_cutoff
         state: 'on'
@@ -63,6 +84,9 @@
       entity_id: sensor.motion_in_sitting_area
       to: '1'
     - platform: state
+      entity_id: switch.motion_sensor_sa
+      to: 'on'
+    - platform: state
       entity_id: input_boolean.sa_tv_media_playing
       to: 'on'
     - platform: time
@@ -71,9 +95,15 @@
   condition:
     condition: and
     conditions:
-      - condition: state
-        entity_id: sensor.motion_in_sitting_area
-        state: '1'
+      - condition:
+          condition: or
+          conditions:
+            - condition: state
+              entity_id: sensor.motion_in_sitting_area
+              state: '1'
+            - condition: state
+              entity_id: sensor.motion_sensor_sa
+              state: 'on'
       - condition: state
         entity_id: input_boolean.sa_meets_darkness_cutoff
         state: 'on'
