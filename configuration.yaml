@@ -50,7 +50,7 @@ rfxtrx:
 
 switch:
   platform: rfxtrx
-  automatic_add: True
+  automatic_add: False
   devices:
     0b11000001a1dbda0a010f70:
       name: motion_sensor_sa
