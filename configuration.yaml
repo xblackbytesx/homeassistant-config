@@ -50,7 +50,7 @@ rfxtrx:
 
 switch:
   platform: rfxtrx
-  automatic_add: False
+  automatic_add: True
   devices:
     0b11000001a4c3fa01000060:
       name: power_socket_one
