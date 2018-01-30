@@ -50,8 +50,10 @@ rfxtrx:
 
 switch:
   platform: rfxtrx
-  automatic_add: False
+  automatic_add: True
   devices:
+    0b11000001a1dbda0a010f70:
+      name: motion_sensor_sa
     0b11000001a4c3fa01000060:
       name: power_socket_one
     0b11000001a4c3fa02010f70:
