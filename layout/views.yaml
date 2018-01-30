@@ -15,7 +15,7 @@ default_view:
     - sensor.motion_in_sitting_area
     - sensor.motion_in_kitchen
     - sensor.motion_in_corridor
-    - switch.motion_sensor_sa
+    - binary_sensor.motion_sensor_sa
     - device_tracker.phonefabio_op5fabio
     - device_tracker.phonelianne_op5lianne
     - group.power_socket_switches

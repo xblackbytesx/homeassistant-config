@@ -12,7 +12,7 @@
             entity_id: sensor.motion_in_sitting_area
             state: '0'
           - condition: state
-            entity_id: switch.motion_sensor_sa
+            entity_id: binary_sensor.motion_sensor_sa
             state: 'off'
       - condition: state
         entity_id: sensor.motion_in_sitting_area
