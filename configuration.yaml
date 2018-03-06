@@ -52,61 +52,49 @@ switch:
   platform: rfxtrx
   automatic_add: false
   devices:
+    # freq1but1
     0b110000019c0be201000070:
-      name: freq1but1
+      name: programmable_one
+    # freq1but2
     0b110002019c0be202010f70:
-      name: freq1but2
+      name: programmable_two
+    # freq1but3
     0b110000019c0be203010f70:
-      name: freq1but3
+      name: programmable_three
+    # freq1but4
     0b110003019c0be204010f70:
-      name: freq1but4
+      name: programmable_four
 
+    # freq2but1
     0b11001e019c0be205010f70:
-      name: freq2but1
+      name: programmable_five
+    # freq2but2
     0b110020019c0be206010f70:
-      name: freq2but2
+      name: programmable_six
+    # freq2but3
     0b110021019c0be207010f70:
-      name: freq2but3
+      name: programmable_seven
+    # freq2but4
     0b110022019c0be208010f70:
-      name: freq2but4
-    
+      name: programmable_eight
+
+    # freq3but1
     0b110024019c0be209010f70:
-      name: freq3but1
-    0b110025019c0be20a010f70:
-      name: freq3but2
-    0b110026019c0be20b010f60:
-      name: freq3but3
-    0b110027019c0be20c010f70:
-      name: freq3but4
-
-    0b110028019c0be20d010f60:
-      name: freq4but1
-    0b110029019c0be20e010f70:
-      name: freq4but2
-    0b11002a019c0be20f010f70:
-      name: freq4but3
-    0b11002b019c0be210010f70:
-      name: freq4but4
-
-    0b11000001a4c3fa01000060:
       name: power_socket_one
-    0b11000001a4c3fa02010f70:
+    # freq3but2
+    0b110025019c0be20a010f70:
       name: power_socket_two
-    0b11000801a4c3fa03010f60:
+    # freq3but3
+    0b110026019c0be20b010f60:
       name: power_socket_three
+    # # freq3but4
+    # 0b110027019c0be20c010f70:
+    #   name: power_socket_four
+
     0710010048050160:
       name: beamer_screen
     0710010448060160:
       name: sun_screen
-    0710010048070170:
-      name: programmable_one
-      fire_event: true
-    0710010148080170:
-      name: programmable_two
-      fire_event: true
-    0710010248100670:
-      name: programmable_three
-      fire_event: true
 
 binary_sensor:
   platform: rfxtrx
@@ -129,10 +117,18 @@ light:
 
   - platform: rfxtrx
     devices:
-      0b110000019c0be20100007011:
+      # freq4but1
+      0b110028019c0be20d010f60:
         name: dimmable_socket_one
-      0b110002019c0be202010f7011:
+      # freq4but2
+      0b110029019c0be20e010f70:
         name: dimmable_socket_two
+      # # freq4but3
+      # 0b11002a019c0be20f010f70:
+      #   name: dimmable_socket_three
+      # # freq4but4
+      # 0b11002b019c0be210010f70:
+      #   name: dimmable_socket_four
 
 nest:
   client_id: !secret nest_client_id

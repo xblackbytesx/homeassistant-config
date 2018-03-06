@@ -78,6 +78,11 @@ programmable_switches:
     - switch.programmable_one
     - switch.programmable_two
     - switch.programmable_three
+    - switch.programmable_four
+    - switch.programmable_five
+    - switch.programmable_six
+    - switch.programmable_seven
+    - switch.programmable_eight
 
 ground_floor_switches:
   name: Ground floor switches
