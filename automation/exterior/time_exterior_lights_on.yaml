@@ -3,5 +3,7 @@
     - platform: time
       at: '17:30:00'
   action:
-    - service: homeassistant.turn_on
-      entity_id: light.exterior
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Exterior"
+        scene_name: "EX | Relax"
