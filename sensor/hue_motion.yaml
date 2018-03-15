@@ -1,0 +1,35 @@
+# Motion sensor
+- platform: rest
+  resource: !secret hallway_stairs_motion_url
+  value_template: '{{ value_json.state.status }}'
+  scan_interval: 2
+  name: 'Motion in hallway/stairs'
+
+# Motion sensor
+- platform: rest
+  resource: !secret hallway_door_motion_url
+  value_template: '{{ value_json.state.status }}'
+  scan_interval: 2
+  name: 'Motion in hallway/door'
+
+# Motion sensor
+- platform: rest
+  resource: !secret sitting_area_motion_url
+  value_template: '{{ value_json.state.status }}'
+  scan_interval: 2
+  name: 'Motion in sitting area'
+
+# Motion sensor
+- platform: rest
+  resource: !secret kitchen_motion_url
+  value_template: '{{ value_json.state.status }}'
+  scan_interval: 2
+  name: 'Motion in kitchen'
+
+# Motion sensor
+- platform: rest
+  resource: !secret corridor_motion_url
+  value_template: '{{ value_json.state.status }}'
+  scan_interval: 2
+  name: 'Motion in corridor'
+

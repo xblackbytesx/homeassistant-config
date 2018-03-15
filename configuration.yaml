@@ -55,10 +55,6 @@ map:
 # Track the sun
 sun:
 
-# Weather prediction
-sensor:
-  - platform: yr
-
 # Text to speech
 tts:
   - platform: google
@@ -66,6 +62,7 @@ tts:
 # Cloud
 cloud:
 
+sensor: !include_dir_merge_list sensor/
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml

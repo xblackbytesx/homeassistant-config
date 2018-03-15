@@ -1,0 +1,34 @@
+# Lightlevel sensor
+- platform: rest
+  resource: !secret hallway_door_lux_url
+  value_template: '{{ (10 ** (float(value_json.state.lightlevel - 1) / 10000))|round(1) }}'
+  unit_of_measurement: Lux
+  name: 'Illumination in hallway/door'
+
+# Lightlevel sensor
+- platform: rest
+  resource: !secret hallway_stairs_lux_url
+  value_template: '{{ (10 ** (float(value_json.state.lightlevel - 1) / 10000))|round(1) }}'
+  unit_of_measurement: Lux
+  name: 'Illumination in hallway/stairs'
+
+# Lightlevel sensor
+- platform: rest
+  resource: !secret sitting_area_lux_url
+  value_template: '{{ (10 ** (float(value_json.state.lightlevel - 1) / 10000))|round(1) }}'
+  unit_of_measurement: Lux
+  name: 'Illumination in sitting area'
+
+# Lightlevel sensor
+- platform: rest
+  resource: !secret kitchen_lux_url
+  value_template: '{{ (10 ** (float(value_json.state.lightlevel - 1) / 10000))|round(1) }}'
+  unit_of_measurement: Lux
+  name: 'Illumination in kitchen'
+
+# Lightlevel sensor
+- platform: rest
+  resource: !secret corridor_lux_url
+  value_template: '{{ (10 ** (float(value_json.state.lightlevel - 1) / 10000))|round(1) }}'
+  unit_of_measurement: Lux
+  name: 'Illumination in corridor'
