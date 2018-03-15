@@ -24,3 +24,4 @@ nest.conf
 .uuid
 ipchange.yaml
 .idea
+entity_registry.yaml
