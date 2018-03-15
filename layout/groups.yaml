@@ -1,0 +1,274 @@
+###############################
+####### LIGHTING GROUPS #######
+###############################
+
+living_room_lighting:
+  name: Living room lighting
+  entities:
+    - light.kitchen
+    - light.sitting_area
+    - light.ledstrip_tv_cabinet
+
+exterior_lighting:
+  name: Exterior lighting
+  entities:
+    - light.front_porch
+    - light.backyard
+
+corridor_lighting:
+  name: Corridor lighting
+  entities:
+    - light.corridor
+
+master_bedroom_lighting:
+  name: Master Bedroom lighting
+  entities:
+    - light.master_bedroom
+
+media_players:
+  name: Media player
+  entities:
+    - media_player.yamaha_receiver
+    - media_player.kodi
+    - media_player.living_room
+    - media_player.living_room_audio
+
+hallway_lighting:
+  name: Hallway lighting
+  entities:
+    - light.hallway
+
+all_ground_floor_lights:
+  name: All ground floor lights
+  entities:
+    - light.hue__bulb__kitchen_table__l
+    - light.hue__bulb__kitchen_table__r
+    - light.hue__bulb__standing_lamp
+    - light.hue__iris__tv_cabinet
+    - light.hue__go__closet__l
+    - light.hue__go__closet__r
+    - light.ledstrip_tv_cabinet
+    - light.innr__downstairs__hallway
+    - light.dimmable_socket_one
+    - light.dimmable_socket_two
+
+all_first_floor_lights:
+  name: All first floor lights
+  entities:
+    - light.innr__corridor
+    - light.innr__master_bedroom
+
+
+#############################
+####### SWITCH GROUPS #######
+#############################
+
+power_socket_switches:
+  name: Power Sockets
+  entities:
+    - switch.power_socket_one
+    - switch.power_socket_two
+    - switch.power_socket_three
+    - light.dimmable_socket_one
+    - light.dimmable_socket_two
+
+programmable_switches:
+  name: Programmable switches
+  entities:
+    - switch.programmable_one
+    - switch.programmable_two
+    - switch.programmable_three
+    - switch.programmable_four
+    - switch.programmable_five
+    - switch.programmable_six
+    - switch.programmable_seven
+    - switch.programmable_eight
+
+ground_floor_switches:
+  name: Ground floor switches
+  entities:
+    - switch.power_socket_one
+    - switch.power_socket_two
+    - switch.power_socket_three
+    - light.dimmable_socket_one
+    - light.dimmable_socket_two
+    - switch.beamer_screen
+
+exterior_switches:
+  name: Exterior switches
+  entities:
+    - switch.sun_screen
+
+
+############################
+####### SCENE GROUPS #######
+############################
+
+#sitting_area_scenes:
+#  name: Living room scenes
+#  entities:
+#    - scene.sitting_area_watching_tv
+#    - scene.sitting_area_not_watching_tv
+
+
+#################################
+####### AUTOMATION GROUPS #######
+#################################
+
+all_automation:
+  name: All automations
+  entities:
+    - automation.hw__motion__lights_on
+    - automation.hw__motion__lights_off
+
+    - automation.sa__no_media
+    - automation.sa__media_playing__state_one
+    - automation.sa__media_playing__state_two
+    - automation.sa__time__lights_off
+
+    - automation.sa__motion__christmas_tree_on
+    - automation.sa__motion__christmas_tree_off
+
+    - automation.kitchen__motion__lights_on
+    - automation.kitchen__motion__lights_off
+    - automation.kitchen__time__lights_on
+    - automation.kitchen__time__lights_off
+
+    - automation.ex__time__lights_on
+    - automation.ex__time__lights_off
+
+    - automation.co__motion__lights_on
+    - automation.co__motion__lights_off
+
+    - automation.mb__motion__lights_on
+    - automation.mb__motion__lights_off
+
+ground_floor_automation:
+  name: Ground floor automations
+  entities:
+    - automation.hw__motion__lights_on
+    - automation.hw__motion__lights_off
+
+    - automation.sa__no_media
+    - automation.sa__media_playing__state_one
+    - automation.sa__media_playing__state_two
+    - automation.sa__time__lights_off
+
+    - automation.sa__motion__christmas_tree_on
+    - automation.sa__motion__christmas_tree_off
+
+    - automation.kitchen__motion__lights_on
+    - automation.kitchen__motion__lights_off
+    - automation.kitchen__time__lights_on
+    - automation.kitchen__time__lights_off
+
+
+hallway_automation:
+  name: Hallway automations
+  entities:
+    - automation.hw__motion__lights_on
+    - automation.hw__motion__lights_off
+
+sitting_area_automation:
+  name: Sitting area automations
+  entities:
+    - automation.sa__no_media
+    - automation.sa__media_playing__state_one
+    - automation.sa__media_playing__state_two
+    - automation.sa__time__lights_off
+
+    - automation.sa__motion__christmas_tree_on
+    - automation.sa__motion__christmas_tree_off
+
+kitchen_automation:
+  name: Kitchen automations
+  entities:
+    - automation.kitchen__motion__lights_on
+    - automation.kitchen__motion__lights_off
+    - automation.kitchen__time__lights_on
+    - automation.kitchen__time__lights_off
+
+exterior_automation:
+  name: Exterior automations
+  entities:
+    - automation.ex__time__lights_on
+    - automation.ex__time__lights_off
+
+first_floor_automation:
+  name: First floor automations
+  entities:
+    - automation.co__motion__lights_on
+    - automation.co__motion__lights_off
+
+    - automation.mb__motion__lights_on
+    - automation.mb__motion__lights_off
+
+corridor_automation:
+  name: Corridor automations
+  entities:
+    - automation.co__motion__lights_on
+    - automation.co__motion__lights_off
+
+master_bedroom_automation:
+  name: Master bedroom automations
+  entities:
+    - automation.mb__motion__lights_on
+    - automation.mb__motion__lights_off
+
+
+##############################
+####### CLIMATE GROUPS #######
+##############################
+
+living_room_climate:
+  name: Living room climate
+  entities:
+    - climate.living_room
+    - sensor.temperature_in_hallwaydoor
+    - sensor.temperature_in_hallwaystairs
+    - sensor.temperature_in_sitting_area
+    - sensor.temperature_in_kitchen
+
+first_floor_climate:
+  name: First floor climate
+  entities:
+    - sensor.temperature_in_corridor
+    - sensor.illumination_in_corridor
+
+weather:
+  name: Weather
+  entities:
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_apparent_temperature
+    - sensor.dark_sky_wind_speed
+
+
+############################
+####### MISC SENSORS #######
+############################
+
+living_room_brightness:
+  name: Living room brightness
+  entities:
+    - sensor.illumination_in_hallwaydoor
+    - sensor.illumination_in_hallwaystairs
+    - sensor.illumination_in_sitting_area
+    - sensor.illumination_in_kitchen
+
+internet_health_check:
+  name: Internet health check
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+
+
+################################
+####### MANUAL OVERRIDES #######
+################################
+
+boolean_overrides:
+  name: Boolean value overrides
+  entities:
+    - input_boolean.sa_media_status_override

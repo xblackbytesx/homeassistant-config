@@ -161,4 +161,5 @@ nest:
 sensor: !include_dir_merge_list sensor/
 group: !include groups.yaml
 automation: !include automations.yaml
+group: !include_dir_merge_named layout/
 script: !include scripts.yaml
