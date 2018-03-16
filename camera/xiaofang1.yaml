@@ -1,0 +1,5 @@
+# - platform: ffmpeg
+#   input: -rtsp_transport tcp -i rtsp://10.0.221.34/unicast
+#   name: XiaoFang1
+#   ffmpeg_bin: /usr/bin/ffmpeg
+#   extra_arguments: -q:v 2-32

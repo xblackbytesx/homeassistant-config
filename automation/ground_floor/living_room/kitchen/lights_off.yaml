@@ -1,0 +1,17 @@
+- alias: Kitchen | Time | Lights off
+  trigger:
+    platform: time
+    minutes: '/15'
+    seconds: 00
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: sensor.motion_in_kitchen
+        state: '0'
+      - condition: state
+        entity_id: input_boolean.kitchen_meets_darkness_cutoff
+        state: 'off'
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.kitchen

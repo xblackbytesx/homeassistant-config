@@ -1,0 +1,7 @@
+- alias: "EX | Time | Lights off"
+  trigger:
+    - platform: time
+      at: '3:30:00'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: light.exterior

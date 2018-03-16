@@ -1,0 +1,17 @@
+- alias: HW | Motion | Lights off
+  trigger:
+    platform: time
+    minutes: '/5'
+    seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.motion_in_hallwaydoor
+        state: '0'
+      - condition: state
+        entity_id: sensor.motion_in_hallwaystairs
+        state: '0'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: light.hallway

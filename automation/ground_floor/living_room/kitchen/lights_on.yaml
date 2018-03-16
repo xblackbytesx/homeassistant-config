@@ -1,0 +1,25 @@
+- alias: Kitchen | Lights on
+  trigger:
+    - platform: state
+      entity_id: sensor.motion_in_kitchen
+      to: '1'
+    - platform: time
+      minutes: '/5'
+      seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.motion_in_kitchen
+        state: '1'
+      - condition: state
+        entity_id: input_boolean.kitchen_meets_darkness_cutoff
+        state: 'on'
+      - condition: state
+        entity_id: light.kitchen
+        state: 'off'
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Kitchen"
+        scene_name: "Kitchen | Relax"

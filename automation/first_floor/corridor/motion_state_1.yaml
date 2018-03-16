@@ -1,0 +1,14 @@
+- alias: CO | Motion | Lights on
+  trigger:
+    platform: state
+    entity_id: sensor.motion_in_corridor
+    to: '1'
+  condition:
+    condition: state
+    entity_id: input_boolean.co_meets_darkness_cutoff
+    state: 'on'
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Corridor"
+        scene_name: "Co | Relax"

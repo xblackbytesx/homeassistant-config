@@ -1,0 +1,8 @@
+#sa_media_status_override:
+#  name: Override the media_playing status
+#  initial: off
+#  icon: mdi:television-classic
+#
+#  action:
+#    service: script.turn_on
+#    entity_id: script.scene_not_watching_tv

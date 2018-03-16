@@ -1,0 +1,17 @@
+- alias: HW | Motion | Lights on
+  trigger:
+    - platform: state
+      entity_id: sensor.motion_in_hallwaydoor
+      to: '1'
+    - platform: state
+      entity_id: sensor.motion_in_hallwaystairs
+      to: '1'
+  condition:
+    condition: state
+    entity_id: input_boolean.hw_meets_darkness_cutoff
+    state: 'on'
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Hallway"
+        scene_name: "HW | Relax"

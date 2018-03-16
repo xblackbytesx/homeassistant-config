@@ -1,0 +1,4 @@
+# - platform: samsungtv
+#   host: 10.0.220.3
+#   port: 55000
+#   mac: !secret samsung_tv_mac_address
