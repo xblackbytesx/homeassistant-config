@@ -1,0 +1,5 @@
+  platform: rfxtrx
+  devices:
+    0b11000001a1dbda0a010f70:
+      name: motion_sensor_sa
+      device_class: motion
