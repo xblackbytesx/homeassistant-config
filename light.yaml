@@ -1,0 +1,21 @@
+- platform: flux_led
+  devices:
+    10.0.221.31:
+      name: Ledstrip TV Cabinet
+      protocol: 'ledenet'
+      mode: "rgbw"
+
+- platform: rfxtrx
+  devices:
+    # freq4but1
+    0b110028019c0be20d010f60:
+      name: dimmable_socket_one
+    # freq4but2
+    0b110029019c0be20e010f70:
+      name: dimmable_socket_two
+    # # freq4but3
+    # 0b11002a019c0be20f010f70:
+    #   name: dimmable_socket_three
+    # # freq4but4
+    # 0b11002b019c0be210010f70:
+    #   name: dimmable_socket_four
