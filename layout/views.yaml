@@ -77,7 +77,7 @@ automation_view:
   view: yes
   icon: mdi:robot
   entities:
-    - group.all_automation
+    - group.all_automations
     - group.hallway_automation
     - group.sitting_area_automation
     - group.kitchen_automation

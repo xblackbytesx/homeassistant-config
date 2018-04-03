@@ -115,34 +115,6 @@ exterior_switches:
 ####### AUTOMATION GROUPS #######
 #################################
 
-all_automation:
-  name: All automations
-  entities:
-    - automation.hw__motion__lights_on
-    - automation.hw__motion__lights_off
-
-    - automation.sa__no_media
-    - automation.sa__media_playing__state_one
-    - automation.sa__media_playing__state_two
-    - automation.sa__time__lights_off
-
-    - automation.sa__motion__christmas_tree_on
-    - automation.sa__motion__christmas_tree_off
-
-    - automation.kitchen__motion__lights_on
-    - automation.kitchen__motion__lights_off
-    - automation.kitchen__time__lights_on
-    - automation.kitchen__time__lights_off
-
-    - automation.ex__time__lights_on
-    - automation.ex__time__lights_off
-
-    - automation.co__motion__lights_on
-    - automation.co__motion__lights_off
-
-    - automation.mb__motion__lights_on
-    - automation.mb__motion__lights_off
-
 ground_floor_automation:
   name: Ground floor automations
   entities:
