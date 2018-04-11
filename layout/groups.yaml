@@ -55,6 +55,7 @@ corridor_lighting:
 bathroom_lighting:
   name: Bathroom lighting
   entities:
+    - light.hue__candle__bathroom__l
     - light.hue__bulb__bathroom__r
 
 jamieroom_lighting:
@@ -66,6 +67,7 @@ all_first_floor_lights:
   name: All first floor lights
   entities:
     - light.hue__bulb__corridor
+    - light.hue__candle__bathroom__l
     - light.hue__bulb__bathroom__r
     - light.hue__bulb__jamie
     - light.innr__master_bedroom
