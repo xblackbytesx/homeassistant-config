@@ -15,11 +15,6 @@ exterior_lighting:
     - light.front_porch
     - light.backyard
 
-corridor_lighting:
-  name: Corridor lighting
-  entities:
-    - light.corridor
-
 master_bedroom_lighting:
   name: Master Bedroom lighting
   entities:
@@ -36,7 +31,7 @@ media_players:
 hallway_lighting:
   name: Hallway lighting
   entities:
-    - light.hallway
+    - light.hue__bulb__hallway
 
 all_ground_floor_lights:
   name: All ground floor lights
