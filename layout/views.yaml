@@ -37,8 +37,10 @@ first_floor_view:
   view: yes
   name: First Floor
   entities:
-    - group.master_bedroom_lighting
     - group.corridor_lighting
+    - group.bathroom_lighting
+    - group.jamieroom_lighting
+    - group.master_bedroom_lighting
     - group.first_floor_climate
     - group.all_first_floor_lights
     - group.first_floor_automation

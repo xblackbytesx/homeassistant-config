@@ -48,14 +48,31 @@ all_ground_floor_lights:
     - light.hue__go__closet__l
     - light.hue__go__closet__r
     - light.ledstrip_tv_cabinet
-    - light.innr__downstairs__hallway
+    - light.hue__bulb__hallway
     - light.dimmable_socket_one
     - light.dimmable_socket_two
+
+corridor_lighting:
+  name: Corridor lighting
+  entities:
+    - light.hue__bulb__corridor
+
+bathroom_lighting:
+  name: Bathroom lighting
+  entities:
+    - light.hue__bulb__bathroom__r
+
+jamieroom_lighting:
+  name: Jamie Room lighting
+  entities:
+    - light.hue__bulb__jamie
 
 all_first_floor_lights:
   name: All first floor lights
   entities:
-    - light.innr__corridor
+    - light.hue__bulb__corridor
+    - light.hue__bulb__bathroom__r
+    - light.hue__bulb__jamie
     - light.innr__master_bedroom
 
 
