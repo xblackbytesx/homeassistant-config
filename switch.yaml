@@ -10,6 +10,7 @@ devices:
   0b11000501a431420a000060:
     name: single_switch_jamie
     fire_event: true
+    
   # freq1but1
   0b110000019c0be201000070:
     name: programmable_one

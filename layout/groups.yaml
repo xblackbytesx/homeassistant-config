@@ -174,12 +174,6 @@ kitchen_automation:
     - automation.kitchen__time__lights_on
     - automation.kitchen__time__lights_off
 
-exterior_automation:
-  name: Exterior automations
-  entities:
-    - automation.ex__time__lights_on
-    - automation.ex__time__lights_off
-
 first_floor_automation:
   name: First floor automations
   entities:
@@ -201,6 +195,17 @@ master_bedroom_automation:
     - automation.mb__motion__lights_on
     - automation.mb__motion__lights_off
 
+attic_automation:
+  name: Attic automations
+  entities:
+    - automation.attic__motion__lights_on
+    - automation.attic__motion__lights_off
+
+exterior_automation:
+  name: Exterior automations
+  entities:
+    - automation.ex__time__lights_on
+    - automation.ex__time__lights_off
 
 ##############################
 ####### CLIMATE GROUPS #######

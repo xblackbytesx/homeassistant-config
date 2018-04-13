@@ -1,0 +1,14 @@
+- alias: Attic | Motion | Lights on
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion_sensor_attic
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: input_boolean.kitchen_meets_darkness_cutoff
+    state: 'on'
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Attic"
+        scene_name: "Attic | Relax"

@@ -45,6 +45,12 @@ first_floor_view:
     - group.all_first_floor_lights
     - group.first_floor_automation
 
+attic_view:
+  view: yes
+  name: Attic
+  entities:
+    - group.attic_automation
+
 exterior_view:
   view: yes
   name: Exterior
