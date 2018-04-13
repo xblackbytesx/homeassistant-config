@@ -1,0 +1,10 @@
+- alias: Attic | Motion | Lights off
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion_sensor_attic
+    to: 'off'
+    for:
+      minutes: 5
+  action:
+    - service: homeassistant.turn_off
+      entity_id: light.innr__attic
