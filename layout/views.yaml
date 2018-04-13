@@ -50,6 +50,7 @@ attic_view:
   view: yes
   name: Attic
   entities:
+    - group.all_attic_lights
     - group.attic_automation
 
 exterior_view:

@@ -20,14 +20,6 @@ master_bedroom_lighting:
   entities:
     - light.master_bedroom
 
-media_players:
-  name: Media player
-  entities:
-    - media_player.yamaha_receiver
-    - media_player.kodi
-    - media_player.living_room
-    - media_player.living_room_audio
-
 hallway_lighting:
   name: Hallway lighting
   entities:
@@ -71,6 +63,24 @@ all_first_floor_lights:
     - light.hue__bulb__bathroom__r
     - light.hue__bulb__jamie
     - light.innr__master_bedroom
+
+all_attic_lights:
+  name: All attic lights
+  entities:
+    - light.innr__attic
+
+
+#############################
+#### MEDIA PLAYER GROUPS ####
+#############################
+
+media_players:
+  name: Media player
+  entities:
+    - media_player.yamaha_receiver
+    - media_player.kodi
+    - media_player.living_room
+    - media_player.living_room_audio
 
 
 #############################
