@@ -25,3 +25,4 @@ nest.conf
 ipchange.yaml
 .idea
 entity_registry.yaml
+.config_entries.json
