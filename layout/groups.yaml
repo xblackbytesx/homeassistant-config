@@ -50,10 +50,10 @@ bathroom_lighting:
     - light.hue__candle__bathroom__l
     - light.hue__bulb__bathroom__r
 
-jamieroom_lighting:
-  name: Jamie Room lighting
+large_bedroom_lighting:
+  name: Large Bedroom lighting
   entities:
-    - light.hue__bulb__jamie
+    - light.hue__bulb__large_bedroom
 
 all_first_floor_lights:
   name: All first floor lights
@@ -61,7 +61,7 @@ all_first_floor_lights:
     - light.hue__bulb__corridor
     - light.hue__candle__bathroom__l
     - light.hue__bulb__bathroom__r
-    - light.hue__bulb__jamie
+    - light.hue__bulb__large_bedroom
     - light.innr__master_bedroom
 
 all_attic_lights:

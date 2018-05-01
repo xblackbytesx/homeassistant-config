@@ -40,7 +40,7 @@ first_floor_view:
   entities:
     - group.corridor_lighting
     - group.bathroom_lighting
-    - group.jamieroom_lighting
+    - group.large_bedroom_lighting
     - group.master_bedroom_lighting
     - group.first_floor_climate
     - group.all_first_floor_lights
