@@ -8,6 +8,7 @@ living_room_lighting:
     - light.kitchen
     - light.sitting_area
     - light.ledstrip_tv_cabinet
+    - light.ledstrip_black_cabinet
 
 exterior_lighting:
   name: Exterior lighting
@@ -35,6 +36,7 @@ all_ground_floor_lights:
     - light.hue__go__closet__l
     - light.hue__go__closet__r
     - light.ledstrip_tv_cabinet
+    - light.ledstrip_black_cabinet
     - light.hue__bulb__hallway
     - light.dimmable_socket_one
     - light.dimmable_socket_two
