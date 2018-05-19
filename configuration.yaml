@@ -85,9 +85,14 @@ matrix:
   password: !secret matrix_password
   rooms:
     - !secret matrix_room
+  commands:
+    - word: cut_the_power
+      name: cut_the_power
+    - expression: "Who are you?"
+      name: introduction
 
 notify:
-  - name: Matrix
+  - name: matrix_notify
     platform: matrix
     default_room: !secret matrix_room
 
