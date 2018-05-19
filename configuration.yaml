@@ -79,6 +79,18 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
+matrix:
+  homeserver: !secret matrix_homeserver
+  username: !secret matrix_username
+  password: !secret matrix_password
+  rooms:
+    - !secret matrix_room
+
+notify:
+  - name: Matrix
+    platform: matrix
+    default_room: !secret matrix_room
+
 automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/
 input_boolean: !include_dir_merge_named boolean/
