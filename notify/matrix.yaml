@@ -1,0 +1,3 @@
+- name: matrix_notify
+  platform: matrix
+  default_room: !secret matrix_room

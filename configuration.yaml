@@ -79,17 +79,7 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
-matrix:
-  homeserver: !secret matrix_homeserver
-  username: !secret matrix_username
-  password: !secret matrix_password
-  rooms:
-    - !secret matrix_room
-  commands:
-    - word: cut_the_power
-      name: cut_the_power
-    - expression: "Who are you?"
-      name: introduction
+matrix: !include matrix.yaml
 
 notify:
   - name: matrix_notify
