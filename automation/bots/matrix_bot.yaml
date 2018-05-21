@@ -1,3 +1,15 @@
+- alias: 'React to an introduction'
+  trigger:
+    platform: event
+    event_type: matrix_command
+    event_data:
+      command: introduction
+  action:
+    service: notify.matrix_notify
+    data_template:
+      message: "My name is Hassi-o, servant of men ruler of tech."
+
+
 - alias: 'React to !cut_the_power'
   trigger:
     platform: event
@@ -13,15 +25,16 @@
       data:
         message: "I've cut the power as you requested!"
 
-    
-- alias: 'React to an introduction'
+
+- alias: 'React to !reel_in_the_sunscreen'
   trigger:
     platform: event
     event_type: matrix_command
     event_data:
-      command: introduction
+      command: reel_in_the_sunscreen
   action:
-    service: notify.matrix_notify
-    data_template:
-      message: "My name is Hassi-o, servant of men ruler of tech."
-
+    - service: switch.turn_off
+      entity_id: switch.sun_screen
+    - service: notify.matrix_notify
+      data:
+        message: "As you wish! May the Sun shine freely!"
