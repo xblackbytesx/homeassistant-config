@@ -69,7 +69,8 @@ all_first_floor_lights:
 all_attic_lights:
   name: All attic lights
   entities:
-    - light.innr__attic
+    - light.innr__attic__front
+    - light.innr__attic__back
 
 
 #############################
