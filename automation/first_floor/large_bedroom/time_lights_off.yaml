@@ -8,4 +8,4 @@
       minutes: 45
   action:
     service: homeassistant.turn_off
-    entity_id: light.hue__bulb__large_bedroomsss
+    entity_id: light.hue__bulb__large_bedroom
