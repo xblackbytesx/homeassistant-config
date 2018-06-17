@@ -69,7 +69,9 @@ hue:
 
 # Rfxtrx
 rfxtrx:
-  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11D2A5T-if00-port0
+  device: /dev/ttyUSB0
+
+# device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11D2A5T-if00-port0
 
 switch: !include switch.yaml
 binary_sensor: !include binary_sensor.yaml
