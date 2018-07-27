@@ -69,6 +69,7 @@ rfxtrx:
   device: /dev/ttyUSB0
 
 switch: !include switch.yaml
+cover: !include cover.yaml
 binary_sensor: !include binary_sensor.yaml
 light: !include light.yaml
 

@@ -1,0 +1,6 @@
+platform: rfxtrx
+automatic_add: False
+signal_repetitions: 2
+  devices:
+    071a00000a000101: # RFY
+      name: attic_shutters
