@@ -23,6 +23,7 @@ default_view:
     - group.programmable_switches
     - switch.beamer_screen
     - switch.sun_screen
+    - cover.attic_shutters
     - sensor.postnl
 
 ground_floor_view:
