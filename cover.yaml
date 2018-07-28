@@ -2,5 +2,5 @@ platform: rfxtrx
 automatic_add: False
 signal_repetitions: 2
   devices:
-    071a00000a000101: # RFY
+    071a0000051C0D01:      
       name: attic_shutters
