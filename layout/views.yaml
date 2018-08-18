@@ -35,6 +35,7 @@ ground_floor_view:
     - group.all_ground_floor_lights
     - group.ground_floor_switches
     - group.ground_floor_automation
+    - group.ground_floor_openings
 
 first_floor_view:
   view: yes

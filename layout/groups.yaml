@@ -267,6 +267,10 @@ internet_health_check:
     - sensor.speedtest_upload
     - sensor.speedtest_ping
 
+ground_floor_openings:
+  name: Ground floor doors and windows
+  entities:
+    - binary_sensor.front_door
 
 ################################
 ####### MANUAL OVERRIDES #######
