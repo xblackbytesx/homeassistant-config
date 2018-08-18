@@ -27,3 +27,5 @@ ipchange.yaml
 entity_registry.yaml
 .config_entries.json
 .storage
+certificate.pem
+privkey.pem
