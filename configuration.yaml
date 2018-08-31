@@ -66,6 +66,10 @@ map:
 # Track the sun
 sun:
 
+weather:
+  - platform: darksky
+    api_key: !secret dark_sky_api_key
+
 # Text to speech
 tts:
   - platform: google

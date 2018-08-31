@@ -5,8 +5,10 @@
 title: Home
 views:
   - title: Home
+    theme: dark-mode
     cards:
-      - type: entities
+      - type: glance
+        title: Sensor states
         entities:
           - sensor.motion_in_hallwaystairs
           - sensor.motion_in_hallwaydoor
@@ -19,6 +21,8 @@ views:
           - switch.sun_screen
           - cover.attic_shutters
           - sensor.postnl
+      - type: weather-forecast
+        entity: weather.dark_sky
       - type: entities
         title: Hallway lighting
         show_header_toggle: true
