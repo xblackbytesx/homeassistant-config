@@ -63,6 +63,7 @@ exterior_view:
     - camera.foscam1
     - group.exterior_lighting
     - group.exterior_switches
+    - group.exterior_covers
     - group.exterior_automation
 
 media_view:

@@ -23,7 +23,7 @@ frontend:
 config:
 
 http:
-  api_password: !secret http_password
+  # api_password: !secret http_password
   ssl_certificate: /config/certificate.pem
   ssl_key: /config/privkey.pem
   cors_allowed_origins:
