@@ -47,6 +47,7 @@ views:
         title: Living room climate
         show_header_toggle: true
         entities:
+          - climate.living_room
           - sensor.temperature_in_hallwaydoor
           - sensor.temperature_in_hallwaystairs
           - sensor.temperature_in_sitting_area
@@ -206,6 +207,11 @@ views:
         show_header_toggle: true
         entities:
           - switch.sun_screen
+      - type: entities
+        title: Exterior covers
+        show_header_toggle: true
+        entities:
+          - cover.attic_shutters
       - type: entities
         title: Exterior automations
         show_header_toggle: true
