@@ -1,8 +1,8 @@
-#sa_media_status_override:
-#  name: Override the media_playing status
-#  initial: off
-#  icon: mdi:television-classic
-#
+engage_search_mode:
+  name: Engage search mode
+  initial: off
+  icon: mdi:flashlight
+
 #  action:
 #    service: script.turn_on
 #    entity_id: script.scene_not_watching_tv

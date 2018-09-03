@@ -285,3 +285,4 @@ boolean_overrides:
   name: Boolean value overrides
   entities:
     - input_boolean.sa_media_status_override
+    - input_boolean.engage_search_mode
