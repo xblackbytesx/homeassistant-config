@@ -2,9 +2,18 @@
   trigger:
     - platform: state
       entity_id: input_boolean.engage_search_mode
-      to: '1'
+      to: 'on'
   action:
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
         scene_name: "LR | Search Mode"
+
+- alias: LR | Boolean | Scene | Search Mode Off
+  trigger:
+    - platform: state
+      entity_id: input_boolean.engage_search_mode
+      to: 'off'
+  action:
+    service: script.turn_on
+    entity_id: script.scene_not_watching_tv
