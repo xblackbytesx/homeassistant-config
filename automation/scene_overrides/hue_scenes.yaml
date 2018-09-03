@@ -2,7 +2,7 @@
   trigger:
     - platform: state
       entity_id: input_boolean.engage_search_mode
-      to: '1'
+      to: 'on'
   action:
     - service: hue.hue_activate_scene
       data:
