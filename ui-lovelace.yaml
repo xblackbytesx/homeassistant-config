@@ -19,6 +19,8 @@ views:
           - switch.sun_screen
           - cover.attic_shutters
           - sensor.postnl
+      - type: weather-forecast
+        entity: weather.dark_sky
       - type: entities
         title: Hallway lighting
         show_header_toggle: true
