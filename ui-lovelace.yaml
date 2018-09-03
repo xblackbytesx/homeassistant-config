@@ -19,8 +19,6 @@ views:
           - switch.sun_screen
           - cover.attic_shutters
           - sensor.postnl
-      - type: weather-forecast
-        entity: weather.dark_sky
       - type: entities
         title: Hallway lighting
         show_header_toggle: true
@@ -279,6 +277,7 @@ views:
           - automation.kitchen__time__lights_off
           - automation.kitchen__time__lights_on
           - automation.lb__time__lights_off
+          - automation.lr__boolean__scene__search_mode
           - automation.large_bedroom__duo_switch__left__off
           - automation.large_bedroom__duo_switch__left__on
           - automation.large_bedroom__duo_switch__right__off
@@ -348,3 +347,4 @@ views:
         show_header_toggle: true
         entities:
           - input_boolean.sa_media_status_override
+          - input_boolean.engage_search_mode
