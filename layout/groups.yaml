@@ -32,6 +32,9 @@ all_ground_floor_lights:
     - light.hue__bulb__kitchen_table__l
     - light.hue__bulb__kitchen_table__r
     - light.hue__spot__kitchen_counter__1
+    - light.hue__spot__kitchen_counter__2
+    - light.hue__spot__kitchen_counter__3
+    - light.hue__spot__kitchen_counter__4
     - light.hue__bulb__standing_lamp
     - light.hue__iris__tv_cabinet
     - light.hue__go__closet__l
