@@ -28,6 +28,8 @@ Relevant hub configurations can be found within [configuration.yaml](https://git
 | [Philips Hue White and Ambiance](https://tweakers.net/pricewatch/532927/philips-hue-white-and-ambiance-e27.html) | 2 | Hue Hub (Zigbee)| [Philips Hue Light](https://www.home-assistant.io/components/light.hue/) | Non color changing smart bulbs|
 | [Philips Hue White Ambiance GU10](https://tweakers.net/pricewatch/598109/philips-hue-white-and-ambiance-gu10.html) | 4 | Hue Hub (Zigbee)| [Philips Hue Light](https://www.home-assistant.io/components/light.hue/) | Non color changing smart bulbs|
 | [Innr RB 172W smart LED warm dimming](https://tweakers.net/pricewatch/578729/innr-retrofit-smart-led-lamp-e27-warm-dimming.html) | 4 | Hue Hub (Zigbee)| [Philips Hue Light](https://www.home-assistant.io/components/light.hue/) | Non color changing smart bulbs|
+| [Generic RGBW ledstrip with LEDENET controller](https://www.amazon.com/gp/product/B01DY56N8U/) | 1 | WiFi| [Flux Led/MagicLight](https://www.home-assistant.io/components/light.flux_led/) | RGBW LED strip |
+| [Yeelight YLDD01YL Light Strip](https://www.gearbest.com/goods/pp_009380326068.html/) | 1 | WiFi| [Yeelight Wifi Bulb](https://www.home-assistant.io/components/light.yeelight/) | RGB LED strip |
 
 ## <a name="climate">Climate</a>
 
