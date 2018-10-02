@@ -1,0 +1,11 @@
+- platform: waze_travel_time
+  origin: !secret home_address
+  destination: !secret work_address
+  region: 'EU'
+  name: Home to Work
+
+- platform: waze_travel_time
+  origin: !secret work_address
+  destination: !secret home_address
+  region: 'EU'
+  name: Work to Home

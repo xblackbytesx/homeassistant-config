@@ -25,6 +25,8 @@ default_view:
     - switch.sun_screen
     - cover.attic_shutters
     - sensor.postnl
+    - sensor.home_to_work
+    - sensor.work_to_home
 
 ground_floor_view:
   view: yes
