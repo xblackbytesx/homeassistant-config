@@ -20,7 +20,7 @@ Relevant hub configurations can be found within [configuration.yaml](https://git
 
 ## <a name="lighting">Lighting</a>
 
-| [Go to Menu](#menu) | [Home Screenshot](images/home-screenshot.jpg?raw=true "Home Page") |
+| [Go to Menu](#menu) |
 
 | Device  | Quantity | Connection | Home Assistant | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
