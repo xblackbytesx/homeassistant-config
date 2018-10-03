@@ -27,6 +27,10 @@
   action:
     - service: script.turn_on
       entity_id: script.scene_not_watching_tv
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Kitchen"
+        scene_name: "Kitchen | Relax"
     - service: automation.turn_on
       entity_id: automation.sa__time__lights_off
     - service: automation.turn_on
