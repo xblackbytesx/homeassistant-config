@@ -7,6 +7,4 @@
       minutes: 5
   action:
     - service: homeassistant.turn_off
-      entity_id: light.innr__attic__front
-    - service: homeassistant.turn_off
-      entity_id: light.innr__attic__back
+      entity_id: light.attic

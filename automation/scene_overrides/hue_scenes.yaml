@@ -8,6 +8,16 @@
       data:
         group_name: "Living room"
         scene_name: "LR | Search Mode"
+    - service: automation.turn_off
+      entity_id: automation.sa__time__lights_off
+    - service: automation.turn_off
+      entity_id: automation.sa__tv_media_state__off
+    - service: automation.turn_off
+      entity_id: automation.sa__no_media
+    - service: automation.turn_off
+      entity_id:  automation.sa__media_playing__state_one
+    - service: automation.turn_off
+      entity_id:  automation.sa__media_playing__state_two
 
 - alias: LR | Boolean | Scene | Search Mode Off
   trigger:
@@ -15,5 +25,15 @@
       entity_id: input_boolean.engage_search_mode
       to: 'off'
   action:
-    service: script.turn_on
-    entity_id: script.scene_not_watching_tv
+    - service: script.turn_on
+      entity_id: script.scene_not_watching_tv
+    - service: automation.turn_on
+      entity_id: automation.sa__time__lights_off
+    - service: automation.turn_on
+      entity_id: automation.sa__tv_media_state__off
+    - service: automation.turn_on
+      entity_id: automation.sa__no_media
+    - service: automation.turn_on
+      entity_id:  automation.sa__media_playing__state_one
+    - service: automation.turn_on
+      entity_id:  automation.sa__media_playing__state_two
