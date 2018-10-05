@@ -24,9 +24,12 @@ Relevant hub configurations can be found within [configuration.yaml](https://git
 
 | Device  | Quantity | Connection | Home Assistant | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
-| [Philips Hue White and Color](https://tweakers.net/pricewatch/472662/philips-hue-white-and-color-e27-25000-uur-806-lumen-single-pack.html) | 7 | Ethernet | [Philips Hue Light](https://www.home-assistant.io/components/light.hue/) | Color changing smart bulbs|
-| [Philips Hue White and Ambiance](https://tweakers.net/pricewatch/532927/philips-hue-white-and-ambiance-e27.html) | 2 | Hue Hub (Zigbee)| [Philips Hue Light](https://www.home-assistant.io/components/light.hue/) | Non color changing smart bulbs|
-| [Philips Hue White Ambiance GU10](https://tweakers.net/pricewatch/598109/philips-hue-white-and-ambiance-gu10.html) | 4 | Hue Hub (Zigbee)| [Philips Hue Light](https://www.home-assistant.io/components/light.hue/) | Non color changing smart bulbs|
+| [Philips Hue White and Color](https://tweakers.net/pricewatch/472662/philips-hue-white-and-color-e27-25000-uur-806-lumen-single-pack.html) | 7 | Hue Hub (Zigbee) | [Philips Hue Light](https://www.home-assistant.io/components/light.hue/) | Color changing smart bulbs |
+| [Philips Hue White and Color E14 Candle](https://tweakers.net/pricewatch/746825/philips-hue-white-and-color-e14-candle.html) | 2 | Hue Hub (Zigbee) | [Philips Hue Light](https://www.home-assistant.io/components/light.hue/) | Color changing smart bulbs |
+| [Philips Hue Go](https://tweakers.net/pricewatch/441698/philips-hue-go.html) | 2 | Hue Hub (Zigbee) | [Philips Hue Light](https://www.home-assistant.io/components/light.hue/) | Color changing spot |
+| [Philips Hue Iris](https://tweakers.net/pricewatch/428491/philips-hue-iris-clear-single-pack.html) | 1 | Hue Hub (Zigbee) | [Philips Hue Light](https://www.home-assistant.io/components/light.hue/) | Color changing spot |
+| [Philips Hue White and Ambiance](https://tweakers.net/pricewatch/532927/philips-hue-white-and-ambiance-e27.html) | 2 | Hue Hub (Zigbee) | [Philips Hue Light](https://www.home-assistant.io/components/light.hue/) | Non color changing smart bulbs|
+| [Philips Hue White Ambiance GU10](https://tweakers.net/pricewatch/598109/philips-hue-white-and-ambiance-gu10.html) | 4 | Hue Hub (Zigbee) | [Philips Hue Light](https://www.home-assistant.io/components/light.hue/) | Non color changing smart spot |
 | [Innr RB 172W smart LED warm dimming](https://tweakers.net/pricewatch/578729/innr-retrofit-smart-led-lamp-e27-warm-dimming.html) | 4 | Hue Hub (Zigbee)| [Philips Hue Light](https://www.home-assistant.io/components/light.hue/) | Non color changing smart bulbs|
 | [Generic RGBW ledstrip with LEDENET controller](https://www.amazon.com/gp/product/B01DY56N8U/) | 1 | WiFi| [Flux Led/MagicLight](https://www.home-assistant.io/components/light.flux_led/) | RGBW LED strip |
 | [Yeelight YLDD01YL Light Strip](https://www.gearbest.com/goods/pp_009380326068.html/) | 1 | WiFi| [Yeelight Wifi Bulb](https://www.home-assistant.io/components/light.yeelight/) | RGB LED strip |
