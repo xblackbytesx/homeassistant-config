@@ -220,6 +220,13 @@ views:
         entities:
           - cover.attic_shutters
       - type: entities
+        title: Solar Panels
+        entities:
+          - sensor.current_power
+          - sensor.current_consumption
+          - sensor.total_yield
+          - sensor.total_power
+      - type: entities
         title: Exterior automations
         show_header_toggle: true
         entities:

@@ -67,6 +67,16 @@ map:
 # Track the sun
 sun:
 
+sensor sma:
+  - platform: sma
+    host: !secret sma_inverter_ip
+    password: !secret sma_inverter_password
+    sensors:
+      current_consumption: [total_consumption]
+      current_power: 
+      total_yield:
+      total_power:
+
 weather:
   - platform: darksky
     api_key: !secret dark_sky_api_key

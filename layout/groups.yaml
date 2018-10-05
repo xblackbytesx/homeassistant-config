@@ -280,6 +280,13 @@ ground_floor_openings:
   entities:
     - binary_sensor.front_door
 
+solar_panels:
+  entities:
+    - sensor.current_power
+    - sensor.current_consumption
+    - sensor.total_yield
+    - sensor.total_power
+
 ################################
 ####### MANUAL OVERRIDES #######
 ################################

@@ -66,6 +66,7 @@ exterior_view:
     - group.exterior_lighting
     - group.exterior_switches
     - group.exterior_covers
+    - group.solar_panels
     - group.exterior_automation
 
 media_view:
