@@ -75,7 +75,6 @@ sensor sma:
       current_consumption: [total_consumption]
       current_power: 
       total_yield:
-      total_power:
 
 weather:
   - platform: darksky

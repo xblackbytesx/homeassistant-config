@@ -285,7 +285,6 @@ solar_panels:
     - sensor.current_power
     - sensor.current_consumption
     - sensor.total_yield
-    - sensor.total_power
 
 ################################
 ####### MANUAL OVERRIDES #######
