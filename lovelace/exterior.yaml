@@ -1,0 +1,37 @@
+title: Exterior
+icon: mdi:tree
+cards:
+  - type: picture-entity
+    title: Foscam1
+    entity: camera.foscam1
+    camera_image: camera.foscam1
+    show_info: true
+    tap_action: dialog
+  - type: entities
+    title: Exterior lighting
+    show_header_toggle: true
+    entities:
+      - light.front_porch
+      - light.backyard
+  - type: entities
+    title: Exterior switches
+    show_header_toggle: true
+    entities:
+      - switch.sun_screen
+  - type: entities
+    title: Exterior covers
+    show_header_toggle: true
+    entities:
+      - cover.attic_shutters
+  - type: entities
+    title: Solar Panels
+    entities:
+      - sensor.current_power
+      - sensor.current_consumption
+      - sensor.total_yield
+  - type: entities
+    title: Exterior automations
+    show_header_toggle: true
+    entities:
+      - automation.ex__time__lights_on
+      - automation.ex__time__lights_off

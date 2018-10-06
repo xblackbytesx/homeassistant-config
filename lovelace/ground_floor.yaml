@@ -1,0 +1,64 @@
+title: Ground floor
+icon: mdi:numeric-0-box
+cards:
+  - type: entities
+    title: Living room lighting
+    show_header_toggle: true
+    entities:
+      - light.kitchen
+      - light.sitting_area
+      - light.ledstrip_tv_cabinet
+      - light.ledstrip_black_cabinet
+  - type: entities
+    title: Hallway lighting
+    show_header_toggle: true
+    entities:
+      - light.hue__bulb__hallway
+  - type: entities
+    title: All ground floor lights
+    show_header_toggle: true
+    entities:
+      - light.hue__bulb__kitchen_table__l
+      - light.hue__bulb__kitchen_table__r
+      - light.hue__spot__kitchen_counter__1
+      - light.hue__spot__kitchen_counter__2
+      - light.hue__spot__kitchen_counter__3
+      - light.hue__spot__kitchen_counter__4
+      - light.hue__bulb__standing_lamp
+      - light.hue__iris__tv_cabinet
+      - light.hue__go__closet__l
+      - light.hue__go__closet__r
+      - light.ledstrip_tv_cabinet
+      - light.ledstrip_black_cabinet
+      - light.hue__bulb__hallway
+      - light.dimmable_socket_one
+      - light.dimmable_socket_two
+  - type: entities
+    title: Ground floor switches
+    show_header_toggle: true
+    entities:
+      - switch.power_socket_one
+      - switch.power_socket_two
+      - switch.power_socket_three
+      - light.dimmable_socket_one
+      - light.dimmable_socket_two
+      - switch.beamer_screen
+  - type: entities
+    title: Ground floor automations
+    show_header_toggle: true
+    entities:
+      - automation.hw__motion__lights_on
+      - automation.hw__motion__lights_off
+      - automation.sa__no_media
+      - automation.sa__media_playing__state_one
+      - automation.sa__media_playing__state_two
+      - automation.sa__time__lights_off
+      - automation.sa__motion__christmas_tree_on
+      - automation.sa__motion__christmas_tree_off
+      - automation.kitchen__time__lights_on
+      - automation.kitchen__time__lights_off
+  - type: entities
+    title: Ground floor doors and windows
+    show_header_toggle: true
+    entities:
+      - binary_sensor.front_door

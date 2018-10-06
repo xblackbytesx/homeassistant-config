@@ -1,0 +1,42 @@
+title: First Floor
+icon: mdi:numeric-1-box
+cards:
+  - type: entities
+    title: Corridor lighting
+    show_header_toggle: true
+    entities:
+      - light.hue__bulb__corridor
+  - type: entities
+    title: Bathroom lighting
+    show_header_toggle: true
+    entities:
+      - light.hue__candle__bathroom__l
+      - light.hue__bulb__bathroom__r
+  - type: entities
+    title: Large Bedroom lighting
+    show_header_toggle: true
+    entities:
+      - light.hue__bulb__large_bedroom
+  - type: entities
+    title: First floor climate
+    show_header_toggle: true
+    entities:
+      - sensor.temperature_in_corridor
+      - sensor.illumination_in_corridor
+  - type: entities
+    title: All first floor lights
+    show_header_toggle: true
+    entities:
+      - light.hue__bulb__corridor
+      - light.hue__candle__bathroom__l
+      - light.hue__bulb__bathroom__r
+      - light.hue__bulb__large_bedroom
+      - light.innr__master_bedroom
+  - type: entities
+    title: First floor automations
+    show_header_toggle: true
+    entities:
+      - automation.co__motion__lights_on
+      - automation.co__motion__lights_off
+      - automation.mb__motion__lights_on
+      - automation.mb__motion__lights_off

@@ -1,0 +1,9 @@
+title: overrides_view
+icon: mdi:settings
+cards:
+  - type: entities
+    title: Boolean value overrides
+    show_header_toggle: true
+    entities:
+      - input_boolean.sa_media_status_override
+      - input_boolean.engage_search_mode
