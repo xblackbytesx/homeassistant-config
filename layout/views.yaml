@@ -1,6 +1,7 @@
 default_view:
   view: yes
   name: Home
+  icon: mdi:home
   entities:
     - group.hallway_lighting
     - group.living_room_lighting
@@ -31,6 +32,7 @@ default_view:
 ground_floor_view:
   view: yes
   name: Ground floor
+  icon: mdi:numeric-0-box
   entities:
     - group.living_room_lighting
     - group.hallway_lighting
@@ -42,6 +44,7 @@ ground_floor_view:
 first_floor_view:
   view: yes
   name: First Floor
+  icon: mdi:numeric-1-box
   entities:
     - group.corridor_lighting
     - group.bathroom_lighting
@@ -54,6 +57,7 @@ first_floor_view:
 attic_view:
   view: yes
   name: Attic
+  icon: mdi:numeric-2-box
   entities:
     - group.all_attic_lights
     - group.attic_automation
@@ -61,6 +65,7 @@ attic_view:
 exterior_view:
   view: yes
   name: Exterior
+  icon: mdi:tree
   entities:
     - camera.foscam1
     - group.exterior_lighting
@@ -72,13 +77,14 @@ exterior_view:
 media_view:
   view: yes
   name: Media
+  icon: mdi:play-circle-outline
   entities:
     - group.media_players
 
 security_view:
   view: yes
   name: Security
-  icon: mdi:lock
+  icon: mdi:cctv
   entities:
     - camera.foscam1
     - camera.xiaofang1

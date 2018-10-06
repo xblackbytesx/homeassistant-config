@@ -5,6 +5,7 @@
 title: Home
 views:
   - title: Home
+    icon: mdi:home
     cards:
       - type: entities
         entities:
@@ -78,6 +79,7 @@ views:
           - switch.programmable_seven
           - switch.programmable_eight
   - title: Ground floor
+    icon: mdi:numeric-0-box
     cards:
       - type: entities
         title: Living room lighting
@@ -141,6 +143,7 @@ views:
         entities:
           - binary_sensor.front_door
   - title: First Floor
+    icon: mdi:numeric-1-box
     cards:
       - type: entities
         title: Corridor lighting
@@ -182,6 +185,7 @@ views:
           - automation.mb__motion__lights_on
           - automation.mb__motion__lights_off
   - title: Attic
+    icon: mdi:numeric-2-box
     cards:
       - type: entities
         title: All attic lights
@@ -196,6 +200,7 @@ views:
           - automation.attic__motion__lights_on
           - automation.attic__motion__lights_off
   - title: Exterior
+    icon: mdi:tree
     cards:
       - type: picture-entity
         title: Foscam1
@@ -232,6 +237,7 @@ views:
           - automation.ex__time__lights_on
           - automation.ex__time__lights_off
   - title: Media
+    icon: mdi:play-circle-outline
     cards:
       - type: media-control
         entity: media_player.yamaha_receiver
@@ -242,7 +248,7 @@ views:
       - type: media-control
         entity: media_player.living_room_audio
   - title: Security
-    icon: mdi:lock
+    icon: mdi:cctv
     cards:
       - type: picture-entity
         title: Foscam1
