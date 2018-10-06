@@ -23,12 +23,8 @@ cards:
     show_header_toggle: true
     entities:
       - cover.attic_shutters
-  - type: entities
-    title: Solar Panels
-    entities:
-      - sensor.current_power
-      - sensor.current_consumption
-      - sensor.total_yield
+  - !include cards/solar_panels.yaml
+  - !include cards/weather.yaml
   - type: entities
     title: Exterior automations
     show_header_toggle: true

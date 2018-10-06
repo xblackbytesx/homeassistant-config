@@ -18,8 +18,8 @@ views:
           - sensor.postnl
           - sensor.home_to_work
           - sensor.work_to_home
-      - type: weather-forecast
-        entity: weather.dark_sky
+      - !include cards/weather.yaml
+      - !include cards/solar_panels.yaml
       - type: entities
         title: Hallway lighting
         show_header_toggle: true

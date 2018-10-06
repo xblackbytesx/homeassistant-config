@@ -1,0 +1,6 @@
+type: entities
+title: Solar Panels
+entities:
+  - sensor.current_power
+  - sensor.current_consumption
+  - sensor.total_yield
