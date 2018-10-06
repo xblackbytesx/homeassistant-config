@@ -3,5 +3,222 @@
 # https://github.com/thomasloven/homeassistant-lovelace-gen
 # Any changes made to it will be overwritten the next time the script is run.
 
-null
-...
+title: Bier Estates
+views:
+- cards:
+  - entities: [sensor.motion_in_hallwaystairs, sensor.motion_in_hallwaydoor, sensor.motion_in_sitting_area,
+      binary_sensor.motion_sensor_sa, sensor.motion_in_kitchen, sensor.motion_in_corridor,
+      binary_sensor.motion_sensor_attic, switch.beamer_screen, switch.sun_screen,
+      cover.attic_shutters, sensor.postnl, sensor.home_to_work, sensor.work_to_home]
+    type: entities
+  - {entity: weather.dark_sky, type: weather-forecast}
+  - entities: [sensor.current_power, sensor.current_consumption, sensor.total_yield]
+    title: Solar Panels
+    type: entities
+  - entities: [light.hue__bulb__hallway]
+    show_header_toggle: true
+    title: Hallway lighting
+    type: entities
+  - entities: [light.kitchen, light.sitting_area, light.ledstrip_tv_cabinet, light.ledstrip_black_cabinet]
+    show_header_toggle: true
+    title: Living room lighting
+    type: entities
+  - entities: [light.hue__bulb__corridor]
+    show_header_toggle: true
+    title: Corridor lighting
+    type: entities
+  - entities: [light.front_porch, light.backyard]
+    show_header_toggle: true
+    title: Exterior lighting
+    type: entities
+  - entities: [climate.living_room, sensor.temperature_in_hallwaydoor, sensor.temperature_in_hallwaystairs,
+      sensor.temperature_in_sitting_area, sensor.temperature_in_kitchen]
+    show_header_toggle: true
+    title: Living room climate
+    type: entities
+  - entities: [switch.power_socket_one, switch.power_socket_two, switch.power_socket_three,
+      light.dimmable_socket_one, light.dimmable_socket_two]
+    show_header_toggle: true
+    title: Power Sockets
+    type: entities
+  - entities: [switch.programmable_one, switch.programmable_two, switch.programmable_three,
+      switch.programmable_four, switch.programmable_five, switch.programmable_six,
+      switch.programmable_seven, switch.programmable_eight]
+    show_header_toggle: true
+    title: Programmable switches
+    type: entities
+  icon: mdi:home
+  title: Home
+- cards:
+  - entities: [light.kitchen, light.sitting_area, light.ledstrip_tv_cabinet, light.ledstrip_black_cabinet]
+    show_header_toggle: true
+    title: Living room lighting
+    type: entities
+  - entities: [light.hue__bulb__hallway]
+    show_header_toggle: true
+    title: Hallway lighting
+    type: entities
+  - entities: [light.hue__bulb__kitchen_table__l, light.hue__bulb__kitchen_table__r,
+      light.hue__spot__kitchen_counter__1, light.hue__spot__kitchen_counter__2, light.hue__spot__kitchen_counter__3,
+      light.hue__spot__kitchen_counter__4, light.hue__bulb__standing_lamp, light.hue__iris__tv_cabinet,
+      light.hue__go__closet__l, light.hue__go__closet__r, light.ledstrip_tv_cabinet,
+      light.ledstrip_black_cabinet, light.hue__bulb__hallway, light.dimmable_socket_one,
+      light.dimmable_socket_two]
+    show_header_toggle: true
+    title: All ground floor lights
+    type: entities
+  - entities: [switch.power_socket_one, switch.power_socket_two, switch.power_socket_three,
+      light.dimmable_socket_one, light.dimmable_socket_two, switch.beamer_screen]
+    show_header_toggle: true
+    title: Ground floor switches
+    type: entities
+  - entities: [automation.hw__motion__lights_on, automation.hw__motion__lights_off,
+      automation.sa__no_media, automation.sa__media_playing__state_one, automation.sa__media_playing__state_two,
+      automation.sa__time__lights_off, automation.sa__motion__christmas_tree_on, automation.sa__motion__christmas_tree_off,
+      automation.kitchen__time__lights_on, automation.kitchen__time__lights_off]
+    show_header_toggle: true
+    title: Ground floor automations
+    type: entities
+  - entities: [binary_sensor.front_door]
+    show_header_toggle: true
+    title: Ground floor doors and windows
+    type: entities
+  icon: mdi:numeric-0-box
+  title: Ground floor
+- cards:
+  - entities: [light.hue__bulb__corridor]
+    show_header_toggle: true
+    title: Corridor lighting
+    type: entities
+  - entities: [light.hue__candle__bathroom__l, light.hue__bulb__bathroom__r]
+    show_header_toggle: true
+    title: Bathroom lighting
+    type: entities
+  - entities: [light.hue__bulb__large_bedroom]
+    show_header_toggle: true
+    title: Large Bedroom lighting
+    type: entities
+  - entities: [sensor.temperature_in_corridor, sensor.illumination_in_corridor]
+    show_header_toggle: true
+    title: First floor climate
+    type: entities
+  - entities: [light.hue__bulb__corridor, light.hue__candle__bathroom__l, light.hue__bulb__bathroom__r,
+      light.hue__bulb__large_bedroom, light.innr__master_bedroom]
+    show_header_toggle: true
+    title: All first floor lights
+    type: entities
+  - entities: [automation.co__motion__lights_on, automation.co__motion__lights_off,
+      automation.mb__motion__lights_on, automation.mb__motion__lights_off]
+    show_header_toggle: true
+    title: First floor automations
+    type: entities
+  icon: mdi:numeric-1-box
+  title: First Floor
+- cards:
+  - entities: [light.innr__attic__front, light.innr__attic__back]
+    show_header_toggle: true
+    title: All attic lights
+    type: entities
+  - entities: [automation.attic__motion__lights_on, automation.attic__motion__lights_off]
+    show_header_toggle: true
+    title: Attic automations
+    type: entities
+  icon: mdi:numeric-2-box
+  title: Attic
+- cards:
+  - {camera_image: camera.foscam1, entity: camera.foscam1, show_info: true, tap_action: dialog,
+    title: Foscam1, type: picture-entity}
+  - entities: [light.front_porch, light.backyard]
+    show_header_toggle: true
+    title: Exterior lighting
+    type: entities
+  - entities: [switch.sun_screen]
+    show_header_toggle: true
+    title: Exterior switches
+    type: entities
+  - entities: [cover.attic_shutters]
+    show_header_toggle: true
+    title: Exterior covers
+    type: entities
+  - entities: [sensor.current_power, sensor.current_consumption, sensor.total_yield]
+    title: Solar Panels
+    type: entities
+  - {entity: weather.dark_sky, type: weather-forecast}
+  - entities: [automation.ex__time__lights_on, automation.ex__time__lights_off]
+    show_header_toggle: true
+    title: Exterior automations
+    type: entities
+  icon: mdi:tree
+  title: Exterior
+- cards:
+  - {entity: media_player.yamaha_receiver, type: media-control}
+  - {entity: media_player.kodi, type: media-control}
+  - {entity: media_player.living_room, type: media-control}
+  - {entity: media_player.living_room_audio, type: media-control}
+  icon: mdi:play-circle-outline
+  title: Media
+- cards:
+  - {camera_image: camera.foscam1, entity: camera.foscam1, show_info: true, tap_action: dialog,
+    title: Foscam1, type: picture-entity}
+  - {camera_image: camera.xiaofang1, entity: camera.xiaofang1, show_info: true, tap_action: dialog,
+    title: XiaoFang1, type: picture-entity}
+  - {camera_image: camera.xiaofang2, entity: camera.xiaofang2, show_info: true, tap_action: dialog,
+    title: XiaoFang2, type: picture-entity}
+  icon: mdi:cctv
+  title: Security
+- cards:
+  - entities: [automation.attic__motion__lights_off, automation.attic__motion__lights_on,
+      automation.bathroom__duo_switch__left__off, automation.bathroom__duo_switch__left__on,
+      automation.bathroom__duo_switch__right__off, automation.bathroom__duo_switch__right__on,
+      automation.co__darkness_cutoff__off, automation.co__darkness_cutoff__on, automation.co__motion__lights_off,
+      automation.co__motion__lights_on, automation.ex__time__lights_off, automation.ex__time__lights_on,
+      automation.hw__darkness_cutoff__off, automation.hw__darkness_cutoff__on, automation.hw__motion__lights_off,
+      automation.hw__motion__lights_on, automation.kitchen__darkness_cutoff__off,
+      automation.kitchen__darkness_cutoff__on, automation.kitchen__time__lights_off,
+      automation.kitchen__time__lights_on, automation.lb__time__lights_off, automation.lr__boolean__scene__search_mode,
+      automation.large_bedroom__duo_switch__left__off, automation.large_bedroom__duo_switch__left__on,
+      automation.large_bedroom__duo_switch__right__off, automation.large_bedroom__duo_switch__right__on,
+      automation.mb__motion__lights_off, automation.mb__motion__lights_on, automation.react_to_cut_the_power,
+      automation.react_to_reel_in_the_sunscreen, automation.react_to_an_introduction,
+      automation.sa__darkness_cutoff__off, automation.sa__darkness_cutoff__on, automation.sa__media_playing__state_one,
+      automation.sa__media_playing__state_two, automation.sa__motion__christmas_tree_off,
+      automation.sa__motion__christmas_tree_on, automation.sa__no_media, automation.sa__tv_media_state__off,
+      automation.sa__tv_media_state__on, automation.sa__time__lights_off, automation.trigger_media_status_override_with_hardware_button__off,
+      automation.trigger_media_status_override_with_hardware_button__on]
+    show_header_toggle: true
+    title: all automations
+    type: entities
+  - entities: [automation.hw__motion__lights_on, automation.hw__motion__lights_off]
+    show_header_toggle: true
+    title: Hallway automations
+    type: entities
+  - entities: [automation.sa__no_media, automation.sa__media_playing__state_one, automation.sa__media_playing__state_two,
+      automation.sa__time__lights_off, automation.sa__motion__christmas_tree_on, automation.sa__motion__christmas_tree_off]
+    show_header_toggle: true
+    title: Sitting area automations
+    type: entities
+  - entities: [automation.kitchen__time__lights_on, automation.kitchen__time__lights_off]
+    show_header_toggle: true
+    title: Kitchen automations
+    type: entities
+  - entities: [automation.co__motion__lights_on, automation.co__motion__lights_off]
+    show_header_toggle: true
+    title: Corridor automations
+    type: entities
+  - entities: [automation.mb__motion__lights_on, automation.mb__motion__lights_off]
+    show_header_toggle: true
+    title: Master bedroom automations
+    type: entities
+  - entities: [automation.ex__time__lights_on, automation.ex__time__lights_off]
+    show_header_toggle: true
+    title: Exterior automations
+    type: entities
+  icon: mdi:robot
+  title: automation_view
+- cards:
+  - entities: [input_boolean.sa_media_status_override, input_boolean.engage_search_mode]
+    show_header_toggle: true
+    title: Boolean value overrides
+    type: entities
+  icon: mdi:settings
+  title: overrides_view
