@@ -1,0 +1,11 @@
+- platform: miflora
+  mac: 'xx:xx:xx:xx:xx:xx'
+  name: Monstera
+  force_update: false
+  median: 3
+  monitored_conditions:
+    - moisture
+    - light
+    - temperature
+    - conductivity
+    - battery

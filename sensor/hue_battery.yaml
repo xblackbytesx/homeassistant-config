@@ -1,0 +1,29 @@
+# Lightlevel sensor
+- platform: rest
+  resource: !secret hallway_door_lux_url
+  value_template: '{{ value_json.config.battery }}'
+  name: 'Motion hallway/door battery status'
+
+# Lightlevel sensor
+- platform: rest
+  resource: !secret hallway_stairs_lux_url
+  value_template: '{{ value_json.config.battery }}'
+  name: 'Motion hallway/stairs battery status'
+
+# Lightlevel sensor
+- platform: rest
+  resource: !secret sitting_area_lux_url
+  value_template: '{{ value_json.config.battery }}'
+  name: 'Motion sitting area battery status'
+
+# Lightlevel sensor
+- platform: rest
+  resource: !secret kitchen_lux_url
+  value_template: '{{ value_json.config.battery }}'
+  name: 'Motion kitchen battery status'
+
+# Lightlevel sensor
+- platform: rest
+  resource: !secret corridor_lux_url
+  value_template: '{{ value_json.config.battery }}'
+  name: 'Motion corridor battery status'
