@@ -7,3 +7,4 @@ cards:
     entities:
       - input_boolean.sa_media_status_override
       - input_boolean.engage_search_mode
+  - !include cards/battery_status.yaml

@@ -1,0 +1,8 @@
+type: entities
+title: Battery status
+entities:
+  - sensor.motion_hallwaydoor_battery_status
+  - sensor.motion_hallwaystairs_battery_status
+  - sensor.motion_sitting_area_battery_status
+  - sensor.motion_kitchen_battery_status
+  - sensor.motion_corridor_battery_status
