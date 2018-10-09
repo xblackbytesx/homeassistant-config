@@ -1,6 +1,9 @@
 type: entities
 title: Solar Panels
 entities:
-  - sensor.current_power
-  - sensor.current_consumption
-  - sensor.total_yield
+  - entity: sensor.current_power
+    icon: mdi:flash
+  - entity: sensor.current_consumption
+    icon: mdi:flash
+  - entity: sensor.total_yield
+    icon: mdi:flash
