@@ -8,7 +8,7 @@ entities:
     icon: mdi:run
   - entity: binary_sensor.motion_sensor_sa
     icon: mdi:run
-  - sentity: ensor.motion_in_kitchen
+  - entity: sensor.motion_in_kitchen
     icon: mdi:run
   - entity: sensor.motion_in_corridor
     icon: mdi:run
