@@ -1,18 +1,25 @@
 type: entity-filter
 entities:
   - entity: sensor.motion_in_hallwaystairs
+    name: Hallway/Stairs
     icon: mdi:run
   - entity: sensor.motion_in_hallwaydoor
+    name: Hallway/Door
     icon: mdi:run
   - entity: sensor.motion_in_sitting_area
+    name: Sitting Area
     icon: mdi:run
   - entity: binary_sensor.motion_sensor_sa
+    name: Sitting Area 2
     icon: mdi:run
   - entity: sensor.motion_in_kitchen
+    name: Kitchen
     icon: mdi:run
   - entity: sensor.motion_in_corridor
+    name: Corridor
     icon: mdi:run
   - entity: binary_sensor.motion_sensor_attic
+    name: Attic
     icon: mdi:run
 state_filter:
   - '1'
