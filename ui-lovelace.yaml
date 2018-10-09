@@ -6,13 +6,26 @@
 title: Bier Estates
 views:
 - cards:
-  - entities: [sensor.motion_in_hallwaystairs, sensor.motion_in_hallwaydoor, sensor.motion_in_sitting_area,
-      binary_sensor.motion_sensor_sa, sensor.motion_in_kitchen, sensor.motion_in_corridor,
-      binary_sensor.motion_sensor_attic, switch.beamer_screen, switch.sun_screen,
-      cover.attic_shutters, sensor.postnl, sensor.home_to_work, sensor.work_to_home]
+  - card: {title: Motion detected, type: glance}
+    entities:
+    - {entity: sensor.motion_in_hallwaystairs, icon: 'mdi:run', name: Hallway/Stairs}
+    - {entity: sensor.motion_in_hallwaydoor, icon: 'mdi:run', name: Hallway/Door}
+    - {entity: sensor.motion_in_sitting_area, icon: 'mdi:run', name: Sitting Area}
+    - {entity: binary_sensor.motion_sensor_sa, icon: 'mdi:run', name: Sitting Area
+        2}
+    - {entity: sensor.motion_in_kitchen, icon: 'mdi:run', name: Kitchen}
+    - {entity: sensor.motion_in_corridor, icon: 'mdi:run', name: Corridor}
+    - {entity: binary_sensor.motion_sensor_attic, icon: 'mdi:run', name: Attic}
+    state_filter: ['1', 'on']
+    type: entity-filter
+  - entities: [switch.beamer_screen, switch.sun_screen, cover.attic_shutters, sensor.postnl,
+      sensor.home_to_work, sensor.work_to_home]
     type: entities
   - {entity: weather.dark_sky, type: weather-forecast}
-  - entities: [sensor.current_power, sensor.current_consumption, sensor.total_yield]
+  - entities:
+    - {entity: sensor.current_power, icon: 'mdi:flash'}
+    - {entity: sensor.current_consumption, icon: 'mdi:flash'}
+    - {entity: sensor.total_yield, icon: 'mdi:flash'}
     title: Solar Panels
     type: entities
   - entities: [light.hue__bulb__hallway]
@@ -140,7 +153,10 @@ views:
     show_header_toggle: true
     title: Exterior covers
     type: entities
-  - entities: [sensor.current_power, sensor.current_consumption, sensor.total_yield]
+  - entities:
+    - {entity: sensor.current_power, icon: 'mdi:flash'}
+    - {entity: sensor.current_consumption, icon: 'mdi:flash'}
+    - {entity: sensor.total_yield, icon: 'mdi:flash'}
     title: Solar Panels
     type: entities
   - {entity: weather.dark_sky, type: weather-forecast}
@@ -150,6 +166,10 @@ views:
     type: entities
   icon: mdi:tree
   title: Exterior
+- cards:
+  - {entity: plant.monstera, type: plant-status}
+  icon: mdi:leaf
+  title: Plants
 - cards:
   - {entity: media_player.yamaha_receiver, type: media-control}
   - {entity: media_player.kodi, type: media-control}
@@ -219,6 +239,14 @@ views:
   - entities: [input_boolean.sa_media_status_override, input_boolean.engage_search_mode]
     show_header_toggle: true
     title: Boolean value overrides
+    type: entities
+  - entities:
+    - {entity: sensor.motion_hallwaydoor_battery_status, icon: 'mdi:battery-80'}
+    - {entity: sensor.motion_hallwaystairs_battery_status, icon: 'mdi:battery-80'}
+    - {entity: sensor.motion_sitting_area_battery_status, icon: 'mdi:battery-80'}
+    - {entity: sensor.motion_kitchen_battery_status, icon: 'mdi:battery-80'}
+    - {entity: sensor.motion_corridor_battery_status, icon: 'mdi:battery-80'}
+    title: Battery status
     type: entities
   icon: mdi:settings
   title: overrides_view
