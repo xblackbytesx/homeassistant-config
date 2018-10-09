@@ -8,8 +8,8 @@ entities:
   - sensor.motion_in_corridor
   - binary_sensor.motion_sensor_attic
 state_filter:
-  - 1
-  - Detected
+  - '1'
+  - 'on'
 card:
   type: glance
   title: Motion detected
