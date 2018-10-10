@@ -1,5 +1,6 @@
 title: automation_view
 icon: mdi:robot
+theme: dark_red
 cards:
   - type: entities
     title: all automations

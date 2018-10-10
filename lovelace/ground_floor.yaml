@@ -1,5 +1,6 @@
 title: Ground floor
 icon: mdi:numeric-0-box
+theme: dark_red
 cards:
   - type: entities
     title: Living room lighting

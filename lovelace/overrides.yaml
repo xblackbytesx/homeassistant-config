@@ -1,5 +1,6 @@
 title: overrides_view
 icon: mdi:settings
+theme: dark_red
 cards:
   - type: entities
     title: Boolean value overrides

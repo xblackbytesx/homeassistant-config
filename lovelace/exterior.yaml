@@ -1,5 +1,6 @@
 title: Exterior
 icon: mdi:tree
+theme: dark_red
 cards:
   - type: picture-entity
     title: Foscam1

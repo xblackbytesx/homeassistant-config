@@ -1,4 +1,5 @@
 title: Plants
 icon: mdi:leaf
+theme: dark_red
 cards:
   - !include cards/plants.yaml
