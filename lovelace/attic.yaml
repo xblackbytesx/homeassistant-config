@@ -1,5 +1,6 @@
 title: Attic
 icon: mdi:numeric-2-box
+theme: dark_red
 cards:
   - type: entities
     title: All attic lights
