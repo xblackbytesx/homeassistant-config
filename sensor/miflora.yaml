@@ -1,5 +1,5 @@
 - platform: miflora
-  mac: 'xx:xx:xx:xx:xx:xx'
+  mac: !secret monstera_miflora_mac
   name: Monstera
   force_update: false
   median: 3
