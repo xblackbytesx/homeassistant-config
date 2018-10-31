@@ -1,10 +1,2 @@
-type: plant-status
-entities:
-  - entity: sensor.monstera_moisture
-    icon: mdi:cup-water
-  - entity: sensor.monstera_temperature
-    icon: mdi:temperature-celsius
-  - entity: sensor.monstera_light_intensity
-    icon: mdi:weather-sunny
-  - entity: sensor.monstera_conductivity
-    icon: mdi:flash
+- type: plant-status
+  entity: plant.monstera

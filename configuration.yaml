@@ -74,7 +74,7 @@ sensor sma:
     group: installer
     sensors:
       current_consumption: [total_consumption]
-      current_power: 
+      current_power:
       total_yield:
 
 weather:
@@ -108,7 +108,7 @@ cover:
     automatic_add: False
     signal_repetitions: 2
     devices:
-      071a0000051C0D01:      
+      071a0000051C0D01:
         name: attic_shutters
 
 switch: !include switch.yaml
@@ -120,6 +120,7 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
+plant: !include plant.yaml
 matrix: !include matrix.yaml
 
 notify: !include_dir_merge_list notify/
