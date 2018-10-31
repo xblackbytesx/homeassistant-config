@@ -1,2 +1,6 @@
 type: plant-status
-entity: plant.monstera
+entities:
+  - sensor.monstera_moisture
+  - sensor.monstera_temperature
+  - sensor.monstera_light_intensity
+  - sensor.monstera_conductivity

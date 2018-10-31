@@ -11,3 +11,5 @@ entities:
     icon: mdi:battery-80
   - entity: sensor.motion_corridor_battery_status
     icon: mdi:battery-80
+  - entity: sensor.monstera_battery
+    icon: mdi:battery-80
