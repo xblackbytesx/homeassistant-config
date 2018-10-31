@@ -1,2 +1,2 @@
-- type: plant-status
-  entity: plant.monstera
+type: plant-status
+entity: plant.monstera
