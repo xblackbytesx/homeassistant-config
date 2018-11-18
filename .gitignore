@@ -30,3 +30,4 @@ entity_registry.yaml
 certificate.pem
 privkey.pem
 themes
+node-red
