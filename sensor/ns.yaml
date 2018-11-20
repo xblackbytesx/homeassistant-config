@@ -1,0 +1,10 @@
+- platform: nederlandse_spoorwegen
+  email: !secret ns_email
+  password: !secret ns_password
+  routes:
+    - name: Train Home to Work
+      from: !secret home_train_station
+      to: !secret work_train_station
+    - name: Train Work to Home
+      from: !secret work_train_station
+      to: !secret home_train_station

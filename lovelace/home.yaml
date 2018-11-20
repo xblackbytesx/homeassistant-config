@@ -9,8 +9,10 @@ cards:
       - switch.sun_screen
       - cover.attic_shutters
       - sensor.postnl
-      - sensor.home_to_work
-      - sensor.work_to_home
+      - sensor.drive_home_to_work
+      - sensor.drive_work_to_home
+      - sensor.train_home_to_work
+      - sensor.train_work_to_home
   - !include cards/weather.yaml
   - !include cards/solar_panels.yaml
   - type: entities
