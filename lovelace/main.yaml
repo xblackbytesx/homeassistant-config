@@ -8,5 +8,6 @@ views:
   - !include plants.yaml
   - !include media.yaml
   - !include security.yaml
+  - !include network.yaml
   - !include automation.yaml
   - !include overrides.yaml
