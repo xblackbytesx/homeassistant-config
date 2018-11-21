@@ -1,0 +1,12 @@
+type: entities
+title: Speedtest
+entities:
+  - entity: sensor.speedtest.ping
+    name: Ping
+    icon: mdi:timer
+  - entity: sensor.speedtest.download
+    name: download
+    icon: mdi:download
+  - entity: sensor.speedtest.upload
+    name: Upload
+    icon: mdi:upload
