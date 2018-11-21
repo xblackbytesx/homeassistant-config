@@ -1,5 +1,4 @@
 title: Network
 icon: mdi:ip-network
-theme: dark_red
 cards:
   - !include cards/transmission.yaml

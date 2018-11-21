@@ -1,6 +1,5 @@
 title: Security
 icon: mdi:cctv
-theme: dark_red
 cards:
   - type: picture-entity
     title: Foscam1

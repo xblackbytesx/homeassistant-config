@@ -1,6 +1,5 @@
 title: Home
 icon: mdi:home
-theme: dark_red
 cards:
   - !include cards/motion_detected.yaml
   - type: entities

@@ -1,6 +1,5 @@
 title: Media
 icon: mdi:play-circle-outline
-theme: dark_red
 cards:
   - type: media-control
     entity: media_player.yamaha_receiver
