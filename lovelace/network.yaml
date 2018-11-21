@@ -2,6 +2,4 @@ title: Network
 icon: mdi:ip-network
 theme: dark_red
 cards:
-  - type: entities
-    entities:
-      - sensor.transmission
+  - !include cards/transmission.yaml
