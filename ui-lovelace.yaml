@@ -62,7 +62,7 @@ views:
     title: Programmable switches
     type: entities
   icon: mdi:home
-  theme: dark_red
+  
   title: Home
 - cards:
   - entities: [light.kitchen, light.sitting_area, light.ledstrip_tv_cabinet, light.ledstrip_black_cabinet]
@@ -99,7 +99,7 @@ views:
     title: Ground floor doors and windows
     type: entities
   icon: mdi:numeric-0-box
-  theme: dark_red
+  
   title: Ground floor
 - cards:
   - entities: [light.hue__bulb__corridor]
@@ -129,7 +129,7 @@ views:
     title: First floor automations
     type: entities
   icon: mdi:numeric-1-box
-  theme: dark_red
+  
   title: First Floor
 - cards:
   - entities: [light.innr__attic__front, light.innr__attic__back]
@@ -141,7 +141,7 @@ views:
     title: Attic automations
     type: entities
   icon: mdi:numeric-2-box
-  theme: dark_red
+  
   title: Attic
 - cards:
   - {camera_image: camera.foscam1, entity: camera.foscam1, show_info: true, tap_action: dialog,
@@ -170,12 +170,12 @@ views:
     title: Exterior automations
     type: entities
   icon: mdi:tree
-  theme: dark_red
+  
   title: Exterior
 - cards:
   - {entity: plant.monstera, type: plant-status}
   icon: mdi:leaf
-  theme: dark_red
+  
   title: Plants
 - cards:
   - {entity: media_player.yamaha_receiver, type: media-control}
@@ -183,7 +183,7 @@ views:
   - {entity: media_player.living_room, type: media-control}
   - {entity: media_player.living_room_audio, type: media-control}
   icon: mdi:play-circle-outline
-  theme: dark_red
+  
   title: Media
 - cards:
   - {camera_image: camera.foscam1, entity: camera.foscam1, show_info: true, tap_action: dialog,
@@ -193,7 +193,7 @@ views:
   - {camera_image: camera.xiaofang2, entity: camera.xiaofang2, show_info: true, tap_action: dialog,
     title: XiaoFang2, type: picture-entity}
   icon: mdi:cctv
-  theme: dark_red
+  
   title: Security
 - cards:
   - entities: [automation.attic__motion__lights_off, automation.attic__motion__lights_on,
@@ -243,7 +243,7 @@ views:
     title: Exterior automations
     type: entities
   icon: mdi:robot
-  theme: dark_red
+  
   title: automation_view
 - cards:
   - entities: [input_boolean.sa_media_status_override, input_boolean.engage_search_mode]
@@ -260,5 +260,5 @@ views:
     title: Battery status
     type: entities
   icon: mdi:settings
-  theme: dark_red
+  
   title: overrides_view
