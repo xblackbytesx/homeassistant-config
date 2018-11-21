@@ -1,5 +1,5 @@
 - platform: synology
-  url: https://10.0.221.20:5001
+  url: !secret synology_ip
   username: !secret synology_username
   password: !secret synology_password
   timeout: 15
