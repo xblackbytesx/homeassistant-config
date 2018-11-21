@@ -196,6 +196,15 @@ views:
   theme: dark_red
   title: Security
 - cards:
+  - entities: [sensor.transmission_active_torrents, sensor.transmission_down_speed,
+      sensor.transmission_paused_torrents, sensor.transmission_status, sensor.transmission_total_torrents,
+      sensor.transmission_up_speed]
+    title: Transmission
+    type: entities
+  icon: mdi:ip-network
+  theme: dark_red
+  title: Network
+- cards:
   - entities: [automation.attic__motion__lights_off, automation.attic__motion__lights_on,
       automation.bathroom__duo_switch__left__off, automation.bathroom__duo_switch__left__on,
       automation.bathroom__duo_switch__right__off, automation.bathroom__duo_switch__right__on,
