@@ -188,6 +188,12 @@ views:
   icon: mdi:cctv
   title: Security
 - cards:
+  - entities:
+    - {entity: sensor.speedtest_ping, icon: 'mdi:timer', name: Ping}
+    - {entity: sensor.speedtest_download, icon: 'mdi:download', name: download}
+    - {entity: sensor.speedtest_upload, icon: 'mdi:upload', name: Upload}
+    title: Speedtest
+    type: entities
   - entities: [sensor.transmission_active_torrents, sensor.transmission_down_speed,
       sensor.transmission_paused_torrents, sensor.transmission_status, sensor.transmission_total_torrents,
       sensor.transmission_up_speed]
