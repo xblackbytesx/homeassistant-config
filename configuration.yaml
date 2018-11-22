@@ -67,13 +67,6 @@ map:
 # Track the sun
 sun:
 
-device_tracker:
-  - platform: nmap_tracker
-    hosts:
-      - 10.0.221.42
-      - 10.0.221.62
-    home_interval: 10
-
 weather:
   - platform: darksky
     api_key: !secret dark_sky_api_key
@@ -100,23 +93,23 @@ cast:
   chromecast_audio:
   - host: 10.0.221.29
 
-switch: !include switch.yaml
-cover: !include cover.yaml
-binary_sensor: !include binary_sensor.yaml
-light: !include light.yaml
-
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
-plant: !include plant.yaml
+switch: !include switch.yaml
+cover: !include cover.yaml
+binary_sensor: !include binary_sensor.yaml
+light: !include light.yaml
 matrix: !include matrix.yaml
 
 notify: !include_dir_merge_list notify/
 automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/
+plant: !include_dir_merge_list plant/
 input_boolean: !include_dir_merge_named boolean/
 media_player: !include_dir_merge_list media_player/
+device_tracker: !include_dir_merge_list device_tracker/
 camera: !include_dir_merge_list camera/
 script: !include_dir_merge_named script/
 group: !include_dir_merge_named layout/
