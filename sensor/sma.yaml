@@ -1,0 +1,8 @@
+- platform: sma
+  host: !secret sma_inverter_ip
+  password: !secret sma_inverter_password
+  group: installer
+  sensors:
+    current_consumption: [total_consumption]
+    current_power:
+    total_yield:

@@ -67,15 +67,12 @@ map:
 # Track the sun
 sun:
 
-sensor sma:
-  - platform: sma
-    host: !secret sma_inverter_ip
-    password: !secret sma_inverter_password
-    group: installer
-    sensors:
-      current_consumption: [total_consumption]
-      current_power:
-      total_yield:
+device_tracker:
+  - platform: nmap_tracker
+    hosts:
+      - 10.0.221.42
+      - 10.0.221.62
+    home_interval: 10
 
 weather:
   - platform: darksky
