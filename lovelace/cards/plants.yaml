@@ -1,2 +1,4 @@
 type: plant-status
-entity: plant.monstera
+entities:
+  - plant.monstera
+  - plant.musa_basjoo
