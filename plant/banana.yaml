@@ -1,7 +1,0 @@
-banana:
-  sensors:
-    moisture: sensor.banana_moisture
-    temperature: sensor.banana_temperature
-    conductivity: sensor.banana_conductivity
-    brightness: sensor.banana_light_intensity
-  min_moisture: 20

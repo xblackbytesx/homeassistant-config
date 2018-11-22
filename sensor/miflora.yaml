@@ -9,3 +9,16 @@
     - temperature
     - conductivity
     - battery
+
+
+- platform: miflora
+  mac: !secret musa_basjoo_miflora_mac
+  name: Musa Basjoo
+  force_update: false
+  median: 3
+  monitored_conditions:
+    - moisture
+    - light
+    - temperature
+    - conductivity
+    - battery
