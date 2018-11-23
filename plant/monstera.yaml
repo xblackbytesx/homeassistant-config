@@ -1,7 +1,7 @@
-monstera:
-  sensors:
-    moisture: sensor.monstera_moisture
-    temperature: sensor.monstera_temperature
-    conductivity: sensor.monstera_conductivity
-    brightness: sensor.monstera_light_intensity
-  min_moisture: 20
+- monstera:
+    sensors:
+      moisture: sensor.monstera_moisture
+      temperature: sensor.monstera_temperature
+      conductivity: sensor.monstera_conductivity
+      brightness: sensor.monstera_light_intensity
+    min_moisture: 20
