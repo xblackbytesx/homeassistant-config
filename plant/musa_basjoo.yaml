@@ -1,4 +1,4 @@
-banana:
+musa_basjoo:
   sensors:
     moisture: sensor.musa_basjoo_moisture
     temperature: sensor.musa_basjoo_temperature

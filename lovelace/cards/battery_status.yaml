@@ -13,3 +13,5 @@ entities:
     icon: mdi:battery-80
   - entity: sensor.monstera_battery
     icon: mdi:battery-80
+  - entity: sensor.musa_basjoo_battery
+    icon: mdi:battery-80
