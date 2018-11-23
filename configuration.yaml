@@ -106,7 +106,6 @@ plant:
       brightness: sensor.monstera_light_intensity
     min_moisture: 20
 
-plant:
   musa_basjoo:
     sensors:
       moisture: sensor.musa_basjoo_moisture
