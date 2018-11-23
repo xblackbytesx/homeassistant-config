@@ -1,7 +1,7 @@
-- musa_basjoo:
-    sensors:
-      moisture: sensor.musa_basjoo_moisture
-      temperature: sensor.musa_basjoo_temperature
-      conductivity: sensor.musa_basjoo_conductivity
-      brightness: sensor.musa_basjoo_light_intensity
-    min_moisture: 20
+musa_basjoo:
+  sensors:
+    moisture: sensor.musa_basjoo_moisture
+    temperature: sensor.musa_basjoo_temperature
+    conductivity: sensor.musa_basjoo_conductivity
+    brightness: sensor.musa_basjoo_light_intensity
+  min_moisture: 20
