@@ -98,13 +98,20 @@ nest:
   client_secret: !secret nest_client_secret
 
 plant:
-  monstera:
+  monstera_deliciosa:
     sensors:
-      moisture: sensor.monstera_moisture
-      temperature: sensor.monstera_temperature
-      conductivity: sensor.monstera_conductivity
-      brightness: sensor.monstera_light_intensity
-    min_moisture: 20
+      moisture: sensor.monstera_deliciosa_moisture
+      temperature: sensor.monstera_deliciosa_temperature
+      conductivity: sensor.monstera_deliciosa_conductivity
+      brightness: sensor.monstera_deliciosa_light_intensity
+    min_moisture: 15
+    max_moisture: 60
+    min_conductivity: 350
+    max_conductivity: 2000
+    min_brightness: 800
+    max_brightness: 15000
+    min_temperature: 12
+    max_temperature: 32
 
   musa_basjoo:
     sensors:
@@ -112,7 +119,14 @@ plant:
       temperature: sensor.musa_basjoo_temperature
       conductivity: sensor.musa_basjoo_conductivity
       brightness: sensor.musa_basjoo_light_intensity
-    min_moisture: 20
+    min_moisture: 15
+    max_moisture: 60
+    min_conductivity: 350
+    max_conductivity: 2000
+    min_brightness: 4000
+    max_brightness: 45000
+    min_temperature: 5
+    max_temperature: 35
 
 switch: !include switch.yaml
 cover: !include cover.yaml

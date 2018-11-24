@@ -1,5 +1,4 @@
 - type: plant-status
-  entity: plant.monstera
+  entity: plant.monstera_deliciosa
 - type: plant-status
   entity: plant.musa_basjoo
-

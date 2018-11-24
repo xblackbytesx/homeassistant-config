@@ -168,7 +168,7 @@ views:
   icon: mdi:tree
   title: Exterior
 - cards:
-  - {entity: plant.monstera, type: plant-status}
+  - {entity: plant.monstera_deliciosa, type: plant-status}
   - {entity: plant.musa_basjoo, type: plant-status}
   icon: mdi:leaf
   title: Plants
@@ -262,7 +262,7 @@ views:
     - {entity: sensor.motion_sitting_area_battery_status, icon: 'mdi:battery-80'}
     - {entity: sensor.motion_kitchen_battery_status, icon: 'mdi:battery-80'}
     - {entity: sensor.motion_corridor_battery_status, icon: 'mdi:battery-80'}
-    - {entity: sensor.monstera_battery, icon: 'mdi:battery-80'}
+    - {entity: sensor.monstera_deliciosa_battery, icon: 'mdi:battery-80'}
     - {entity: sensor.musa_basjoo_battery, icon: 'mdi:battery-80'}
     title: Battery status
     type: entities
