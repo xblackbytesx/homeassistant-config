@@ -4,6 +4,9 @@
 # Any changes made to it will be overwritten the next time the script is run.
 
 title: Bier Estates
+resources:
+- url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js
+  type: js
 views:
 - cards:
   - card: {title: Motion detected, type: glance}
@@ -200,6 +203,9 @@ views:
       sensor.transmission_up_speed]
     title: Transmission
     type: entities
+  - type: custom:upcoming-media-card
+    entity: sensor.sonarr_upcoming_media
+    title: Upcoming TV
   icon: mdi:ip-network
   title: Network
 - cards:

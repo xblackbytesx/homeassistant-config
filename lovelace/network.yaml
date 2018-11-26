@@ -3,6 +3,7 @@ icon: mdi:ip-network
 cards:
   - !include cards/speedtest.yaml
   - !include cards/transmission.yaml
+  - !include cards/sonarr.yaml
   # - type: gauge
   #   title: Down (Mbit/s)
   #   entity: sensor.speedtest_download

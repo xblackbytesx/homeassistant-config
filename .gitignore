@@ -31,3 +31,5 @@ certificate.pem
 privkey.pem
 themes
 node-red
+__pycache__
+custom_components

@@ -19,6 +19,7 @@ hassio:
 # Enables the frontend
 frontend:
   themes: !include_dir_merge_named themes
+  javascript_version: latest
 
 # Enables configuration UI
 config:
@@ -54,6 +55,14 @@ updater:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
+  intents:
+    LivingRoomTemperature:
+     - What is the temperature in the living room
+
+intent_script:
+  LivingRoomTemperature:
+    speech:
+      text: It is currently {{ states.sensor.living_room_thermostat_temperature }} degrees in the living room.
 
 # Enables support for tracking state changes over time
 history:
