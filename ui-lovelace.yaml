@@ -3,10 +3,10 @@
 # https://github.com/thomasloven/homeassistant-lovelace-gen
 # Any changes made to it will be overwritten the next time the script is run.
 
-title: Bier Estates
 resources:
-- url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js
-  type: js
+- {type: js, url: '/local/tracker-card.js?v=0'}
+- {type: js, url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js}
+title: Bier Estates
 views:
 - cards:
   - card: {title: Motion detected, type: glance}
@@ -203,9 +203,7 @@ views:
       sensor.transmission_up_speed]
     title: Transmission
     type: entities
-  - type: custom:upcoming-media-card
-    entity: sensor.sonarr_upcoming_media
-    title: Upcoming TV
+  - {entity: sensor.sonarr_upcoming_media, title: Upcoming TV, type: 'custom:upcoming-media-card'}
   icon: mdi:ip-network
   title: Network
 - cards:
@@ -272,5 +270,8 @@ views:
     - {entity: sensor.musa_basjoo_battery, icon: 'mdi:battery-80'}
     title: Battery status
     type: entities
+  - title: null
+    trackers: [sensor.custom_card_tracker, sensor.custom_component_tracker]
+    type: custom:tracker-card
   icon: mdi:settings
   title: overrides_view
