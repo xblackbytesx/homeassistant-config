@@ -1,0 +1,9 @@
+type: entity-filter
+entities:
+  - device_tracker.fabiooneplus6wlan
+  - device_tracker.lianoneplus6wlan
+state_filter:
+  - home
+card:
+  type: glance
+  title: People at home

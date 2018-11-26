@@ -2,4 +2,4 @@
   hosts:
     - 10.0.221.42
     - 10.0.221.62
-  home_interval: 3
+  home_interval: 5

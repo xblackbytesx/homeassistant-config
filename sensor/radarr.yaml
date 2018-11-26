@@ -1,0 +1,8 @@
+- platform: radarr_upcoming_media
+  api_key: !secret radarr_api_key
+  host: !secret synology_ip
+  port: 8310
+  days: 120
+  ssl: false
+  theaters: false
+  max: 10

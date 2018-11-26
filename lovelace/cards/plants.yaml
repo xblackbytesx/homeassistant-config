@@ -1,4 +1,6 @@
-- type: plant-status
-  entity: plant.monstera_deliciosa
-- type: plant-status
-  entity: plant.musa_basjoo
+- type: vertical-stack
+  cards:
+    - type: plant-status
+      entity: plant.monstera_deliciosa
+    - type: plant-status
+      entity: plant.musa_basjoo

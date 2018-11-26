@@ -1,0 +1,12 @@
+type: vertical-stack
+cards:
+  - type: thermostat
+    entity: climate.living_room
+  - type: entities
+    title: Living room climate
+    show_header_toggle: true
+    entities:
+      - sensor.temperature_in_hallwaydoor
+      - sensor.temperature_in_hallwaystairs
+      - sensor.temperature_in_sitting_area
+      - sensor.temperature_in_kitchen

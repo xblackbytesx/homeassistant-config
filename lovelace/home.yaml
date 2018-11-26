@@ -1,6 +1,7 @@
 title: Home
 icon: mdi:home
 cards:
+  - !include cards/people.yaml
   - !include cards/motion_detected.yaml
   - type: entities
     entities:
@@ -8,10 +9,7 @@ cards:
       - switch.sun_screen
       - cover.attic_shutters
       - sensor.postnl
-      - sensor.drive_home_to_work
-      - sensor.drive_work_to_home
-      - sensor.train_home_to_work
-      - sensor.train_work_to_home
+  - !include cards/travel.yaml
   - !include cards/weather.yaml
   - !include cards/solar_panels.yaml
   - type: entities
@@ -38,15 +36,7 @@ cards:
     entities:
       - light.front_porch
       - light.backyard
-  - type: entities
-    title: Living room climate
-    show_header_toggle: true
-    entities:
-      - climate.living_room
-      - sensor.temperature_in_hallwaydoor
-      - sensor.temperature_in_hallwaystairs
-      - sensor.temperature_in_sitting_area
-      - sensor.temperature_in_kitchen
+  - !include cards/climate.yaml
   - type: entities
     title: Power Sockets
     show_header_toggle: true
