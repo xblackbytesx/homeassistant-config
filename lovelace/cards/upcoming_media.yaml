@@ -1,4 +1,4 @@
-type: horizontal-stack
+type: vertical-stack
 cards:
   - type: custom:upcoming-media-card
     entity: sensor.sonarr_upcoming_media
