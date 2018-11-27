@@ -1,24 +1,24 @@
-- type: vertical-stack
-  cards:
-    - type: sensor
-      entity: sensor.speedtest_ping
-      name: Ping
-      icon: mdi:timer
-      height: 75
-      hours_to_show: 48
-    - type: sensor
-      entity: sensor.speedtest_download
-      name: Download
-      icon: mdi:download
-      height: 75
-      hours_to_show: 48
-    - type: sensor
-      entity: sensor.speedtest_upload
-      name: Upload
-      icon: mdi:upload
-      height: 75
-      hours_to_show: 48
-      
+type: vertical-stack
+cards:
+  - type: sensor
+    entity: sensor.speedtest_ping
+    name: Ping
+    icon: mdi:timer
+    height: 75
+    hours_to_show: 48
+  - type: sensor
+    entity: sensor.speedtest_download
+    name: Download
+    icon: mdi:download
+    height: 75
+    hours_to_show: 48
+  - type: sensor
+    entity: sensor.speedtest_upload
+    name: Upload
+    icon: mdi:upload
+    height: 75
+    hours_to_show: 48
+
 # type: entities
 # title: Speedtest
 # entities:
