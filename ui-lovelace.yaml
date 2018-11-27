@@ -9,6 +9,16 @@ resources:
 title: Bier Estates
 views:
 - cards:
+  - cards:
+    - entity: device_tracker.fabiooneplus6wlan
+      name: Fabio
+      state_image: {home: /local/avatars/peter.gif, not_home: /local/avatars/peter_off.gif}
+      type: picture-entity
+    - entity: device_tracker.lianoneplus6wlan
+      name: Lianne
+      state_image: {home: /local/avatars/lois.gif, not_home: /local/avatars/lois_off.gif}
+      type: picture-entity
+    type: horizontal-stack
   - card: {title: Motion detected, type: glance}
     entities:
     - {entity: sensor.motion_in_hallwaystairs, icon: 'mdi:run', name: Hallway/Stairs}
@@ -21,9 +31,11 @@ views:
     - {entity: binary_sensor.motion_sensor_attic, icon: 'mdi:run', name: Attic}
     state_filter: ['1', 'on']
     type: entity-filter
-  - entities: [switch.beamer_screen, switch.sun_screen, cover.attic_shutters, sensor.postnl,
-      sensor.drive_home_to_work, sensor.drive_work_to_home, sensor.train_home_to_work,
+  - entities: [switch.beamer_screen, switch.sun_screen, cover.attic_shutters, sensor.postnl]
+    type: entities
+  - entities: [sensor.drive_home_to_work, sensor.drive_work_to_home, sensor.train_home_to_work,
       sensor.train_work_to_home]
+    title: Travel times
     type: entities
   - {entity: weather.dark_sky, type: weather-forecast}
   - entities:
@@ -48,11 +60,14 @@ views:
     show_header_toggle: true
     title: Exterior lighting
     type: entities
-  - entities: [climate.living_room, sensor.temperature_in_hallwaydoor, sensor.temperature_in_hallwaystairs,
-      sensor.temperature_in_sitting_area, sensor.temperature_in_kitchen]
-    show_header_toggle: true
-    title: Living room climate
-    type: entities
+  - cards:
+    - {entity: climate.living_room, type: thermostat}
+    - entities: [sensor.temperature_in_hallwaydoor, sensor.temperature_in_hallwaystairs,
+        sensor.temperature_in_sitting_area, sensor.temperature_in_kitchen]
+      show_header_toggle: true
+      title: Living room climate
+      type: entities
+    type: vertical-stack
   - entities: [switch.power_socket_one, switch.power_socket_two, switch.power_socket_three,
       light.dimmable_socket_one, light.dimmable_socket_two]
     show_header_toggle: true
@@ -171,8 +186,10 @@ views:
   icon: mdi:tree
   title: Exterior
 - cards:
-  - {entity: plant.monstera_deliciosa, type: plant-status}
-  - {entity: plant.musa_basjoo, type: plant-status}
+  - cards:
+    - {entity: plant.monstera_deliciosa, type: plant-status}
+    - {entity: plant.musa_basjoo, type: plant-status}
+    type: vertical-stack
   icon: mdi:leaf
   title: Plants
 - cards:
@@ -192,18 +209,25 @@ views:
   icon: mdi:cctv
   title: Security
 - cards:
-  - entities:
-    - {entity: sensor.speedtest_ping, icon: 'mdi:timer', name: Ping}
-    - {entity: sensor.speedtest_download, icon: 'mdi:download', name: download}
-    - {entity: sensor.speedtest_upload, icon: 'mdi:upload', name: Upload}
-    title: Speedtest
-    type: entities
+  - cards:
+    - {entity: sensor.speedtest_ping, height: 75, hours_to_show: 48, icon: 'mdi:timer',
+      name: Ping, type: sensor}
+    - {entity: sensor.speedtest_download, height: 75, hours_to_show: 48, icon: 'mdi:download',
+      name: Download, type: sensor}
+    - {entity: sensor.speedtest_upload, height: 75, hours_to_show: 48, icon: 'mdi:upload',
+      name: Upload, type: sensor}
+    type: vertical-stack
   - entities: [sensor.transmission_active_torrents, sensor.transmission_down_speed,
       sensor.transmission_paused_torrents, sensor.transmission_status, sensor.transmission_total_torrents,
       sensor.transmission_up_speed]
     title: Transmission
     type: entities
-  - {entity: sensor.sonarr_upcoming_media, title: Upcoming TV, type: 'custom:upcoming-media-card'}
+  - cards:
+    - {entity: sensor.sonarr_upcoming_media, image_style: fanart, title: Upcoming
+        TV, type: 'custom:upcoming-media-card'}
+    - {entity: sensor.radarr_upcoming_media, image_style: fanart, title: Upcoming
+        Movies, type: 'custom:upcoming-media-card'}
+    type: vertical-stack
   icon: mdi:ip-network
   title: Network
 - cards:
