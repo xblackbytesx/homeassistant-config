@@ -1,39 +1,14 @@
 type: horizontal-stack
 cards:
-  - type: image
+  - type: picture-entity
     entity: device_tracker.fabiooneplus6wlan
-    image: /local/avatars/peter.gif
-    filter: greyscale(100%)
-    state_filter:
-      "home": greyscale(0)
-  - type: image
+    name: Fabio
+    state_image:
+      "home": /local/avatars/peter.gif
+      "not_home": /local/avatars/peter_off.gif
+  - type: picture-entity
     entity: device_tracker.lianoneplus6wlan
-    image: /local/avatars/lois.gif
-    filter: greyscale(100%)
-    state_filter:
-      "home": greyscale(0)
-
-# type: horizontal-stack
-# cards:
-#   - type: picture-entity
-#     entity: device_tracker.fabiooneplus6wlan
-#     name: Fabio
-#     state_image:
-#       "home": /local/avatars/peter.gif
-#       "not_home": /local/avatars/peter_off.gif
-#   - type: picture-entity
-#     entity: device_tracker.lianoneplus6wlan
-#     name: Lianne
-#     state_image:
-#       "home": /local/avatars/lois.gif
-#       "not_home": /local/avatars/lois_off.gif
-
-# type: entity-filter
-# entities:
-#   - device_tracker.fabiooneplus6wlan
-#   - device_tracker.lianoneplus6wlan
-# state_filter:
-#   - home
-# card:
-#   type: glance
-#   title: People at home
+    name: Lianne
+    state_image:
+      "home": /local/avatars/lois.gif
+      "not_home": /local/avatars/lois_off.gif
