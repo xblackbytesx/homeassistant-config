@@ -1,0 +1,11 @@
+type: horizontal-stack
+cards:
+  - type: light
+    entity: light.hallway
+    name: Hallway
+  - type: light
+    entity: light.kitchen
+    name: Kitchen
+  - type: light
+    entity: light.sitting_area
+    name: Sitting Area

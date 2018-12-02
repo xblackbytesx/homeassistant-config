@@ -1,6 +1,7 @@
 title: First Floor
 icon: mdi:numeric-1-box
 cards:
+  - !include cards/first_floor_groups.yaml
   - type: entities
     title: Corridor lighting
     show_header_toggle: true

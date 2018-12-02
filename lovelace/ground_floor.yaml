@@ -1,6 +1,7 @@
 title: Ground floor
 icon: mdi:numeric-0-box
 cards:
+  - !include cards/ground_floor_groups.yaml
   - type: entities
     title: Living room lighting
     show_header_toggle: true

@@ -1,6 +1,7 @@
 title: Attic
 icon: mdi:numeric-2-box
 cards:
+  - !include cards/attic_groups.yaml
   - type: entities
     title: All attic lights
     show_header_toggle: true
