@@ -1,0 +1,13 @@
+type: picture-elements
+image: /local/solar_array.jpg
+elements:
+  - type: state-label
+    entity: sensor.current_power
+    style:
+      top: 30%
+      left: 20%
+  - type: state-label
+    entity: sensor.total_yield
+    style:
+      top: 60%
+      left: 20%
