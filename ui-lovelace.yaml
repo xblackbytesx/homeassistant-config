@@ -82,6 +82,11 @@ views:
   icon: mdi:home
   title: Home
 - cards:
+  - cards:
+    - {entity: light.hallway, name: Hallway, type: light}
+    - {entity: light.kitchen, name: Kitchen, type: light}
+    - {entity: light.sitting_area, name: Sitting Area, type: light}
+    type: horizontal-stack
   - entities: [light.kitchen, light.sitting_area, light.ledstrip_tv_cabinet, light.ledstrip_black_cabinet]
     show_header_toggle: true
     title: Living room lighting
@@ -118,6 +123,11 @@ views:
   icon: mdi:numeric-0-box
   title: Ground floor
 - cards:
+  - cards:
+    - {entity: light.corridor, name: Corridor, type: light}
+    - {entity: light.bathroom, name: Bathroom, type: light}
+    - {entity: light.large_bedroom, name: Large bedroom, type: light}
+    type: horizontal-stack
   - entities: [light.hue__bulb__corridor]
     show_header_toggle: true
     title: Corridor lighting
@@ -147,6 +157,9 @@ views:
   icon: mdi:numeric-1-box
   title: First Floor
 - cards:
+  - cards:
+    - {entity: light.attic, name: Attic, type: light}
+    type: horizontal-stack
   - entities: [light.innr__attic__front, light.innr__attic__back]
     show_header_toggle: true
     title: All attic lights
