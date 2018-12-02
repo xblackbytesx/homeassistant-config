@@ -3,11 +3,23 @@ image: /local/solar_array.jpg
 elements:
   - type: state-label
     entity: sensor.current_power
+    prefix: "Current Power: "
     style:
-      top: 30%
-      left: 20%
+      transform: none
+      bottom: 76px
+      left: 16px
+      font-weight: bold
+      background: rgba(0,0,0,0.4)
+      border-radius: 6px
+      padding: 5px
   - type: state-label
     entity: sensor.total_yield
+    prefix: "Total Yield: "
     style:
-      top: 60%
-      left: 20%
+      transform: none
+      bottom: 16px
+      left: 16px
+      font-weight: bold
+      background: rgba(0,0,0,0.4)
+      border-radius: 6px
+      padding: 5px
