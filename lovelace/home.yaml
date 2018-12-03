@@ -10,33 +10,9 @@ cards:
       - cover.attic_shutters
       - sensor.postnl
   - !include cards/travel.yaml
+  - !include cards/climate.yaml
   - !include cards/weather.yaml
   - !include cards/solar_panels.yaml
-  - type: entities
-    title: Hallway lighting
-    show_header_toggle: true
-    entities:
-      - light.hue__bulb__hallway
-  - type: entities
-    title: Living room lighting
-    show_header_toggle: true
-    entities:
-      - light.kitchen
-      - light.sitting_area
-      - light.ledstrip_tv_cabinet
-      - light.ledstrip_black_cabinet
-  - type: entities
-    title: Corridor lighting
-    show_header_toggle: true
-    entities:
-      - light.hue__bulb__corridor
-  - type: entities
-    title: Exterior lighting
-    show_header_toggle: true
-    entities:
-      - light.front_porch
-      - light.backyard
-  - !include cards/climate.yaml
   - type: entities
     title: Power Sockets
     show_header_toggle: true
@@ -46,15 +22,44 @@ cards:
       - switch.power_socket_three
       - light.dimmable_socket_one
       - light.dimmable_socket_two
-  - type: entities
-    title: Programmable switches
-    show_header_toggle: true
-    entities:
-      - switch.programmable_one
-      - switch.programmable_two
-      - switch.programmable_three
-      - switch.programmable_four
-      - switch.programmable_five
-      - switch.programmable_six
-      - switch.programmable_seven
-      - switch.programmable_eight
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    cards:
+      - type: entities
+        title: Hallway lighting
+        show_header_toggle: true
+        entities:
+          - light.hue__bulb__hallway
+      - type: entities
+        title: Living room lighting
+        show_header_toggle: true
+        entities:
+          - light.kitchen
+          - light.sitting_area
+          - light.ledstrip_tv_cabinet
+          - light.ledstrip_black_cabinet
+      - type: entities
+        title: Corridor lighting
+        show_header_toggle: true
+        entities:
+          - light.hue__bulb__corridor
+      - type: entities
+        title: Exterior lighting
+        show_header_toggle: true
+        entities:
+          - light.front_porch
+          - light.backyard
+      - type: entities
+        title: Programmable switches
+        show_header_toggle: true
+        entities:
+          - switch.programmable_one
+          - switch.programmable_two
+          - switch.programmable_three
+          - switch.programmable_four
+          - switch.programmable_five
+          - switch.programmable_six
+          - switch.programmable_seven
+          - switch.programmable_eight

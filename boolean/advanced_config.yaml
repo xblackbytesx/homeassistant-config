@@ -1,0 +1,4 @@
+advanced_config:
+  name: Show advanced configuration options
+  initial: off
+  icon: mdi:settings-outline
