@@ -7,6 +7,7 @@ elements:
     style:
       height: 34px
       transform: none
+      position: absolute
       bottom: 66px
       left: 50px
       font-weight: bold
@@ -19,6 +20,7 @@ elements:
     icon: mdi:white-balance-sunny
     style:
       transform: none
+      position: absolute
       bottom: 66px
       left: 16px
       background: rgba(0,0,0,0.6)
@@ -33,6 +35,7 @@ elements:
     style:
       height: 34px
       transform: none
+      position: absolute
       bottom: 16px
       left: 50px
       font-weight: bold
@@ -45,6 +48,7 @@ elements:
     icon: mdi:flash
     style:
       transform: none
+      position: absolute
       bottom: 16px
       left: 16px
       background: rgba(0,0,0,0.6)
