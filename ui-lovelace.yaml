@@ -38,12 +38,33 @@ views:
     title: Travel times
     type: entities
   - {entity: weather.dark_sky, type: weather-forecast}
-  - entities:
-    - {entity: sensor.current_power, icon: 'mdi:flash'}
-    - {entity: sensor.current_consumption, icon: 'mdi:flash'}
-    - {entity: sensor.total_yield, icon: 'mdi:flash'}
-    title: Solar Panels
-    type: entities
+  - elements:
+    - entity: sensor.current_power
+      prefix: 'Current Power: '
+      style: {background: 'rgba(0,0,0,0.6)', border-bottom-right-radius: 6px, border-top-right-radius: 6px,
+        bottom: 66px, box-sizing: border-box, font-weight: bold, height: 34px, left: 50px,
+        transform: none}
+      type: state-label
+    - entity: sensor.current_power
+      icon: mdi:white-balance-sunny
+      style: {background: 'rgba(0,0,0,0.6)', border-bottom-left-radius: 6px, border-top-left-radius: 6px,
+        bottom: 66px, box-sizing: border-box, color: yellow, left: 16px, padding: 5px,
+        transform: none}
+      type: icon
+    - entity: sensor.total_yield
+      prefix: 'Total Yield: '
+      style: {background: 'rgba(0,0,0,0.6)', border-bottom-right-radius: 6px, border-top-right-radius: 6px,
+        bottom: 16px, box-sizing: border-box, font-weight: bold, height: 34px, left: 50px,
+        transform: none}
+      type: state-label
+    - entity: sensor.total_yield
+      icon: mdi:flash
+      style: {background: 'rgba(0,0,0,0.6)', border-bottom-left-radius: 6px, border-top-left-radius: 6px,
+        bottom: 16px, box-sizing: border-box, color: yellow, left: 16px, padding: 5px,
+        transform: none}
+      type: icon
+    image: /local/solar_array.jpg
+    type: picture-elements
   - entities: [light.hue__bulb__hallway]
     show_header_toggle: true
     title: Hallway lighting
@@ -171,6 +192,9 @@ views:
   icon: mdi:numeric-2-box
   title: Attic
 - cards:
+  - cards:
+    - {entity: light.exterior, name: Exterior, type: light}
+    type: horizontal-stack
   - {camera_image: camera.foscam1, entity: camera.foscam1, show_info: true, tap_action: dialog,
     title: Foscam1, type: picture-entity}
   - entities: [light.front_porch, light.backyard]
@@ -212,12 +236,6 @@ views:
       type: icon
     image: /local/solar_array.jpg
     type: picture-elements
-  - entities:
-    - {entity: sensor.current_power, icon: 'mdi:flash'}
-    - {entity: sensor.current_consumption, icon: 'mdi:flash'}
-    - {entity: sensor.total_yield, icon: 'mdi:flash'}
-    title: Solar Panels
-    type: entities
   - {entity: weather.dark_sky, type: weather-forecast}
   - entities: [automation.ex__time__lights_on, automation.ex__time__lights_off]
     show_header_toggle: true
