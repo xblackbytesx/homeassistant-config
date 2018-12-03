@@ -23,7 +23,6 @@ cards:
     show_header_toggle: true
     entities:
       - cover.attic_shutters
-  - !include cards/solar_info.yaml
   - !include cards/solar_panels.yaml
   - !include cards/weather.yaml
   - type: entities
