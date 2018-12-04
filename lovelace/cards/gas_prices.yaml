@@ -2,13 +2,13 @@ type: vertical-stack
 cards:
   - type: sensor
     entity: sensor.gas_station_1_euro95
-    name: !secret gas_station_1_name_eur95
+    name: !secret gas_station_1_name_euro95
     icon: mdi:gas-station
     height: 75
     hours_to_show: 48
   - type: sensor
     entity: sensor.gas_station_1_euro95
-    name: !secret gas_station_1_name_regular
+    name: !secret gas_station_1_name_euro95
     icon: mdi:gas-station
     height: 75
     hours_to_show: 48

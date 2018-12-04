@@ -9,7 +9,8 @@
 - platform: scrape
   resource: !secret gas_station_2_url
   name: Gas station 2 Euro95
-  select: 'div.station-price .station-price-content:first-child .price'
+  station-price-content
+  select: 'div.station-price-content:nth-child(1) > span:nth-child(2)'
   value_template: '{{ ((value.split("€")[1]) | replace(",", ".")) }}'
   unit_of_measurement: "€"
   scan_interval: 1800
@@ -17,7 +18,7 @@
 - platform: scrape
   resource: !secret gas_station_2_url
   name: Gas station 2 BlueOne
-  select: 'div.station-price .station-price-content:nth-child(2) .price'
+  select: 'div.station-price-content:nth-child(2) > span:nth-child(2)'
   value_template: '{{ ((value.split("€")[1]) | replace(",", ".")) }}'
   unit_of_measurement: "€"
   scan_interval: 1800
