@@ -9,12 +9,6 @@ cards:
     show_info: true
     tap_action: dialog
   - type: entities
-    title: Exterior lighting
-    show_header_toggle: true
-    entities:
-      - light.front_porch
-      - light.backyard
-  - type: entities
     title: Exterior switches
     show_header_toggle: true
     entities:
@@ -26,9 +20,25 @@ cards:
       - cover.attic_shutters
   - !include cards/solar_panels.yaml
   - !include cards/weather.yaml
-  - type: entities
-    title: Exterior automations
-    show_header_toggle: true
-    entities:
-      - automation.ex__time__lights_on
-      - automation.ex__time__lights_off
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: Exterior lighting
+      show_header_toggle: true
+      entities:
+        - light.front_porch
+        - light.backyard
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: Exterior automations
+      show_header_toggle: true
+      entities:
+        - automation.ex__time__lights_on
+        - automation.ex__time__lights_off

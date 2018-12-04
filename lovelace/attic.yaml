@@ -2,15 +2,25 @@ title: Attic
 icon: mdi:numeric-2-box
 cards:
   - !include cards/attic_groups.yaml
-  - type: entities
-    title: All attic lights
-    show_header_toggle: true
-    entities:
-      - light.innr__attic__front
-      - light.innr__attic__back
-  - type: entities
-    title: Attic automations
-    show_header_toggle: true
-    entities:
-      - automation.attic__motion__lights_on
-      - automation.attic__motion__lights_off
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: All attic lights
+      show_header_toggle: true
+      entities:
+        - light.innr__attic__front
+        - light.innr__attic__back
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: Attic automations
+      show_header_toggle: true
+      entities:
+        - automation.attic__motion__lights_on
+        - automation.attic__motion__lights_off
