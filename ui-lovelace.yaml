@@ -37,50 +37,6 @@ views:
       sensor.train_work_to_home]
     title: Travel times
     type: entities
-  - {entity: weather.dark_sky, type: weather-forecast}
-  - elements:
-    - entity: sensor.current_power
-      prefix: 'Current Power: '
-      style: {background: 'rgba(0,0,0,0.6)', border-bottom-right-radius: 6px, border-top-right-radius: 6px,
-        bottom: 66px, box-sizing: border-box, font-weight: bold, height: 34px, left: 50px,
-        transform: none}
-      type: state-label
-    - entity: sensor.current_power
-      icon: mdi:white-balance-sunny
-      style: {background: 'rgba(0,0,0,0.6)', border-bottom-left-radius: 6px, border-top-left-radius: 6px,
-        bottom: 66px, box-sizing: border-box, color: yellow, left: 16px, padding: 5px,
-        transform: none}
-      type: icon
-    - entity: sensor.total_yield
-      prefix: 'Total Yield: '
-      style: {background: 'rgba(0,0,0,0.6)', border-bottom-right-radius: 6px, border-top-right-radius: 6px,
-        bottom: 16px, box-sizing: border-box, font-weight: bold, height: 34px, left: 50px,
-        transform: none}
-      type: state-label
-    - entity: sensor.total_yield
-      icon: mdi:flash
-      style: {background: 'rgba(0,0,0,0.6)', border-bottom-left-radius: 6px, border-top-left-radius: 6px,
-        bottom: 16px, box-sizing: border-box, color: yellow, left: 16px, padding: 5px,
-        transform: none}
-      type: icon
-    image: /local/solar_array.jpg
-    type: picture-elements
-  - entities: [light.hue__bulb__hallway]
-    show_header_toggle: true
-    title: Hallway lighting
-    type: entities
-  - entities: [light.kitchen, light.sitting_area, light.ledstrip_tv_cabinet, light.ledstrip_black_cabinet]
-    show_header_toggle: true
-    title: Living room lighting
-    type: entities
-  - entities: [light.hue__bulb__corridor]
-    show_header_toggle: true
-    title: Corridor lighting
-    type: entities
-  - entities: [light.front_porch, light.backyard]
-    show_header_toggle: true
-    title: Exterior lighting
-    type: entities
   - cards:
     - {entity: climate.living_room, type: thermostat}
     - entities: [sensor.temperature_in_hallwaydoor, sensor.temperature_in_hallwaystairs,
@@ -89,17 +45,81 @@ views:
       title: Living room climate
       type: entities
     type: vertical-stack
+  - {entity: weather.dark_sky, type: weather-forecast}
+  - elements:
+    - entity: sensor.current_power
+      prefix: 'Current Power: '
+      style: {background: 'rgba(0,0,0,0.6)', border-bottom-right-radius: 6px, border-top-right-radius: 6px,
+        bottom: 66px, box-sizing: border-box, font-weight: bold, height: 34px, left: 50px,
+        position: absolute, transform: none}
+      type: state-label
+    - entity: sensor.current_power
+      icon: mdi:white-balance-sunny
+      style: {background: 'rgba(0,0,0,0.6)', border-bottom-left-radius: 6px, border-top-left-radius: 6px,
+        bottom: 66px, box-sizing: border-box, color: yellow, left: 16px, padding: 5px,
+        position: absolute, transform: none}
+      type: icon
+    - entity: sensor.total_yield
+      prefix: 'Total Yield: '
+      style: {background: 'rgba(0,0,0,0.6)', border-bottom-right-radius: 6px, border-top-right-radius: 6px,
+        bottom: 16px, box-sizing: border-box, font-weight: bold, height: 34px, left: 50px,
+        position: absolute, transform: none}
+      type: state-label
+    - entity: sensor.total_yield
+      icon: mdi:flash
+      style: {background: 'rgba(0,0,0,0.6)', border-bottom-left-radius: 6px, border-top-left-radius: 6px,
+        bottom: 16px, box-sizing: border-box, color: yellow, left: 16px, padding: 5px,
+        position: absolute, transform: none}
+      type: icon
+    image: /local/solar_array.jpg
+    type: picture-elements
   - entities: [switch.power_socket_one, switch.power_socket_two, switch.power_socket_three,
       light.dimmable_socket_one, light.dimmable_socket_two]
     show_header_toggle: true
     title: Power Sockets
     type: entities
-  - entities: [switch.programmable_one, switch.programmable_two, switch.programmable_three,
-      switch.programmable_four, switch.programmable_five, switch.programmable_six,
-      switch.programmable_seven, switch.programmable_eight]
-    show_header_toggle: true
-    title: Programmable switches
-    type: entities
+  - card:
+      entities: [light.hue__bulb__hallway]
+      show_header_toggle: true
+      title: Hallway lighting
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
+  - card:
+      entities: [light.kitchen, light.sitting_area, light.ledstrip_tv_cabinet, light.ledstrip_black_cabinet]
+      show_header_toggle: true
+      title: Living room lighting
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
+  - card:
+      entities: [light.hue__bulb__corridor]
+      show_header_toggle: true
+      title: Corridor lighting
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
+  - card:
+      entities: [light.front_porch, light.backyard]
+      show_header_toggle: true
+      title: Exterior lighting
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
+  - card:
+      entities: [switch.programmable_one, switch.programmable_two, switch.programmable_three,
+        switch.programmable_four, switch.programmable_five, switch.programmable_six,
+        switch.programmable_seven, switch.programmable_eight]
+      show_header_toggle: true
+      title: Programmable switches
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
   icon: mdi:home
   title: Home
 - cards:
@@ -108,39 +128,56 @@ views:
     - {entity: light.kitchen, name: Kitchen, type: light}
     - {entity: light.sitting_area, name: Sitting Area, type: light}
     type: horizontal-stack
-  - entities: [light.kitchen, light.sitting_area, light.ledstrip_tv_cabinet, light.ledstrip_black_cabinet]
-    show_header_toggle: true
-    title: Living room lighting
-    type: entities
-  - entities: [light.hue__bulb__hallway]
-    show_header_toggle: true
-    title: Hallway lighting
-    type: entities
-  - entities: [light.hue__bulb__kitchen_table__l, light.hue__bulb__kitchen_table__r,
-      light.hue__spot__kitchen_counter__1, light.hue__spot__kitchen_counter__2, light.hue__spot__kitchen_counter__3,
-      light.hue__spot__kitchen_counter__4, light.hue__bulb__standing_lamp, light.hue__iris__tv_cabinet,
-      light.hue__go__closet__l, light.hue__go__closet__r, light.ledstrip_tv_cabinet,
-      light.ledstrip_black_cabinet, light.hue__bulb__hallway, light.dimmable_socket_one,
-      light.dimmable_socket_two]
-    show_header_toggle: true
-    title: All ground floor lights
-    type: entities
   - entities: [switch.power_socket_one, switch.power_socket_two, switch.power_socket_three,
       light.dimmable_socket_one, light.dimmable_socket_two, switch.beamer_screen]
     show_header_toggle: true
     title: Ground floor switches
     type: entities
-  - entities: [automation.hw__motion__lights_on, automation.hw__motion__lights_off,
-      automation.sa__no_media, automation.sa__media_playing__state_one, automation.sa__media_playing__state_two,
-      automation.sa__time__lights_off, automation.sa__motion__christmas_tree_on, automation.sa__motion__christmas_tree_off,
-      automation.kitchen__time__lights_on, automation.kitchen__time__lights_off]
-    show_header_toggle: true
-    title: Ground floor automations
-    type: entities
   - entities: [binary_sensor.front_door]
     show_header_toggle: true
     title: Ground floor doors and windows
     type: entities
+  - card:
+      entities: [light.kitchen, light.sitting_area, light.ledstrip_tv_cabinet, light.ledstrip_black_cabinet]
+      show_header_toggle: true
+      title: Living room lighting
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
+  - card:
+      entities: [light.hue__bulb__hallway]
+      show_header_toggle: true
+      title: Hallway lighting
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
+  - card:
+      entities: [light.hue__bulb__kitchen_table__l, light.hue__bulb__kitchen_table__r,
+        light.hue__spot__kitchen_counter__1, light.hue__spot__kitchen_counter__2,
+        light.hue__spot__kitchen_counter__3, light.hue__spot__kitchen_counter__4,
+        light.hue__bulb__standing_lamp, light.hue__iris__tv_cabinet, light.hue__go__closet__l,
+        light.hue__go__closet__r, light.ledstrip_tv_cabinet, light.ledstrip_black_cabinet,
+        light.hue__bulb__hallway, light.dimmable_socket_one, light.dimmable_socket_two]
+      show_header_toggle: true
+      title: All ground floor lights
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
+  - card:
+      entities: [automation.hw__motion__lights_on, automation.hw__motion__lights_off,
+        automation.sa__no_media, automation.sa__media_playing__state_one, automation.sa__media_playing__state_two,
+        automation.sa__time__lights_off, automation.sa__motion__christmas_tree_on,
+        automation.sa__motion__christmas_tree_off, automation.kitchen__time__lights_on,
+        automation.kitchen__time__lights_off]
+      show_header_toggle: true
+      title: Ground floor automations
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
   icon: mdi:numeric-0-box
   title: Ground floor
 - cards:
@@ -149,46 +186,74 @@ views:
     - {entity: light.bathroom, name: Bathroom, type: light}
     - {entity: light.large_bedroom, name: Large bedroom, type: light}
     type: horizontal-stack
-  - entities: [light.hue__bulb__corridor]
-    show_header_toggle: true
-    title: Corridor lighting
-    type: entities
-  - entities: [light.hue__candle__bathroom__l, light.hue__bulb__bathroom__r]
-    show_header_toggle: true
-    title: Bathroom lighting
-    type: entities
-  - entities: [light.hue__bulb__large_bedroom]
-    show_header_toggle: true
-    title: Large Bedroom lighting
-    type: entities
   - entities: [sensor.temperature_in_corridor, sensor.illumination_in_corridor]
     show_header_toggle: true
     title: First floor climate
     type: entities
-  - entities: [light.hue__bulb__corridor, light.hue__candle__bathroom__l, light.hue__bulb__bathroom__r,
-      light.hue__bulb__large_bedroom, light.innr__master_bedroom]
-    show_header_toggle: true
-    title: All first floor lights
-    type: entities
-  - entities: [automation.co__motion__lights_on, automation.co__motion__lights_off,
-      automation.mb__motion__lights_on, automation.mb__motion__lights_off]
-    show_header_toggle: true
-    title: First floor automations
-    type: entities
+  - card:
+      entities: [light.hue__bulb__corridor]
+      show_header_toggle: true
+      title: Corridor lighting
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
+  - card:
+      entities: [light.hue__candle__bathroom__l, light.hue__bulb__bathroom__r]
+      show_header_toggle: true
+      title: Bathroom lighting
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
+  - card:
+      entities: [light.hue__bulb__large_bedroom]
+      show_header_toggle: true
+      title: Large Bedroom lighting
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
+  - card:
+      entities: [light.hue__bulb__corridor, light.hue__candle__bathroom__l, light.hue__bulb__bathroom__r,
+        light.hue__bulb__large_bedroom, light.innr__master_bedroom]
+      show_header_toggle: true
+      title: All first floor lights
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
+  - card:
+      entities: [automation.co__motion__lights_on, automation.co__motion__lights_off,
+        automation.mb__motion__lights_on, automation.mb__motion__lights_off]
+      show_header_toggle: true
+      title: First floor automations
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
   icon: mdi:numeric-1-box
   title: First Floor
 - cards:
   - cards:
     - {entity: light.attic, name: Attic, type: light}
     type: horizontal-stack
-  - entities: [light.innr__attic__front, light.innr__attic__back]
-    show_header_toggle: true
-    title: All attic lights
-    type: entities
-  - entities: [automation.attic__motion__lights_on, automation.attic__motion__lights_off]
-    show_header_toggle: true
-    title: Attic automations
-    type: entities
+  - card:
+      entities: [light.innr__attic__front, light.innr__attic__back]
+      show_header_toggle: true
+      title: All attic lights
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
+  - card:
+      entities: [automation.attic__motion__lights_on, automation.attic__motion__lights_off]
+      show_header_toggle: true
+      title: Attic automations
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
   icon: mdi:numeric-2-box
   title: Attic
 - cards:
@@ -197,10 +262,6 @@ views:
     type: horizontal-stack
   - {camera_image: camera.foscam1, entity: camera.foscam1, show_info: true, tap_action: dialog,
     title: Foscam1, type: picture-entity}
-  - entities: [light.front_porch, light.backyard]
-    show_header_toggle: true
-    title: Exterior lighting
-    type: entities
   - entities: [switch.sun_screen]
     show_header_toggle: true
     title: Exterior switches
@@ -214,33 +275,45 @@ views:
       prefix: 'Current Power: '
       style: {background: 'rgba(0,0,0,0.6)', border-bottom-right-radius: 6px, border-top-right-radius: 6px,
         bottom: 66px, box-sizing: border-box, font-weight: bold, height: 34px, left: 50px,
-        transform: none}
+        position: absolute, transform: none}
       type: state-label
     - entity: sensor.current_power
       icon: mdi:white-balance-sunny
       style: {background: 'rgba(0,0,0,0.6)', border-bottom-left-radius: 6px, border-top-left-radius: 6px,
         bottom: 66px, box-sizing: border-box, color: yellow, left: 16px, padding: 5px,
-        transform: none}
+        position: absolute, transform: none}
       type: icon
     - entity: sensor.total_yield
       prefix: 'Total Yield: '
       style: {background: 'rgba(0,0,0,0.6)', border-bottom-right-radius: 6px, border-top-right-radius: 6px,
         bottom: 16px, box-sizing: border-box, font-weight: bold, height: 34px, left: 50px,
-        transform: none}
+        position: absolute, transform: none}
       type: state-label
     - entity: sensor.total_yield
       icon: mdi:flash
       style: {background: 'rgba(0,0,0,0.6)', border-bottom-left-radius: 6px, border-top-left-radius: 6px,
         bottom: 16px, box-sizing: border-box, color: yellow, left: 16px, padding: 5px,
-        transform: none}
+        position: absolute, transform: none}
       type: icon
     image: /local/solar_array.jpg
     type: picture-elements
   - {entity: weather.dark_sky, type: weather-forecast}
-  - entities: [automation.ex__time__lights_on, automation.ex__time__lights_off]
-    show_header_toggle: true
-    title: Exterior automations
-    type: entities
+  - card:
+      entities: [light.front_porch, light.backyard]
+      show_header_toggle: true
+      title: Exterior lighting
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
+  - card:
+      entities: [automation.ex__time__lights_on, automation.ex__time__lights_off]
+      show_header_toggle: true
+      title: Exterior automations
+      type: entities
+    conditions:
+    - {entity: input_boolean.advanced_config, state: 'on'}
+    type: conditional
   icon: mdi:tree
   title: Exterior
 - cards:
@@ -338,6 +411,10 @@ views:
   icon: mdi:robot
   title: automation_view
 - cards:
+  - entities: [input_boolean.advanced_config]
+    show_header_toggle: true
+    title: Global toggles
+    type: entities
   - entities: [input_boolean.sa_media_status_override, input_boolean.engage_search_mode]
     show_header_toggle: true
     title: Boolean value overrides
