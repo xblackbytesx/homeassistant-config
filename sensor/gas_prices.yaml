@@ -9,7 +9,6 @@
 - platform: scrape
   resource: !secret gas_station_2_url
   name: Gas station 2 Euro95
-  station-price-content
   select: 'div.station-price-content:nth-child(1) > span:nth-child(2)'
   value_template: '{{ ((value.split("€")[1]) | replace(",", ".")) }}'
   unit_of_measurement: "€"
