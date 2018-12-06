@@ -9,7 +9,7 @@
   condition:
     condition: time
     after: '07:00:00'
-    before: '04:00:00'
+    before: '03:00:00'
   action:
     - service: switch.turn_on
       entity_id: switch.power_socket_two
