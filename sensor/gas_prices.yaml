@@ -21,4 +21,3 @@
 #   value_template: '{{ ((value.split("€")[1]) | replace(",", ".")) }}'
 #   unit_of_measurement: "€"
 #   scan_interval: 1800
-
