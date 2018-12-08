@@ -1,11 +1,13 @@
-type: horizontal-stack
+type: vertical-stack
 cards:
-  - type: light
-    entity: light.corridor
-    name: Corridor
-  - type: light
-    entity: light.bathroom
-    name: Bathroom
   - type: light
     entity: light.large_bedroom
     name: Large bedroom
+  - type: horizontal-stack
+    cards:
+      - type: light
+        entity: light.corridor
+        name: Corridor
+      - type: light
+        entity: light.bathroom
+        name: Bathroom

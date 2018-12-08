@@ -124,10 +124,12 @@ views:
   title: Home
 - cards:
   - cards:
-    - {entity: light.hallway, name: Hallway, type: light}
-    - {entity: light.kitchen, name: Kitchen, type: light}
     - {entity: light.sitting_area, name: Sitting Area, type: light}
-    type: horizontal-stack
+    - cards:
+      - {entity: light.hallway, name: Hallway, type: light}
+      - {entity: light.kitchen, name: Kitchen, type: light}
+      type: horizontal-stack
+    type: vertical-stack
   - entities: [switch.power_socket_one, switch.power_socket_two, switch.power_socket_three,
       light.dimmable_socket_one, light.dimmable_socket_two, switch.beamer_screen]
     show_header_toggle: true
@@ -182,10 +184,12 @@ views:
   title: Ground floor
 - cards:
   - cards:
-    - {entity: light.corridor, name: Corridor, type: light}
-    - {entity: light.bathroom, name: Bathroom, type: light}
     - {entity: light.large_bedroom, name: Large bedroom, type: light}
-    type: horizontal-stack
+    - cards:
+      - {entity: light.corridor, name: Corridor, type: light}
+      - {entity: light.bathroom, name: Bathroom, type: light}
+      type: horizontal-stack
+    type: vertical-stack
   - entities: [sensor.temperature_in_corridor, sensor.illumination_in_corridor]
     show_header_toggle: true
     title: First floor climate
