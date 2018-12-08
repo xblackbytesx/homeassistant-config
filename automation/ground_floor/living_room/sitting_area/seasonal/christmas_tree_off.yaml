@@ -15,5 +15,7 @@
   action:
     - service: switch.turn_off
       entity_id: switch.power_socket_two
+    - service: switch.turn_off
+      entity_id: switch.power_socket_three
     - service: homeassistant.turn_off
       entity_id: light.dimmable_socket_one

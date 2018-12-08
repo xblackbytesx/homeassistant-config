@@ -13,6 +13,8 @@
   action:
     - service: switch.turn_on
       entity_id: switch.power_socket_two
+    - service: switch.turn_on
+      entity_id: switch.power_socket_three
     - service: light.turn_on
       data:
         entity_id: light.dimmable_socket_one
