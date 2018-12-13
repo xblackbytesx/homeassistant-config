@@ -2,6 +2,7 @@ title: Ground floor
 icon: mdi:numeric-0-box
 cards:
   - !include cards/ground_floor_groups.yaml
+  - !include cards/floorplan_ground_floor.yaml
   - type: entities
     title: Ground floor switches
     show_header_toggle: true
