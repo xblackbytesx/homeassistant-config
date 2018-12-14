@@ -1,39 +1,41 @@
-# type: picture-elements
-# image: /local/floorplan_ground_floor.jpg
-# elements:
-#   - type: state-icon
-#     tap_action: toggle
-#     entity: light.hue__iris__tv_cabinet
-#     style:
-#       top: 47%
-#       left: 42%
-#   - type: state-icon
-#     tap_action: toggle
-#     entity: light.hue__candle__salt_lamp
-#     style:
-#       top: 37%
-#       left: 32%
-#   - type: state-icon
-#     tap_action: toggle
-#     entity: light.hue__bulb__standing_lamp
-#     style:
-#       top: 17%
-#       left: 12%
-#   - type: state-label
-#     entity: sensor.living_room_thermostat_temperature
-#     style:
-#       top: 82%
-#       left: 79%
-#   - type: icon
-#     icon: mdi:home
-#     tap_action: navigate
-#     navigation_path: /lovelace/0
-#     style:
-#       top: 10%
-#       left: 10%
-#
-#
-#
+type: picture-elements
+image: /local/floorplan_ground_floor.png
+elements:
+  - type: state-icon
+    tap_action:
+      action: toggle
+    entity: light.hue__iris__tv_cabinet
+    style:
+      top: 47%
+      left: 42%
+  - type: state-icon
+    tap_action:
+      action: toggle
+    entity: light.hue__candle__salt_lamp
+    style:
+      top: 37%
+      left: 32%
+  - type: state-icon
+    tap_action:
+      action: toggle
+      entity: light.hue__bulb__standing_lamp
+    style:
+      top: 17%
+      left: 12%
+  - type: state-label
+    entity: sensor.living_room_thermostat_temperature
+    style:
+      top: 82%
+      left: 79%
+  - type: icon
+    icon: mdi:home
+    tap_action:
+      action: navigate
+      navigation_path: /lovelace/0
+    style:
+      top: 10%
+      left: 10%
+
 # type: picture-elements
 # image: /local/floorplan_ground_floor.jpg
 # elements:
