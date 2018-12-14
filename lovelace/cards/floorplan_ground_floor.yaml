@@ -18,7 +18,7 @@ elements:
   - type: state-icon
     tap_action:
       action: toggle
-      entity: light.hue__bulb__standing_lamp
+    entity: light.hue__bulb__standing_lamp
     style:
       top: 17%
       left: 12%
