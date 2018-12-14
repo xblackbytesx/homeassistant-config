@@ -130,29 +130,7 @@ views:
       - {entity: light.kitchen, name: Kitchen, type: light}
       type: horizontal-stack
     type: vertical-stack
-  - elements:
-    - entity: light.hue__iris__tv_cabinet
-      style: {left: 42%, top: 47%}
-      tap_action: toggle
-      type: state-icon
-    - entity: light.hue__candle__salt_lamp
-      style: {left: 32%, top: 37%}
-      tap_action: toggle
-      type: state-icon
-    - entity: light.hue__bulb__standing_lamp
-      style: {left: 12%, top: 17%}
-      tap_action: toggle
-      type: state-icon
-    - entity: sensor.living_room_thermostat_temperature
-      style: {left: 79%, top: 82%}
-      type: state-label
-    - icon: mdi:home
-      navigation_path: /lovelace/0
-      style: {left: 10%, top: 10%}
-      tap_action: navigate
-      type: icon
-    image: /local/floorplan_ground_floor.jpg
-    type: picture-elements
+  - null
   - entities: [switch.power_socket_one, switch.power_socket_two, switch.power_socket_three,
       light.dimmable_socket_one, light.dimmable_socket_two, switch.beamer_screen]
     show_header_toggle: true
@@ -368,12 +346,12 @@ views:
   title: Security
 - cards:
   - cards:
-    - {entity: sensor.speedtest_ping, height: 75, hours_to_show: 48, icon: 'mdi:timer',
-      name: Ping, type: sensor}
-    - {entity: sensor.speedtest_download, height: 75, hours_to_show: 48, icon: 'mdi:download',
+    - {entity: sensor.speedtest_ping, hours_to_show: 48, icon: 'mdi:timer', name: Ping,
+      type: sensor}
+    - {entity: sensor.speedtest_download, hours_to_show: 48, icon: 'mdi:download',
       name: Download, type: sensor}
-    - {entity: sensor.speedtest_upload, height: 75, hours_to_show: 48, icon: 'mdi:upload',
-      name: Upload, type: sensor}
+    - {entity: sensor.speedtest_upload, hours_to_show: 48, icon: 'mdi:upload', name: Upload,
+      type: sensor}
     type: vertical-stack
   - entities: [sensor.transmission_active_torrents, sensor.transmission_down_speed,
       sensor.transmission_paused_torrents, sensor.transmission_status, sensor.transmission_total_torrents,
