@@ -25,6 +25,20 @@ elements:
   - type: state-icon
     tap_action:
       action: toggle
+    entity: light.hue__go__closet__l
+    style:
+      top: 22%
+      right: 25%
+  - type: state-icon
+    tap_action:
+      action: toggle
+    entity: light.hue__go__closet__r
+    style:
+      top: 25%
+      right: 17%
+  - type: state-icon
+    tap_action:
+      action: toggle
     entity: light.hue__bulb__standing_lamp
     style:
       top: 23%
