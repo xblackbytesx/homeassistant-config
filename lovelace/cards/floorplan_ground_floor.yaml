@@ -32,24 +32,24 @@ elements:
   - type: state-icon
     tap_action:
       action: toggle
-    entity:  light.hue__bulb__kitchen_table__r
+    entity: light.hue__bulb__kitchen_table__r
     style:
-      bottom: 16%;
-      left: 31%;
+      bottom: 16%
+      left: 31%
   - type: state-icon
     tap_action:
       action: toggle
-    entity:  light.hue__bulb__kitchen_table__l
+    entity: light.hue__bulb__kitchen_table__l
     style:
-      bottom: 16%;
-      left: 23.5%;
+      bottom: 16%
+      left: 23.5%
   - type: state-label
     entity: sensor.living_room_thermostat_temperature
     style:
-      top: 0;
-      left: 0;
-      background: rgba(0,0,0,.5);
-      transform: inherit;
-      border-bottom-right-radius: 6px;
-      font-weight: bold;
-      font-size: small;
+      top: 0
+      left: 0
+      background: rgba(0,0,0,.5)
+      transform: inherit
+      border-bottom-right-radius: 6px
+      font-weight: bold
+      font-size: small
