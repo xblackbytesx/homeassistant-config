@@ -130,7 +130,45 @@ views:
       - {entity: light.kitchen, name: Kitchen, type: light}
       type: horizontal-stack
     type: vertical-stack
-  - null
+  - elements:
+    - entity: light.hue__bulb__hallway
+      style: {left: 38%, top: 25%}
+      tap_action: {action: toggle}
+      type: state-icon
+    - entity: light.hue__iris__tv_cabinet
+      style: {bottom: 12%, right: 8%}
+      tap_action: {action: toggle}
+      type: state-icon
+    - entity: light.hue__candle__salt_lamp
+      style: {bottom: 12%, right: 25%}
+      tap_action: {action: toggle}
+      type: state-icon
+    - entity: light.hue__go__closet__l
+      style: {right: 25%, top: 22%}
+      tap_action: {action: toggle}
+      type: state-icon
+    - entity: light.hue__go__closet__r
+      style: {right: 17%, top: 25%}
+      tap_action: {action: toggle}
+      type: state-icon
+    - entity: light.hue__bulb__standing_lamp
+      style: {right: 32.6%, top: 23%}
+      tap_action: {action: toggle}
+      type: state-icon
+    - entity: light.hue__bulb__kitchen_table__r
+      style: {bottom: 16%, left: 31%}
+      tap_action: {action: toggle}
+      type: state-icon
+    - entity: light.hue__bulb__kitchen_table__l
+      style: {bottom: 16%, left: 23.5%}
+      tap_action: {action: toggle}
+      type: state-icon
+    - entity: sensor.living_room_thermostat_temperature
+      style: {background: 'rgba(0,0,0,.5)', border-bottom-right-radius: 6px, font-size: small,
+        font-weight: bold, left: 0, top: 0, transform: inherit}
+      type: state-label
+    image: /local/floorplan_ground_floor.png
+    type: picture-elements
   - entities: [switch.power_socket_one, switch.power_socket_two, switch.power_socket_three,
       light.dimmable_socket_one, light.dimmable_socket_two, switch.beamer_screen]
     show_header_toggle: true
