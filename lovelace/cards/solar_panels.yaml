@@ -8,7 +8,7 @@ elements:
       height: 34px
       transform: none
       position: absolute
-      bottom: 66px
+      bottom: 116px
       left: 50px
       font-weight: bold
       background: rgba(0,0,0,0.6)
@@ -18,6 +18,34 @@ elements:
   - type: icon
     entity: sensor.current_power
     icon: mdi:white-balance-sunny
+    style:
+      transform: none
+      position: absolute
+      bottom: 116px
+      left: 16px
+      background: rgba(0,0,0,0.6)
+      border-top-left-radius: 6px
+      border-bottom-left-radius: 6px
+      padding: 5px
+      box-sizing: border-box
+      color: yellow
+  - type: state-label
+    entity: sensor.daily_yield
+    prefix: "Daily Yield: "
+    style:
+      height: 34px
+      transform: none
+      position: absolute
+      bottom: 66px
+      left: 50px
+      font-weight: bold
+      background: rgba(0,0,0,0.6)
+      border-top-right-radius: 6px
+      border-bottom-right-radius: 6px
+      box-sizing: border-box
+  - type: icon
+    entity: sensor.daily_yield
+    icon: mdi:flash
     style:
       transform: none
       position: absolute
