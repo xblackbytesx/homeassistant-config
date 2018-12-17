@@ -50,11 +50,23 @@ views:
     - entity: sensor.current_power
       prefix: 'Current Power: '
       style: {background: 'rgba(0,0,0,0.6)', border-bottom-right-radius: 6px, border-top-right-radius: 6px,
-        bottom: 66px, box-sizing: border-box, font-weight: bold, height: 34px, left: 50px,
+        bottom: 116px, box-sizing: border-box, font-weight: bold, height: 34px, left: 50px,
         position: absolute, transform: none}
       type: state-label
     - entity: sensor.current_power
       icon: mdi:white-balance-sunny
+      style: {background: 'rgba(0,0,0,0.6)', border-bottom-left-radius: 6px, border-top-left-radius: 6px,
+        bottom: 116px, box-sizing: border-box, color: yellow, left: 16px, padding: 5px,
+        position: absolute, transform: none}
+      type: icon
+    - entity: sensor.daily_yield
+      prefix: 'Daily Yield: '
+      style: {background: 'rgba(0,0,0,0.6)', border-bottom-right-radius: 6px, border-top-right-radius: 6px,
+        bottom: 66px, box-sizing: border-box, font-weight: bold, height: 34px, left: 50px,
+        position: absolute, transform: none}
+      type: state-label
+    - entity: sensor.daily_yield
+      icon: mdi:flash
       style: {background: 'rgba(0,0,0,0.6)', border-bottom-left-radius: 6px, border-top-left-radius: 6px,
         bottom: 66px, box-sizing: border-box, color: yellow, left: 16px, padding: 5px,
         position: absolute, transform: none}
@@ -317,11 +329,23 @@ views:
     - entity: sensor.current_power
       prefix: 'Current Power: '
       style: {background: 'rgba(0,0,0,0.6)', border-bottom-right-radius: 6px, border-top-right-radius: 6px,
-        bottom: 66px, box-sizing: border-box, font-weight: bold, height: 34px, left: 50px,
+        bottom: 116px, box-sizing: border-box, font-weight: bold, height: 34px, left: 50px,
         position: absolute, transform: none}
       type: state-label
     - entity: sensor.current_power
       icon: mdi:white-balance-sunny
+      style: {background: 'rgba(0,0,0,0.6)', border-bottom-left-radius: 6px, border-top-left-radius: 6px,
+        bottom: 116px, box-sizing: border-box, color: yellow, left: 16px, padding: 5px,
+        position: absolute, transform: none}
+      type: icon
+    - entity: sensor.daily_yield
+      prefix: 'Daily Yield: '
+      style: {background: 'rgba(0,0,0,0.6)', border-bottom-right-radius: 6px, border-top-right-radius: 6px,
+        bottom: 66px, box-sizing: border-box, font-weight: bold, height: 34px, left: 50px,
+        position: absolute, transform: none}
+      type: state-label
+    - entity: sensor.daily_yield
+      icon: mdi:flash
       style: {background: 'rgba(0,0,0,0.6)', border-bottom-left-radius: 6px, border-top-left-radius: 6px,
         bottom: 66px, box-sizing: border-box, color: yellow, left: 16px, padding: 5px,
         position: absolute, transform: none}
