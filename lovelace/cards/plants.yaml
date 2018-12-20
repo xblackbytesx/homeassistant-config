@@ -4,3 +4,5 @@
       entity: plant.monstera_deliciosa
     - type: plant-status
       entity: plant.musa_basjoo
+    - type: plant-status
+      entity: plant.sabal_minor

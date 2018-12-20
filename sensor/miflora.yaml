@@ -22,3 +22,16 @@
     - temperature
     - conductivity
     - battery
+
+
+- platform: miflora
+  mac: !secret sabal_minor_mac
+  name: Sabal Minor
+  force_update: false
+  median: 3
+  monitored_conditions:
+    - moisture
+    - light
+    - temperature
+    - conductivity
+    - battery
