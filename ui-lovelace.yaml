@@ -387,6 +387,7 @@ views:
   - cards:
     - {entity: plant.monstera_deliciosa, type: plant-status}
     - {entity: plant.musa_basjoo, type: plant-status}
+    - {entity: plant.sabal_minor, type: plant-status}
     type: vertical-stack
   icon: mdi:leaf
   title: Plants
@@ -494,6 +495,7 @@ views:
     - {entity: sensor.motion_corridor_battery_status, icon: 'mdi:battery-80'}
     - {entity: sensor.monstera_deliciosa_battery, icon: 'mdi:battery-80'}
     - {entity: sensor.musa_basjoo_battery, icon: 'mdi:battery-80'}
+    - {entity: sensor.sabal_minor_battery, icon: 'mdi:battery-80'}
     title: Battery status
     type: entities
   - title: null
