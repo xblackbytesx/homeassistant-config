@@ -18,7 +18,7 @@
     - service: light.turn_on
       data:
         entity_id: light.dimmable_socket_one
-        brightness: 10
+        brightness: 35
     - service: light.turn_on
       data:
         entity_id: light.dimmable_socket_two
