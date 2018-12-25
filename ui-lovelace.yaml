@@ -179,7 +179,7 @@ views:
       style: {background: 'rgba(0,0,0,.5)', border-bottom-right-radius: 6px, font-size: small,
         font-weight: bold, left: 0, top: 0, transform: inherit}
       type: state-label
-    image: /local/floorplan_ground_floor.png
+    image: /local/floorplan_ground_floor.jpg
     type: picture-elements
   - entities: [switch.power_socket_one, switch.power_socket_two, switch.power_socket_three,
       light.dimmable_socket_one, light.dimmable_socket_two, switch.beamer_screen]
