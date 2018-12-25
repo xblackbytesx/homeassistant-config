@@ -30,6 +30,16 @@
     - service: light.turn_on
       data:
         entity_id: light.dimmable_socket_two
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Kitchen"
+        scene_name: "Kitchen | Relax"
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Kitchen"
+        scene_name: "Kitchen | Relax"
+    - service: script.turn_on
+      entity_id: script.scene_not_watching_tv
     - service: notify.matrix_notify
       data:
         message: "Shining bright like a diamond!"
