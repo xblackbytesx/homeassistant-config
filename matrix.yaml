@@ -8,5 +8,7 @@ commands:
     name: cut_the_power
   - expression: "Who are you?"
     name: introduction
+  - expression: "Light em up!"
+    name: light_em_up
   - word: reel_in_the_sunscreen
     name: reel_in_the_sunscreen
