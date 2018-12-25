@@ -10,5 +10,7 @@ commands:
     name: introduction
   - expression: "Light em up!"
     name: light_em_up
+  - expression: "Cut socket one"
+    name: cut_socket_one
   - word: reel_in_the_sunscreen
     name: reel_in_the_sunscreen

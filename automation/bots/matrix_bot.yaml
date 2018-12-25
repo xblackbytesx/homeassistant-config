@@ -35,6 +35,20 @@
         message: "Shining bright like a diamond!"
 
 
+- alias: 'React to Cut socket one'
+  trigger:
+    platform: event
+    event_type: matrix_command
+    event_data:
+      command: cut_socket_one
+  action:
+    - service: switch.turn_off
+      entity_id: switch.power_socket_one
+    - service: notify.matrix_notify
+      data:
+        message: "Socket one killed!"
+
+
 - alias: 'React to !cut_the_power'
   trigger:
     platform: event
