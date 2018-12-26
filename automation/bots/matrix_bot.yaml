@@ -1,5 +1,4 @@
 - alias: 'React to an introduction'
-  initial_state: True
   trigger:
     platform: event
     event_type: matrix_command
@@ -12,7 +11,6 @@
 
 
 - alias: 'Turn on all the things'
-  initial_state: True
   trigger:
     platform: event
     event_type: matrix_command
@@ -48,7 +46,6 @@
 
 
 - alias: 'React to Cut socket one'
-  initial_state: True
   trigger:
     platform: event
     event_type: matrix_command
@@ -62,25 +59,59 @@
         message: "Socket one killed!"
 
 
-- alias: 'React to !cut_the_power'
-  initial_state: True
+- alias: 'React to Cut socket two'
   trigger:
     platform: event
     event_type: matrix_command
     event_data:
-      command: cut_the_power
+      command: cut_socket_two
+  action:
+    - service: switch.turn_off
+      entity_id: switch.power_socket_two
+    - service: notify.matrix_notify
+      data:
+        message: "Socket two killed!"
+
+
+- alias: 'React to Cut socket three'
+  trigger:
+    platform: event
+    event_type: matrix_command
+    event_data:
+      command: cut_socket_three
+  action:
+    - service: switch.turn_off
+      entity_id: switch.power_socket_three
+    - service: notify.matrix_notify
+      data:
+        message: "Socket three killed!"
+
+
+- alias: 'React to Cut all power'
+  trigger:
+    platform: event
+    event_type: matrix_command
+    event_data:
+      command: cut_all_power
   action:
     - service: switch.turn_off
       entity_id: switch.power_socket_one
     - service: switch.turn_off
       entity_id: switch.power_socket_two
+    - service: switch.turn_off
+      entity_id: switch.power_socket_three
+    - service: light.turn_off
+      data:
+        entity_id: light.dimmable_socket_one
+    - service: light.turn_off
+      data:
+        entity_id: light.dimmable_socket_two
     - service: notify.matrix_notify
       data:
         message: "I've cut the power as you requested!"
 
 
 - alias: 'React to !reel_in_the_sunscreen'
-  initial_state: True
   trigger:
     platform: event
     event_type: matrix_command

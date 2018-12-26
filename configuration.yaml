@@ -29,11 +29,11 @@ config:
 
 http:
   # api_password: !secret http_password
-  ssl_certificate: /config/certificate.pem
-  ssl_key: /config/privkey.pem
-  cors_allowed_origins:
-    - https://google.com
-    - https://www.home-assistant.io
+  # ssl_certificate: /config/certificate.pem
+  # ssl_key: /config/privkey.pem
+  # cors_allowed_origins:
+  #   - https://google.com
+  #   - https://www.home-assistant.io
   # use_x_forwarded_for: True
   # trusted_proxies:
   #   - 127.0.0.1

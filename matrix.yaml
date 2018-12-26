@@ -4,13 +4,17 @@ password: !secret matrix_password
 rooms:
   - !secret matrix_room
 commands:
-  - word: cut_the_power
-    name: cut_the_power
   - expression: "Who are you?"
     name: introduction
   - expression: "Light em up!"
     name: light_em_up
+  - expression: "Cut all power"
+    name: cut_all_power
   - expression: "Cut socket one"
     name: cut_socket_one
+  - expression: "Cut socket two"
+    name: cut_socket_two
+  - expression: "Cut socket three"
+    name: cut_socket_three
   - word: reel_in_the_sunscreen
     name: reel_in_the_sunscreen
