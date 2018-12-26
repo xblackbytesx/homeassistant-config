@@ -1,4 +1,5 @@
-- alias: SA | No Media
+- alias: SA | No Media  initial_state: True
+  initial_state: True
   trigger:
     - platform: state
       entity_id: sensor.motion_in_sitting_area
@@ -38,6 +39,7 @@
 
 
 - alias: SA | Media Playing | State one
+  initial_state: True
   trigger:
     - platform: state
       entity_id: sensor.motion_in_sitting_area
@@ -77,6 +79,7 @@
 
 
 - alias: SA | Media Playing | State two
+  initial_state: True
   trigger:
     - platform: state
       entity_id: sensor.motion_in_sitting_area

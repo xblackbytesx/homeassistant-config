@@ -1,4 +1,5 @@
 - alias: 'React to an introduction'
+  initial_state: True
   trigger:
     platform: event
     event_type: matrix_command
@@ -11,6 +12,7 @@
 
 
 - alias: 'Turn on all the things'
+  initial_state: True
   trigger:
     platform: event
     event_type: matrix_command
@@ -46,6 +48,7 @@
 
 
 - alias: 'React to Cut socket one'
+  initial_state: True
   trigger:
     platform: event
     event_type: matrix_command
@@ -60,6 +63,7 @@
 
 
 - alias: 'React to !cut_the_power'
+  initial_state: True
   trigger:
     platform: event
     event_type: matrix_command
@@ -76,6 +80,7 @@
 
 
 - alias: 'React to !reel_in_the_sunscreen'
+  initial_state: True
   trigger:
     platform: event
     event_type: matrix_command

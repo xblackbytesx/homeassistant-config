@@ -1,9 +1,9 @@
 - alias: Trigger media status override with hardware button | on
+  initial_state: True
   trigger:
     platform: event
     event_type: button_pressed
     event_data: {"state": "on", "entity_id": "switch.programmable_one"}
-
   action:
     service: input_boolean.turn_on
     data:
@@ -11,11 +11,11 @@
 
 
 - alias: Trigger media status override with hardware button | off
+  initial_state: True
   trigger:
     platform: event
     event_type: button_pressed
     event_data: {"state": "off", "entity_id": "switch.programmable_one"}
-
   action:
     service: input_boolean.turn_off
     data:
