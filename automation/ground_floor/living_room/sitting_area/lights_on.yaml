@@ -1,4 +1,4 @@
-- alias: SA | No Media  initial_state: True
+- alias: SA | No Media
   initial_state: True
   trigger:
     - platform: state
