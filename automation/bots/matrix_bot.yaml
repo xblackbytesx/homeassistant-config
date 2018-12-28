@@ -1,4 +1,4 @@
-- alias: 'React to an introduction'
+- alias: 'Matrix | React to an introduction'
   trigger:
     platform: event
     event_type: matrix_command
@@ -10,7 +10,7 @@
       message: "My name is Hassi-o, servant of men ruler of tech."
 
 
-- alias: 'Turn on all the things'
+- alias: 'Matrix | Turn on all the things'
   trigger:
     platform: event
     event_type: matrix_command
@@ -45,7 +45,7 @@
         message: "Shining bright like a diamond!"
 
 
-- alias: 'React to Cut socket one'
+- alias: 'Matrix | React to Cut socket one'
   trigger:
     platform: event
     event_type: matrix_command
@@ -59,7 +59,7 @@
         message: "Socket one killed!"
 
 
-- alias: 'React to Cut socket two'
+- alias: 'Matrix | React to Cut socket two'
   trigger:
     platform: event
     event_type: matrix_command
@@ -73,7 +73,7 @@
         message: "Socket two killed!"
 
 
-- alias: 'React to Cut socket three'
+- alias: 'Matrix | React to Cut socket three'
   trigger:
     platform: event
     event_type: matrix_command
@@ -87,7 +87,7 @@
         message: "Socket three killed!"
 
 
-- alias: 'React to Cut all power'
+- alias: 'Matrix | React to Cut all power'
   trigger:
     platform: event
     event_type: matrix_command
@@ -111,7 +111,7 @@
         message: "I've cut the power as you requested!"
 
 
-- alias: 'React to !reel_in_the_sunscreen'
+- alias: 'Matrix | React to !reel_in_the_sunscreen'
   trigger:
     platform: event
     event_type: matrix_command

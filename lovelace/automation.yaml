@@ -65,3 +65,11 @@ cards:
     filter:
       include:
         - entity_id: "automation.ex*"
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: entities
+      title: Matrix bot automations
+    filter:
+      include:
+        - entity_id: "automation.matrix*"
