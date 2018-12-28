@@ -3,9 +3,9 @@ title: Bier Estates
 resources:
 - url: /local/tracker-card.js?v=0
   type: js
-- url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js
+- url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=1
   type: js
-- url: /local/custom-lovelace/monster-card/monster-card.js
+- url: /local/custom-lovelace/monster-card/monster-card.js?v=1
   type: js
 views:
   - !include home.yaml
