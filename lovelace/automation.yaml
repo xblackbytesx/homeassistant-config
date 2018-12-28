@@ -1,8 +1,24 @@
 title: automation_view
 icon: mdi:robot
 cards:
-  - type: entities
-    entity: group.all_automations
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: entities
+      title: 'On'
+    filter:
+      include:
+        - entity_id: "automation.*"
+          state: "on"
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: entities
+      title: 'Off'
+    filter:
+      include:
+        - entity_id: "automation.*"
+          state: "off"
   - type: entities
     title: Hallway automations
     show_header_toggle: true
