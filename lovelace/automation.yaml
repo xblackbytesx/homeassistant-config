@@ -2,52 +2,7 @@ title: automation_view
 icon: mdi:robot
 cards:
   - type: entities
-    title: all automations
-    show_header_toggle: true
-    entities:
-      - automation.attic__motion__lights_off
-      - automation.attic__motion__lights_on
-      - automation.bathroom__duo_switch__left__off
-      - automation.bathroom__duo_switch__left__on
-      - automation.bathroom__duo_switch__right__off
-      - automation.bathroom__duo_switch__right__on
-      - automation.co__darkness_cutoff__off
-      - automation.co__darkness_cutoff__on
-      - automation.co__motion__lights_off
-      - automation.co__motion__lights_on
-      - automation.ex__time__lights_off
-      - automation.ex__time__lights_on
-      - automation.hw__darkness_cutoff__off
-      - automation.hw__darkness_cutoff__on
-      - automation.hw__motion__lights_off
-      - automation.hw__motion__lights_on
-      - automation.kitchen__darkness_cutoff__off
-      - automation.kitchen__darkness_cutoff__on
-      - automation.kitchen__time__lights_off
-      - automation.kitchen__time__lights_on
-      - automation.lb__time__lights_off
-      - automation.lr__boolean__scene__search_mode
-      - automation.large_bedroom__duo_switch__left__off
-      - automation.large_bedroom__duo_switch__left__on
-      - automation.large_bedroom__duo_switch__right__off
-      - automation.large_bedroom__duo_switch__right__on
-      - automation.mb__motion__lights_off
-      - automation.mb__motion__lights_on
-      - automation.react_to_cut_the_power
-      - automation.react_to_reel_in_the_sunscreen
-      - automation.react_to_an_introduction
-      - automation.sa__darkness_cutoff__off
-      - automation.sa__darkness_cutoff__on
-      - automation.sa__media_playing__state_one
-      - automation.sa__media_playing__state_two
-      - automation.sa__motion__christmas_tree_off
-      - automation.sa__motion__christmas_tree_on
-      - automation.sa__no_media
-      - automation.sa__tv_media_state__off
-      - automation.sa__tv_media_state__on
-      - automation.sa__time__lights_off
-      - automation.trigger_media_status_override_with_hardware_button__off
-      - automation.trigger_media_status_override_with_hardware_button__on
+    entity: group.all_automations
   - type: entities
     title: Hallway automations
     show_header_toggle: true
