@@ -5,57 +5,63 @@ cards:
     show_empty: false
     card:
       type: entities
-      title: 'On'
+      title: ALl automations
     filter:
       include:
         - entity_id: "automation.*"
-          state: "on"
   - type: custom:monster-card
     show_empty: false
     card:
       type: entities
-      title: 'Off'
+      title: Hallway automations
     filter:
       include:
-        - entity_id: "automation.*"
-          state: "off"
-  - type: entities
-    title: Hallway automations
-    show_header_toggle: true
-    entities:
-      - automation.hw__motion__lights_on
-      - automation.hw__motion__lights_off
-  - type: entities
-    title: Sitting area automations
-    show_header_toggle: true
-    entities:
-      - automation.sa__no_media
-      - automation.sa__media_playing__state_one
-      - automation.sa__media_playing__state_two
-      - automation.sa__time__lights_off
-      - automation.sa__motion__christmas_tree_on
-      - automation.sa__motion__christmas_tree_off
-  - type: entities
-    title: Kitchen automations
-    show_header_toggle: true
-    entities:
-      - automation.kitchen__time__lights_on
-      - automation.kitchen__time__lights_off
-  - type: entities
-    title: Corridor automations
-    show_header_toggle: true
-    entities:
-      - automation.co__motion__lights_on
-      - automation.co__motion__lights_off
-  - type: entities
-    title: Master bedroom automations
-    show_header_toggle: true
-    entities:
-      - automation.mb__motion__lights_on
-      - automation.mb__motion__lights_off
-  - type: entities
-    title: Exterior automations
-    show_header_toggle: true
-    entities:
-      - automation.ex__time__lights_on
-      - automation.ex__time__lights_off
+        - entity_id: "automation.hw*"
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: entities
+      title: Sitting area automations
+    filter:
+      include:
+        - entity_id: "automation.sa*"
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: entities
+      title: Kitchen automations
+    filter:
+      include:
+        - entity_id: "automation.kitchen*"
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: entities
+      title: Corridor automations
+    filter:
+      include:
+        - entity_id: "automation.co*"
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: entities
+      title: Master bedroom automations
+    filter:
+      include:
+        - entity_id: "automation.mb*"
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: entities
+      title: Large bedroom automations
+    filter:
+      include:
+        - entity_id: "automation.large_bedroom*"
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: entities
+      title: Exterior automations
+    filter:
+      include:
+        - entity_id: "automation.ex*"
