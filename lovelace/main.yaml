@@ -1,11 +1,11 @@
 title: Bier Estates
 # Include external resources
 resources:
-- url: /local/tracker-card.js?v=0
+- url: /local/tracker-card.js?v=0.1.5
   type: js
-- url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=1
+- url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=0.3.3
   type: js
-- url: /local/custom-lovelace/monster-card/monster-card.js?v=1
+- url: /local/custom-lovelace/monster-card/monster-card.js?v=0.2.3
   type: js
 views:
   - !include home.yaml
