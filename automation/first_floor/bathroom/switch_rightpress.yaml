@@ -1,5 +1,4 @@
 - alias: Bathroom | Duo switch | right | On
-  initial_state: True
   trigger:
     platform: event
     event_type: button_pressed
@@ -10,7 +9,6 @@
 
 
 - alias: Bathroom | Duo switch | right | Off
-  initial_state: True
   trigger:
     platform: event
     event_type: button_pressed

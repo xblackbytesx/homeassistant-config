@@ -1,5 +1,4 @@
 - alias: HW | Darkness cutoff | On
-  initial_state: True
   trigger:
     platform: time
     minutes: '/5'
@@ -15,7 +14,6 @@
 
 
 - alias: HW | Darkness cutoff | Off
-  initial_state: True
   trigger:
     platform: time
     minutes: '/5'

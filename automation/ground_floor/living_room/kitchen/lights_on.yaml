@@ -1,5 +1,4 @@
 - alias: Kitchen | Time | Lights on
-  initial_state: True
   trigger:
     - platform: state
       entity_id: sensor.motion_in_kitchen

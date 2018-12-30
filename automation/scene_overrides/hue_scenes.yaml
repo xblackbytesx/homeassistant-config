@@ -1,5 +1,4 @@
 - alias: LR | Boolean | Scene | Search Mode
-  initial_state: True
   trigger:
     - platform: state
       entity_id: input_boolean.engage_search_mode
@@ -21,7 +20,6 @@
       entity_id:  automation.sa__media_playing__state_two
 
 - alias: LR | Boolean | Scene | Search Mode Off
-  initial_state: True
   trigger:
     - platform: state
       entity_id: input_boolean.engage_search_mode

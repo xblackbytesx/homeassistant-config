@@ -1,5 +1,4 @@
 - alias: SA | Motion | Christmas Tree On
-  initial_state: True
   trigger:
     - platform: state
       entity_id: sensor.motion_in_sitting_area

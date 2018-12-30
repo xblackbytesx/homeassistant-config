@@ -1,5 +1,4 @@
 - alias: Large Bedroom | Duo switch | left | On
-  initial_state: True
   trigger:
     platform: event
     event_type: button_pressed
@@ -12,7 +11,6 @@
 
 
 - alias: Large Bedroom | Duo switch | left | Off
-  initial_state: True
   trigger:
     platform: event
     event_type: button_pressed

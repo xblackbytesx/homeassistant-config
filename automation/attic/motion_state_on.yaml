@@ -1,5 +1,4 @@
 - alias: Attic | Motion | Lights on
-  initial_state: True
   trigger:
     platform: state
     entity_id: binary_sensor.motion_sensor_attic

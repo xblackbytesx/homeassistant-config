@@ -1,5 +1,4 @@
 - alias: "EX | Time | Lights on"
-  initial_state: True
   trigger:
     - platform: time
       at: '17:30:00'

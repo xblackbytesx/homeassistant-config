@@ -1,5 +1,4 @@
 - alias: Kitchen | Time | Lights off
-  initial_state: True
   trigger:
     platform: time
     minutes: '/15'

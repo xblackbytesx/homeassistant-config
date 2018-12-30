@@ -1,5 +1,4 @@
 - alias: CO | Darkness cutoff | On
-  initial_state: True
   trigger:
     platform: time
     minutes: '/5'
@@ -15,7 +14,6 @@
 
 
 - alias: CO | Darkness cutoff | Off
-  initial_state: True
   trigger:
     platform: time
     minutes: '/5'

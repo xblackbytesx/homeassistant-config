@@ -1,5 +1,4 @@
 - alias: CO | Motion | Lights off
-  initial_state: True
   trigger:
     platform: state
     entity_id: sensor.motion_in_corridor

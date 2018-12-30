@@ -1,5 +1,4 @@
 - alias: SA | TV Media state | On
-  initial_state: True
   trigger:
     - platform: state
       entity_id: media_player.living_room
@@ -17,7 +16,6 @@
 
 
 - alias: SA | TV Media state | Off
-  initial_state: True
   trigger:
     - platform: state
       entity_id: media_player.living_room
