@@ -1,33 +1,29 @@
 homeassistant:
-  packages:
-    pack_1: !include packages/christmas_package.yaml
-  # Name of the location where Home Assistant is running
   name: Home
-  # Location required to calculate the time the sun rises and sets
   latitude: !secret latitude
   longitude: !secret longitude
-  # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 0
-  # metric for Metric, imperial for Imperial
   unit_system: metric
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Amsterdam
-  # Customization file
   customize: !include customize.yaml
+  packages:
+    pack_1: !include packages/christmas_package.yaml
 
-# Enables Hass.io
 hassio:
+config:
+# discovery:
+history:
+logbook:
+map:
+sun:
+# cloud:
 
-# Enables the frontend
 frontend:
   themes: !include_dir_merge_named themes
   javascript_version: latest
 
 lovelace:
   mode: yaml
-
-# Enables configuration UI
-config:
 
 http:
   # api_password: !secret http_password
@@ -60,9 +56,6 @@ custom_updater:
     - cards
     - components
 
-# Discover some devices automatically
-# discovery:
-
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
   intents:
@@ -74,28 +67,12 @@ intent_script:
     speech:
       text: It is currently {{ states.sensor.living_room_thermostat_temperature }} degrees in the living room.
 
-# Enables support for tracking state changes over time
-history:
-
-# View all events in a logbook
-logbook:
-
-# Enables a map showing the location of tracked devices
-map:
-
-# Track the sun
-sun:
-
 weather:
   - platform: darksky
     api_key: !secret dark_sky_api_key
 
-# Text to speech
 tts:
   - platform: google
-
-# Cloud
-# cloud:
 
 hue:
   bridges:
@@ -167,7 +144,6 @@ cover: !include cover.yaml
 binary_sensor: !include binary_sensor.yaml
 light: !include light.yaml
 matrix: !include matrix.yaml
-
 notify: !include_dir_merge_list notify/
 automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/
