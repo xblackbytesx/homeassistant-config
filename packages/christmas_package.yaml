@@ -2,6 +2,7 @@
 #------------------------------------------------------------------------------
 
 automation:
+
   - alias: SA | Motion | Christmas Tree On
     trigger:
       - platform: state
@@ -27,26 +28,27 @@ automation:
         data:
           entity_id: light.dimmable_socket_two
 
+
   - alias: SA | Motion | Christmas Tree Off
-  trigger:
-    platform: time
-    minutes: '/10'
-    seconds: 00
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: sensor.motion_in_sitting_area
-        state: '0'
-      - condition: state
-        entity_id: sensor.motion_in_kitchen
-        state: '0'
-  action:
-    - service: switch.turn_off
-      entity_id: switch.power_socket_two
-    - service: switch.turn_off
-      entity_id: switch.power_socket_three
-    - service: homeassistant.turn_off
-      entity_id: light.dimmable_socket_one
-    - service: homeassistant.turn_off
-      entity_id: light.dimmable_socket_two
+    trigger:
+      platform: time
+      minutes: '/10'
+      seconds: 00
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: sensor.motion_in_sitting_area
+          state: '0'
+        - condition: state
+          entity_id: sensor.motion_in_kitchen
+          state: '0'
+    action:
+      - service: switch.turn_off
+        entity_id: switch.power_socket_two
+      - service: switch.turn_off
+        entity_id: switch.power_socket_three
+      - service: homeassistant.turn_off
+        entity_id: light.dimmable_socket_one
+      - service: homeassistant.turn_off
+        entity_id: light.dimmable_socket_two
