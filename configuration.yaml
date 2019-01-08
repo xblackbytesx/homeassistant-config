@@ -7,7 +7,7 @@ homeassistant:
   time_zone: Europe/Amsterdam
   customize: !include customize.yaml
   packages:
-    pack_1: !include packages/christmas_package.yaml
+    # pack_1: !include packages/christmas_package.yaml
 
 hassio:
 config:
@@ -93,52 +93,7 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
-plant:
-  monstera_deliciosa:
-    sensors:
-      moisture: sensor.monstera_deliciosa_moisture
-      temperature: sensor.monstera_deliciosa_temperature
-      conductivity: sensor.monstera_deliciosa_conductivity
-      brightness: sensor.monstera_deliciosa_light_intensity
-    min_moisture: 15
-    max_moisture: 60
-    min_conductivity: 350
-    max_conductivity: 2000
-    min_brightness: 800
-    max_brightness: 15000
-    min_temperature: 12
-    max_temperature: 32
-
-  musa_basjoo:
-    sensors:
-      moisture: sensor.musa_basjoo_moisture
-      temperature: sensor.musa_basjoo_temperature
-      conductivity: sensor.musa_basjoo_conductivity
-      brightness: sensor.musa_basjoo_light_intensity
-    min_moisture: 15
-    max_moisture: 60
-    min_conductivity: 350
-    max_conductivity: 2000
-    min_brightness: 4000
-    max_brightness: 45000
-    min_temperature: 5
-    max_temperature: 35
-
-  sabal_minor:
-    sensors:
-      moisture: sensor.sabal_minor_moisture
-      temperature: sensor.sabal_minor_temperature
-      conductivity: sensor.sabal_minor_conductivity
-      brightness: sensor.sabal_minor_light_intensity
-    min_moisture: 15
-    max_moisture: 60
-    min_conductivity: 350
-    max_conductivity: 2000
-    min_brightness: 2500
-    max_brightness: 55000
-    min_temperature: 5
-    max_temperature: 35
-
+plant: !include plants.yaml
 switch: !include switch.yaml
 cover: !include cover.yaml
 binary_sensor: !include binary_sensor.yaml
@@ -147,7 +102,6 @@ matrix: !include matrix.yaml
 notify: !include_dir_merge_list notify/
 automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/
-# plant: !include_dir_merge_list plant/
 input_boolean: !include_dir_merge_named boolean/
 media_player: !include_dir_merge_list media_player/
 device_tracker: !include_dir_merge_list device_tracker/
