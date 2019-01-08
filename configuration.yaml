@@ -1,6 +1,6 @@
 homeassistant:
   packages:
-    pack_1: !include christmas_package.yaml
+    pack_1: !include packages/christmas_package.yaml
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
