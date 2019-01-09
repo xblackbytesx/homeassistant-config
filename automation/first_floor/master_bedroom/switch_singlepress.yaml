@@ -1,4 +1,4 @@
-- alias: Master Bedroom | Single switch | On
+- alias: MB | Single switch | On
   trigger:
     platform: event
     event_type: button_pressed
@@ -10,7 +10,7 @@
       scene_name: "MB | Sleep"
 
 
-- alias: Master Bedroom | Single switch | Off
+- alias: MB | Single switch | Off
   trigger:
     platform: event
     event_type: button_pressed
