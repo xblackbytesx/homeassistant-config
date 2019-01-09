@@ -18,6 +18,8 @@
       entity_id:  automation.sa__media_playing__state_one
     - service: automation.turn_off
       entity_id:  automation.sa__media_playing__state_two
+    - service: automation.turn_off
+      entity_id: automation.kitchen__time__lights_off
 
 - alias: LR | Boolean | Scene | Search Mode Off
   trigger:
@@ -41,3 +43,5 @@
       entity_id:  automation.sa__media_playing__state_one
     - service: automation.turn_on
       entity_id:  automation.sa__media_playing__state_two
+    - service: automation.turn_on
+      entity_id: automation.kitchen__time__lights_off
