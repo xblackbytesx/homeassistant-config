@@ -1,0 +1,20 @@
+- alias: Master Bedroom | Single switch | On
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "on", "entity_id": "switch.single_switch_mb"}
+  action:
+  - service: hue.hue_activate_scene
+    data:
+      group_name: "Master Bedroom"
+      scene_name: "MB | Sleep"
+
+
+- alias: Master Bedroom | Single switch | Off
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "off", "entity_id": "switch.single_switch_mb"}
+  action:
+    - service: homeassistant.turn_off
+      entity_id: light.innr__master_bedroom
