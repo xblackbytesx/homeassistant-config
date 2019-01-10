@@ -1,10 +1,10 @@
 - alias: HW | Motion | Lights on
   trigger:
     - platform: state
-      entity_id: sensor.motion_in_hallwaydoor
+      entity_id: sensor.motion_in_hallway_door
       to: '1'
     - platform: state
-      entity_id: sensor.motion_in_hallwaystairs
+      entity_id: sensor.motion_in_hallway_stairs
       to: '1'
   condition:
     condition: state

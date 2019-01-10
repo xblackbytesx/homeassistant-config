@@ -11,8 +11,8 @@ default_view:
     - group.living_room_climate
     - group.weather
     - group.internet_health_check
-    - sensor.motion_in_hallwaystairs
-    - sensor.motion_in_hallwaydoor
+    - sensor.motion_in_hallway_stairs
+    - sensor.motion_in_hallway_door
     - sensor.motion_in_sitting_area
     - binary_sensor.motion_sensor_sa
     - sensor.motion_in_kitchen
