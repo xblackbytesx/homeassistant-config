@@ -236,7 +236,10 @@ views:
   title: Ground floor
 - cards:
   - cards:
-    - {entity: light.large_bedroom, name: Large bedroom, type: light}
+    - cards:
+      - {entity: light.large_bedroom, name: Large bedroom, type: light}
+      - {entity: light.master_bedroom, name: Master bedroom, type: light}
+      type: horizontal-stack
     - cards:
       - {entity: light.corridor, name: Corridor, type: light}
       - {entity: light.bathroom, name: Bathroom, type: light}
