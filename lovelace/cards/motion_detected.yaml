@@ -1,9 +1,9 @@
 type: entity-filter
 entities:
-  - entity: sensor.motion_in_hallwaystairs
+  - entity: sensor.motion_in_hallway_stairs
     name: Hallway/Stairs
     icon: mdi:run
-  - entity: sensor.motion_in_hallwaydoor
+  - entity: sensor.motion_in_hallway_door
     name: Hallway/Door
     icon: mdi:run
   - entity: sensor.motion_in_sitting_area

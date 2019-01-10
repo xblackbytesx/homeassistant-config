@@ -22,8 +22,8 @@ views:
     type: horizontal-stack
   - card: {title: Motion detected, type: glance}
     entities:
-    - {entity: sensor.motion_in_hallwaystairs, icon: 'mdi:run', name: Hallway/Stairs}
-    - {entity: sensor.motion_in_hallwaydoor, icon: 'mdi:run', name: Hallway/Door}
+    - {entity: sensor.motion_in_hallway_stairs, icon: 'mdi:run', name: Hallway/Stairs}
+    - {entity: sensor.motion_in_hallway_door, icon: 'mdi:run', name: Hallway/Door}
     - {entity: sensor.motion_in_sitting_area, icon: 'mdi:run', name: Sitting Area}
     - {entity: binary_sensor.motion_sensor_sa, icon: 'mdi:run', name: Sitting Area
         2}
