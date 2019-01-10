@@ -7,10 +7,10 @@
     condition: and
     conditions:
       - condition: state
-        entity_id: sensor.motion_in_hallwaydoor
+        entity_id: sensor.motion_in_hallway_door
         state: '0'
       - condition: state
-        entity_id: sensor.motion_in_hallwaystairs
+        entity_id: sensor.motion_in_hallway_stairs
         state: '0'
   action:
     - service: homeassistant.turn_off

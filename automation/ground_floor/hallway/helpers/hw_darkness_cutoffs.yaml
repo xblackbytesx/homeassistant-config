@@ -5,7 +5,7 @@
     seconds: 00
   condition:
     condition: numeric_state
-    entity_id: sensor.illumination_in_hallwaystairs
+    entity_id: sensor.illumination_in_hallway_stairs
     below: 18
   action:
     - service: input_boolean.turn_on
@@ -20,7 +20,7 @@
     seconds: 00
   condition:
     condition: numeric_state
-    entity_id: sensor.illumination_in_hallwaystairs
+    entity_id: sensor.illumination_in_hallway_stairs
     above: 18
   action:
     service: input_boolean.turn_off
