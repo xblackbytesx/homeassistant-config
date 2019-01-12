@@ -40,7 +40,7 @@ views:
     type: entities
   - cards:
     - {entity: climate.living_room, type: thermostat}
-    - entities: [sensor.temperature_in_hallwaydoor, sensor.temperature_in_hallwaystairs,
+    - entities: [sensor.temperature_in_hallway_door, sensor.temperature_in_hallway_stairs,
         sensor.temperature_in_sitting_area, sensor.temperature_in_kitchen]
       show_header_toggle: true
       title: Living room climate
@@ -500,8 +500,8 @@ views:
     title: Boolean value overrides
     type: entities
   - entities:
-    - {entity: sensor.motion_hallwaydoor_battery_status, icon: 'mdi:battery-80'}
-    - {entity: sensor.motion_hallwaystairs_battery_status, icon: 'mdi:battery-80'}
+    - {entity: sensor.motion_hallway_door_battery_status, icon: 'mdi:battery-80'}
+    - {entity: sensor.motion_hallway_stairs_battery_status, icon: 'mdi:battery-80'}
     - {entity: sensor.motion_sitting_area_battery_status, icon: 'mdi:battery-80'}
     - {entity: sensor.motion_kitchen_battery_status, icon: 'mdi:battery-80'}
     - {entity: sensor.motion_corridor_battery_status, icon: 'mdi:battery-80'}
