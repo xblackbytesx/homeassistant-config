@@ -6,7 +6,7 @@ cards:
     title: Living room climate
     show_header_toggle: true
     entities:
-      - sensor.temperature_in_hallwaydoor
-      - sensor.temperature_in_hallwaystairs
+      - sensor.temperature_in_hallway_door
+      - sensor.temperature_in_hallway_stairs
       - sensor.temperature_in_sitting_area
       - sensor.temperature_in_kitchen

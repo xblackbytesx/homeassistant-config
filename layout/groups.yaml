@@ -236,8 +236,8 @@ living_room_climate:
   name: Living room climate
   entities:
     - climate.living_room
-    - sensor.temperature_in_hallwaydoor
-    - sensor.temperature_in_hallwaystairs
+    - sensor.temperature_in_hallway_door
+    - sensor.temperature_in_hallway_stairs
     - sensor.temperature_in_sitting_area
     - sensor.temperature_in_kitchen
 
@@ -263,8 +263,8 @@ weather:
 living_room_brightness:
   name: Living room brightness
   entities:
-    - sensor.illumination_in_hallwaydoor
-    - sensor.illumination_in_hallwaystairs
+    - sensor.illumination_in_hallway_door
+    - sensor.illumination_in_hallway_stairs
     - sensor.illumination_in_sitting_area
     - sensor.illumination_in_kitchen
 
