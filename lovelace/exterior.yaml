@@ -36,11 +36,11 @@ cards:
       - entity: input_boolean.advanced_config
         state: "on"
     card:
-      - type: custom:monster-card
-        show_empty: false
-        card:
-          type: entities
-          title: Exterior automations
-        filter:
-          include:
-            - entity_id: "automation.ex*"
+      type: custom:monster-card
+      show_empty: false
+      card:
+        type: entities
+        title: Exterior automations
+      filter:
+        include:
+          - entity_id: "automation.ex*"

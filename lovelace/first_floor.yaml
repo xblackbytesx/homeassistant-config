@@ -58,14 +58,14 @@ cards:
       - entity: input_boolean.advanced_config
         state: "on"
     card:
-      - type: custom:monster-card
-        show_empty: false
-        card:
-          type: entities
-          title: First floor automations
-        filter:
-          include:
-            - entity_id: "automation.co*"
-            - entity_id: "automation.mb*"
-            - entity_id: "automation.lb*"
-            - entity_id: "automation.bathroom*"
+    type: custom:monster-card
+      show_empty: false
+      card:
+        type: entities
+        title: First floor automations
+      filter:
+        include:
+          - entity_id: "automation.co*"
+          - entity_id: "automation.mb*"
+          - entity_id: "automation.lb*"
+          - entity_id: "automation.bathroom*"

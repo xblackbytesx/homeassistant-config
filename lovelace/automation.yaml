@@ -5,7 +5,7 @@ cards:
     show_empty: false
     card:
       type: entities
-      title: ALl automations
+      title: All automations
     filter:
       include:
         - entity_id: "automation.*"
