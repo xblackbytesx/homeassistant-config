@@ -18,9 +18,11 @@ cards:
       - entity: input_boolean.advanced_config
         state: "on"
     card:
-      type: entities
-      title: Attic automations
-      show_header_toggle: true
-      entities:
-        - automation.attic__motion__lights_on
-        - automation.attic__motion__lights_off
+      type: custom:monster-card
+      show_empty: false
+      card:
+        type: entities
+        title: Attic automations
+      filter:
+        include:
+          - entity_id: "automation.attic*"

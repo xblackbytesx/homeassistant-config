@@ -70,17 +70,13 @@ cards:
       - entity: input_boolean.advanced_config
         state: "on"
     card:
-      type: entities
-      title: Ground floor automations
-      show_header_toggle: true
-      entities:
-        - automation.hw__motion__lights_on
-        - automation.hw__motion__lights_off
-        - automation.sa__no_media
-        - automation.sa__media_playing__state_one
-        - automation.sa__media_playing__state_two
-        - automation.sa__time__lights_off
-        - automation.sa__motion__christmas_tree_on
-        - automation.sa__motion__christmas_tree_off
-        - automation.kitchen__time__lights_on
-        - automation.kitchen__time__lights_off
+      type: custom:monster-card
+      show_empty: false
+      card:
+        type: entities
+        title: Ground floor automations
+      filter:
+        include:
+          - entity_id: "automation.hw*"
+          - entity_id: "automation.sa*"
+          - entity_id: "automation.kitchen*"
