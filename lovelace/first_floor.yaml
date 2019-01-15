@@ -58,11 +58,14 @@ cards:
       - entity: input_boolean.advanced_config
         state: "on"
     card:
-      type: entities
-      title: First floor automations
-      show_header_toggle: true
-      entities:
-        - automation.co__motion__lights_on
-        - automation.co__motion__lights_off
-        - automation.mb__motion__lights_on
-        - automation.mb__motion__lights_off
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: First floor automations
+        filter:
+          include:
+            - entity_id: "automation.co*"
+            - entity_id: "automation.mb*"
+            - entity_id: "automation.lb*"
+            - entity_id: "automation.bathroom*"

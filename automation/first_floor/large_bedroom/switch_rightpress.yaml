@@ -1,4 +1,4 @@
-- alias: Large Bedroom | Duo switch | right | On
+- alias: LB | Duo switch | right | On
   trigger:
     platform: event
     event_type: button_pressed

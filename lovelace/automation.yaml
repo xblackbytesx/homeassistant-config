@@ -56,7 +56,7 @@ cards:
       title: Large bedroom automations
     filter:
       include:
-        - entity_id: "automation.large_bedroom*"
+        - entity_id: "automation.lb*"
   - type: custom:monster-card
     show_empty: false
     card:
