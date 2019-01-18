@@ -221,14 +221,14 @@ views:
     - {entity: input_boolean.advanced_config, state: 'on'}
     type: conditional
   - card:
-      entities: [automation.hw__motion__lights_on, automation.hw__motion__lights_off,
-        automation.sa__no_media, automation.sa__media_playing__state_one, automation.sa__media_playing__state_two,
-        automation.sa__time__lights_off, automation.sa__motion__christmas_tree_on,
-        automation.sa__motion__christmas_tree_off, automation.kitchen__time__lights_on,
-        automation.kitchen__time__lights_off]
-      show_header_toggle: true
-      title: Ground floor automations
-      type: entities
+      card: {title: Ground floor automations, type: entities}
+      filter:
+        include:
+        - {entity_id: automation.hw*}
+        - {entity_id: automation.sa*}
+        - {entity_id: automation.kitchen*}
+      show_empty: false
+      type: custom:monster-card
     conditions:
     - {entity: input_boolean.advanced_config, state: 'on'}
     type: conditional
@@ -283,11 +283,15 @@ views:
     - {entity: input_boolean.advanced_config, state: 'on'}
     type: conditional
   - card:
-      entities: [automation.co__motion__lights_on, automation.co__motion__lights_off,
-        automation.mb__motion__lights_on, automation.mb__motion__lights_off]
-      show_header_toggle: true
-      title: First floor automations
-      type: entities
+      card: {title: First floor automations, type: entities}
+      filter:
+        include:
+        - {entity_id: automation.co*}
+        - {entity_id: automation.mb*}
+        - {entity_id: automation.lb*}
+        - {entity_id: automation.bathroom*}
+      show_empty: false
+      type: custom:monster-card
     conditions:
     - {entity: input_boolean.advanced_config, state: 'on'}
     type: conditional
@@ -306,10 +310,12 @@ views:
     - {entity: input_boolean.advanced_config, state: 'on'}
     type: conditional
   - card:
-      entities: [automation.attic__motion__lights_on, automation.attic__motion__lights_off]
-      show_header_toggle: true
-      title: Attic automations
-      type: entities
+      card: {title: Attic automations, type: entities}
+      filter:
+        include:
+        - {entity_id: automation.attic*}
+      show_empty: false
+      type: custom:monster-card
     conditions:
     - {entity: input_boolean.advanced_config, state: 'on'}
     type: conditional
@@ -378,10 +384,12 @@ views:
     - {entity: input_boolean.advanced_config, state: 'on'}
     type: conditional
   - card:
-      entities: [automation.ex__time__lights_on, automation.ex__time__lights_off]
-      show_header_toggle: true
-      title: Exterior automations
-      type: entities
+      card: {title: Exterior automations, type: entities}
+      filter:
+        include:
+        - {entity_id: automation.ex*}
+      show_empty: false
+      type: custom:monster-card
     conditions:
     - {entity: input_boolean.advanced_config, state: 'on'}
     type: conditional
@@ -434,7 +442,7 @@ views:
   icon: mdi:ip-network
   title: Network
 - cards:
-  - card: {title: ALl automations, type: entities}
+  - card: {title: All automations, type: entities}
     filter:
       include:
       - {entity_id: automation.*}
@@ -473,7 +481,7 @@ views:
   - card: {title: Large bedroom automations, type: entities}
     filter:
       include:
-      - {entity_id: automation.large_bedroom*}
+      - {entity_id: automation.lb*}
     show_empty: false
     type: custom:monster-card
   - card: {title: Exterior automations, type: entities}
