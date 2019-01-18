@@ -1,0 +1,19 @@
+type: vertical-stack
+cards:
+  - type: picture-entity
+    entity: !secret person_two_device_tracker
+    name: !secret person_two_name
+    state_image:
+      "home": /local/avatars/lois.gif
+      "not_home": /local/avatars/lois_off.gif
+  - type: entities
+    entities:
+      - entity: binary_sensor.working_person_two
+        name: Work day
+        icon: mdi:briefcase
+      - entity: sensor.person_two_drive_home_to_work
+        name: Travel time Home to Work
+        icon: mdi:car
+      - entity: sensor.person_two_drive_work_to_home
+        name: Travel time Work to Home
+        icon: mdi:car

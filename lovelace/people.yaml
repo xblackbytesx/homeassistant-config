@@ -3,27 +3,5 @@ icon: mdi:account-multiple
 cards:
   - type: horizontal-stack
     cards:
-      - type: vertical-stack
-        cards:
-          - type: picture-entity
-            entity: !secret person_one_device_tracker
-            name: !secret person_one_name
-            state_image:
-              "home": /local/avatars/peter.gif
-              "not_home": /local/avatars/peter_off.gif
-          - type: entities
-            entities:
-              - entity: binary_sensor.working_person_one
-                icon: mdi:briefcase
-      - type: vertical-stack
-        cards:
-          - type: picture-entity
-            entity: !secret person_two_device_tracker
-            name: !secret person_two_name
-            state_image:
-              "home": /local/avatars/lois.gif
-              "not_home": /local/avatars/lois_off.gif
-          - type: entities
-            entities:
-              - entity: binary_sensor.working_person_two
-                icon: mdi:briefcase
+      - !include cards/person_one_info.yaml
+      - !include cards/person_two_info.yaml

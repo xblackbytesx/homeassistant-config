@@ -1,7 +1,0 @@
-type: entities
-title: Travel times
-entities:
-  - sensor.drive_home_to_work
-  - sensor.drive_work_to_home
-  - sensor.train_home_to_work
-  - sensor.train_work_to_home
