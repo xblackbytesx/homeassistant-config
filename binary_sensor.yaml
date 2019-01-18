@@ -14,11 +14,11 @@
       device_class: window
 
 - platform: workday
-  name: !secret working_person_one
+  name: Working person one
   country: NL
-  workdays: !secret workdays_person_one
+  workdays: !secret person_one_workdays
 
 - platform: workday
-  name: !secret working_person_two
+  name: Working person two
   country: NL
-  workdays: !secret workdays_person_two
+  workdays: !secret person_two_workdays
