@@ -1,4 +1,5 @@
 type: horizontal-stack
+icon: mdi:account-multiple
 cards:
   - type: vertical-stack
     cards:
