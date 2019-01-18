@@ -1,6 +1,11 @@
 type: vertical-stack
 cards:
-  - !include person_two_presence.yaml
+  - type: picture-entity
+    entity: !secret person_two_device_tracker
+    name: !secret person_two_name
+    state_image:
+      "home": /local/avatars/lois.gif
+      "not_home": /local/avatars/lois_off.gif
   - type: entities
     entities:
       - entity: binary_sensor.working_person_two

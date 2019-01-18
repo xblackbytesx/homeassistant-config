@@ -3,8 +3,18 @@ icon: mdi:home
 cards:
   - type: horizontal-stack
     cards:
-      - !include cards/person_one_presence.yaml
-      - !include cards/person_two_presence.yaml
+      - type: picture-entity
+        entity: !secret person_one_device_tracker
+        name: !secret person_one_name
+        state_image:
+          "home": /local/avatars/peter.gif
+          "not_home": /local/avatars/peter_off.gif
+      - type: picture-entity
+        entity: !secret person_two_device_tracker
+        name: !secret person_two_name
+        state_image:
+          "home": /local/avatars/lois.gif
+          "not_home": /local/avatars/lois_off.gif
   - !include cards/motion_detected.yaml
   - type: entities
     entities:
