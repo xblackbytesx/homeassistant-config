@@ -1,7 +1,10 @@
 title: Home
 icon: mdi:home
 cards:
-  - !include cards/people.yaml
+  - type: horizontal-stack
+    cards:
+      - !include cards/person_one_presence.yaml
+      - !include cards/person_two_presence.yaml
   - !include cards/motion_detected.yaml
   - type: entities
     entities:

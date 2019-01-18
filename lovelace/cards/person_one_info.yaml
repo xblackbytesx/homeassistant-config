@@ -11,10 +11,10 @@ cards:
       - entity: binary_sensor.working_person_one
         name: Work day
         icon: mdi:briefcase
-      - entity: sensor.person_two_drive_home_to_work
+      - entity: sensor.person_one_drive_home_to_work
         name: Travel time Home to Work
         icon: mdi:car
-      - entity: sensor.person_two_drive_work_to_home
+      - entity: sensor.person_one_drive_work_to_home
         name: Travel time Work to Home
         icon: mdi:car
       - sensor.person_one_train_home_to_work

@@ -1,0 +1,6 @@
+type: picture-entity
+entity: !secret person_one_device_tracker
+name: !secret person_one_name
+state_image:
+  "home": /local/avatars/peter.gif
+  "not_home": /local/avatars/peter_off.gif
