@@ -13,7 +13,7 @@ views:
   - !include first_floor.yaml
   - !include attic.yaml
   - !include exterior.yaml
-  - !include people.yaml
+  # - !include people.yaml
   - !include plants.yaml
   - !include media.yaml
   - !include security.yaml
