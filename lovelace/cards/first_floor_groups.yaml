@@ -3,11 +3,16 @@ cards:
   - type: horizontal-stack
     cards:
       - type: light
+        entity: light.master_bedroom
+        name: Master bedroom
+  - type: horizontal-stack
+    cards:
+      - type: light
         entity: light.large_bedroom
         name: Large bedroom
       - type: light
-        entity: light.master_bedroom
-        name: Master bedroom
+        entity: light.small_bedroom
+        name: Small bedroom
   - type: horizontal-stack
     cards:
       - type: light

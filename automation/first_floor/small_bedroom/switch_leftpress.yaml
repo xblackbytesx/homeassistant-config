@@ -1,0 +1,20 @@
+- alias: SB | Duo switch | left | On
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "on", "entity_id": "switch.duo_switch_sb_l"}
+  action:
+  - service: hue.hue_activate_scene
+    data:
+      group_name: "Small Bedroom"
+      scene_name: "SB | Sleep"
+
+
+- alias: Small Bedroom | Duo switch | left | Off
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "off", "entity_id": "switch.duo_switch_sb_l"}
+  action:
+    - service: homeassistant.turn_off
+      entity_id: light.tradfri__bulb__small_bedroom
