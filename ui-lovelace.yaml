@@ -405,11 +405,16 @@ views:
     - type: horizontal-stack
       cards:
       - type: light
+        entity: light.master_bedroom
+        name: Master bedroom
+    - type: horizontal-stack
+      cards:
+      - type: light
         entity: light.large_bedroom
         name: Large bedroom
       - type: light
-        entity: light.master_bedroom
-        name: Master bedroom
+        entity: light.small_bedroom
+        name: Small bedroom
     - type: horizontal-stack
       cards:
       - type: light
@@ -468,6 +473,7 @@ views:
       - light.hue__candle__bathroom__l
       - light.hue__bulb__bathroom__r
       - light.hue__bulb__large_bedroom
+      - light.tradfri__bulb__small_bedroom
       - light.innr__master_bedroom
   - type: conditional
     conditions:
