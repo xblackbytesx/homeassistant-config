@@ -785,24 +785,7 @@ views:
       entity: sensor.radarr_upcoming_media
       title: Upcoming Movies
       image_style: fanart
-  # - type: gauge
-  #   title: Down (Mbit/s)
-  #   entity: sensor.speedtest_download
-  #   min: 0
-  #   max: 120
-  #   severity:
-  #     green: 120
-  #     yellow: 60
-  #     red: 0
-  # - type: gauge
-  #   title: Up (Mbit/s)
-  #   entity: sensor.speedtest_upload
-  #   min: 0
-  #   max: 20
-  #   severity:
-  #     green: 20
-  #     yellow: 10
-  #     red: 0- title: automation_view
+- title: automation_view
   icon: mdi:robot
   cards:
   - type: custom:monster-card
