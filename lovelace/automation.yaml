@@ -61,6 +61,14 @@ cards:
     show_empty: false
     card:
       type: entities
+      title: Small bedroom automations
+    filter:
+      include:
+        - entity_id: "automation.sb*"
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: entities
       title: Exterior automations
     filter:
       include:
