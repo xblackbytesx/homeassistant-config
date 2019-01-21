@@ -13,6 +13,12 @@ devices:
   0b11000001b8124201010f70:
     name: duo_switch_lb_r
     fire_event: true
+  0b11000201abbdee02010f60:
+    name: duo_switch_sb_l
+    fire_event: true
+  0b11000501abbdee01010f70:
+    name: duo_switch_sb_r
+    fire_event: true
   0b11000301b7b65e02000070:
     name: duo_switch_mb_l
     fire_event: true
