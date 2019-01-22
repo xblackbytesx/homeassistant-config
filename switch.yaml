@@ -31,11 +31,11 @@ devices:
 
   # freq1but1
   0b110000019c0be201000070:
-    name: programmable_one
+    name: beamer_screen
     fire_event: true
   # freq1but2
   0b110002019c0be202010f70:
-    name: programmable_two
+    name: sun_screen
     fire_event: true
   # freq1but3
   0b110000019c0be203010f70:
@@ -75,8 +75,3 @@ devices:
   # # freq3but4
   # 0b110027019c0be20c010f70:
   #   name: power_socket_four
-
-  0710010048050160:
-    name: beamer_screen
-  0710010448060160:
-    name: sun_screen
