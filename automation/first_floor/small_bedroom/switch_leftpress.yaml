@@ -10,7 +10,7 @@
       scene_name: "SB | Sleep"
 
 
-- alias: Small Bedroom | Duo switch | left | Off
+- alias: SB | Duo switch | left | Off
   trigger:
     platform: event
     event_type: button_pressed
