@@ -99,7 +99,7 @@ cover: !include cover.yaml
 binary_sensor: !include binary_sensor.yaml
 light: !include light.yaml
 matrix: !include matrix.yaml
-notify: !include_dir_merge_list notify/
+# notify: !include_dir_merge_list notify/
 automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/
 input_boolean: !include_dir_merge_named boolean/
