@@ -52,14 +52,14 @@ cards:
       entities:
         - light.hue_bulb_kitchen_table_l
         - light.hue_bulb_kitchen_table_r
-        - light.hue__spot__kitchen_counter__1
-        - light.hue__spot__kitchen_counter__2
-        - light.hue__spot__kitchen_counter__3
-        - light.hue__spot__kitchen_counter__4
+        - light.hue_spot_kitchen_counter_1
+        - light.hue_spot_kitchen_counter_2
+        - light.hue_spot_kitchen_counter_3
+        - light.hue_spot_kitchen_counter_4
         - light.hue_bulb_standing_lamp
-        - light.hue__iris__tv_cabinet
-        - light.hue__go__closet__l
-        - light.hue__go__closet__r
+        - light.hue_iris_tv_cabinet
+        - light.hue_go_closet_l
+        - light.hue_go_closet_r
         - light.ledstrip_tv_cabinet
         - light.ledstrip_black_cabinet
         - light.hue_bulb_hallway

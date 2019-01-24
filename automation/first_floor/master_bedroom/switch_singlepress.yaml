@@ -17,4 +17,4 @@
     event_data: {"state": "off", "entity_id": "switch.single_switch_mb"}
   action:
     - service: homeassistant.turn_off
-      entity_id: light.innr__master_bedroom
+      entity_id: light.innr_master_bedroom

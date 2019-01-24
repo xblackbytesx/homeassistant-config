@@ -11,8 +11,8 @@ cards:
       title: All attic lights
       show_header_toggle: true
       entities:
-        - light.innr__attic__front
-        - light.innr__attic__back
+        - light.innr_attic_front
+        - light.innr_attic_back
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

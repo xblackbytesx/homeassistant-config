@@ -31,14 +31,14 @@ all_ground_floor_lights:
   entities:
     - light.hue_bulb_kitchen_table_l
     - light.hue_bulb_kitchen_table_r
-    - light.hue__spot__kitchen_counter__1
-    - light.hue__spot__kitchen_counter__2
-    - light.hue__spot__kitchen_counter__3
-    - light.hue__spot__kitchen_counter__4
+    - light.hue_spot_kitchen_counter_1
+    - light.hue_spot_kitchen_counter_2
+    - light.hue_spot_kitchen_counter_3
+    - light.hue_spot_kitchen_counter_4
     - light.hue_bulb_standing_lamp
-    - light.hue__iris__tv_cabinet
-    - light.hue__go__closet__l
-    - light.hue__go__closet__r
+    - light.hue_iris_tv_cabinet
+    - light.hue_go_closet_l
+    - light.hue_go_closet_r
     - light.ledstrip_tv_cabinet
     - light.ledstrip_black_cabinet
     - light.hue_bulb_hallway
@@ -53,7 +53,7 @@ corridor_lighting:
 bathroom_lighting:
   name: Bathroom lighting
   entities:
-    - light.hue__candle__bathroom__l
+    - light.hue_candle_bathroom_l
     - light.hue_bulb_bathroom_r
 
 large_bedroom_lighting:
@@ -65,16 +65,16 @@ all_first_floor_lights:
   name: All first floor lights
   entities:
     - light.hue_bulb_corridor
-    - light.hue__candle__bathroom__l
+    - light.hue_candle_bathroom_l
     - light.hue_bulb_bathroom_r
     - light.hue_bulb_large_bedroom
-    - light.innr__master_bedroom
+    - light.innr_master_bedroom
 
 all_attic_lights:
   name: All attic lights
   entities:
-    - light.innr__attic__front
-    - light.innr__attic__back
+    - light.innr_attic_front
+    - light.innr_attic_back
 
 
 #############################

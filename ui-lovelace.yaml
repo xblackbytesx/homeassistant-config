@@ -260,28 +260,28 @@ views:
     - type: state-icon
       tap_action:
         action: toggle
-      entity: light.hue__iris__tv_cabinet
+      entity: light.hue_iris_tv_cabinet
       style:
         bottom: 12%
         right: 8%
     - type: state-icon
       tap_action:
         action: toggle
-      entity: light.hue__candle__salt_lamp
+      entity: light.hue_candle_salt_lamp
       style:
         bottom: 12%
         right: 25%
     - type: state-icon
       tap_action:
         action: toggle
-      entity: light.hue__go__closet__l
+      entity: light.hue_go_closet_l
       style:
         top: 22%
         right: 25%
     - type: state-icon
       tap_action:
         action: toggle
-      entity: light.hue__go__closet__r
+      entity: light.hue_go_closet_r
       style:
         top: 25%
         right: 17%
@@ -365,14 +365,14 @@ views:
       entities:
       - light.hue_bulb_kitchen_table_l
       - light.hue_bulb_kitchen_table_r
-      - light.hue__spot__kitchen_counter__1
-      - light.hue__spot__kitchen_counter__2
-      - light.hue__spot__kitchen_counter__3
-      - light.hue__spot__kitchen_counter__4
+      - light.hue_spot_kitchen_counter_1
+      - light.hue_spot_kitchen_counter_2
+      - light.hue_spot_kitchen_counter_3
+      - light.hue_spot_kitchen_counter_4
       - light.hue_bulb_standing_lamp
-      - light.hue__iris__tv_cabinet
-      - light.hue__go__closet__l
-      - light.hue__go__closet__r
+      - light.hue_iris_tv_cabinet
+      - light.hue_go_closet_l
+      - light.hue_go_closet_r
       - light.ledstrip_tv_cabinet
       - light.ledstrip_black_cabinet
       - light.hue_bulb_hallway
@@ -444,7 +444,7 @@ views:
       title: Bathroom lighting
       show_header_toggle: true
       entities:
-      - light.hue__candle__bathroom__l
+      - light.hue_candle_bathroom_l
       - light.hue_bulb_bathroom_r
   - type: conditional
     conditions:
@@ -466,11 +466,11 @@ views:
       show_header_toggle: true
       entities:
       - light.hue_bulb_corridor
-      - light.hue__candle__bathroom__l
+      - light.hue_candle_bathroom_l
       - light.hue_bulb_bathroom_r
       - light.hue_bulb_large_bedroom
       - light.tradfri__bulb__small_bedroom
-      - light.innr__master_bedroom
+      - light.innr_master_bedroom
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -504,8 +504,8 @@ views:
       title: All attic lights
       show_header_toggle: true
       entities:
-      - light.innr__attic__front
-      - light.innr__attic__back
+      - light.innr_attic_front
+      - light.innr_attic_back
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config

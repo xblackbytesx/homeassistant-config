@@ -1,7 +1,7 @@
 - alias: "Bathroom | Time | Lights off"
   trigger:
     - platform: state
-      entity_id: light.hue__candle__bathroom__l
+      entity_id: light.hue_candle_bathroom_l
       to: 'on'
       for:
         hours: 0

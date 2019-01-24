@@ -5,7 +5,7 @@
     event_data: {"state": "on", "entity_id": "switch.duo_switch_bathroom_l"}
   action:
     - service: homeassistant.turn_on
-      entity_id: light.hue__candle__bathroom__l
+      entity_id: light.hue_candle_bathroom_l
 
 
 - alias: Bathroom | Duo switch | left | Off
@@ -15,4 +15,4 @@
     event_data: {"state": "off", "entity_id": "switch.duo_switch_bathroom_l"}
   action:
     - service: homeassistant.turn_off
-      entity_id: light.hue__candle__bathroom__l
+      entity_id: light.hue_candle_bathroom_l
