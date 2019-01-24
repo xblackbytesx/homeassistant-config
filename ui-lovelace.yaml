@@ -183,7 +183,7 @@ views:
       title: Hallway lighting
       show_header_toggle: true
       entities:
-      - light.hue__bulb__hallway
+      - light.hue_bulb_hallway
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -206,7 +206,7 @@ views:
       title: Corridor lighting
       show_header_toggle: true
       entities:
-      - light.hue__bulb__corridor
+      - light.hue_bulb_corridor
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -223,18 +223,14 @@ views:
     - entity: input_boolean.advanced_config
       state: "on"
     card:
-      type: entities
-      title: Programmable switches
-      show_header_toggle: true
-      entities:
-      - switch.programmable_one
-      - switch.programmable_two
-      - switch.programmable_three
-      - switch.programmable_four
-      - switch.programmable_five
-      - switch.programmable_six
-      - switch.programmable_seven
-      - switch.programmable_eight
+      type: custom:monster-card
+      show_empty: false
+      card:
+        type: entities
+        title: Programmable switches
+      filter:
+        include:
+        - entity_id: "switch.programmable_*"
 - title: Ground floor
   icon: mdi:numeric-0-box
   cards:

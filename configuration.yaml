@@ -93,21 +93,21 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
-plant: !include plants.yaml
+# plant: !include plants.yaml
 switch: !include switch.yaml
 cover: !include cover.yaml
 binary_sensor: !include binary_sensor.yaml
 light: !include light.yaml
 matrix: !include matrix.yaml
 # notify: !include_dir_merge_list notify/
-automation: !include_dir_merge_list automation/
+# automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/
 input_boolean: !include_dir_merge_named boolean/
 media_player: !include_dir_merge_list media_player/
 device_tracker: !include_dir_merge_list device_tracker/
-camera: !include_dir_merge_list camera/
+# camera: !include_dir_merge_list camera/
 script: !include_dir_merge_named script/
-group: !include_dir_merge_named layout/
+# group: !include_dir_merge_named layout/
 
 shell_command:
   lovelace_gen: 'python /config/lovelace-gen.py'
