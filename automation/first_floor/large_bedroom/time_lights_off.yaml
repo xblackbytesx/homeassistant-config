@@ -1,7 +1,7 @@
 - alias: "LB | Time | Lights off"
   trigger:
     platform: state
-    entity_id: light.hue__bulb__large_bedroom
+    entity_id: light.hue_bulb_large_bedroom
     to: 'on'
     for:
       hours: 0

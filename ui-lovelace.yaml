@@ -253,7 +253,7 @@ views:
     - type: state-icon
       tap_action:
         action: toggle
-      entity: light.hue__bulb__hallway
+      entity: light.hue_bulb_hallway
       style:
         top: 25%
         left: 38%
@@ -288,21 +288,21 @@ views:
     - type: state-icon
       tap_action:
         action: toggle
-      entity: light.hue__bulb__standing_lamp
+      entity: light.hue_bulb_standing_lamp
       style:
         top: 23%
         right: 32.6%
     - type: state-icon
       tap_action:
         action: toggle
-      entity: light.hue__bulb__kitchen_table__r
+      entity: light.hue_bulb_kitchen_table_r
       style:
         bottom: 16%
         left: 31%
     - type: state-icon
       tap_action:
         action: toggle
-      entity: light.hue__bulb__kitchen_table__l
+      entity: light.hue_bulb_kitchen_table_l
       style:
         bottom: 16%
         left: 23.5%
@@ -353,7 +353,7 @@ views:
       title: Hallway lighting
       show_header_toggle: true
       entities:
-      - light.hue__bulb__hallway
+      - light.hue_bulb_hallway
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -363,19 +363,19 @@ views:
       title: All ground floor lights
       show_header_toggle: true
       entities:
-      - light.hue__bulb__kitchen_table__l
-      - light.hue__bulb__kitchen_table__r
+      - light.hue_bulb_kitchen_table_l
+      - light.hue_bulb_kitchen_table_r
       - light.hue__spot__kitchen_counter__1
       - light.hue__spot__kitchen_counter__2
       - light.hue__spot__kitchen_counter__3
       - light.hue__spot__kitchen_counter__4
-      - light.hue__bulb__standing_lamp
+      - light.hue_bulb_standing_lamp
       - light.hue__iris__tv_cabinet
       - light.hue__go__closet__l
       - light.hue__go__closet__r
       - light.ledstrip_tv_cabinet
       - light.ledstrip_black_cabinet
-      - light.hue__bulb__hallway
+      - light.hue_bulb_hallway
       - light.dimmable_socket_one
       - light.dimmable_socket_two
   - type: conditional
@@ -434,7 +434,7 @@ views:
       title: Corridor lighting
       show_header_toggle: true
       entities:
-      - light.hue__bulb__corridor
+      - light.hue_bulb_corridor
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -445,7 +445,7 @@ views:
       show_header_toggle: true
       entities:
       - light.hue__candle__bathroom__l
-      - light.hue__bulb__bathroom__r
+      - light.hue_bulb_bathroom_r
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -455,7 +455,7 @@ views:
       title: Large Bedroom lighting
       show_header_toggle: true
       entities:
-      - light.hue__bulb__large_bedroom
+      - light.hue_bulb_large_bedroom
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -465,10 +465,10 @@ views:
       title: All first floor lights
       show_header_toggle: true
       entities:
-      - light.hue__bulb__corridor
+      - light.hue_bulb_corridor
       - light.hue__candle__bathroom__l
-      - light.hue__bulb__bathroom__r
-      - light.hue__bulb__large_bedroom
+      - light.hue_bulb_bathroom_r
+      - light.hue_bulb_large_bedroom
       - light.tradfri__bulb__small_bedroom
       - light.innr__master_bedroom
   - type: conditional

@@ -7,7 +7,7 @@
         hours: 0
         minutes: 45
     - platform: state
-      entity_id: light.hue__bulb__bathroom__r
+      entity_id: light.hue_bulb_bathroom_r
       to: 'on'
       for:
         hours: 0

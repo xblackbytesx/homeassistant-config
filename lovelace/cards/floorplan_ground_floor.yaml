@@ -4,7 +4,7 @@ elements:
   - type: state-icon
     tap_action:
       action: toggle
-    entity: light.hue__bulb__hallway
+    entity: light.hue_bulb_hallway
     style:
       top: 25%
       left: 38%
@@ -39,21 +39,21 @@ elements:
   - type: state-icon
     tap_action:
       action: toggle
-    entity: light.hue__bulb__standing_lamp
+    entity: light.hue_bulb_standing_lamp
     style:
       top: 23%
       right: 32.6%
   - type: state-icon
     tap_action:
       action: toggle
-    entity: light.hue__bulb__kitchen_table__r
+    entity: light.hue_bulb_kitchen_table_r
     style:
       bottom: 16%
       left: 31%
   - type: state-icon
     tap_action:
       action: toggle
-    entity: light.hue__bulb__kitchen_table__l
+    entity: light.hue_bulb_kitchen_table_l
     style:
       bottom: 16%
       left: 23.5%

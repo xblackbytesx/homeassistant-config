@@ -40,7 +40,7 @@ cards:
       title: Hallway lighting
       show_header_toggle: true
       entities:
-        - light.hue__bulb__hallway
+        - light.hue_bulb_hallway
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
@@ -50,19 +50,19 @@ cards:
       title: All ground floor lights
       show_header_toggle: true
       entities:
-        - light.hue__bulb__kitchen_table__l
-        - light.hue__bulb__kitchen_table__r
+        - light.hue_bulb_kitchen_table_l
+        - light.hue_bulb_kitchen_table_r
         - light.hue__spot__kitchen_counter__1
         - light.hue__spot__kitchen_counter__2
         - light.hue__spot__kitchen_counter__3
         - light.hue__spot__kitchen_counter__4
-        - light.hue__bulb__standing_lamp
+        - light.hue_bulb_standing_lamp
         - light.hue__iris__tv_cabinet
         - light.hue__go__closet__l
         - light.hue__go__closet__r
         - light.ledstrip_tv_cabinet
         - light.ledstrip_black_cabinet
-        - light.hue__bulb__hallway
+        - light.hue_bulb_hallway
         - light.dimmable_socket_one
         - light.dimmable_socket_two
   - type: conditional

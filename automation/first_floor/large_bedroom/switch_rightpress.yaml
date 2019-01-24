@@ -17,4 +17,4 @@
     event_data: {"state": "off", "entity_id": "switch.duo_switch_lb_r"}
   action:
     - service: homeassistant.turn_off
-      entity_id: light.hue__bulb__large_bedroom
+      entity_id: light.hue_bulb_large_bedroom

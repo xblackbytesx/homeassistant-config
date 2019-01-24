@@ -24,50 +24,50 @@ master_bedroom_lighting:
 hallway_lighting:
   name: Hallway lighting
   entities:
-    - light.hue__bulb__hallway
+    - light.hue_bulb_hallway
 
 all_ground_floor_lights:
   name: All ground floor lights
   entities:
-    - light.hue__bulb__kitchen_table__l
-    - light.hue__bulb__kitchen_table__r
+    - light.hue_bulb_kitchen_table_l
+    - light.hue_bulb_kitchen_table_r
     - light.hue__spot__kitchen_counter__1
     - light.hue__spot__kitchen_counter__2
     - light.hue__spot__kitchen_counter__3
     - light.hue__spot__kitchen_counter__4
-    - light.hue__bulb__standing_lamp
+    - light.hue_bulb_standing_lamp
     - light.hue__iris__tv_cabinet
     - light.hue__go__closet__l
     - light.hue__go__closet__r
     - light.ledstrip_tv_cabinet
     - light.ledstrip_black_cabinet
-    - light.hue__bulb__hallway
+    - light.hue_bulb_hallway
     - light.dimmable_socket_one
     - light.dimmable_socket_two
 
 corridor_lighting:
   name: Corridor lighting
   entities:
-    - light.hue__bulb__corridor
+    - light.hue_bulb_corridor
 
 bathroom_lighting:
   name: Bathroom lighting
   entities:
     - light.hue__candle__bathroom__l
-    - light.hue__bulb__bathroom__r
+    - light.hue_bulb_bathroom_r
 
 large_bedroom_lighting:
   name: Large Bedroom lighting
   entities:
-    - light.hue__bulb__large_bedroom
+    - light.hue_bulb_large_bedroom
 
 all_first_floor_lights:
   name: All first floor lights
   entities:
-    - light.hue__bulb__corridor
+    - light.hue_bulb_corridor
     - light.hue__candle__bathroom__l
-    - light.hue__bulb__bathroom__r
-    - light.hue__bulb__large_bedroom
+    - light.hue_bulb_bathroom_r
+    - light.hue_bulb_large_bedroom
     - light.innr__master_bedroom
 
 all_attic_lights:
