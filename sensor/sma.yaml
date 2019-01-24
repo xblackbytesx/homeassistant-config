@@ -3,6 +3,6 @@
   password: !secret sma_inverter_password
   group: installer
   sensors:
-    current_power:
+    pv_power:
     daily_yield:
     total_yield:
