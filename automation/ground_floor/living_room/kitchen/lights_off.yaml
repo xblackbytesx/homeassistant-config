@@ -1,6 +1,6 @@
 - alias: Kitchen | Time | Lights off
   trigger:
-    platform: time
+    platform: time_pattern
     minutes: '/15'
     seconds: 00
   condition:

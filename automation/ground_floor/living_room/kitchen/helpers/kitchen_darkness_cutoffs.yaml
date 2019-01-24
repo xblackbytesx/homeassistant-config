@@ -1,6 +1,6 @@
 - alias: Kitchen | Darkness cutoff | On
   trigger:
-    platform: time
+    platform: time_pattern
     minutes: '/5'
     seconds: 00
   condition:
@@ -15,7 +15,7 @@
 
 - alias: Kitchen | Darkness cutoff | Off
   trigger:
-    platform: time
+    platform: time_pattern
     minutes: '/5'
     seconds: 00
   condition:

@@ -3,7 +3,7 @@
     - platform: state
       entity_id: sensor.motion_in_kitchen
       to: '1'
-    - platform: time
+    - platform: time_pattern
       minutes: '/5'
       seconds: 00
   condition:

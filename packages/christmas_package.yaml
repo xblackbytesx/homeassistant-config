@@ -31,7 +31,7 @@ automation:
 
   - alias: SA | Motion | Christmas Tree Off
     trigger:
-      platform: time
+      platform: time_pattern
       minutes: '/10'
       seconds: 00
     condition:

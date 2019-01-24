@@ -9,7 +9,7 @@
     - platform: state
       entity_id: input_boolean.sa_tv_media_playing
       to: 'off'
-    - platform: time
+    - platform: time_pattern
       minutes: '/5'
       seconds: 00
   condition:
@@ -48,7 +48,7 @@
     - platform: state
       entity_id: input_boolean.sa_tv_media_playing
       to: 'on'
-    - platform: time
+    - platform: time_pattern
       minutes: '/5'
       seconds: 00
   condition:
@@ -87,7 +87,7 @@
     - platform: state
       entity_id: input_boolean.sa_tv_media_playing
       to: 'on'
-    - platform: time
+    - platform: time_pattern
       minutes: '/5'
       seconds: 00
   condition:
