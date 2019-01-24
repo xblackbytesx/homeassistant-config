@@ -17,4 +17,4 @@
     event_data: {"state": "off", "entity_id": "switch.duo_switch_sb_r"}
   action:
     - service: homeassistant.turn_off
-      entity_id: light.tradfri__bulb__small_bedroom
+      entity_id: light.tradfri_bulb_small_bedroom

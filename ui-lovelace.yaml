@@ -469,7 +469,7 @@ views:
       - light.hue_candle_bathroom_l
       - light.hue_bulb_bathroom_r
       - light.hue_bulb_large_bedroom
-      - light.tradfri__bulb__small_bedroom
+      - light.tradfri_bulb_small_bedroom
       - light.innr_master_bedroom
   - type: conditional
     conditions:
