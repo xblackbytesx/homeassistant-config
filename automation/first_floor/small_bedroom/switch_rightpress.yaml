@@ -4,10 +4,14 @@
     event_type: button_pressed
     event_data: {"state": "on", "entity_id": "switch.duo_switch_sb_r"}
   action:
-  - service: hue.hue_activate_scene
-    data:
-      group_name: "Small Bedroom"
-      scene_name: "SB | Relax"
+    - service: light.turn_on
+      entity_id: light.tradfri_bulb_small_bedroom
+      data:
+        brightness: 255
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Small Bedroom"
+        scene_name: "SB | Relax"
 
 
 - alias: SB | Duo switch | right | Off
