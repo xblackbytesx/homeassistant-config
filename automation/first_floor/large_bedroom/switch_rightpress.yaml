@@ -4,10 +4,10 @@
     event_type: button_pressed
     event_data: {"state": "on", "entity_id": "switch.duo_switch_lb_r"}
   action:
-  - service: hue.hue_activate_scene
-    data:
-      group_name: "Large Bedroom"
-      scene_name: "LB | Relax"
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Large Bedroom"
+        scene_name: "LB | Relax"
 
 
 - alias: LB | Duo switch | right | Off
@@ -18,3 +18,5 @@
   action:
     - service: homeassistant.turn_off
       entity_id: light.hue_bulb_large_bedroom
+    - service: switch.turn_off
+      entity_id: switch.power_socket_three

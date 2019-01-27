@@ -4,9 +4,14 @@
     entity_id: binary_sensor.motion_sensor_attic
     to: 'on'
   condition:
-    condition: state
-    entity_id: input_boolean.kitchen_meets_darkness_cutoff
-    state: 'on'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.kitchen_meets_darkness_cutoff
+        state: 'on'
+      - condition: time
+        after: '06:00:00'
+        before: '02:00:00'
   action:
     - service: hue.hue_activate_scene
       data:
