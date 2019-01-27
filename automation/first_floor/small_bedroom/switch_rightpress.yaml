@@ -11,7 +11,7 @@
     - service: light.turn_on
       entity_id: light.tradfri_bulb_small_bedroom
       data:
-        brightness: 255
+        brightness_pct: 100
 
 
 - alias: SB | Duo switch | right | Off
