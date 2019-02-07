@@ -14,6 +14,7 @@ config:
 # discovery:
 history:
 logbook:
+system_health:
 map:
 sun:
 # cloud:

@@ -3,6 +3,22 @@
   password: !secret sma_inverter_password
   group: installer
   sensors:
-    pv_power:
+    # pv_power:
     daily_yield:
     total_yield:
+  custom:
+    sma_status:
+      key: "6180_08214800"
+      unit: ""
+    sma_pv_power:
+      key: "6100_40263F00"
+      unit: W
+      factor: 1
+    # sma_daily_yield:
+    #   key: "6400_00262200"
+    #   unit: Wh
+    #   factor: 1
+    # sma_total_yield:
+    #   key: "6400_00260100"
+    #   unit: Wh
+    #   factor: 1
