@@ -94,6 +94,20 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
+transmission:
+  host: !secret synology_ip
+  username: !secret transmission_user
+  password: !secret transmission_pass
+  monitored_conditions:
+    - 'current_status'
+    - 'download_speed'
+    - 'upload_speed'
+    - 'active_torrents'
+    - 'paused_torrents'
+    - 'started_torrents'
+    - 'completed_torrents'
+    - 'total_torrents'
+
 plant: !include plants.yaml
 switch: !include switch.yaml
 cover: !include cover.yaml
