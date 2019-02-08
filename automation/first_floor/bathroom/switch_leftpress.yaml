@@ -4,10 +4,10 @@
     event_type: button_pressed
     event_data: {"state": "on", "entity_id": "switch.duo_switch_bathroom_l"}
   action:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: "Bathroom"
-        scene_name: "Bathroom | L | Relax"
+    - service: homeassistant.turn_on
+      entity_id: light.hue_candle_bathroom_l
+      brightness: 254
+      rgb_color: 255,207,120
 
 
 - alias: Bathroom | Duo switch | left | Off

@@ -15,6 +15,7 @@ config:
 history:
 logbook:
 system_health:
+wake_on_lan:
 map:
 sun:
 # cloud:
