@@ -6,8 +6,9 @@
   action:
     - service: homeassistant.turn_on
       entity_id: light.hue_candle_bathroom_l
-      brightness: 254
-      rgb_color: 255,207,120
+      data:
+        brightness: 254
+        rgb_color: 255,207,120
 
 
 - alias: Bathroom | Duo switch | left | Off
