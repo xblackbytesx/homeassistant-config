@@ -22,3 +22,5 @@
   action:
     - service: homeassistant.turn_off
       entity_id: light.tradfri_bulb_small_bedroom
+    - service: homeassistant.turn_off
+      entity_id: light.dimmable_socket_one

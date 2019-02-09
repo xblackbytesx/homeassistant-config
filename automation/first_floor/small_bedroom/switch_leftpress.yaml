@@ -12,7 +12,10 @@
       entity_id: light.tradfri_bulb_small_bedroom
       data:
         brightness_pct: 25
-
+    - service: light.turn_on
+      data:
+        entity_id: light.dimmable_socket_one
+        brightness_pct: 60
 
 - alias: SB | Duo switch | left | Off
   trigger:
@@ -22,3 +25,5 @@
   action:
     - service: homeassistant.turn_off
       entity_id: light.tradfri_bulb_small_bedroom
+    - service: homeassistant.turn_off
+      entity_id: light.dimmable_socket_one
