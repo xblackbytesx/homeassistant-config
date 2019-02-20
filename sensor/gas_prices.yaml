@@ -21,3 +21,11 @@
   value_template: '{{ ((value.split("€")[1]) | replace(",", ".")) }}'
   unit_of_measurement: "€"
   scan_interval: 1800
+
+- platform: scrape
+  resource: !secret gas_station_3_url
+  name: Gas station 3 Euro95
+  select: '#euro95 > div.pump_price > span.price'
+  value_template: '{{ ((value.split("€")[1]) | replace(",", ".")) }}'
+  unit_of_measurement: "€"
+  scan_interval: 1800

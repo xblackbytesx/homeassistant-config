@@ -12,3 +12,9 @@ cards:
     icon: mdi:gas-station
     height: 75
     hours_to_show: 48
+  - type: sensor
+    entity: sensor.gas_station_3_euo95
+    name: !secret gas_station_3_name_euro95
+    icon: mdi:gas-station
+    height: 75
+    hours_to_show: 48
