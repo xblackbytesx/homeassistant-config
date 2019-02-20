@@ -5,7 +5,7 @@
 title: Bier Estates
 # Include external resources
 resources:
-- url: /local/tracker-card.js?v=0.3.0
+- url: /local/tracker-card.js?v=0.3.2
   type: js
 - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=0.3.4
   type: js
@@ -165,6 +165,20 @@ views:
         padding: 5px
         box-sizing: border-box
         color: yellow
+  - type: vertical-stack
+    cards:
+    - type: sensor
+      entity: sensor.gas_station_2_euro95
+      name: !secret gas_station_2_name_euro95
+      icon: mdi:gas-station
+      height: 75
+      hours_to_show: 48
+    - type: sensor
+      entity: sensor.gas_station_2_blueone
+      name: !secret gas_station_2_name_blueone
+      icon: mdi:gas-station
+      height: 75
+      hours_to_show: 48
   - type: entities
     title: Power Sockets
     show_header_toggle: true

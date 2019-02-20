@@ -1,23 +1,23 @@
 # - platform: scrape
 #   resource: !secret gas_station_1_url
 #   name: Gas station 1 Euro95
-#   select: 'tr + tr + tr'
+#   select: '#station-prijzen > tbody > tr:nth-child(3) > td.literprijs'
 #   value_template: '{{ ((value.split("€")[1]) | replace(",", ".")) }}'
 #   unit_of_measurement: "€"
 #   scan_interval: 1800
-#
-# - platform: scrape
-#   resource: !secret gas_station_2_url
-#   name: Gas station 2 Euro95
-#   select: '.station-price-content:nth-of-type(1) > span:nth-of-type(2)'
-#   value_template: '{{ ((value.split("€")[1]) | replace(",", ".")) }}'
-#   unit_of_measurement: "€"
-#   scan_interval: 1800
-#
-# - platform: scrape
-#   resource: !secret gas_station_2_url
-#   name: Gas station 2 BlueOne
-#   select: '.station-price-content:nth-of-type(2) > span:nth-of-type(2)'
-#   value_template: '{{ ((value.split("€")[1]) | replace(",", ".")) }}'
-#   unit_of_measurement: "€"
-#   scan_interval: 1800
+
+- platform: scrape
+  resource: !secret gas_station_2_url
+  name: Gas station 2 Euro95
+  select: '.station-price-content:nth-of-type(1) > span:nth-of-type(2)'
+  value_template: '{{ ((value.split("€")[1]) | replace(",", ".")) }}'
+  unit_of_measurement: "€"
+  scan_interval: 1800
+
+- platform: scrape
+  resource: !secret gas_station_2_url
+  name: Gas station 2 BlueOne
+  select: '.station-price-content:nth-of-type(2) > span:nth-of-type(2)'
+  value_template: '{{ ((value.split("€")[1]) | replace(",", ".")) }}'
+  unit_of_measurement: "€"
+  scan_interval: 1800
