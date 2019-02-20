@@ -168,6 +168,12 @@ views:
   - type: vertical-stack
     cards:
     - type: sensor
+      entity: sensor.gas_station_1_euro95
+      name: !secret gas_station_1_name_euro95
+      icon: mdi:gas-station
+      height: 75
+      hours_to_show: 48
+    - type: sensor
       entity: sensor.gas_station_2_euro95
       name: !secret gas_station_2_name_euro95
       icon: mdi:gas-station
@@ -176,6 +182,12 @@ views:
     - type: sensor
       entity: sensor.gas_station_2_blueone
       name: !secret gas_station_2_name_blueone
+      icon: mdi:gas-station
+      height: 75
+      hours_to_show: 48
+    - type: sensor
+      entity: sensor.gas_station_3_euro95
+      name: !secret gas_station_3_name_euro95
       icon: mdi:gas-station
       height: 75
       hours_to_show: 48
