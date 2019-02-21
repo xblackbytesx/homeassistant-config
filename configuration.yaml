@@ -109,6 +109,14 @@ transmission:
     - 'completed_torrents'
     - 'total_torrents'
 
+speedtestdotnet:
+  scan_interval:
+    hours: 6
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
 plant: !include plants.yaml
 switch: !include switch.yaml
 cover: !include cover.yaml
