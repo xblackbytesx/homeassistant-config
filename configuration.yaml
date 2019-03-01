@@ -13,10 +13,10 @@ hassio:
 config:
 # discovery:
 history:
-logbook:
+# logbook:
 system_health:
 wake_on_lan:
-map:
+# map:
 sun:
 # cloud:
 
