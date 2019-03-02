@@ -127,6 +127,14 @@ speedtestdotnet:
     - download
     - upload
 
+camera:
+  - platform: synology
+    url: !secret synology_url
+    username: !secret synology_username
+    password: !secret synology_password
+    timeout: 15
+    verify_ssl: false
+
 plant: !include plants.yaml
 switch: !include switch.yaml
 cover: !include cover.yaml
