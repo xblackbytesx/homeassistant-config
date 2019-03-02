@@ -19,8 +19,8 @@
     - platform: time
       at: '23:00:00'
   action:
-    - service: switch.turn_off
-      entity_id: switch.power_socket_three
+    - service: homeassistant.turn_off
+      entity_id: light.dimmable_socket_two
     - service: notify.matrix_notify
       data:
         message: "I've Terminated the Night lights in the Large Bedroom."
