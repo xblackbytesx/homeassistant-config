@@ -2,20 +2,8 @@ title: Security
 icon: mdi:cctv
 cards:
   - type: picture-entity
-    title: Foscam1
-    entity: camera.foscam1
-    camera_image: camera.foscam1
-    show_info: true
-    tap_action: dialog
-  - type: picture-entity
-    title: XiaoFang1
-    entity: camera.xiaofang1
-    camera_image: camera.xiaofang1
-    show_info: true
-    tap_action: dialog
-  - type: picture-entity
-    title: XiaoFang2
-    entity: camera.xiaofang2
-    camera_image: camera.xiaofang2
+    title: Dafang
+    entity: camera.dafang
+    camera_image: camera.dafang
     show_info: true
     tap_action: dialog

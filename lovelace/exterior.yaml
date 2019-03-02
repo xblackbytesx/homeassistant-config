@@ -4,8 +4,8 @@ cards:
   - !include cards/exterior_groups.yaml
   - type: picture-entity
     title: Foscam1
-    entity: camera.foscam1
-    camera_image: camera.foscam1
+    entity: camera.dafang
+    camera_image: camera.dafang
     show_info: true
     tap_action: dialog
   - type: entities
