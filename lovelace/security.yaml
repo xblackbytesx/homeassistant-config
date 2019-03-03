@@ -9,7 +9,7 @@ cards:
     tap_action: dialog
   - type: picture-entity
     title: Dafang
-    entity: camera.xiaofang1
-    camera_image: camera.xiaofang1
+    entity: camera.xiaofang_1
+    camera_image: camera.xiaofang_1
     show_info: true
     tap_action: dialog
