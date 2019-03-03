@@ -33,3 +33,4 @@ themes
 node-red
 __pycache__
 custom_components
+lovelace-gen.py

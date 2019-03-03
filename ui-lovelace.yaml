@@ -82,7 +82,7 @@ views:
     image: /local/solar_array.jpg
     elements:
     - type: state-label
-      entity: sensor.current_power
+      entity: sensor.pv_power
       prefix: "Current Power: "
       style:
         height: 34px
@@ -96,7 +96,7 @@ views:
         border-bottom-right-radius: 6px
         box-sizing: border-box
     - type: icon
-      entity: sensor.current_power
+      entity: sensor.pv_power
       icon: mdi:white-balance-sunny
       style:
         transform: none
@@ -573,7 +573,7 @@ views:
     image: /local/solar_array.jpg
     elements:
     - type: state-label
-      entity: sensor.current_power
+      entity: sensor.pv_power
       prefix: "Current Power: "
       style:
         height: 34px
@@ -587,7 +587,7 @@ views:
         border-bottom-right-radius: 6px
         box-sizing: border-box
     - type: icon
-      entity: sensor.current_power
+      entity: sensor.pv_power
       icon: mdi:white-balance-sunny
       style:
         transform: none
