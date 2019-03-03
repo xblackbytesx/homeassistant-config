@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # Remove if exists
-rm -rf custom_compnents
+rm -rf custom_components
 rm -rf www/custom-lovelace
 rm www/tracker-card.js
 rm lovelace-gen.py
 
 # Fetch desired custom components
-mkdir -p custom_compnents/sensor
-wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater.py -O custom_compnents/custom_updater.py
-wget https://raw.githubusercontent.com/custom-components/sensor.radarr_upcoming_media/master/custom_components/radarr_upcoming_media/sensor.py -O custom_compnents/sensor/radarr_upcoming_media.py
-wget https://raw.githubusercontent.com/custom-components/sensor.sonarr_upcoming_media/master/custom_components/sonarr_upcoming_media/sensor.py -O custom_compnents/sensor/sonarr_upcoming_media.py
+mkdir -p custom_components/sensor
+wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater.py -O custom_components/custom_updater.py
+wget https://raw.githubusercontent.com/custom-components/sensor.radarr_upcoming_media/master/custom_components/radarr_upcoming_media/sensor.py -O custom_components/sensor/radarr_upcoming_media.py
+wget https://raw.githubusercontent.com/custom-components/sensor.sonarr_upcoming_media/master/custom_components/sonarr_upcoming_media/sensor.py -O custom_components/sensor/sonarr_upcoming_media.py
 
 # Fetch desired custom cards
 mkdir -p www/custom-lovelace/upcoming-media-card
