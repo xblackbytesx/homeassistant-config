@@ -2,7 +2,7 @@ type: picture-elements
 image: /local/solar_array.jpg
 elements:
   - type: state-label
-    entity: sensor.current_power
+    entity: sensor.pv_power
     prefix: "Current Power: "
     style:
       height: 34px
@@ -16,7 +16,7 @@ elements:
       border-bottom-right-radius: 6px
       box-sizing: border-box
   - type: icon
-    entity: sensor.current_power
+    entity: sensor.pv_power
     icon: mdi:white-balance-sunny
     style:
       transform: none
