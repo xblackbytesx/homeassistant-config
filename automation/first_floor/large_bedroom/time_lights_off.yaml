@@ -16,8 +16,12 @@
 
 - alias: "LB | Time | Night lights off"
   trigger:
-    - platform: time
-      at: '23:00:00'
+    platform: state
+    entity_id: light.dimmable_socket_two
+    to: 'on'
+    for:
+      hours: 1
+      minutes: 30
   action:
     - service: homeassistant.turn_off
       entity_id: light.dimmable_socket_two
