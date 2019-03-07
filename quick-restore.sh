@@ -21,3 +21,10 @@ wget https://raw.githubusercontent.com/ciotlosm/custom-lovelace/master/monster-c
 
 # Lovelace generator
 wget https://raw.githubusercontent.com/thomasloven/homeassistant-lovelace-gen/master/lovelace-gen.py
+
+# Git and Github setup
+mkdir -p ~/.ssh
+cp assets/git-config ~/.ssh/config
+cp assets/id-github-master ~/.ssh/id-github-master
+cp assets/git-config ~/.gitconfig
+chmod 600 ~/.ssh/config ~/.ssh/id-github-master

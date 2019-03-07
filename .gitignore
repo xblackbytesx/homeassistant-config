@@ -4,6 +4,7 @@
 *.crt
 *.key
 *.conf
+core.*
 www
 OZW_Log.txt
 home-assistant.log
@@ -34,3 +35,4 @@ node-red
 __pycache__
 custom_components
 lovelace-gen.py
+assets
