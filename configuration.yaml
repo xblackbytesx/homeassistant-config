@@ -11,11 +11,6 @@ homeassistant:
 
 hassio:
 config:
-
-# discovery:
-#   ignore:
-#     - yeelight
-
 history:
 # logbook:
 system_health:
@@ -23,6 +18,10 @@ wake_on_lan:
 # map:
 sun:
 # cloud:
+
+# discovery:
+#   ignore:
+#     - yeelight
 
 person:
   - name: !secret person_one_name
@@ -71,14 +70,6 @@ custom_updater:
   track:
     - cards
     - components
-
-panel_iframe:
-  sonarr:
-    title: 'Sonarr'
-    url: !secret sonarr_iframe_url
-  radarr:
-    title: 'Radarr'
-    url: !secret radarr_iframe_url
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
