@@ -19,9 +19,3 @@
     # # freq4but4
     # 0b11002b019c0be210010f70:
     #   name: dimmable_socket_four
-
-- platform: yeelight
-  devices:
-    10.0.221.37:
-      name: Ledstrip Black Cabinet
-      transition: 1000
