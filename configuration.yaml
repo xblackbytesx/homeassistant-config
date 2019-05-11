@@ -11,7 +11,11 @@ homeassistant:
 
 hassio:
 config:
+
 # discovery:
+#   ignore:
+#     - yeelight
+
 history:
 # logbook:
 system_health:
@@ -68,6 +72,14 @@ custom_updater:
     - cards
     - components
 
+panel_iframe:
+  sonarr:
+    title: 'Sonarr'
+    url: !secret sonarr_iframe_url
+  radarr:
+    title: 'Radarr'
+    url: !secret radarr_iframe_url
+
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
   intents:
@@ -104,6 +116,12 @@ cast:
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
+
+yeelight:
+  devices:
+    10.0.221.37:
+      name: Ledstrip Black Cabinet
+      transition: 1000
 
 transmission:
   host: !secret synology_ip
