@@ -1,0 +1,14 @@
+- alias: "MB | Time | Lights off"
+  trigger:
+    - platform: state
+      entity_id: light.master_bedroom
+      to: 'on'
+      for:
+        hours: 1
+        minutes: 00
+  action:
+    - service: homeassistant.turn_off
+      entity_id: light.master_bedroom
+    - service: notify.matrix_notify
+      data:
+        message: "Shame! You forgot the Master bedroom lights again!"
