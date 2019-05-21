@@ -16,9 +16,11 @@ wget https://raw.githubusercontent.com/custom-components/sensor.sonarr_upcoming_
 # Fetch desired custom cards
 mkdir -p www/custom-lovelace/upcoming-media-card
 mkdir -p www/custom-lovelace/monster-card
+mkdir -p www/custom-lovelace/lovelace-swipe-navigation
 wget https://raw.githubusercontent.com/custom-cards/tracker-card/master/tracker-card.js -O www/tracker-card.js
 wget https://raw.githubusercontent.com/custom-cards/upcoming-media-card/master/upcoming-media-card.js -O www/custom-lovelace/upcoming-media-card/upcoming-media-card.js
 wget https://raw.githubusercontent.com/ciotlosm/custom-lovelace/master/monster-card/monster-card.js -O www/custom-lovelace/monster-card/monster-card.js
+wget https://raw.githubusercontent.com/maykar/lovelace-swipe-navigation/master/lovelace-swipe-navigation.js -O www/custom-lovelace/lovelace-swipe-navigation/lovelace-swipe-navigation.js
 
 # Lovelace generator
 wget https://raw.githubusercontent.com/thomasloven/homeassistant-lovelace-gen/master/lovelace-gen.py
