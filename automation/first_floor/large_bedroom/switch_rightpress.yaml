@@ -19,4 +19,6 @@
     - service: homeassistant.turn_off
       entity_id: light.hue_bulb_large_bedroom
     - service: homeassistant.turn_off
-      entity_id: light.dimmable_socket_two
+      entity_id: light.ledstrip_large_bedroom
+    # - service: homeassistant.turn_off
+    #   entity_id: light.dimmable_socket_two

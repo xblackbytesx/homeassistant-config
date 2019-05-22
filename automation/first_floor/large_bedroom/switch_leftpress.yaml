@@ -10,8 +10,11 @@
         scene_name: "LB | Sleep"
     - service: light.turn_on
       data:
-        entity_id: light.dimmable_socket_two
-        brightness_pct: 30
+        entity_id: light.ledstrip_large_bedroom
+    # - service: light.turn_on
+    #   data:
+    #     entity_id: light.dimmable_socket_two
+    #     brightness_pct: 30
 
 
 - alias: LB | Duo switch | left | Off
@@ -23,4 +26,6 @@
     - service: homeassistant.turn_off
       entity_id: light.hue_bulb_large_bedroom
     - service: homeassistant.turn_off
-      entity_id: light.dimmable_socket_two
+      entity_id: light.ledstrip_large_bedroom
+    # - service: homeassistant.turn_off
+    #   entity_id: light.dimmable_socket_two

@@ -17,14 +17,16 @@
 - alias: "LB | Time | Night lights off"
   trigger:
     platform: state
-    entity_id: light.dimmable_socket_two
+    entity_id: light.ledstrip_large_bedroom
     to: 'on'
     for:
       hours: 1
       minutes: 30
   action:
     - service: homeassistant.turn_off
-      entity_id: light.dimmable_socket_two
+      entity_id: light.ledstrip_large_bedroom
+    # - service: homeassistant.turn_off
+    #   entity_id: light.dimmable_socket_two
     - service: notify.matrix_notify
       data:
         message: "I've Terminated the Night lights in the Large Bedroom."
