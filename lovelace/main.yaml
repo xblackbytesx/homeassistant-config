@@ -7,7 +7,7 @@ resources:
   type: js
 - url: /local/custom-lovelace/monster-card/monster-card.js?track=true
   type: js
-- url: /local/custom-lovelace/lovelace-swipe-navigation/lovelace-swipe-navigation.js?track=true
+- url: /local/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js?track=true
   type: js
 views:
   - !include home.yaml
