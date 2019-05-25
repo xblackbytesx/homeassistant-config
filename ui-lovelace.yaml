@@ -11,7 +11,7 @@ resources:
   type: js
 - url: /local/custom-lovelace/monster-card/monster-card.js?track=true
   type: js
-- url: /local/custom-lovelace/lovelace-swipe-navigation/lovelace-swipe-navigation.js?track=true
+- url: /local/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js?track=true
   type: js
 views:
 - title: Home
@@ -499,6 +499,7 @@ views:
       - light.hue_bulb_large_bedroom
       - light.tradfri_bulb_small_bedroom
       - light.innr_master_bedroom
+      - light.ledstrip_large_bedroom
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
