@@ -86,7 +86,7 @@ weather:
   - platform: darksky
     api_key: !secret dark_sky_api_key
 
-tts:
+google_translate:
   - platform: google
 
 hue:
