@@ -147,6 +147,21 @@ camera:
     timeout: 15
     verify_ssl: false
 
+alert:
+  front_door:
+    name: Front door open
+    message: Front door has been open for a while now, is this right?
+    done_message: Front door has been closed
+    entity_id: binary_sensor.front_door
+    state: 'on'
+    repeat:
+      - 5
+      - 10
+    can_acknowledge: true
+    notifiers:
+      - notify.matrix_notify
+
+
 plant: !include plants.yaml
 switch: !include switch.yaml
 cover: !include cover.yaml
