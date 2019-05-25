@@ -86,8 +86,8 @@ weather:
   - platform: darksky
     api_key: !secret dark_sky_api_key
 
-google_translate:
-  - platform: google
+tts:
+  - platform: google_translate
 
 hue:
   bridges:
