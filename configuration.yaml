@@ -159,8 +159,7 @@ alert:
       - 10
     can_acknowledge: true
     notifiers:
-      - notify.matrix_notify
-
+      - matrix_notify
 
 plant: !include plants.yaml
 switch: !include switch.yaml
