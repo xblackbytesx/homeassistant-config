@@ -11,6 +11,8 @@ resources:
   type: js
 - url: /local/custom-lovelace/lovelace-bar-card/bar-card.js?track=true
   type: js
+- url: /local/custom-lovelace/lovelace-card-tools/card-tools.js?track=true
+  type: js
 - url: /local/custom-lovelace/lovelace-fold-entity-row/fold-entity-row.js?track=true
   type: js
 views:
