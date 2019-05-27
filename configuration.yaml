@@ -148,7 +148,7 @@ camera:
     verify_ssl: false
 
 alert:
-  - front_door:
+  front_door:
     name: Front door open
     message: Front door has been open for a while now, is this right?
     done_message: Front door has been closed
@@ -161,7 +161,7 @@ alert:
     notifiers:
       - matrix_notify
 
-  - palm_tree:
+  palm_tree:
     name: The Palm tree (Sabal Minor) needs help!
     entity_id: plant.sabal_minor
     state: 'problem'
@@ -173,7 +173,7 @@ alert:
     notifiers:
       - matrix_notify
 
-  - monstera_plant:
+  monstera_plant:
     name: The Monstera (Monstera Deliciosa) needs help!
     entity_id: plant.monstera_deliciosa
     state: 'problem'
