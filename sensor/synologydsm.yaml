@@ -6,8 +6,11 @@
     - cpu_total_load
     - memory_real_usage
     - network_up
+    - network_down
     - disk_smart_status
     - disk_status
+    - disk_exceed_bad_sector_thr
+    - disk_below_remain_life_thr
     - volume_status
     - volume_size_total
     - volume_size_used
