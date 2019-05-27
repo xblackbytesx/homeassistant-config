@@ -12,7 +12,7 @@ cards:
       - type: custom:fold-entity-row
         head:
           type: section
-          label: Schijven
+          label: Disks
         open: false
         items:
           - type: custom:fold-entity-row
@@ -78,13 +78,13 @@ cards:
     show_icon: true
     icon: mdi:chip
   - type: custom:bar-card
-    title: Geheugen
+    title: Memory
     entity: sensor.memory_usage_real
     height: 32px
     show_icon: true
     icon: mdi:memory
   - type: custom:bar-card
-    title: Opslag
+    title: Storage
     entity: sensor.volume_used_volume_1
     height: 32px
     show_icon: true
