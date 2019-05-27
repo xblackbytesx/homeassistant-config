@@ -4,3 +4,4 @@ cards:
   - !include cards/speedtest.yaml
   - !include cards/transmission.yaml
   - !include cards/upcoming_media.yaml
+  - !include cards/synology_dsm.yaml

@@ -1,0 +1,41 @@
+front_door:
+  name: Front door open
+  message: Front door has been open for a while now, is this right?
+  done_message: Front door has been closed
+  entity_id: binary_sensor.front_door
+  state: 'on'
+  repeat:
+    - 5
+    - 10
+  can_acknowledge: true
+  skip_first: true
+  notifiers:
+    - matrix_notify
+
+# palm_tree:
+#   name: The Palm tree (Sabal Minor) needs help!
+#   entity_id: plant.sabal_minor
+#   state: 'problem'
+#   repeat:
+#     - 30
+#     - 480
+#   can_acknowledge: true
+#   skip_first: true
+#   message: "Plant {{ states.plant.sabal_minor }} needs help ({{ state_attr('plant.sabal_minor', 'problem') }})"
+#   done_message: The Palm tree is doing fine now
+#   notifiers:
+#     - matrix_notify
+#
+# monstera_plant:
+#   name: The Monstera (Monstera Deliciosa) needs help!
+#   entity_id: plant.monstera_deliciosa
+#   state: 'problem'
+#   repeat:
+#     - 30
+#     - 480
+#   can_acknowledge: true
+#   skip_first: true
+#   message: "Plant {{ states.plant.monstera_deliciosa }} needs help ({{ state_attr('plant.monstera_deliciosa', 'problem') }})"
+#   done_message: The Monstera is doing fine now
+#   notifiers:
+#     - matrix_notify
