@@ -17,7 +17,7 @@
     event_data:
       command: light_em_up
   action:
-    - service: switch.turn_on
+    - service: switch.turn_ion
       entity_id: switch.power_socket_one
     - service: switch.turn_on
       entity_id: switch.power_socket_two
@@ -125,7 +125,7 @@
         message: "As you wish! May the Sun shine freely!"
 
 
-- alias: 'Matrix | Cheapest local gas'
+- alias: 'Matrix | React to Cheapest local gas'
   trigger:
     platform: event
     event_type: matrix_command

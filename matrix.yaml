@@ -18,3 +18,5 @@ commands:
     name: cut_socket_three
   - word: reel_in_the_sunscreen
     name: reel_in_the_sunscreen
+  - expression: "Cheapest local gas"
+    name: show_gas_prices
