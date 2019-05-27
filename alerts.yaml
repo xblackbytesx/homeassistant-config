@@ -21,7 +21,7 @@ palm_tree:
     - 480
   can_acknowledge: true
   skip_first: true
-  message: "The Palm tree (Sabal Minor) needs some lovin'! \n Problem(s): {{ state_attr('plant.sabal_minor', 'problem') }}"
+  message: "The Palm tree (Sabal Minor) needs some lovin'! \nProblem(s): {{ state_attr('plant.sabal_minor', 'problem') }}"
   done_message: The Palm tree has returned to being happy as a pig in shit
   notifiers:
     - matrix_notify
@@ -35,7 +35,7 @@ monstera_plant:
     - 480
   can_acknowledge: true
   skip_first: true
-  message: "The Monstera (Monstera Deliciosa) needs help! \n Problem(s): {{ state_attr('plant.monstera_deliciosa', 'problem') }}"
+  message: "The Monstera (Monstera Deliciosa) needs help! \nProblem(s): {{ state_attr('plant.monstera_deliciosa', 'problem') }}"
   done_message: The Monstera sends his love and is fine now
   notifiers:
     - matrix_notify
