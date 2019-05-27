@@ -158,6 +158,7 @@ alert:
       - 5
       - 10
     can_acknowledge: true
+    skip_first: true
     notifiers:
       - matrix_notify
 
@@ -165,7 +166,9 @@ alert:
     name: The Palm tree (Sabal Minor) needs help!
     entity_id: plant.sabal_minor
     state: 'problem'
-    repeat: 30
+    repeat:
+      - 30
+      - 480
     can_acknowledge: true
     skip_first: true
     message: "Plant {{ states.plant.sabal_minor }} needs help ({{ state_attr('plant.sabal_minor', 'problem') }})"
@@ -177,7 +180,9 @@ alert:
     name: The Monstera (Monstera Deliciosa) needs help!
     entity_id: plant.monstera_deliciosa
     state: 'problem'
-    repeat: 30
+    repeat:
+      - 30
+      - 480
     can_acknowledge: true
     skip_first: true
     message: "Plant {{ states.plant.monstera_deliciosa }} needs help ({{ state_attr('plant.monstera_deliciosa', 'problem') }})"
