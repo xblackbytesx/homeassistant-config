@@ -134,4 +134,4 @@
   action:
     - service: notify.matrix_notify
       data:
-        message: "Toda's gas prices: \n Ti: {{ sensor.gas_station_1_euro95 }} \n Fi: {{ sensor.gas_station_2_euro95 }} \n Ta: {{ sensor.gas_station_3_euro95 }}"
+        message: "Today's gas prices: \nTi (E5): €{{ states('sensor.gas_station_1_euro95') }} \nFi (E5): €{{ states('sensor.gas_station_2_euro95') }} \nTa (E5): €{{ states('sensor.gas_station_3_euro95') }}"
