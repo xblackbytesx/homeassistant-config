@@ -146,4 +146,4 @@
   action:
     - service: notify.matrix_notify
       data:
-        message: "Today's yield: {{ states('sensor.daily_yield') }} \nTotal yield: {{ states('sensor.gas_station_2_euro95') }} \nTa (E5): €{{ states('sensor.total_yield') }}"
+        message: "Today's yield: {{ states('sensor.daily_yield') }} \nTotal yield: {{ states('sensor.total_yield') }}"
