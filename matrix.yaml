@@ -20,3 +20,5 @@ commands:
     name: reel_in_the_sunscreen
   - expression: "Cheapest local gas"
     name: show_gas_prices
+  - expression: "Show me the yield"
+    name: show_solar_yield

@@ -135,3 +135,15 @@
     - service: notify.matrix_notify
       data:
         message: "Today's gas prices: \nTi (E5): €{{ states('sensor.gas_station_1_euro95') }} \nFi (E5): €{{ states('sensor.gas_station_2_euro95') }} \nTa (E5): €{{ states('sensor.gas_station_3_euro95') }}"
+
+
+- alias: 'Matrix | React to Show me the yield'
+  trigger:
+    platform: event
+    event_type: matrix_command
+    event_data:
+      command: show_solar_yield
+  action:
+    - service: notify.matrix_notify
+      data:
+        message: "Today's yield: {{ states('sensor.daily_yield') }} \nTotal yield: {{ states('sensor.gas_station_2_euro95') }} \nTa (E5): €{{ states('sensor.total_yield') }}"
