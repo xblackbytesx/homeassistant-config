@@ -2,12 +2,6 @@ title: Exterior
 icon: mdi:tree
 cards:
   - !include cards/exterior_groups.yaml
-  - type: picture-entity
-    title: Foscam1
-    entity: camera.dafang
-    camera_image: camera.dafang
-    show_info: true
-    tap_action: dialog
   - type: entities
     title: Exterior switches
     show_header_toggle: true
