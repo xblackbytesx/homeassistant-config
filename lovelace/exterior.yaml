@@ -31,6 +31,12 @@ cards:
       entities:
         - light.front_porch
         - light.backyard
+  - type: picture-entity
+    title: Dafang
+    entity: camera.xiaofang_2
+    camera_image: camera.xiaofang_2
+    show_info: true
+    tap_action: dialog
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
