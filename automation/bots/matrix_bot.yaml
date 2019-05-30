@@ -125,6 +125,34 @@
         message: "As you wish! May the Sun shine freely!"
 
 
+- alias: 'Matrix | React to Attic shutters up'
+  trigger:
+    platform: event
+    event_type: matrix_command
+    event_data:
+      command: attic_shutters_up
+  action:
+    - service: cover.open_cover
+      entity_id: cover.attic_shutters
+    - service: notify.matrix_notify
+      data:
+        message: "Attic covers have opened!"
+
+
+- alias: 'Matrix | React to Attic shutters down'
+  trigger:
+    platform: event
+    event_type: matrix_command
+    event_data:
+      command: attic_shutters_down
+  action:
+    - service: cover.close_cover
+      entity_id: cover.attic_shutters
+    - service: notify.matrix_notify
+      data:
+        message: "Attic covers are now closed!"
+
+
 - alias: 'Matrix | React to Cheapest local gas'
   trigger:
     platform: event

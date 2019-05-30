@@ -18,6 +18,10 @@ commands:
     name: cut_socket_three
   - word: reel_in_the_sunscreen
     name: reel_in_the_sunscreen
+  - expression: "Attic shutters up"
+    name: attic_shutters_up
+  - expression: "Attic shutters down"
+    name: attic_shutters_down
   - expression: "Cheapest local gas"
     name: show_gas_prices
   - expression: "Show me the yield"
