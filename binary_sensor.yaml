@@ -22,3 +22,20 @@
   name: Working person two
   country: NL
   workdays: !secret person_two_workdays
+
+- platform: template
+  sensors:
+    sa_tv_media_playing:
+      value_template: >-
+        {{ is_state('media_player.living_room', 'playing')
+           or is_state('media_player.kodi', 'playing')
+           or is_state('input_boolean.sa_media_status_override', 'on') }}
+
+    sa_motion_detected:
+      value_template: >-
+        {{ is_state('sensor.motion_in_sitting_area', '1')
+           or is_state('binary_sensor.motion_sensor_sa', 'on') }}
+
+    sa_dark_enough:
+      value_template: >-
+          {{ sensor.illumination_in_sitting_area < 18 }}

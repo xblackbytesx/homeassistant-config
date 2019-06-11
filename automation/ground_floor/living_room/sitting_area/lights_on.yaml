@@ -1,13 +1,10 @@
 - alias: SA | No Media
   trigger:
     - platform: state
-      entity_id: sensor.motion_in_sitting_area
-      to: '1'
-    - platform: state
-      entity_id: binary_sensor.motion_sensor_sa
+      entity_id: binary_sensor.sa_motion_detected
       to: 'on'
     - platform: state
-      entity_id: input_boolean.sa_tv_media_playing
+      entity_id: binary_sensor.sa_tv_media_playing
       to: 'off'
     - platform: time_pattern
       minutes: '/5'
@@ -15,62 +12,15 @@
   condition:
     condition: and
     conditions:
-      - condition: or
-        conditions:
-          - condition: state
-            entity_id: sensor.motion_in_sitting_area
-            state: '1'
-          - condition: state
-            entity_id: binary_sensor.motion_sensor_sa
-            state: 'on'
       - condition: state
-        entity_id: sensor.motion_in_sitting_area
-        state: '1'
-      - condition: state
-        entity_id: input_boolean.sa_meets_darkness_cutoff
+        entity_id: binary_sensor.sa_motion_detected
         state: 'on'
       - condition: state
-        entity_id: input_boolean.sa_tv_media_playing
+        entity_id: binary_sensor.sa_dark_enough
+        state: 'on'
+      - condition: state
+        entity_id: binary_sensor.sa_tv_media_playing
         state: 'off'
-  action:
-    service: script.turn_on
-    entity_id: script.scene_not_watching_tv
-
-
-- alias: SA | Media Playing | State one
-  trigger:
-    - platform: state
-      entity_id: sensor.motion_in_sitting_area
-      to: '1'
-    - platform: state
-      entity_id: binary_sensor.motion_sensor_sa
-      to: 'on'
-    - platform: state
-      entity_id: input_boolean.sa_tv_media_playing
-      to: 'on'
-    - platform: time_pattern
-      minutes: '/5'
-      seconds: 00
-  condition:
-    condition: and
-    conditions:
-      - condition: or
-        conditions:
-          - condition: state
-            entity_id: sensor.motion_in_sitting_area
-            state: '1'
-          - condition: state
-            entity_id: binary_sensor.motion_sensor_sa
-            state: 'on'
-      - condition: state
-        entity_id: input_boolean.sa_meets_darkness_cutoff
-        state: 'on'
-      - condition: state
-        entity_id: input_boolean.sa_tv_media_playing
-        state: 'on'
-      - condition: time
-        before: '20:00:00'
-        after: '05:00:00'
   action:
     service: script.turn_on
     entity_id: script.scene_not_watching_tv
@@ -79,13 +29,10 @@
 - alias: SA | Media Playing | State two
   trigger:
     - platform: state
-      entity_id: sensor.motion_in_sitting_area
-      to: '1'
-    - platform: state
-      entity_id: binary_sensor.motion_sensor_sa
+      entity_id: binary_sensor.sa_motion_detected
       to: 'on'
     - platform: state
-      entity_id: input_boolean.sa_tv_media_playing
+      entity_id: binary_sensor.sa_tv_media_playing
       to: 'on'
     - platform: time_pattern
       minutes: '/5'
@@ -93,16 +40,11 @@
   condition:
     condition: and
     conditions:
-      - condition: or
-        conditions:
-          - condition: state
-            entity_id: sensor.motion_in_sitting_area
-            state: '1'
-          - condition: state
-            entity_id: binary_sensor.motion_sensor_sa
-            state: 'on'
       - condition: state
-        entity_id: input_boolean.sa_meets_darkness_cutoff
+        entity_id: binary_sensor.sa_motion_detected
+        state: 'on'
+      - condition: state
+        entity_id: binary_sensor.sa_dark_enough
         state: 'on'
       - condition: state
         entity_id: input_boolean.sa_tv_media_playing

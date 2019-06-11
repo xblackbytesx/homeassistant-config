@@ -6,17 +6,9 @@
   condition:
     condition: or
     conditions:
-      - condition: and
-        conditions:
-          - condition: state
-            entity_id: sensor.motion_in_sitting_area
-            state: '0'
-          - condition: state
-            entity_id: binary_sensor.motion_sensor_sa
-            state: 'off'
       - condition: state
-        entity_id: sensor.motion_in_sitting_area
-        state: '0'
+        entity_id: binary_sensor.sa_motion_detected
+        state: 'off'
       - condition: state
         entity_id: input_boolean.sa_meets_darkness_cutoff
         state: 'off'
