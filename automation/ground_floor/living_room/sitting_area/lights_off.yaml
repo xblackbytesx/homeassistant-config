@@ -10,7 +10,7 @@
         entity_id: binary_sensor.sa_motion_detected
         state: 'off'
       - condition: state
-        entity_id: input_boolean.sa_meets_darkness_cutoff
+        entity_id: binary_sensor.sa_dark_enough
         state: 'off'
   action:
     - service: homeassistant.turn_off
