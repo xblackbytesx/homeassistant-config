@@ -1,8 +1,8 @@
 - alias: Kitchen | Time | Lights on
   trigger:
     - platform: state
-      entity_id: sensor.motion_in_kitchen
-      to: '1'
+      entity_id: binary_sensor.kitchen_motion_detected
+      to: 'on'
     - platform: time_pattern
       minutes: '/5'
       seconds: 00
@@ -10,10 +10,10 @@
     condition: and
     conditions:
       - condition: state
-        entity_id: sensor.motion_in_kitchen
-        state: '1'
+        entity_id: binary_sensor.kitchen_motion_detected
+        state: 'on'
       - condition: state
-        entity_id: input_boolean.kitchen_meets_darkness_cutoff
+        entity_id: binary_sensor.kitchen_dark_enough
         state: 'on'
   action:
     - service: hue.hue_activate_scene

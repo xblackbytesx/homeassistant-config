@@ -1,11 +1,11 @@
 - alias: CO | Motion | Lights on
   trigger:
     platform: state
-    entity_id: sensor.motion_in_corridor
-    to: '1'
+    entity_id: binary_sensor.co_motion_detected
+    to: 'on'
   condition:
     condition: state
-    entity_id: input_boolean.co_meets_darkness_cutoff
+    entity_id: binary_sensor.co_dark_enough
     state: 'on'
   action:
     - service: hue.hue_activate_scene
