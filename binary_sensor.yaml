@@ -33,19 +33,12 @@
 
     sa_motion_detected:
       value_template: >-
-        {% if is_state('sensor.motion_in_sitting_area', '1') and is_state('binary_sensor.motion_sensor_sa', 'off') %}
-          on
-        {% elif is_state('sensor.motion_in_sitting_area', '0') and is_state('binary_sensor.motion_sensor_sa', 'on') %}
-          on
-        {% elif is_state('sensor.motion_in_sitting_area', '1') and is_state('binary_sensor.motion_sensor_sa', 'on') %}
-          on
-        {% else %}
-          off
-        {% endif %}
+        {{ is_state('sensor.motion_in_sitting_area', '1')
+           or is_state('binary_sensor.motion_sensor_sa', 'on') }}
 
     sa_dark_enough:
       value_template: >-
-          {{ sensor.illumination_in_sitting_area < 18 }}
+          {{ sensor.illumination_in_sitting_area|float < 18 }}
 
     kitchen_motion_detected:
       value_template: >-
@@ -53,7 +46,7 @@
 
     kitchen_dark_enough:
       value_template: >-
-          {{ sensor.illumination_in_kitchen < 25 }}
+          {{ sensor.illumination_in_kitchen|float < 25 }}
 
     hw_motion_detected:
       value_template: >-
@@ -62,7 +55,7 @@
 
     hw_dark_enough:
       value_template: >-
-          {{ sensor.illumination_in_hallway_stairs < 18 }}
+          {{ sensor.illumination_in_hallway_stairs|float < 18 }}
 
     co_motion_detected:
       value_template: >-
@@ -70,4 +63,4 @@
 
     co_dark_enough:
       value_template: >-
-          {{ sensor.illumination_in_corridor < 18 }}
+          {{ sensor.illumination_in_corridor|float < 18 }}
