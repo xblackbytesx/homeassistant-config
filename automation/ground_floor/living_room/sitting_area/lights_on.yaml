@@ -47,7 +47,7 @@
         entity_id: binary_sensor.sa_dark_enough
         state: 'on'
       - condition: state
-        entity_id: input_boolean.sa_tv_media_playing
+        entity_id: binary_sensor.sa_tv_media_playing
         state: 'on'
       - condition: time
         after: '20:00:00'
