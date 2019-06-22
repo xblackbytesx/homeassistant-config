@@ -12,8 +12,8 @@
 
 
 - platform: miflora
-  mac: !secret musa_basjoo_miflora_mac
-  name: Musa Basjoo
+  mac: !secret cocos_nucifera_miflora_mac
+  name: Cocos Nucifera
   force_update: false
   median: 3
   monitored_conditions:

@@ -1,7 +1,7 @@
-musa_basjoo:
+cocos_nucifera:
   sensors:
-    moisture: sensor.musa_basjoo_moisture
-    temperature: sensor.musa_basjoo_temperature
-    conductivity: sensor.musa_basjoo_conductivity
-    brightness: sensor.musa_basjoo_light_intensity
+    moisture: sensor.cocos_nucifera_moisture
+    temperature: sensor.cocos_nucifera_temperature
+    conductivity: sensor.cocos_nucifera_conductivity
+    brightness: sensor.cocos_nucifera_light_intensity
   min_moisture: 20
