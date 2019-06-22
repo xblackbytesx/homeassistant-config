@@ -64,3 +64,7 @@
     co_dark_enough:
       value_template: >-
           {{ states('sensor.illumination_in_corridor')|float < 18 }}
+
+    attic_motion_detected:
+      value_template: >-
+        {{ is_state('binary_sensor.motion_sensor_attic', 'on') }}
