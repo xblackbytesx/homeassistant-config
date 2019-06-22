@@ -134,9 +134,6 @@
   action:
     - service: cover.open_cover
       entity_id: cover.attic_shutters
-    - service: notify.matrix_notify
-      data:
-        message: "Attic covers have opened!"
 
 
 - alias: 'Matrix | React to Attic shutters down'
@@ -148,9 +145,6 @@
   action:
     - service: cover.close_cover
       entity_id: cover.attic_shutters
-    - service: notify.matrix_notify
-      data:
-        message: "Attic covers are now closed!"
 
 
 - alias: 'Matrix | React to Cheapest local gas'
@@ -175,3 +169,17 @@
     - service: notify.matrix_notify
       data:
         message: "Today's yield: {{ states('sensor.daily_yield') }} Wh \nTotal yield: {{ states('sensor.total_yield') }} kWh"
+
+
+- alias: 'Matrix | React to Confirmed front-door is closed'
+  trigger:
+    platform: event
+    event_type: matrix_command
+    event_data:
+      command: front_door_is_closed
+  action:
+    - service: switch.turn_off
+      entity_id: switch.sun_screen
+    - service: notify.matrix_notify
+      data:
+        message: "Manually acknowledged front-door is closed"

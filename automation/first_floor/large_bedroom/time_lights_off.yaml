@@ -9,9 +9,9 @@
   action:
     - service: homeassistant.turn_off
       entity_id: light.large_bedroom
-    - service: notify.matrix_notify
-      data:
-        message: "I've Terminated the lights in the Large Bedroom."
+    # - service: notify.matrix_notify
+    #   data:
+    #     message: "I've Terminated the lights in the Large Bedroom."
 
 
 - alias: "LB | Time | Night lights off"
@@ -27,6 +27,6 @@
       entity_id: light.ledstrip_large_bedroom
     # - service: homeassistant.turn_off
     #   entity_id: light.dimmable_socket_two
-    - service: notify.matrix_notify
-      data:
-        message: "I've Terminated the Night lights in the Large Bedroom."
+    # - service: notify.matrix_notify
+    #   data:
+    #     message: "I've Terminated the Night lights in the Large Bedroom."

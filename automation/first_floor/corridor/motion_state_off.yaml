@@ -1,8 +1,8 @@
 - alias: CO | Motion | Lights off
   trigger:
     platform: state
-    entity_id: sensor.motion_in_corridor
-    to: '0'
+    entity_id: binary_sensor.co_motion_detected
+    to: 'off'
     for:
       minutes: 0
   action:

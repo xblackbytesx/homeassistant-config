@@ -13,7 +13,7 @@ entities:
     icon: mdi:battery-80
   - entity: sensor.monstera_deliciosa_battery
     icon: mdi:battery-80
-  - entity: sensor.musa_basjoo_battery
+  - entity: sensor.cocos_nucifera_battery
     icon: mdi:battery-80
   - entity: sensor.sabal_minor_battery
     icon: mdi:battery-80

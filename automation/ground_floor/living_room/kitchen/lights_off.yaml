@@ -7,10 +7,10 @@
     condition: or
     conditions:
       - condition: state
-        entity_id: sensor.motion_in_kitchen
-        state: '0'
+        entity_id: binary_sensor.kitchen_motion_detected
+        state: 'off'
       - condition: state
-        entity_id: input_boolean.kitchen_meets_darkness_cutoff
+        entity_id: binary_sensor.kitchen_dark_enough
         state: 'off'
   action:
     service: homeassistant.turn_off
