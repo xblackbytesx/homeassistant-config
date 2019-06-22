@@ -414,6 +414,18 @@ views:
       - light.hue_bulb_hallway
       - light.dimmable_socket_one
       - light.dimmable_socket_two
+  - type: picture-entity
+    title: Dafang
+    entity: camera.dafang
+    camera_image: camera.dafang
+    show_info: true
+    tap_action: dialog
+  - type: picture-entity
+    title: Dafang
+    entity: camera.xiaofang_1
+    camera_image: camera.xiaofang_1
+    show_info: true
+    tap_action: dialog
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -564,12 +576,6 @@ views:
     - type: light
       entity: light.exterior
       name: Exterior
-  - type: picture-entity
-    title: Foscam1
-    entity: camera.dafang
-    camera_image: camera.dafang
-    show_info: true
-    tap_action: dialog
   - type: entities
     title: Exterior switches
     show_header_toggle: true
@@ -680,6 +686,12 @@ views:
       entities:
       - light.front_porch
       - light.backyard
+  - type: picture-entity
+    title: Dafang
+    entity: camera.xiaofang_2
+    camera_image: camera.xiaofang_2
+    show_info: true
+    tap_action: dialog
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -777,6 +789,12 @@ views:
     title: Dafang
     entity: camera.xiaofang_1
     camera_image: camera.xiaofang_1
+    show_info: true
+    tap_action: dialog
+  - type: picture-entity
+    title: Dafang
+    entity: camera.xiaofang_2
+    camera_image: camera.xiaofang_2
     show_info: true
     tap_action: dialog
 - title: Network
