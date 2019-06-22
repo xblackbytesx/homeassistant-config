@@ -38,7 +38,7 @@
 
     sa_dark_enough:
       value_template: >-
-          {{ sensor.illumination_in_sitting_area|float < 18 }}
+          {{ states('sensor.illumination_in_sitting_area')|float < 18 }}
 
     kitchen_motion_detected:
       value_template: >-
@@ -46,7 +46,7 @@
 
     kitchen_dark_enough:
       value_template: >-
-          {{ sensor.illumination_in_kitchen|float < 25 }}
+          {{ states('sensor.illumination_in_kitchen')|float < 25 }}
 
     hw_motion_detected:
       value_template: >-
@@ -55,7 +55,7 @@
 
     hw_dark_enough:
       value_template: >-
-          {{ sensor.illumination_in_hallway_stairs|float < 18 }}
+          {{ states('sensor.illumination_in_hallway_stairs')|float < 18 }}
 
     co_motion_detected:
       value_template: >-
@@ -63,4 +63,4 @@
 
     co_dark_enough:
       value_template: >-
-          {{ sensor.illumination_in_corridor|float < 18 }}
+          {{ states('sensor.illumination_in_corridor')|float < 18 }}
