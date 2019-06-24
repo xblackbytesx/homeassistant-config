@@ -35,7 +35,7 @@ cocos_nucifera:
     - 480
   can_acknowledge: true
   skip_first: true
-  message: "The Palm tree (Sabal Minor) has a complaint! \nProblem(s): {{ state_attr('plant.cocos_nucifera', 'problem') }}"
+  message: "The Coconut Palm tree (Cocos Nucifera) has a complaint! \nProblem(s): {{ state_attr('plant.cocos_nucifera', 'problem') }}"
   done_message: The Coconut Palm tree is now no longer sad and will flourish
   notifiers:
     - matrix_notify
