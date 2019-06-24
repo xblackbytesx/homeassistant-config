@@ -26,6 +26,20 @@ palm_tree:
   notifiers:
     - matrix_notify
 
+cocos_nucifera:
+  name: The Coconut Palm tree (Cocos Nucifera) has a complaint!
+  entity_id: plant.cocos_nucifera
+  state: 'problem'
+  repeat:
+    - 30
+    - 480
+  can_acknowledge: true
+  skip_first: true
+  message: "The Palm tree (Sabal Minor) has a complaint! \nProblem(s): {{ state_attr('plant.cocos_nucifera', 'problem') }}"
+  done_message: The Coconut Palm tree is now no longer sad and will flourish
+  notifiers:
+    - matrix_notify
+
 monstera_plant:
   name: The Monstera (Monstera Deliciosa) needs help!
   entity_id: plant.monstera_deliciosa
