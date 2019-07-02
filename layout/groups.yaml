@@ -244,8 +244,8 @@ living_room_climate:
 first_floor_climate:
   name: First floor climate
   entities:
-    - sensor.temperature_in_corridor
-    - sensor.illumination_in_corridor
+    - sensor.hue_motion_sensor_corridor_temperature
+    - sensor.hue_motion_sensor_corridor_light_level
 
 weather:
   name: Weather

@@ -535,8 +535,8 @@ views:
     title: First floor climate
     show_header_toggle: true
     entities:
-    - sensor.temperature_in_corridor
-    - sensor.illumination_in_corridor
+    - sensor.hue_motion_sensor_corridor_temperature
+    - sensor.hue_motion_sensor_corridor_light_level
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
