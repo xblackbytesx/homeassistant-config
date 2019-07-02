@@ -33,37 +33,37 @@
 
     sa_motion_detected:
       value_template: >-
-        {{ is_state('sensor.motion_in_sitting_area', '1')
+        {{ is_state('binary_sensor.hue_motion_sensor_sitting_area_motion', 'on')
            or is_state('binary_sensor.motion_sensor_sa', 'on') }}
 
     sa_dark_enough:
       value_template: >-
-          {{ states('sensor.illumination_in_sitting_area')|float < 18 }}
+          {{ states('sensor.hue_motion_sensor_sitting_area_light_level')|float < 18 }}
 
     kitchen_motion_detected:
       value_template: >-
-        {{ is_state('sensor.motion_in_kitchen', '1') }}
+        {{ is_state('binary_sensor.hue_motion_sensor_kitchen_motion', 'on') }}
 
     kitchen_dark_enough:
       value_template: >-
-          {{ states('sensor.illumination_in_kitchen')|float < 25 }}
+          {{ states('sensor.hue_motion_sensor_kitchen_light_level')|float < 25 }}
 
     hw_motion_detected:
       value_template: >-
-        {{ is_state('sensor.motion_in_hallway_door', '1')
-           or is_state('sensor.motion_in_hallway_stairs', '1') }}
+        {{ is_state('binary_sensor.hue_motion_sensor_hallway_door_motion', 'on')
+           or is_state('binary_sensor.hue_motion_sensor_hallway_stairs_motion', 'on') }}
 
     hw_dark_enough:
       value_template: >-
-          {{ states('sensor.illumination_in_hallway_stairs')|float < 18 }}
+          {{ states('sensor.hue_motion_sensor_hallway_stairs_light_level')|float < 18 }}
 
     co_motion_detected:
       value_template: >-
-        {{ is_state('sensor.motion_in_corridor', '1') }}
+        {{ is_state(' binary_sensor.hue_motion_sensor_corridor_motion', 'on') }}
 
     co_dark_enough:
       value_template: >-
-          {{ states('sensor.illumination_in_corridor')|float < 18 }}
+          {{ states('sensor.hue_motion_sensor_corridor_light_level')|float < 18 }}
 
     attic_motion_detected:
       value_template: >-

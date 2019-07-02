@@ -1101,15 +1101,15 @@ views:
   - type: entities
     title: Battery status
     entities:
-    - entity: sensor.motion_hallway_door_battery_status
+    - entity: sensor.motion_hallway_door_battery_level
       icon: mdi:battery-80
-    - entity: sensor.motion_hallway_stairs_battery_status
+    - entity: sensor.motion_hallway_stairs_battery_level
       icon: mdi:battery-80
-    - entity: sensor.motion_sitting_area_battery_status
+    - entity: sensor.motion_sitting_area_battery_level
       icon: mdi:battery-80
-    - entity: sensor.motion_kitchen_battery_status
+    - entity: sensor.motion_kitchen_battery_level
       icon: mdi:battery-80
-    - entity: sensor.motion_corridor_battery_status
+    - entity: sensor.motion_corridor_battery_level
       icon: mdi:battery-80
     - entity: sensor.monstera_deliciosa_battery
       icon: mdi:battery-80
