@@ -41,33 +41,97 @@ views:
         "not_home": /local/avatars/lois_off.gif
   - type: entity-filter
     entities:
-    - entity: sensor.motion_in_hallway_stairs
-      name: Hallway/Stairs
+    - entity: binary_sensor.hw_motion_detected
+      name: Hallway
       icon: mdi:run
-    - entity: sensor.motion_in_hallway_door
-      name: Hallway/Door
-      icon: mdi:run
-    - entity: sensor.motion_in_sitting_area
+    - entity: binary_sensor.sa_motion_detected
       name: Sitting Area
       icon: mdi:run
-    - entity: binary_sensor.motion_sensor_sa
-      name: Sitting Area 2
-      icon: mdi:run
-    - entity: sensor.motion_in_kitchen
+    - entity: binary_sensor.kitchen_motion_detected
       name: Kitchen
       icon: mdi:run
-    - entity: sensor.motion_in_corridor
+    - entity: binary_sensor.co_motion_detected
       name: Corridor
       icon: mdi:run
-    - entity: binary_sensor.motion_sensor_attic
+    - entity: binary_sensor.attic_motion_detected
       name: Attic
       icon: mdi:run
     state_filter:
-    - '1'
     - 'on'
     card:
       type: glance
       title: Motion detected
+
+
+# type: picture-elements
+# image: /local/floorplan_ground_floor.jpg
+# elements:
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_bulb_hallway
+#     style:
+#       top: 25%
+#       left: 38%
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_iris_tv_cabinet
+#     style:
+#       bottom: 12%
+#       right: 8%
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_candle_salt_lamp
+#     style:
+#       bottom: 12%
+#       right: 25%
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_go_closet_l
+#     style:
+#       top: 22%
+#       right: 25%
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_go_closet_r
+#     style:
+#       top: 25%
+#       right: 17%
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_bulb_standing_lamp
+#     style:
+#       top: 23%
+#       right: 32.6%
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_bulb_kitchen_table_r
+#     style:
+#       bottom: 16%
+#       left: 31%
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_bulb_kitchen_table_l
+#     style:
+#       bottom: 16%
+#       left: 23.5%
+#   - type: state-label
+#     entity: sensor.living_room_thermostat_temperature
+#     style:
+#       top: 0
+#       left: 0
+#       background: rgba(0,0,0,.5)
+#       transform: inherit
+#       border-bottom-right-radius: 6px
+#       font-weight: bold
+#       font-size: small
   - type: entities
     entities:
     - switch.beamer_screen
