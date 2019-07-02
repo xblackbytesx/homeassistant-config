@@ -6,7 +6,7 @@ cards:
     title: First floor climate
     show_header_toggle: true
     entities:
-      - sensor.temperature_in_corridor
+      - sensor.hue_motion_sensor_corridor_temperature
       - sensor.illumination_in_corridor
   - type: conditional
     conditions:
