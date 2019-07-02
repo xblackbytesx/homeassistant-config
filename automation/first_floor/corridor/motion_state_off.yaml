@@ -4,7 +4,7 @@
     entity_id: binary_sensor.co_motion_detected
     to: 'off'
     for:
-      minutes: 0
+      minutes: 5
   action:
     - service: homeassistant.turn_off
       entity_id: light.corridor
