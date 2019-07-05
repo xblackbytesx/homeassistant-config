@@ -45,6 +45,7 @@ cards:
         - light.sitting_area
         - light.ledstrip_tv_cabinet
         - light.ledstrip_black_cabinet
+        - light.ledstrip_kitchen_cabinet
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
