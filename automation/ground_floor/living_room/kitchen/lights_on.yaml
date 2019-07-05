@@ -20,3 +20,8 @@
       data:
         group_name: "Kitchen"
         scene_name: "Kitchen | Relax"
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_kitchen_cabinet
+        rgb_color: [ 0, 7, 8 ]
+        brightness: 8
