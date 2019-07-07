@@ -445,6 +445,7 @@ views:
       - light.sitting_area
       - light.ledstrip_tv_cabinet
       - light.ledstrip_black_cabinet
+      - light.ledstrip_kitchen_cabinet
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -476,6 +477,7 @@ views:
       - light.hue_go_closet_r
       - light.ledstrip_tv_cabinet
       - light.ledstrip_black_cabinet
+      - light.ledstrip_kitchen_cabinet
       - light.hue_bulb_hallway
       - light.dimmable_socket_one
       - light.dimmable_socket_two
@@ -537,7 +539,7 @@ views:
     show_header_toggle: true
     entities:
     - sensor.hue_motion_sensor_corridor_temperature
-    - sensor.hue_motion_sensor_corridor_light_level
+    - sensor.illumination_in_corridor
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
