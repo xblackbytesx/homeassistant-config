@@ -14,3 +14,8 @@ scene_watching_tv:
         entity_id: light.ledstrip_black_cabinet
         rgb_color: [ 8, 0, 0 ]
         brightness: 8
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_kitchen_cabinet
+        rgb_color: [ 8, 0, 0 ]
+        brightness: 8

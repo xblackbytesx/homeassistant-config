@@ -31,6 +31,7 @@ cards:
         - light.sitting_area
         - light.ledstrip_tv_cabinet
         - light.ledstrip_black_cabinet
+        - light.ledstrip_kitchen_cabinet
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
@@ -62,6 +63,7 @@ cards:
         - light.hue_go_closet_r
         - light.ledstrip_tv_cabinet
         - light.ledstrip_black_cabinet
+        - light.ledstrip_kitchen_cabinet
         - light.hue_bulb_hallway
         - light.dimmable_socket_one
         - light.dimmable_socket_two
