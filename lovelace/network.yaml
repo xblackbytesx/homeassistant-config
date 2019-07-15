@@ -5,8 +5,7 @@ cards:
   - !include cards/transmission.yaml
   - !include cards/upcoming_media.yaml
   - !include cards/synology_dsm.yaml
-  - platform: command_line
-    name: CPU Temperature
-    command: "cat /sys/class/thermal/thermal_zone0/temp"
-    unit_of_measurement: "°C"
-    value_template: '{{ value | multiply(0.001) | round(1) }}'
+  - type: entities
+    title: CPU Temperature
+    entities:
+      - sensor.cpu_temperature
