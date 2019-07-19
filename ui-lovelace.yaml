@@ -843,6 +843,8 @@ views:
     entity: media_player.living_room
   - type: media-control
     entity: media_player.living_room_audio
+  - type: media-control
+    entity: media_player.playstation_4
 - title: Security
   icon: mdi:cctv
   cards:
@@ -1004,6 +1006,10 @@ views:
         name: CPU
       - entity: sensor.memory_usage_real
         title: Geheugen
+  - type: entities
+    title: CPU Temperature
+    entities:
+    - sensor.cpu_temperature
 - title: automation_view
   icon: mdi:robot
   cards:
