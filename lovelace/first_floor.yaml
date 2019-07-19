@@ -7,7 +7,6 @@ cards:
     show_header_toggle: true
     entities:
       - sensor.hue_motion_sensor_corridor_temperature
-      - sensor.illumination_in_corridor
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
