@@ -5,3 +5,5 @@
   action:
     - service: homeassistant.turn_off
       entity_id: light.exterior
+    - service: switch.turn_off
+      entity_id: switch.power_socket_three

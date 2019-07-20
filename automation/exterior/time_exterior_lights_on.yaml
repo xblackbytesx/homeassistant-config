@@ -1,9 +1,0 @@
-- alias: "EX | Time | Lights on"
-  trigger:
-    - platform: time
-      at: '17:30:00'
-  action:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: "Exterior"
-        scene_name: "EX | Relax"
