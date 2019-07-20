@@ -539,7 +539,6 @@ views:
     show_header_toggle: true
     entities:
     - sensor.hue_motion_sensor_corridor_temperature
-    - sensor.illumination_in_corridor
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -911,11 +910,11 @@ views:
       title: Synology
       show_header_toggle: false
       entities:
-      - sensor.network_down
-      - sensor.network_up
-      - sensor.total_size_volume_1
-      - sensor.used_space_volume_1
-      - sensor.status_volume_1
+      - sensor.synology_dsm_network_down
+      - sensor.synology_dsm_network_up
+      - sensor.synology_dsm_total_size_volume_1
+      - sensor.synology_dsm_used_space_volume_1
+      - sensor.synology_dsm_status_volume_1
       - type: custom:fold-entity-row
         head:
           type: section
@@ -928,13 +927,13 @@ views:
             label: /dev/sda
           open: true
           items:
-          - entity: sensor.status_sda
+          - entity: sensor.synology_dsm_status_sda
             name: Status
-          - entity: sensor.status_smart_sda
+          - entity: sensor.synology_dsm_status_smart_sda
             name: S.M.A.R.T.
-          - entity: sensor.exceeded_max_bad_sectors_sda
+          - entity: sensor.synology_dsm_exceeded_max_bad_sectors_sda
             name: Bad sectors
-          - entity: sensor.below_min_remaining_life_sda
+          - entity: sensor.synology_dsm_below_min_remaining_life_sda
             name: Lifetime warning
         - type: custom:fold-entity-row
           head:
@@ -942,13 +941,13 @@ views:
             label: /dev/sdb
           open: true
           items:
-          - entity: sensor.status_sdb
+          - entity: sensor.synology_dsm_status_sdb
             name: Status
-          - entity: sensor.status_smart_sdb
+          - entity: sensor.synology_dsm_status_smart_sdb
             name: S.M.A.R.T.
-          - entity: sensor.exceeded_max_bad_sectors_sdb
+          - entity: sensor.synology_dsm_exceeded_max_bad_sectors_sdb
             name: Bad sectors
-          - entity: sensor.below_min_remaining_life_sdb
+          - entity: sensor.synology_dsm_below_min_remaining_life_sdb
             name: Lifetime warning
         - type: custom:fold-entity-row
           head:
@@ -956,13 +955,13 @@ views:
             label: /dev/sdc
           open: true
           items:
-          - entity: sensor.status_sdc
+          - entity: sensor.synology_dsm_status_sdc
             name: Status
-          - entity: sensor.status_smart_sdc
+          - entity: sensor.synology_dsm_status_smart_sdc
             name: S.M.A.R.T.
-          - entity: sensor.exceeded_max_bad_sectors_sdc
+          - entity: sensor.synology_dsm_exceeded_max_bad_sectors_sdc
             name: Bad sectors
-          - entity: sensor.below_min_remaining_life_sdc
+          - entity: sensor.synology_dsm_below_min_remaining_life_sdc
             name: Lifetime warning
         - type: custom:fold-entity-row
           head:
@@ -970,29 +969,29 @@ views:
             label: /dev/sdd
           open: true
           items:
-          - entity: sensor.status_sdd
+          - entity: sensor.synology_dsm_status_sdd
             name: Status
-          - entity: sensor.status_smart_sdd
+          - entity: sensor.synology_dsm_status_smart_sdd
             name: S.M.A.R.T.
-          - entity: sensor.exceeded_max_bad_sectors_sdd
+          - entity: sensor.synology_dsm_exceeded_max_bad_sectors_sdd
             name: Bad sectors
-          - entity: sensor.below_min_remaining_life_sdd
+          - entity: sensor.synology_dsm_below_min_remaining_life_sdd
             name: Lifetime warning
     - type: custom:bar-card
       title: CPU
-      entity: sensor.cpu_load_total
+      entity: sensor.synology_dsm_cpu_load_total
       height: 32px
       show_icon: true
       icon: mdi:chip
     - type: custom:bar-card
       title: Memory
-      entity: sensor.memory_usage_real
+      entity: sensor.synology_dsm_memory_usage_real
       height: 32px
       show_icon: true
       icon: mdi:memory
     - type: custom:bar-card
       title: Storage
-      entity: sensor.volume_used_volume_1
+      entity: sensor.synology_dsm_volume_used_volume_1
       height: 32px
       show_icon: true
       icon: mdi:harddisk
@@ -1002,9 +1001,9 @@ views:
       points_per_hour: 60
       hours_to_show: 0.5
       entities:
-      - entity: sensor.cpu_load_total
+      - entity: sensor.synology_dsm_cpu_load_total
         name: CPU
-      - entity: sensor.memory_usage_real
+      - entity: sensor.synology_dsm_memory_usage_real
         title: Geheugen
   - type: entities
     title: CPU Temperature
