@@ -66,12 +66,15 @@ devices:
   # freq3but1
   0b110024019c0be209010f70:
     name: power_socket_one
+    fire_event: true
   # freq3but2
   0b110025019c0be20a010f70:
     name: power_socket_two
+    fire_event: true
   # freq3but3
   0b110026019c0be20b010f60:
     name: power_socket_three
+    fire_event: true
   # # freq3but4
   # 0b110027019c0be20c010f70:
   #   name: power_socket_four
