@@ -9,7 +9,7 @@ rm lovelace-gen.py
 # Fetch desired custom components
 mkdir -p custom_components/custom_updater
 wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/__init__.py -O custom_components/custom_updater/__init__.py
-wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/sensor.py -O custom_components/custom_updater/sensor.py
+wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/services.yaml -O custom_components/custom_updater/services.yaml
 wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/manifest.json -O custom_components/custom_updater/manifest.json
 
 mkdir -p custom_components/rdw
