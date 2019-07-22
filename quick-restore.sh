@@ -7,12 +7,25 @@ rm www/tracker-card.js
 rm lovelace-gen.py
 
 # Fetch desired custom components
+mkdir -p custom_components/custom_updater
+wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/__init__.py -O custom_components/custom_updater/__init__.py
+wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/sensor.py -O custom_components/custom_updater/sensor.py
+wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/manifest.json -O custom_components/custom_updater/manifest.json
+
+mkdir -p custom_components/rdw
+wget https://raw.githubusercontent.com/eelcohn/home-assistant-rdw/master/__init__.py -O custom_components/rdw/__init__.py
+wget https://raw.githubusercontent.com/eelcohn/home-assistant-rdw/master/sensor.py -O custom_components/rdw/sensor.py
+wget https://raw.githubusercontent.com/eelcohn/home-assistant-rdw/master/manifest.json -O custom_components/rdw/manifest.json
+
 mkdir -p custom_components/radarr_upcoming_media
-mkdir -p custom_components/sonarr_upcoming_media
-# wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater.py -O custom_components/custom_updater.py
-wget https://raw.githubusercontent.com/custom-components/custom_updater/4.2.19/custom_components/custom_updater.py -O custom_components/custom_updater.py
+wget https://raw.githubusercontent.com/custom-components/sensor.radarr_upcoming_media/master/custom_components/radarr_upcoming_media/__init__.py -O custom_components/radarr_upcoming_media/__init__.py
 wget https://raw.githubusercontent.com/custom-components/sensor.radarr_upcoming_media/master/custom_components/radarr_upcoming_media/sensor.py -O custom_components/radarr_upcoming_media/sensor.py
+wget https://raw.githubusercontent.com/custom-components/sensor.radarr_upcoming_media/master/custom_components/radarr_upcoming_media/manifest.json -O custom_components/radarr_upcoming_media/manifest.json
+
+mkdir -p custom_components/sonarr_upcoming_media
+wget https://raw.githubusercontent.com/custom-components/sensor.sonarr_upcoming_media/master/custom_components/sonarr_upcoming_media/__init__.py -O custom_components/sonarr_upcoming_media/__init__.py
 wget https://raw.githubusercontent.com/custom-components/sensor.sonarr_upcoming_media/master/custom_components/sonarr_upcoming_media/sensor.py -O custom_components/sonarr_upcoming_media/sensor.py
+wget https://raw.githubusercontent.com/custom-components/sensor.sonarr_upcoming_media/master/custom_components/sonarr_upcoming_media/manifest.json -O custom_components/sonarr_upcoming_media/manifest.json
 
 # Fetch desired custom cards
 mkdir -p www/custom-lovelace/upcoming-media-card
