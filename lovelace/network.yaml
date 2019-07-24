@@ -5,7 +5,8 @@ cards:
   - !include cards/transmission.yaml
   - !include cards/upcoming_media.yaml
   - !include cards/synology_dsm.yaml
-  - type: entities
-    title: CPU Temperature
-    entities:
-      - sensor.cpu_temperature
+  - type: sensor
+    entity: sensor.cpu_temperature
+    name: CPU Temperature
+    icon: mdi:thermometer
+    graph: none
