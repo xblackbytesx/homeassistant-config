@@ -1,0 +1,16 @@
+type: horizontal-stack
+cards:
+  - type: entity-button
+    entity: !secret car_entity_expdate
+    name: !secret car_name
+    icon: mdi:calendar-clock
+
+  - type: entity-button
+    entity: !secret car_entity_insured
+    name: !secret car_name
+    icon: mdi:file-document-box-check-outline
+
+  - type: entity-button
+    entity: !secret car_entity_recall
+    name: !secret car_name
+    icon: mdi:message-alert-outline
