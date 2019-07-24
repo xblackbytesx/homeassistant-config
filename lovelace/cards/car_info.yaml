@@ -1,16 +1,16 @@
 type: horizontal-stack
 cards:
-  - type: entity-button
+  - type: sensor
     entity: !secret car_entity_expdate
-    name: !secret car_name
+    name: APK expiration
     icon: mdi:calendar-clock
 
-  - type: entity-button
+  - type: sensor
     entity: !secret car_entity_insured
-    name: !secret car_name
+    name: Insurance status
     icon: mdi:file-document-box-check-outline
 
-  - type: entity-button
+  - type: sensor
     entity: !secret car_entity_recall
-    name: !secret car_name
+    name: Callback status
     icon: mdi:message-alert-outline

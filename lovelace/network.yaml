@@ -9,4 +9,3 @@ cards:
     entity: sensor.cpu_temperature
     name: CPU Temperature
     icon: mdi:thermometer
-    graph: none
