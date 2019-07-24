@@ -741,6 +741,22 @@ views:
         color: yellow
   - type: weather-forecast
     entity: weather.dark_sky
+  - type: horizontal-stack
+    cards:
+    - type: sensor
+      entity: !secret car_entity_expdate
+      name: APK expiration
+      icon: mdi:calendar-clock
+
+    - type: sensor
+      entity: !secret car_entity_insured
+      name: Insurance status
+      icon: mdi:file-document-box-check-outline
+
+    - type: sensor
+      entity: !secret car_entity_recall
+      name: Callback status
+      icon: mdi:message-alert-outline
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -1005,10 +1021,10 @@ views:
         name: CPU
       - entity: sensor.synology_dsm_memory_usage_real
         title: Geheugen
-  - type: entities
-    title: CPU Temperature
-    entities:
-    - sensor.cpu_temperature
+  - type: sensor
+    entity: sensor.cpu_temperature
+    name: CPU Temperature
+    icon: mdi:thermometer
 - title: automation_view
   icon: mdi:robot
   cards:
