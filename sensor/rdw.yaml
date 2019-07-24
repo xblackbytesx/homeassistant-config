@@ -1,8 +1,8 @@
 - platform: rdw
-    name: !secret car_name
-    plate: !secret car_plate
-    dateformat: '%d %b %Y'
-    sensors:
-      - expdate
-      - insured
-      - recall
+  name: !secret car_name
+  plate: !secret car_plate
+  dateformat: '%d %b %Y'
+  sensors:
+    - expdate
+    - insured
+    - recall
