@@ -7,7 +7,7 @@
       entity_id: binary_sensor.sa_tv_media_playing
       to: 'off'
     - platform: time_pattern
-      minutes: '/5'
+      minutes: '/1'
       seconds: 00
   condition:
     condition: and
@@ -35,7 +35,7 @@
       entity_id: binary_sensor.sa_tv_media_playing
       to: 'on'
     - platform: time_pattern
-      minutes: '/5'
+      minutes: '/1'
       seconds: 00
   condition:
     condition: and

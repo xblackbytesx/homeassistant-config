@@ -1,10 +1,15 @@
-- alias: CO | Motion | Lights off
+- alias: CO | State | Lights off
   trigger:
-    platform: state
-    entity_id: binary_sensor.co_motion_detected
-    to: 'off'
-    for:
-      minutes: 5
+    - platform: state
+      entity_id: binary_sensor.co_motion_detected
+      to: 'off'
+      for:
+        minutes: 5
+    - platform: state
+      entity_id: binary_sensor.co_dark_enough
+      to: 'off'
+      for:
+        minutes: 5
   action:
     - service: homeassistant.turn_off
       entity_id: light.corridor
