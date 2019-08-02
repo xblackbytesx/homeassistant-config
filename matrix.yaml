@@ -5,6 +5,10 @@ rooms:
   - !secret matrix_room_noisy
   - !secret matrix_room_clean
 commands:
+  - expression: "Help"
+    name: help
+    rooms:
+      - !secret matrix_room_clean
   - expression: "Who are you?"
     name: introduction
     rooms:

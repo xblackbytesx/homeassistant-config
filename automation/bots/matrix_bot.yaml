@@ -1,3 +1,28 @@
+- alias: 'Matrix | React to help'
+  trigger:
+    platform: event
+    event_type: matrix_command
+    event_data:
+      command: help
+  action:
+    service: notify.notify_matrix_clean
+    data_template:
+      message: "Possible commands:\n
+                - Who are you?\n
+                - Light em up!\n
+                - Cut all power\n
+                - Cut socket one\n
+                - Cut socket two\n
+                - Cut socket three\n
+                - reel_in_the_sunscreen\n
+                - Attic shutters up\n
+                - Attic shutters down\n
+                - Cheapest local gas\n
+                - Show me the yield\n
+                \n
+                So what will it be?"
+
+
 - alias: 'Matrix | React to an introduction'
   trigger:
     platform: event
@@ -5,7 +30,7 @@
     event_data:
       command: introduction
   action:
-    service: notify.notify_matrix_noisy
+    service: notify.notify_matrix_clean
     data_template:
       message: "My name is Hassi-o, servant of men ruler of tech."
 
@@ -40,7 +65,7 @@
         scene_name: "Kitchen | Relax"
     - service: script.turn_on
       entity_id: script.scene_not_watching_tv
-    - service: notify.notify_matrix_noisy
+    - service: notify.notify_matrix_clean
       data:
         message: "Shining bright like a diamond!"
 
@@ -54,7 +79,7 @@
   action:
     - service: switch.turn_off
       entity_id: switch.power_socket_one
-    - service: notify.notify_matrix_noisy
+    - service: notify.notify_matrix_clean
       data:
         message: "Socket one killed!"
 
@@ -68,7 +93,7 @@
   action:
     - service: switch.turn_off
       entity_id: switch.power_socket_two
-    - service: notify.notify_matrix_noisy
+    - service: notify.notify_matrix_clean
       data:
         message: "Socket two killed!"
 
@@ -82,7 +107,7 @@
   action:
     - service: switch.turn_off
       entity_id: switch.power_socket_three
-    - service: notify.notify_matrix_noisy
+    - service: notify.notify_matrix_clean
       data:
         message: "Socket three killed!"
 
@@ -106,7 +131,7 @@
     - service: light.turn_off
       data:
         entity_id: light.dimmable_socket_two
-    - service: notify.notify_matrix_noisy
+    - service: notify.notify_matrix_clean
       data:
         message: "I've cut the power as you requested!"
 
@@ -120,7 +145,7 @@
   action:
     - service: switch.turn_off
       entity_id: switch.sun_screen
-    - service: notify.notify_matrix_noisy
+    - service: notify.notify_matrix_clean
       data:
         message: "As you wish! May the Sun shine freely!"
 
@@ -154,7 +179,7 @@
     event_data:
       command: show_gas_prices
   action:
-    - service: notify.notify_matrix_noisy
+    - service: notify.notify_matrix_clean
       data:
         message: "Today's gas prices: \nTi (E5): €{{ states('sensor.gas_station_1_euro95') }} \nFi (E5): €{{ states('sensor.gas_station_2_euro95') }} \nTa (E5): €{{ states('sensor.gas_station_3_euro95') }}"
 
@@ -166,7 +191,7 @@
     event_data:
       command: show_solar_yield
   action:
-    - service: notify.notify_matrix_noisy
+    - service: notify.notify_matrix_clean
       data:
         message: "Today's yield: {{ states('sensor.daily_yield') }} Wh \nTotal yield: {{ states('sensor.total_yield') }} kWh"
 
@@ -180,6 +205,6 @@
   action:
     - service: switch.turn_off
       entity_id: switch.sun_screen
-    - service: notify.notify_matrix_noisy
+    - service: notify.notify_matrix_clean
       data:
         message: "Manually acknowledged front-door is closed"
