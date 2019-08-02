@@ -2,27 +2,50 @@ homeserver: !secret matrix_homeserver
 username: !secret matrix_username
 password: !secret matrix_password
 rooms:
-  - !secret matrix_room
+  - !secret matrix_room_noisy
+  - !secret matrix_room_clean
 commands:
   - expression: "Who are you?"
     name: introduction
+    rooms:
+      - !secret matrix_room_clean
   - expression: "Light em up!"
     name: light_em_up
+    rooms:
+      - !secret matrix_room_clean
   - expression: "Cut all power"
     name: cut_all_power
+    rooms:
+      - !secret matrix_room_clean
   - expression: "Cut socket one"
     name: cut_socket_one
+    rooms:
+      - !secret matrix_room_clean
   - expression: "Cut socket two"
     name: cut_socket_two
+    rooms:
+      - !secret matrix_room_clean
   - expression: "Cut socket three"
     name: cut_socket_three
+    rooms:
+      - !secret matrix_room_clean
   - word: reel_in_the_sunscreen
     name: reel_in_the_sunscreen
+    rooms:
+      - !secret matrix_room_clean
   - expression: "Attic shutters up"
     name: attic_shutters_up
+    rooms:
+      - !secret matrix_room_clean
   - expression: "Attic shutters down"
     name: attic_shutters_down
+    rooms:
+      - !secret matrix_room_clean
   - expression: "Cheapest local gas"
     name: show_gas_prices
+    rooms:
+      - !secret matrix_room_clean
   - expression: "Show me the yield"
     name: show_solar_yield
+    rooms:
+      - !secret matrix_room_clean

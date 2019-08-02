@@ -9,6 +9,6 @@
   action:
     - service: homeassistant.turn_off
       entity_id: light.master_bedroom
-    - service: notify.matrix_notify
+    - service: notify.notify_matrix_noisy
       data:
         message: "Shame! You forgot the Master bedroom lights again!"

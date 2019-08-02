@@ -4,7 +4,7 @@
     entity_id: cover.attic_shutters
     to: 'open'
   action:
-    - service: notify.matrix_notify
+    - service: notify.notify_matrix_noisy
       data:
         message: "Attic covers have been opened!"
 
@@ -15,6 +15,6 @@
     entity_id: cover.attic_shutters
     to: 'closed'
   action:
-    - service: notify.matrix_notify
+    - service: notify.notify_matrix_noisy
       data:
         message: "Attic covers are now closed!"

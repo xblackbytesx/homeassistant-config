@@ -1,3 +1,7 @@
-- name: matrix_notify
+- name: notify_matrix_noisy
   platform: matrix
-  default_room: !secret matrix_room
+  default_room: !secret matrix_room_noisy
+
+- name: notify_matrix_clean
+  platform: matrix
+  default_room: !secret matrix_room_clean

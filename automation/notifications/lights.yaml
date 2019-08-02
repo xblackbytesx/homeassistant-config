@@ -4,7 +4,7 @@
     entity_id: light.hue_bulb_large_bedroom
     to: 'off'
   action:
-    - service: notify.matrix_notify
+    - service: notify.notify_matrix_noisy
       data:
         message: "Lights in Large Bedroom have been terminated!"
 
@@ -15,7 +15,7 @@
     entity_id: light.ledstrip_large_bedroom
     to: 'off'
   action:
-    - service: notify.matrix_notify
+    - service: notify.notify_matrix_noisy
       data:
         message: "The Night lights in the Large Bedroom are no more."
 
@@ -26,7 +26,7 @@
     entity_id: light.tradfri_bulb_small_bedroom
     to: 'off'
   action:
-    - service: notify.matrix_notify
+    - service: notify.notify_matrix_noisy
       data:
         message: "Lights in Small Bedroom have been terminated!"
 
@@ -37,6 +37,6 @@
     entity_id: light.dimmable_socket_one
     to: 'off'
   action:
-    - service: notify.matrix_notify
+    - service: notify.notify_matrix_noisy
       data:
         message: "The Night lights in the Small Bedroom are no more."

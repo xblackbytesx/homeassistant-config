@@ -4,7 +4,7 @@
     entity_id: switch.power_socket_one
     to: 'on'
   action:
-    - service: notify.matrix_notify
+    - service: notify.notify_matrix_noisy
       data:
         message: "Socket one has been turned on"
 
@@ -15,7 +15,7 @@
     entity_id: switch.power_socket_one
     to: 'off'
   action:
-    - service: notify.matrix_notify
+    - service: notify.notify_matrix_noisy
       data:
         message: "Socket one has been turned off"
 
@@ -26,7 +26,7 @@
     entity_id: switch.power_socket_two
     to: 'on'
   action:
-    - service: notify.matrix_notify
+    - service: notify.notify_matrix_noisy
       data:
         message: "Socket two has been turned on"
 
@@ -37,7 +37,7 @@
     entity_id: switch.power_socket_two
     to: 'off'
   action:
-    - service: notify.matrix_notify
+    - service: notify.notify_matrix_noisy
       data:
         message: "Socket two has been turned off"
 
@@ -48,7 +48,7 @@
     entity_id: switch.power_socket_three
     to: 'on'
   action:
-    - service: notify.matrix_notify
+    - service: notify.notify_matrix_noisy
       data:
         message: "Socket three has been turned on"
 
@@ -59,6 +59,6 @@
     entity_id: switch.power_socket_three
     to: 'off'
   action:
-    - service: notify.matrix_notify
+    - service: notify.notify_matrix_noisy
       data:
         message: "Socket three has been turned off"
