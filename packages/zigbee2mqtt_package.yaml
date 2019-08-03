@@ -76,12 +76,12 @@ automation:
     action:
       service: zigbee2mqtt_networkmap.update
 
- webhook:
+webhook:
+zigbee2mqtt_networkmap:
+ #topic: your topic (optional, default zigbee2mqtt)
 
- zigbee2mqtt_networkmap:
-   #topic: your topic (optional, default zigbee2mqtt)
- panel_iframe:
-   networkmap:
-     title: 'Zigbee Map'
-     url: '/local/community/zigbee2mqtt_networkmap/map.html'
-     icon: 'mdi:graphql'
+panel_iframe:
+ networkmap:
+   title: 'Zigbee Map'
+   url: '/local/community/zigbee2mqtt_networkmap/map.html'
+   icon: 'mdi:graphql'
