@@ -27,6 +27,10 @@ wget https://raw.githubusercontent.com/custom-components/sensor.sonarr_upcoming_
 wget https://raw.githubusercontent.com/custom-components/sensor.sonarr_upcoming_media/master/custom_components/sonarr_upcoming_media/sensor.py -O custom_components/sonarr_upcoming_media/sensor.py
 wget https://raw.githubusercontent.com/custom-components/sensor.sonarr_upcoming_media/master/custom_components/sonarr_upcoming_media/manifest.json -O custom_components/sonarr_upcoming_media/manifest.json
 
+git clone git@github.com:rgruebel/ha_zigbee2mqtt_networkmap.git custom_components/zigbee_networkmap
+mv custom_components/zigbee_networkmap/custom_components/zigbee2mqtt_networkmap custom_components/
+rm -rf custom_components/zigbee_networkmap
+
 # Fetch desired custom cards
 mkdir -p www/custom-lovelace/upcoming-media-card
 mkdir -p www/custom-lovelace/monster-card
