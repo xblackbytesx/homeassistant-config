@@ -1,0 +1,8 @@
+- type: vertical-stack
+  cards:
+    - type: plant-status
+      entity: plant.monstera_deliciosa
+    - type: plant-status
+      entity: plant.cocos_nucifera
+    - type: plant-status
+      entity: plant.sabal_minor

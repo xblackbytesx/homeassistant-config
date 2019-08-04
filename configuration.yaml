@@ -7,8 +7,9 @@ homeassistant:
   time_zone: Europe/Amsterdam
   customize: !include customize.yaml
   packages:
-    pack_1: !include packages/zigbee2mqtt_package.yaml
-  #   pack_2: !include packages/christmas_package.yaml
+    plants_package: !include packages/pkg_plants/all.yaml
+    zigbee2mqtt_package: !include packages/pkg_zigbee2mqtt.yaml
+  #   pack_2: !include packages/pkg_christmas.yaml
 
 hassio:
 config:
@@ -152,7 +153,6 @@ camera:
     verify_ssl: false
 
 alert: !include alerts.yaml
-plant: !include plants.yaml
 switch: !include switch.yaml
 cover: !include cover.yaml
 binary_sensor: !include binary_sensor.yaml

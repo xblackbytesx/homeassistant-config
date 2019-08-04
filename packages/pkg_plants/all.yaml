@@ -1,0 +1,3 @@
+sensor: !include sensor.yaml
+plant: !include plant.yaml
+alert: !include alert.yaml
