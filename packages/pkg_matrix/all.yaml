@@ -1,0 +1,2 @@
+matrix: !include matrix.yaml
+automation: !include automation.yaml

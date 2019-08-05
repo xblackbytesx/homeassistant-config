@@ -8,8 +8,9 @@ homeassistant:
   customize: !include customize.yaml
   packages:
     plants_package: !include packages/pkg_plants/all.yaml
-    zigbee2mqtt_package: !include packages/pkg_zigbee2mqtt.yaml
-  #   pack_2: !include packages/pkg_christmas.yaml
+    zigbee2mqtt_package: !include packages/pkg_zigbee2mqtt/all.yaml
+    matrix_package: !include packages/pkg_matrix/all.yaml
+    # christmas_package: !include packages/pkg_christmas/all.yaml
 
 hassio:
 config:
@@ -157,7 +158,6 @@ switch: !include switch.yaml
 cover: !include cover.yaml
 binary_sensor: !include binary_sensor.yaml
 light: !include light.yaml
-matrix: !include matrix.yaml
 notify: !include_dir_merge_list notify/
 automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/

@@ -1,0 +1,22 @@
+webhook:
+zigbee2mqtt_networkmap:
+ #topic: your topic (optional, default zigbee2mqtt)
+
+mqtt:
+  broker: homeassistant
+  discovery: true
+
+timer:
+  zigbee_permit_join:
+    name: Time remaining
+    duration: 600 # Updated this to the number of seconds you wish
+
+panel_iframe:
+ networkmap:
+   title: 'Zigbee Map'
+   url: '/local/community/zigbee2mqtt_networkmap/map.html'
+   icon: 'mdi:graphql'
+
+sensor: !include sensor.yaml
+input_boolean: !include input_boolean.yaml
+automation: !include automation.yaml
