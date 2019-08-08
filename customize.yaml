@@ -10,3 +10,5 @@ light.large_bedroom:
   icon: mdi:hotel
 light.small_bedroom:
   icon: mdi:hotel
+light.bathroom:
+  icon: mdi:shower
