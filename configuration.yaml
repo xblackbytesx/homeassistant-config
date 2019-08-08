@@ -9,6 +9,7 @@ homeassistant:
   packages:
     plants_package: !include packages/pkg_plants/all.yaml
     zigbee2mqtt_package: !include packages/pkg_zigbee2mqtt/all.yaml
+    rfx_package: !include packages/pkg_rfx/all.yaml
     matrix_package: !include packages/pkg_matrix/all.yaml
     # christmas_package: !include packages/pkg_christmas/all.yaml
 
