@@ -1,0 +1,5 @@
+rfxtrx:
+  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11D2A5T-if00-port0
+
+light: !include light.yaml
+switch: !include switch.yaml

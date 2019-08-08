@@ -1,2 +1,12 @@
 group.all_automations:
   hidden: false
+light.sitting_area:
+  icon: mdi:sofa
+light.kitchen:
+  icon: mdi:silverware-fork-knife
+light.master_bedroom:
+  icon: mdi:hotel
+light.large_bedroom:
+  icon: mdi:hotel
+light.small_bedroom:
+  icon: mdi:hotel

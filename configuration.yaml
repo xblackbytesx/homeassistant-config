@@ -37,7 +37,7 @@ person:
       - !secret person_two_device_tracker
 
 frontend:
-  themes: !include_dir_merge_named themes
+  themes: !include themes.yaml
   javascript_version: latest
 
 lovelace:
@@ -97,10 +97,6 @@ hue:
     - host: 10.0.221.30
       filename: philips-hue.conf
 
-# Rfxtrx
-rfxtrx:
-  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11D2A5T-if00-port0
-
 cast:
   chromecast:
   - host: 10.0.221.26
@@ -154,7 +150,6 @@ camera:
     verify_ssl: false
 
 alert: !include alerts.yaml
-switch: !include switch.yaml
 cover: !include cover.yaml
 binary_sensor: !include binary_sensor.yaml
 light: !include light.yaml
