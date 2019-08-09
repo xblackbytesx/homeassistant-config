@@ -12,3 +12,20 @@ light.small_bedroom:
   icon: mdi:hotel
 light.bathroom:
   icon: mdi:shower
+light.exterior:
+  icon: mdi:tree
+switch.sun_screen:
+  name: Sunscreen
+switch.power_socket_one:
+  name: TV Cabinet
+  icon: mdi:power-socket-eu
+switch.power_socket_two:
+  name: Black Cabinet
+  icon: mdi:power-socket-eu
+switch.power_socket_three:
+  name: Exterior lighting
+  icon: mdi:power-socket-eu
+switch.beamer_screen:
+  name: Beamer screen
+cover.attic_shutters:
+  name: Attic Shutters
