@@ -1,0 +1,20 @@
+type: horizontal-stack
+cards:
+  - type: sensor
+    entity: sensor.coinmarketcap_1
+    name: Bitcoin
+    icon: mdi:bitcoin
+    hours_to_show: 48
+    graph: line
+  - type: sensor
+    entity: sensor.coinmarketcap_1027
+    name: Ethereum
+    icon: mdi:ethereum
+    hours_to_show: 48
+    graph: line
+  - type: sensor
+    entity: sensor.coinmarketcap_1720
+    name: IOTA
+    icon: mdi:coin
+    hours_to_show: 48
+    graph: line

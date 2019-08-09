@@ -1,0 +1,4 @@
+title: Finance
+icon: mdi:bitcoin
+cards:
+  - !include cards/crytpo_currency.yaml

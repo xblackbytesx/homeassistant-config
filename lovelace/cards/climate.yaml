@@ -2,11 +2,12 @@ type: vertical-stack
 cards:
   - type: thermostat
     entity: climate.living_room
-  - type: entities
-    title: Living room climate
-    show_header_toggle: true
-    entities:
-      - sensor.hue_motion_sensor_hallway_door_temperature
-      - sensor.hue_motion_sensor_hallway_stairs_temperature
-      - sensor.hue_motion_sensor_sitting_area_temperature
-      - sensor.hue_motion_sensor_kitchen_temperature
+  - type: sensor
+    entity: hue_motion_sensor_hallway_stairs_temperature
+    graph: line
+  - type: sensor
+    entity: sensor.hue_motion_sensor_kitchen_temperature
+    graph: line
+  - type: sensor
+    entity: sensor.hue_motion_sensor_sitting_area_temperature
+    graph: line

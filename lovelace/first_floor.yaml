@@ -2,11 +2,9 @@ title: First Floor
 icon: mdi:numeric-1-box
 cards:
   - !include cards/first_floor_groups.yaml
-  - type: entities
-    title: First floor climate
-    show_header_toggle: true
-    entities:
-      - sensor.hue_motion_sensor_corridor_temperature
+  - type: sensor
+    entity: hue_motion_sensor_hallway_stairs_temperature
+    graph: line
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

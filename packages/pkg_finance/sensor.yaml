@@ -1,0 +1,11 @@
+- platform: coinmarketcap
+  currency_id: 1
+  display_currency: EUR
+
+- platform: coinmarketcap
+  currency_id: 1027
+  display_currency: EUR
+
+- platform: coinmarketcap
+  currency_id: 1720
+  display_currency: EUR
