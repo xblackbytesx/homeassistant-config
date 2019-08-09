@@ -152,7 +152,6 @@ camera:
     verify_ssl: false
 
 alert: !include alerts.yaml
-cover: !include cover.yaml
 binary_sensor: !include binary_sensor.yaml
 light: !include light.yaml
 notify: !include_dir_merge_list notify/
