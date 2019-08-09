@@ -3,7 +3,7 @@ cards:
   - type: thermostat
     entity: climate.living_room
   - type: sensor
-    entity: hue_motion_sensor_hallway_stairs_temperature
+    entity: sensor.hue_motion_sensor_hallway_stairs_temperature
     graph: line
   - type: sensor
     entity: sensor.hue_motion_sensor_kitchen_temperature
