@@ -22,7 +22,7 @@ light.dimmable_socket_two:
   icon: mdi:brightness-6
 switch.sun_screen:
   friendly_name: Sunscreen
-  icon: mdi:sun-protection
+  icon: mdi:sunglasses
 switch.power_socket_one:
   friendly_name: TV Cabinet
   icon: mdi:power-socket-eu
@@ -85,3 +85,6 @@ binary_sensor.co_motion_detected:
 binary_sensor.attic_motion_detected:
   friendly_name: Attic
   icon: mdi:run
+binary_sensor.front_door:
+  friendly_name: Front door
+  icon: mdi:door
