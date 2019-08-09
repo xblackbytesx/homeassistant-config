@@ -22,7 +22,7 @@ light.dimmable_socket_two:
   icon: mdi:brightness-6
 switch.sun_screen:
   friendly_name: Sunscreen
-  icon: mdi:shield-sun
+  icon: mdi:sun-protection
 switch.power_socket_one:
   friendly_name: TV Cabinet
   icon: mdi:power-socket-eu
