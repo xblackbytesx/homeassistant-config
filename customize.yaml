@@ -15,36 +15,45 @@ light.bathroom:
 light.exterior:
   icon: mdi:tree
 light.dimmable_socket_one:
-  name: Small bedroom lights
+  friendly_name: Small bedroom lights
   icon: mdi:brightness-6
 light.dimmable_socket_two:
-  name: Dimmable 2
+  friendly_name: Dimmable 2
   icon: mdi:brightness-6
 switch.sun_screen:
-  name: Sunscreen
+  friendly_name: Sunscreen
   icon: mdi:shield-sun
 switch.power_socket_one:
-  name: TV Cabinet
+  friendly_name: TV Cabinet
   icon: mdi:power-socket-eu
 switch.power_socket_two:
-  name: Black Cabinet
+  friendly_name: Black Cabinet
   icon: mdi:power-socket-eu
 switch.power_socket_three:
-  name: Exterior lighting
+  friendly_name: Exterior lighting
   icon: mdi:power-socket-eu
 switch.beamer_screen:
-  name: Beamer screen
-  icon: projector-screen
+  friendly_name: Beamer screen
+  icon: mdi:projector-screen
+switch.0x000d6ffffedad23c_switch:
+  friendly_name: TV Cabinet
+  icon: mdi:power-socket-eu
+switch.0x000d6ffffea6df64_switch:
+  friendly_name: Black Cabinet
+  icon: mdi:power-socket-eu
+switch.0x000d6ffffea6e967_switch:
+  friendly_name: Exterior lighting
+  icon: mdi:power-socket-eu
 cover.attic_shutters:
-  name: Attic Shutters
+  friendly_name: Attic Shutters
 sensor.hue_motion_sensor_corridor_temperature:
-  name: Corridor
+  friendly_name: Corridor
 sensor.hue_motion_sensor_hallway_stairs_temperature:
-  name: Hallway
+  friendly_name: Hallway
 sensor.hue_motion_sensor_kitchen_temperature:
-  name: Kitchen
+  friendly_name: Kitchen
 sensor.hue_motion_sensor_sitting_area_temperature:
-  name: Sitting Area
+  friendly_name: Sitting Area
 sensor.hue_motion_hallway_door_battery_level:
   icon: mdi:battery-80
 sensor.hue_motion_hallway_stairs_battery_level:
@@ -62,17 +71,17 @@ sensor.cocos_nucifera_battery:
 sensor.sabal_minor_battery:
   icon: mdi:battery-80
 binary_sensor.hw_motion_detected:
-  name: Hallway
+  friendly_name: Hallway
   icon: mdi:run
 binary_sensor.sa_motion_detected:
-  name: Sitting Area
+  friendly_name: Sitting Area
   icon: mdi:run
 binary_sensor.kitchen_motion_detected:
-  name: Kitchen
+  friendly_name: Kitchen
   icon: mdi:run
 binary_sensor.co_motion_detected:
-  name: Corridor
+  friendly_name: Corridor
   icon: mdi:run
 binary_sensor.attic_motion_detected:
-  name: Attic
+  friendly_name: Attic
   icon: mdi:run
