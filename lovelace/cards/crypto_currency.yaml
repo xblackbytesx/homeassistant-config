@@ -1,0 +1,20 @@
+type: vertical-stack
+cards:
+  - type: sensor
+    entity: sensor.bitcoin
+    name: Bitcoin
+    icon: mdi:bitcoin
+    hours_to_show: 48
+    graph: line
+  - type: sensor
+    entity: sensor.ethereum
+    name: Ethereum
+    icon: mdi:ethereum
+    hours_to_show: 48
+    graph: line
+  - type: sensor
+    entity: sensor.iota
+    name: IOTA
+    icon: mdi:coin
+    hours_to_show: 48
+    graph: line

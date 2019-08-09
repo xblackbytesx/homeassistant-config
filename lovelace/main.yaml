@@ -28,5 +28,6 @@ views:
   - !include media.yaml
   - !include security.yaml
   - !include network.yaml
+  - !include finance.yaml
   - !include automation.yaml
   - !include overrides.yaml

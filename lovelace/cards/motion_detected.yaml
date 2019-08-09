@@ -1,20 +1,10 @@
 type: entity-filter
 entities:
-  - entity: binary_sensor.hw_motion_detected
-    name: Hallway
-    icon: mdi:run
-  - entity: binary_sensor.sa_motion_detected
-    name: Sitting Area
-    icon: mdi:run
-  - entity: binary_sensor.kitchen_motion_detected
-    name: Kitchen
-    icon: mdi:run
-  - entity: binary_sensor.co_motion_detected
-    name: Corridor
-    icon: mdi:run
-  - entity: binary_sensor.attic_motion_detected
-    name: Attic
-    icon: mdi:run
+  - binary_sensor.hw_motion_detected
+  - binary_sensor.sa_motion_detected
+  - binary_sensor.kitchen_motion_detected
+  - binary_sensor.co_motion_detected
+  - binary_sensor.attic_motion_detected
 state_filter:
   - 'on'
 card:

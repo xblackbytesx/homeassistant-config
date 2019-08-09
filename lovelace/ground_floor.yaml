@@ -3,13 +3,17 @@ icon: mdi:numeric-0-box
 cards:
   - !include cards/ground_floor_groups.yaml
   - !include cards/floorplan_ground_floor.yaml
+  - !include cards/climate.yaml
   - type: entities
     title: Ground floor switches
     show_header_toggle: true
     entities:
-      - switch.power_socket_one
-      - switch.power_socket_two
-      - switch.power_socket_three
+      - switch.0x000d6ffffedad23c_switch
+      - switch.0x000d6ffffea6df64_switch
+      - switch.0x000d6ffffea6e967_switch
+      # - switch.power_socket_one
+      # - switch.power_socket_two
+      # - switch.power_socket_three
       - light.dimmable_socket_one
       - light.dimmable_socket_two
       - switch.beamer_screen
@@ -65,8 +69,6 @@ cards:
         - light.ledstrip_black_cabinet
         - light.ledstrip_kitchen_cabinet
         - light.hue_bulb_hallway
-        - light.dimmable_socket_one
-        - light.dimmable_socket_two
   - type: picture-entity
     title: Dafang
     entity: camera.dafang

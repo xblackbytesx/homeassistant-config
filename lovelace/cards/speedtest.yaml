@@ -5,13 +5,16 @@ cards:
     name: Ping
     icon: mdi:timer
     hours_to_show: 48
+    graph: line
   - type: sensor
     entity: sensor.speedtest_download
     name: Download
     icon: mdi:download
     hours_to_show: 48
+    graph: line
   - type: sensor
     entity: sensor.speedtest_upload
     name: Upload
     icon: mdi:upload
     hours_to_show: 48
+    graph: line

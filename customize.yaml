@@ -1,2 +1,90 @@
 group.all_automations:
   hidden: false
+light.sitting_area:
+  icon: mdi:sofa
+light.kitchen:
+  icon: mdi:silverware-fork-knife
+light.master_bedroom:
+  icon: mdi:hotel
+light.large_bedroom:
+  icon: mdi:hotel
+light.small_bedroom:
+  icon: mdi:hotel
+light.bathroom:
+  icon: mdi:shower
+light.exterior:
+  icon: mdi:tree
+light.dimmable_socket_one:
+  friendly_name: Small bedroom lights
+  icon: mdi:brightness-6
+light.dimmable_socket_two:
+  friendly_name: Dimmable 2
+  icon: mdi:brightness-6
+switch.sun_screen:
+  friendly_name: Sunscreen
+  icon: mdi:sunglasses
+switch.power_socket_one:
+  friendly_name: TV Cabinet
+  icon: mdi:power-socket-eu
+switch.power_socket_two:
+  friendly_name: Black Cabinet
+  icon: mdi:power-socket-eu
+switch.power_socket_three:
+  friendly_name: Exterior lighting
+  icon: mdi:power-socket-eu
+switch.beamer_screen:
+  friendly_name: Beamer screen
+  icon: mdi:projector-screen
+switch.0x000d6ffffedad23c_switch:
+  friendly_name: TV Cabinet
+  icon: mdi:power-socket-eu
+switch.0x000d6ffffea6df64_switch:
+  friendly_name: Black Cabinet
+  icon: mdi:power-socket-eu
+switch.0x000d6ffffea6e967_switch:
+  friendly_name: Exterior lighting
+  icon: mdi:power-socket-eu
+cover.attic_shutters:
+  friendly_name: Attic Shutters
+sensor.hue_motion_sensor_corridor_temperature:
+  friendly_name: Corridor
+sensor.hue_motion_sensor_hallway_stairs_temperature:
+  friendly_name: Hallway
+sensor.hue_motion_sensor_kitchen_temperature:
+  friendly_name: Kitchen
+sensor.hue_motion_sensor_sitting_area_temperature:
+  friendly_name: Sitting Area
+sensor.hue_motion_hallway_door_battery_level:
+  icon: mdi:battery-80
+sensor.hue_motion_hallway_stairs_battery_level:
+  icon: mdi:battery-80
+sensor.hue_motion_sitting_area_battery_level:
+  icon: mdi:battery-80
+sensor.hue_motion_kitchen_battery_level:
+  icon: mdi:battery-80
+sensor.hue_motion_corridor_battery_level:
+  icon: mdi:battery-80
+sensor.monstera_deliciosa_battery:
+  icon: mdi:battery-80
+sensor.cocos_nucifera_battery:
+  icon: mdi:battery-80
+sensor.sabal_minor_battery:
+  icon: mdi:battery-80
+binary_sensor.hw_motion_detected:
+  friendly_name: Hallway
+  icon: mdi:run
+binary_sensor.sa_motion_detected:
+  friendly_name: Sitting Area
+  icon: mdi:run
+binary_sensor.kitchen_motion_detected:
+  friendly_name: Kitchen
+  icon: mdi:run
+binary_sensor.co_motion_detected:
+  friendly_name: Corridor
+  icon: mdi:run
+binary_sensor.attic_motion_detected:
+  friendly_name: Attic
+  icon: mdi:run
+binary_sensor.front_door:
+  friendly_name: Front door
+  icon: mdi:door

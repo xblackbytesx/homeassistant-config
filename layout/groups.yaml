@@ -4,6 +4,7 @@
 
 living_room_lighting:
   name: Living room lighting
+  icon: mdi:sofa
   entities:
     - light.kitchen
     - light.sitting_area
@@ -12,12 +13,14 @@ living_room_lighting:
 
 exterior_lighting:
   name: Exterior lighting
+  icon: mdi:tree
   entities:
     - light.front_porch
     - light.backyard
 
 master_bedroom_lighting:
   name: Master Bedroom lighting
+  icon: mdi:hotel
   entities:
     - light.master_bedroom
 
@@ -52,14 +55,22 @@ corridor_lighting:
 
 bathroom_lighting:
   name: Bathroom lighting
+  icon: mdi:shower
   entities:
     - light.hue_candle_bathroom_l
     - light.hue_bulb_bathroom_r
 
 large_bedroom_lighting:
   name: Large Bedroom lighting
+  icon: mdi:hotel
   entities:
     - light.hue_bulb_large_bedroom
+
+small_bedroom_lighting:
+  name: Small Bedroom lighting
+  icon: mdi:hotel
+  entities:
+    - light.tradfri_bulb_small_bedroom
 
 all_first_floor_lights:
   name: All first floor lights
