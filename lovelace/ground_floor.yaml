@@ -8,6 +8,9 @@ cards:
     title: Ground floor switches
     show_header_toggle: true
     entities:
+      - switch.0x000d6ffffedad23c_switch
+      - switch.0x000d6ffffea6df64_switch
+      - switch.0x000d6ffffea6e967_switch
       - switch.power_socket_one
       - switch.power_socket_two
       - switch.power_socket_three
