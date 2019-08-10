@@ -163,6 +163,7 @@ device_tracker: !include_dir_merge_list device_tracker/
 # camera: !include_dir_merge_list camera/
 script: !include_dir_merge_named script/
 # group: !include_dir_merge_named layout/
+group: !include layout/groups.yaml
 
 shell_command:
   lovelace_gen: 'python /config/lovelace-gen.py'

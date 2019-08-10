@@ -8,9 +8,10 @@
       after: '18:00:00'
       before: '03:30:00'
   action:
-    - service: hue.hue_activate_scene
+    - service: light.turn_on
       data:
-        group_name: "Exterior"
-        scene_name: "EX | Relax"
+        entity_id: light.exterior_lighting
+        brightness_pct: 50
+        kelvin: 2700
     - service: switch.turn_on
       entity_id: switch.0x000d6ffffea6e967_switch

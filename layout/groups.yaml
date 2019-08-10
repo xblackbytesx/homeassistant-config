@@ -15,8 +15,8 @@ exterior_lighting:
   name: Exterior lighting
   icon: mdi:tree
   entities:
-    - light.front_porch
-    - light.backyard
+    - light.0x00158d00017934ff_light
+    - light.0x00158d00017ab8da_light
 
 master_bedroom_lighting:
   name: Master Bedroom lighting

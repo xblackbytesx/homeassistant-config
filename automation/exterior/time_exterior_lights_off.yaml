@@ -3,7 +3,7 @@
     - platform: time
       at: '3:30:00'
   action:
-    - service: homeassistant.turn_off
-      entity_id: light.exterior
+    - service: light.turn_off
+      entity_id: light.exterior_lighting
     - service: switch.turn_off
       entity_id: switch.0x000d6ffffea6e967_switch
