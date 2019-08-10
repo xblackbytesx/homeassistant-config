@@ -17,6 +17,8 @@ resources:
   type: js
 - url: /local/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js?track=true
   type: js
+- url: /local/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js?track=true
+  type: js
 views:
   - !include home.yaml
   - !include ground_floor.yaml
