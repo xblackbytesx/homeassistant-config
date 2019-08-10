@@ -1,5 +1,5 @@
 type: horizontal-stack
 cards:
   - type: light
-    entity: group.exterior_lighting
+    entity: light.exterior_lighting
     name: Exterior

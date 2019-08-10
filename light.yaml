@@ -4,3 +4,9 @@
       name: Ledstrip TV Cabinet
       protocol: 'ledenet'
       mode: "rgbw"
+
+- platform: group
+  name: Exterior lighting
+  entities:
+    - light.0x00158d00017934ff_light
+    - light.0x00158d00017ab8da_light
