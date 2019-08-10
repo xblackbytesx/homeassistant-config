@@ -1,20 +1,20 @@
 type: vertical-stack
 cards:
-  - type: sensor
-    entity: sensor.speedtest_ping
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.speedtest_ping
     name: Ping
-    icon: mdi:timer
-    hours_to_show: 48
-    graph: line
-  - type: sensor
-    entity: sensor.speedtest_download
+    line_color: '#2980b9'
+    line_width: 6
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.speedtest_download
     name: Download
-    icon: mdi:download
-    hours_to_show: 48
-    graph: line
-  - type: sensor
-    entity: sensor.speedtest_upload
+    line_color: '#b58e31'
+    line_width: 6
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.speedtest_upload
     name: Upload
-    icon: mdi:upload
-    hours_to_show: 48
-    graph: line
+    line_color: '#b93829'
+    line_width: 6

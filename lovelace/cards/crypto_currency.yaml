@@ -1,20 +1,20 @@
 type: vertical-stack
 cards:
-  - type: sensor
-    entity: sensor.bitcoin
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.bitcoin
     name: Bitcoin
-    icon: mdi:bitcoin
-    hours_to_show: 48
-    graph: line
-  - type: sensor
-    entity: sensor.ethereum
+    line_color: '#2980b9'
+    line_width: 6
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.ethereum
     name: Ethereum
-    icon: mdi:ethereum
-    hours_to_show: 48
-    graph: line
-  - type: sensor
-    entity: sensor.iota
+    line_color: '#b58e31'
+    line_width: 6
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.iota
     name: IOTA
-    icon: mdi:coin
-    hours_to_show: 48
-    graph: line
+    line_color: '#b93829'
+    line_width: 6

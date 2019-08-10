@@ -1,30 +1,26 @@
 type: vertical-stack
 cards:
-  - type: sensor
-    entity: sensor.gas_station_1_euro95
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.gas_station_1_euro95
     name: !secret gas_station_1_name_euro95
-    icon: mdi:gas-station
-    height: 75
-    hours_to_show: 48
-    graph: line
-  - type: sensor
-    entity: sensor.gas_station_2_euro95
+    line_color: '#2980b9'
+    line_width: 6
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.gas_station_2_euro95
     name: !secret gas_station_2_name_euro95
-    icon: mdi:gas-station
-    height: 75
-    hours_to_show: 48
-    graph: line
-  - type: sensor
-    entity: sensor.gas_station_2_blueone
+    line_color: '#b58e31'
+    line_width: 6
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.gas_station_2_blueone
     name: !secret gas_station_2_name_blueone
-    icon: mdi:gas-station
-    height: 75
-    hours_to_show: 48
-    graph: line
-  - type: sensor
-    entity: sensor.gas_station_3_euro95
+    line_color: '#b58e31'
+    line_width: 6
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.gas_station_3_euro95
     name: !secret gas_station_3_name_euro95
-    icon: mdi:gas-station
-    height: 75
-    hours_to_show: 48
-    graph: line
+    line_color: '#b93829'
+    line_width: 6
