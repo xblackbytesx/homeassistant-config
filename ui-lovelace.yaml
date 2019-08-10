@@ -21,6 +21,8 @@ resources:
   type: js
 - url: /local/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js?track=true
   type: js
+- url: /local/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js?track=true
+  type: js
 views:
 - title: Home
   icon: mdi:home
@@ -667,7 +669,7 @@ views:
   - type: horizontal-stack
     cards:
     - type: light
-      entity: light.exterior
+      entity: light.exterior_lighting
       name: Exterior
   - type: entities
     title: Exterior switches
