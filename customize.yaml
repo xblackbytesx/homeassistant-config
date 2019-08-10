@@ -63,6 +63,12 @@ sensor.speedtest_download:
 sensor.speedtest_upload:
   friendly_name: Upload
   icon: mdi:upload
+sensor.bitcoin:
+  icon: mdi:bitcoin
+sensor.ethereum:
+  icon: mdi:ethereum
+sensor.iota:
+  icon: mdi:coin
 sensor.hue_motion_hallway_door_battery_level:
   icon: mdi:battery-80
 sensor.hue_motion_hallway_stairs_battery_level:
