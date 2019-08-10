@@ -1,5 +1,5 @@
   - platform: haveibeenpwned
     email:
-      - !secret person_one_primay_email
+      - !secret person_one_primary_email
       - !secret person_one_secondary_email
       - !secret person_two_primary_email
