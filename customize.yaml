@@ -12,7 +12,7 @@ light.small_bedroom:
   icon: mdi:hotel
 light.bathroom:
   icon: mdi:shower
-light.exterior:
+light.exterior_lighting:
   icon: mdi:tree
 light.dimmable_socket_one:
   friendly_name: Small bedroom lights
