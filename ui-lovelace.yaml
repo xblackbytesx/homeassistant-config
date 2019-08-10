@@ -41,21 +41,11 @@ views:
         "not_home": /local/avatars/lois_off.gif
   - type: entity-filter
     entities:
-    - entity: binary_sensor.hw_motion_detected
-      name: Hallway
-      icon: mdi:run
-    - entity: binary_sensor.sa_motion_detected
-      name: Sitting Area
-      icon: mdi:run
-    - entity: binary_sensor.kitchen_motion_detected
-      name: Kitchen
-      icon: mdi:run
-    - entity: binary_sensor.co_motion_detected
-      name: Corridor
-      icon: mdi:run
-    - entity: binary_sensor.attic_motion_detected
-      name: Attic
-      icon: mdi:run
+    - binary_sensor.hw_motion_detected
+    - binary_sensor.sa_motion_detected
+    - binary_sensor.kitchen_motion_detected
+    - binary_sensor.co_motion_detected
+    - binary_sensor.attic_motion_detected
     state_filter:
     - 'on'
     card:
@@ -142,14 +132,24 @@ views:
     cards:
     - type: thermostat
       entity: climate.living_room
-    - type: entities
-      title: Living room climate
-      show_header_toggle: true
+    - type: custom:mini-graph-card
       entities:
-      - sensor.hue_motion_sensor_hallway_door_temperature
       - sensor.hue_motion_sensor_hallway_stairs_temperature
-      - sensor.hue_motion_sensor_sitting_area_temperature
+      name: Hallway
+      line_color: '#2980b9'
+      line_width: 6
+    - type: custom:mini-graph-card
+      entities:
       - sensor.hue_motion_sensor_kitchen_temperature
+      name: Kitchen
+      line_color: '#b58e31'
+      line_width: 6
+    - type: custom:mini-graph-card
+      entities:
+      - sensor.hue_motion_sensor_sitting_area_temperature
+      name: Sitting Area
+      line_color: '#b93829'
+      line_width: 6
   - type: weather-forecast
     entity: weather.dark_sky
   - type: picture-elements
@@ -241,37 +241,40 @@ views:
         color: yellow
   - type: vertical-stack
     cards:
-    - type: sensor
-      entity: sensor.gas_station_1_euro95
+    - type: custom:mini-graph-card
+      entities:
+      - sensor.gas_station_1_euro95
       name: !secret gas_station_1_name_euro95
-      icon: mdi:gas-station
-      height: 75
-      hours_to_show: 48
-    - type: sensor
-      entity: sensor.gas_station_2_euro95
+      line_color: '#2980b9'
+      line_width: 6
+    - type: custom:mini-graph-card
+      entities:
+      - sensor.gas_station_2_euro95
       name: !secret gas_station_2_name_euro95
-      icon: mdi:gas-station
-      height: 75
-      hours_to_show: 48
-    - type: sensor
-      entity: sensor.gas_station_2_blueone
+      line_color: '#b58e31'
+      line_width: 6
+    - type: custom:mini-graph-card
+      entities:
+      - sensor.gas_station_2_blueone
       name: !secret gas_station_2_name_blueone
-      icon: mdi:gas-station
-      height: 75
-      hours_to_show: 48
-    - type: sensor
-      entity: sensor.gas_station_3_euro95
+      line_color: '#b58e31'
+      line_width: 6
+    - type: custom:mini-graph-card
+      entities:
+      - sensor.gas_station_3_euro95
       name: !secret gas_station_3_name_euro95
-      icon: mdi:gas-station
-      height: 75
-      hours_to_show: 48
+      line_color: '#b93829'
+      line_width: 6
   - type: entities
     title: Power Sockets
     show_header_toggle: true
     entities:
-    - switch.power_socket_one
-    - switch.power_socket_two
-    - switch.power_socket_three
+    - switch.0x000d6ffffedad23c_switch
+    - switch.0x000d6ffffea6df64_switch
+    - switch.0x000d6ffffea6e967_switch
+      # - switch.power_socket_one
+      # - switch.power_socket_two
+      # - switch.power_socket_three
     - light.dimmable_socket_one
     - light.dimmable_socket_two
   - type: conditional
@@ -417,13 +420,38 @@ views:
         border-bottom-right-radius: 6px
         font-weight: bold
         font-size: small
+  - type: vertical-stack
+    cards:
+    - type: thermostat
+      entity: climate.living_room
+    - type: custom:mini-graph-card
+      entities:
+      - sensor.hue_motion_sensor_hallway_stairs_temperature
+      name: Hallway
+      line_color: '#2980b9'
+      line_width: 6
+    - type: custom:mini-graph-card
+      entities:
+      - sensor.hue_motion_sensor_kitchen_temperature
+      name: Kitchen
+      line_color: '#b58e31'
+      line_width: 6
+    - type: custom:mini-graph-card
+      entities:
+      - sensor.hue_motion_sensor_sitting_area_temperature
+      name: Sitting Area
+      line_color: '#b93829'
+      line_width: 6
   - type: entities
     title: Ground floor switches
     show_header_toggle: true
     entities:
-    - switch.power_socket_one
-    - switch.power_socket_two
-    - switch.power_socket_three
+    - switch.0x000d6ffffedad23c_switch
+    - switch.0x000d6ffffea6df64_switch
+    - switch.0x000d6ffffea6e967_switch
+      # - switch.power_socket_one
+      # - switch.power_socket_two
+      # - switch.power_socket_three
     - light.dimmable_socket_one
     - light.dimmable_socket_two
     - switch.beamer_screen
@@ -479,8 +507,6 @@ views:
       - light.ledstrip_black_cabinet
       - light.ledstrip_kitchen_cabinet
       - light.hue_bulb_hallway
-      - light.dimmable_socket_one
-      - light.dimmable_socket_two
   - type: picture-entity
     title: Dafang
     entity: camera.dafang
@@ -534,11 +560,12 @@ views:
       - type: light
         entity: light.bathroom
         name: Bathroom
-  - type: entities
-    title: First floor climate
-    show_header_toggle: true
+  - type: custom:mini-graph-card
     entities:
     - sensor.hue_motion_sensor_corridor_temperature
+    name: Hallway
+    line_color: '#2980b9'
+    line_width: 6
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -741,7 +768,7 @@ views:
         color: yellow
   - type: weather-forecast
     entity: weather.dark_sky
-  - type: horizontal-stack
+  - type: vertical-stack
     cards:
     - type: sensor
       entity: !secret car_entity_expdate
@@ -886,21 +913,24 @@ views:
   cards:
   - type: vertical-stack
     cards:
-    - type: sensor
-      entity: sensor.speedtest_ping
+    - type: custom:mini-graph-card
+      entities:
+      - sensor.speedtest_ping
       name: Ping
-      icon: mdi:timer
-      hours_to_show: 48
-    - type: sensor
-      entity: sensor.speedtest_download
+      line_color: '#2980b9'
+      line_width: 6
+    - type: custom:mini-graph-card
+      entities:
+      - sensor.speedtest_download
       name: Download
-      icon: mdi:download
-      hours_to_show: 48
-    - type: sensor
-      entity: sensor.speedtest_upload
+      line_color: '#b58e31'
+      line_width: 6
+    - type: custom:mini-graph-card
+      entities:
+      - sensor.speedtest_upload
       name: Upload
-      icon: mdi:upload
-      hours_to_show: 48
+      line_color: '#b93829'
+      line_width: 6
   - type: entities
     title: Transmission
     entities:
@@ -1032,6 +1062,29 @@ views:
     - entity: sensor.bridge_state
     show_header_toggle: false
     title: Zigbee
+- title: Finance
+  icon: mdi:bitcoin
+  cards:
+  - type: vertical-stack
+    cards:
+    - type: custom:mini-graph-card
+      entities:
+      - sensor.bitcoin
+      name: Bitcoin
+      line_color: '#2980b9'
+      line_width: 6
+    - type: custom:mini-graph-card
+      entities:
+      - sensor.ethereum
+      name: Ethereum
+      line_color: '#b58e31'
+      line_width: 6
+    - type: custom:mini-graph-card
+      entities:
+      - sensor.iota
+      name: IOTA
+      line_color: '#b93829'
+      line_width: 6
 - title: automation_view
   icon: mdi:robot
   cards:
@@ -1132,22 +1185,14 @@ views:
   - type: entities
     title: Battery status
     entities:
-    - entity: sensor.hue_motion_hallway_door_battery_level
-      icon: mdi:battery-80
-    - entity: sensor.hue_motion_hallway_stairs_battery_level
-      icon: mdi:battery-80
-    - entity: sensor.hue_motion_sitting_area_battery_level
-      icon: mdi:battery-80
-    - entity: sensor.hue_motion_kitchen_battery_level
-      icon: mdi:battery-80
-    - entity: sensor.hue_motion_corridor_battery_level
-      icon: mdi:battery-80
-    - entity: sensor.monstera_deliciosa_battery
-      icon: mdi:battery-80
-    - entity: sensor.cocos_nucifera_battery
-      icon: mdi:battery-80
-    - entity: sensor.sabal_minor_battery
-      icon: mdi:battery-80
+    - sensor.hue_motion_hallway_door_battery_level
+    - sensor.hue_motion_hallway_stairs_battery_level
+    - sensor.hue_motion_sitting_area_battery_level
+    - sensor.hue_motion_kitchen_battery_level
+    - sensor.hue_motion_corridor_battery_level
+    - sensor.monstera_deliciosa_battery
+    - sensor.cocos_nucifera_battery
+    - sensor.sabal_minor_battery
   - type: custom:tracker-card
     title:
     trackers:
