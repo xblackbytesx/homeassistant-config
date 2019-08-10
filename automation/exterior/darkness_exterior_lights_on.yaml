@@ -13,5 +13,4 @@
         group_name: "Exterior"
         scene_name: "EX | Relax"
     - service: switch.turn_on
-      entity_id: switch.power_socket_three
-
+      entity_id: switch.0x000d6ffffea6e967_switch
