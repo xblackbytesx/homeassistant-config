@@ -13,7 +13,8 @@
         after: '06:00:00'
         before: '02:00:00'
   action:
-    - service: hue.hue_activate_scene
+    - service: light.turn_on
       data:
-        group_name: "Attic"
-        scene_name: "Attic | Relax"
+        entity_id: light.attic
+        brightness_pct: 70
+        kelvin: 2700

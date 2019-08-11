@@ -20,3 +20,8 @@
   name: Small bedroom
   entities:
     - light.0x90fd9ffffeea4e5e_light
+
+- platform: group
+  name: Attic
+  entities:
+    - light.0x00158d0001793961_light
