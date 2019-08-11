@@ -4,11 +4,11 @@
     event_type: button_pressed
     event_data: {"state": "on", "entity_id": "switch.duo_switch_mb_r"}
   action:
-  - service: hue.hue_activate_scene
-    data:
-      group_name: "Master Bedroom"
-      scene_name: "MB | Relax"
-
+    - service: light.turn_on
+      data:
+        entity_id: light.master_bedroom
+        brightness_pct: 100
+        kelvin: 2700
 
 - alias: MB | Duo switch | right | Off
   trigger:
@@ -16,5 +16,5 @@
     event_type: button_pressed
     event_data: {"state": "off", "entity_id": "switch.duo_switch_mb_r"}
   action:
-    - service: homeassistant.turn_off
-      entity_id: light.innr_master_bedroom
+    - service: light.turn_off
+      entity_id: light.master_bedroom

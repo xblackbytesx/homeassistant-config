@@ -10,3 +10,8 @@
   entities:
     - light.0x00158d00017934ff_light
     - light.0x00158d00017ab8da_light
+
+- platform: group
+  name: Master bedroom
+  entities:
+    - light.0x00158d00017cd686_light

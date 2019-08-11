@@ -12,6 +12,8 @@ light.small_bedroom:
   icon: mdi:hotel
 light.bathroom:
   icon: mdi:shower
+light.0x00158d00017cd686_light:
+  friendly_name: Master bedroom
 light.exterior_lighting:
   icon: mdi:tree
 light.0x00158d00017934ff_light:

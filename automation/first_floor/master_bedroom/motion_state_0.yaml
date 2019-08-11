@@ -11,5 +11,5 @@
       for:
         minutes: 0
   action:
-    - service: homeassistant.turn_off
+    - service: light.turn_off
       entity_id: light.master_bedroom

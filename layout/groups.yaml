@@ -22,7 +22,7 @@ master_bedroom_lighting:
   name: Master Bedroom lighting
   icon: mdi:hotel
   entities:
-    - light.master_bedroom
+    - light.0x00158d00017cd686_light
 
 hallway_lighting:
   name: Hallway lighting

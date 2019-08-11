@@ -8,5 +8,5 @@
     entity_id: input_boolean.co_meets_darkness_cutoff
     state: 'on'
   action:
-    - service: homeassistant.turn_on
+    - service: light.turn_on
       entity_id: light.master_bedroom
