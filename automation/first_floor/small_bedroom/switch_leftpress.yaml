@@ -8,7 +8,7 @@
       data:
         entity_id: light.small_bedroom
         brightness_pct: 25
-        rgb_color: 70,58,255
+        rgb_color: [70,58,255]
     - service: light.turn_on
       data:
         entity_id: light.dimmable_socket_one

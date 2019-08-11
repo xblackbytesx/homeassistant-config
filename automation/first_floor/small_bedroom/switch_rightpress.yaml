@@ -8,7 +8,7 @@
       data:
         entity_id: light.small_bedroom
         brightness_pct: 100
-        rgb_color: 255,209,114
+        rgb_color: [255,209,114]
 
 
 - alias: SB | Duo switch | right | Off
