@@ -25,3 +25,4 @@
   name: Attic
   entities:
     - light.0x00158d0001793961_light
+    - light.0x00158d0000dcb62a_light

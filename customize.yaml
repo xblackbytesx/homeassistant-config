@@ -16,6 +16,10 @@ light.0x00158d00017cd686_light:
   friendly_name: Master bedroom
 light.0x90fd9ffffeea4e5e_light:
   friendly_name: Small bedroom
+light.0x00158d0001793961_light:
+  friendly_name: Attic Front
+light.0x00158d0000dcb62a_light:
+  friendly_name: Attic Back
 light.exterior_lighting:
   icon: mdi:tree
 light.0x00158d00017934ff_light:

@@ -12,7 +12,7 @@ cards:
       show_header_toggle: true
       entities:
         - light.0x00158d0001793961_light
-        - light.innr_attic_back
+        - light.0x00158d0000dcb62a_light
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
