@@ -1,0 +1,17 @@
+- alias: Event | Button 3-1 pressed | On
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "on", "entity_id": "switch.power_socket_one"}
+  action:
+    - service: switch.turn_on
+      entity_id: switch.0x000d6ffffedad23c_switch
+
+- alias: Event | Button 3-1 pressed | Off
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "off", "entity_id": "switch.power_socket_one"}
+  action:
+    - service: switch.turn_off
+      entity_id: switch.0x000d6ffffedad23c_switch
