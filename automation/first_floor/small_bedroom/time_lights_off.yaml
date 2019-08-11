@@ -7,7 +7,7 @@
       hours: 0
       minutes: 45
   action:
-    - service: homeassistant.turn_off
+    - service: light.turn_off
       entity_id: light.small_bedroom
     # - service: notify.notify_matrix_noisy
     #   data:

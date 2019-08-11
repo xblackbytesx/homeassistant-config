@@ -15,3 +15,8 @@
   name: Master bedroom
   entities:
     - light.0x00158d00017cd686_light
+
+- platform: group
+  name: Small bedroom
+  entities:
+    - light.0x90fd9ffffeea4e5e_light

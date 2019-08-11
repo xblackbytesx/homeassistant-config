@@ -4,14 +4,11 @@
     event_type: button_pressed
     event_data: {"state": "on", "entity_id": "switch.duo_switch_sb_l"}
   action:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: "Small Bedroom"
-        scene_name: "SB | Sleep"
     - service: light.turn_on
-      entity_id: light.tradfri_bulb_small_bedroom
       data:
+        entity_id: light.small_bedroom
         brightness_pct: 25
+        rgb_color: 70,58,255
     - service: light.turn_on
       data:
         entity_id: light.dimmable_socket_one
@@ -23,7 +20,7 @@
     event_type: button_pressed
     event_data: {"state": "off", "entity_id": "switch.duo_switch_sb_l"}
   action:
-    - service: homeassistant.turn_off
-      entity_id: light.tradfri_bulb_small_bedroom
+    - service: light.turn_off
+      entity_id: light.small_bedroom
     - service: homeassistant.turn_off
       entity_id: light.dimmable_socket_one
