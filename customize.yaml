@@ -14,6 +14,10 @@ light.bathroom:
   icon: mdi:shower
 light.exterior_lighting:
   icon: mdi:tree
+light.0x00158d00017934ff_light:
+  friendly_name: Front porch
+light.0x00158d00017ab8da_light:
+  friendly_name: Backyard
 light.dimmable_socket_one:
   friendly_name: Small bedroom lights
   icon: mdi:brightness-6

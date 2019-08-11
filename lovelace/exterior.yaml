@@ -24,8 +24,8 @@ cards:
       title: Exterior lighting
       show_header_toggle: true
       entities:
-        - light.front_porch
-        - light.backyard
+        - light.0x00158d00017934ff_light
+        - light.0x00158d00017ab8da_light
   - type: picture-entity
     title: Dafang
     entity: camera.xiaofang_2
