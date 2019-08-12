@@ -97,6 +97,14 @@ sensor.cocos_nucifera_battery:
   icon: mdi:battery-80
 sensor.sabal_minor_battery:
   icon: mdi:battery-80
+sensor.gas_station_1_euro95:
+  icon: mdi:gas-station
+sensor.gas_station_2_blueone:
+  icon: mdi:gas-station
+sensor.gas_station_2_euro95:
+  icon: mdi:gas-station
+sensor.gas_station_3_euro95:
+  icon: mdi:gas-station
 binary_sensor.hw_motion_detected:
   friendly_name: Hallway
   icon: mdi:run
