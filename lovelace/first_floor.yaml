@@ -5,7 +5,6 @@ cards:
   - type: custom:mini-graph-card
     entities:
       - sensor.hue_motion_sensor_corridor_temperature
-    name: Hallway
     line_color: '#2980b9'
     line_width: 6
   - type: conditional
