@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Git and Github setup
+mkdir -p ~/.ssh
+cp assets/ssh-config ~/.ssh/config
+cp assets/id-github-master ~/.ssh/id-github-master
+cp assets/git-config ~/.gitconfig
+chmod 600 ~/.ssh/config ~/.ssh/id-github-master
+
 # Remove if exists
 rm -rf custom_components
 rm -rf www/custom-lovelace
@@ -52,10 +59,3 @@ wget https://github.com/kalkih/mini-media-player/releases/download/v1.2.2/mini-m
 
 # Lovelace generator
 wget https://raw.githubusercontent.com/thomasloven/homeassistant-lovelace-gen/master/lovelace-gen.py
-
-# Git and Github setup
-mkdir -p ~/.ssh
-cp assets/ssh-config ~/.ssh/config
-cp assets/id-github-master ~/.ssh/id-github-master
-cp assets/git-config ~/.gitconfig
-chmod 600 ~/.ssh/config ~/.ssh/id-github-master

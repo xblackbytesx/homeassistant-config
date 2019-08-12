@@ -20,3 +20,10 @@ cards:
     name: Sitting Area
     line_color: '#b93829'
     line_width: 6
+  - type: custom:mini-graph-card
+    name: Temperature
+    icon: mdi:server
+    entities:
+      - sensor.hue_motion_sensor_hallway_stairs_temperature
+      - sensor.hue_motion_sensor_kitchen_temperature
+      - sensor.hue_motion_sensor_sitting_area_temperature
