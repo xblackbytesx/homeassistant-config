@@ -1,7 +1,7 @@
 - alias: "SB | Time | Lights off"
   trigger:
     platform: state
-    entity_id: light.tradfri_bulb_small_bedroom
+    entity_id: light.0x90fd9ffffeea4e5e_light
     to: 'on'
     for:
       hours: 0
