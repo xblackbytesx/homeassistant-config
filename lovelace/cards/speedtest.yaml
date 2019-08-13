@@ -7,14 +7,7 @@ cards:
     line_color: '#2980b9'
     line_width: 6
   - type: custom:mini-graph-card
-    entities:
-      - sensor.speedtest_download
-    name: Download
-    line_color: '#b58e31'
-    line_width: 6
-  - type: custom:mini-graph-card
+    name: Speedtest
     entities:
       - sensor.speedtest_upload
-    name: Upload
-    line_color: '#b93829'
-    line_width: 6
+      - sensor.speedtest_download

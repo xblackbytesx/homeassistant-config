@@ -39,22 +39,30 @@ mv custom_components/zigbee_networkmap/custom_components/zigbee2mqtt_networkmap 
 rm -rf custom_components/zigbee_networkmap
 
 # Fetch desired custom cards
-mkdir -p www/custom-lovelace/upcoming-media-card
-mkdir -p www/custom-lovelace/monster-card
-mkdir -p www/custom-lovelace/lovelace-swipe-navigation
-mkdir -p www/custom-lovelace/lovelace-bar-card
-mkdir -p www/custom-lovelace/lovelace-fold-entity-row
-mkdir -p www/custom-lovelace/lovelace-card-tools
-mkdir -p www/custom-lovelace/lovelace-mini-graph-card
-mkdir -p www/custom-lovelace/lovelace-mini-media-player
 wget https://raw.githubusercontent.com/custom-cards/tracker-card/master/tracker-card.js -O www/tracker-card.js
+
+mkdir -p www/custom-lovelace/upcoming-media-card
 wget https://raw.githubusercontent.com/custom-cards/upcoming-media-card/master/upcoming-media-card.js -O www/custom-lovelace/upcoming-media-card/upcoming-media-card.js
+
+mkdir -p www/custom-lovelace/monster-card
 wget https://raw.githubusercontent.com/ciotlosm/custom-lovelace/master/monster-card/monster-card.js -O www/custom-lovelace/monster-card/monster-card.js
+
+mkdir -p www/custom-lovelace/lovelace-swipe-navigation
 wget https://raw.githubusercontent.com/maykar/lovelace-swipe-navigation/master/swipe-navigation.js -O www/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js
+
+mkdir -p www/custom-lovelace/lovelace-bar-card
 wget https://raw.githubusercontent.com/custom-cards/bar-card/master/bar-card.js -O www/custom-lovelace/lovelace-bar-card/bar-card.js
+
+mkdir -p www/custom-lovelace/lovelace-fold-entity-row
 wget https://raw.githubusercontent.com/thomasloven/lovelace-card-tools/master/card-tools.js -O www/custom-lovelace/lovelace-card-tools/card-tools.js
+
+mkdir -p www/custom-lovelace/lovelace-card-tools
 wget https://raw.githubusercontent.com/thomasloven/lovelace-fold-entity-row/master/fold-entity-row.js -O www/custom-lovelace/lovelace-fold-entity-row/fold-entity-row.js
+
+mkdir -p www/custom-lovelace/lovelace-mini-graph-card
 wget https://github.com/kalkih/mini-graph-card/releases/download/v0.5.0/mini-graph-card-bundle.js -O www/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js
+
+mkdir -p www/custom-lovelace/lovelace-mini-media-player
 wget https://github.com/kalkih/mini-media-player/releases/download/v1.2.2/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
 
 # Lovelace generator

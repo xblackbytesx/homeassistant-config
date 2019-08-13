@@ -1,16 +1,12 @@
-type: vertical-stack
-cards:
-  - type: sensor
-    entity: !secret car_entity_expdate
+type: glance
+title: RDW Information
+entities:
+  - entity: !secret car_entity_expdate
     name: APK expiration
     icon: mdi:calendar-clock
-
-  - type: sensor
-    entity: !secret car_entity_insured
+  - entity: !secret car_entity_insured
     name: Insurance status
     icon: mdi:file-document-box-check-outline
-
-  - type: sensor
-    entity: !secret car_entity_recall
+  - entity: !secret car_entity_recall
     name: Callback status
     icon: mdi:message-alert-outline
