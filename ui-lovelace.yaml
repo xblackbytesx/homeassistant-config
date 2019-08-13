@@ -135,23 +135,29 @@ views:
     - type: thermostat
       entity: climate.living_room
     - type: custom:mini-graph-card
+      name: Temperature
       entities:
       - sensor.hue_motion_sensor_hallway_stairs_temperature
-      name: Hallway
-      line_color: '#2980b9'
-      line_width: 6
-    - type: custom:mini-graph-card
-      entities:
       - sensor.hue_motion_sensor_kitchen_temperature
-      name: Kitchen
-      line_color: '#b58e31'
-      line_width: 6
-    - type: custom:mini-graph-card
-      entities:
       - sensor.hue_motion_sensor_sitting_area_temperature
-      name: Sitting Area
-      line_color: '#b93829'
-      line_width: 6
+#   - type: custom:mini-graph-card
+#     entities:
+#       - sensor.hue_motion_sensor_hallway_stairs_temperature
+#     name: Hallway
+#     line_color: '#2980b9'
+#     line_width: 6
+#   - type: custom:mini-graph-card
+#     entities:
+#       - sensor.hue_motion_sensor_kitchen_temperature
+#     name: Kitchen
+#     line_color: '#b58e31'
+#     line_width: 6
+#   - type: custom:mini-graph-card
+#     entities:
+#       - sensor.hue_motion_sensor_sitting_area_temperature
+#     name: Sitting Area
+#     line_color: '#b93829'
+#     line_width: 6
   - type: weather-forecast
     entity: weather.dark_sky
   - type: picture-elements
@@ -243,30 +249,34 @@ views:
         color: yellow
   - type: vertical-stack
     cards:
-    - type: custom:mini-graph-card
-      entities:
-      - sensor.gas_station_1_euro95
-      name: !secret gas_station_1_name_euro95
-      line_color: '#2980b9'
-      line_width: 6
-    - type: custom:mini-graph-card
-      entities:
-      - sensor.gas_station_2_euro95
-      name: !secret gas_station_2_name_euro95
-      line_color: '#b58e31'
-      line_width: 6
-    - type: custom:mini-graph-card
-      entities:
-      - sensor.gas_station_2_blueone
-      name: !secret gas_station_2_name_blueone
-      line_color: '#b58e31'
-      line_width: 6
-    - type: custom:mini-graph-card
-      entities:
-      - sensor.gas_station_3_euro95
-      name: !secret gas_station_3_name_euro95
-      line_color: '#b93829'
-      line_width: 6
+    - type: horizontal-stack
+      cards:
+      - type: custom:mini-graph-card
+        entities:
+        - sensor.gas_station_1_euro95
+        name: !secret gas_station_1_name_euro95
+        line_color: '#2980b9'
+        line_width: 6
+      - type: custom:mini-graph-card
+        entities:
+        - sensor.gas_station_2_euro95
+        name: !secret gas_station_2_name_euro95
+        line_color: '#b58e31'
+        line_width: 6
+    - type: horizontal-stack
+      cards:
+      - type: custom:mini-graph-card
+        entities:
+        - sensor.gas_station_2_blueone
+        name: !secret gas_station_2_name_blueone
+        line_color: '#b58e31'
+        line_width: 6
+      - type: custom:mini-graph-card
+        entities:
+        - sensor.gas_station_3_euro95
+        name: !secret gas_station_3_name_euro95
+        line_color: '#b93829'
+        line_width: 6
   - type: entities
     title: Power Sockets
     show_header_toggle: true
@@ -427,23 +437,29 @@ views:
     - type: thermostat
       entity: climate.living_room
     - type: custom:mini-graph-card
+      name: Temperature
       entities:
       - sensor.hue_motion_sensor_hallway_stairs_temperature
-      name: Hallway
-      line_color: '#2980b9'
-      line_width: 6
-    - type: custom:mini-graph-card
-      entities:
       - sensor.hue_motion_sensor_kitchen_temperature
-      name: Kitchen
-      line_color: '#b58e31'
-      line_width: 6
-    - type: custom:mini-graph-card
-      entities:
       - sensor.hue_motion_sensor_sitting_area_temperature
-      name: Sitting Area
-      line_color: '#b93829'
-      line_width: 6
+#   - type: custom:mini-graph-card
+#     entities:
+#       - sensor.hue_motion_sensor_hallway_stairs_temperature
+#     name: Hallway
+#     line_color: '#2980b9'
+#     line_width: 6
+#   - type: custom:mini-graph-card
+#     entities:
+#       - sensor.hue_motion_sensor_kitchen_temperature
+#     name: Kitchen
+#     line_color: '#b58e31'
+#     line_width: 6
+#   - type: custom:mini-graph-card
+#     entities:
+#       - sensor.hue_motion_sensor_sitting_area_temperature
+#     name: Sitting Area
+#     line_color: '#b93829'
+#     line_width: 6
   - type: entities
     title: Ground floor switches
     show_header_toggle: true
@@ -565,7 +581,6 @@ views:
   - type: custom:mini-graph-card
     entities:
     - sensor.hue_motion_sensor_corridor_temperature
-    name: Hallway
     line_color: '#2980b9'
     line_width: 6
   - type: conditional
@@ -612,8 +627,8 @@ views:
       - light.hue_candle_bathroom_l
       - light.hue_bulb_bathroom_r
       - light.hue_bulb_large_bedroom
-      - light.tradfri_bulb_small_bedroom
-      - light.innr_master_bedroom
+      - light.0x90fd9ffffeea4e5e_light
+      - light.0x00158d00017cd686_light
       - light.ledstrip_large_bedroom
   - type: conditional
     conditions:
@@ -648,8 +663,8 @@ views:
       title: All attic lights
       show_header_toggle: true
       entities:
-      - light.innr_attic_front
-      - light.innr_attic_back
+      - light.0x00158d0001793961_light
+      - light.0x00158d0000dcb62a_light
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -770,20 +785,16 @@ views:
         color: yellow
   - type: weather-forecast
     entity: weather.dark_sky
-  - type: vertical-stack
-    cards:
-    - type: sensor
-      entity: !secret car_entity_expdate
+  - type: glance
+    title: RDW Information
+    entities:
+    - entity: !secret car_entity_expdate
       name: APK expiration
       icon: mdi:calendar-clock
-
-    - type: sensor
-      entity: !secret car_entity_insured
+    - entity: !secret car_entity_insured
       name: Insurance status
       icon: mdi:file-document-box-check-outline
-
-    - type: sensor
-      entity: !secret car_entity_recall
+    - entity: !secret car_entity_recall
       name: Callback status
       icon: mdi:message-alert-outline
   - type: conditional
@@ -795,8 +806,8 @@ views:
       title: Exterior lighting
       show_header_toggle: true
       entities:
-      - light.front_porch
-      - light.backyard
+      - light.0x00158d00017934ff_light
+      - light.0x00158d00017ab8da_light
   - type: picture-entity
     title: Dafang
     entity: camera.xiaofang_2
@@ -946,17 +957,10 @@ views:
       line_color: '#2980b9'
       line_width: 6
     - type: custom:mini-graph-card
-      entities:
-      - sensor.speedtest_download
-      name: Download
-      line_color: '#b58e31'
-      line_width: 6
-    - type: custom:mini-graph-card
+      name: Speedtest
       entities:
       - sensor.speedtest_upload
-      name: Upload
-      line_color: '#b93829'
-      line_width: 6
+      - sensor.speedtest_download
   - type: entities
     title: Transmission
     entities:
