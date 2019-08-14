@@ -2,7 +2,6 @@ title: Home
 icon: mdi:home
 cards:
   - !include cards/people.yaml
-  - !include cards/motion_detected.yaml
   - type: entities
     entities:
       - switch.beamer_screen
@@ -49,6 +48,12 @@ cards:
         - light.ledstrip_tv_cabinet
         - light.ledstrip_black_cabinet
         - light.ledstrip_kitchen_cabinet
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      - !include cards/motion_detected.yaml
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
