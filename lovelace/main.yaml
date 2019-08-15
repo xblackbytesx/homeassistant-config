@@ -19,6 +19,8 @@ resources:
   type: js
 - url: /local/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js?track=true
   type: js
+- url: /local/overrides.css
+  type: css
 views:
   - !include home.yaml
   - !include ground_floor.yaml
