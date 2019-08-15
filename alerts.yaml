@@ -11,3 +11,28 @@ front_door:
   skip_first: true
   notifiers:
     - notify_matrix_clean
+
+# battery_motion_hallway_door:
+#   name: Front door open
+#   message: Front door has been open for a while now, is this right?
+#   done_message: Front door has been closed
+#   entity_id: sensor.hue_motion_hallway_door_battery_level
+#   state: 'on'
+#   repeat:
+#     - 5
+#     - 10
+#   can_acknowledge: true
+#   skip_first: true
+#   notifiers:
+#     - notify_matrix_clean
+#
+#
+#
+#   - sensor.hue_motion_hallway_door_battery_level
+#   - sensor.hue_motion_hallway_stairs_battery_level
+#   - sensor.hue_motion_sitting_area_battery_level
+#   - sensor.hue_motion_kitchen_battery_level
+#   - sensor.hue_motion_corridor_battery_level
+#   - sensor.monstera_deliciosa_battery
+#   - sensor.cocos_nucifera_battery
+#   - sensor.sabal_minor_battery
