@@ -33,3 +33,4 @@ views:
   - !include finance.yaml
   - !include automation.yaml
   - !include overrides.yaml
+  - !include floorplan.yaml

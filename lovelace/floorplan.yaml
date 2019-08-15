@@ -1,0 +1,5 @@
+title: Map
+icon: mdi:home
+panel: true
+cards:
+  - !include cards/floorplan_ground_floor.yaml
