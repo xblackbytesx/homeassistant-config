@@ -1,6 +1,5 @@
 type: vertical-stack
 cards:
-cards:
   - type: 'custom:simple-thermostat'
     entity: climate.living_room
     step_size: 1
