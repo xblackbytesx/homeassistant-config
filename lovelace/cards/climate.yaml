@@ -1,7 +1,11 @@
 type: vertical-stack
 cards:
-  - type: thermostat
+cards:
+  - type: 'custom:simple-thermostat'
     entity: climate.living_room
+    step_size: 1
+  # - type: thermostat
+  #   entity: climate.living_room
   - type: custom:mini-graph-card
     name: Temperature
     entities:

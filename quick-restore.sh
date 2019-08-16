@@ -65,5 +65,8 @@ wget https://github.com/kalkih/mini-graph-card/releases/download/v0.5.0/mini-gra
 mkdir -p www/custom-lovelace/lovelace-mini-media-player
 wget https://github.com/kalkih/mini-media-player/releases/download/v1.2.2/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
 
+mkdir -p www/custom-lovelace/simple-thermostat
+wget https://github.com/nervetattoo/simple-thermostat/releases/download/0.25.0/simple-thermostat.js -O www/custom-lovelace/simple-thermostat/simple-thermostat.js
+
 # Lovelace generator
 wget https://raw.githubusercontent.com/thomasloven/homeassistant-lovelace-gen/master/lovelace-gen.py
