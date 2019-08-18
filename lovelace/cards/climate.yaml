@@ -3,6 +3,8 @@ cards:
   - type: 'custom:simple-thermostat'
     entity: climate.living_room
     step_size: 1
+    sensors:
+      - entity: sensor.living_room_thermostat_humidity
   # - type: thermostat
   #   entity: climate.living_room
   - type: custom:mini-graph-card

@@ -3,10 +3,18 @@ icon: mdi:numeric-1-box
 cards:
   - !include cards/first_floor_groups.yaml
   - type: custom:mini-graph-card
+    name: Temperature
     entities:
       - sensor.hue_motion_sensor_corridor_temperature
-    line_color: '#2980b9'
-    line_width: 6
+      - sensor.0x00158d00036bffea_temperature
+  - type: custom:mini-graph-card
+    name: Humidity
+    entities:
+      - sensor.0x00158d00036bffea_humidity
+  - type: custom:mini-graph-card
+    name: Pressure
+    entities:
+      - sensor.0x00158d00036bffea_pressure
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
