@@ -1,10 +1,15 @@
 - alias: Attic | Motion | Lights off
   trigger:
-    platform: state
-    entity_id: binary_sensor.motion_sensor_attic
-    to: 'off'
-    for:
-      minutes: 20
+    - platform: state
+      entity_id: binary_sensor.attic_motion_detected
+      to: 'off'
+      for:
+        minutes: 10
+    - platform: state
+      entity_id: binary_sensor.attic_dark_enough
+      to: 'off'
+      for:
+        minutes: 5
   action:
     - service: light.turn_off
       entity_id: light.attic

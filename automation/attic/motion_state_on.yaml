@@ -1,13 +1,13 @@
 - alias: Attic | Motion | Lights on
   trigger:
     platform: state
-    entity_id: binary_sensor.motion_sensor_attic
+    entity_id: binary_sensor.attic_motion_detected
     to: 'on'
   condition:
     condition: and
     conditions:
       - condition: state
-        entity_id: input_boolean.kitchen_meets_darkness_cutoff
+        entity_id: binary_sensor.attic_dark_enough
         state: 'on'
       - condition: time
         after: '06:00:00'
