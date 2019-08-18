@@ -1,0 +1,18 @@
+- alias: "Bathroom | Motion | Lights off"
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.bathroom_motion_detected
+      to: 'off'
+      for:
+        minutes: 15
+    - platform: state
+      entity_id: binary_sensor.bathroom_dark_enough
+      to: 'off'
+      for:
+        minutes: 5
+  action:
+    - service: light.turn_off
+      entity_id: light.bathroom
+    - service: notify.notify_matrix_noisy
+      data:
+        message: "Shame! You forgot the Bathroom lights again!"

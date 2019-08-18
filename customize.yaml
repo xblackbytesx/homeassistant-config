@@ -120,6 +120,12 @@ binary_sensor.co_motion_detected:
 binary_sensor.attic_motion_detected:
   friendly_name: Attic
   icon: mdi:run
+binary_sensor.0x00158d00036b62d0_occupancy:
+  icon: mdi:run
+  friendly_name: Attic Front
+binary_sensor.0x00158d000349234a_occupancy:
+  icon: mdi:run
+  friendly_name: Bathroom
 binary_sensor.front_door:
   friendly_name: Front door
   icon: mdi:door
