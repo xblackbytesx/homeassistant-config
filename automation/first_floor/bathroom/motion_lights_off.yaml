@@ -5,11 +5,6 @@
       to: 'off'
       for:
         minutes: 15
-    - platform: state
-      entity_id: binary_sensor.bathroom_dark_enough
-      to: 'off'
-      for:
-        minutes: 5
   action:
     - service: light.turn_off
       entity_id: light.bathroom
