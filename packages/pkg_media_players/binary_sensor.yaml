@@ -1,4 +1,4 @@
- platform: template
+- platform: template
   sensors:
     sa_tv_media_playing:
       value_template: >-
