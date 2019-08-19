@@ -23,6 +23,8 @@ resources:
   type: js
 - url: /local/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js?track=true
   type: js
+- url: /local/custom-lovelace/simple-thermostat/simple-thermostat.js?track=true
+  type: js
 views:
 - title: Home
   icon: mdi:home
@@ -41,89 +43,6 @@ views:
       state_image:
         "home": /local/avatars/lois.gif
         "not_home": /local/avatars/lois_off.gif
-  - type: entity-filter
-    entities:
-    - binary_sensor.hw_motion_detected
-    - binary_sensor.sa_motion_detected
-    - binary_sensor.kitchen_motion_detected
-    - binary_sensor.co_motion_detected
-    - binary_sensor.attic_motion_detected
-    state_filter:
-    - 'on'
-    card:
-      type: glance
-      title: Motion detected
-
-
-# type: picture-elements
-# image: /local/floorplan_ground_floor.jpg
-# elements:
-#   - type: state-icon
-#     tap_action:
-#       action: toggle
-#     entity: light.hue_bulb_hallway
-#     style:
-#       top: 25%
-#       left: 38%
-#   - type: state-icon
-#     tap_action:
-#       action: toggle
-#     entity: light.hue_iris_tv_cabinet
-#     style:
-#       bottom: 12%
-#       right: 8%
-#   - type: state-icon
-#     tap_action:
-#       action: toggle
-#     entity: light.hue_candle_salt_lamp
-#     style:
-#       bottom: 12%
-#       right: 25%
-#   - type: state-icon
-#     tap_action:
-#       action: toggle
-#     entity: light.hue_go_closet_l
-#     style:
-#       top: 22%
-#       right: 25%
-#   - type: state-icon
-#     tap_action:
-#       action: toggle
-#     entity: light.hue_go_closet_r
-#     style:
-#       top: 25%
-#       right: 17%
-#   - type: state-icon
-#     tap_action:
-#       action: toggle
-#     entity: light.hue_bulb_standing_lamp
-#     style:
-#       top: 23%
-#       right: 32.6%
-#   - type: state-icon
-#     tap_action:
-#       action: toggle
-#     entity: light.hue_bulb_kitchen_table_r
-#     style:
-#       bottom: 16%
-#       left: 31%
-#   - type: state-icon
-#     tap_action:
-#       action: toggle
-#     entity: light.hue_bulb_kitchen_table_l
-#     style:
-#       bottom: 16%
-#       left: 23.5%
-#   - type: state-label
-#     entity: sensor.living_room_thermostat_temperature
-#     style:
-#       top: 0
-#       left: 0
-#       background: rgba(0,0,0,.5)
-#       transform: inherit
-#       border-bottom-right-radius: 6px
-#       font-weight: bold
-#       font-size: small
   - type: entities
     entities:
     - switch.beamer_screen
@@ -132,8 +51,13 @@ views:
     - sensor.postnl
   - type: vertical-stack
     cards:
-    - type: thermostat
+    - type: 'custom:simple-thermostat'
       entity: climate.living_room
+      step_size: 1
+      sensors:
+      - entity: sensor.living_room_thermostat_humidity
+  # - type: thermostat
+  #   entity: climate.living_room
     - type: custom:mini-graph-card
       name: Temperature
       entities:
@@ -318,6 +242,94 @@ views:
     - entity: input_boolean.advanced_config
       state: "on"
     card:
+    - type: entity-filter
+      entities:
+      - binary_sensor.hw_motion_detected
+      - binary_sensor.sa_motion_detected
+      - binary_sensor.kitchen_motion_detected
+      - binary_sensor.co_motion_detected
+      - binary_sensor.attic_motion_detected
+      state_filter:
+      - 'on'
+      card:
+        type: glance
+        title: Motion detected
+
+
+# type: picture-elements
+# image: /local/floorplan_ground_floor.jpg
+# elements:
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_bulb_hallway
+#     style:
+#       top: 25%
+#       left: 38%
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_iris_tv_cabinet
+#     style:
+#       bottom: 12%
+#       right: 8%
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_candle_salt_lamp
+#     style:
+#       bottom: 12%
+#       right: 25%
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_go_closet_l
+#     style:
+#       top: 22%
+#       right: 25%
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_go_closet_r
+#     style:
+#       top: 25%
+#       right: 17%
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_bulb_standing_lamp
+#     style:
+#       top: 23%
+#       right: 32.6%
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_bulb_kitchen_table_r
+#     style:
+#       bottom: 16%
+#       left: 31%
+#   - type: state-icon
+#     tap_action:
+#       action: toggle
+#     entity: light.hue_bulb_kitchen_table_l
+#     style:
+#       bottom: 16%
+#       left: 23.5%
+#   - type: state-label
+#     entity: sensor.living_room_thermostat_temperature
+#     style:
+#       top: 0
+#       left: 0
+#       background: rgba(0,0,0,.5)
+#       transform: inherit
+#       border-bottom-right-radius: 6px
+#       font-weight: bold
+#       font-size: small
+  - type: conditional
+    conditions:
+    - entity: input_boolean.advanced_config
+      state: "on"
+    card:
       type: entities
       title: Corridor lighting
       show_header_toggle: true
@@ -332,8 +344,8 @@ views:
       title: Exterior lighting
       show_header_toggle: true
       entities:
-      - light.front_porch
-      - light.backyard
+      - light.0x00158d00017934ff_light
+      - light.0x00158d00017ab8da_light
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -434,8 +446,13 @@ views:
         font-size: small
   - type: vertical-stack
     cards:
-    - type: thermostat
+    - type: 'custom:simple-thermostat'
       entity: climate.living_room
+      step_size: 1
+      sensors:
+      - entity: sensor.living_room_thermostat_humidity
+  # - type: thermostat
+  #   entity: climate.living_room
     - type: custom:mini-graph-card
       name: Temperature
       entities:
@@ -579,10 +596,18 @@ views:
         entity: light.bathroom
         name: Bathroom
   - type: custom:mini-graph-card
+    name: Temperature
     entities:
     - sensor.hue_motion_sensor_corridor_temperature
-    line_color: '#2980b9'
-    line_width: 6
+    - sensor.0x00158d00036bffea_temperature
+  - type: custom:mini-graph-card
+    name: Humidity
+    entities:
+    - sensor.0x00158d00036bffea_humidity
+  - type: custom:mini-graph-card
+    name: Pressure
+    entities:
+    - sensor.0x00158d00036bffea_pressure
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
