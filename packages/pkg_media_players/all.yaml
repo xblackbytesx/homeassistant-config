@@ -1,4 +1,4 @@
-sensor: !include sensor.yaml
+media_player: !include media_player.yaml
 binary_sensor: !include binary_sensor.yaml
 
 cast:
