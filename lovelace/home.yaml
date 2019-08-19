@@ -53,7 +53,7 @@ cards:
       - entity: input_boolean.advanced_config
         state: "on"
     card:
-      - !include cards/motion_detected.yaml
+      !include cards/motion_detected.yaml
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
