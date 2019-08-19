@@ -87,6 +87,28 @@ yeelight:
       name: Ledstrip Large Bedroom
       transition: 1000
 
+transmission:
+  host: !secret synology_ip
+  username: !secret transmission_user
+  password: !secret transmission_pass
+  monitored_conditions:
+    - 'current_status'
+    - 'download_speed'
+    - 'upload_speed'
+    - 'active_torrents'
+    - 'paused_torrents'
+    - 'started_torrents'
+    - 'completed_torrents'
+    - 'total_torrents'
+
+speedtestdotnet:
+  scan_interval:
+    hours: 6
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
 alert: !include alerts.yaml
 binary_sensor: !include binary_sensor.yaml
 light: !include light.yaml
