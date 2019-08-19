@@ -73,8 +73,8 @@ cards:
       title: Exterior lighting
       show_header_toggle: true
       entities:
-        - light.front_porch
-        - light.backyard
+        - light.0x00158d00017934ff_light
+        - light.0x00158d00017ab8da_light
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
