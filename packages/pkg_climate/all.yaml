@@ -1,4 +1,5 @@
-customize: !include customize.yaml
+homeassistant:
+  customize: !include customize.yaml
 
 nest:
   client_id: !secret nest_client_id
