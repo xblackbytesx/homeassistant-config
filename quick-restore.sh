@@ -45,7 +45,7 @@ mkdir -p www/custom-lovelace/upcoming-media-card
 wget https://raw.githubusercontent.com/custom-cards/upcoming-media-card/master/upcoming-media-card.js -O www/custom-lovelace/upcoming-media-card/upcoming-media-card.js
 
 mkdir -p www/custom-lovelace/monster-card
-wget https://raw.githubusercontent.com/ciotlosm/custom-lovelace/master/monster-card/monster-card.js -O www/custom-lovelace/monster-card/monster-card.js
+wget https://raw.githubusercontent.com/custom-cards/monster-card/master/monster-card.js -O www/custom-lovelace/monster-card/monster-card.js
 
 mkdir -p www/custom-lovelace/lovelace-swipe-navigation
 wget https://raw.githubusercontent.com/maykar/lovelace-swipe-navigation/master/swipe-navigation.js -O www/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js
