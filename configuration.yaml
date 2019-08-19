@@ -6,13 +6,21 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Amsterdam
   customize: !include customize.yaml
+
   packages:
-    plants_package: !include packages/pkg_plants/all.yaml
     zigbee2mqtt_package: !include packages/pkg_zigbee2mqtt/all.yaml
     rfx_package: !include packages/pkg_rfx/all.yaml
     matrix_package: !include packages/pkg_matrix/all.yaml
+    presence_package: !include packages/pkg_presence/all.yaml
+    climate_package: !include packages/pkg_climate/all.yaml
+    media_players_package: !include packages/pkg_media_players/all.yaml
+    camera_package: !include packages/pkg_camera/all.yaml
+    plants_package: !include packages/pkg_plants/all.yaml
     finance_package: !include packages/pkg_finance/all.yaml
+    shell_commands_package: !include packages/pkg_shell_commands/all.yaml
+    speech_package: !include packages/pkg_speech/all.yaml
     # christmas_package: !include packages/pkg_christmas/all.yaml
+
 
 hassio:
 config:
@@ -28,16 +36,6 @@ sun:
 #   ignore:
 #     - yeelight
 
-person:
-  - name: !secret person_one_name
-    id: !secret person_one_user_id
-    device_trackers:
-      - !secret person_one_device_tracker
-  - name: !secret person_two_name
-    id: !secret person_two_user_id
-    device_trackers:
-      - !secret person_two_device_tracker
-
 frontend:
   themes: !include themes.yaml
   javascript_version: latest
@@ -46,7 +44,6 @@ lovelace:
   mode: yaml
 
 http:
-  # api_password: !secret http_password
   ssl_certificate: /config/certificate.pem
   ssl_key: /config/privkey.pem
   cors_allowed_origins:
@@ -68,46 +65,15 @@ http:
 # For more information, please see:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
 updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
-
 custom_updater:
   track:
     - cards
     - components
 
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-  intents:
-    LivingRoomTemperature:
-     - What is the temperature in the living room
-
-intent_script:
-  LivingRoomTemperature:
-    speech:
-      text: It is currently {{ states.sensor.living_room_thermostat_temperature }} degrees in the living room.
-
-weather:
-  - platform: darksky
-    api_key: !secret dark_sky_api_key
-
-tts:
-  - platform: google_translate
-
 hue:
   bridges:
     - host: 10.0.221.30
       filename: philips-hue.conf
-
-cast:
-  chromecast:
-  - host: 10.0.221.26
-  chromecast_audio:
-  - host: 10.0.221.29
-
-nest:
-  client_id: !secret nest_client_id
-  client_secret: !secret nest_client_secret
 
 yeelight:
   devices:
@@ -121,48 +87,11 @@ yeelight:
       name: Ledstrip Large Bedroom
       transition: 1000
 
-transmission:
-  host: !secret synology_ip
-  username: !secret transmission_user
-  password: !secret transmission_pass
-  monitored_conditions:
-    - 'current_status'
-    - 'download_speed'
-    - 'upload_speed'
-    - 'active_torrents'
-    - 'paused_torrents'
-    - 'started_torrents'
-    - 'completed_torrents'
-    - 'total_torrents'
-
-speedtestdotnet:
-  scan_interval:
-    hours: 6
-  monitored_conditions:
-    - ping
-    - download
-    - upload
-
-camera:
-  - platform: synology
-    url: !secret synology_url
-    username: !secret synology_username
-    password: !secret synology_password
-    timeout: 15
-    verify_ssl: false
-
 alert: !include alerts.yaml
 binary_sensor: !include binary_sensor.yaml
 light: !include light.yaml
-notify: !include_dir_merge_list notify/
 automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/
 input_boolean: !include_dir_merge_named boolean/
 media_player: !include_dir_merge_list media_player/
-device_tracker: !include_dir_merge_list device_tracker/
-# camera: !include_dir_merge_list camera/
 script: !include_dir_merge_named script/
-# group: !include_dir_merge_named layout/
-
-shell_command:
-  lovelace_gen: 'python /config/lovelace-gen.py'

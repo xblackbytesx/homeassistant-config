@@ -58,22 +58,6 @@ switch.0x000d6ffffea6e967_switch:
   icon: mdi:power-socket-eu
 cover.attic_shutters:
   friendly_name: Attic Shutters
-sensor.living_room_thermostat_humidity:
-  friendly_name: Humidity
-sensor.hue_motion_sensor_hallway_stairs_temperature:
-  friendly_name: Hallway
-sensor.hue_motion_sensor_kitchen_temperature:
-  friendly_name: Kitchen
-sensor.hue_motion_sensor_sitting_area_temperature:
-  friendly_name: Sitting Area
-sensor.hue_motion_sensor_corridor_temperature:
-  friendly_name: Corridor
-sensor.0x00158d00036bffea_temperature:
-  friendly_name: Small bedroom
-sensor.0x00158d00036bffea_humidity:
-  friendly_name: Small bedroom
-sensor.0x00158d00036bffea_pressure:
-  friendly_name: Small bedroom
 sensor.speedtest_ping:
   friendly_name: Ping
   icon: mdi:timer
@@ -89,22 +73,32 @@ sensor.ethereum:
   icon: mdi:ethereum
 sensor.iota:
   icon: mdi:coin
-sensor.hue_motion_hallway_door_battery_level:
-  icon: mdi:battery-80
-sensor.hue_motion_hallway_stairs_battery_level:
-  icon: mdi:battery-80
-sensor.hue_motion_sitting_area_battery_level:
-  icon: mdi:battery-80
-sensor.hue_motion_kitchen_battery_level:
-  icon: mdi:battery-80
+sensor.0x00158d000313127e_battery:
+  friendly_name: Vibration sensor 1
+sensor.0x00158d000319ad0f_battery:
+  friendly_name: Vibration sensor 2
+sensor.0x00158d000349234a_battery:
+  friendly_name: Motion sensor Bathroom
+sensor.0x00158d00036b62d0_battery:
+  friendly_name: Motion sensor Attic/front
+sensor.0x00158d00036bffea_battery:
+  friendly_name: Humidity sensor Large bedroom
 sensor.hue_motion_corridor_battery_level:
-  icon: mdi:battery-80
+  friendly_name: Motion sensor Corridor
+sensor.hue_motion_hallway_door_battery_level:
+  friendly_name: Motion sensor Hallway/door
+sensor.hue_motion_hallway_stairs_battery_level:
+  friendly_name: Motion sensor Hallway/stairs
+sensor.hue_motion_kitchen_battery_level:
+  friendly_name: Motion sensor Kitchen
+sensor.hue_motion_sitting_area_battery_level:
+  friendly_name: Motion sensor Sitting area/screen
 sensor.monstera_deliciosa_battery:
-  icon: mdi:battery-80
-sensor.cocos_nucifera_battery:
-  icon: mdi:battery-80
+  friendly_name: Plant sensor Monstera
 sensor.sabal_minor_battery:
-  icon: mdi:battery-80
+  friendly_name: Plant sensor Sabal Minor
+sensor.cocos_nucifera_battery:
+  friendly_name: Plant sensor Cocos Nuficera
 sensor.gas_station_1_euro95:
   icon: mdi:gas-station
 sensor.gas_station_2_blueone:
@@ -127,6 +121,9 @@ binary_sensor.co_motion_detected:
   icon: mdi:run
 binary_sensor.attic_motion_detected:
   friendly_name: Attic
+  icon: mdi:run
+binary_sensor.bathroom_motion_detected:
+  friendly_name: Bathroom
   icon: mdi:run
 binary_sensor.0x00158d00036b62d0_occupancy:
   icon: mdi:run

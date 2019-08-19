@@ -13,7 +13,5 @@
   action:
     - service: homeassistant.turn_off
       entity_id: light.sitting_area
-    - service: homeassistant.turn_off
-      entity_id: light.ledstrip_tv_cabinet
-    - service: homeassistant.turn_off
-      entity_id: light.ledstrip_black_cabinet
+    - service: light.turn_off
+      entity_id: light.sitting_area_led_strips

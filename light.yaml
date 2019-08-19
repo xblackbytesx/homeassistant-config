@@ -6,6 +6,19 @@
       mode: "rgbw"
 
 - platform: group
+  name: Living room LED strips
+  entities:
+    - light.ledstrip_tv_cabinet
+    - light.ledstrip_black_cabinet
+    - light.ledstrip_kitchen_cabinet
+
+- platform: group
+  name: Sitting Area LED strips
+  entities:
+    - light.ledstrip_tv_cabinet
+    - light.ledstrip_black_cabinet
+
+- platform: group
   name: Exterior lighting
   entities:
     - light.0x00158d00017934ff_light

@@ -1,7 +1,0 @@
-cocos_nucifera:
-  sensors:
-    moisture: sensor.cocos_nucifera_moisture
-    temperature: sensor.cocos_nucifera_temperature
-    conductivity: sensor.cocos_nucifera_conductivity
-    brightness: sensor.cocos_nucifera_light_intensity
-  min_moisture: 20

@@ -1,0 +1,5 @@
+shell_command:
+  lovelace_gen: 'python /config/lovelace-gen.py'
+
+shell_command:
+  quick_restore: '/usr/bin/bash /config/quick-restore.sh'

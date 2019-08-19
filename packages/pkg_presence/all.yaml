@@ -1,0 +1,11 @@
+device_tracker: !include device_tracker.yaml
+
+person:
+  - name: !secret person_one_name
+    id: !secret person_one_user_id
+    device_trackers:
+      - !secret person_one_device_tracker
+  - name: !secret person_two_name
+    id: !secret person_two_user_id
+    device_trackers:
+      - !secret person_two_device_tracker
