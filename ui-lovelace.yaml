@@ -64,24 +64,6 @@ views:
       - sensor.hue_motion_sensor_hallway_stairs_temperature
       - sensor.hue_motion_sensor_kitchen_temperature
       - sensor.hue_motion_sensor_sitting_area_temperature
-#   - type: custom:mini-graph-card
-#     entities:
-#       - sensor.hue_motion_sensor_hallway_stairs_temperature
-#     name: Hallway
-#     line_color: '#2980b9'
-#     line_width: 6
-#   - type: custom:mini-graph-card
-#     entities:
-#       - sensor.hue_motion_sensor_kitchen_temperature
-#     name: Kitchen
-#     line_color: '#b58e31'
-#     line_width: 6
-#   - type: custom:mini-graph-card
-#     entities:
-#       - sensor.hue_motion_sensor_sitting_area_temperature
-#     name: Sitting Area
-#     line_color: '#b93829'
-#     line_width: 6
   - type: weather-forecast
     entity: weather.dark_sky
   - type: picture-elements
@@ -242,7 +224,7 @@ views:
     - entity: input_boolean.advanced_config
       state: "on"
     card:
-    - type: entity-filter
+      type: entity-filter
       entities:
       - binary_sensor.hw_motion_detected
       - binary_sensor.sa_motion_detected
@@ -459,24 +441,6 @@ views:
       - sensor.hue_motion_sensor_hallway_stairs_temperature
       - sensor.hue_motion_sensor_kitchen_temperature
       - sensor.hue_motion_sensor_sitting_area_temperature
-#   - type: custom:mini-graph-card
-#     entities:
-#       - sensor.hue_motion_sensor_hallway_stairs_temperature
-#     name: Hallway
-#     line_color: '#2980b9'
-#     line_width: 6
-#   - type: custom:mini-graph-card
-#     entities:
-#       - sensor.hue_motion_sensor_kitchen_temperature
-#     name: Kitchen
-#     line_color: '#b58e31'
-#     line_width: 6
-#   - type: custom:mini-graph-card
-#     entities:
-#       - sensor.hue_motion_sensor_sitting_area_temperature
-#     name: Sitting Area
-#     line_color: '#b93829'
-#     line_width: 6
   - type: entities
     title: Ground floor switches
     show_header_toggle: true
@@ -1237,17 +1201,26 @@ views:
     entities:
     - input_boolean.sa_media_status_override
     - input_boolean.engage_search_mode
-  - type: entities
-    title: Battery status
-    entities:
-    - sensor.hue_motion_hallway_door_battery_level
-    - sensor.hue_motion_hallway_stairs_battery_level
-    - sensor.hue_motion_sitting_area_battery_level
-    - sensor.hue_motion_kitchen_battery_level
-    - sensor.hue_motion_corridor_battery_level
-    - sensor.monstera_deliciosa_battery
-    - sensor.cocos_nucifera_battery
-    - sensor.sabal_minor_battery
+# type: entities
+# title: Battery status
+# entities:
+#   - sensor.hue_motion_hallway_door_battery_level
+#   - sensor.hue_motion_hallway_stairs_battery_level
+#   - sensor.hue_motion_sitting_area_battery_level
+#   - sensor.hue_motion_kitchen_battery_level
+#   - sensor.hue_motion_corridor_battery_level
+#   - sensor.monstera_deliciosa_battery
+#   - sensor.cocos_nucifera_battery
+#   - sensor.sabal_minor_battery
+
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: entities
+      title: Battery status
+    filter:
+      include:
+      - entity_id: "*_battery*"
   - type: custom:tracker-card
     title:
     trackers:
