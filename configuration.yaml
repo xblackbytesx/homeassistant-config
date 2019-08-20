@@ -21,7 +21,6 @@ homeassistant:
     speech_package: !include packages/pkg_speech/all.yaml
     # christmas_package: !include packages/pkg_christmas/all.yaml
 
-
 hassio:
 config:
 history:
@@ -115,5 +114,4 @@ light: !include light.yaml
 automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/
 input_boolean: !include_dir_merge_named boolean/
-media_player: !include_dir_merge_list media_player/
 script: !include_dir_merge_named script/
