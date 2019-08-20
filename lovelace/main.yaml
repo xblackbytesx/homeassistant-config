@@ -24,6 +24,7 @@ resources:
 - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?track=true
   type: module
 cch:
+  voice: hide
   options: clock
 views:
   - !include home.yaml
