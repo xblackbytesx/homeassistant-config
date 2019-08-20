@@ -68,5 +68,8 @@ wget https://github.com/kalkih/mini-media-player/releases/download/v1.2.2/mini-m
 mkdir -p www/custom-lovelace/simple-thermostat
 wget https://github.com/nervetattoo/simple-thermostat/releases/download/0.25.0/simple-thermostat.js -O www/custom-lovelace/simple-thermostat/simple-thermostat.js
 
+mkdir -p www/custom-lovelace/compact-custom-header
+wget https://raw.githubusercontent.com/maykar/compact-custom-header/master/compact-custom-header.js -O www/custom-lovelace/compact-custom-header/compact-custom-header.js
+
 # Lovelace generator
 wget https://raw.githubusercontent.com/thomasloven/homeassistant-lovelace-gen/master/lovelace-gen.py
