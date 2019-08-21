@@ -38,6 +38,8 @@ git clone git@github.com:rgruebel/ha_zigbee2mqtt_networkmap.git custom_component
 mv custom_components/zigbee_networkmap/custom_components/zigbee2mqtt_networkmap custom_components/
 rm -rf custom_components/zigbee_networkmap
 
+cp -Rp assets/custom_components/garbage_pickup custom_components/
+
 # Fetch desired custom cards
 wget https://raw.githubusercontent.com/custom-cards/tracker-card/master/tracker-card.js -O www/tracker-card.js
 
