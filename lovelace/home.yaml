@@ -48,6 +48,7 @@ cards:
         - light.ledstrip_tv_cabinet
         - light.ledstrip_black_cabinet
         - light.ledstrip_kitchen_cabinet
+  - !include cards/garbage_schedule.yaml
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

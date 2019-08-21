@@ -15,6 +15,7 @@ cards:
   - !include cards/solar_panels.yaml
   - !include cards/weather.yaml
   - !include cards/car_info.yaml
+  - !include cards/garbage_schedule.yaml
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

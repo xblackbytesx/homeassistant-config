@@ -1,0 +1,5 @@
+type: entities
+title: Garbage Pickup
+entities:
+  - sensor.sensor.garbage_pickup_today
+  - sensor.garbage_pickup_upcoming
