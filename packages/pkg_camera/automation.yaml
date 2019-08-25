@@ -1,0 +1,20 @@
+- alias: Time | Dafang | Reboot
+  trigger:
+    platform: time
+    at: "2:05:00"
+  action:
+    service: shell_command.reboot_dafang
+
+- alias: Time | Xiaofang 1 | Reboot
+  trigger:
+    platform: time
+    at: "2:10:00"
+  action:
+    service: shell_command.reboot_xiaofang_1
+
+- alias: Time | Xiaofang 2 | Reboot
+  trigger:
+    platform: time
+    at: "2:15:00"
+  action:
+    service: shell_command.reboot_xiaofang_2

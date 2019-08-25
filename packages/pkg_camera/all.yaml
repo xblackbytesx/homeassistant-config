@@ -5,3 +5,5 @@ camera:
     password: !secret synology_password
     timeout: 15
     verify_ssl: false
+
+automation: !include automation.yaml
