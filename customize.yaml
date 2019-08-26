@@ -107,6 +107,9 @@ sensor.sabal_minor_battery:
 sensor.cocos_nucifera_battery:
   friendly_name: Plant sensor Cocos Nuficera
 
+binary_sensor.0x00158d0003612f9b_smoke:
+  friendly_name: Living Room Smoke
+
 sensor.gas_station_1_euro95:
   icon: mdi:gas-station
 sensor.gas_station_2_blueone:

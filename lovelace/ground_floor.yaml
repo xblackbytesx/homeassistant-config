@@ -22,6 +22,8 @@ cards:
     show_header_toggle: true
     entities:
       - binary_sensor.front_door
+  - type: entities
+    entity: binary_sensor.0x00158d0003612f9b_smoke
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
