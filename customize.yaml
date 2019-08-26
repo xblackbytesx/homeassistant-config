@@ -82,7 +82,7 @@ sensor.0x00158d000319ad0f_battery:
 sensor.0x00158d000349234a_battery:
   friendly_name: Motion sensor Bathroom
 sensor.0x00158d00036b62d0_battery:
-  friendly_name: Motion sensor Attic/front
+  friendly_name: Motion sensor Attic/stairs
 sensor.0x00158d00036bffea_battery:
   friendly_name: Humidity sensor Large bedroom
 sensor.hue_motion_hallway_door_battery_level:

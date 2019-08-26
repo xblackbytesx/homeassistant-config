@@ -9,8 +9,8 @@ sensor.hue_motion_sensor_sitting_area_temperature:
 sensor.hue_motion_sensor_corridor_temperature:
   friendly_name: Corridor
 sensor.0x00158d00036bffea_temperature:
-  friendly_name: Small bedroom
+  friendly_name: Large bedroom
 sensor.0x00158d00036bffea_humidity:
-  friendly_name: Small bedroom
+  friendly_name: Large bedroom
 sensor.0x00158d00036bffea_pressure:
-  friendly_name: Small bedroom
+  friendly_name: Large bedroom
