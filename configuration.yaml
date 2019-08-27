@@ -15,6 +15,7 @@ homeassistant:
     climate_package: !include packages/pkg_climate/all.yaml
     media_players_package: !include packages/pkg_media_players/all.yaml
     camera_package: !include packages/pkg_camera/all.yaml
+    smoke_package: !includ packages/pkg_smoke/all.yaml
     plants_package: !include packages/pkg_plants/all.yaml
     finance_package: !include packages/pkg_finance/all.yaml
     shell_commands_package: !include packages/pkg_shell_commands/all.yaml

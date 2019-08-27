@@ -1,0 +1,14 @@
+- alias: LR | Smoke Detected | Notify | Light
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.0x00158d0003612f9b_smoke
+      to: 'on'
+  action:
+    - service: notify.notify_matrix_clean
+      data:
+        message: "-----------------------------------------------\n
+                  | Smoke has been detected in the Living Room! |\n
+                  -----------------------------------------------"
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.engage_search_mode
