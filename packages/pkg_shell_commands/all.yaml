@@ -1,6 +1,7 @@
 shell_command:
   lovelace_gen: 'python /config/lovelace-gen.py'
   quick_restore: '/bin/bash /config/quick-restore.sh'
+  reboot_nighthawk_master: !secret nighthawk_master_reboot_cmd
   reboot_dafang: !secret dafang_reboot_cmd
   reboot_xiaofang_1: !secret xiaofang_1_reboot_cmd
   reboot_xiaofang_2: !secret xiaofang_2_reboot_cmd
