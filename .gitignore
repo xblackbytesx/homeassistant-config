@@ -1,4 +1,4 @@
-*.pid
+no*.pid
 *.xml
 *.csr
 *.crt
@@ -36,3 +36,4 @@ __pycache__
 custom_components
 lovelace-gen.py
 assets
+shell_scripts
