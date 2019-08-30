@@ -1,0 +1,50 @@
+- name: LR | Not watching TV
+  entities:
+    light.hue_bulb_standing_lamp:
+      state: true
+      brightness_pct: 80
+    light.hue_go_closet_l:
+      state: true
+      brightness_pct: 80
+    light.hue_go_closet_r:
+      state: true
+      brightness_pct: 80
+    light.hue_iris_tv_cabinet:
+      state: true
+      brightness_pct: 80
+    light.hue_candle_salt_lamp:
+      state: true
+      xy_color: [0.33, 0.66]
+      brightness_pct: 100
+    light.ledstrip_tv_cabinet:
+      state: true
+      rgb_color: [0, 7, 8]
+      brightness: 8
+    light.ledstrip_black_cabinet:
+      state: true
+      rgb_color: [0, 7, 8]
+      brightness: 8
+
+- name: LR | Watching TV
+  entities:
+    light.hue_bulb_standing_lamp:
+      state: false
+    light.hue_go_closet_l:
+      state: false
+    light.hue_go_closet_r:
+      state: false
+    light.hue_iris_tv_cabinet:
+      state: true
+      brightness_pct: 30
+    light.hue_candle_salt_lamp:
+      state: true
+      xy_color: [0.33, 0.66]
+      brightness_pct: 50
+    light.ledstrip_tv_cabinet:
+      state: true
+      rgb_color: [8, 0, 0]
+      brightness: 8
+    light.ledstrip_black_cabinet:
+      state: true
+      rgb_color: [8, 0, 0]
+      brightness: 8

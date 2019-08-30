@@ -1,5 +1,7 @@
 group.all_automations:
   hidden: false
+
+# Lights
 light.sitting_area:
   icon: mdi:sofa
 light.kitchen:
@@ -32,6 +34,7 @@ light.dimmable_socket_one:
 light.dimmable_socket_two:
   friendly_name: Dimmable 2
   icon: mdi:brightness-6
+
 switch.sun_screen:
   friendly_name: Sunscreen
   icon: mdi:sunglasses
@@ -48,6 +51,7 @@ switch.beamer_screen:
   friendly_name: Beamer screen
   icon: mdi:projector-screen
 
+# Power sockets
 switch.0x000d6ffffedad23c_switch:
   friendly_name: TV Cabinet
   icon: mdi:power-socket-eu
@@ -66,7 +70,7 @@ switch.0x000d6ffffedaf667_switch:
 switch.0x000d6ffffedc5e05_switch:
   friendly_name: Attic (Dryer)
   icon: mdi:power-socket-eu
-  
+
 cover.attic_shutters:
   friendly_name: Attic Shutters
 sensor.speedtest_ping:

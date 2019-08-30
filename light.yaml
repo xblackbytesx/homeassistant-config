@@ -6,17 +6,42 @@
       mode: "rgbw"
 
 - platform: group
-  name: Living room LED strips
-  entities:
-    - light.ledstrip_tv_cabinet
-    - light.ledstrip_black_cabinet
-    - light.ledstrip_kitchen_cabinet
-
-- platform: group
   name: Sitting Area LED strips
   entities:
     - light.ledstrip_tv_cabinet
     - light.ledstrip_black_cabinet
+
+- platform: group
+  name: Living room LED strips
+  entities:
+    - light.sitting_area_led_strips
+    - light.ledstrip_kitchen_cabinet
+
+- platform: group
+  name: Sitting area lights
+  entities:
+    - light.hue_bulb_standing_lamp
+    - light.hue_go_closet_l
+    - light.hue_go_closet_r
+    - light.hue_iris_tv_cabinet
+    - light.hue_candle_salt_lamp
+
+- platform: group
+  name: Kitchen lights
+  entities:
+    - light.hue_bulb_kitchen_table_l
+    - light.hue_bulb_kitchen_table_r
+    - light.hue_spot_kitchen_counter_1
+    - light.hue_spot_kitchen_counter_2
+    - light.hue_spot_kitchen_counter_3
+    - light.hue_spot_kitchen_counter_4
+
+- platform: group
+  name: Living room lights
+  entities:
+    - light.sitting_area_lights
+    - light.kitchen_lights
+    - light.living_room_led_strips
 
 - platform: group
   name: Exterior lighting
