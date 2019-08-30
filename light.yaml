@@ -14,7 +14,7 @@
 - platform: group
   name: LG | LR | LED strips
   entities:
-    - light.lg__sa__led_strips
+    - light.lg_sa_led_strips
     - light.ledstrip_kitchen_cabinet
 
 - platform: group
@@ -39,9 +39,9 @@
 - platform: group
   name: LG | LR | All
   entities:
-    - light.lg__sa__all
-    - light.lg__kitchen__all
-    - light.lg__lr__led_strips
+    - light.lg_sa_all
+    - light.lg_kitchen_all
+    - light.lg_lr_led_strips
 
 - platform: group
   name: LG | EX | All

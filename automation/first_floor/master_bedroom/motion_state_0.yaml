@@ -12,4 +12,4 @@
         minutes: 0
   action:
     - service: light.turn_off
-      entity_id: light.lg__mb__all
+      entity_id: light.lg_mb_all

@@ -6,7 +6,7 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.lg__mb__all
+        entity_id: light.lg_mb_all
         transition: 1
         brightness_pct: 50
         kelvin: 2700
@@ -19,4 +19,4 @@
     event_data: {"state": "off", "entity_id": "switch.single_switch_mb"}
   action:
     - service: light.turn_off
-      entity_id: light.lg__mb__all
+      entity_id: light.lg_mb_all
