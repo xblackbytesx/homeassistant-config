@@ -1,5 +1,5 @@
 - name: LR | Search Mode
   entities:
-    light.living_room_lights:
+    light.lg_lr_all:
       state: true
       brightness_pct: 100

@@ -27,7 +27,7 @@
     light.ledstrip_black_cabinet:
       state: true
       xy_color: [0.149, 0.291]
-      brightness_pct: 80
+      brightness_pct: 45
 
 - name: LR | Watching TV
   entities:
@@ -50,4 +50,4 @@
     light.ledstrip_black_cabinet:
       state: true
       xy_color: [0.701, 0.299]
-      brightness_pct: 80
+      brightness_pct: 30
