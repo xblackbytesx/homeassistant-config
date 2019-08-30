@@ -6,7 +6,7 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.small_bedroom
+        entity_id: light.lg__sb__all
         transition: 1
         brightness_pct: 25
         rgb_color: [70,58,255]
@@ -22,6 +22,6 @@
     event_data: {"state": "off", "entity_id": "switch.duo_switch_sb_l"}
   action:
     - service: light.turn_off
-      entity_id: light.small_bedroom
+      entity_id: light.lg__sb__all
     - service: homeassistant.turn_off
       entity_id: light.dimmable_socket_one

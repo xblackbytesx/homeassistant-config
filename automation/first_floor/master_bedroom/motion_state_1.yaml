@@ -9,4 +9,4 @@
     state: 'on'
   action:
     - service: light.turn_on
-      entity_id: light.master_bedroom
+      entity_id: light.lg__mb__all

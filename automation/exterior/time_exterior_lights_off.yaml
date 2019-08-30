@@ -4,6 +4,6 @@
       at: '3:30:00'
   action:
     - service: light.turn_off
-      entity_id: light.exterior_lighting
+      entity_id: light.lg__ex__all
     - service: switch.turn_off
       entity_id: switch.0x000d6ffffea6e967_switch

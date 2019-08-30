@@ -8,7 +8,7 @@
         minutes: 00
   action:
     - service: light.turn_off
-      entity_id: light.master_bedroom
+      entity_id: light.lg__mb__all
     - service: notify.notify_matrix_noisy
       data:
         message: "Shame! You forgot the Master bedroom lights again!"

@@ -6,7 +6,7 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.master_bedroom
+        entity_id: light.lg__mb__all
         transition: 1
         brightness_pct: 50
         kelvin: 2700
@@ -18,4 +18,4 @@
     event_data: {"state": "off", "entity_id": "switch.duo_switch_mb_l"}
   action:
     - service: light.turn_off
-      entity_id: light.master_bedroom
+      entity_id: light.lg__mb__all

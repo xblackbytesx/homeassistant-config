@@ -6,19 +6,19 @@
       mode: "rgbw"
 
 - platform: group
-  name: Sitting Area LED strips
+  name: LG | SA | LED strips
   entities:
     - light.ledstrip_tv_cabinet
     - light.ledstrip_black_cabinet
 
 - platform: group
-  name: Living room LED strips
+  name: LG | LR | LED strips
   entities:
-    - light.sitting_area_led_strips
+    - light.lg__sa__led_strips
     - light.ledstrip_kitchen_cabinet
 
 - platform: group
-  name: Sitting area lights
+  name: LG | SA | All
   entities:
     - light.hue_bulb_standing_lamp
     - light.hue_go_closet_l
@@ -27,7 +27,7 @@
     - light.hue_candle_salt_lamp
 
 - platform: group
-  name: Kitchen lights
+  name: LG | Kitchen | All
   entities:
     - light.hue_bulb_kitchen_table_l
     - light.hue_bulb_kitchen_table_r
@@ -37,30 +37,30 @@
     - light.hue_spot_kitchen_counter_4
 
 - platform: group
-  name: Living room lights
+  name: LG | LR | All
   entities:
-    - light.sitting_area_lights
-    - light.kitchen_lights
-    - light.living_room_led_strips
+    - light.lg__sa__all
+    - light.lg__kitchen__all
+    - light.lg__lr__led_strips
 
 - platform: group
-  name: Exterior lighting
+  name: LG | EX | All
   entities:
     - light.0x00158d00017934ff_light
     - light.0x00158d00017ab8da_light
 
 - platform: group
-  name: Master bedroom
+  name: LG | MB | All
   entities:
     - light.0x00158d00017cd686_light
 
 - platform: group
-  name: Small bedroom
+  name: LG | SB | All
   entities:
     - light.0x90fd9ffffeea4e5e_light
 
 - platform: group
-  name: Attic
+  name: LG | Attic | All
   entities:
     - light.0x00158d0001793961_light
     # - light.0x00158d0000dcb62a_light

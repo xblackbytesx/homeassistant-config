@@ -15,6 +15,6 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.attic
+        entity_id: light.lg__attic__all
         brightness_pct: 70
         kelvin: 2700
