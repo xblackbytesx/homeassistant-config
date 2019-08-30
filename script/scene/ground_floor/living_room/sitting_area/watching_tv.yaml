@@ -6,6 +6,6 @@ scene_watching_tv:
         scene_name: "LR | Watching TV"
     - service: light.turn_on
       data:
-        entity_id: light.living_room_led_strips
+        entity_id: light.lg_sa_led_strips
         rgb_color: [ 8, 0, 0 ]
         brightness: 8

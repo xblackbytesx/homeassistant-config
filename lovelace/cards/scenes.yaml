@@ -15,6 +15,12 @@ entities:
      service: scene.turn_on
      service_data:
        entity_id: scene.lr_not_watching_tv
+  - entity: scene.lr_search_mode
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: scene.lr_search_mode
   - entity: scene.bathroom_relax
     tap_action:
      action: call-service
