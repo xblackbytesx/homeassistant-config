@@ -4,14 +4,26 @@ show_state: false
 column_width: 33%
 entities:
   - entity: scene.lr_watching_tv
-    tap_action: call-service
-    service: scene.turn_on
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: scene.lr_watching_tv
   - entity: scene.lr_not_watching_tv
-    tap_action: call-service
-    service: scene.turn_on
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: scene.lr_not_watching_tv
   - entity: scene.bathroom_relax
-    tap_action: call-service
-    service: scene.turn_on
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: scene.bathroom_relax
   - entity: scene.bathroom_night
-    tap_action: call-service
-    service: scene.turn_on
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: scene.bathroom_night
