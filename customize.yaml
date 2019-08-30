@@ -47,6 +47,7 @@ switch.power_socket_three:
 switch.beamer_screen:
   friendly_name: Beamer screen
   icon: mdi:projector-screen
+
 switch.0x000d6ffffedad23c_switch:
   friendly_name: TV Cabinet
   icon: mdi:power-socket-eu
@@ -56,6 +57,16 @@ switch.0x000d6ffffea6df64_switch:
 switch.0x000d6ffffea6e967_switch:
   friendly_name: Exterior lighting
   icon: mdi:power-socket-eu
+switch.0x000d6ffffea7daa5_switch:
+  friendly_name: Corridor
+  icon: mdi:power-socket-eu
+switch.0x000d6ffffedaf667_switch:
+  friendly_name: Large bedroom
+  icon: mdi:power-socket-eu
+switch.0x000d6ffffedc5e05_switch:
+  friendly_name: Attic (Dryer)
+  icon: mdi:power-socket-eu
+  
 cover.attic_shutters:
   friendly_name: Attic Shutters
 sensor.speedtest_ping:
