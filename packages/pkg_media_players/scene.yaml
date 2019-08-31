@@ -3,7 +3,7 @@
     light.hue_bulb_standing_lamp:
       state: true
       xy_color: [0.507, 0.414]
-      brightness_pct: 80
+      brightness_pct: 60
     light.hue_go_closet_l:
       state: true
       xy_color: [0.236, 0.41]
@@ -23,11 +23,11 @@
     light.ledstrip_tv_cabinet:
       state: true
       xy_color: [0.149, 0.291]
-      brightness_pct: 45
+      brightness_pct: 30
     light.ledstrip_black_cabinet:
       state: true
       xy_color: [0.149, 0.291]
-      brightness_pct: 45
+      brightness_pct: 30
 
 - name: SA | Watching TV
   entities:
