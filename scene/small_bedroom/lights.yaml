@@ -3,7 +3,7 @@
     light.0x90fd9ffffeea4e5e_light:
       state: true
       xy_color: [0.137, 0.041]
-      brightness_pct: 90
+      brightness_pct: 60
       transition: 2
     light.dimmable_socket_one:
       state: true

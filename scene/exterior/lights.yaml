@@ -3,3 +3,4 @@
     light.lg_ex_all:
       state: true
       brightness_pct: 75
+      transition: 2
