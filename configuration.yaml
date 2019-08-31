@@ -115,5 +115,4 @@ light: !include light.yaml
 automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/
 input_boolean: !include_dir_merge_named boolean/
-script: !include_dir_merge_named script/
 scene: !include_dir_merge_list scene/
