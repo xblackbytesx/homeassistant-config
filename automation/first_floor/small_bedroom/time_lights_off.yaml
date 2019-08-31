@@ -9,9 +9,6 @@
   action:
     - service: light.turn_off
       entity_id: light.0x90fd9ffffeea4e5e_light
-    # - service: notify.notify_matrix_noisy
-    #   data:
-    #     message: "I've Terminated the lights in the Small Bedroom."
 
 
 - alias: "SB | Time | Night lights off"
