@@ -1,0 +1,5 @@
+- name: CO | Relax
+  entities:
+    light.lg_co_all:
+      state: true
+      brightness_pct: 75

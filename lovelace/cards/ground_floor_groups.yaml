@@ -6,7 +6,7 @@ cards:
   - type: horizontal-stack
     cards:
       - type: light
-        entity: light.hallway
+        entity: light.lg_hw_all
         name: Hallway
       - type: light
         entity: light.kitchen

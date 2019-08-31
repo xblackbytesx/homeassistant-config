@@ -8,7 +8,5 @@
     entity_id: binary_sensor.co_dark_enough
     state: 'on'
   action:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: "Corridor"
-        scene_name: "Co | Relax"
+    - service: scene.turn_on
+      entity_id: scene.co_relax

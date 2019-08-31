@@ -6,6 +6,11 @@
       mode: "rgbw"
 
 - platform: group
+  name: LG | HW | All
+  entities:
+    - light.0x0017880103ea3a60_light
+
+- platform: group
   name: LG | SA | LED strips
   entities:
     - light.ledstrip_tv_cabinet
@@ -58,6 +63,17 @@
   name: LG | SB | All
   entities:
     - light.0x90fd9ffffeea4e5e_light
+
+- platform: group
+  name: LG | LB | All
+  entities:
+    - light.0x00178801039d140f_light
+    - light.ledstrip_large_bedroom
+
+- platform: group
+  name: LG | CO | All
+  entities:
+    - light.0x00178801030a3dde_light
 
 - platform: group
   name: LG | Attic | All
