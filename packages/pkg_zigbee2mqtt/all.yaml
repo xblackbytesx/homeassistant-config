@@ -1,9 +1,9 @@
 webhook:
 zigbee2mqtt_networkmap:
 
-mqtt:
-  broker: homeassistant
-  discovery: true
+# mqtt:
+#   broker: homeassistant
+#   discovery: true
 
 timer:
   zigbee_permit_join:
