@@ -4,12 +4,8 @@
     event_type: button_pressed
     event_data: {"state": "on", "entity_id": "switch.duo_switch_sb_r"}
   action:
-    - service: light.turn_on
-      data:
-        entity_id: light.lg_sb_all
-        transition: 1
-        brightness_pct: 100
-        rgb_color: [255,209,114]
+    - service: scene.turn_on
+      entity_id: scene.sb_day
 
 
 - alias: SB | Duo switch | right | Off
@@ -20,5 +16,3 @@
   action:
     - service: light.turn_off
       entity_id: light.lg_sb_all
-    - service: homeassistant.turn_off
-      entity_id: light.dimmable_socket_one
