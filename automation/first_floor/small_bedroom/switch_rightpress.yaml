@@ -7,7 +7,6 @@
     - service: scene.turn_on
       entity_id: scene.sb_day
 
-
 - alias: SB | Duo switch | right | Off
   trigger:
     platform: event
