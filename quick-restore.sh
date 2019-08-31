@@ -67,10 +67,10 @@ mkdir -p www/custom-lovelace/lovelace-card-tools
 wget https://raw.githubusercontent.com/thomasloven/lovelace-card-tools/master/card-tools.js -O www/custom-lovelace/lovelace-card-tools/card-tools.js
 
 mkdir -p www/custom-lovelace/lovelace-mini-graph-card
-wget https://github.com/kalkih/mini-graph-card/releases/download/v0.5.0/mini-graph-card-bundle.js -O www/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js
+wget https://github.com/kalkih/mini-graph-card/releases/download/v0.6.0/mini-graph-card-bundle.js -O www/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js
 
 mkdir -p www/custom-lovelace/lovelace-mini-media-player
-wget https://github.com/kalkih/mini-media-player/releases/download/v1.2.2/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
+wget https://github.com/kalkih/mini-media-player/releases/download/v1.3.0/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
 
 mkdir -p www/custom-lovelace/simple-thermostat
 wget https://github.com/nervetattoo/simple-thermostat/releases/download/0.25.0/simple-thermostat.js -O www/custom-lovelace/simple-thermostat/simple-thermostat.js
