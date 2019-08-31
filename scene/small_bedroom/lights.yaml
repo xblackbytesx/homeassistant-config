@@ -1,4 +1,4 @@
-- name: LB | Night
+- name: SB | Night
   entities:
     light.0x90fd9ffffeea4e5e_light:
       state: true
@@ -10,7 +10,7 @@
       brightness_pct: 60
       transition: 2
 
-- name: LB | Day
+- name: SB | Day
   entities:
     light.0x00178801039d140f_light:
       state: true
