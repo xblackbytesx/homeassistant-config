@@ -1,0 +1,5 @@
+- name: EX | Relax
+  entities:
+    light.lg_ex_all:
+      state: true
+      brightness_pct: 75

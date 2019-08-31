@@ -8,10 +8,7 @@
       after: '18:00:00'
       before: '03:30:00'
   action:
-    - service: light.turn_on
-      data:
-        entity_id: light.lg_ex_all
-        brightness_pct: 50
-        kelvin: 2700
+    - service: scene.turn_on
+      entity_id: scene.ex_relax
     - service: switch.turn_on
       entity_id: switch.0x000d6ffffea6e967_switch

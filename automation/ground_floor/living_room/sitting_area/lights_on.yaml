@@ -22,8 +22,8 @@
         entity_id: binary_sensor.sa_tv_media_playing
         state: 'off'
   action:
-    service: script.turn_on
-    entity_id: script.scene_not_watching_tv
+    - service: scene.turn_on
+      entity_id: scene.sa_not_watching_tv
 
 
 - alias: SA | Media Playing | State two
@@ -53,5 +53,5 @@
         after: '20:00:00'
         before: '05:00:00'
   action:
-    service: script.turn_on
-    entity_id: script.scene_watching_tv
+    - service: scene.turn_on
+      entity_id: scene.sa_watching_tv

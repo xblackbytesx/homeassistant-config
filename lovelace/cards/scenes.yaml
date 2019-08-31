@@ -3,18 +3,18 @@ title: Scenes
 show_state: false
 column_width: 33%
 entities:
-  - entity: scene.lr_watching_tv
+  - entity: scene.sa_watching_tv
     tap_action:
      action: call-service
      service: scene.turn_on
      service_data:
-       entity_id: scene.lr_watching_tv
-  - entity: scene.lr_not_watching_tv
+       entity_id: scene.sa_watching_tv
+  - entity: scene.sa_not_watching_tv
     tap_action:
      action: call-service
      service: scene.turn_on
      service_data:
-       entity_id: scene.lr_not_watching_tv
+       entity_id: scene.sa_not_watching_tv
   - entity: scene.lr_search_mode
     tap_action:
      action: call-service
