@@ -1,12 +1,35 @@
-- alias: HW | Motion | Lights on
+- alias: HW | Motion | Light | Night
   trigger:
     - platform: state
       entity_id: binary_sensor.hw_motion_detected
       to: 'on'
   condition:
-    condition: state
-    entity_id: binary_sensor.hw_dark_enough
-    state: 'on'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: binary_sensor.hw_dark_enough
+        state: 'on'
+      - condition: time
+        after: '22:30:00'
+        before: '07:30:00'
+  action:
+    - service: scene.turn_on
+      entity_id: scene.hw_night
+
+- alias: HW | Motion | Light | Day
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.hw_motion_detected
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: binary_sensor.hw_dark_enough
+        state: 'on'
+      - condition: time
+        after: '07:30:00'
+        before: '22:30:00'
   action:
     - service: scene.turn_on
       entity_id: scene.hw_relax

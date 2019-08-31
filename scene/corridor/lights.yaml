@@ -3,3 +3,9 @@
     light.lg_co_all:
       state: true
       brightness_pct: 45
+
+- name: CO | Night
+  entities:
+    light.lg_co_all:
+      state: true
+      brightness_pct: 15
