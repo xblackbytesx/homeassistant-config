@@ -74,7 +74,7 @@ switch.0x000d6ffffedaf667_switch:
   friendly_name: Large bedroom
   icon: mdi:power-socket-eu
 switch.0x000d6ffffedc5e05_switch:
-  friendly_name: Attic (Dryer)
+  friendly_name: Small bedroom
   icon: mdi:power-socket-eu
 
 cover.attic_shutters:
