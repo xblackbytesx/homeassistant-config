@@ -8,7 +8,7 @@ homeassistant:
   customize: !include customize.yaml
 
   packages:
-    zigbee2mqtt_package: !include packages/pkg_zigbee2mqtt/all.yaml
+    # zigbee2mqtt_package: !include packages/pkg_zigbee2mqtt/all.yaml
     rfx_package: !include packages/pkg_rfx/all.yaml
     matrix_package: !include packages/pkg_matrix/all.yaml
     presence_package: !include packages/pkg_presence/all.yaml
