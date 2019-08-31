@@ -2,4 +2,4 @@
   entities:
     light.lg_hw_all:
       state: true
-      brightness_pct: 75
+      brightness_pct: 45
