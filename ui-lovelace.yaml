@@ -25,6 +25,11 @@ resources:
   type: js
 - url: /local/custom-lovelace/simple-thermostat/simple-thermostat.js?track=true
   type: js
+- url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?track=true
+  type: module
+cch:
+  voice: hide
+  options: clock
 views:
 - title: Home
   icon: mdi:home
@@ -219,6 +224,11 @@ views:
       - light.ledstrip_tv_cabinet
       - light.ledstrip_black_cabinet
       - light.ledstrip_kitchen_cabinet
+  - type: entities
+    title: Garbage Pickup
+    entities:
+    - sensor.garbage_pickup_today
+    - sensor.garbage_pickup_upcoming
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -352,7 +362,7 @@ views:
     - type: horizontal-stack
       cards:
       - type: light
-        entity: light.hallway
+        entity: light.lg_hw_all
         name: Hallway
       - type: light
         entity: light.kitchen
@@ -459,6 +469,9 @@ views:
     show_header_toggle: true
     entities:
     - binary_sensor.front_door
+  - type: entities
+    entities:
+    - binary_sensor.0x00158d0003612f9b_smoke
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -541,20 +554,20 @@ views:
     - type: horizontal-stack
       cards:
       - type: light
-        entity: light.master_bedroom
+        entity: light.lg_mb_all
         name: Master bedroom
     - type: horizontal-stack
       cards:
       - type: light
-        entity: light.large_bedroom
+        entity: light.0x00178801039d140f_light
         name: Large bedroom
       - type: light
-        entity: light.small_bedroom
+        entity: light.lg_sb_all
         name: Small bedroom
     - type: horizontal-stack
       cards:
       - type: light
-        entity: light.corridor
+        entity: light.lg_co_all
         name: Corridor
       - type: light
         entity: light.bathroom
@@ -641,7 +654,7 @@ views:
   - type: horizontal-stack
     cards:
     - type: light
-      entity: light.attic
+      entity: light.lg_attic_all
       name: Attic
   - type: conditional
     conditions:
@@ -673,7 +686,7 @@ views:
   - type: horizontal-stack
     cards:
     - type: light
-      entity: light.exterior_lighting
+      entity: light.lg_ex_all
       name: Exterior
   - type: entities
     title: Exterior switches
@@ -786,6 +799,11 @@ views:
     - entity: !secret car_entity_recall
       name: Callback status
       icon: mdi:message-alert-outline
+  - type: entities
+    title: Garbage Pickup
+    entities:
+    - sensor.garbage_pickup_today
+    - sensor.garbage_pickup_upcoming
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -1201,18 +1219,6 @@ views:
     entities:
     - input_boolean.sa_media_status_override
     - input_boolean.engage_search_mode
-# type: entities
-# title: Battery status
-# entities:
-#   - sensor.hue_motion_hallway_door_battery_level
-#   - sensor.hue_motion_hallway_stairs_battery_level
-#   - sensor.hue_motion_sitting_area_battery_level
-#   - sensor.hue_motion_kitchen_battery_level
-#   - sensor.hue_motion_corridor_battery_level
-#   - sensor.monstera_deliciosa_battery
-#   - sensor.cocos_nucifera_battery
-#   - sensor.sabal_minor_battery
-
   - type: custom:monster-card
     show_empty: false
     card:
@@ -1226,3 +1232,44 @@ views:
     trackers:
     - sensor.custom_card_tracker
     - sensor.custom_component_tracker
+  - type: glance
+    title: Scenes
+    show_state: false
+    column_width: 33%
+    entities:
+    - entity: scene.sa_watching_tv
+      tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.sa_watching_tv
+    - entity: scene.sa_not_watching_tv
+      tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.sa_not_watching_tv
+    - entity: scene.lr_search_mode_on
+      tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.lr_search_mode_on
+    - entity: scene.lr_search_mode_off
+      tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.lr_search_mode_off
+    - entity: scene.bathroom_day
+      tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.bathroom_day
+    - entity: scene.bathroom_night
+      tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.bathroom_night

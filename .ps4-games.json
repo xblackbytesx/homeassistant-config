@@ -1,4 +1,14 @@
 {
-    "CUSA03952": "No Man's Sky",
-    "CUSA11993": "Marvel\u2019s Spider-Man"
+    "CUSA03952": {
+        "locked": false,
+        "media_content_type": "game",
+        "media_image_url": null,
+        "media_title": "No Man's Sky"
+    },
+    "CUSA11993": {
+        "locked": false,
+        "media_content_type": "game",
+        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/container/NL/nl/19/EP9000-CUSA11993_00-MARVELSSPIDERMAN/1565221766000/image",
+        "media_title": "Marvel\u2019s Spider-Man"
+    }
 }
