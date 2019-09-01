@@ -1,0 +1,6 @@
+- name: Kitchen | Relax
+  entities:
+    light.lg_kitchen_table:
+      state: true
+      xy_color: [0.507, 0.414]
+      brightness_pct: 65

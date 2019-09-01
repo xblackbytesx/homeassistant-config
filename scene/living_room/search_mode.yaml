@@ -19,6 +19,8 @@
   entities:
     scene.sa_not_watching_tv:
       state: true
+    scene.kitchen_relax:
+      state: true
     automation.sa_state_lights_off:
       state: true
     automation.sa_no_media:

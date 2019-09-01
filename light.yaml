@@ -32,10 +32,15 @@
     - light.hue_candle_salt_lamp
 
 - platform: group
-  name: LG | Kitchen | All
+  name: LG | Kitchen | Table
   entities:
     - light.hue_bulb_kitchen_table_l
     - light.hue_bulb_kitchen_table_r
+
+- platform: group
+  name: LG | Kitchen | All
+  entities:
+    - light.lg_kitchen_table
     - light.hue_spot_kitchen_counter_1
     - light.hue_spot_kitchen_counter_2
     - light.hue_spot_kitchen_counter_3
