@@ -1,17 +1,5 @@
 #!/bin/bash
 
-# Git and Github setup
-mkdir -p ~/.ssh
-cp assets/ssh-config ~/.ssh/config
-cp assets/id-github-master ~/.ssh/id-github-master
-cp assets/id-nighthawk-hassos ~/.ssh/id-nighthawk-hassos
-cp assets/git-config ~/.gitconfig
-chmod 600 ~/.ssh/config ~/.ssh/id-*
-
-# Shell scripts
-cp -Rp assets/shell_scripts .
-chmod +x shell_scripts/*.sh
-
 # Remove if exists
 rm -rf custom_components
 rm -rf www/custom-lovelace
