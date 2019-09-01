@@ -32,4 +32,4 @@
         before: '22:30:00'
   action:
     - service: scene.turn_on
-      entity_id: scene.co_relax
+      entity_id: scene.co_day

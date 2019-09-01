@@ -15,18 +15,24 @@ entities:
      service: scene.turn_on
      service_data:
        entity_id: scene.sa_not_watching_tv
-  - entity: scene.lr_search_mode
+  - entity: scene.lr_search_mode_on
     tap_action:
      action: call-service
      service: scene.turn_on
      service_data:
-       entity_id: scene.lr_search_mode
-  - entity: scene.bathroom_relax
+       entity_id: scene.lr_search_mode_on
+  - entity: scene.lr_search_mode_off
     tap_action:
      action: call-service
      service: scene.turn_on
      service_data:
-       entity_id: scene.bathroom_relax
+       entity_id: scene.lr_search_mode_off
+  - entity: scene.bathroom_day
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: scene.bathroom_day
   - entity: scene.bathroom_night
     tap_action:
      action: call-service

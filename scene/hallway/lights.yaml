@@ -1,11 +1,11 @@
-- name: HW | Relax
-  entities:
-    light.lg_hw_all:
-      state: true
-      brightness_pct: 45
-
 - name: HW | Night
   entities:
     light.lg_hw_all:
       state: true
       brightness_pct: 15
+
+- name: HW | Day
+  entities:
+    light.lg_hw_all:
+      state: true
+      brightness_pct: 45

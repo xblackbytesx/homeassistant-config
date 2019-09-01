@@ -1,17 +1,17 @@
-- name: Bathroom | Relax
-  entities:
-    light.hue_candle_bathroom_l:
-      state: true
-      brightness_pct: 80
-    light.hue_bulb_bathroom_r:
-      state: true
-      brightness_pct: 80
-
 - name: Bathroom | Night
   entities:
     light.hue_candle_bathroom_l:
       state: true
-      brightness_pct: 20
+      brightness_pct: 15
     light.hue_bulb_bathroom_r:
       state: true
-      brightness_pct: 20
+      brightness_pct: 15
+
+- name: Bathroom | Day
+  entities:
+    light.hue_candle_bathroom_l:
+      state: true
+      brightness_pct: 80
+    light.hue_bulb_bathroom_r:
+      state: true
+      brightness_pct: 80
