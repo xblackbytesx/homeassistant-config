@@ -33,7 +33,7 @@ cards:
       title: Hallway lighting
       show_header_toggle: true
       entities:
-        - light.hue_bulb_hallway
+        - light.0x0017880103ea3a60_light
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
@@ -64,7 +64,7 @@ cards:
       title: Corridor lighting
       show_header_toggle: true
       entities:
-        - light.hue_bulb_corridor
+        - light.0x00178801030a3dde_light
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

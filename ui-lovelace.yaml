@@ -209,7 +209,7 @@ views:
       title: Hallway lighting
       show_header_toggle: true
       entities:
-      - light.hue_bulb_hallway
+      - light.0x0017880103ea3a60_light
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -254,7 +254,7 @@ views:
 #   - type: state-icon
 #     tap_action:
 #       action: toggle
-#     entity: light.hue_bulb_hallway
+#     entity: light.0x0017880103ea3a60_light
 #     style:
 #       top: 25%
 #       left: 38%
@@ -326,7 +326,7 @@ views:
       title: Corridor lighting
       show_header_toggle: true
       entities:
-      - light.hue_bulb_corridor
+      - light.0x00178801030a3dde_light
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -373,7 +373,7 @@ views:
     - type: state-icon
       tap_action:
         action: toggle
-      entity: light.hue_bulb_hallway
+      entity: light.0x0017880103ea3a60_light
       style:
         top: 25%
         left: 38%
@@ -495,7 +495,7 @@ views:
       title: Hallway lighting
       show_header_toggle: true
       entities:
-      - light.hue_bulb_hallway
+      - light.0x0017880103ea3a60_light
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -518,7 +518,7 @@ views:
       - light.ledstrip_tv_cabinet
       - light.ledstrip_black_cabinet
       - light.ledstrip_kitchen_cabinet
-      - light.hue_bulb_hallway
+      - light.0x0017880103ea3a60_light
   - type: picture-entity
     title: Dafang
     entity: camera.dafang
@@ -594,7 +594,7 @@ views:
       title: Corridor lighting
       show_header_toggle: true
       entities:
-      - light.hue_bulb_corridor
+      - light.0x00178801030a3dde_light
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -615,7 +615,7 @@ views:
       title: Large Bedroom lighting
       show_header_toggle: true
       entities:
-      - light.hue_bulb_large_bedroom
+      - light.0x00178801039d140f_light
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -625,10 +625,10 @@ views:
       title: All first floor lights
       show_header_toggle: true
       entities:
-      - light.hue_bulb_corridor
+      - light.0x00178801030a3dde_light
       - light.hue_candle_bathroom_l
       - light.hue_bulb_bathroom_r
-      - light.hue_bulb_large_bedroom
+      - light.0x00178801039d140f_light
       - light.0x90fd9ffffeea4e5e_light
       - light.0x00158d00017cd686_light
       - light.ledstrip_large_bedroom

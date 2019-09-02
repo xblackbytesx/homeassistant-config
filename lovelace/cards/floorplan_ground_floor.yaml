@@ -4,7 +4,7 @@ elements:
   - type: state-icon
     tap_action:
       action: toggle
-    entity: light.hue_bulb_hallway
+    entity: light.0x0017880103ea3a60_light
     style:
       top: 25%
       left: 38%

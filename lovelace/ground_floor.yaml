@@ -48,7 +48,7 @@ cards:
       title: Hallway lighting
       show_header_toggle: true
       entities:
-        - light.hue_bulb_hallway
+        - light.0x0017880103ea3a60_light
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
@@ -71,7 +71,7 @@ cards:
         - light.ledstrip_tv_cabinet
         - light.ledstrip_black_cabinet
         - light.ledstrip_kitchen_cabinet
-        - light.hue_bulb_hallway
+        - light.0x0017880103ea3a60_light
   - type: picture-entity
     title: Dafang
     entity: camera.dafang

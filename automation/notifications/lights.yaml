@@ -1,7 +1,7 @@
 - alias: "Notify | State | LB Hue Bulb | Off"
   trigger:
     platform: state
-    entity_id: light.hue_bulb_large_bedroom
+    entity_id: light.0x00178801039d140f_light
     to: 'off'
   action:
     - service: notify.notify_matrix_noisy
