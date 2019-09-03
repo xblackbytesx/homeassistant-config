@@ -4,3 +4,12 @@
       state: true
       xy_color: [0.507, 0.414]
       brightness_pct: 65
+    light.lg_kitchen_counter:
+      state: true
+      xy_color: [0.507, 0.414]
+      brightness_pct: 65
+    light.ledstrip_kitchen_cabinet:
+      state: true
+      xy_color: [0.149, 0.291]
+      brightness_pct: 20
+      transition: 2

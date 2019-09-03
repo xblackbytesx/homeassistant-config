@@ -16,12 +16,5 @@
         entity_id: binary_sensor.kitchen_dark_enough
         state: 'on'
   action:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: "Kitchen"
-        scene_name: "Kitchen | Relax"
-    - service: light.turn_on
-      data:
-        entity_id: light.ledstrip_kitchen_cabinet
-        rgb_color: [ 0, 7, 8 ]
-        brightness: 8
+    - service: scene.turn_on
+      entity_id: scene.kitchen_relax

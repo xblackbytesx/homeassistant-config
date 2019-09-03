@@ -1,18 +1,34 @@
-- alias: Bathroom | Duo switch | left | On
+- alias: Bathroom | Duo switch | L | On | Night
   trigger:
     platform: event
     event_type: button_pressed
     event_data: {"state": "on", "entity_id": "switch.duo_switch_bathroom_l"}
+  condition:
+    condition: time
+    after: '22:30:00'
+    before: '07:30:00'
   action:
-    - service: homeassistant.turn_on
-      entity_id: light.hue_candle_bathroom_l
+    - service: scene.turn_on
+      entity_id: scene.bathroom_l_night
 
+- alias: Bathroom | Duo switch | L | On | Day
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "on", "entity_id": "switch.duo_switch_bathroom_l"}
+  condition:
+    condition: time
+    after: '07:30:00'
+    before: '22:30:00'
+  action:
+    - service: scene.turn_on
+      entity_id: scene.bathroom_l_day
 
-- alias: Bathroom | Duo switch | left | Off
+- alias: Bathroom | Duo switch | L | Off
   trigger:
     platform: event
     event_type: button_pressed
     event_data: {"state": "off", "entity_id": "switch.duo_switch_bathroom_l"}
   action:
-    - service: homeassistant.turn_off
+    - service: light.turn_off
       entity_id: light.hue_candle_bathroom_l

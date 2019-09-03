@@ -30,6 +30,7 @@
     - light.hue_go_closet_r
     - light.hue_iris_tv_cabinet
     - light.hue_candle_salt_lamp
+    - light.lg_sa_led_strips
 
 - platform: group
   name: LG | Kitchen | Table
@@ -38,20 +39,25 @@
     - light.hue_bulb_kitchen_table_r
 
 - platform: group
-  name: LG | Kitchen | All
+  name: LG | Kitchen | Counter
   entities:
-    - light.lg_kitchen_table
     - light.hue_spot_kitchen_counter_1
     - light.hue_spot_kitchen_counter_2
     - light.hue_spot_kitchen_counter_3
     - light.hue_spot_kitchen_counter_4
 
 - platform: group
+  name: LG | Kitchen | All
+  entities:
+    - light.lg_kitchen_table
+    - light.lg_kitchen_counter
+    - light.ledstrip_kitchen_cabinet
+
+- platform: group
   name: LG | LR | All
   entities:
     - light.lg_sa_all
     - light.lg_kitchen_all
-    - light.lg_lr_led_strips
 
 - platform: group
   name: LG | EX | All
@@ -80,6 +86,12 @@
   name: LG | CO | All
   entities:
     - light.0x00178801030a3dde_light
+
+- platform: group
+  name: LG | Bathroom | All
+  entities:
+    - light.hue_candle_bathroom_l
+    - light.hue_bulb_bathroom_r
 
 - platform: group
   name: LG | Attic | All

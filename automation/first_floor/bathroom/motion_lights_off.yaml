@@ -7,7 +7,7 @@
         minutes: 15
   action:
     - service: light.turn_off
-      entity_id: light.bathroom
+      entity_id: light.lg_bathroom_all
     - service: notify.notify_matrix_noisy
       data:
         message: "Shame! You forgot the Bathroom lights again!"
