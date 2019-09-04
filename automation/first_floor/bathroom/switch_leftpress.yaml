@@ -5,7 +5,7 @@
     event_data: {"state": "on", "entity_id": "switch.duo_switch_bathroom_l"}
   condition:
     condition: time
-    after: '22:30:00'
+    after: '23:30:00'
     before: '07:30:00'
   action:
     - service: scene.turn_on
@@ -19,7 +19,7 @@
   condition:
     condition: time
     after: '07:30:00'
-    before: '22:30:00'
+    before: '23:30:00'
   action:
     - service: scene.turn_on
       entity_id: scene.bathroom_l_day

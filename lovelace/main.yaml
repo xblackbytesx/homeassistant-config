@@ -35,6 +35,7 @@ views:
   - !include people.yaml
   - !include plants.yaml
   - !include media.yaml
+  - !include scenes.yaml
   - !include security.yaml
   - !include network.yaml
   - !include finance.yaml

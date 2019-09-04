@@ -9,6 +9,5 @@
         message: "-----------------------------------------------\n
                   | Smoke has been detected in the Living Room! |\n
                   -----------------------------------------------"
-    - service: input_boolean.turn_on
-      data:
-        entity_id: input_boolean.engage_search_mode
+    - service: scene.turn_on
+      entity_id: scene.lr_search_mode_on

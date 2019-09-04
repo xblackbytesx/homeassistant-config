@@ -23,12 +23,12 @@
     light.ledstrip_tv_cabinet:
       state: true
       xy_color: [0.149, 0.291]
-      brightness_pct: 20
+      brightness_pct: 10
       transition: 2
     light.ledstrip_black_cabinet:
       state: true
       xy_color: [0.149, 0.291]
-      brightness_pct: 20
+      brightness_pct: 10
       transition: 2
 
 - name: SA | Watching TV
@@ -48,10 +48,10 @@
     light.ledstrip_tv_cabinet:
       state: true
       xy_color: [0.701, 0.299]
-      brightness_pct: 15
+      brightness_pct: 5
       transition: 2
     light.ledstrip_black_cabinet:
       state: true
       xy_color: [0.701, 0.299]
-      brightness_pct: 15
+      brightness_pct: 5
       transition: 2

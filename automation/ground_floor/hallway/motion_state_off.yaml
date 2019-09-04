@@ -4,7 +4,7 @@
       entity_id: binary_sensor.hw_motion_detected
       to: 'off'
       for:
-        minutes: 5
+        minutes: 3
     - platform: state
       entity_id: binary_sensor.hw_dark_enough
       to: 'off'

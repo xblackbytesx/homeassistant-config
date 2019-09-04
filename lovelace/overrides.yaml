@@ -11,7 +11,5 @@ cards:
     show_header_toggle: true
     entities:
       - input_boolean.sa_media_status_override
-      - input_boolean.engage_search_mode
   - !include cards/battery_status.yaml
   - !include cards/tracker_card.yaml
-  - !include cards/scenes.yaml
