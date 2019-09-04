@@ -54,7 +54,8 @@
 
     attic_motion_detected:
       value_template: >-
-        {{ is_state('binary_sensor.0x00158d00036b62d0_occupancy', 'on') }}
+        {{ is_state('binary_sensor.0x00158d00036b62d0_occupancy', 'on')
+           or is_state('binary_sensor.0x00158d000302ec77_occupancy', 'on') }}
 
     attic_dark_enough:
       value_template: >-

@@ -68,7 +68,7 @@ switch.0x000d6ffffea6e967_switch:
   friendly_name: Exterior lighting
   icon: mdi:power-socket-eu
 switch.0x000d6ffffea7daa5_switch:
-  friendly_name: Corridor
+  friendly_name: Attic/dryer
   icon: mdi:power-socket-eu
 switch.0x000d6ffffedaf667_switch:
   friendly_name: Large bedroom
@@ -157,6 +157,9 @@ binary_sensor.bathroom_motion_detected:
 binary_sensor.0x00158d00036b62d0_occupancy:
   icon: mdi:run
   friendly_name: Attic/stairs
+binary_sensor.0x00158d000302ec77_occupancy:
+  icon: mdi:run
+  friendly_name: Attic/front
 binary_sensor.0x00158d000349234a_occupancy:
   icon: mdi:run
   friendly_name: Bathroom
