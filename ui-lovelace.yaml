@@ -931,6 +931,38 @@ views:
       power_state: false
   - type: media-control
     entity: media_player.playstation_4
+- title: scenes_view
+  icon: mdi:image-filter-hdr
+  cards:
+  - type: glance
+    title: Scenes
+    show_state: false
+    column_width: 33%
+    entities:
+    - entity: scene.sa_watching_tv
+      tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.sa_watching_tv
+    - entity: scene.sa_not_watching_tv
+      tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.sa_not_watching_tv
+    - entity: scene.lr_search_mode_on
+      tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.lr_search_mode_on
+    - entity: scene.lr_search_mode_off
+      tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.lr_search_mode_off
 - title: Security
   icon: mdi:cctv
   cards:
@@ -1218,7 +1250,6 @@ views:
     show_header_toggle: true
     entities:
     - input_boolean.sa_media_status_override
-    - input_boolean.engage_search_mode
   - type: custom:monster-card
     show_empty: false
     card:
@@ -1232,44 +1263,3 @@ views:
     trackers:
     - sensor.custom_card_tracker
     - sensor.custom_component_tracker
-  - type: glance
-    title: Scenes
-    show_state: false
-    column_width: 33%
-    entities:
-    - entity: scene.sa_watching_tv
-      tap_action:
-        action: call-service
-        service: scene.turn_on
-        service_data:
-          entity_id: scene.sa_watching_tv
-    - entity: scene.sa_not_watching_tv
-      tap_action:
-        action: call-service
-        service: scene.turn_on
-        service_data:
-          entity_id: scene.sa_not_watching_tv
-    - entity: scene.lr_search_mode_on
-      tap_action:
-        action: call-service
-        service: scene.turn_on
-        service_data:
-          entity_id: scene.lr_search_mode_on
-    - entity: scene.lr_search_mode_off
-      tap_action:
-        action: call-service
-        service: scene.turn_on
-        service_data:
-          entity_id: scene.lr_search_mode_off
-    - entity: scene.bathroom_day
-      tap_action:
-        action: call-service
-        service: scene.turn_on
-        service_data:
-          entity_id: scene.bathroom_day
-    - entity: scene.bathroom_night
-      tap_action:
-        action: call-service
-        service: scene.turn_on
-        service_data:
-          entity_id: scene.bathroom_night
