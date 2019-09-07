@@ -154,6 +154,12 @@ binary_sensor.attic_motion_detected:
 binary_sensor.bathroom_motion_detected:
   friendly_name: Bathroom
   icon: mdi:run
+binary_sensor.0x00158d00034911fc_occupancy:
+  icon: mdi:run
+  friendly_name: Sitting Area (closet)
+binary_sensor.0x00158d00033a43ef_occupancy:
+  icon: mdi:run
+  friendly_name: Kitchen/front
 binary_sensor.0x00158d00036b62d0_occupancy:
   icon: mdi:run
   friendly_name: Attic/stairs
