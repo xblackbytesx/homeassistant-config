@@ -9,7 +9,7 @@
       data:
         payload_template: "{{ states('input_select.zigbee2mqtt_log_level') }}"
         topic: zigbee2mqtt/bridge/config/log_level
-        
+
 # Automation to start timer when enable join is turned on
 - id: zigbee_join_enabled
   alias: Zigbee Join Enabled
@@ -41,12 +41,12 @@
     - service: switch.turn_off
       entity_id: switch.zigbee2mqtt_main_join
 
-- id: update_networkmap
-  alias: 'Zigbee Map aktualisieren'
-  hide_entity: true
-  trigger:
-    platform: time_pattern
-    minutes: '/10'
-    seconds: 00
-  action:
-    service: zigbee2mqtt_networkmap.update
+# - id: update_networkmap
+#   alias: 'Zigbee Map aktualisieren'
+#   hide_entity: true
+#   trigger:
+#     platform: time_pattern
+#     minutes: '/10'
+#     seconds: 00
+#   action:
+#     service: zigbee2mqtt_networkmap.update
