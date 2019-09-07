@@ -9,4 +9,4 @@ cards:
     entity: sensor.cpu_temperature
     name: CPU Temperature
     icon: mdi:thermometer
-  - !inlcude cards/zigbee.yaml
+  - !include cards/zigbee.yaml
