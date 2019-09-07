@@ -31,6 +31,12 @@ timer:
     name: Time remaining
     duration: 120
 
+panel_iframe:
+ networkmap:
+   title: 'Zigbee Map'
+   url: '/local/community/zigbee2mqtt_networkmap/map.html'
+   icon: 'mdi:graphql'
+
 sensor: !include sensor.yaml
 switch: !include switch.yaml
 automation: !include automation.yaml
