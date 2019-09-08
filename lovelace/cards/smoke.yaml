@@ -1,0 +1,4 @@
+type: entities
+  entities:
+    - binary_sensor.0x00158d0003612f9b_smoke
+    - binary_sensor.0x00158d00045cd482_smoke

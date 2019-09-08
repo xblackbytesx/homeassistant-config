@@ -6,16 +6,17 @@ cards:
     entity: camera.dafang
     camera_image: camera.dafang
     show_info: true
-    tap_action: dialog
+    tap_action: more-info
   - type: picture-entity
     title: Dafang
     entity: camera.xiaofang_1
     camera_image: camera.xiaofang_1
     show_info: true
-    tap_action: dialog
+    tap_action: more-info
   - type: picture-entity
     title: Dafang
     entity: camera.xiaofang_2
     camera_image: camera.xiaofang_2
     show_info: true
-    tap_action: dialog
+    tap_action: more-info
+  - !include cards/smoke.yaml

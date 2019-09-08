@@ -21,11 +21,6 @@ resources:
   type: js
 - url: /local/custom-lovelace/simple-thermostat/simple-thermostat.js?track=true
   type: js
-- url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?track=true
-  type: module
-cch:
-  voice: hide
-  options: clock
 views:
   - !include home.yaml
   - !include ground_floor.yaml

@@ -1,7 +1,7 @@
 - alias: LR | Smoke Detected | Notify | Light
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d0003612f9b_smoke
+      entity_id: binary_sensor.lr_smoke_detected
       to: 'on'
   action:
     - service: notify.notify_matrix_clean
@@ -11,3 +11,18 @@
                   -----------------------------------------------"
     - service: scene.turn_on
       entity_id: scene.lr_search_mode_on
+
+
+- alias: LB | Smoke Detected | Notify | Light
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.lb_smoke_detected
+      to: 'on'
+  action:
+    - service: notify.notify_matrix_clean
+      data:
+        message: "-------------------------------------------------\n
+                  | Smoke has been detected in the Large Bedroom! |\n
+                  -------------------------------------------------"
+    - service: scene.turn_on
+      entity_id: scene.lb_search_mode_on
