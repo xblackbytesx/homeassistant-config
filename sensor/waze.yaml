@@ -1,23 +1,23 @@
 - platform: waze_travel_time
-  origin: !secret home_address
-  destination: !secret person_one_work_address
+  origin: !secret home_coordinates
+  destination: !secret person_one_work_coordinates
   region: 'EU'
   name: Person one drive Home to Work
 
 - platform: waze_travel_time
-  origin: !secret person_one_work_address
-  destination: !secret home_address
+  origin: !secret person_one_work_coordinates
+  destination: !secret home_coordinates
   region: 'EU'
   name: Person one drive Work to Home
 
 - platform: waze_travel_time
-  origin: !secret home_address
-  destination: !secret person_two_work_address
+  origin: !secret home_coordinates
+  destination: !secret person_two_work_coordinates
   region: 'EU'
   name: Person two drive Home to Work
 
 - platform: waze_travel_time
-  origin: !secret person_two_work_address
-  destination: !secret home_address
+  origin: !secret person_two_work_coordinates
+  destination: !secret home_coordinates
   region: 'EU'
   name: Person two drive Work to Home
