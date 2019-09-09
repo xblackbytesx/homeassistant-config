@@ -15,15 +15,53 @@ entities:
      service: scene.turn_on
      service_data:
        entity_id: scene.sa_not_watching_tv
-  - entity: scene.lr_search_mode_on
+  - entity: scene.lr_search_mode
     tap_action:
      action: call-service
      service: scene.turn_on
      service_data:
-       entity_id: scene.lr_search_mode_on
-  - entity: scene.lr_search_mode_off
+       entity_id: scene.lr_search_mode
+  - entity: scene.lr_reset_default
     tap_action:
      action: call-service
      service: scene.turn_on
      service_data:
-       entity_id: scene.lr_search_mode_off
+       entity_id: scene.lr_reset_default
+
+type: horizontal-stack
+cards:
+  - type: entity-button
+    name: Living Room Search mode
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: scene.lr_search_mode
+    entity: scene.lr_search_mode
+  - type: entity-button
+    name: Living Room Reset
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: scene.lr_reset_default
+    entity: scene.lr_reset_default
+
+type: horizontal-stack
+cards:    
+  - type: entity-button
+    name: Large Bedroom Search mode
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: scene.lb_search_mode
+    entity: scene.lb_search_mode
+  - type: entity-button
+    name: Large Bedroom Reset
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: scene.lb_reset_default
+    entity: scene.lb_reset_default

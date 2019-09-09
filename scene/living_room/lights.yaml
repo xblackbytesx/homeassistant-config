@@ -1,4 +1,4 @@
-- name: LR | Search Mode | On
+- name: LR | Search Mode
   entities:
     light.lg_lr_all:
       state: true
@@ -15,7 +15,7 @@
     automation.kitchen_time_lights_on:
       state: false
 
-- name: LR | Search Mode | Off
+- name: LR | Reset Default
   entities:
     scene.sa_not_watching_tv:
       state: true

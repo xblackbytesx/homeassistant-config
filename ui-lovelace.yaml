@@ -951,18 +951,18 @@ views:
         service: scene.turn_on
         service_data:
           entity_id: scene.sa_not_watching_tv
-    - entity: scene.lr_search_mode_on
+    - entity: scene.lr_search_mode
       tap_action:
         action: call-service
         service: scene.turn_on
         service_data:
-          entity_id: scene.lr_search_mode_on
-    - entity: scene.lr_search_mode_off
+          entity_id: scene.lr_search_mode
+    - entity: scene.lr_reset_default
       tap_action:
         action: call-service
         service: scene.turn_on
         service_data:
-          entity_id: scene.lr_search_mode_off
+          entity_id: scene.lr_reset_default
 - title: Security
   icon: mdi:cctv
   cards:

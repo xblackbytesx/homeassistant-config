@@ -10,7 +10,7 @@
                   | Smoke has been detected in the Living Room! |\n
                   -----------------------------------------------"
     - service: scene.turn_on
-      entity_id: scene.lr_search_mode_on
+      entity_id: scene.lr_search_mode
 
 
 - alias: LB | Smoke Detected | Notify | Light
@@ -25,4 +25,4 @@
                   | Smoke has been detected in the Large Bedroom! |\n
                   -------------------------------------------------"
     - service: scene.turn_on
-      entity_id: scene.lb_search_mode_on
+      entity_id: scene.lb_search_mode

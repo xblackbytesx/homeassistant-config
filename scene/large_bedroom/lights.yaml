@@ -24,7 +24,7 @@
       brightness_pct: 90
       transition: 2
 
-- name: LB | Search Mode | On
+- name: LB | Search Mode
   entities:
     light.lg_lb_all:
       state: true
@@ -43,7 +43,7 @@
     automation.lb_time_night_lights_off:
       state: fasle
 
-- name: LB | Search Mode | Off
+- name: LB | Reset Default
   entities:
     scene.lb_day:
       state: true
