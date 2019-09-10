@@ -5,3 +5,17 @@
 - name: notify_matrix_clean
   platform: matrix
   default_room: !secret matrix_room_clean
+
+- name: send_mail
+  platform: smtp
+  server: !secret smtp_server
+  port: !secret smtp_port
+  timeout: 15
+  sender: !secret smtp_email_address
+  encryption: starttls
+  username: !secret smtp_email_address
+  password: !secret smtp_password
+  recipient:
+    - !secret person_one_primary_email
+    - !secret person_two_primary_email
+  sender_name: Home Assistant
