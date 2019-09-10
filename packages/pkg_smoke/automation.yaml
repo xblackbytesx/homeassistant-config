@@ -9,7 +9,7 @@
         title: "SMOKE ALARM: Living Room"
         message: "Smoke was detected in the living room!!\n
                   Time of detection: {{ now().strftime('%H:%M') }}\n
-                  Verify and/or call the emergancy services!"
+                  Verify and/or call the emergency services!"
     - service: notify.notify_matrix_clean
       data:
         message: "-----------------------------------------------\n
@@ -30,7 +30,7 @@
         title: "SMOKE ALARM: Large Bedroom"
         message: "Smoke was detected in the large bedroom!!\n
                   Time of detection: {{ now().strftime('%H:%M') }}\n
-                  Verify and/or call the emergancy services!"
+                  Verify and/or call the emergency services!"
     - service: notify.notify_matrix_clean
       data:
         message: "-------------------------------------------------\n
