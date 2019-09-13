@@ -25,11 +25,6 @@ resources:
   type: js
 - url: /local/custom-lovelace/simple-thermostat/simple-thermostat.js?track=true
   type: js
-- url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?track=true
-  type: module
-cch:
-  voice: hide
-  options: clock
 views:
 - title: Home
   icon: mdi:home
@@ -963,6 +958,56 @@ views:
         service: scene.turn_on
         service_data:
           entity_id: scene.lr_reset_default
+    - entity: scene.lb_search_mode
+      tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.lb_search_mode
+    - entity: scene.lb_reset_default
+      tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.lb_reset_default
+
+# type: horizontal-stack
+# cards:
+#   - type: entity-button
+#     name: Living Room Search mode
+#     tap_action:
+#      action: call-service
+#      service: scene.turn_on
+#      service_data:
+#        entity_id: scene.lr_search_mode
+#     entity: scene.lr_search_mode
+#   - type: entity-button
+#     name: Living Room Reset
+#     tap_action:
+#      action: call-service
+#      service: scene.turn_on
+#      service_data:
+#        entity_id: scene.lr_reset_default
+#     entity: scene.lr_reset_default
+#
+# type: horizontal-stack
+# cards:
+#   - type: entity-button
+#     name: Large Bedroom Search mode
+#     tap_action:
+#      action: call-service
+#      service: scene.turn_on
+#      service_data:
+#        entity_id: scene.lb_search_mode
+#     entity: scene.lb_search_mode
+#   - type: entity-button
+#     name: Large Bedroom Reset
+#     tap_action:
+#      action: call-service
+#      service: scene.turn_on
+#      service_data:
+#        entity_id: scene.lb_reset_default
+#     entity: scene.lb_reset_default
 - title: Security
   icon: mdi:cctv
   cards:
@@ -971,19 +1016,24 @@ views:
     entity: camera.dafang
     camera_image: camera.dafang
     show_info: true
-    tap_action: dialog
+    tap_action: more-info
   - type: picture-entity
     title: Dafang
     entity: camera.xiaofang_1
     camera_image: camera.xiaofang_1
     show_info: true
-    tap_action: dialog
+    tap_action: more-info
   - type: picture-entity
     title: Dafang
     entity: camera.xiaofang_2
     camera_image: camera.xiaofang_2
     show_info: true
-    tap_action: dialog
+    tap_action: more-info
+  - type: entities
+    title: Smoke alarms
+    entities:
+    - binary_sensor.0x00158d0003612f9b_smoke
+    - binary_sensor.0x00158d00045cd482_smoke
 - title: Network
   icon: mdi:ip-network
   cards:
