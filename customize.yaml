@@ -28,7 +28,7 @@ light.0x90fd9ffffeea4e5e_light:
   friendly_name: Small bedroom
 light.0x00158d0001793961_light:
   friendly_name: Attic Front
-light.0x00158d0000dcb62a_light:
+light.0x086bd7fffe020f14_light:
   friendly_name: Attic Back
 light.exterior_lighting:
   icon: mdi:tree
@@ -71,6 +71,9 @@ switch.0x000d6ffffea6e967_switch:
   icon: mdi:power-socket-eu
 switch.0x000d6ffffea7daa5_switch:
   friendly_name: Attic/dryer
+  icon: mdi:power-socket-eu
+switch.0x000d6ffffed9d60d_switch:
+  friendly_name: Attic/back
   icon: mdi:power-socket-eu
 switch.0x000d6ffffedaf667_switch:
   friendly_name: Large bedroom
