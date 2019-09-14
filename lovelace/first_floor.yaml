@@ -15,6 +15,12 @@ cards:
     name: Pressure
     entities:
       - sensor.0x00158d00036bffea_pressure
+  - type: entities
+    title: First floor switches
+    show_header_toggle: true
+    entities:
+      - switch.0x000d6ffffedaf667_switch
+      - switch.0x000d6ffffedc5e05_switch
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

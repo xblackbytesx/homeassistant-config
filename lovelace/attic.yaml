@@ -13,6 +13,12 @@ cards:
       entities:
         - light.0x00158d0001793961_light
         - light.0x086bd7fffe020f14_light
+  - type: entities
+    title: Attic switches
+    show_header_toggle: true
+    entities:
+      - switch.0x000d6ffffea7daa5_switch
+      - switch.0x000d6ffffed9d60d_switch
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
