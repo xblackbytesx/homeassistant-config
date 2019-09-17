@@ -3,9 +3,6 @@
     - platform: state
       entity_id: binary_sensor.kitchen_motion_detected
       to: 'on'
-    - platform: time_pattern
-      minutes: '/1'
-      seconds: 00
   condition:
     condition: and
     conditions:

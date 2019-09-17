@@ -6,9 +6,6 @@
     - platform: state
       entity_id: binary_sensor.sa_tv_media_playing
       to: 'off'
-    - platform: time_pattern
-      minutes: '/1'
-      seconds: 00
   condition:
     condition: and
     conditions:
@@ -34,9 +31,6 @@
     - platform: state
       entity_id: binary_sensor.sa_tv_media_playing
       to: 'on'
-    - platform: time_pattern
-      minutes: '/1'
-      seconds: 00
   condition:
     condition: and
     conditions:
