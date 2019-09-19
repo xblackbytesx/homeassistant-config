@@ -190,9 +190,10 @@ views:
     - switch.0x000d6ffffedad23c_switch
     - switch.0x000d6ffffea6df64_switch
     - switch.0x000d6ffffea6e967_switch
-      # - switch.power_socket_one
-      # - switch.power_socket_two
-      # - switch.power_socket_three
+    - switch.0x000d6ffffedaf667_switch
+    - switch.0x000d6ffffedc5e05_switch
+    - switch.0x000d6ffffea7daa5_switch
+    - switch.0x000d6ffffed9d60d_switch
     - light.dimmable_socket_one
     - light.dimmable_socket_two
   - type: conditional
@@ -453,9 +454,6 @@ views:
     - switch.0x000d6ffffedad23c_switch
     - switch.0x000d6ffffea6df64_switch
     - switch.0x000d6ffffea6e967_switch
-      # - switch.power_socket_one
-      # - switch.power_socket_two
-      # - switch.power_socket_three
     - light.dimmable_socket_one
     - light.dimmable_socket_two
     - switch.beamer_screen
@@ -580,6 +578,12 @@ views:
     name: Pressure
     entities:
     - sensor.0x00158d00036bffea_pressure
+  - type: entities
+    title: First floor switches
+    show_header_toggle: true
+    entities:
+    - switch.0x000d6ffffedaf667_switch
+    - switch.0x000d6ffffedc5e05_switch
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -662,6 +666,12 @@ views:
       entities:
       - light.0x00158d0001793961_light
       - light.0x086bd7fffe020f14_light
+  - type: entities
+    title: Attic switches
+    show_header_toggle: true
+    entities:
+    - switch.0x000d6ffffea7daa5_switch
+    - switch.0x000d6ffffed9d60d_switch
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
