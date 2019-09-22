@@ -25,3 +25,13 @@
     - service: notify.notify_matrix_noisy
       data:
         message: "I've Terminated the Night lights in the Small Bedroom."
+
+
+# This is a contingency to make sure it all turns off properly
+- alias: 'SB | Time | Off'
+  trigger:
+    - platform: time
+      at: '00:00:00'
+  action:
+    - service: light.turn_off
+      entity_id: light.lg_sb_all
