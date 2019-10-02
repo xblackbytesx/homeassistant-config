@@ -15,3 +15,9 @@
   state_topic: "zigbee2mqtt/bridge/config"
   value_template: "{{ value_json.coordinator }}"
   icon: mdi:chip
+
+- platform: "mqtt"
+  state_topic: "zigbee2mqtt/0x000b3cfffefab3f6"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "-"
+  value_template: "{{ value_json.linkquality }}"

@@ -40,3 +40,4 @@ panel_iframe:
 sensor: !include sensor.yaml
 switch: !include switch.yaml
 automation: !include automation.yaml
+light: !include light.yaml
