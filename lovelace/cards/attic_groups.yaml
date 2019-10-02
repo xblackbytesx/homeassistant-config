@@ -1,5 +1,9 @@
+
 type: horizontal-stack
 cards:
   - type: light
     entity: light.lg_attic_all
     name: Attic
+  - type: light
+    entity: light.lg_office_all
+    name: Office

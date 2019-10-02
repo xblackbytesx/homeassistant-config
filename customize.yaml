@@ -26,10 +26,12 @@ light.0x00178801039d140f_light:
   friendly_name: Large bedroom
 light.0x90fd9ffffeea4e5e_light:
   friendly_name: Small bedroom
-light.0x00158d0001793961_light:
+light.0x000b3cfffefab3f6:
   friendly_name: Attic Front
 light.0x086bd7fffe020f14_light:
   friendly_name: Attic Back
+light.0x00158d0001793961_light:
+  friendly_name: Office left
 light.exterior_lighting:
   icon: mdi:tree
 light.0x00158d00017934ff_light:

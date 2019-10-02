@@ -11,8 +11,18 @@ cards:
       title: All attic lights
       show_header_toggle: true
       entities:
-        - light.0x00158d0001793961_light
+        - light.0x000b3cfffefab3f6_light
         - light.0x086bd7fffe020f14_light
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: All office lights
+      show_header_toggle: true
+      entities:
+        - light.0x00158d0001793961_light
   - type: entities
     title: Attic switches
     show_header_toggle: true
