@@ -23,6 +23,7 @@ cards:
       show_header_toggle: true
       entities:
         - light.0x00158d0001793961_light
+        - light.0x00158d00017cd686_light
   - type: entities
     title: Attic switches
     show_header_toggle: true

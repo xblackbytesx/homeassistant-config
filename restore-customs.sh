@@ -7,10 +7,10 @@ rm www/tracker-card.js
 rm lovelace-gen.py
 
 # Fetch desired custom components
-mkdir -p custom_components/custom_updater
-wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/__init__.py -O custom_components/custom_updater/__init__.py
-wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/services.yaml -O custom_components/custom_updater/services.yaml
-wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/manifest.json -O custom_components/custom_updater/manifest.json
+# mkdir -p custom_components/custom_updater
+# wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/__init__.py -O custom_components/custom_updater/__init__.py
+# wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/services.yaml -O custom_components/custom_updater/services.yaml
+# wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/manifest.json -O custom_components/custom_updater/manifest.json
 
 mkdir -p custom_components/rdw
 wget https://raw.githubusercontent.com/eelcohn/home-assistant-rdw/master/__init__.py -O custom_components/rdw/__init__.py
@@ -34,7 +34,7 @@ rm -rf custom_components/zigbee_networkmap
 cp -Rp assets/custom_components/garbage_pickup custom_components/
 
 # Fetch desired custom cards
-wget https://raw.githubusercontent.com/custom-cards/tracker-card/master/tracker-card.js -O www/tracker-card.js
+# wget https://raw.githubusercontent.com/custom-cards/tracker-card/master/tracker-card.js -O www/tracker-card.js
 
 mkdir -p www/custom-lovelace/upcoming-media-card
 wget https://raw.githubusercontent.com/custom-cards/upcoming-media-card/master/upcoming-media-card.js -O www/custom-lovelace/upcoming-media-card/upcoming-media-card.js
@@ -58,10 +58,10 @@ mkdir -p www/custom-lovelace/lovelace-mini-graph-card
 wget https://github.com/kalkih/mini-graph-card/releases/download/v0.6.0/mini-graph-card-bundle.js -O www/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js
 
 mkdir -p www/custom-lovelace/lovelace-mini-media-player
-wget https://github.com/kalkih/mini-media-player/releases/download/v1.3.0/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
+wget https://github.com/kalkih/mini-media-player/releases/download/v1.4.1/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
 
 mkdir -p www/custom-lovelace/simple-thermostat
-wget https://github.com/nervetattoo/simple-thermostat/releases/download/0.25.0/simple-thermostat.js -O www/custom-lovelace/simple-thermostat/simple-thermostat.js
+wget https://github.com/nervetattoo/simple-thermostat/releases/download/0.26.0-0/simple-thermostat.js -O www/custom-lovelace/simple-thermostat/simple-thermostat.js
 
 # Lovelace generator
 wget https://raw.githubusercontent.com/thomasloven/homeassistant-lovelace-gen/master/lovelace-gen.py

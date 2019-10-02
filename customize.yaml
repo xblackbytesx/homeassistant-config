@@ -79,7 +79,7 @@ switch.0x000d6ffffea7daa5_switch:
   friendly_name: Attic/dryer
   icon: mdi:power-socket-eu
 switch.0x000d6ffffed9d60d_switch:
-  friendly_name: Attic/back
+  friendly_name: Office/desks
   icon: mdi:power-socket-eu
 switch.0x000d6ffffedaf667_switch:
   friendly_name: Large bedroom
