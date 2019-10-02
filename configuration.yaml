@@ -68,11 +68,7 @@ http:
 # For more information, please see:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
 updater:
-custom_updater:
-  track:
-    - cards
-    - components
-
+  
 hue:
   bridges:
     - host: 10.0.221.30
