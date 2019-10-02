@@ -68,7 +68,7 @@
 - platform: group
   name: LG | MB | All
   entities:
-    - light.0x00158d00017cd686_light
+    - light.0x000b57fffee35b50_light
 
 - platform: group
   name: LG | SB | All
@@ -103,3 +103,4 @@
   name: LG | Office | All
   entities:
     - light.0x00158d0001793961_light
+    - light.0x00158d00017cd686_light

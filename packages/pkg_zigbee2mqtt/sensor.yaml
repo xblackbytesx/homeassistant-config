@@ -21,3 +21,9 @@
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "-"
   value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  state_topic: "zigbee2mqtt/0x000b57fffee35b50"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "-"
+  value_template: "{{ value_json.linkquality }}"
