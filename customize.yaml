@@ -14,6 +14,8 @@ light.small_bedroom:
   icon: mdi:hotel
 light.bathroom:
   icon: mdi:shower
+light.0x086bd7fffe035d36_light:
+  friendly_name: Toilet
 light.0x0017880103ea3a60_light:
   friendly_name: Hallway
 light.0x00178801023c1a33_light:
