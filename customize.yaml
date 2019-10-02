@@ -38,7 +38,7 @@ light.exterior_lighting:
   icon: mdi:tree
 light.0x086bd7fffe035d36_light:
   friendly_name: Front porch
-light.0x00158d00017ab8da_light:
+light.0x000b57fffee35b50_light:
   friendly_name: Backyard
 light.dimmable_socket_one:
   friendly_name: Small bedroom lights

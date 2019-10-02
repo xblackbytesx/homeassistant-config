@@ -63,7 +63,7 @@
   name: LG | EX | All
   entities:
     - light.0x086bd7fffe035d36_light
-    - light.0x00158d00017ab8da_light
+    - light.0x000b57fffee35b50_light
 
 - platform: group
   name: LG | MB | All

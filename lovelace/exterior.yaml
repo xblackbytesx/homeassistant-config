@@ -26,7 +26,7 @@ cards:
       show_header_toggle: true
       entities:
         - light.0x086bd7fffe035d36_light
-        - light.0x00158d00017ab8da_light
+        - light.0x000b57fffee35b50_light
   - type: picture-entity
     title: Dafang
     entity: camera.xiaofang_2
