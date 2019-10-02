@@ -12,4 +12,3 @@ cards:
     entities:
       - input_boolean.sa_media_status_override
   - !include cards/battery_status.yaml
-  - !include cards/tracker_card.yaml
