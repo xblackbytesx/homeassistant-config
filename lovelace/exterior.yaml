@@ -25,7 +25,7 @@ cards:
       title: Exterior lighting
       show_header_toggle: true
       entities:
-        - light.0x00158d00017934ff_light
+        - light.0x086bd7fffe035d36_light
         - light.0x00158d00017ab8da_light
   - type: picture-entity
     title: Dafang

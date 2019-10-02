@@ -14,8 +14,6 @@ light.small_bedroom:
   icon: mdi:hotel
 light.bathroom:
   icon: mdi:shower
-light.0x086bd7fffe035d36_light:
-  friendly_name: Toilet
 light.0x0017880103ea3a60_light:
   friendly_name: Hallway
 light.0x00178801023c1a33_light:
@@ -38,7 +36,7 @@ light.0x00158d00017cd686_light:
   friendly_name: Office right
 light.exterior_lighting:
   icon: mdi:tree
-light.0x00158d00017934ff_light:
+light.0x086bd7fffe035d36_light:
   friendly_name: Front porch
 light.0x00158d00017ab8da_light:
   friendly_name: Backyard
