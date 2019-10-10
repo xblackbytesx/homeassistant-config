@@ -144,6 +144,9 @@ sensor.0x00158d000349234a_battery:
 sensor.0x00158d00045cd482_battery:
   friendly_name: Smoke detector Large bedroom
   device_class: battery
+sensor.0x00158d00033e347d_battery:
+  friendly_name: Wall switch Large bedroom
+  device_class: battery
 sensor.0x00158d00036bffea_battery:
   friendly_name: Humidity sensor Large bedroom
   device_class: battery
@@ -162,6 +165,9 @@ sensor.sabal_minor_battery:
 sensor.cocos_nucifera_battery:
   friendly_name: Plant sensor Cocos Nuficera
   device_class: battery
+
+sensor.0x00158d00033e347d_click:
+  friendly_name: Wall switch Large bedroom
 
 sensor.gas_station_1_euro95:
   icon: mdi:gas-station
