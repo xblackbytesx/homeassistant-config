@@ -126,6 +126,12 @@ sensor.hue_motion_kitchen_battery_level:
 sensor.hue_motion_sitting_area_battery_level:
   friendly_name: Motion sensor Sitting area/screen
   device_class: battery
+sensor.0x00158d00034911fc_battery:
+  friendly_name: Motion sensor Sitting area/closet
+  device_class: battery
+sensor.0x00158d0003612f9b_battery:
+  friendly_name: Smoke detector Living room
+  device_class: battery
 sensor.hue_motion_corridor_battery_level:
   friendly_name: Motion sensor Corridor
   device_class: battery
@@ -134,6 +140,9 @@ sensor.0x00158d00033aac53_battery:
   device_class: battery
 sensor.0x00158d000349234a_battery:
   friendly_name: Motion sensor Bathroom/back
+  device_class: battery
+sensor.0x00158d00045cd482_battery:
+  friendly_name: Smoke detector Large bedroom
   device_class: battery
 sensor.0x00158d00036bffea_battery:
   friendly_name: Humidity sensor Large bedroom
