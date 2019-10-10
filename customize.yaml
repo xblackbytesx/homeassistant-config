@@ -107,40 +107,52 @@ sensor.iota:
 # Battery status
 sensor.0x00158d000313127e_battery:
   friendly_name: Vibration sensor 1
+  device_class: battery
 sensor.0x00158d000319ad0f_battery:
   friendly_name: Vibration sensor 2
-sensor.0x00158d000349234a_battery:
-  friendly_name: Motion sensor Bathroom
-sensor.0x00158d00036b62d0_battery:
-  friendly_name: Motion sensor Attic/stairs
-sensor.0x00158d000302ec77_battery:
-  friendly_name: Motion sensor Attic/front
-sensor.0x00158d00036bffea_battery:
-  friendly_name: Humidity sensor Large bedroom
+  device_class: battery
 sensor.hue_motion_hallway_door_battery_level:
   friendly_name: Motion sensor Hallway/door
   device_class: battery
 sensor.hue_motion_hallway_stairs_battery_level:
   friendly_name: Motion sensor Hallway/stairs
   device_class: battery
-sensor.hue_motion_corridor_battery_level:
-  friendly_name: Motion sensor Corridor
-  device_class: battery
 sensor.0x00158d00033a43ef_battery:
-  friendly_name: Kitchen/front
+  friendly_name: Motion sensor Kitchen/front
   device_class: battery
 sensor.hue_motion_kitchen_battery_level:
-  friendly_name: Motion sensor Kitchen
+  friendly_name: Motion sensor Kitchen/back
   device_class: battery
 sensor.hue_motion_sitting_area_battery_level:
   friendly_name: Motion sensor Sitting area/screen
   device_class: battery
+sensor.hue_motion_corridor_battery_level:
+  friendly_name: Motion sensor Corridor
+  device_class: battery
+sensor.0x00158d00033aac53_battery:
+  friendly_name: Motion sensor Bathroom/front
+  device_class: battery
+sensor.0x00158d000349234a_battery:
+  friendly_name: Motion sensor Bathroom/back
+  device_class: battery
+sensor.0x00158d00036bffea_battery:
+  friendly_name: Humidity sensor Large bedroom
+  device_class: battery
+sensor.0x00158d00036b62d0_battery:
+  friendly_name: Motion sensor Attic/stairs
+  device_class: battery
+sensor.0x00158d000302ec77_battery:
+  friendly_name: Motion sensor Attic/front
+  device_class: battery
 sensor.monstera_deliciosa_battery:
   friendly_name: Plant sensor Monstera
+  device_class: battery
 sensor.sabal_minor_battery:
   friendly_name: Plant sensor Sabal Minor
+  device_class: battery
 sensor.cocos_nucifera_battery:
   friendly_name: Plant sensor Cocos Nuficera
+  device_class: battery
 
 sensor.gas_station_1_euro95:
   icon: mdi:gas-station
