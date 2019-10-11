@@ -1072,15 +1072,6 @@ views:
       entities:
       - sensor.speedtest_upload
       - sensor.speedtest_download
-  - type: entities
-    title: Transmission
-    entities:
-    - sensor.transmission_active_torrents
-    - sensor.transmission_down_speed
-    - sensor.transmission_paused_torrents
-    - sensor.transmission_status
-    - sensor.transmission_total_torrents
-    - sensor.transmission_up_speed
   - type: vertical-stack
     cards:
     - type: custom:upcoming-media-card

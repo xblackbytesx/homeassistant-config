@@ -68,7 +68,7 @@ http:
 # For more information, please see:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
 updater:
-  
+
 hue:
   bridges:
     - host: 10.0.221.30
@@ -86,19 +86,19 @@ yeelight:
       name: Ledstrip Large Bedroom
       transition: 1000
 
-transmission:
-  host: !secret synology_ip
-  username: !secret transmission_user
-  password: !secret transmission_pass
-  monitored_conditions:
-    - 'current_status'
-    - 'download_speed'
-    - 'upload_speed'
-    - 'active_torrents'
-    - 'paused_torrents'
-    - 'started_torrents'
-    - 'completed_torrents'
-    - 'total_torrents'
+# transmission:
+#   host: !secret synology_ip
+#   username: !secret transmission_user
+#   password: !secret transmission_pass
+#   monitored_conditions:
+#     - 'current_status'
+#     - 'download_speed'
+#     - 'upload_speed'
+#     - 'active_torrents'
+#     - 'paused_torrents'
+#     - 'started_torrents'
+#     - 'completed_torrents'
+#     - 'total_torrents'
 
 speedtestdotnet:
   scan_interval:
