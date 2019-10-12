@@ -9,9 +9,6 @@
   action:
     - service: light.turn_off
       entity_id: light.0x00178801039d140f_light
-    # - service: notify.notify_matrix_noisy
-    #   data:
-    #     message: "I've Terminated the lights in the Large Bedroom."
 
 
 - alias: "LB | Time | Night lights off"
@@ -25,18 +22,3 @@
   action:
     - service: light.turn_off
       entity_id: light.ledstrip_large_bedroom
-    # - service: homeassistant.turn_off
-    #   entity_id: light.dimmable_socket_two
-    # - service: notify.notify_matrix_noisy
-    #   data:
-    #     message: "I've Terminated the Night lights in the Large Bedroom."
-
-
-# This is a contingency to make sure it all turns off properly
-- alias: 'LB | Time | Off'
-  trigger:
-    - platform: time
-      at: '00:00:00'
-  action:
-    - service: light.turn_off
-      entity_id: light.lg_lb_all
