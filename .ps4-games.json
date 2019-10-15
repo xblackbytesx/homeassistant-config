@@ -5,6 +5,12 @@
         "media_image_url": null,
         "media_title": "No Man's Sky"
     },
+    "CUSA08519": {
+        "locked": false,
+        "media_content_type": "game",
+        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/container/NL/nl/19/EP1004-CUSA08519_00-REDEMPTION000002/1570616422000/image",
+        "media_title": "Red Dead Redemption 2"
+    },
     "CUSA11993": {
         "locked": false,
         "media_content_type": "game",
