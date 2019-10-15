@@ -3,12 +3,10 @@ icon: mdi:settings
 cards:
   - type: entities
     title: Global toggles
-    show_header_toggle: true
     entities:
       - input_boolean.advanced_config
   - type: entities
     title: Boolean value overrides
-    show_header_toggle: true
     entities:
       - input_boolean.sa_media_status_override
   - !include cards/battery_status.yaml

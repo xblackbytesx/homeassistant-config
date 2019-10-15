@@ -14,7 +14,6 @@ cards:
   - !include cards/gas_prices.yaml
   - type: entities
     title: Power Sockets
-    show_header_toggle: true
     entities:
       - switch.0x000d6ffffedad23c_switch
       - switch.0x000d6ffffea6df64_switch
@@ -32,7 +31,6 @@ cards:
     card:
       type: entities
       title: Hallway lighting
-      show_header_toggle: true
       entities:
         - light.0x0017880103ea3a60_light
   - type: conditional
@@ -42,7 +40,6 @@ cards:
     card:
       type: entities
       title: Living room lighting
-      show_header_toggle: true
       entities:
         - light.kitchen
         - light.sitting_area
@@ -63,7 +60,6 @@ cards:
     card:
       type: entities
       title: Corridor lighting
-      show_header_toggle: true
       entities:
         - light.0x00178801030a3dde_light
   - type: conditional
@@ -73,7 +69,6 @@ cards:
     card:
       type: entities
       title: Exterior lighting
-      show_header_toggle: true
       entities:
         - light.0x086bd7fffe035d36_light
         - light.0x000b57fffee35b50_light
