@@ -6,7 +6,6 @@ cards:
   - !include cards/climate.yaml
   - type: entities
     title: Ground floor switches
-    show_header_toggle: true
     entities:
       - switch.0x000d6ffffedad23c_switch
       - switch.0x000d6ffffea6df64_switch
@@ -16,7 +15,6 @@ cards:
       - switch.beamer_screen
   - type: entities
     title: Ground floor doors and windows
-    show_header_toggle: true
     entities:
       - binary_sensor.front_door
   - type: entities
@@ -29,7 +27,6 @@ cards:
     card:
       type: entities
       title: Living room lighting
-      show_header_toggle: true
       entities:
         - light.kitchen
         - light.sitting_area
@@ -43,7 +40,6 @@ cards:
     card:
       type: entities
       title: Hallway lighting
-      show_header_toggle: true
       entities:
         - light.0x0017880103ea3a60_light
   - type: conditional
@@ -53,7 +49,6 @@ cards:
     card:
       type: entities
       title: All ground floor lights
-      show_header_toggle: true
       entities:
         - light.hue_bulb_kitchen_table_l
         - light.hue_bulb_kitchen_table_r
@@ -69,18 +64,8 @@ cards:
         - light.ledstrip_black_cabinet
         - light.ledstrip_kitchen_cabinet
         - light.0x0017880103ea3a60_light
-  - type: picture-entity
-    title: Dafang
-    entity: camera.dafang
-    camera_image: camera.dafang
-    show_info: true
-    tap_action: dialog
-  - type: picture-entity
-    title: Dafang
-    entity: camera.xiaofang_1
-    camera_image: camera.xiaofang_1
-    show_info: true
-    tap_action: dialog
+  - !include cards/camera_dafang.yaml
+  - !include cards/camera_xiaofang_1.yaml
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

@@ -5,8 +5,5 @@ cards:
   - !include cards/transmission.yaml
   - !include cards/upcoming_media.yaml
   - !include cards/synology_dsm.yaml
-  - type: sensor
-    entity: sensor.cpu_temperature
-    name: CPU Temperature
-    icon: mdi:thermometer
+  - !include cards/pi_temp.yaml
   - !include cards/zigbee.yaml

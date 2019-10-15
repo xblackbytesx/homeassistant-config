@@ -1,0 +1,6 @@
+type: picture-entity
+title: Dafang
+entity: camera.dafang
+camera_image: camera.dafang
+show_info: true
+tap_action: more-info
