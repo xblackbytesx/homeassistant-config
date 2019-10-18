@@ -16,45 +16,44 @@
   value_template: "{{ value_json.coordinator }}"
   icon: mdi:chip
 
-# Tradfri Attic/Front
-- platform: "mqtt"
-  state_topic: "zigbee2mqtt/0x000b3cfffefab3f6"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "-"
-  value_template: "{{ value_json.linkquality }}"
+# # Tradfri Attic/Front
+# - platform: "mqtt"
+#   state_topic: "zigbee2mqtt/0x000b3cfffefab3f6"
+#   availability_topic: "zigbee2mqtt/bridge/state"
+#   unit_of_measurement: "-"
+#   value_template: "{{ value_json.linkquality }}"
+#
+# # Tradfri Backyard
+# - platform: "mqtt"
+#   state_topic: "zigbee2mqtt/0x000b57fffee35b50"
+#   availability_topic: "zigbee2mqtt/bridge/state"
+#   unit_of_measurement: "-"
+#   value_template: "{{ value_json.linkquality }}"
 
-# Tradfri Backyard
-- platform: "mqtt"
-  state_topic: "zigbee2mqtt/0x000b57fffee35b50"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "-"
-  value_template: "{{ value_json.linkquality }}"
-
-# Tradfri Front-porch
+# Tradfri Master Bedroom
 - platform: "mqtt"
   state_topic: "zigbee2mqtt/0x086bd7fffe2b8f58"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "-"
   value_template: "{{ value_json.linkquality }}"
 
-
-# Aqara Human Motion sensors
-- platform: "mqtt"
-  state_topic: "zigbee2mqtt/0x00158d00033a43ef"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "lx"
-  device_class: "illuminance"
-  value_template: "{{ value_json.illuminance }}"
-
-- platform: "mqtt"
-  state_topic: "zigbee2mqtt/0x00158d00033a43ef"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  device_class: "battery"
-  value_template: "{{ value_json.battery }}"
-
-- platform: "mqtt"
-  state_topic: "zigbee2mqtt/0x00158d00033a43ef"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "-"
-  value_template: "{{ value_json.linkquality }}"
+# # Aqara Human Motion sensors
+# - platform: "mqtt"
+#   state_topic: "zigbee2mqtt/0x00158d00033a43ef"
+#   availability_topic: "zigbee2mqtt/bridge/state"
+#   unit_of_measurement: "lx"
+#   device_class: "illuminance"
+#   value_template: "{{ value_json.illuminance }}"
+#
+# - platform: "mqtt"
+#   state_topic: "zigbee2mqtt/0x00158d00033a43ef"
+#   availability_topic: "zigbee2mqtt/bridge/state"
+#   unit_of_measurement: "%"
+#   device_class: "battery"
+#   value_template: "{{ value_json.battery }}"
+#
+# - platform: "mqtt"
+#   state_topic: "zigbee2mqtt/0x00158d00033a43ef"
+#   availability_topic: "zigbee2mqtt/bridge/state"
+#   unit_of_measurement: "-"
+#   value_template: "{{ value_json.linkquality }}"
