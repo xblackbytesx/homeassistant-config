@@ -1,34 +1,63 @@
-- alias: Bathroom | Duo switch | R | On | Night
+- alias: Bathroom | Switch | Single | R | On | Night
   trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "on", "entity_id": "switch.duo_switch_bathroom_r"}
+    platform: state
+    entity_id: sensor.0x00158d00033e347d_click
+    to: 'right'
   condition:
-    condition: time
-    after: '23:30:00'
-    before: '07:30:00'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: light.hue_bulb_bathroom_r
+        state: 'off'
+      - condition: time
+        after: '23:30:00'
+        before: '06:00:00'
   action:
     - service: scene.turn_on
       entity_id: scene.bathroom_r_night
 
-- alias: Bathroom | Duo switch | R | On | Day
+
+- alias: Bathroom | Switch | Single | R | On | Day
   trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "on", "entity_id": "switch.duo_switch_bathroom_r"}
+    platform: state
+    entity_id: sensor.0x00158d00033e347d_click
+    to: 'right'
   condition:
-    condition: time
-    after: '07:30:00'
-    before: '23:30:00'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: light.hue_bulb_bathroom_r
+        state: 'off'
+      - condition: time
+        after: '06:00:00'
+        before: '23:30:00'
   action:
     - service: scene.turn_on
       entity_id: scene.bathroom_r_day
 
-- alias: Bathroom | Duo switch | R | Off
+
+- alias: Bathroom | Switch | Double | R | On | Night
   trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "off", "entity_id": "switch.duo_switch_bathroom_r"}
+    platform: state
+    entity_id: sensor.0x00158d00033e347d_click
+    to: 'right_double'
+  action:
+    - service: scene.turn_on
+      entity_id: scene.bathroom_r_day
+
+
+- alias: Bathroom | Switch | Single | R | Off
+  trigger:
+  trigger:
+    platform: state
+    entity_id: sensor.0x00158d00033e347d_click
+    to: 'right'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: light.hue_bulb_bathroom_r
+        state: 'on'
   action:
     - service: light.turn_off
       entity_id: light.hue_bulb_bathroom_r

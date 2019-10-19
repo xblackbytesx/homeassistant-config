@@ -1,34 +1,63 @@
-- alias: Bathroom | Duo switch | L | On | Night
+- alias: Bathroom | Switch | Single | L | On | Night
   trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "on", "entity_id": "switch.duo_switch_bathroom_l"}
+    platform: state
+    entity_id: sensor.0x00158d00033e347d_click
+    to: 'left'
   condition:
-    condition: time
-    after: '23:30:00'
-    before: '06:00:00'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: light.hue_candle_bathroom_l
+        state: 'off'
+      - condition: time
+        after: '23:30:00'
+        before: '06:00:00'
   action:
     - service: scene.turn_on
       entity_id: scene.bathroom_l_night
 
-- alias: Bathroom | Duo switch | L | On | Day
+
+- alias: Bathroom | Switch | Single | L | On | Day
   trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "on", "entity_id": "switch.duo_switch_bathroom_l"}
+    platform: state
+    entity_id: sensor.0x00158d00033e347d_click
+    to: 'left'
   condition:
-    condition: time
-    after: '06:00:00'
-    before: '23:30:00'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: light.hue_candle_bathroom_l
+        state: 'off'
+      - condition: time
+        after: '06:00:00'
+        before: '23:30:00'
   action:
     - service: scene.turn_on
       entity_id: scene.bathroom_l_day
 
-- alias: Bathroom | Duo switch | L | Off
+
+- alias: Bathroom | Switch | Double | L | On
   trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "off", "entity_id": "switch.duo_switch_bathroom_l"}
+    platform: state
+    entity_id: sensor.0x00158d00033e347d_click
+    to: 'left_double'
+  action:
+    - service: scene.turn_on
+      entity_id: scene.bathroom_l_day
+
+
+- alias: Bathroom | Switch | Single | L | Off
+  trigger:
+  trigger:
+    platform: state
+    entity_id: sensor.0x00158d00033e347d_click
+    to: 'left'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: light.hue_candle_bathroom_l
+        state: 'on'
   action:
     - service: light.turn_off
       entity_id: light.hue_candle_bathroom_l
