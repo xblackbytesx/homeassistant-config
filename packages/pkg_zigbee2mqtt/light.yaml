@@ -4,7 +4,7 @@
 #   brightness: true
 #   schema: "json"
 #   command_topic: "zigbee2mqtt/0x000b3cfffefab3f6/set"
-#
+
 # - platform: "mqtt"
 #   state_topic: "zigbee2mqtt/0x000b57fffee35b50"
 #   availability_topic: "zigbee2mqtt/bridge/state"
@@ -12,9 +12,9 @@
 #   schema: "json"
 #   command_topic: "zigbee2mqtt/0x000b57fffee35b50/set"
 
-- platform: "mqtt"
-  state_topic: "zigbee2mqtt/0x086bd7fffe2b8f58"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  brightness: true
-  schema: "json"
-  command_topic: "zigbee2mqtt/0x086bd7fffe2b8f58/set"
+# - platform: "mqtt"
+#   state_topic: "zigbee2mqtt/0x086bd7fffe2b8f58"
+#   availability_topic: "zigbee2mqtt/bridge/state"
+#   brightness: true
+#   schema: "json"
+#   command_topic: "zigbee2mqtt/0x086bd7fffe2b8f58/set"
