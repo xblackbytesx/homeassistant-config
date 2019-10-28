@@ -183,7 +183,6 @@ views:
         line_width: 6
   - type: entities
     title: Power Sockets
-    show_header_toggle: true
     entities:
     - switch.0x000d6ffffedad23c_switch
     - switch.0x000d6ffffea6df64_switch
@@ -201,7 +200,6 @@ views:
     card:
       type: entities
       title: Hallway lighting
-      show_header_toggle: true
       entities:
       - light.0x0017880103ea3a60_light
   - type: conditional
@@ -211,7 +209,6 @@ views:
     card:
       type: entities
       title: Living room lighting
-      show_header_toggle: true
       entities:
       - light.kitchen
       - light.sitting_area
@@ -318,7 +315,6 @@ views:
     card:
       type: entities
       title: Corridor lighting
-      show_header_toggle: true
       entities:
       - light.0x00178801030a3dde_light
   - type: conditional
@@ -328,7 +324,6 @@ views:
     card:
       type: entities
       title: Exterior lighting
-      show_header_toggle: true
       entities:
       - light.0x086bd7fffe035d36_light
       - light.0x000b57fffee35b50_light
@@ -447,7 +442,6 @@ views:
       - sensor.hue_motion_sensor_sitting_area_temperature
   - type: entities
     title: Ground floor switches
-    show_header_toggle: true
     entities:
     - switch.0x000d6ffffedad23c_switch
     - switch.0x000d6ffffea6df64_switch
@@ -457,7 +451,6 @@ views:
     - switch.beamer_screen
   - type: entities
     title: Ground floor doors and windows
-    show_header_toggle: true
     entities:
     - binary_sensor.front_door
   - type: entities
@@ -470,7 +463,6 @@ views:
     card:
       type: entities
       title: Living room lighting
-      show_header_toggle: true
       entities:
       - light.kitchen
       - light.sitting_area
@@ -484,7 +476,6 @@ views:
     card:
       type: entities
       title: Hallway lighting
-      show_header_toggle: true
       entities:
       - light.0x0017880103ea3a60_light
   - type: conditional
@@ -494,7 +485,6 @@ views:
     card:
       type: entities
       title: All ground floor lights
-      show_header_toggle: true
       entities:
       - light.hue_bulb_kitchen_table_l
       - light.hue_bulb_kitchen_table_r
@@ -515,13 +505,13 @@ views:
     entity: camera.dafang
     camera_image: camera.dafang
     show_info: true
-    tap_action: dialog
+    tap_action: more-info
   - type: picture-entity
     title: Dafang
     entity: camera.xiaofang_1
     camera_image: camera.xiaofang_1
     show_info: true
-    tap_action: dialog
+    tap_action: more-info
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -578,7 +568,6 @@ views:
     - sensor.0x00158d00036bffea_pressure
   - type: entities
     title: First floor switches
-    show_header_toggle: true
     entities:
     - switch.0x000d6ffffedaf667_switch
     - switch.0x000d6ffffedc5e05_switch
@@ -589,7 +578,6 @@ views:
     card:
       type: entities
       title: Corridor lighting
-      show_header_toggle: true
       entities:
       - light.0x00178801030a3dde_light
   - type: conditional
@@ -599,7 +587,6 @@ views:
     card:
       type: entities
       title: Bathroom lighting
-      show_header_toggle: true
       entities:
       - light.hue_candle_bathroom_l
       - light.hue_bulb_bathroom_r
@@ -610,7 +597,6 @@ views:
     card:
       type: entities
       title: Large Bedroom lighting
-      show_header_toggle: true
       entities:
       - light.0x00178801039d140f_light
   - type: conditional
@@ -620,7 +606,6 @@ views:
     card:
       type: entities
       title: All first floor lights
-      show_header_toggle: true
       entities:
       - light.0x00178801030a3dde_light
       - light.hue_candle_bathroom_l
@@ -663,7 +648,6 @@ views:
     card:
       type: entities
       title: All attic lights
-      show_header_toggle: true
       entities:
       - light.0x000b3cfffefab3f6_light
       - light.0x086bd7fffe020f14_light
@@ -674,13 +658,11 @@ views:
     card:
       type: entities
       title: All office lights
-      show_header_toggle: true
       entities:
       - light.0x00158d0001793961_light
       - light.0x00158d00017cd686_light
   - type: entities
     title: Attic switches
-    show_header_toggle: true
     entities:
     - switch.0x000d6ffffea7daa5_switch
     - switch.0x000d6ffffed9d60d_switch
@@ -707,12 +689,10 @@ views:
       name: Exterior
   - type: entities
     title: Exterior switches
-    show_header_toggle: true
     entities:
     - switch.sun_screen
   - type: entities
     title: Exterior covers
-    show_header_toggle: true
     entities:
     - cover.attic_shutters
   - type: picture-elements
@@ -828,7 +808,6 @@ views:
     card:
       type: entities
       title: Exterior lighting
-      show_header_toggle: true
       entities:
       - light.0x086bd7fffe035d36_light
       - light.0x000b57fffee35b50_light
@@ -837,7 +816,7 @@ views:
     entity: camera.xiaofang_2
     camera_image: camera.xiaofang_2
     show_info: true
-    tap_action: dialog
+    tap_action: more-info
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -1325,12 +1304,10 @@ views:
   cards:
   - type: entities
     title: Global toggles
-    show_header_toggle: true
     entities:
     - input_boolean.advanced_config
   - type: entities
     title: Boolean value overrides
-    show_header_toggle: true
     entities:
     - input_boolean.sa_media_status_override
   - type: custom:monster-card
