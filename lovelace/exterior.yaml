@@ -22,7 +22,7 @@ cards:
       type: entities
       title: Exterior lighting
       entities:
-        - light.0x086bd7fffe035d36_light
+        - light.0x00158d00017ab8da_light
         - light.0x000b57fffee35b50_light
   - !include cards/camera_xiaofang_2.yaml
   - type: conditional
