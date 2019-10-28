@@ -20,7 +20,9 @@ light.0x00178801023c1a33_light:
   friendly_name: SA | Standing Lamp
 light.0x00178801030a3dde_light:
   friendly_name: Corridor
-light.0x086bd7fffe2b8f58_light:
+# light.0x086bd7fffe2b8f58_light:
+#   friendly_name: Master bedroom
+light.0x00158d00017934ff_light:
   friendly_name: Master bedroom
 light.0x00178801039d140f_light:
   friendly_name: Large bedroom
@@ -36,7 +38,9 @@ light.0x00158d00017cd686_light:
   friendly_name: Office right
 light.exterior_lighting:
   icon: mdi:tree
-light.0x086bd7fffe035d36_light:
+# light.0x086bd7fffe035d36_light:
+#   friendly_name: Front porch
+light.0x00158d00017ab8da_light:
   friendly_name: Front porch
 light.0x000b57fffee35b50_light:
   friendly_name: Backyard
