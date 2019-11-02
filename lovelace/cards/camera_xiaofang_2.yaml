@@ -1,6 +1,6 @@
 type: picture-entity
 title: Dafang
 entity: camera.xiaofang_2
-camera_image: camera.xiaofang_2
-show_info: true
-tap_action: more-info
+camera_view: live
+tap_action:
+  action: more-info
