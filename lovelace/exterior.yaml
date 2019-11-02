@@ -6,6 +6,7 @@ cards:
     title: Exterior switches
     entities:
       - switch.sun_screen
+      - switch.0x000d6ffffea6e967_switch
   - type: entities
     title: Exterior covers
     entities:

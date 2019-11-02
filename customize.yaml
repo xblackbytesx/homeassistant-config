@@ -54,15 +54,6 @@ light.dimmable_socket_two:
 switch.sun_screen:
   friendly_name: Sunscreen
   icon: mdi:sunglasses
-switch.power_socket_one:
-  friendly_name: TV Cabinet
-  icon: mdi:power-socket-eu
-switch.power_socket_two:
-  friendly_name: Black Cabinet
-  icon: mdi:power-socket-eu
-switch.power_socket_three:
-  friendly_name: Exterior lighting
-  icon: mdi:power-socket-eu
 switch.beamer_screen:
   friendly_name: Beamer screen
   icon: mdi:projector-screen
