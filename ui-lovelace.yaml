@@ -346,7 +346,7 @@ views:
   - type: vertical-stack
     cards:
     - type: light
-      entity: light.sitting_area
+      entity: light.lg_sa_all
       name: Sitting Area
     - type: horizontal-stack
       cards:
