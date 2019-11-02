@@ -63,5 +63,8 @@ wget https://github.com/kalkih/mini-media-player/releases/download/v1.4.1/mini-m
 mkdir -p www/custom-lovelace/simple-thermostat
 wget https://github.com/nervetattoo/simple-thermostat/releases/download/0.28.0/simple-thermostat.js -O www/custom-lovelace/simple-thermostat/simple-thermostat.js
 
+mkdir -p www/custom-lovelace/mqtt-networkmap
+wget https://github.com/azuwis/zigbee2mqtt-networkmap/releases/download/v0.5.0/zigbee2mqtt-networkmap.js -O www/custom-lovelace/mqtt-networkmap
+
 # Lovelace generator
 wget https://raw.githubusercontent.com/thomasloven/homeassistant-lovelace-gen/master/lovelace-gen.py
