@@ -1,5 +1,4 @@
 title: Bier Estates
-# Include external resources
 resources:
 - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js
   type: js
@@ -19,6 +18,9 @@ resources:
   type: js
 - url: /local/custom-lovelace/simple-thermostat/simple-thermostat.js
   type: js
+- url: /local/custom-lovelace/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js
+  type: module
+
 views:
   - !include home.yaml
   - !include ground_floor.yaml
@@ -34,3 +36,4 @@ views:
   - !include finance.yaml
   - !include automation.yaml
   - !include overrides.yaml
+  - !include zigbee.yaml
