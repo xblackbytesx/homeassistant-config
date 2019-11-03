@@ -39,6 +39,12 @@ entities:
      service: scene.turn_on
      service_data:
        entity_id: scene.lb_reset_default
+  - entity: scene.ex_relax
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: scene.ex_relax
 
 # type: horizontal-stack
 # cards:
