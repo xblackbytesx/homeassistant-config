@@ -4,3 +4,5 @@
       state: true
       brightness_pct: 45
       transition: 2
+    switch.0x000d6ffffea6e967_switch:
+      state: true
