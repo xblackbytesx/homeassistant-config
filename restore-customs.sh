@@ -58,10 +58,10 @@ mkdir -p www/custom-lovelace/lovelace-mini-graph-card
 wget https://github.com/kalkih/mini-graph-card/releases/download/v0.8.2/mini-graph-card-bundle.js -O www/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js
 
 mkdir -p www/custom-lovelace/lovelace-mini-media-player
-wget https://github.com/kalkih/mini-media-player/releases/download/v1.4.1/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
+wget https://github.com/kalkih/mini-media-player/releases/download/v1.4.2/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
 
 mkdir -p www/custom-lovelace/simple-thermostat
-wget https://github.com/nervetattoo/simple-thermostat/releases/download/0.28.0/simple-thermostat.js -O www/custom-lovelace/simple-thermostat/simple-thermostat.js
+wget https://github.com/nervetattoo/simple-thermostat/releases/download/0.29.0/simple-thermostat.js -O www/custom-lovelace/simple-thermostat/simple-thermostat.js
 
 mkdir -p www/custom-lovelace/zigbee2mqtt-networkmap
 wget https://github.com/azuwis/zigbee2mqtt-networkmap/releases/download/v0.5.0/zigbee2mqtt-networkmap.js -O www/custom-lovelace/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js
