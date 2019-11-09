@@ -2,8 +2,7 @@
   entities:
     light.lg_kitchen_table:
       state: true
-      xy_color: [0.507, 0.414]
-      brightness_pct: 65
+      brightness_pct: 50
     light.lg_kitchen_counter:
       state: true
       xy_color: [0.507, 0.414]

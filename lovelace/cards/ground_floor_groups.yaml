@@ -9,5 +9,5 @@ cards:
         entity: light.lg_hw_all
         name: Hallway
       - type: light
-        entity: light.kitchen
+        entity: light.lg_kitchen_all
         name: Kitchen
