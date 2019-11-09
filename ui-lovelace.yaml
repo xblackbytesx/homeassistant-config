@@ -287,14 +287,14 @@ views:
 #   - type: state-icon
 #     tap_action:
 #       action: toggle
-#     entity: light.hue_bulb_kitchen_table_r
+#     entity: light.hue_filament_kitchen_back
 #     style:
 #       bottom: 16%
 #       left: 31%
 #   - type: state-icon
 #     tap_action:
 #       action: toggle
-#     entity: light.hue_bulb_kitchen_table_l
+#     entity: light.hue_filament_kitchen_front
 #     style:
 #       bottom: 16%
 #       left: 23.5%
@@ -404,14 +404,14 @@ views:
     - type: state-icon
       tap_action:
         action: toggle
-      entity: light.hue_bulb_kitchen_table_r
+      entity: light.hue_filament_kitchen_back
       style:
         bottom: 16%
         left: 31%
     - type: state-icon
       tap_action:
         action: toggle
-      entity: light.hue_bulb_kitchen_table_l
+      entity: light.hue_filament_kitchen_front
       style:
         bottom: 16%
         left: 23.5%
@@ -486,8 +486,8 @@ views:
       type: entities
       title: All ground floor lights
       entities:
-      - light.hue_bulb_kitchen_table_l
-      - light.hue_bulb_kitchen_table_r
+      - light.hue_filament_kitchen_front
+      - light.hue_filament_kitchen_back
       - light.hue_spot_kitchen_counter_1
       - light.hue_spot_kitchen_counter_2
       - light.hue_spot_kitchen_counter_3

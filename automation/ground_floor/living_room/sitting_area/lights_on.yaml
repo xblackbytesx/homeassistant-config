@@ -23,6 +23,25 @@
       entity_id: scene.sa_not_watching_tv
 
 
+# - alias: SA | No Media
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.sa_motion_detected
+#       to: 'on'
+#   condition:
+#     condition: and
+#     conditions:
+#       - condition: state
+#         entity_id: binary_sensor.sa_dark_enough
+#         state: 'on'
+#       - condition: state
+#         entity_id: binary_sensor.sa_tv_media_playing
+#         state: 'on'
+#   action:
+#     - service: scene.turn_on
+#       entity_id: scene.sa_not_watching_tv
+
+
 - alias: SA | Media Playing | State two
   trigger:
     - platform: state
