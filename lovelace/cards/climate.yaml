@@ -13,3 +13,7 @@ cards:
       - sensor.hue_motion_sensor_hallway_stairs_temperature
       - sensor.hue_motion_sensor_kitchen_temperature
       - sensor.hue_motion_sensor_sitting_area_temperature
+  - type: custom:mini-graph-card
+    name: Humidity
+    entities:
+      - sensor.living_room_thermostat_humidity
