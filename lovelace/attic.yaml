@@ -20,8 +20,8 @@ cards:
       type: entities
       title: All office lights
       entities:
-        - light.0x00158d0001793961_light
-        - light.0x00158d00017cd686_light
+        - light.0x00178801023c1b25_light
+        - light.0x0017880102460013_light
   - type: entities
     title: Attic switches
     entities:

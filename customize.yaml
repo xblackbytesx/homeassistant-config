@@ -32,9 +32,9 @@ light.0x000b3cfffefab3f6_light:
   friendly_name: Attic Front
 light.0x086bd7fffe020f14_light:
   friendly_name: Attic Back
-light.0x00158d0001793961_light:
+light.0x00178801023c1b25_light:
   friendly_name: Office left
-light.0x00158d00017cd686_light:
+light.0x0017880102460013_light:
   friendly_name: Office right
 light.exterior_lighting:
   icon: mdi:tree

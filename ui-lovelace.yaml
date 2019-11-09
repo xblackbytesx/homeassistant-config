@@ -612,7 +612,7 @@ views:
       - light.hue_bulb_bathroom_r
       - light.0x00178801039d140f_light
       - light.0x90fd9ffffeea4e5e_light
-      - light.0x00158d00017cd686_light
+      - light.0x0017880102460013_light
       - light.ledstrip_large_bedroom
   - type: conditional
     conditions:
@@ -659,8 +659,8 @@ views:
       type: entities
       title: All office lights
       entities:
-      - light.0x00158d0001793961_light
-      - light.0x00158d00017cd686_light
+      - light.0x00178801023c1b25_light
+      - light.0x0017880102460013_light
   - type: entities
     title: Attic switches
     entities:
