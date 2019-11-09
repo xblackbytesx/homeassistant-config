@@ -46,14 +46,14 @@ elements:
   - type: state-icon
     tap_action:
       action: toggle
-    entity: light.hue_bulb_kitchen_table_r
+    entity: light.hue_filament_kitchen_back
     style:
       bottom: 16%
       left: 31%
   - type: state-icon
     tap_action:
       action: toggle
-    entity: light.hue_bulb_kitchen_table_l
+    entity: light.hue_filament_kitchen_front
     style:
       bottom: 16%
       left: 23.5%
