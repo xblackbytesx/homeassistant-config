@@ -3,7 +3,6 @@
 # https://github.com/thomasloven/homeassistant-lovelace-gen
 # Any changes made to it will be overwritten the next time the script is run.
 title: Bier Estates
-# Include external resources
 resources:
 - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js
   type: js
@@ -23,6 +22,9 @@ resources:
   type: js
 - url: /local/custom-lovelace/simple-thermostat/simple-thermostat.js
   type: js
+- url: /local/custom-lovelace/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js
+  type: module
+
 views:
 - title: Home
   icon: mdi:home
@@ -62,6 +64,10 @@ views:
       - sensor.hue_motion_sensor_hallway_stairs_temperature
       - sensor.hue_motion_sensor_kitchen_temperature
       - sensor.hue_motion_sensor_sitting_area_temperature
+    - type: custom:mini-graph-card
+      name: Humidity
+      entities:
+      - sensor.living_room_thermostat_humidity
   - type: weather-forecast
     entity: weather.dark_sky
   - type: picture-elements
@@ -440,6 +446,10 @@ views:
       - sensor.hue_motion_sensor_hallway_stairs_temperature
       - sensor.hue_motion_sensor_kitchen_temperature
       - sensor.hue_motion_sensor_sitting_area_temperature
+    - type: custom:mini-graph-card
+      name: Humidity
+      entities:
+      - sensor.living_room_thermostat_humidity
   - type: entities
     title: Ground floor switches
     entities:
@@ -503,15 +513,15 @@ views:
   - type: picture-entity
     title: Dafang
     entity: camera.dafang
-    camera_image: camera.dafang
-    show_info: true
-    tap_action: more-info
+    camera_view: live
+    tap_action:
+      action: more-info
   - type: picture-entity
     title: Dafang
     entity: camera.xiaofang_1
-    camera_image: camera.xiaofang_1
-    show_info: true
-    tap_action: more-info
+    camera_view: live
+    tap_action:
+      action: more-info
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -691,6 +701,7 @@ views:
     title: Exterior switches
     entities:
     - switch.sun_screen
+    - switch.0x000d6ffffea6e967_switch
   - type: entities
     title: Exterior covers
     entities:
@@ -814,9 +825,9 @@ views:
   - type: picture-entity
     title: Dafang
     entity: camera.xiaofang_2
-    camera_image: camera.xiaofang_2
-    show_info: true
-    tap_action: more-info
+    camera_view: live
+    tap_action:
+      action: more-info
   - type: conditional
     conditions:
     - entity: input_boolean.advanced_config
@@ -971,6 +982,12 @@ views:
         service: scene.turn_on
         service_data:
           entity_id: scene.lb_reset_default
+    - entity: scene.ex_relax
+      tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.ex_relax
 
 # type: horizontal-stack
 # cards:
@@ -1015,21 +1032,21 @@ views:
   - type: picture-entity
     title: Dafang
     entity: camera.dafang
-    camera_image: camera.dafang
-    show_info: true
-    tap_action: more-info
+    camera_view: live
+    tap_action:
+      action: more-info
   - type: picture-entity
     title: Dafang
     entity: camera.xiaofang_1
-    camera_image: camera.xiaofang_1
-    show_info: true
-    tap_action: more-info
+    camera_view: live
+    tap_action:
+      action: more-info
   - type: picture-entity
     title: Dafang
     entity: camera.xiaofang_2
-    camera_image: camera.xiaofang_2
-    show_info: true
-    tap_action: more-info
+    camera_view: live
+    tap_action:
+      action: more-info
   - type: entities
     title: Smoke alarms
     entities:
@@ -1318,3 +1335,30 @@ views:
     filter:
       include:
       - entity_id: "*_battery*"
+- title: Zigbee Network
+  panel: true # this renders the first card on full width, other cards in this view will not be rendered
+  cards:
+  - type: custom:zigbee2mqtt-networkmap
+    entity: sensor.zigbee2mqtt_networkmap
+    # the following are optional:
+    mqtt_base_topic: zigbee2mqtt # if you change base_topic of Zigbee2mqtt, change it accordingly
+    force: 3000 # decrease it to get smaller map if you have many devices
+    node_size: 16
+    font_size: 12
+    link_width: 2
+    height: 400 # height of the card
+    # use this css config or use whatever css tech to change look and feel,
+    # the same variable can also be used in Home Assistant themes, see https://www.home-assistant.io/components/frontend/#defining-themes
+    css: |
+      :host {
+        --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);
+        --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;
+        --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);
+        --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);
+        --zigbee2mqtt-networkmap-hover-color: #be385d;
+        --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);
+        --zigbee2mqtt-networkmap-label-color: #127862;
+        --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);
+        --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);
+        --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);
+      }
