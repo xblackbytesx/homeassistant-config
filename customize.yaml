@@ -16,7 +16,7 @@ light.bathroom:
   icon: mdi:shower
 light.0x0017880103ea3a60_light:
   friendly_name: Hallway
-light.0x00178801023c1a33_light:
+light.hue_filament_standing_lamp:
   friendly_name: SA | Standing Lamp
 light.0x00178801030a3dde_light:
   friendly_name: Corridor
