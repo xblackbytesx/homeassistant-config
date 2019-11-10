@@ -1,6 +1,6 @@
 - name: SB | Night
   entities:
-    light.0x90fd9ffffeea4e5e_light:
+    light.0x00178801023c1a33_light:
       state: true
       xy_color: [0.137, 0.041]
       brightness_pct: 60
@@ -12,7 +12,7 @@
 
 - name: SB | Day
   entities:
-    light.0x90fd9ffffeea4e5e_light:
+    light.0x00178801023c1a33_light:
       state: true
       xy_color: [0.507, 0.414]
       brightness_pct: 100
