@@ -1,14 +1,14 @@
 - alias: "SB | Time | Lights off"
   trigger:
     platform: state
-    entity_id: light.0x90fd9ffffeea4e5e_light
+    entity_id: light.0x00178801023c1a33_light
     to: 'on'
     for:
       hours: 0
       minutes: 45
   action:
     - service: light.turn_off
-      entity_id: light.0x90fd9ffffeea4e5e_light
+      entity_id: light.0x00178801023c1a33_light
 
 
 - alias: "SB | Time | Night lights off"
