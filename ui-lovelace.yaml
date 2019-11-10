@@ -286,7 +286,7 @@ views:
 #   - type: state-icon
 #     tap_action:
 #       action: toggle
-#     entity: light.0x00178801023c1a33_light
+#     entity: light.hue_filament_standing_lamp
 #     style:
 #       top: 23%
 #       right: 32.6%
@@ -403,7 +403,7 @@ views:
     - type: state-icon
       tap_action:
         action: toggle
-      entity: light.0x00178801023c1a33_light
+      entity: light.hue_filament_standing_lamp
       style:
         top: 23%
         right: 32.6%
@@ -502,7 +502,7 @@ views:
       - light.hue_spot_kitchen_counter_2
       - light.hue_spot_kitchen_counter_3
       - light.hue_spot_kitchen_counter_4
-      - light.0x00178801023c1a33_light
+      - light.hue_filament_standing_lamp
       - light.hue_iris_tv_cabinet
       - light.hue_go_closet_l
       - light.hue_go_closet_r
