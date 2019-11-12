@@ -56,7 +56,7 @@ cards:
         - light.hue_spot_kitchen_counter_2
         - light.hue_spot_kitchen_counter_3
         - light.hue_spot_kitchen_counter_4
-        - light.hue_filament_standing_lamp
+        - light.0x00178801081af093_light
         - light.hue_iris_tv_cabinet
         - light.hue_go_closet_l
         - light.hue_go_closet_r

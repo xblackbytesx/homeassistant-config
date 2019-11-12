@@ -1,6 +1,6 @@
 - name: SA | Not watching TV
   entities:
-    light.hue_filament_standing_lamp:
+    light.0x00178801081af093_light:
       state: true
       brightness_pct: 50
     light.hue_go_closet_l:
@@ -32,7 +32,7 @@
 
 - name: SA | Watching TV
   entities:
-    light.hue_filament_standing_lamp:
+    light.0x00178801081af093_light:
       state: false
     light.hue_go_closet_l:
       state: false
