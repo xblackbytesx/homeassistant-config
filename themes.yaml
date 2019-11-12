@@ -20,7 +20,7 @@ slate:
     table-row-alternative-background-color: '#292929'
     # Nav Menu
     paper-listbox-color: '#777777'
-    paper-listbox-background-color: '#141414'
+    paper-listbox-background-color: '#000000'
     paper-grey-50: 'var(--primary-text-color)'
     paper-grey-200: 'var(--primary-background-color)'
     # Paper card
