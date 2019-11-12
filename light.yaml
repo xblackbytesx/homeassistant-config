@@ -25,7 +25,7 @@
 - platform: group
   name: LG | SA | All
   entities:
-    - light.hue_filament_standing_lamp
+    - light.0x00178801081af093_light
     - light.hue_go_closet_l
     - light.hue_go_closet_r
     - light.hue_iris_tv_cabinet

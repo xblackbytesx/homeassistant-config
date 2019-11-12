@@ -53,7 +53,7 @@ card:
 #   - type: state-icon
 #     tap_action:
 #       action: toggle
-#     entity: light.hue_filament_standing_lamp
+#     entity: light.0x00178801081af093_light
 #     style:
 #       top: 23%
 #       right: 32.6%
