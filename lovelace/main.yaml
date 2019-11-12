@@ -16,8 +16,6 @@ resources:
   type: js
 - url: /local/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
   type: js
-- url: /local/custom-lovelace/simple-thermostat/simple-thermostat.js
-  type: js
 - url: /local/custom-lovelace/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js
   type: module
 
@@ -36,4 +34,3 @@ views:
   - !include finance.yaml
   - !include automation.yaml
   - !include overrides.yaml
-  - !include zigbee.yaml
