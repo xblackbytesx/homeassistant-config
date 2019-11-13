@@ -210,6 +210,6 @@ binary_sensor.0x00158d000349234a_occupancy:
 binary_sensor.0x00158d00033aac53_occupancy:
   icon: mdi:run
   friendly_name: Bathroom/front
-binary_sensor.front_door:
+binary_sensor.0x00158d000446eb21_contact:
   friendly_name: Front door
   icon: mdi:door
