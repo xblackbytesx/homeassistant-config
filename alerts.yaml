@@ -3,7 +3,7 @@ front_door:
   message: Front door has been open for a while now, is this right?
   done_message: Front door has been closed
   entity_id: binary_sensor.0x00158d000446eb21_contact
-  state: 'false'
+  state: 'on'
   repeat:
     - 5
     - 10
