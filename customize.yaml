@@ -153,6 +153,9 @@ sensor.0x00158d00036b62d0_battery:
 sensor.0x00158d000302ec77_battery:
   friendly_name: Motion sensor Attic/front
   device_class: battery
+sensor.0x00158d000446eb21_battery:
+  friendly_name: Contact sensor Front door
+  device_class: battery
 sensor.monstera_deliciosa_battery:
   friendly_name: Plant sensor Monstera
   device_class: battery
