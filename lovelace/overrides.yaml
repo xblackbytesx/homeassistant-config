@@ -10,3 +10,19 @@ cards:
     entities:
       - input_boolean.sa_media_status_override
   - !include cards/battery_status.yaml
+  - type: entity-button
+    entity: binary_sensor.0x00158d0003612f9b_smoke
+    show_icon: false
+    tap_action:
+        action: call-service
+        service: automation.trigger
+        service_data:
+          entity_id: automation.smoke_alarm_lr_test
+  - type: entity-button
+    entity: binary_sensor.0x00158d00045cd482_smoke
+    show_icon: false
+    tap_action:
+        action: call-service
+        service: automation.trigger
+        service_data:
+          entity_id: automation.smoke_alarm_lb_test

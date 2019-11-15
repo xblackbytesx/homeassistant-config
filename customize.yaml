@@ -177,42 +177,47 @@ sensor.gas_station_2_euro95:
   icon: mdi:gas-station
 sensor.gas_station_3_euro95:
   icon: mdi:gas-station
+
 binary_sensor.hw_motion_detected:
   friendly_name: Hallway
-  icon: mdi:run
+  device_class: motion
 binary_sensor.sa_motion_detected:
   friendly_name: Sitting Area
-  icon: mdi:run
+  device_class: motion
 binary_sensor.kitchen_motion_detected:
   friendly_name: Kitchen
-  icon: mdi:run
+  device_class: motion
+binary_sensor.0x00178801020282bc_occupancy:
+  friendly_name: Hallway/stairs
+  device_class: motion
 binary_sensor.co_motion_detected:
   friendly_name: Corridor
-  icon: mdi:run
+  device_class: motion
 binary_sensor.attic_motion_detected:
   friendly_name: Attic
-  icon: mdi:run
+  device_class: motion
 binary_sensor.bathroom_motion_detected:
   friendly_name: Bathroom
-  icon: mdi:run
+  device_class: motion
 binary_sensor.0x00158d00034911fc_occupancy:
-  icon: mdi:run
   friendly_name: Sitting Area (closet)
+  device_class: motion
 binary_sensor.0x00158d00033a43ef_occupancy:
-  icon: mdi:run
   friendly_name: Kitchen/front
+  device_class: motion
 binary_sensor.0x00158d00036b62d0_occupancy:
-  icon: mdi:run
   friendly_name: Attic/stairs
+  device_class: motion
 binary_sensor.0x00158d000302ec77_occupancy:
-  icon: mdi:run
   friendly_name: Attic/front
+  device_class: motion
 binary_sensor.0x00158d000349234a_occupancy:
-  icon: mdi:run
   friendly_name: Bathroom/back
+  device_class: motion
 binary_sensor.0x00158d00033aac53_occupancy:
-  icon: mdi:run
   friendly_name: Bathroom/front
+  device_class: motion
+
 binary_sensor.0x00158d000446eb21_contact:
   friendly_name: Front door
   icon: mdi:door
