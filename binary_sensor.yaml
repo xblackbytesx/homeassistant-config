@@ -32,11 +32,11 @@
     hw_motion_detected:
       value_template: >-
         {{ is_state('binary_sensor.hue_motion_sensor_hallway_door_motion', 'on')
-           or is_state('binary_sensor.hue_motion_sensor_hallway_stairs_motion', 'on') }}
+           or is_state('binary_sensor.0x00178801020282bc_occupancy', 'on') }}
 
     hw_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_hallway_stairs_light_level')|float < 18 }}
+        {{ states('sensor.0x00178801020282bc_illuminance')|float < 3000 }}
 
     co_motion_detected:
       value_template: >-

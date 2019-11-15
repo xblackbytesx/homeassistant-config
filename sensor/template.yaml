@@ -5,11 +5,6 @@
         unit_of_measurement: '%'
         value_template: "{{ state_attr('binary_sensor.hue_motion_sensor_hallway_door_motion', 'battery_level') }}"
 
-      hue_motion_hallway_stairs_battery_level:
-        friendly_name: "Motion hallway/stairs battery level"
-        unit_of_measurement: '%'
-        value_template: "{{ state_attr('binary_sensor.hue_motion_sensor_hallway_stairs_motion', 'battery_level') }}"
-
       hue_motion_sitting_area_battery_level:
         friendly_name: "Motion sitting area battery level"
         unit_of_measurement: '%'
