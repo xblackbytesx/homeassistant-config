@@ -48,7 +48,6 @@
 
 - alias: Bathroom | Switch | Single | R | Off
   trigger:
-  trigger:
     platform: state
     entity_id: sensor.0x00158d00033e347d_click
     to: 'right'

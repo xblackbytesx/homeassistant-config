@@ -5,7 +5,7 @@
   action:
     - service: mqtt.publish
       data:
-        payload: "{"selftest": ""}"
+        payload: "{\"selftest\": \"\"}"
         topic: zigbee2mqtt/0x00158d0003612f9b/set
 
 
@@ -16,5 +16,5 @@
   action:
     - service: mqtt.publish
       data:
-        payload: "{"selftest": ""}"
+        payload: "{\"selftest\": \"\"}"
         topic: zigbee2mqtt/0x00158d00045cd482/set
