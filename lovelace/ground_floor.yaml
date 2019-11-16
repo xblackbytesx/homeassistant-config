@@ -17,6 +17,7 @@ cards:
     title: Ground floor doors and windows
     entities:
       - binary_sensor.0x00158d000446eb21_contact
+      - binary_sensor.0x00158d000446fc0a_contact
   - type: entities
     entities:
       - binary_sensor.0x00158d0003612f9b_smoke

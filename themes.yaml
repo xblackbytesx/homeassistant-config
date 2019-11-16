@@ -79,4 +79,3 @@ slate:
     lumo-shade-10pct: 'rgba(34, 34, 34, .1)'
     lumo-shade-5pct: 'rgba(34, 34, 34, .05)'
     lumo-tint-5pct: 'var(--primary-background-color)'
-

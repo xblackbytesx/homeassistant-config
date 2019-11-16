@@ -5,3 +5,4 @@ cards:
   - !include cards/camera_xiaofang_1.yaml
   - !include cards/camera_xiaofang_2.yaml
   - !include cards/smoke.yaml
+  - !include cards/contact_sensors.yaml

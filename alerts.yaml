@@ -12,6 +12,22 @@ front_door:
   notifiers:
     - notify_matrix_clean
 
+
+kitchen_window:
+  name: Kitchen window open
+  message: Kitchen window has been open for a while now, is this right?
+  done_message: Kitchen window has been closed
+  entity_id: binary_sensor.0x00158d000446fc0a_contact
+  state: 'on'
+  repeat:
+    - 5
+    - 10
+  can_acknowledge: true
+  skip_first: true
+  notifiers:
+    - notify_matrix_clean
+
+
 # battery_motion_hallway_door:
 #   name: Front door open
 #   message: Front door has been open for a while now, is this right?
