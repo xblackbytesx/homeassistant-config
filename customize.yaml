@@ -223,7 +223,7 @@ binary_sensor.0x00158d00033aac53_occupancy:
 
 binary_sensor.0x00158d000446eb21_contact:
   friendly_name: Front door
-  icon: mdi:door
+  device_class: door
 binary_sensor.0x00158d000446fc0a_contact:
   friendly_name: Kitchen window
-  icon: mdi:door
+  device_class: window
