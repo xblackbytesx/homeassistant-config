@@ -10,7 +10,7 @@ cards:
   - type: custom:mini-graph-card
     name: Temperature
     entities:
-      - sensor.hue_motion_sensor_hallway_stairs_temperature
+      - sensor.0x00178801020282bc_temperature
       - sensor.hue_motion_sensor_kitchen_temperature
       - sensor.hue_motion_sensor_sitting_area_temperature
   - type: custom:mini-graph-card
