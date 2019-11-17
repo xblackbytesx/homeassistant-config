@@ -126,6 +126,9 @@ sensor.hue_motion_sitting_area_battery_level:
 sensor.0x00158d00034911fc_battery:
   friendly_name: Motion sensor Sitting area/closet
   device_class: battery
+sensor.0xccccccfffe40b07b_battery:
+  friendly_name: Tradfri remote
+  device_class: battery
 sensor.0x00158d0003612f9b_battery:
   friendly_name: Smoke detector Living room
   device_class: battery
