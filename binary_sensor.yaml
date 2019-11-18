@@ -36,7 +36,7 @@
 
     hw_dark_enough:
       value_template: >-
-        {{ states('sensor.0x00178801020282bc_illuminance')|float < 3000 }}
+        {{ states('sensor.hue_motion_sensor_hallway_stairs_illuminance')|float < 18 }}
 
     co_motion_detected:
       value_template: >-
