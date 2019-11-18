@@ -59,7 +59,7 @@ views:
     - type: custom:mini-graph-card
       name: Temperature
       entities:
-      - sensor.hue_motion_sensor_hallway_stairs_temperature
+      - sensor.0x00178801020282bc_temperature
       - sensor.hue_motion_sensor_kitchen_temperature
       - sensor.hue_motion_sensor_sitting_area_temperature
     - type: custom:mini-graph-card
@@ -441,7 +441,7 @@ views:
     - type: custom:mini-graph-card
       name: Temperature
       entities:
-      - sensor.hue_motion_sensor_hallway_stairs_temperature
+      - sensor.0x00178801020282bc_temperature
       - sensor.hue_motion_sensor_kitchen_temperature
       - sensor.hue_motion_sensor_sitting_area_temperature
     - type: custom:mini-graph-card
@@ -461,6 +461,7 @@ views:
     title: Ground floor doors and windows
     entities:
     - binary_sensor.0x00158d000446eb21_contact
+    - binary_sensor.0x00158d000446fc0a_contact
   - type: entities
     entities:
     - binary_sensor.0x00158d0003612f9b_smoke
@@ -1050,6 +1051,11 @@ views:
     entities:
     - binary_sensor.0x00158d0003612f9b_smoke
     - binary_sensor.0x00158d00045cd482_smoke
+  - type: entities
+    title: Doors and windows
+    entities:
+    - binary_sensor.0x00158d000446eb21_contact
+    - binary_sensor.0x00158d000446fc0a_contact
 - title: Network
   icon: mdi:ip-network
   cards:
@@ -1333,3 +1339,19 @@ views:
     filter:
       include:
       - entity_id: "*_battery*"
+  - type: entity-button
+    entity: binary_sensor.0x00158d0003612f9b_smoke
+    show_icon: false
+    tap_action:
+      action: call-service
+      service: automation.trigger
+      service_data:
+        entity_id: automation.smoke_alarm_lr_test
+  - type: entity-button
+    entity: binary_sensor.0x00158d00045cd482_smoke
+    show_icon: false
+    tap_action:
+      action: call-service
+      service: automation.trigger
+      service_data:
+        entity_id: automation.smoke_alarm_lb_test
