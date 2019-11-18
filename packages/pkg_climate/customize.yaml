@@ -6,7 +6,7 @@ sensor.hue_motion_sensor_kitchen_temperature:
   friendly_name: Kitchen
 sensor.hue_motion_sensor_sitting_area_temperature:
   friendly_name: Sitting Area
-sensor.hue_motion_sensor_corridor_temperature:
+sensor.0x00178801020357e5_temperature:
   friendly_name: Corridor
 sensor.0x00158d00036bffea_temperature:
   friendly_name: Large bedroom

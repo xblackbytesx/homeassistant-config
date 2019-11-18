@@ -132,7 +132,7 @@ sensor.0xccccccfffe40b07b_battery:
 sensor.0x00158d0003612f9b_battery:
   friendly_name: Smoke detector Living room
   device_class: battery
-sensor.hue_motion_corridor_battery_level:
+sensor.0x00178801020357e5_battery:
   friendly_name: Motion sensor Corridor
   device_class: battery
 sensor.0x00158d00033aac53_battery:
@@ -198,6 +198,9 @@ binary_sensor.0x00178801020260c3_occupancy:
   device_class: motion
 binary_sensor.0x00178801020282bc_occupancy:
   friendly_name: Hallway/stairs
+  device_class: motion
+binary_sensor.0x00178801020357e5_occupancy:
+  friendly_name: Corridor
   device_class: motion
 binary_sensor.co_motion_detected:
   friendly_name: Corridor

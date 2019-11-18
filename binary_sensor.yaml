@@ -40,11 +40,11 @@
 
     co_motion_detected:
       value_template: >-
-        {{ is_state('binary_sensor.hue_motion_sensor_corridor_motion', 'on') }}
+        {{ is_state('binary_sensor.0x00178801020357e5_occupancy', 'on') }}
 
     co_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_corridor_light_level')|float < 18 }}
+        {{ states('sensor.hue_motion_sensor_corridor_illuminance')|float < 18 }}
 
     bathroom_motion_detected:
       value_template: >-

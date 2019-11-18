@@ -10,15 +10,14 @@
       unit_of_measurement: '%'
       value_template: "{{ state_attr('binary_sensor.hue_motion_sensor_kitchen_motion', 'battery_level') }}"
 
-    hue_motion_corridor_battery_level:
-      friendly_name: "Motion corridor battery level"
-      unit_of_measurement: '%'
-      value_template: "{{ state_attr('binary_sensor.hue_motion_sensor_corridor_motion', 'battery_level') }}"
-
     hue_motion_sensor_hallway_door_illuminance:
       value_template: "{{ (states('sensor.0x00178801020260c3_illuminance')|float / 1000)|round(0) }}"
       unit_of_measurement: Lux
 
     hue_motion_sensor_hallway_stairs_illuminance:
       value_template: "{{ (states('sensor.0x00178801020282bc_illuminance')|float / 1000)|round(0) }}"
+      unit_of_measurement: Lux
+
+    hue_motion_sensor_corridor_illuminance:
+      value_template: "{{ (states('sensor.0x00178801020357e5_illuminance')|float / 1000)|round(0) }}"
       unit_of_measurement: Lux
