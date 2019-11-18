@@ -108,10 +108,10 @@ sensor.0x00158d000313127e_battery:
 sensor.0x00158d000319ad0f_battery:
   friendly_name: Vibration sensor 2
   device_class: battery
-sensor.hue_motion_hallway_door_battery_level:
+sensor.0x00178801020260c3_battery:
   friendly_name: Motion sensor Hallway/door
   device_class: battery
-sensor.hue_motion_hallway_stairs_battery_level:
+sensor.0x00178801020282bc_battery:
   friendly_name: Motion sensor Hallway/stairs
   device_class: battery
 sensor.0x00158d00033a43ef_battery:
@@ -192,6 +192,9 @@ binary_sensor.sa_motion_detected:
   device_class: motion
 binary_sensor.kitchen_motion_detected:
   friendly_name: Kitchen
+  device_class: motion
+binary_sensor.0x00178801020260c3_occupancy:
+  friendly_name: Hallway/door
   device_class: motion
 binary_sensor.0x00178801020282bc_occupancy:
   friendly_name: Hallway/stairs
