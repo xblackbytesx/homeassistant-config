@@ -1,14 +1,13 @@
 - platform: template
   sensors:
-    hue_motion_sitting_area_battery_level:
-      friendly_name: "Motion sitting area battery level"
-      unit_of_measurement: '%'
-      value_template: "{{ state_attr('binary_sensor.hue_motion_sensor_sitting_area_motion', 'battery_level') }}"
-
     hue_motion_kitchen_battery_level:
       friendly_name: "Motion kitchen battery level"
       unit_of_measurement: '%'
       value_template: "{{ state_attr('binary_sensor.hue_motion_sensor_kitchen_motion', 'battery_level') }}"
+
+    hue_motion_sensor_sitting_area_illuminance:
+      value_template: "{{ (states('sensor.0x0017880102026161_illuminance')|float / 1000)|round(0) }}"
+      unit_of_measurement: Lux
 
     hue_motion_sensor_hallway_door_illuminance:
       value_template: "{{ (states('sensor.0x00178801020260c3_illuminance')|float / 1000)|round(0) }}"

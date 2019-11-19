@@ -12,13 +12,13 @@
   sensors:
     sa_motion_detected:
       value_template: >-
-        {{ is_state('binary_sensor.hue_motion_sensor_sitting_area_motion', 'on')
+        {{ is_state('binary_sensor.0x0017880102026161_occupancy', 'on')
            or is_state('binary_sensor.0x00158d00034911fc_occupancy', 'on')
            or is_state('binary_sensor.motion_sensor_sa', 'on') }}
 
     sa_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_sitting_area_light_level')|float < 18 }}
+        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < 18 }}
 
     kitchen_motion_detected:
       value_template: >-
@@ -66,4 +66,4 @@
 
     exterior_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_sitting_area_light_level')|float < 18 }}
+        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < 18 }}

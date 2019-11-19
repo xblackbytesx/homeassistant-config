@@ -4,7 +4,7 @@ sensor.0x00178801020282bc_temperature:
   friendly_name: Hallway
 sensor.hue_motion_sensor_kitchen_temperature:
   friendly_name: Kitchen
-sensor.hue_motion_sensor_sitting_area_temperature:
+sensor.0x0017880102026161_temperature:
   friendly_name: Sitting Area
 sensor.0x00178801020357e5_temperature:
   friendly_name: Corridor
