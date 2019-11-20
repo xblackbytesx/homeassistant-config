@@ -2,7 +2,7 @@ sensor.living_room_thermostat_humidity:
   friendly_name: Humidity
 sensor.0x00178801020282bc_temperature:
   friendly_name: Hallway
-sensor.hue_motion_sensor_kitchen_temperature:
+sensor.0x0017880102030677_temperature:
   friendly_name: Kitchen
 sensor.0x0017880102026161_temperature:
   friendly_name: Sitting Area

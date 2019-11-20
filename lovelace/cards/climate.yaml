@@ -11,7 +11,7 @@ cards:
     name: Temperature
     entities:
       - sensor.0x00178801020282bc_temperature
-      - sensor.hue_motion_sensor_kitchen_temperature
+      - sensor.0x0017880102030677_temperature
       - sensor.0x0017880102026161_temperature
   - type: custom:mini-graph-card
     name: Humidity

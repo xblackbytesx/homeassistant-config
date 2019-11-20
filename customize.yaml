@@ -117,7 +117,7 @@ sensor.0x00178801020282bc_battery:
 sensor.0x00158d00033a43ef_battery:
   friendly_name: Motion sensor Kitchen/front
   device_class: battery
-sensor.hue_motion_kitchen_battery_level:
+sensor.0x0017880102030677_battery:
   friendly_name: Motion sensor Kitchen/back
   device_class: battery
 sensor.0x0017880102026161_battery:
@@ -201,6 +201,9 @@ binary_sensor.0x00158d00034911fc_occupancy:
   device_class: motion
 binary_sensor.0x00158d00033a43ef_occupancy:
   friendly_name: Kitchen/front
+  device_class: motion
+binary_sensor.0x0017880102030677_occupancy:
+  friendly_name: Kitchen/back
   device_class: motion
 binary_sensor.0x00178801020260c3_occupancy:
   friendly_name: Hallway/door

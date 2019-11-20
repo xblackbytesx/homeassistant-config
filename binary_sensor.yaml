@@ -27,7 +27,7 @@
 
     kitchen_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_kitchen_light_level')|float < 25 }}
+        {{ states('sensor.hue_motion_sensor_kitchen_illuminance')|float < 25 }}
 
     hw_motion_detected:
       value_template: >-
