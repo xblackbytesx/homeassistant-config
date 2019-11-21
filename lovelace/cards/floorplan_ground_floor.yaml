@@ -1,5 +1,7 @@
 type: picture-elements
 image: /local/floorplan_ground_floor.jpg
+tap_action:
+  action: more-info
 elements:
   - type: state-icon
     tap_action:
