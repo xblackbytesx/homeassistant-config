@@ -1,4 +1,5 @@
-- alias: MB | Single switch | On
+- id: mb_007
+  alias: MB | Single switch | On
   trigger:
     platform: event
     event_type: button_pressed
@@ -12,7 +13,8 @@
         kelvin: 2700
 
 
-- alias: MB | Single switch | Off
+- id: mb_008
+  alias: MB | Single switch | Off
   trigger:
     platform: event
     event_type: button_pressed

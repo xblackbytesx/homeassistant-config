@@ -1,4 +1,5 @@
-- alias: MB | Motion | Lights off
+- id: mb_001
+  alias: MB | Motion | Lights off
   trigger:
     - platform: state
       entity_id: sensor.motion_in_corridor

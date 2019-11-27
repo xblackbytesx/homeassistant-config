@@ -1,4 +1,5 @@
-- alias: MB | Duo switch | right | On
+- id: mb_005
+  alias: MB | Duo switch | right | On
   trigger:
     platform: event
     event_type: button_pressed
@@ -11,7 +12,8 @@
         brightness_pct: 100
         kelvin: 2700
 
-- alias: MB | Duo switch | right | Off
+- id: mb_006
+  alias: MB | Duo switch | right | Off
   trigger:
     platform: event
     event_type: button_pressed

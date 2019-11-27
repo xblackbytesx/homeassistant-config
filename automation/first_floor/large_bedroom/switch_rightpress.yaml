@@ -1,4 +1,5 @@
-- alias: LB | Duo switch | right | On
+- id: lb_003
+  alias: LB | Duo switch | right | On
   trigger:
     platform: event
     event_type: button_pressed
@@ -8,7 +9,8 @@
       entity_id: scene.lb_day
 
 
-- alias: LB | Duo switch | right | Off
+- id: lb_004
+  alias: LB | Duo switch | right | Off
   trigger:
     platform: event
     event_type: button_pressed

@@ -1,4 +1,5 @@
-- alias: "LB | Time | Lights off"
+- id: lb_005
+  alias: "LB | Time | Lights off"
   trigger:
     platform: state
     entity_id: light.0x00178801039d140f_light
@@ -11,7 +12,8 @@
       entity_id: light.0x00178801039d140f_light
 
 
-- alias: "LB | Time | Night lights off"
+- lb: lb_006
+  alias: "LB | Time | Night lights off"
   trigger:
     platform: state
     entity_id: light.ledstrip_large_bedroom

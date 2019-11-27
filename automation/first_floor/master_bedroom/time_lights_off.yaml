@@ -1,4 +1,5 @@
-- alias: "MB | Time | Lights off"
+- id: mb_009
+  alias: "MB | Time | Lights off"
   trigger:
     - platform: state
       entity_id: light.master_bedroom
