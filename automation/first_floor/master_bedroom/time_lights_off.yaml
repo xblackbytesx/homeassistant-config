@@ -2,7 +2,7 @@
   alias: "MB | Time | Lights off"
   trigger:
     - platform: state
-      entity_id: light.master_bedroom
+      entity_id: light.lg_mb_all
       to: 'on'
       for:
         hours: 1

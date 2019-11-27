@@ -2,8 +2,8 @@
   alias: MB | Motion | Lights on
   trigger:
     - platform: state
-      entity_id: sensor.motion_in_corridor
-      to: '1'
+      entity_id: binary_sensor.co_motion_detected
+      to: 'on'
   condition:
     condition: state
     entity_id: input_boolean.co_meets_darkness_cutoff

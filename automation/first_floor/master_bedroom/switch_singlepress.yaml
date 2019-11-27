@@ -5,12 +5,8 @@
     event_type: button_pressed
     event_data: {"state": "on", "entity_id": "switch.single_switch_mb"}
   action:
-    - service: light.turn_on
-      data:
-        entity_id: light.lg_mb_all
-        transition: 1
-        brightness_pct: 50
-        kelvin: 2700
+    - service: scene.turn_on
+      entity_id: scene.mb_night
 
 
 - id: mb_008

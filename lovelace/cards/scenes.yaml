@@ -45,6 +45,18 @@ entities:
      service: scene.turn_on
      service_data:
        entity_id: scene.ex_relax
+  - entity: scene.mb_night
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: scene.mb_night
+  - entity: scene.mb_day
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: scene.mb_day
 
 # type: horizontal-stack
 # cards:

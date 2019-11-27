@@ -5,12 +5,9 @@
     event_type: button_pressed
     event_data: {"state": "on", "entity_id": "switch.duo_switch_mb_r"}
   action:
-    - service: light.turn_on
-      data:
-        entity_id: light.lg_mb_all
-        transition: 1
-        brightness_pct: 100
-        kelvin: 2700
+    - service: scene.turn_on
+      entity_id: scene.mb_day
+
 
 - id: mb_006
   alias: MB | Duo switch | right | Off

@@ -1,0 +1,15 @@
+- name: MB | Night
+  entities:
+    light.lg_mb_all:
+      state: true
+      transition: 1
+      brightness_pct: 50
+      kelvin: 2700
+
+- name: MB | Day
+  entities:
+    light.lg_mb_all:
+      state: true
+      transition: 1
+      brightness_pct: 100
+      kelvin: 2700
