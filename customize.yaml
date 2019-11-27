@@ -2,17 +2,17 @@ group.all_automations:
   hidden: false
 
 # Lights
-light.sitting_area:
+light.lg_sa_all:
   icon: mdi:sofa
-light.kitchen:
+light.lg_kitchen_all:
   icon: mdi:silverware-fork-knife
-light.master_bedroom:
+light.lg_mb_all:
   icon: mdi:hotel
-light.large_bedroom:
+light.lg_lb_all:
   icon: mdi:hotel
-light.small_bedroom:
+light.lg_sb_all:
   icon: mdi:hotel
-light.bathroom:
+light.lg_bathroom_all:
   icon: mdi:shower
 light.0x0017880103ea3a60_light:
   friendly_name: Hallway
