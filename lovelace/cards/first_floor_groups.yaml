@@ -8,7 +8,7 @@ cards:
   - type: horizontal-stack
     cards:
       - type: light
-        entity: light.0x00178801039d140f_light
+        entity: light.lg_sb_all
         name: Large bedroom
       - type: light
         entity: light.lg_sb_all
@@ -19,5 +19,5 @@ cards:
         entity: light.lg_co_all
         name: Corridor
       - type: light
-        entity: light.bathroom
+        entity: light.lg_bathroom_all
         name: Bathroom

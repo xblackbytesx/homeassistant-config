@@ -38,7 +38,7 @@ light.0x00178801023c1b25_light:
   friendly_name: Office left
 light.0x0017880102460013_light:
   friendly_name: Office right
-light.exterior_lighting:
+light.lg_ex_all:
   icon: mdi:tree
 # light.0x086bd7fffe035d36_light:
 #   friendly_name: Front porch
