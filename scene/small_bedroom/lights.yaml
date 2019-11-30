@@ -24,32 +24,32 @@
       state: true
       xy_color: [0.311, 0.327]
       brightness_pct: 100
-    automation.sb_duo_switch_left_off:
+    automation.sb_001:
       state: fasle
-    automation.sb_duo_switch_left_on:
+    automation.sb_002:
       state: fasle
-    automation.sb_duo_switch_right_off:
+    automation.sb_003:
       state: fasle
-    automation.sb_duo_switch_right_on:
+    automation.sb_004:
       state: fasle
-    automation.sb_time_lights_off:
+    automation.sb_005:
       state: fasle
-    automation.sb_time_night_lights_off:
+    automation.sb_006:
       state: fasle
 
 - name: SB | Reset Default
   entities:
     scene.sb_day:
       state: true
-    automation.sb_duo_switch_left_off:
+    automation.sb_001:
       state: true
-    automation.sb_duo_switch_left_on:
+    automation.sb_002:
       state: true
-    automation.sb_duo_switch_right_off:
+    automation.sb_003:
       state: true
-    automation.sb_duo_switch_right_on:
+    automation.sb_004:
       state: true
-    automation.sb_time_lights_off:
+    automation.sb_005:
       state: true
-    automation.sb_time_night_lights_off:
+    automation.sb_006:
       state: true

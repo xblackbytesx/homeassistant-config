@@ -298,3 +298,17 @@ automation.lb_005:
   friendly_name: LB | Time | Lights | Off
 automation.lb_006:
   friendly_name: LB | Time | Night Lights | Off
+
+# Small bedroom automations
+automation.sb_001:
+  friendly_name: SB | Duo switch | left | On
+automation.sb_002:
+  friendly_name: SB | Duo switch | left | Off
+automation.sb_003:
+  friendly_name: SB | Duo switch | right | On
+automation.sb_004:
+  friendly_name: SB | Duo switch | right | Off
+automation.sb_005:
+  friendly_name: SB | Time | Lights | Off
+automation.sb_006:
+  friendly_name: SB | Time | Night Lights | Off

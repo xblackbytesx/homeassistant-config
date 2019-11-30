@@ -1,4 +1,5 @@
-- alias: SB | Duo switch | right | On
+- id: sb_003
+  alias: sb_003
   trigger:
     platform: event
     event_type: button_pressed
@@ -7,7 +8,8 @@
     - service: scene.turn_on
       entity_id: scene.sb_day
 
-- alias: SB | Duo switch | right | Off
+- id: sb_004
+  alias: sb_004
   trigger:
     platform: event
     event_type: button_pressed

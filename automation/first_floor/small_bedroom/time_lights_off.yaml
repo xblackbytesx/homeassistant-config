@@ -1,4 +1,5 @@
-- alias: "SB | Time | Lights off"
+- id: sb_005
+  alias: sb_005
   trigger:
     platform: state
     entity_id: light.0x00178801023c1a33_light
@@ -11,7 +12,8 @@
       entity_id: light.0x00178801023c1a33_light
 
 
-- alias: "SB | Time | Night lights off"
+- id: sb_006
+  alias: sb_006
   trigger:
     platform: state
     entity_id: light.dimmable_socket_one
@@ -25,13 +27,3 @@
     - service: notify.notify_matrix_noisy
       data:
         message: "I've Terminated the Night lights in the Small Bedroom."
-
-
-# This is a contingency to make sure it all turns off properly
-- alias: 'SB | Time | Off'
-  trigger:
-    - platform: time
-      at: '00:00:00'
-  action:
-    - service: light.turn_off
-      entity_id: light.lg_sb_all
