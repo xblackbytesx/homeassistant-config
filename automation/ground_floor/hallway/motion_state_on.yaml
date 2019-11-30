@@ -1,4 +1,5 @@
-- alias: HW | Motion | Light | Night
+- id: hw_002
+  alias: hw_002
   trigger:
     - platform: state
       entity_id: binary_sensor.hw_motion_detected
@@ -16,7 +17,8 @@
     - service: scene.turn_on
       entity_id: scene.hw_night
 
-- alias: HW | Motion | Light | Day
+- id: hw_003
+  alias: hw_003
   trigger:
     - platform: state
       entity_id: binary_sensor.hw_motion_detected

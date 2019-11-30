@@ -10,7 +10,7 @@
       entity_id: binary_sensor.sa_dark_enough
       to: 'off'
       for:
-        minutes: 10
+        minutes: 5
   action:
     - service: light.turn_off
       entity_id: light.lg_sa_all

@@ -1,5 +1,5 @@
 - id: mb_005
-  alias: MB | Duo switch | right | On
+  alias: mb_005
   trigger:
     platform: event
     event_type: button_pressed
@@ -10,7 +10,7 @@
 
 
 - id: mb_006
-  alias: MB | Duo switch | right | Off
+  alias: mb_006
   trigger:
     platform: event
     event_type: button_pressed

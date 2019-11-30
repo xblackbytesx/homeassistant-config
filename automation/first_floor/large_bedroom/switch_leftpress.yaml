@@ -1,5 +1,5 @@
 - id: lb_001
-  alias: LB | Duo switch | left | On
+  alias: lb_001
   trigger:
     platform: event
     event_type: button_pressed
@@ -14,7 +14,7 @@
 
 
 - id: lb_002
-  alias: LB | Duo switch | left | Off
+  alias: lb_002
   trigger:
     platform: event
     event_type: button_pressed

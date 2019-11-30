@@ -1,5 +1,5 @@
 - id: mb_001
-  alias: MB | Motion | Lights off
+  alias: mb_001
   trigger:
     - platform: state
       entity_id: binary_sensor.co_motion_detected

@@ -10,7 +10,7 @@
       entity_id: binary_sensor.kitchen_dark_enough
       to: 'off'
       for:
-        minutes: 10
+        minutes: 5
   action:
     - service: light.turn_off
       entity_id: light.lg_kitchen_all

@@ -1,5 +1,5 @@
 - id: mb_009
-  alias: "MB | Time | Lights off"
+  alias: mb_009
   trigger:
     - platform: state
       entity_id: light.lg_mb_all

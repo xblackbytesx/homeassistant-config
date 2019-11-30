@@ -1,4 +1,5 @@
-- alias: HW | Motion | Lights off
+- id: hw_001
+  alias: hw_001
   trigger:
     - platform: state
       entity_id: binary_sensor.hw_motion_detected

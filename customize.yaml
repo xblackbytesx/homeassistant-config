@@ -243,6 +243,7 @@ binary_sensor.0x00158d000446fc0a_contact:
   friendly_name: Kitchen window
   device_class: window
 
+# Sitting Area automations
 automation.sa_001:
   friendly_name: SA | State | Lights off
 automation.sa_002:
@@ -255,3 +256,45 @@ automation.kitchen_001:
   friendly_name: Kitchen | State | Lights off
 automation.kitchen_002:
   friendly_name: Kitchen | State | Lights on
+
+# Hallway automations
+automation.hw_001:
+  friendly_name: HW | Motion | Lights off
+automation.hw_002:
+  friendly_name: HW | Motion | Light | Night
+automation.hw_003:
+  friendly_name: HW | Motion | Light | Day
+
+# Master bedroom automations
+automation.mb_001:
+  friendly_name: MB | Motion | Lights off
+automation.mb_002:
+  friendly_name: MB | Motion | Lights on
+automation.mb_003:
+  friendly_name: MB | Duo switch | left | On
+automation.mb_004:
+  friendly_name: MB | Duo switch | left | Off
+automation.mb_005:
+  friendly_name: MB | Duo switch | right | On
+automation.mb_006:
+  friendly_name: MB | Duo switch | right | Off
+automation.mb_007:
+  friendly_name: MB | Single switch | On
+automation.mb_008:
+  friendly_name: MB | Single switch | Off
+automation.mb_009:
+  friendly_name: MB | Time | Lights off
+
+# Large bedroom automations
+automation.lb_001:
+  friendly_name: LB | Duo switch | left | On
+automation.lb_002:
+  friendly_name: LB | Duo switch | left | Off
+automation.lb_003:
+  friendly_name: LB | Duo switch | right | On
+automation.lb_004:
+  friendly_name: LB | Duo switch | right | Off
+automation.lb_005:
+  friendly_name: LB | Time | Lights | Off
+automation.lb_006:
+  friendly_name: LB | Time | Night Lights | Off

@@ -1,5 +1,5 @@
 - id: mb_007
-  alias: MB | Single switch | On
+  alias: mb_007
   trigger:
     platform: event
     event_type: button_pressed
@@ -10,7 +10,7 @@
 
 
 - id: mb_008
-  alias: MB | Single switch | Off
+  alias: mb_008
   trigger:
     platform: event
     event_type: button_pressed
