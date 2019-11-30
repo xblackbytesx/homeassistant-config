@@ -25,7 +25,7 @@ light.0x00178801030a3dde_light:
 # light.0x00158d00017934ff_light:
 #   friendly_name: Master bedroom
 light.0x90fd9ffffeea4e5e_light:
-  friendly_name: Master bedroom
+  friendly_name: Master bedroom qq
 light.0x00178801039d140f_light:
   friendly_name: Large bedroom
 light.0x00178801023c1a33_light:
@@ -242,3 +242,16 @@ binary_sensor.0x00158d000446eb21_contact:
 binary_sensor.0x00158d000446fc0a_contact:
   friendly_name: Kitchen window
   device_class: window
+
+automation.sa_001:
+  friendly_name: SA | State | Lights off
+automation.sa_002:
+  friendly_name: SA | No Media
+automation.sa_004:
+  friendly_name: SA | Media Playing | State two
+
+# Kitchen automations
+automation.kitchen_001:
+  friendly_name: Kitchen | State | Lights off
+automation.kitchen_002:
+  friendly_name: Kitchen | State | Lights on

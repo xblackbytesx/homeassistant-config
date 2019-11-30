@@ -1,4 +1,5 @@
-- alias: SA | No Media
+- id: sa_002
+  alias: sa_002
   trigger:
     - platform: state
       entity_id: binary_sensor.sa_motion_detected
@@ -23,7 +24,8 @@
       entity_id: scene.sa_not_watching_tv
 
 
-# - alias: SA | No Media
+# - id: sa_003
+#   alias: SA | No Media
 #   trigger:
 #     - platform: state
 #       entity_id: binary_sensor.sa_motion_detected
@@ -42,7 +44,8 @@
 #       entity_id: scene.sa_not_watching_tv
 
 
-- alias: SA | Media Playing | State two
+- id: sa_004
+  alias: sa_004
   trigger:
     - platform: state
       entity_id: binary_sensor.sa_motion_detected

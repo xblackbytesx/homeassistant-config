@@ -8,7 +8,7 @@ cards:
   - type: horizontal-stack
     cards:
       - type: light
-        entity: light.lg_sb_all
+        entity: light.lg_lb_all
         name: Large bedroom
       - type: light
         entity: light.lg_sb_all

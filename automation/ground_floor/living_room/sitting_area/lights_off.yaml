@@ -1,4 +1,5 @@
-- alias: SA | State | Lights off
+- id: sa_001
+  alias: sa_001
   trigger:
     - platform: state
       entity_id: binary_sensor.sa_motion_detected

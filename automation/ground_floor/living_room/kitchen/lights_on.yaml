@@ -1,4 +1,5 @@
-- alias: Kitchen | Time | Lights on
+- id: kitchen_002
+  alias: kitchen_002
   trigger:
     - platform: state
       entity_id: binary_sensor.kitchen_motion_detected
