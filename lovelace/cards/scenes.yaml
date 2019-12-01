@@ -1,13 +1,13 @@
 # lovelace_gen
 
-{% macro scene(entity) -%}
-- entity: {{ entity }}
-  tap_action:
-   action: call-service
-   service: scene.turn_on
-   service_data:
-     entity_id: {{ entity }}
-{%- endmacro %}
+{% macro scene(entity) %}
+  - entity: {{ entity }}
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: {{ entity }}
+{% endmacro %}
 
 type: glance
 title: Scenes
