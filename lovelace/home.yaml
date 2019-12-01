@@ -77,7 +77,7 @@ cards:
       - entity: input_boolean.advanced_config
         state: "on"
     card:
-      type: custom:monster-card
+      type: custom:auto-entities
       show_empty: false
       card:
         type: entities

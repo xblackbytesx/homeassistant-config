@@ -1,4 +1,5 @@
-- alias: Bathroom | Switch | Single | L | On | Night
+- id: bathroom_002
+  alias: bathroom_002
   trigger:
     platform: state
     entity_id: sensor.0x00158d00033e347d_click
@@ -17,7 +18,8 @@
       entity_id: scene.bathroom_l_night
 
 
-- alias: Bathroom | Switch | Single | L | On | Day
+- id: bathroom_003
+  alias: bathroom_003
   trigger:
     platform: state
     entity_id: sensor.0x00158d00033e347d_click
@@ -36,7 +38,8 @@
       entity_id: scene.bathroom_l_day
 
 
-- alias: Bathroom | Switch | Double | L | On
+- id: bathroom_004
+  alias: bathroom_004
   trigger:
     platform: state
     entity_id: sensor.0x00158d00033e347d_click
@@ -46,7 +49,8 @@
       entity_id: scene.bathroom_l_day
 
 
-- alias: Bathroom | Switch | Single | L | Off
+- id: bathroom_005
+  alias: bathroom_005
   trigger:
     platform: state
     entity_id: sensor.0x00158d00033e347d_click

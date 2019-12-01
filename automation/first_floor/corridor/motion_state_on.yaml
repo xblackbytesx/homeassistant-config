@@ -1,4 +1,5 @@
-- alias: CO | Motion | Light | Night
+- id: co_002
+  alias: co_002
   trigger:
     platform: state
     entity_id: binary_sensor.co_motion_detected
@@ -16,7 +17,8 @@
     - service: scene.turn_on
       entity_id: scene.co_night
 
-- alias: CO | Motion | Light | Day
+- id: co_003
+  alias: co_003
   trigger:
     platform: state
     entity_id: binary_sensor.co_motion_detected

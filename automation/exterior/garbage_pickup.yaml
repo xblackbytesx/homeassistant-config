@@ -1,5 +1,5 @@
-- id: garbage_info
-  alias: Garbage info
+- id: ex_003
+  alias: ex_003
   trigger:
   - at: '8:00'
     platform: time

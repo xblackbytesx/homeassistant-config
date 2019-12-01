@@ -1,4 +1,5 @@
-- alias: "Bathroom | Motion | Lights off"
+- id: bathroom_001
+  alias: bathroom_001
   trigger:
     - platform: state
       entity_id: binary_sensor.bathroom_motion_detected

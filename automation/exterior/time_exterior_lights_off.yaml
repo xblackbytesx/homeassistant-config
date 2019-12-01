@@ -1,4 +1,5 @@
-- alias: "EX | Time | Lights off"
+- id: ex_002
+  alias: ex_002
   trigger:
     - platform: time
       at: '3:30:00'

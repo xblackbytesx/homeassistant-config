@@ -1,4 +1,5 @@
-- alias: EX | State | Lights on
+- id: ex_001
+  alias: ex_001
   trigger:
     platform: state
     entity_id: binary_sensor.exterior_dark_enough

@@ -6,7 +6,7 @@ title: Bier Estates
 resources:
 - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js
   type: js
-- url: /local/custom-lovelace/monster-card/monster-card.js
+- url: /local/custom-lovelace/auto-entities/auto-entities.js
   type: js
 - url: /local/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js
   type: js
@@ -336,7 +336,7 @@ views:
     - entity: input_boolean.advanced_config
       state: "on"
     card:
-      type: custom:monster-card
+      type: custom:auto-entities
       show_empty: false
       card:
         type: entities
@@ -526,7 +526,7 @@ views:
     - entity: input_boolean.advanced_config
       state: "on"
     card:
-      type: custom:monster-card
+      type: custom:auto-entities
       show_empty: false
       card:
         type: entities
@@ -628,7 +628,7 @@ views:
     - entity: input_boolean.advanced_config
       state: "on"
     card:
-      type: custom:monster-card
+      type: custom:auto-entities
       show_empty: false
       card:
         type: entities
@@ -680,7 +680,7 @@ views:
     - entity: input_boolean.advanced_config
       state: "on"
     card:
-      type: custom:monster-card
+      type: custom:auto-entities
       show_empty: false
       card:
         type: entities
@@ -832,7 +832,7 @@ views:
     - entity: input_boolean.advanced_config
       state: "on"
     card:
-      type: custom:monster-card
+      type: custom:auto-entities
       show_empty: false
       card:
         type: entities
@@ -1240,7 +1240,7 @@ views:
 - title: automation_view
   icon: mdi:robot
   cards:
-  - type: custom:monster-card
+  - type: custom:auto-entities
     show_empty: false
     card:
       type: entities
@@ -1248,7 +1248,7 @@ views:
     filter:
       include:
       - entity_id: "automation.*"
-  - type: custom:monster-card
+  - type: custom:auto-entities
     show_empty: false
     card:
       type: entities
@@ -1256,7 +1256,7 @@ views:
     filter:
       include:
       - entity_id: "automation.hw*"
-  - type: custom:monster-card
+  - type: custom:auto-entities
     show_empty: false
     card:
       type: entities
@@ -1264,7 +1264,7 @@ views:
     filter:
       include:
       - entity_id: "automation.sa*"
-  - type: custom:monster-card
+  - type: custom:auto-entities
     show_empty: false
     card:
       type: entities
@@ -1272,7 +1272,7 @@ views:
     filter:
       include:
       - entity_id: "automation.kitchen*"
-  - type: custom:monster-card
+  - type: custom:auto-entities
     show_empty: false
     card:
       type: entities
@@ -1280,7 +1280,7 @@ views:
     filter:
       include:
       - entity_id: "automation.co*"
-  - type: custom:monster-card
+  - type: custom:auto-entities
     show_empty: false
     card:
       type: entities
@@ -1288,7 +1288,7 @@ views:
     filter:
       include:
       - entity_id: "automation.mb*"
-  - type: custom:monster-card
+  - type: custom:auto-entities
     show_empty: false
     card:
       type: entities
@@ -1296,7 +1296,7 @@ views:
     filter:
       include:
       - entity_id: "automation.lb*"
-  - type: custom:monster-card
+  - type: custom:auto-entities
     show_empty: false
     card:
       type: entities
@@ -1304,7 +1304,7 @@ views:
     filter:
       include:
       - entity_id: "automation.sb*"
-  - type: custom:monster-card
+  - type: custom:auto-entities
     show_empty: false
     card:
       type: entities
@@ -1312,7 +1312,7 @@ views:
     filter:
       include:
       - entity_id: "automation.ex*"
-  - type: custom:monster-card
+  - type: custom:auto-entities
     show_empty: false
     card:
       type: entities
@@ -1331,7 +1331,7 @@ views:
     title: Boolean value overrides
     entities:
     - input_boolean.sa_media_status_override
-  - type: custom:monster-card
+  - type: custom:auto-entities
     show_empty: false
     card:
       type: entities

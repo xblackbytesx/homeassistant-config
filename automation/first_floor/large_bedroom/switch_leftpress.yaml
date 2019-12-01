@@ -7,10 +7,6 @@
   action:
     - service: scene.turn_on
       entity_id: scene.lb_night
-    # - service: light.turn_on
-    #   data:
-    #     entity_id: light.dimmable_socket_two
-    #     brightness_pct: 30
 
 
 - id: lb_002

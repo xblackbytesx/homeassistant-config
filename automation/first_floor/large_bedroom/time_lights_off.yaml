@@ -12,7 +12,7 @@
       entity_id: light.0x00178801039d140f_light
 
 
-- lb: lb_006
+- id: lb_006
   alias: lb_006
   trigger:
     platform: state

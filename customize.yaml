@@ -312,3 +312,39 @@ automation.sb_005:
   friendly_name: SB | Time | Lights | Off
 automation.sb_006:
   friendly_name: SB | Time | Night Lights | Off
+
+# Corridor automations
+automation.co_001:
+  friendly_name: CO | State | Lights off
+automation.co_002:
+  friendly_name: CO | Motion | Light | Night
+automation.co_003:
+  friendly_name: CO | Motion | Light | Day
+
+# Bathroom automations
+automation.bathroom_001:
+  friendly_name: Bathroom | Motion | Lights | Off
+automation.bathroom_002:
+  friendly_name: Bathroom | Switch | Single | L | On | Night
+automation.bathroom_003:
+  friendly_name: Bathroom | Switch | Single | L | On | Day
+automation.bathroom_004:
+  friendly_name: Bathroom | Switch | Double | L | On
+automation.bathroom_005:
+  friendly_name: Bathroom | Switch | Single | L | Off
+automation.bathroom_006:
+  friendly_name: Bathroom | Switch | Single | R | On | Night
+automation.bathroom_007:
+  friendly_name: Bathroom | Switch | Single | R | On | Day
+automation.bathroom_008:
+  friendly_name: Bathroom | Switch | Double | R | On | Night
+automation.bathroom_009:
+  friendly_name: Bathroom | Switch | Single | R | Off
+
+# Exterior automations
+automation.ex_001:
+  friendly_name: EX | State | Lights on
+automation.ex_002:
+  friendly_name: EX | Time | Lights off
+automation.ex_001:
+  friendly_name: Trash collection info

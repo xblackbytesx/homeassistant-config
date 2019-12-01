@@ -1,4 +1,5 @@
-- alias: CO | State | Lights off
+- id: co_001
+  alias: co_001
   trigger:
     - platform: state
       entity_id: binary_sensor.co_motion_detected
