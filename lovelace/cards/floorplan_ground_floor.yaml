@@ -1,5 +1,7 @@
+# lovelace_gen
+
 type: picture-elements
-image: /local/floorplan_ground_floor.jpg
+image: !file /local/floorplan_ground_floor.jpg
 elements:
   - type: state-icon
     tap_action:

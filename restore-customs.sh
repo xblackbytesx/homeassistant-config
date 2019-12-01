@@ -6,6 +6,10 @@ rm -rf www/custom-lovelace
 rm www/tracker-card.js
 rm lovelace-gen.py
 
+mkdir -p custom_components/lovelace_gen
+wget https://raw.githubusercontent.com/thomasloven/hass-lovelace_gen/master/custom_components/lovelace_gen/__init__.py -O custom_components/lovelace_gen/__init__.py
+wget https://raw.githubusercontent.com/thomasloven/hass-lovelace_gen/master/custom_components/lovelace_gen/manifest.json -O custom_components/lovelace_gen/manifest.json
+
 mkdir -p custom_components/rdw
 wget https://raw.githubusercontent.com/eelcohn/home-assistant-rdw/master/__init__.py -O custom_components/rdw/__init__.py
 wget https://raw.githubusercontent.com/eelcohn/home-assistant-rdw/master/sensor.py -O custom_components/rdw/sensor.py
@@ -56,6 +60,3 @@ wget https://github.com/nervetattoo/simple-thermostat/releases/download/0.31.0/s
 
 mkdir -p www/custom-lovelace/zigbee2mqtt-networkmap
 wget https://github.com/azuwis/zigbee2mqtt-networkmap/releases/download/v0.5.0/zigbee2mqtt-networkmap.js -O www/custom-lovelace/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js
-
-# Lovelace generator
-wget https://raw.githubusercontent.com/thomasloven/homeassistant-lovelace-gen/master/lovelace-gen.py

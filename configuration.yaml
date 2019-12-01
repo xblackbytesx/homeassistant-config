@@ -43,6 +43,8 @@ frontend:
   themes: !include themes.yaml
   javascript_version: latest
 
+lovelace_gen:
+
 lovelace:
   mode: yaml
 

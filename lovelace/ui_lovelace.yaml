@@ -1,3 +1,5 @@
+# lovelace_gen
+
 title: Bier Estates
 resources:
 - url: !file /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js
@@ -28,7 +30,7 @@ views:
   - !include people.yaml
   - !include plants.yaml
   - !include media.yaml
-  # - !include scenes.yaml
+  - !include scenes.yaml
   - !include security.yaml
   - !include network.yaml
   - !include finance.yaml

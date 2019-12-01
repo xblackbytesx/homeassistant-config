@@ -1,5 +1,4 @@
 shell_command:
-  lovelace_gen: 'python /config/lovelace-gen.py'
   restore_assets: '/bin/bash /config/restore-assets.sh'
   restore_customs: '/bin/bash /config/restore-customs.sh'
   reboot_main_router: '/bin/bash /config/shell_scripts/reboot-main-router.sh'
