@@ -10,7 +10,7 @@ cards:
       - sensor.postnl
   - !include cards/climate.yaml
   - !include cards/weather.yaml
-  - !include cards/solar_panels.yaml
+  # - !include cards/solar_panels.yaml
   - !include cards/gas_prices.yaml
   - type: entities
     title: Power Sockets

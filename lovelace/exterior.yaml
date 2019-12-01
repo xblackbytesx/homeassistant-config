@@ -11,7 +11,7 @@ cards:
     title: Exterior covers
     entities:
       - cover.attic_shutters
-  - !include cards/solar_panels.yaml
+  # - !include cards/solar_panels.yaml
   - !include cards/weather.yaml
   - !include cards/car_info.yaml
   - !include cards/garbage_schedule.yaml
