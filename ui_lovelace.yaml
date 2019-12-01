@@ -22,17 +22,17 @@ resources:
   type: module
 
 views:
-  - !include home.yaml
-  - !include ground_floor.yaml
-  - !include first_floor.yaml
-  - !include attic.yaml
-  - !include exterior.yaml
-  - !include people.yaml
-  - !include plants.yaml
-  - !include media.yaml
-  - !include scenes.yaml
-  - !include security.yaml
-  - !include network.yaml
-  - !include finance.yaml
-  - !include automation.yaml
-  - !include overrides.yaml
+  - !include lovelace/home.yaml
+  - !include lovelace/ground_floor.yaml
+  - !include lovelace/first_floor.yaml
+  - !include lovelace/attic.yaml
+  - !include lovelace/exterior.yaml
+  - !include lovelace/people.yaml
+  - !include lovelace/plants.yaml
+  - !include lovelace/media.yaml
+  - !include lovelace/scenes.yaml
+  - !include lovelace/security.yaml
+  - !include lovelace/network.yaml
+  - !include lovelace/finance.yaml
+  - !include lovelace/automation.yaml
+  - !include lovelace/overrides.yaml
