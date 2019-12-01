@@ -1,34 +1,34 @@
 # lovelace_gen
 
 {% macro solarstate(entity, prefix, bottom, label_left, icon, icon_left) -%}
-  - type: state-label
-    entity: {{ entity }}
-    prefix: {{ prefix }}
-    style:
-      height: 34px
-      transform: none
-      position: absolute
-      bottom: {{ bottom }}px
-      left: {{ label_left }}px
-      font-weight: bold
-      background: rgba(0,0,0,0.6)
-      border-top-right-radius: 6px
-      border-bottom-right-radius: 6px
-      box-sizing: border-box
-  - type: icon
-    entity: {{ entity }}
-    icon: mdi:{{ icon }}
-    style:
-      transform: none
-      position: absolute
-      bottom: {{ bottom }}px
-      left: {{ icon_left }}px
-      background: rgba(0,0,0,0.6)
-      border-top-left-radius: 6px
-      border-bottom-left-radius: 6px
-      padding: 5px
-      box-sizing: border-box
-      color: yellow
+- type: state-label
+  entity: {{ entity }}
+  prefix: {{ prefix }}
+  style:
+    height: 34px
+    transform: none
+    position: absolute
+    bottom: {{ bottom }}px
+    left: {{ label_left }}px
+    font-weight: bold
+    background: rgba(0,0,0,0.6)
+    border-top-right-radius: 6px
+    border-bottom-right-radius: 6px
+    box-sizing: border-box
+- type: icon
+  entity: {{ entity }}
+  icon: mdi:{{ icon }}
+  style:
+    transform: none
+    position: absolute
+    bottom: {{ bottom }}px
+    left: {{ icon_left }}px
+    background: rgba(0,0,0,0.6)
+    border-top-left-radius: 6px
+    border-bottom-left-radius: 6px
+    padding: 5px
+    box-sizing: border-box
+    color: yellow
 {%- endmacro %}
 
 type: picture-elements
