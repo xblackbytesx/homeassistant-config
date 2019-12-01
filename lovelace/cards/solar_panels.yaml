@@ -1,87 +1,37 @@
+{% macro solarstate(entity, prefix, bottom, label_left, icon, icon_left) -%}
+  - type: state-label
+    entity: {{ entity }}
+    prefix: {{ prefix }}
+    style:
+      height: 34px
+      transform: none
+      position: absolute
+      bottom: {{ bottom }}px
+      left: {{ label_left }}px
+      font-weight: bold
+      background: rgba(0,0,0,0.6)
+      border-top-right-radius: 6px
+      border-bottom-right-radius: 6px
+      box-sizing: border-box
+  - type: icon
+    entity: {{ entity }}
+    icon: mdi:{{ icon }}
+    style:
+      transform: none
+      position: absolute
+      bottom: {{ bottom }}px
+      left: {{ icon_left }}px
+      background: rgba(0,0,0,0.6)
+      border-top-left-radius: 6px
+      border-bottom-left-radius: 6px
+      padding: 5px
+      box-sizing: border-box
+      color: yellow
+{%- endmacro %}
+
 type: picture-elements
-image: /local/solar_array.jpg
+image: !file /local/solar_array.jpg
 elements:
-  - type: state-label
-    entity: sensor.pv_power
-    prefix: "Current Power: "
-    style:
-      height: 34px
-      transform: none
-      position: absolute
-      bottom: 116px
-      left: 50px
-      font-weight: bold
-      background: rgba(0,0,0,0.6)
-      border-top-right-radius: 6px
-      border-bottom-right-radius: 6px
-      box-sizing: border-box
-  - type: icon
-    entity: sensor.pv_power
-    icon: mdi:white-balance-sunny
-    style:
-      transform: none
-      position: absolute
-      bottom: 116px
-      left: 16px
-      background: rgba(0,0,0,0.6)
-      border-top-left-radius: 6px
-      border-bottom-left-radius: 6px
-      padding: 5px
-      box-sizing: border-box
-      color: yellow
-  - type: state-label
-    entity: sensor.daily_yield
-    prefix: "Daily Yield: "
-    style:
-      height: 34px
-      transform: none
-      position: absolute
-      bottom: 66px
-      left: 50px
-      font-weight: bold
-      background: rgba(0,0,0,0.6)
-      border-top-right-radius: 6px
-      border-bottom-right-radius: 6px
-      box-sizing: border-box
-  - type: icon
-    entity: sensor.daily_yield
-    icon: mdi:flash
-    style:
-      transform: none
-      position: absolute
-      bottom: 66px
-      left: 16px
-      background: rgba(0,0,0,0.6)
-      border-top-left-radius: 6px
-      border-bottom-left-radius: 6px
-      padding: 5px
-      box-sizing: border-box
-      color: yellow
-  - type: state-label
-    entity: sensor.total_yield
-    prefix: "Total Yield: "
-    style:
-      height: 34px
-      transform: none
-      position: absolute
-      bottom: 16px
-      left: 50px
-      font-weight: bold
-      background: rgba(0,0,0,0.6)
-      border-top-right-radius: 6px
-      border-bottom-right-radius: 6px
-      box-sizing: border-box
-  - type: icon
-    entity: sensor.total_yield
-    icon: mdi:flash
-    style:
-      transform: none
-      position: absolute
-      bottom: 16px
-      left: 16px
-      background: rgba(0,0,0,0.6)
-      border-top-left-radius: 6px
-      border-bottom-left-radius: 6px
-      padding: 5px
-      box-sizing: border-box
-      color: yellow
+  {{ solarstate("sensor.pv_power", "Current Power: ", 116, 50, "white-balance-sunny", 16,) }}
+  {{ solarstate("sensor.daily_yield", "Daily Yield: ", 66, 50, "flash", 16,) }}
+  {{ solarstate("sensor.total_yield", "Total Yield: ", 16, 50, "flash", 16,) }}

@@ -6,12 +6,6 @@ rm -rf www/custom-lovelace
 rm www/tracker-card.js
 rm lovelace-gen.py
 
-# Fetch desired custom components
-# mkdir -p custom_components/custom_updater
-# wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/__init__.py -O custom_components/custom_updater/__init__.py
-# wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/services.yaml -O custom_components/custom_updater/services.yaml
-# wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater/manifest.json -O custom_components/custom_updater/manifest.json
-
 mkdir -p custom_components/rdw
 wget https://raw.githubusercontent.com/eelcohn/home-assistant-rdw/master/__init__.py -O custom_components/rdw/__init__.py
 wget https://raw.githubusercontent.com/eelcohn/home-assistant-rdw/master/sensor.py -O custom_components/rdw/sensor.py
@@ -33,14 +27,8 @@ rm -rf custom_components/zigbee_networkmap
 
 cp -Rp assets/custom_components/garbage_pickup custom_components/
 
-# Fetch desired custom cards
-# wget https://raw.githubusercontent.com/custom-cards/tracker-card/master/tracker-card.js -O www/tracker-card.js
-
 mkdir -p www/custom-lovelace/upcoming-media-card
 wget https://raw.githubusercontent.com/custom-cards/upcoming-media-card/master/upcoming-media-card.js -O www/custom-lovelace/upcoming-media-card/upcoming-media-card.js
-
-# mkdir -p www/custom-lovelace/auto-entities
-# wget https://raw.githubusercontent.com/custom-cards/auto-entities/master/auto-entities.js -O www/custom-lovelace/auto-entities/auto-entities.js
 
 mkdir -p www/custom-lovelace/lovelace-auto-entities
 wget https://raw.githubusercontent.com/thomasloven/lovelace-auto-entities/master/auto-entities.js -O www/custom-lovelace/lovelace-auto-entities/auto-entities.js
@@ -58,7 +46,7 @@ mkdir -p www/custom-lovelace/lovelace-card-tools
 wget https://raw.githubusercontent.com/thomasloven/lovelace-card-tools/master/card-tools.js -O www/custom-lovelace/lovelace-card-tools/card-tools.js
 
 mkdir -p www/custom-lovelace/lovelace-mini-graph-card
-wget https://github.com/kalkih/mini-graph-card/releases/download/v0.8.2/mini-graph-card-bundle.js -O www/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js
+wget https://github.com/kalkih/mini-graph-card/releases/download/v0.9.0-beta/mini-graph-card-bundle.js -O www/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js
 
 mkdir -p www/custom-lovelace/lovelace-mini-media-player
 wget https://github.com/kalkih/mini-media-player/releases/download/v1.4.2/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js

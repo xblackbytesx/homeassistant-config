@@ -1,103 +1,24 @@
+{% macro scene(entity) -%}
+  - entity: {{ entity }}
+    tap_action:
+     action: call-service
+     service: scene.turn_on
+     service_data:
+       entity_id: {{ entity }}
+{%- endmacro %}
+
 type: glance
 title: Scenes
 show_state: false
 column_width: 33%
 entities:
-  - entity: scene.sa_watching_tv
-    tap_action:
-     action: call-service
-     service: scene.turn_on
-     service_data:
-       entity_id: scene.sa_watching_tv
-  - entity: scene.sa_not_watching_tv
-    tap_action:
-     action: call-service
-     service: scene.turn_on
-     service_data:
-       entity_id: scene.sa_not_watching_tv
-  - entity: scene.lr_search_mode
-    tap_action:
-     action: call-service
-     service: scene.turn_on
-     service_data:
-       entity_id: scene.lr_search_mode
-  - entity: scene.lr_reset_default
-    tap_action:
-     action: call-service
-     service: scene.turn_on
-     service_data:
-       entity_id: scene.lr_reset_default
-  - entity: scene.lb_search_mode
-    tap_action:
-     action: call-service
-     service: scene.turn_on
-     service_data:
-       entity_id: scene.lb_search_mode
-  - entity: scene.lb_reset_default
-    tap_action:
-     action: call-service
-     service: scene.turn_on
-     service_data:
-       entity_id: scene.lb_reset_default
-  - entity: scene.ex_relax
-    tap_action:
-     action: call-service
-     service: scene.turn_on
-     service_data:
-       entity_id: scene.ex_relax
-  - entity: scene.mb_night
-    tap_action:
-     action: call-service
-     service: scene.turn_on
-     service_data:
-       entity_id: scene.mb_night
-  - entity: scene.mb_day
-    tap_action:
-     action: call-service
-     service: scene.turn_on
-     service_data:
-       entity_id: scene.mb_day
-  - entity: scene.kitchen_relax
-    tap_action:
-     action: call-service
-     service: scene.turn_on
-     service_data:
-       entity_id: scene.kitchen_relax
-
-# type: horizontal-stack
-# cards:
-#   - type: entity-button
-#     name: Living Room Search mode
-#     tap_action:
-#      action: call-service
-#      service: scene.turn_on
-#      service_data:
-#        entity_id: scene.lr_search_mode
-#     entity: scene.lr_search_mode
-#   - type: entity-button
-#     name: Living Room Reset
-#     tap_action:
-#      action: call-service
-#      service: scene.turn_on
-#      service_data:
-#        entity_id: scene.lr_reset_default
-#     entity: scene.lr_reset_default
-#
-# type: horizontal-stack
-# cards:
-#   - type: entity-button
-#     name: Large Bedroom Search mode
-#     tap_action:
-#      action: call-service
-#      service: scene.turn_on
-#      service_data:
-#        entity_id: scene.lb_search_mode
-#     entity: scene.lb_search_mode
-#   - type: entity-button
-#     name: Large Bedroom Reset
-#     tap_action:
-#      action: call-service
-#      service: scene.turn_on
-#      service_data:
-#        entity_id: scene.lb_reset_default
-#     entity: scene.lb_reset_default
+  {{ scene("scene.sa_watching_tv") }}
+  {{ scene("scene.sa_not_watching_tv") }}
+  {{ scene("scene.lr_search_mode") }}
+  {{ scene("scene.lr_reset_default") }}
+  {{ scene("scene.lb_search_mode") }}
+  {{ scene("scene.lb_reset_default") }}
+  {{ scene("scene.ex_relax") }}
+  {{ scene("scene.mb_night") }}
+  {{ scene("scene.mb_day") }}
+  {{ scene("scene.kitchen_relax") }}
