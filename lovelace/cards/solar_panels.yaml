@@ -32,6 +32,6 @@
 type: picture-elements
 image: !file /local/solar_array.jpg
 elements:
-  {{ solarstate("sensor.pv_power", "Current Power: ", 116, 50, "white-balance-sunny", 16,) }}
-  {{ solarstate("sensor.daily_yield", "Daily Yield: ", 66, 50, "flash", 16,) }}
-  {{ solarstate("sensor.total_yield", "Total Yield: ", 16, 50, "flash", 16,) }}
+  {{ solarstate("sensor.pv_power", "Current Power: ", 116, 50, "white-balance-sunny", 16) }}
+  {{ solarstate("sensor.daily_yield", "Daily Yield: ", 66, 50, "flash", 16) }}
+  {{ solarstate("sensor.total_yield", "Total Yield: ", 16, 50, "flash", 16) }}
