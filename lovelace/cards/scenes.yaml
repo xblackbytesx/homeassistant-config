@@ -1,24 +1,24 @@
-{% macro scene(entity) -%}
-  - entity: {{ entity }}
-    tap_action:
-     action: call-service
-     service: scene.turn_on
-     service_data:
-       entity_id: {{ entity }}
-{%- endmacro %}
-
-type: glance
-title: Scenes
-show_state: false
-column_width: 33%
-entities:
-  {{ scene("scene.sa_watching_tv") }}
-  {{ scene("scene.sa_not_watching_tv") }}
-  {{ scene("scene.lr_search_mode") }}
-  {{ scene("scene.lr_reset_default") }}
-  {{ scene("scene.lb_search_mode") }}
-  {{ scene("scene.lb_reset_default") }}
-  {{ scene("scene.ex_relax") }}
-  {{ scene("scene.mb_night") }}
-  {{ scene("scene.mb_day") }}
-  {{ scene("scene.kitchen_relax") }}
+# {% macro scene(entity) -%}
+#   - entity: {{ entity }}
+#     tap_action:
+#      action: call-service
+#      service: scene.turn_on
+#      service_data:
+#        entity_id: {{ entity }}
+# {%- endmacro %}
+#
+# type: glance
+# title: Scenes
+# show_state: false
+# column_width: 33%
+# entities:
+#   {{ scene("scene.sa_watching_tv") }}
+#   {{ scene("scene.sa_not_watching_tv") }}
+#   {{ scene("scene.lr_search_mode") }}
+#   {{ scene("scene.lr_reset_default") }}
+#   {{ scene("scene.lb_search_mode") }}
+#   {{ scene("scene.lb_reset_default") }}
+#   {{ scene("scene.ex_relax") }}
+#   {{ scene("scene.mb_night") }}
+#   {{ scene("scene.mb_day") }}
+#   {{ scene("scene.kitchen_relax") }}
