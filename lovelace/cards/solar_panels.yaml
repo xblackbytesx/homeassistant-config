@@ -1,39 +1,80 @@
 # lovelace_gen
 
-{% macro solarstate(entity, prefix, bottom, label_left, icon, icon_left) %}
-  - type: state-label
-    entity: {{ entity }}
-    prefix: {{ prefix }}
-    style:
-      height: 34px
-      transform: none
-      position: absolute
-      bottom: {{ bottom }}px
-      left: {{ label_left }}px
-      font-weight: bold
-      background: rgba(0,0,0,0.6)
-      border-top-right-radius: 6px
-      border-bottom-right-radius: 6px
-      box-sizing: border-box
-  - type: icon
-    entity: {{ entity }}
-    icon: mdi:{{ icon }}
-    style:
-      transform: none
-      position: absolute
-      bottom: {{ bottom }}px
-      left: {{ icon_left }}px
-      background: rgba(0,0,0,0.6)
-      border-top-left-radius: 6px
-      border-bottom-left-radius: 6px
-      padding: 5px
-      box-sizing: border-box
-      color: yellow
+# {% macro solarstate(entity, prefix, bottom, label_left, icon, icon_left) %}
+#   - type: state-label
+#     entity: {{ entity }}
+#     prefix: {{ prefix }}
+#     style:
+#       height: 34px
+#       transform: none
+#       position: absolute
+#       bottom: {{ bottom }}px
+#       left: {{ label_left }}px
+#       font-weight: bold
+#       background: rgba(0,0,0,0.6)
+#       border-top-right-radius: 6px
+#       border-bottom-right-radius: 6px
+#       box-sizing: border-box
+#   - type: icon
+#     entity: {{ entity }}
+#     icon: mdi:{{ icon }}
+#     style:
+#       transform: none
+#       position: absolute
+#       bottom: {{ bottom }}px
+#       left: {{ icon_left }}px
+#       background: rgba(0,0,0,0.6)
+#       border-top-left-radius: 6px
+#       border-bottom-left-radius: 6px
+#       padding: 5px
+#       box-sizing: border-box
+#       color: yellow
+# {% endmacro %}
+  #
+  # {{ solarstate("sensor.pv_power", "Current Power: ", 116, 50, "white-balance-sunny", 16) }}
+  # {{ solarstate("sensor.daily_yield", "Daily Yield: ", 66, 50, "flash", 16) }}
+  # {{ solarstate("sensor.total_yield", "Total Yield: ", 16, 50, "flash", 16) }}
+
+{% macro label(entity, prefix, bottom, left) %}
+- type: state-label
+  entity: {{ entity }}
+  prefix: {{ prefix }}
+  style:
+    height: 34px
+    transform: none
+    position: absolute
+    bottom: {{ bottom }}px
+    left: {{ left }}px
+    font-weight: bold
+    background: rgba(0,0,0,0.6)
+    border-top-right-radius: 6px
+    border-bottom-right-radius: 6px
+    box-sizing: border-box
+{% endmacro %}
+
+{% macro icon(entity, icon, bottom, left) %}
+- type: icon
+  entity: {{ entity }}
+  icon: mdi:{{ icon }}
+  style:
+    transform: none
+    position: absolute
+    bottom: {{ bottom }}px
+    left: {{ left }}px
+    background: rgba(0,0,0,0.6)
+    border-top-left-radius: 6px
+    border-bottom-left-radius: 6px
+    padding: 5px
+    box-sizing: border-box
+    color: yellow
 {% endmacro %}
 
 type: picture-elements
 image: !file /local/solar_array.jpg
 elements:
-  {{ solarstate("sensor.pv_power", "Current Power: ", 116, 50, "white-balance-sunny", 16) }}
-  {{ solarstate("sensor.daily_yield", "Daily Yield: ", 66, 50, "flash", 16) }}
-  {{ solarstate("sensor.total_yield", "Total Yield: ", 16, 50, "flash", 16) }}
+  {{ label("sensor.pv_power", "Current Power: ", 116, 50) }}
+  {{ icon("sensor.pv_power", "white-balance-sunny", 116, 16) }}
+  {{ label("sensor.daily_yield", "Daily Yield: ", 66, 50) }}
+  {{ icon("sensor.daily_yield", "flash", 66, 16) }}
+  {{ label("sensor.total_yield", "Total Yield: ", 16, 50) }}
+  {{ icon("sensor.total_yield", "flash", 16, 16) }}

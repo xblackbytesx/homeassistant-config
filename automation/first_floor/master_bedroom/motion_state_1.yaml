@@ -1,5 +1,6 @@
 - id: mb_002
   alias: mb_002
+  initial_state: false
   trigger:
     - platform: state
       entity_id: binary_sensor.co_motion_detected

@@ -6,7 +6,15 @@
       to: 'on'
     - platform: state
       entity_id: binary_sensor.sa_tv_media_playing
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.sa_tv_media_playing
       to: 'off'
+    - platform: state
+      entity_id: binary_sensor.sa_dark_enough
+      to: 'on'
+    - platform: time_pattern
+      minutes: '/5'
   condition:
     condition: and
     conditions:
@@ -16,12 +24,15 @@
       - condition: state
         entity_id: binary_sensor.sa_dark_enough
         state: 'on'
-      - condition: state
-        entity_id: binary_sensor.sa_tv_media_playing
-        state: 'off'
   action:
     - service: scene.turn_on
-      entity_id: scene.sa_not_watching_tv
+      data_template:
+        entity_id: >
+          {% if is_state('binary_sensor.sa_tv_media_playing', 'on') and is_state('input_boolean.sa_media_status_scene_switching', 'on') %}
+            scene.sa_watching_tv
+          {% else %}
+            scene.sa_not_watching_tv
+          {% endif %}
 
 
 # - id: sa_003
@@ -43,31 +54,70 @@
 #     - service: scene.turn_on
 #       entity_id: scene.sa_not_watching_tv
 
-
-- id: sa_004
-  alias: sa_004
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.sa_motion_detected
-      to: 'on'
-    - platform: state
-      entity_id: binary_sensor.sa_tv_media_playing
-      to: 'on'
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: binary_sensor.sa_motion_detected
-        state: 'on'
-      - condition: state
-        entity_id: binary_sensor.sa_dark_enough
-        state: 'on'
-      - condition: state
-        entity_id: binary_sensor.sa_tv_media_playing
-        state: 'on'
-      - condition: time
-        after: '20:00:00'
-        before: '05:00:00'
-  action:
-    - service: scene.turn_on
-      entity_id: scene.sa_watching_tv
+#
+# - id: sa_004
+#   alias: sa_004
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.sa_motion_detected
+#       to: 'on'
+#     - platform: state
+#       entity_id: binary_sensor.sa_tv_media_playing
+#       to: 'on'
+#     - platform: state
+#       entity_id: binary_sensor.sa_dark_enough
+#       to: 'on'
+#     - platform: time_pattern
+#       minutes: '/5'
+#   condition:
+#     condition: and
+#     conditions:
+#       - condition: state
+#         entity_id: binary_sensor.sa_motion_detected
+#         state: 'on'
+#       - condition: state
+#         entity_id: binary_sensor.sa_dark_enough
+#         state: 'on'
+#       - condition: state
+#         entity_id: binary_sensor.sa_tv_media_playing
+#         state: 'on'
+#       - condition: time
+#         after: '20:00:00'
+#         before: '05:00:00'
+#   action:
+#     - service: scene.turn_on
+#       entity_id: scene.sa_watching_tv
+#
+#
+# - id: sa_005
+#   alias: sa_005
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.sa_motion_detected
+#       to: 'on'
+#     - platform: state
+#       entity_id: binary_sensor.sa_tv_media_playing
+#       to: 'on'
+#     - platform: state
+#       entity_id: binary_sensor.sa_dark_enough
+#       to: 'on'
+#     - platform: time_pattern
+#       minutes: '/5'
+#   condition:
+#     condition: and
+#     conditions:
+#       - condition: state
+#         entity_id: binary_sensor.sa_motion_detected
+#         state: 'on'
+#       - condition: state
+#         entity_id: binary_sensor.sa_dark_enough
+#         state: 'on'
+#       - condition: state
+#         entity_id: binary_sensor.sa_tv_media_playing
+#         state: 'on'
+#       - condition: time
+#         after: '20:00:00'
+#         before: '05:00:00'
+#   action:
+#     - service: scene.turn_on
+#       entity_id: scene.sa_watching_tv
