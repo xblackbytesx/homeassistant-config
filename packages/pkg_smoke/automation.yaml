@@ -1,8 +1,8 @@
 - alias: LR | Smoke Detected | Notify | Light
   trigger:
-    - platform: state
-      entity_id: binary_sensor.lr_smoke_detected
-      to: 'on'
+    platform: state
+    entity_id: binary_sensor.lr_smoke_detected
+    to: 'on'
   action:
     - service: notify.send_mail
       data:
@@ -21,9 +21,9 @@
 
 - alias: LB | Smoke Detected | Notify | Light
   trigger:
-    - platform: state
-      entity_id: binary_sensor.lb_smoke_detected
-      to: 'on'
+    platform: state
+    entity_id: binary_sensor.lb_smoke_detected
+    to: 'on'
   action:
     - service: notify.send_mail
       data:

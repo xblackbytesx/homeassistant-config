@@ -8,8 +8,9 @@
       hours: 0
       minutes: 45
   action:
-    - service: light.turn_off
-      entity_id: light.0x00178801023c1a33_light
+    service: light.turn_off
+    data_template:
+      entity_id: "{{ trigger.entity_id }}"
 
 
 - id: sb_006
@@ -22,8 +23,6 @@
       hours: 1
       minutes: 30
   action:
-    - service: light.turn_off
-      entity_id: light.dimmable_socket_one
-    - service: notify.notify_matrix_noisy
-      data:
-        message: "I've Terminated the Night lights in the Small Bedroom."
+    service: light.turn_off
+    data_template:
+      entity_id: "{{ trigger.entity_id }}"

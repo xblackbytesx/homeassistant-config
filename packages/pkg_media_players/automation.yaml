@@ -5,13 +5,13 @@
     - platform: time_pattern
       minutes: '/5'
   condition:
-      condition: time
-      after: '19:59:00'
-      before: '05:59:00'
+    condition: time
+    after: '19:59:00'
+    before: '05:59:00'
   action:
-    - service: input_boolean.turn_on
-      data:
-        entity_id: input_boolean.sa_media_status_scene_switching
+    service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.sa_media_status_scene_switching
 
 
 - alias: Allow media theme switching | Off
@@ -21,10 +21,10 @@
     - platform: time_pattern
       minutes: '/5'
   condition:
-      condition: time
-      after: '05:59:00'
-      before: '19:59:00'
+    condition: time
+    after: '05:59:00'
+    before: '19:59:00'
   action:
-    - service: input_boolean.turn_off
-      data:
-        entity_id: input_boolean.sa_media_status_scene_switching
+    service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.sa_media_status_scene_switching

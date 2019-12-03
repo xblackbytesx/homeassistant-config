@@ -5,8 +5,8 @@
     event_type: button_pressed
     event_data: {"state": "on", "entity_id": "switch.duo_switch_lb_r"}
   action:
-    - service: scene.turn_on
-      entity_id: scene.lb_day
+    service: scene.turn_on
+    entity_id: scene.lb_day
 
 
 - id: lb_004
@@ -16,5 +16,5 @@
     event_type: button_pressed
     event_data: {"state": "off", "entity_id": "switch.duo_switch_lb_r"}
   action:
-    - service: light.turn_off
-      entity_id: light.lg_lb_all
+    service: light.turn_off
+    entity_id: light.lg_lb_all

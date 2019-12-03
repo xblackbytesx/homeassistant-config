@@ -319,20 +319,16 @@ automation.co_002:
 automation.bathroom_001:
   friendly_name: Bathroom | Motion | Lights | Off
 automation.bathroom_002:
-  friendly_name: Bathroom | Switch | Single | L | On | Night
+  friendly_name: Bathroom | Switch | Single | L | On
 automation.bathroom_003:
-  friendly_name: Bathroom | Switch | Single | L | On | Day
-automation.bathroom_004:
   friendly_name: Bathroom | Switch | Double | L | On
-automation.bathroom_005:
+automation.bathroom_004:
   friendly_name: Bathroom | Switch | Single | L | Off
+automation.bathroom_005:
+  friendly_name: Bathroom | Switch | Single | R | On
 automation.bathroom_006:
-  friendly_name: Bathroom | Switch | Single | R | On | Night
+  friendly_name: Bathroom | Switch | Double | R | On
 automation.bathroom_007:
-  friendly_name: Bathroom | Switch | Single | R | On | Day
-automation.bathroom_008:
-  friendly_name: Bathroom | Switch | Double | R | On | Night
-automation.bathroom_009:
   friendly_name: Bathroom | Switch | Single | R | Off
 
 # Exterior automations

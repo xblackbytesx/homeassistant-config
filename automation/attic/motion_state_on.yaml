@@ -13,8 +13,8 @@
         after: '06:00:00'
         before: '02:00:00'
   action:
-    - service: light.turn_on
-      data:
-        entity_id: light.lg_attic_all
-        brightness_pct: 70
-        kelvin: 2700
+    service: light.turn_on
+    data:
+      entity_id: light.lg_attic_all
+      brightness_pct: 70
+      kelvin: 2700

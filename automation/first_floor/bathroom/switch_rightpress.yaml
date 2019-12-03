@@ -1,21 +1,33 @@
-- id: bathroom_006
-  alias: bathroom_006
+- id: bathroom_005
+  alias: bathroom_005
   trigger:
     platform: state
     entity_id: sensor.0x00158d00033e347d_click
     to: 'right'
   condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: light.hue_bulb_bathroom_r
-        state: 'off'
-      - condition: time
-        after: '23:30:00'
-        before: '06:00:00'
+    condition: state
+    entity_id: light.hue_bulb_bathroom_r
+    state: 'off'
   action:
-    - service: scene.turn_on
-      entity_id: scene.bathroom_r_night
+    service: scene.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state('input_boolean.time_for_dim_scenes', 'on') %}
+          scene.bathroom_r_night
+        {% else %}
+          scene.bathroom_r_day
+        {% endif %}
+
+
+- id: bathroom_006
+  alias: bathroom_006
+  trigger:
+    platform: state
+    entity_id: sensor.0x00158d00033e347d_click
+    to: 'right_double'
+  action:
+    service: scene.turn_on
+    entity_id: scene.bathroom_r_day
 
 
 - id: bathroom_007
@@ -25,42 +37,9 @@
     entity_id: sensor.0x00158d00033e347d_click
     to: 'right'
   condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: light.hue_bulb_bathroom_r
-        state: 'off'
-      - condition: time
-        after: '06:00:00'
-        before: '23:30:00'
+    condition: state
+    entity_id: light.hue_bulb_bathroom_r
+    state: 'on'
   action:
-    - service: scene.turn_on
-      entity_id: scene.bathroom_r_day
-
-
-- id: bathroom_008
-  alias: bathroom_008
-  trigger:
-    platform: state
-    entity_id: sensor.0x00158d00033e347d_click
-    to: 'right_double'
-  action:
-    - service: scene.turn_on
-      entity_id: scene.bathroom_r_day
-
-
-- id: bathroom_009
-  alias: bathroom_009
-  trigger:
-    platform: state
-    entity_id: sensor.0x00158d00033e347d_click
-    to: 'right'
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: light.hue_bulb_bathroom_r
-        state: 'on'
-  action:
-    - service: light.turn_off
-      entity_id: light.hue_bulb_bathroom_r
+    service: light.turn_off
+    entity_id: light.hue_bulb_bathroom_r

@@ -1,8 +1,8 @@
 - id: ex_002
   alias: ex_002
   trigger:
-    - platform: time
-      at: '3:30:00'
+    platform: time
+    at: '3:30:00'
   action:
     - service: light.turn_off
       entity_id: light.lg_ex_all

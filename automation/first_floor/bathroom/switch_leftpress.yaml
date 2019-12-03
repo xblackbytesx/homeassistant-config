@@ -5,17 +5,18 @@
     entity_id: sensor.0x00158d00033e347d_click
     to: 'left'
   condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: light.hue_candle_bathroom_l
-        state: 'off'
-      - condition: time
-        after: '23:30:00'
-        before: '06:00:00'
+    condition: state
+    entity_id: light.hue_candle_bathroom_l
+    state: 'off'
   action:
-    - service: scene.turn_on
-      entity_id: scene.bathroom_l_night
+    service: scene.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state('input_boolean.time_for_dim_scenes', 'on') %}
+          scene.bathroom_l_night
+        {% else %}
+          scene.bathroom_l_day
+        {% endif %}
 
 
 - id: bathroom_003
@@ -23,19 +24,10 @@
   trigger:
     platform: state
     entity_id: sensor.0x00158d00033e347d_click
-    to: 'left'
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: light.hue_candle_bathroom_l
-        state: 'off'
-      - condition: time
-        after: '06:00:00'
-        before: '23:30:00'
+    to: 'left_double'
   action:
-    - service: scene.turn_on
-      entity_id: scene.bathroom_l_day
+    service: scene.turn_on
+    entity_id: scene.bathroom_l_day
 
 
 - id: bathroom_004
@@ -43,24 +35,11 @@
   trigger:
     platform: state
     entity_id: sensor.0x00158d00033e347d_click
-    to: 'left_double'
-  action:
-    - service: scene.turn_on
-      entity_id: scene.bathroom_l_day
-
-
-- id: bathroom_005
-  alias: bathroom_005
-  trigger:
-    platform: state
-    entity_id: sensor.0x00158d00033e347d_click
     to: 'left'
   condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: light.hue_candle_bathroom_l
-        state: 'on'
+    condition: state
+    entity_id: light.hue_candle_bathroom_l
+    state: 'on'
   action:
-    - service: light.turn_off
-      entity_id: light.hue_candle_bathroom_l
+    service: light.turn_off
+    entity_id: light.hue_candle_bathroom_l

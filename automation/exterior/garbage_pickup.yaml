@@ -10,6 +10,6 @@
   - condition: template
     value_template: "{{ not is_state('sensor.garbage_pickup_today', 'Geen') }}"
   action:
-    - service: notify.notify_matrix_clean
-      data:
-        message: "Vandaag wordt de kliko voor {{ states('sensor.garbage_pickup_today') }} opgehaald!"
+    service: notify.notify_matrix_clean
+    data:
+      message: "Vandaag wordt de kliko voor {{ states('sensor.garbage_pickup_today') }} opgehaald!"

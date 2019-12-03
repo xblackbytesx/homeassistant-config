@@ -12,5 +12,5 @@
       for:
         minutes: 5
   action:
-    - service: light.turn_off
-      entity_id: light.lg_co_all
+    service: light.turn_off
+    entity_id: light.lg_co_all
