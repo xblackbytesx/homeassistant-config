@@ -8,8 +8,6 @@
       state: false
     automation.sa_002:
       state: false
-    automation.sa_004:
-      state: false
     automation.kitchen_001:
       state: false
     automation.kitchen_002:
@@ -24,8 +22,6 @@
     automation.sa_001:
       state: true
     automation.sa_002:
-      state: true
-    automation.sa_004:
       state: true
     automation.kitchen_001:
       state: true

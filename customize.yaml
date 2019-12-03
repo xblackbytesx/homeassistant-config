@@ -248,8 +248,6 @@ automation.sa_001:
   friendly_name: SA | State | Lights off
 automation.sa_002:
   friendly_name: SA | No Media
-automation.sa_004:
-  friendly_name: SA | Media Playing | State two
 
 # Kitchen automations
 automation.kitchen_001:
