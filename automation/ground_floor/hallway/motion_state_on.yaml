@@ -6,8 +6,8 @@
     to: 'on'
   condition:
     condition: state
-      entity_id: binary_sensor.hw_dark_enough
-      state: 'on'
+    entity_id: binary_sensor.hw_dark_enough
+    state: 'on'
   action:
     service: scene.turn_on
     data_template:
