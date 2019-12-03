@@ -5,33 +5,15 @@
       entity_id: binary_sensor.hw_motion_detected
       to: 'on'
   condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: binary_sensor.hw_dark_enough
-        state: 'on'
-      - condition: time
-        after: '22:30:00'
-        before: '07:30:00'
+    condition: state
+      entity_id: binary_sensor.hw_dark_enough
+      state: 'on'
   action:
     - service: scene.turn_on
-      entity_id: scene.hw_night
-
-- id: hw_003
-  alias: hw_003
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.hw_motion_detected
-      to: 'on'
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: binary_sensor.hw_dark_enough
-        state: 'on'
-      - condition: time
-        after: '07:30:00'
-        before: '22:30:00'
-  action:
-    - service: scene.turn_on
-      entity_id: scene.hw_day
+      data_template:
+        entity_id: >
+          {% if is_state('input_boolean.time_for_dim_scenes', 'on') %}
+            scene.hw_night
+          {% else %}
+            scene.hw_day
+          {% endif %}

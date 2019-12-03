@@ -1,0 +1,30 @@
+- alias: Time to dim scenes | On
+  trigger:
+    - platform: time
+      at: '22:30:00'
+    - platform: time_pattern
+      minutes: '/5'
+  condition:
+      condition: time
+      after: '22:29:00'
+      before: '07:29:00'
+  action:
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.time_for_dim_scenes
+
+
+- alias: Time to dim scenes | Off
+  trigger:
+    - platform: time
+      at: '07:30:00'
+    - platform: time_pattern
+      minutes: '/5'
+  condition:
+      condition: time
+      after: '07:29:00'
+      before: '22:29:00'
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.time_for_dim_scenes

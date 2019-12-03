@@ -245,9 +245,9 @@ binary_sensor.0x00158d000446fc0a_contact:
 
 # Sitting Area automations
 automation.sa_001:
-  friendly_name: SA | State | Lights off
+  friendly_name: SA | State | Lights | Off
 automation.sa_002:
-  friendly_name: SA | No Media
+  friendly_name: SA | State | Lights | On
 
 # Kitchen automations
 automation.kitchen_001:
@@ -257,11 +257,9 @@ automation.kitchen_002:
 
 # Hallway automations
 automation.hw_001:
-  friendly_name: HW | Motion | Lights off
+  friendly_name: HW | Motion | Lights | Off
 automation.hw_002:
-  friendly_name: HW | Motion | Light | Night
-automation.hw_003:
-  friendly_name: HW | Motion | Light | Day
+  friendly_name: HW | Motion | Lights | On
 
 # Master bedroom automations
 automation.mb_001:
@@ -313,11 +311,9 @@ automation.sb_006:
 
 # Corridor automations
 automation.co_001:
-  friendly_name: CO | State | Lights off
+  friendly_name: CO | State | Lights | Off
 automation.co_002:
-  friendly_name: CO | Motion | Light | Night
-automation.co_003:
-  friendly_name: CO | Motion | Light | Day
+  friendly_name: CO | Motion | Lights | On
 
 # Bathroom automations
 automation.bathroom_001:

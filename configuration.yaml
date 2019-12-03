@@ -106,5 +106,5 @@ binary_sensor: !include binary_sensor.yaml
 light: !include light.yaml
 automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/
-input_boolean: !include_dir_merge_named boolean/
+input_boolean: !include boolean.yaml
 scene: !include_dir_merge_list scene/
