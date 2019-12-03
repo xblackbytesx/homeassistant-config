@@ -340,5 +340,5 @@ automation.ex_001:
   friendly_name: EX | State | Lights on
 automation.ex_002:
   friendly_name: EX | Time | Lights off
-automation.ex_001:
+automation.ex_003:
   friendly_name: Trash collection info
