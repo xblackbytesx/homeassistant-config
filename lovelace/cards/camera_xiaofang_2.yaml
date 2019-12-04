@@ -1,7 +1,7 @@
 # lovelace_gen
 
 type: picture-entity
-title: Dafang
+title: Xiaofang 2
 entity: camera.xiaofang_2
 camera_view: live
 tap_action:

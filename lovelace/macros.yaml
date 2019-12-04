@@ -1,0 +1,8 @@
+{% macro camera(entity, name) %}
+type: picture-entity
+entity: {{ entity }}
+title: {{ name }}
+camera_view: live
+tap_action:
+  action: more-info
+{% endmacro %}

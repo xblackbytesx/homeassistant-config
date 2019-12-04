@@ -66,8 +66,8 @@ cards:
         - light.ledstrip_black_cabinet
         - light.ledstrip_kitchen_cabinet
         - light.0x0017880103ea3a60_light
-  - !include cards/camera_dafang.yaml
-  - !include cards/camera_xiaofang_1.yaml
+  - {{ camera("camera.dafang", "Dafang") }}
+  - {{ camera("camera.xiaofang_1", "xiaofang_1") }}
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

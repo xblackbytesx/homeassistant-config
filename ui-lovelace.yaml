@@ -21,6 +21,8 @@ resources:
 - url: !file /local/custom-lovelace/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js
   type: module
 
+!include lovelace/macros.yaml
+
 views:
   - !include lovelace/home.yaml
   - !include lovelace/ground_floor.yaml
