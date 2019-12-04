@@ -13,6 +13,15 @@
     - platform: state
       entity_id: binary_sensor.sa_tv_media_playing
       to: 'off'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: binary_sensor.sa_motion_detected
+        state: 'on'
+      - condition: state
+        entity_id: binary_sensor.sa_dark_enough
+        state: 'on'
   action:
     service: scene.turn_on
     data_template:
