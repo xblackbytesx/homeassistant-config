@@ -18,7 +18,7 @@
 
     sa_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < 12 }}
+        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < 10 }}
 
     kitchen_motion_detected:
       value_template: >-
@@ -27,7 +27,7 @@
 
     kitchen_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_kitchen_illuminance')|float < 18 }}
+        {{ states('sensor.hue_motion_sensor_kitchen_illuminance')|float < 15 }}
 
     hw_motion_detected:
       value_template: >-
@@ -36,7 +36,7 @@
 
     hw_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_hallway_stairs_illuminance')|float < 12 }}
+        {{ states('sensor.hue_motion_sensor_hallway_stairs_illuminance')|float < 10 }}
 
     co_motion_detected:
       value_template: >-
@@ -44,7 +44,7 @@
 
     co_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_corridor_illuminance')|float < 12 }}
+        {{ states('sensor.hue_motion_sensor_corridor_illuminance')|float < 10 }}
 
     bathroom_motion_detected:
       value_template: >-
@@ -66,4 +66,4 @@
 
     exterior_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < 12 }}
+        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < 10 }}

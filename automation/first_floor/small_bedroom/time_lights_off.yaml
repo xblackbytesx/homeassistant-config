@@ -1,27 +1,18 @@
 - id: sb_005
   alias: sb_005
   trigger:
-    platform: state
-    entity_id: light.0x00178801023c1a33_light
-    to: 'on'
-    for:
-      hours: 0
-      minutes: 45
-  action:
-    service: light.turn_off
-    data_template:
-      entity_id: "{{ trigger.entity_id }}"
-
-
-- id: sb_006
-  alias: sb_006
-  trigger:
-    platform: state
-    entity_id: light.dimmable_socket_one
-    to: 'on'
-    for:
-      hours: 1
-      minutes: 30
+    - platform: state
+      entity_id: light.0x00178801023c1a33_light
+      to: 'on'
+      for:
+        hours: 0
+        minutes: 45
+    - platform: state
+      entity_id: light.dimmable_socket_one
+      to: 'on'
+      for:
+        hours: 1
+        minutes: 30
   action:
     service: light.turn_off
     data_template:

@@ -34,8 +34,6 @@
       state: fasle
     automation.sb_005:
       state: fasle
-    automation.sb_006:
-      state: fasle
 
 - name: SB | Reset Default
   entities:
@@ -50,6 +48,4 @@
     automation.sb_004:
       state: true
     automation.sb_005:
-      state: true
-    automation.sb_006:
       state: true
