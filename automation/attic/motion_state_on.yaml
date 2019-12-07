@@ -1,4 +1,5 @@
-- alias: Attic | Motion | Lights on
+- id: attic_002
+  alias: attic_002
   trigger:
     platform: state
     entity_id: binary_sensor.attic_motion_detected

@@ -327,6 +327,12 @@ automation.bathroom_006:
 automation.bathroom_007:
   friendly_name: Bathroom | Switch | Single | R | Off
 
+# Attic automations
+automation.attic_001:
+  friendly_name: Attic | Motion | Lights off
+automation.attic_002:
+  friendly_name: Attic | Motion | Lights on
+
 # Exterior automations
 automation.ex_001:
   friendly_name: EX | State | Lights on
