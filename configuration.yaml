@@ -20,7 +20,7 @@ homeassistant:
     finance_package: !include packages/pkg_finance/all.yaml
     shell_commands_package: !include packages/pkg_shell_commands/all.yaml
     speech_package: !include packages/pkg_speech/all.yaml
-    # christmas_package: !include packages/pkg_christmas/all.yaml
+    christmas_package: !include packages/pkg_christmas/all.yaml
 
 hassio:
 config:

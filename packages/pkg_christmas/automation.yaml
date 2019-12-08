@@ -1,27 +1,21 @@
 - alias: SA | Motion | Christmas Tree On
   trigger:
     - platform: state
-      entity_id: sensor.motion_in_sitting_area
-      to: '1'
+      entity_id: binary_sensor.sa_motion_detected
+      to: 'on'
     - platform: state
-      entity_id: sensor.motion_in_kitchen
-      to: '1'
+      entity_id: binary_sensor.kitchen_motion_detected
+      to: 'on'
   condition:
     condition: time
     after: '07:00:00'
     before: '03:00:00'
   action:
     - service: switch.turn_on
-      entity_id: switch.power_socket_two
-    - service: switch.turn_on
-      entity_id: switch.power_socket_three
-    - service: light.turn_on
       data:
-        entity_id: light.dimmable_socket_one
-        brightness: 35
-    - service: light.turn_on
-      data:
-        entity_id: light.dimmable_socket_two
+        entity_id:
+          - switch.0x000d6ffffedaf667_switch
+          - switch.0x000d6ffffedc5e05_switch
 
 
 - alias: SA | Motion | Christmas Tree Off
@@ -32,18 +26,15 @@
   condition:
     condition: and
     conditions:
-      - condition: state
-        entity_id: sensor.motion_in_sitting_area
-        state: '0'
-      - condition: state
-        entity_id: sensor.motion_in_kitchen
-        state: '0'
+      - platform: state
+        entity_id: binary_sensor.sa_motion_detected
+        state: 'off'
+      - platform: state
+        entity_id: binary_sensor.kitchen_motion_detected
+        state: 'off'
   action:
     - service: switch.turn_off
-      entity_id: switch.power_socket_two
-    - service: switch.turn_off
-      entity_id: switch.power_socket_three
-    - service: homeassistant.turn_off
-      entity_id: light.dimmable_socket_one
-    - service: homeassistant.turn_off
-      entity_id: light.dimmable_socket_two
+      data:
+        entity_id:
+          - switch.0x000d6ffffedaf667_switch
+          - switch.0x000d6ffffedc5e05_switch
