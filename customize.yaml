@@ -61,26 +61,31 @@ switch.beamer_screen:
   icon: mdi:projector-screen
 
 # Power sockets
+# Socket 1
 switch.0x000d6ffffedad23c_switch:
   friendly_name: TV Cabinet
   icon: mdi:power-socket-eu
+#socket 2
 switch.0x000d6ffffea6df64_switch:
   friendly_name: Black Cabinet
   icon: mdi:power-socket-eu
+# Socket 3
 switch.0x000d6ffffea6e967_switch:
   friendly_name: Exterior lighting
+  icon: mdi:power-socket-eu
+# Socket 5
+switch.0x000d6ffffedaf667_switch:
+  friendly_name: Large bedroom
+  icon: mdi:power-socket-eu
+# Socket 6
+switch.0x000d6ffffedc5e05_switch:
+  friendly_name: Small bedroom
   icon: mdi:power-socket-eu
 switch.0x000d6ffffea7daa5_switch:
   friendly_name: Attic/dryer
   icon: mdi:power-socket-eu
 switch.0x000d6ffffed9d60d_switch:
   friendly_name: Office/desks
-  icon: mdi:power-socket-eu
-switch.0x000d6ffffedaf667_switch:
-  friendly_name: Large bedroom
-  icon: mdi:power-socket-eu
-switch.0x000d6ffffedc5e05_switch:
-  friendly_name: Small bedroom
   icon: mdi:power-socket-eu
 
 cover.attic_shutters:

@@ -43,28 +43,16 @@
       command: light_em_up
   action:
     - service: switch.turn_ion
-      entity_id: switch.power_socket_one
-    - service: switch.turn_on
-      entity_id: switch.power_socket_two
-    - service: switch.turn_on
-      entity_id: switch.power_socket_three
-    - service: light.turn_on
-      data:
-        entity_id: light.dimmable_socket_one
-        brightness: 35
-    - service: light.turn_on
-      data:
-        entity_id: light.dimmable_socket_two
-    - service: hue.hue_activate_scene
-      data:
-        group_name: "Kitchen"
-        scene_name: "Kitchen | Relax"
-    - service: hue.hue_activate_scene
-      data:
-        group_name: "Kitchen"
-        scene_name: "Kitchen | Relax"
-    - service: script.turn_on
-      entity_id: script.scene_not_watching_tv
+      entity_id:
+        - switch.0x000d6ffffedad23c_switch
+        - switch.0x000d6ffffea6df64_switch
+        - switch.0x000d6ffffedaf667_switch
+        - switch.0x000d6ffffedc5e05_switch
+    - service: scene.turn_on
+      entity_id:
+        - scene.sa_not_watching_tv
+        - scene.kitchen_relax
+        - scene.ex_relax
     - service: notify.notify_matrix_clean
       data:
         message: "Shining bright like a diamond!"
@@ -78,7 +66,7 @@
       command: cut_socket_one
   action:
     - service: switch.turn_off
-      entity_id: switch.power_socket_one
+      entity_id: switch.0x000d6ffffedad23c_switch
     - service: notify.notify_matrix_clean
       data:
         message: "Socket one killed!"
@@ -92,7 +80,7 @@
       command: cut_socket_two
   action:
     - service: switch.turn_off
-      entity_id: switch.power_socket_two
+      entity_id: switch.0x000d6ffffea6df64_switch
     - service: notify.notify_matrix_clean
       data:
         message: "Socket two killed!"
@@ -106,10 +94,38 @@
       command: cut_socket_three
   action:
     - service: switch.turn_off
-      entity_id: switch.power_socket_three
+      entity_id: switch.0x000d6ffffea6e967_switch
     - service: notify.notify_matrix_clean
       data:
         message: "Socket three killed!"
+
+
+- alias: 'Matrix | React to Cut socket five'
+  trigger:
+    platform: event
+    event_type: matrix_command
+    event_data:
+      command: cut_socket_five
+  action:
+    - service: switch.turn_off
+      entity_id: switch.0x000d6ffffedaf667_switch
+    - service: notify.notify_matrix_clean
+      data:
+        message: "Socket five killed!"
+
+
+- alias: 'Matrix | React to Cut socket six'
+  trigger:
+    platform: event
+    event_type: matrix_command
+    event_data:
+      command: cut_socket_six
+  action:
+    - service: switch.turn_off
+      entity_id: switch.0x000d6ffffedc5e05_switch
+    - service: notify.notify_matrix_clean
+      data:
+        message: "Socket six killed!"
 
 
 - alias: 'Matrix | React to Cut all power'
@@ -120,17 +136,12 @@
       command: cut_all_power
   action:
     - service: switch.turn_off
-      entity_id: switch.power_socket_one
-    - service: switch.turn_off
-      entity_id: switch.power_socket_two
-    - service: switch.turn_off
-      entity_id: switch.power_socket_three
-    - service: light.turn_off
-      data:
-        entity_id: light.dimmable_socket_one
-    - service: light.turn_off
-      data:
-        entity_id: light.dimmable_socket_two
+      entity_id:
+        - switch.0x000d6ffffedad23c_switch
+        - switch.0x000d6ffffea6df64_switch
+        - switch.0x000d6ffffea6e967_switch
+        - switch.0x000d6ffffedaf667_switch
+        - switch.0x000d6ffffedc5e05_switch
     - service: notify.notify_matrix_clean
       data:
         message: "I've cut the power as you requested!"

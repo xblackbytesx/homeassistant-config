@@ -33,6 +33,14 @@ commands:
     name: cut_socket_three
     rooms:
       - !secret matrix_room_clean
+  - expression: "Cut socket five"
+    name: cut_socket_five
+    rooms:
+      - !secret matrix_room_clean
+  - expression: "Cut socket six"
+    name: cut_socket_six
+    rooms:
+      - !secret matrix_room_clean
   - word: reel_in_the_sunscreen
     name: reel_in_the_sunscreen
     rooms:
