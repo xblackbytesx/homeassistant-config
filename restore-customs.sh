@@ -31,6 +31,9 @@ rm -rf custom_components/zigbee_networkmap
 
 cp -Rp assets/custom_components/garbage_pickup custom_components/
 
+mkdir -p www/custom-lovelace/decluttering-card
+wget https://github.com/custom-cards/decluttering-card/raw/master/dist/decluttering-card.js -O www/custom-lovelace/decluttering-card/decluttering-card.js
+
 mkdir -p www/custom-lovelace/upcoming-media-card
 wget https://raw.githubusercontent.com/custom-cards/upcoming-media-card/master/upcoming-media-card.js -O www/custom-lovelace/upcoming-media-card/upcoming-media-card.js
 

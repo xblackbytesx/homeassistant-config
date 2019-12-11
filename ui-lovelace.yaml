@@ -2,6 +2,8 @@
 
 title: Bier Estates
 resources:
+- url: !file /local/custom-lovelace/decluttering-card/decluttering-card.js
+  type: module
 - url: !file /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js
   type: js
 - url: !file /local/custom-lovelace/lovelace-auto-entities/auto-entities.js
