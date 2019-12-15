@@ -9,14 +9,17 @@ cards:
     entities:
       - sensor.0x00178801020357e5_temperature
       - sensor.0x00158d00036bffea_temperature
+      - sensor.0x00158d0004453420_temperature
   - type: custom:mini-graph-card
     name: Humidity
     entities:
       - sensor.0x00158d00036bffea_humidity
+      - sensor.0x00158d0004453420_humidity
   - type: custom:mini-graph-card
     name: Pressure
     entities:
       - sensor.0x00158d00036bffea_pressure
+      - sensor.0x00158d0004453420_pressure
   - type: entities
     title: First floor switches
     entities:
