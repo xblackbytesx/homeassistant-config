@@ -11,6 +11,11 @@
     - light.0x0017880103ea3a60_light
 
 - platform: group
+  name: LG | Toilet | All
+  entities:
+    - light.0x00158d00017934ff_light
+
+- platform: group
   name: LG | SA | LED strips
   entities:
     - light.ledstrip_tv_cabinet

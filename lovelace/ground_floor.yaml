@@ -44,7 +44,16 @@ cards:
       type: entities
       title: Hallway lighting
       entities:
-        - light.0x0017880103ea3a60_light
+        - light.lg_hw_all
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: Toilet lighting
+      entities:
+        - light.lg_toilet_all
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

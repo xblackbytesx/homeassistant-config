@@ -22,10 +22,10 @@ light.0x00178801030a3dde_light:
   friendly_name: Corridor
 # light.0x086bd7fffe2b8f58_light:
 #   friendly_name: Master bedroom
-# light.0x00158d00017934ff_light:
-#   friendly_name: Master bedroom
+light.0x00158d00017934ff_light:
+  friendly_name: Toilet
 light.0x90fd9ffffeea4e5e_light:
-  friendly_name: Master bedroom qq
+  friendly_name: Master bedroom
 light.0x00178801039d140f_light:
   friendly_name: Large bedroom
 light.0x00178801023c1a33_light:
@@ -119,6 +119,9 @@ sensor.0x00178801020260c3_battery:
 sensor.0x00178801020282bc_battery:
   friendly_name: Motion sensor Hallway/stairs
   device_class: battery
+sensor.0x00158d000447edb4_battery:
+  friendly_name: Motion sensor Toilet
+  device_class: battery
 sensor.0x00158d00033a43ef_battery:
   friendly_name: Motion sensor Kitchen/front
   device_class: battery
@@ -195,6 +198,15 @@ sensor.gas_station_3_euro95:
 binary_sensor.hw_motion_detected:
   friendly_name: Hallway
   device_class: motion
+binary_sensor.0x00178801020260c3_occupancy:
+  friendly_name: Hallway/door
+  device_class: motion
+binary_sensor.0x00178801020282bc_occupancy:
+  friendly_name: Hallway/stairs
+  device_class: motion
+binary_sensor.0x00158d000447edb4_occupancy:
+  friendly_name: Toilet
+  device_class: motion
 binary_sensor.sa_motion_detected:
   friendly_name: Sitting Area
   device_class: motion
@@ -212,12 +224,6 @@ binary_sensor.0x00158d00033a43ef_occupancy:
   device_class: motion
 binary_sensor.0x0017880102030677_occupancy:
   friendly_name: Kitchen/back
-  device_class: motion
-binary_sensor.0x00178801020260c3_occupancy:
-  friendly_name: Hallway/door
-  device_class: motion
-binary_sensor.0x00178801020282bc_occupancy:
-  friendly_name: Hallway/stairs
   device_class: motion
 binary_sensor.0x00178801020357e5_occupancy:
   friendly_name: Corridor
