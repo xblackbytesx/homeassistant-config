@@ -70,11 +70,11 @@
 
     office_motion_detected:
       value_template: >-
-        {{ is_state('binary_sensor.0x00158d0004499f26_occupancy', 'on')
+        {{ is_state('binary_sensor.0x00158d0004499f26_occupancy', 'on') }}
 
     office_dark_enough:
       value_template: >-
-        {{ states('sensor.0x00158d0004499f26_illuminance')|float < 20 }}
+        {{ states('sensor.0x00158d0004499f26_illuminance')|float < 15 }}
 
     exterior_dark_enough:
       value_template: >-
