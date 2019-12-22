@@ -164,6 +164,9 @@ sensor.0x00158d00036b62d0_battery:
 sensor.0x00158d000302ec77_battery:
   friendly_name: Motion sensor Attic/front
   device_class: battery
+sensor.0x00158d0004499f26_battery:
+  friendly_name: Motion sensor Office/front
+  device_class: battery
 sensor.0x00158d000446eb21_battery:
   friendly_name: Contact sensor Front door
   device_class: battery
@@ -242,6 +245,9 @@ binary_sensor.0x00158d00036b62d0_occupancy:
   device_class: motion
 binary_sensor.0x00158d000302ec77_occupancy:
   friendly_name: Attic/front
+  device_class: motion
+binary_sensor.0x00158d0004499f26_occupancy:
+  friendly_name: Office/front
   device_class: motion
 binary_sensor.0x00158d000349234a_occupancy:
   friendly_name: Bathroom/back

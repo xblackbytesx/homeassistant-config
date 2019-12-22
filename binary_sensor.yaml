@@ -68,6 +68,14 @@
       value_template: >-
         {{ states('sensor.0x00158d00036b62d0_illuminance')|float < 100 }}
 
+    office_motion_detected:
+      value_template: >-
+        {{ is_state('binary_sensor.0x00158d0004499f26_occupancy', 'on')
+
+    office_dark_enough:
+      value_template: >-
+        {{ states('sensor.0x00158d0004499f26_illuminance')|float < 20 }}
+
     exterior_dark_enough:
       value_template: >-
         {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < 10 }}
