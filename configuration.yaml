@@ -18,6 +18,7 @@ homeassistant:
     smoke_package: !include packages/pkg_smoke/all.yaml
     plants_package: !include packages/pkg_plants/all.yaml
     finance_package: !include packages/pkg_finance/all.yaml
+    security_package: !include packages/pkg_security/all.yaml
     shell_commands_package: !include packages/pkg_shell_commands/all.yaml
     speech_package: !include packages/pkg_speech/all.yaml
     christmas_package: !include packages/pkg_christmas/all.yaml

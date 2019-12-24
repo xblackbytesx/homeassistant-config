@@ -1,0 +1,60 @@
+- id: sec_001
+  alias: sec_001
+  trigger:
+    platform: state
+    entity_id: binary_sensor.front_door_open
+    to: 'on'
+    for:
+      minutes: 5
+  condition:
+    condition: state
+    entity_id: binary_sensor.agressive_notifications
+    state: 'on'
+  action:
+    service: notify.send_mail
+    data:
+      title: "DOOR ALERT!: Front door is open"
+      message: "Nobody is home but front-door is open!!\n
+                Time of detection: {{ now().strftime('%H:%M') }}\n
+                Verify it's either closed or should be closed!"
+
+- id: sec_002
+  alias: sec_002
+  trigger:
+    platform: state
+    entity_id: binary_sensor.kitchen_window_open
+    to: 'on'
+    for:
+      minutes: 5
+  condition:
+    condition: state
+    entity_id: binary_sensor.agressive_notifications
+    state: 'on'
+  action:
+    service: notify.send_mail
+    data:
+      title: "WINDOW ALERT!: Kitchen window is open"
+      message: "Nobody is home but the kitchen window is open!!\n
+                Time of detection: {{ now().strftime('%H:%M') }}\n
+                Verify it's either closed or should be closed!"
+
+
+- id: sec_003
+  alias: sec_003
+  trigger:
+    platform: state
+    entity_id: binary_sensor.back_door_open
+    to: 'on'
+    for:
+      minutes: 5
+  condition:
+    condition: state
+    entity_id: binary_sensor.agressive_notifications
+    state: 'on'
+  action:
+    service: notify.send_mail
+    data:
+      title: "DOOR ALERT!: Back door is open"
+      message: "Nobody is home but back-door is open!!\n
+                Time of detection: {{ now().strftime('%H:%M') }}\n
+                Verify it's either closed or should be closed!"

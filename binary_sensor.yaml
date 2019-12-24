@@ -79,3 +79,15 @@
     exterior_dark_enough:
       value_template: >-
         {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < 10 }}
+
+    front_door_open:
+      value_template: >-
+        {{ states('binary_sensor.0x00158d000446eb21_contact', 'on') }}
+
+    kitchen_window_open:
+      value_template: >-
+        {{ states('binary_sensor.0x00158d000446fc0a_contact', 'on') }}
+
+    back_door_open:
+      value_template: >-
+        {{ states('binary_sensor.0x00158d000446f39b_contact', 'on') }}
