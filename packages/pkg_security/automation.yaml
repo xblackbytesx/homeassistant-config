@@ -15,9 +15,9 @@
     state: 'on'
   action:
     service: notify.send_mail
-    data:
-      title: "{{ state_attr(trigger.event.data.entity_id, 'device_class')|capitalize }} ALERT!: {{ state_attr(trigger.event.data.entity_id, 'friendly_name') }} is open"
-      message: "Nobody is home but {{ state_attr(trigger.event.data.entity_id, 'friendly_name') }} is open!!\n
+    data_template:
+      title: "{{ state_attr(trigger.entity_id, 'device_class')|capitalize }} ALERT!: {{ state_attr(trigger.entity_id, 'friendly_name') }} is open"
+      message: "Nobody is home but {{ state_attr(trigger.entity_id, 'friendly_name') }} is open!!\n
                 Time of detection: {{ now().strftime('%H:%M') }}\n
                 Verify it's either closed or should be closed!"
 
