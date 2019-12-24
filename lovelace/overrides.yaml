@@ -7,6 +7,7 @@ cards:
     title: Global toggles
     entities:
       - input_boolean.advanced_config
+      - input_boolean.alarm_armed
   - type: entities
     title: Boolean value overrides
     entities:
