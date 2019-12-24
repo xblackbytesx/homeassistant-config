@@ -1,4 +1,3 @@
 alarm_armed:
   name: Set to true to enalbe more aggresive notification methods
   initial: off
-  icon: mdi:shield-home

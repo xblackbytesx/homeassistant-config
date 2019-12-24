@@ -1,3 +1,6 @@
+homeassistant:
+  customize: !include customize.yaml
+
 binary_sensor: !include binary_sensor.yaml
 input_boolean: !include boolean.yaml
 automation: !include automation.yaml
