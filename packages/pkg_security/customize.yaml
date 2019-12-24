@@ -1,3 +1,15 @@
 input_boolean.alarm_armed:
   friendly_name: Alarm Armed
   icon: mdi:shield-home
+
+binary_sensor.front_door_open:
+  friendly_name: Front door
+  device_class: door
+
+binary_sensor.kitchen_window_open:
+  friendly_name: Kitchen window
+  device_class: window
+
+binary_sensor.back_door_open:
+  friendly_name: Back door
+  device_class: door
