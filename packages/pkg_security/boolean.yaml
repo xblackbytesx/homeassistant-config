@@ -2,6 +2,6 @@ alarm_armed:
   name: Set to true to activate several security related automations
   initial: off
 
-agressive_notifications:
+aggressive_notifications:
   name: Set to true to enable more aggresive notification methods
   initial: off
