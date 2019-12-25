@@ -1,5 +1,9 @@
 - platform: template
   sensors:
-    agressive_notifications:
+    alarm_armed:
       value_template: >-
         {{ is_state('input_boolean.alarm_armed', 'on') }}
+
+    agressive_notifications:
+      value_template: >-
+        {{ is_state('input_boolean.aggressive_notifications', 'on') }}

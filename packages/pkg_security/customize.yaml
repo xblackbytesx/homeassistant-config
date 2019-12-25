@@ -2,6 +2,10 @@ input_boolean.alarm_armed:
   friendly_name: Alarm Armed
   icon: mdi:shield-home
 
+input_boolean.aggressive_notifications:
+  friendly_name: Aggressive Notifications
+  icon: mdi:bell-ring
+
 binary_sensor.front_door_open:
   friendly_name: Front door
   device_class: door

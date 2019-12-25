@@ -1,0 +1,28 @@
+- name: Simulate Occupancy
+  entities:
+    input_boolean.aggressive_notifications:
+      state: true
+    automation.mb_001:
+      state: true
+    automation.mb_002:
+      state: true
+    automation.office_001:
+      state: false
+    automation.office_002:
+      state: false
+    scene.office_night:
+      state: true
+
+
+- name: Reset Occupancy Simulation
+  entities:
+    input_boolean.aggressive_notifications:
+      state: false
+    automation.mb_001:
+      state: false
+    automation.mb_002:
+      state: false
+    automation.office_001:
+      state: true
+    automation.office_002:
+      state: true

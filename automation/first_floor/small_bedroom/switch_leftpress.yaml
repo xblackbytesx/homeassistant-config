@@ -8,6 +8,7 @@
     service: scene.turn_on
     entity_id: scene.sb_night
 
+
 - id: sb_002
   alias: sb_002
   trigger:

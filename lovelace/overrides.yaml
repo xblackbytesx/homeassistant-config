@@ -8,6 +8,7 @@ cards:
     entities:
       - input_boolean.advanced_config
       - input_boolean.alarm_armed
+      - input_boolean.aggressive_notifications
   - type: entities
     title: Boolean value overrides
     entities:
