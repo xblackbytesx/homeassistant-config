@@ -33,7 +33,7 @@
       minutes: 5
   condition:
     condition: state
-    entity_id: binary_sensor.agressive_notifications
+    entity_id: binary_sensor.aggressive_notifications
     state: 'on'
   action:
     service: notify.send_mail
