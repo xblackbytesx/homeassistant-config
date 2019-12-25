@@ -4,6 +4,6 @@
       value_template: >-
         {{ is_state('input_boolean.alarm_armed', 'on') }}
 
-    agressive_notifications:
+    aggressive_notifications:
       value_template: >-
         {{ is_state('input_boolean.aggressive_notifications', 'on') }}

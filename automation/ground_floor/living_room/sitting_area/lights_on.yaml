@@ -2,13 +2,10 @@
   alias: sa_002
   trigger:
     - platform: state
-      entity_id: binary_sensor.sa_motion_detected
-      to: 'on'
-    - platform: state
-      entity_id: binary_sensor.sa_dark_enough
-      to: 'on'
-    - platform: state
-      entity_id: binary_sensor.sa_tv_media_playing
+      entity_id:
+        - binary_sensor.sa_motion_detected
+        - binary_sensor.sa_dark_enough
+        - binary_sensor.sa_tv_media_playing
       to: 'on'
     - platform: state
       entity_id: binary_sensor.sa_tv_media_playing

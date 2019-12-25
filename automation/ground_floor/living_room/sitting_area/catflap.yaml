@@ -1,0 +1,7 @@
+# - id: sa_003
+#   alias: sa_003
+#   trigger:
+#     platform: state
+#     entity_id: sensor.0x00158d000313127e_action
+#     to: 'right'
+#   action:
