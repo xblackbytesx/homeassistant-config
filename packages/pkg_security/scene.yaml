@@ -6,6 +6,10 @@
       state: true
     automation.mb_002:
       state: true
+    automation.lb_005:
+      state: false
+    automation.sb_005:
+      state: false
     automation.office_001:
       state: false
     automation.office_002:
@@ -22,6 +26,10 @@
       state: false
     automation.mb_002:
       state: false
+    automation.lb_005:
+      state: true
+    automation.sb_005:
+      state: true
     automation.office_001:
       state: true
     automation.office_002:
