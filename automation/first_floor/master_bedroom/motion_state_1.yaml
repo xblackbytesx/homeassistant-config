@@ -7,7 +7,7 @@
     to: 'on'
   condition:
     condition: state
-    entity_id: input_boolean.co_meets_darkness_cutoff
+    entity_id: binary_sensor.co_dark_enough
     state: 'on'
   action:
     service: light.turn_on
