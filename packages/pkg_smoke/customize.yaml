@@ -1,9 +1,24 @@
 binary_sensor.0x00158d0003612f9b_smoke:
-  friendly_name: Living Room Smoke
+  friendly_name: Living Room
+  device_class: smoke
 binary_sensor.0x00158d0003612f9b_battery:
   friendly_name: Living Room Smoke Alarm
+  device_class: battery
 
 binary_sensor.0x00158d00045cd482_smoke:
-  friendly_name: Large Bedroom Smoke
+  friendly_name: Large Bedroom
+  device_class: smoke
 binary_sensor.0x00158d00045cd482_battery:
   friendly_name: Large Bedroom Smoke Alarm
+  device_class: battery
+
+binary_sensor.lr_smoke_detected:
+  friendly_name: Living Room
+  device_class: smoke
+
+binary_sensor.lb_smoke_detected:
+  friendly_name: Large Bedroom
+  device_class: smoke
+
+automation.smoke_001:
+  friendly_name: Smoke | Notify and Brighten Lights
