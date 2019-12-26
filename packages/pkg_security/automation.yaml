@@ -16,7 +16,7 @@
     entity_id: input_boolean.alarm_armed
     to: 'off'
   action:
-    service: scene.turn_off
+    service: scene.turn_on
     entity_id: scene.reset_occupancy_simulation
 
 

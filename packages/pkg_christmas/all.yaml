@@ -1,1 +1,5 @@
+homeassistant:
+  customize: !include customize.yaml
+
 automation: !include automation.yaml
+scene: !include scene.yaml

@@ -1,10 +1,32 @@
-- alias: SA | Motion | Christmas Tree On
+- id: xmas_001
+  alias: xmas_001
+  trigger:
+    platform: state
+    entity_id: input_boolean.alarm_armed
+    to: 'on'
+  action:
+    service: scene.turn_on
+    entity_id: scene.xmas_occupancy_sim
+
+
+- id: xmas_002
+  alias: xmas_002
+  trigger:
+    platform: state
+    entity_id: input_boolean.alarm_armed
+    to: 'off'
+  action:
+    service: scene.turn_on
+    entity_id: scene.reset_xmas_occupancy_sim
+
+
+- id: xmas_003
+  alias: xmas_003
   trigger:
     - platform: state
-      entity_id: binary_sensor.sa_motion_detected
-      to: 'on'
-    - platform: state
-      entity_id: binary_sensor.kitchen_motion_detected
+      entity_id:
+        - binary_sensor.sa_motion_detected
+        - binary_sensor.kitchen_motion_detected
       to: 'on'
   condition:
     condition: time
@@ -17,7 +39,8 @@
       - switch.0x000d6ffffedc5e05_switch
 
 
-- alias: SA | Motion | Christmas Tree Off
+- id: xmas_004
+  alias: xmas_004
   trigger:
     platform: time_pattern
     minutes: '/10'
@@ -26,14 +49,12 @@
     condition: and
     conditions:
       - condition: state
-        entity_id: binary_sensor.sa_motion_detected
-        state: 'off'
-      - condition: state
-        entity_id: binary_sensor.kitchen_motion_detected
+        entity_id:
+          - binary_sensor.sa_motion_detected
+          - binary_sensor.kitchen_motion_detected
         state: 'off'
   action:
     service: switch.turn_off
     entity_id:
       - switch.0x000d6ffffedaf667_switch
       - switch.0x000d6ffffedc5e05_switch
-

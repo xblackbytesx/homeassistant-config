@@ -17,3 +17,12 @@ binary_sensor.kitchen_window_open:
 binary_sensor.back_door_open:
   friendly_name: Back door
   device_class: door
+
+automation.sec_001:
+  friendly_name: SEC | Alarm Armed | Engage Occupancy Sim
+
+automation.sec_002:
+  friendly_name: SEC | Alarm Disarmed | Reset Occupancy Sim
+
+automation.sec_003:
+  friendly_name: SEC | Alarm Armed | Aggresive Door/Window Notifications

@@ -7,14 +7,6 @@ cards:
     show_empty: false
     card:
       type: entities
-      title: All automations
-    filter:
-      include:
-        - entity_id: "automation.*"
-  - type: custom:auto-entities
-    show_empty: false
-    card:
-      type: entities
       title: Hallway automations
     filter:
       include:
@@ -71,6 +63,22 @@ cards:
     show_empty: false
     card:
       type: entities
+      title: Attic automations
+    filter:
+      include:
+        - entity_id: "automation.attic*"
+  - type: custom:auto-entities
+    show_empty: false
+    card:
+      type: entities
+      title: Office automations
+    filter:
+      include:
+        - entity_id: "automation.office*"
+  - type: custom:auto-entities
+    show_empty: false
+    card:
+      type: entities
       title: Exterior automations
     filter:
       include:
@@ -79,7 +87,36 @@ cards:
     show_empty: false
     card:
       type: entities
+      title: Security automations
+    filter:
+      include:
+        - entity_id: "automation.sec*"
+  - type: custom:auto-entities
+    show_empty: false
+    card:
+      type: entities
       title: Matrix bot automations
     filter:
       include:
         - entity_id: "automation.matrix*"
+  - type: custom:auto-entities
+    show_empty: false
+    card:
+      type: entities
+      title: Christmas automations
+    filter:
+      include:
+        - entity_id: "automation.xmas*"
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: custom:auto-entities
+      show_empty: false
+      card:
+        type: entities
+        title: All automations
+      filter:
+        include:
+          - entity_id: "automation.*"

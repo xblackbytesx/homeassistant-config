@@ -1,0 +1,10 @@
+- name: Xmas Occupancy Sim
+  entities:
+    automation.xmas_004:
+      state: false
+
+
+- name: Reset Xmas Occupancy Sim
+  entities:
+    automation.xmas_004:
+      state: true

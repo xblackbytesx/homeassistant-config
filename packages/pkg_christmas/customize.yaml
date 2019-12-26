@@ -1,0 +1,11 @@
+automation.xmas_001:
+  friendly_name: SEC | Alarm Armed | Engage Xmas Occupancy Sim
+
+automation.xmas_002:
+  friendly_name: SEC | Alarm Disarmed | Reset Xmas Occupancy Sim
+
+automation.xmas_003:
+  friendly_name: XMAS | Motion | Lights | On
+
+automation.xmas_004:
+  friendly_name: XMAS | Motion | Lights | Off

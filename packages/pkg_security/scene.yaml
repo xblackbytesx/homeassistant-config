@@ -2,14 +2,26 @@
   entities:
     input_boolean.aggressive_notifications:
       state: true
+    automation.sa_001:
+      state: false
+    scene.sa_not_watching_tv:
+      state: true
+    automation.kitchen_001:
+      state: false
+    scene.kitchen_relax:
+      state: true
     automation.mb_001:
       state: true
     automation.mb_002:
       state: true
     automation.lb_005:
       state: false
+    scene.lb_day:
+      state: true
     automation.sb_005:
       state: false
+    scene.sb_night:
+      state: true
     automation.office_001:
       state: false
     automation.office_002:
@@ -22,6 +34,10 @@
   entities:
     input_boolean.aggressive_notifications:
       state: false
+    automation.sa_001:
+      state: true
+    automation.kitchen_001:
+      state: true
     automation.mb_001:
       state: false
     automation.mb_002:
