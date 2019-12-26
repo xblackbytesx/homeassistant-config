@@ -5,15 +5,15 @@
       xy_color: [0.311, 0.327]
       brightness_pct: 100
     automation.lb_001:
-      state: fasle
+      state: false
     automation.lb_002:
-      state: fasle
+      state: false
     automation.lb_003:
-      state: fasle
+      state: false
     automation.lb_004:
-      state: fasle
+      state: false
     automation.lb_005:
-      state: fasle
+      state: false
 
 - name: LB | Reset Default
   entities:
