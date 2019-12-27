@@ -1,7 +1,12 @@
-# - id: sa_003
-#   alias: sa_003
-#   trigger:
-#     platform: state
-#     entity_id: sensor.0x00158d000313127e_action
-#     to: 'right'
-#   action:
+- id: sa_003
+  alias: sa_003
+  trigger:
+    platform: state
+    entity_id: binary_sensor.catflap_activity
+    to: 'on'
+    for:
+      seconds: 2
+  action:
+    service: notify.notify_matrix_clean
+    data_template:
+      message: "Catflap activity: Cat either came or left"

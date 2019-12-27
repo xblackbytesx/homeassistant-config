@@ -91,3 +91,8 @@
     back_door_open:
       value_template: >-
         {{ is_state('binary_sensor.0x00158d000446f39b_contact', 'on') }}
+
+    catflap_activity:
+      value_template: >-
+        {{ is_state('sensor.0x00158d000313127e_action', 'tilt')
+           or is_state('sensor.0x00158d000313127e_action', 'drop') }}
