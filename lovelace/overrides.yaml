@@ -1,7 +1,5 @@
 # lovelace_gen
 
-{% set sensors = ['Smoke', 'Motion', 'Contact', 'Climate', 'Plant'] %}
-
 title: overrides_view
 icon: mdi:settings
 cards:
@@ -15,32 +13,6 @@ cards:
     title: Boolean value overrides
     entities:
       - input_boolean.sa_media_status_override
-  {% for s in sensors %}
-  - type: custom:auto-entities
-    show_empty: false
-    card:
-      type: entities
-      title: {{ s }} sensor batteries
-    filter:
-      include:
-        - name: "*{{ s }}*"
-          attributes:
-            device_class: battery
-  {% endfor %}
-  - type: conditional
-    conditions:
-      - entity: input_boolean.advanced_config
-        state: "on"
-    card:
-      type: custom:auto-entities
-      show_empty: false
-      card:
-        type: entities
-        title: Battery status
-      filter:
-        include:
-          - entity_id: "*_battery*"
-
   - type: entity-button
     entity: binary_sensor.0x00158d0003612f9b_smoke
     show_icon: false
