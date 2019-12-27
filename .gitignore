@@ -37,3 +37,4 @@ custom_components
 lovelace-gen.py
 assets
 shell_scripts
+.ps4-games.json
