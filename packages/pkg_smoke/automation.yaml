@@ -21,9 +21,9 @@
     - service: scene.turn_on
       data_template:
         entity_id: >
-          {% if state_attr('trigger.entity_id', 'friendly_name') == "Living Room" %}
+          {% if state_attr('trigger.entity_id', 'friendly_name') == 'Living Room' %}
             scene.lr_search_mode
-          {% else %}
+          {% elif state_attr('trigger.entity_id', 'friendly_name') == 'Large Bedroom' %}
             scene.lb_search_mode
           {% endif %}
 
@@ -39,7 +39,7 @@
         payload: "{\"selftest\": \"\"}"
         topic: zigbee2mqtt/0x00158d0003612f9b/set
     - service: homeassistant.turn_on
-      entity_id: binary_sensor.0x00158d0003612f9b_smoke
+      entity_id: binary_sensor.lr_smoke_detected
 
 
 - id: Smoke Alarm | LB | Test
@@ -53,25 +53,4 @@
         payload: "{\"selftest\": \"\"}"
         topic: zigbee2mqtt/0x00158d00045cd482/set
     - service: homeassistant.turn_on
-      entity_id: binary_sensor.0x00158d00045cd482_smoke
-
-
-# - alias: LB | Smoke Detected | Notify | Light
-#   trigger:
-#     platform: state
-#     entity_id: binary_sensor.lb_smoke_detected
-#     to: 'on'
-#   action:
-#     - service: notify.send_mail
-#       data:
-#         title: "SMOKE ALARM: Large Bedroom"
-#         message: "Smoke was detected in the large bedroom!!\n
-#                   Time of detection: {{ now().strftime('%H:%M') }}\n
-#                   Verify and/or call the emergency services!"
-#     - service: notify.notify_matrix_clean
-#       data:
-#         message: "-------------------------------------------------\n
-#                   | Smoke has been detected in the Large Bedroom! |\n
-#                   -------------------------------------------------"
-#     - service: scene.turn_on
-#       entity_id: scene.lb_search_mode
+      entity_id: binary_sensor.lb_smoke_detected
