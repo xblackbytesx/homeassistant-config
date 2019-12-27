@@ -24,7 +24,7 @@ cards:
     filter:
       include:
         - domain: battery
-        - name: "*{{ s }}*"
+          name: "*{{ s }}*"
   {% endfor %}
   - type: conditional
     conditions:
