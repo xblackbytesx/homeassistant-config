@@ -1,10 +1,60 @@
 # lovelace_gen
 
-type: custom:auto-entities
-show_empty: false
-card:
-  type: entities
-  title: Battery status
-filter:
-  include:
-    - entity_id: "*_battery*"
+- type: custom:auto-entities
+  show_empty: false
+  card:
+    type: entities
+    title: Smoke alarm batteries
+  filter:
+    include:
+      - name: "*Smoke*"
+
+- type: custom:auto-entities
+  show_empty: false
+  card:
+    type: entities
+    title: Motion sensor batteries
+  filter:
+    include:
+      - name: "*Motion*"
+
+- type: custom:auto-entities
+  show_empty: false
+  card:
+    type: entities
+    title: Contact sensor batteries
+  filter:
+    include:
+      - name: "*Contact*"
+
+- type: custom:auto-entities
+  show_empty: false
+  card:
+    type: entities
+    title: Climate sensor batteries
+  filter:
+    include:
+      - name: "*Climate*"
+
+- type: custom:auto-entities
+  show_empty: false
+  card:
+    type: entities
+    title: Plant sensor batteries
+  filter:
+    include:
+      - name: "*Plant*"
+
+- type: conditional
+  conditions:
+    - entity: input_boolean.advanced_config
+      state: "on"
+  card:
+    type: custom:auto-entities
+    show_empty: false
+    card:
+      type: entities
+      title: Battery status
+    filter:
+      include:
+        - entity_id: "*_battery*"

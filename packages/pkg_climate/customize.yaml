@@ -20,3 +20,10 @@ sensor.0x00158d0004453420_humidity:
   friendly_name: Master bedroom
 sensor.0x00158d0004453420_pressure:
   friendly_name: Master bedroom
+
+sensor.0x00158d00036bffea_battery:
+  friendly_name: Climate sensor Large bedroom
+  device_class: battery
+sensor.0x00158d0004453420_battery:
+  friendly_name: Climate sensor Master bedroom
+  device_class: battery
