@@ -1,14 +1,14 @@
 binary_sensor.0x00158d0003612f9b_smoke:
   friendly_name: Living Room
   device_class: smoke
-binary_sensor.0x00158d0003612f9b_battery:
+sensor.0x00158d0003612f9b_battery:
   friendly_name: Smoke Alarm Living Room
   device_class: battery
 
 binary_sensor.0x00158d00045cd482_smoke:
   friendly_name: Large Bedroom
   device_class: smoke
-binary_sensor.0x00158d00045cd482_battery:
+sensor.0x00158d00045cd482_battery:
   friendly_name: Smoke Alarm Large Bedroom
   device_class: battery
 
