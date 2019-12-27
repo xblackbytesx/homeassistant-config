@@ -23,8 +23,9 @@ cards:
       title: {{ s }} sensor batteries
     filter:
       include:
-        - domain: battery
-          name: "*{{ s }}*"
+        - name: "*{{ s }}*"
+          attributes:
+            device_class: battery
   {% endfor %}
   - type: conditional
     conditions:
