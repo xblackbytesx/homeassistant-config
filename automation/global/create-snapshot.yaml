@@ -1,4 +1,5 @@
-- alias: Backup Nightly
+- id: global_001
+  alias: global_001
   trigger:
     platform: time
     at: '02:00:00'

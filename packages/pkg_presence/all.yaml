@@ -1,3 +1,6 @@
+homeassistant:
+  customize: !include customize.yaml
+
 device_tracker: !include device_tracker.yaml
 
 person:
@@ -9,3 +12,5 @@ person:
     id: !secret person_two_user_id
     device_trackers:
       - !secret person_two_device_tracker
+
+binary_sensor: !include binary_sensor.yaml

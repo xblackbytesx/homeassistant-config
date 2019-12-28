@@ -37,121 +37,19 @@ sensor.0x00158d000313127e_battery:
 sensor.0x00158d000319ad0f_battery:
   friendly_name: Vibration sensor 2
   device_class: battery
-sensor.0x00178801020260c3_battery:
-  friendly_name: Motion sensor Hallway/door
-  device_class: battery
-sensor.0x00178801020282bc_battery:
-  friendly_name: Motion sensor Hallway/stairs
-  device_class: battery
-sensor.0x00158d000447edb4_battery:
-  friendly_name: Motion sensor Toilet
-  device_class: battery
-sensor.0x00158d00033a43ef_battery:
-  friendly_name: Motion sensor Kitchen/front
-  device_class: battery
-sensor.0x0017880102030677_battery:
-  friendly_name: Motion sensor Kitchen/back
-  device_class: battery
-sensor.0x0017880102026161_battery:
-  friendly_name: Motion sensor Sitting area/screen
-  device_class: battery
-sensor.0x00158d00034911fc_battery:
-  friendly_name: Motion sensor Sitting area/closet
-  device_class: battery
 sensor.0xccccccfffe40b07b_battery:
   friendly_name: Tradfri remote
   device_class: battery
-sensor.0x00178801020357e5_battery:
-  friendly_name: Motion sensor Corridor
-  device_class: battery
-sensor.0x00158d00033aac53_battery:
-  friendly_name: Motion sensor Bathroom/front
-  device_class: battery
-sensor.0x00158d000349234a_battery:
-  friendly_name: Motion sensor Bathroom/back
-  device_class: battery
-sensor.0x00158d00033e347d_battery:
-  friendly_name: Wall switch Large bedroom
-  device_class: battery
-sensor.0x00158d00036b62d0_battery:
-  friendly_name: Motion sensor Attic/stairs
-  device_class: battery
-sensor.0x00158d000302ec77_battery:
-  friendly_name: Motion sensor Attic/front
-  device_class: battery
-sensor.0x00158d0004499f26_battery:
-  friendly_name: Motion sensor Office/front
-  device_class: battery
+
 
 sensor.0x00158d00033e347d_click:
   friendly_name: Wall switch Large bedroom
+  
 
-sensor.gas_station_1_euro95:
-  icon: mdi:gas-station
-sensor.gas_station_2_blueone:
-  icon: mdi:gas-station
-sensor.gas_station_2_euro95:
-  icon: mdi:gas-station
-sensor.gas_station_3_euro95:
-  icon: mdi:gas-station
-
-binary_sensor.hw_motion_detected:
-  friendly_name: Hallway
-  device_class: motion
-binary_sensor.0x00178801020260c3_occupancy:
-  friendly_name: Hallway/door
-  device_class: motion
-binary_sensor.0x00178801020282bc_occupancy:
-  friendly_name: Hallway/stairs
-  device_class: motion
-binary_sensor.0x00158d000447edb4_occupancy:
-  friendly_name: Toilet
-  device_class: motion
-binary_sensor.sa_motion_detected:
-  friendly_name: Sitting Area
-  device_class: motion
-binary_sensor.kitchen_motion_detected:
-  friendly_name: Kitchen
-  device_class: motion
-binary_sensor.0x0017880102026161_occupancy:
-  friendly_name: Sitting area/screen
-  device_class: motion
-binary_sensor.0x00158d00034911fc_occupancy:
-  friendly_name: Sitting area/closet
-  device_class: motion
-binary_sensor.0x00158d00033a43ef_occupancy:
-  friendly_name: Kitchen/front
-  device_class: motion
-binary_sensor.0x0017880102030677_occupancy:
-  friendly_name: Kitchen/back
-  device_class: motion
-binary_sensor.0x00178801020357e5_occupancy:
-  friendly_name: Corridor
-  device_class: motion
-binary_sensor.co_motion_detected:
-  friendly_name: Corridor
-  device_class: motion
-binary_sensor.attic_motion_detected:
-  friendly_name: Attic
-  device_class: motion
-binary_sensor.bathroom_motion_detected:
-  friendly_name: Bathroom
-  device_class: motion
-binary_sensor.0x00158d00036b62d0_occupancy:
-  friendly_name: Attic/stairs
-  device_class: motion
-binary_sensor.0x00158d000302ec77_occupancy:
-  friendly_name: Attic/front
-  device_class: motion
-binary_sensor.0x00158d0004499f26_occupancy:
-  friendly_name: Office/front
-  device_class: motion
-binary_sensor.0x00158d000349234a_occupancy:
-  friendly_name: Bathroom/back
-  device_class: motion
-binary_sensor.0x00158d00033aac53_occupancy:
-  friendly_name: Bathroom/front
-  device_class: motion
+automation.global_001:
+  friendly_name: Global | Create nightly backup
+automation.global_002:
+  friendly_name: Global | Set theme at startup
 
 automation.sa_003:
   friendly_name: SA | Catflap activity

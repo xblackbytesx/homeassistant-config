@@ -1,0 +1,8 @@
+sensor.gas_station_1_euro95:
+  icon: mdi:gas-station
+sensor.gas_station_2_blueone:
+  icon: mdi:gas-station
+sensor.gas_station_2_euro95:
+  icon: mdi:gas-station
+sensor.gas_station_3_euro95:
+  icon: mdi:gas-station

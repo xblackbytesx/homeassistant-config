@@ -13,6 +13,7 @@ homeassistant:
     light_package: !include packages/pkg_light/all.yaml
     matrix_package: !include packages/pkg_matrix/all.yaml
     presence_package: !include packages/pkg_presence/all.yaml
+    car_package: !include packages/pkg_car/all.yaml
     climate_package: !include packages/pkg_climate/all.yaml
     media_players_package: !include packages/pkg_media_players/all.yaml
     camera_package: !include packages/pkg_camera/all.yaml
