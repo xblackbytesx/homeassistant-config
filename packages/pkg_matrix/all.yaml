@@ -1,3 +1,6 @@
+homeassistant:
+  customize: !include customize.yaml
+
 matrix: !include matrix.yaml
 automation: !include automation.yaml
 notify: !include notify.yaml

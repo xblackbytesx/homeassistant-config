@@ -10,11 +10,13 @@ homeassistant:
   packages:
     zigbee2mqtt_package: !include packages/pkg_zigbee2mqtt/all.yaml
     rfx_package: !include packages/pkg_rfx/all.yaml
+    light_package: !include packages/pkg_light/all.yaml
     matrix_package: !include packages/pkg_matrix/all.yaml
     presence_package: !include packages/pkg_presence/all.yaml
     climate_package: !include packages/pkg_climate/all.yaml
     media_players_package: !include packages/pkg_media_players/all.yaml
     camera_package: !include packages/pkg_camera/all.yaml
+    network_package: !include packages/pkg_network/all.yaml
     smoke_package: !include packages/pkg_smoke/all.yaml
     plants_package: !include packages/pkg_plants/all.yaml
     finance_package: !include packages/pkg_finance/all.yaml
@@ -72,40 +74,7 @@ http:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
 updater:
 
-hue:
-  bridges:
-    - host: 10.0.221.30
-      filename: philips-hue.conf
-
-yeelight:
-  devices:
-    10.0.221.37:
-      name: Ledstrip Black Cabinet
-      transition: 1000
-    10.0.221.39:
-      name: Ledstrip Kitchen Cabinet
-      transition: 1000
-    10.0.221.38:
-      name: Ledstrip Large Bedroom
-      transition: 1000
-
-transmission:
-  host: !secret synology_ip
-  username: !secret transmission_user
-  password: !secret transmission_pass
-
-speedtestdotnet:
-  scan_interval:
-    hours: 6
-  monitored_conditions:
-    - ping
-    - download
-    - upload
-
-alert: !include alerts.yaml
 binary_sensor: !include binary_sensor.yaml
-light: !include light.yaml
 automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/
 input_boolean: !include boolean.yaml
-scene: !include_dir_merge_list scene/

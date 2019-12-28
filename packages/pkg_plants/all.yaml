@@ -1,3 +1,6 @@
+homeassistant:
+  customize: !include customize.yaml
+
 sensor: !include sensor.yaml
 plant: !include plant.yaml
 alert: !include alert.yaml

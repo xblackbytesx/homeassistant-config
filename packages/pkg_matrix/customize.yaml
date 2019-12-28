@@ -1,0 +1,44 @@
+automation.matrix_001:
+  friendly_name: Matrix | React to help
+
+automation.matrix_002:
+  friendly_name: Matrix | React to an introduction
+
+automation.matrix_003:
+  friendly_name: Matrix | Turn on all the things
+
+automation.matrix_004:
+  friendly_name: Matrix | React to Cut socket one
+
+automation.matrix_005:
+  friendly_name: Matrix | React to Cut socket two
+
+automation.matrix_006:
+  friendly_name: Matrix | React to Cut socket three
+
+automation.matrix_007:
+  friendly_name: Matrix | React to Cut socket five
+
+automation.matrix_008:
+  friendly_name: Matrix | React to Cut socket six
+
+automation.matrix_009:
+  friendly_name: Matrix | React to Cut all power
+
+automation.matrix_010:
+  friendly_name: Matrix | React to !reel_in_the_sunscreen
+
+automation.matrix_011:
+  friendly_name: Matrix | React to Attic shutters up
+
+automation.matrix_012:
+  friendly_name: Matrix | React to Attic shutters down
+
+automation.matrix_013:
+  friendly_name: Matrix | React to Cheapest local gas
+
+automation.matrix_014:
+  friendly_name: Matrix | React to Show me the yield
+
+automation.matrix_015:
+  friendly_name: Matrix | React to Confirmed front-door is closed

@@ -1,0 +1,37 @@
+- id: office_001
+  alias: office_001
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.office_motion_detected
+      to: 'off'
+      for:
+        minutes: 3
+    - platform: state
+      entity_id: binary_sensor.office_dark_enough
+      to: 'off'
+      for:
+        minutes: 5
+  action:
+    service: light.turn_off
+    entity_id: light.lg_office_all
+
+
+- id: office_002
+  alias: office_002
+  trigger:
+    platform: state
+    entity_id: binary_sensor.office_motion_detected
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: binary_sensor.office_dark_enough
+    state: 'on'
+  action:
+    service: scene.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state('input_boolean.time_for_dim_scenes', 'on') %}
+          scene.office_night
+        {% else %}
+          scene.office_day
+        {% endif %}

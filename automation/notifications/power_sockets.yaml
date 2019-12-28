@@ -1,64 +1,64 @@
-- alias: "Notify | State | Socket one | On"
-  trigger:
-    platform: state
-    entity_id: switch.power_socket_one
-    to: 'on'
-  action:
-    - service: notify.notify_matrix_noisy
-      data:
-        message: "Socket one has been turned on"
-
-
-- alias: "Notify | State | Socket one | Off"
-  trigger:
-    platform: state
-    entity_id: switch.power_socket_one
-    to: 'off'
-  action:
-    - service: notify.notify_matrix_noisy
-      data:
-        message: "Socket one has been turned off"
-
-
-- alias: "Notify | State | Socket two | On"
-  trigger:
-    platform: state
-    entity_id: switch.power_socket_two
-    to: 'on'
-  action:
-    - service: notify.notify_matrix_noisy
-      data:
-        message: "Socket two has been turned on"
-
-
-- alias: "Notify | State | Socket two | Off"
-  trigger:
-    platform: state
-    entity_id: switch.power_socket_two
-    to: 'off'
-  action:
-    - service: notify.notify_matrix_noisy
-      data:
-        message: "Socket two has been turned off"
-
-
-- alias: "Notify | State | Socket three | On"
-  trigger:
-    platform: state
-    entity_id: switch.power_socket_three
-    to: 'on'
-  action:
-    - service: notify.notify_matrix_noisy
-      data:
-        message: "Socket three has been turned on"
-
-
-- alias: "Notify | State | Socket three | Off"
-  trigger:
-    platform: state
-    entity_id: switch.power_socket_three
-    to: 'off'
-  action:
-    - service: notify.notify_matrix_noisy
-      data:
-        message: "Socket three has been turned off"
+# - alias: "Notify | State | Socket one | On"
+#   trigger:
+#     platform: state
+#     entity_id: switch.power_socket_one
+#     to: 'on'
+#   action:
+#     - service: notify.notify_matrix_noisy
+#       data:
+#         message: "Socket one has been turned on"
+#
+#
+# - alias: "Notify | State | Socket one | Off"
+#   trigger:
+#     platform: state
+#     entity_id: switch.power_socket_one
+#     to: 'off'
+#   action:
+#     - service: notify.notify_matrix_noisy
+#       data:
+#         message: "Socket one has been turned off"
+#
+#
+# - alias: "Notify | State | Socket two | On"
+#   trigger:
+#     platform: state
+#     entity_id: switch.power_socket_two
+#     to: 'on'
+#   action:
+#     - service: notify.notify_matrix_noisy
+#       data:
+#         message: "Socket two has been turned on"
+#
+#
+# - alias: "Notify | State | Socket two | Off"
+#   trigger:
+#     platform: state
+#     entity_id: switch.power_socket_two
+#     to: 'off'
+#   action:
+#     - service: notify.notify_matrix_noisy
+#       data:
+#         message: "Socket two has been turned off"
+#
+#
+# - alias: "Notify | State | Socket three | On"
+#   trigger:
+#     platform: state
+#     entity_id: switch.power_socket_three
+#     to: 'on'
+#   action:
+#     - service: notify.notify_matrix_noisy
+#       data:
+#         message: "Socket three has been turned on"
+#
+#
+# - alias: "Notify | State | Socket three | Off"
+#   trigger:
+#     platform: state
+#     entity_id: switch.power_socket_three
+#     to: 'off'
+#   action:
+#     - service: notify.notify_matrix_noisy
+#       data:
+#         message: "Socket three has been turned off"

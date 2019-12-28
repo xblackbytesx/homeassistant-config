@@ -1,0 +1,36 @@
+- id: kitchen_001
+  alias: kitchen_001
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.kitchen_motion_detected
+      to: 'off'
+      for:
+        minutes: 3
+    - platform: state
+      entity_id: binary_sensor.kitchen_dark_enough
+      to: 'off'
+      for:
+        minutes: 5
+  action:
+    service: light.turn_off
+    entity_id: light.lg_kitchen_all
+
+
+- id: kitchen_002
+  alias: kitchen_002
+  trigger:
+    platform: state
+    entity_id: binary_sensor.kitchen_motion_detected
+    to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: binary_sensor.kitchen_motion_detected
+        state: 'on'
+      - condition: state
+        entity_id: binary_sensor.kitchen_dark_enough
+        state: 'on'
+  action:
+    service: scene.turn_on
+    entity_id: scene.kitchen_relax

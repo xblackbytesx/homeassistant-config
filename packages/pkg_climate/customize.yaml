@@ -1,5 +1,3 @@
-sensor.living_room_thermostat_humidity:
-  friendly_name: Humidity
 sensor.0x00178801020282bc_temperature:
   friendly_name: Hallway
 sensor.0x0017880102030677_temperature:
@@ -10,14 +8,18 @@ sensor.0x00178801020357e5_temperature:
   friendly_name: Corridor
 sensor.0x00158d00036bffea_temperature:
   friendly_name: Large bedroom
-sensor.0x00158d00036bffea_humidity:
-  friendly_name: Large bedroom
-sensor.0x00158d00036bffea_pressure:
-  friendly_name: Large bedroom
 sensor.0x00158d0004453420_temperature:
   friendly_name: Master bedroom
+
+sensor.living_room_thermostat_humidity:
+  friendly_name: Humidity
+sensor.0x00158d00036bffea_humidity:
+  friendly_name: Large bedroom
 sensor.0x00158d0004453420_humidity:
   friendly_name: Master bedroom
+
+sensor.0x00158d00036bffea_pressure:
+  friendly_name: Large bedroom
 sensor.0x00158d0004453420_pressure:
   friendly_name: Master bedroom
 

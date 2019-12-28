@@ -1,0 +1,6 @@
+sensor.bitcoin:
+  icon: mdi:bitcoin
+sensor.ethereum:
+  icon: mdi:ethereum
+sensor.iota:
+  icon: mdi:coin

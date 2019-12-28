@@ -16,27 +16,15 @@
            or is_state('binary_sensor.0x00158d00034911fc_occupancy', 'on')
            or is_state('binary_sensor.motion_sensor_sa', 'on') }}
 
-    sa_dark_enough:
-      value_template: >-
-        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < 10 }}
-
     kitchen_motion_detected:
       value_template: >-
         {{ is_state('binary_sensor.hue_motion_sensor_kitchen_motion', 'on')
            or is_state('binary_sensor.0x00158d00033a43ef_occupancy', 'on') }}
 
-    kitchen_dark_enough:
-      value_template: >-
-        {{ states('sensor.hue_motion_sensor_kitchen_illuminance')|float < 15 }}
-
     hw_motion_detected:
       value_template: >-
         {{ is_state('binary_sensor.0x00178801020260c3_occupancy', 'on')
            or is_state('binary_sensor.0x00178801020282bc_occupancy', 'on') }}
-
-    hw_dark_enough:
-      value_template: >-
-        {{ states('sensor.hue_motion_sensor_hallway_stairs_illuminance')|float < 10 }}
 
     toilet_motion_detected:
       value_template: >-
@@ -46,51 +34,19 @@
       value_template: >-
         {{ is_state('binary_sensor.0x00178801020357e5_occupancy', 'on') }}
 
-    co_dark_enough:
-      value_template: >-
-        {{ states('sensor.hue_motion_sensor_corridor_illuminance')|float < 10 }}
-
     bathroom_motion_detected:
       value_template: >-
         {{ is_state('binary_sensor.0x00158d000349234a_occupancy', 'on')
            or is_state('binary_sensor.0x00158d00033aac53_occupancy', 'on') }}
-
-    bathroom_dark_enough:
-      value_template: >-
-        {{ states('sensor.0x00158d000349234a_illuminance')|float < 100 }}
 
     attic_motion_detected:
       value_template: >-
         {{ is_state('binary_sensor.0x00158d00036b62d0_occupancy', 'on')
            or is_state('binary_sensor.0x00158d000302ec77_occupancy', 'on') }}
 
-    attic_dark_enough:
-      value_template: >-
-        {{ states('sensor.0x00158d00036b62d0_illuminance')|float < 100 }}
-
     office_motion_detected:
       value_template: >-
         {{ is_state('binary_sensor.0x00158d0004499f26_occupancy', 'on') }}
-
-    office_dark_enough:
-      value_template: >-
-        {{ states('sensor.0x00158d0004499f26_illuminance')|float < 15 }}
-
-    exterior_dark_enough:
-      value_template: >-
-        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < 10 }}
-
-    front_door_open:
-      value_template: >-
-        {{ is_state('binary_sensor.0x00158d000446eb21_contact', 'on') }}
-
-    kitchen_window_open:
-      value_template: >-
-        {{ is_state('binary_sensor.0x00158d000446fc0a_contact', 'on') }}
-
-    back_door_open:
-      value_template: >-
-        {{ is_state('binary_sensor.0x00158d000446f39b_contact', 'on') }}
 
     catflap_activity:
       value_template: >-

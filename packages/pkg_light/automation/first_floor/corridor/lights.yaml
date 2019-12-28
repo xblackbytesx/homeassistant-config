@@ -1,0 +1,37 @@
+- id: co_001
+  alias: co_001
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.co_motion_detected
+      to: 'off'
+      for:
+        minutes: 3
+    - platform: state
+      entity_id: binary_sensor.co_dark_enough
+      to: 'off'
+      for:
+        minutes: 5
+  action:
+    service: light.turn_off
+    entity_id: light.lg_co_all
+
+
+- id: co_002
+  alias: co_002
+  trigger:
+    platform: state
+    entity_id: binary_sensor.co_motion_detected
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: binary_sensor.co_dark_enough
+    state: 'on'
+  action:
+    service: scene.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state('input_boolean.time_for_dim_scenes', 'on') %}
+          scene.co_night
+        {% else %}
+          scene.co_day
+        {% endif %}

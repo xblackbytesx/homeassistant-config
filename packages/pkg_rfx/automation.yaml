@@ -1,0 +1,64 @@
+- id: rfx_001
+  alias: rfx_001
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "on", "entity_id": "switch.power_socket_one"}
+  action:
+    service: switch.turn_on
+    entity_id: switch.0x000d6ffffedad23c_switch
+
+
+- id: rfx_002
+  alias: rfx_002
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "off", "entity_id": "switch.power_socket_one"}
+  action:
+    service: switch.turn_off
+    entity_id: switch.0x000d6ffffedad23c_switch
+
+
+- id: rfx_003
+  alias: rfx_003
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "on", "entity_id": "switch.power_socket_two"}
+  action:
+    service: switch.turn_on
+    entity_id: switch.0x000d6ffffea6df64_switch
+
+
+- id: rfx_004
+  alias: rfx_004
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "off", "entity_id": "switch.power_socket_two"}
+  action:
+    service: switch.turn_off
+    entity_id: switch.0x000d6ffffea6df64_switch
+
+
+- id: rfx_005
+  alias: rfx_005
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "on", "entity_id": "switch.power_socket_three"}
+  action:
+    service: switch.turn_on
+    entity_id: switch.0x000d6ffffea6e967_switch
+
+
+- id: rfx_006
+  alias: rfx_006
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "off", "entity_id": "switch.power_socket_three"}
+  action:
+    service: switch.turn_off
+    entity_id: switch.0x000d6ffffea6e967_switch

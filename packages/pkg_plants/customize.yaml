@@ -1,0 +1,9 @@
+sensor.monstera_deliciosa_battery:
+  friendly_name: Plant sensor Monstera
+  device_class: battery
+sensor.sabal_minor_battery:
+  friendly_name: Plant sensor Sabal Minor
+  device_class: battery
+sensor.cocos_nucifera_battery:
+  friendly_name: Plant sensor Cocos Nuficera
+  device_class: battery

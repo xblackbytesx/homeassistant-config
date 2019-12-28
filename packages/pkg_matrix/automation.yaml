@@ -1,4 +1,5 @@
-- alias: 'Matrix | React to help'
+- id: matrix_001
+  alias: matrix_001
   trigger:
     platform: event
     event_type: matrix_command
@@ -23,7 +24,8 @@
                 So what will it be?"
 
 
-- alias: 'Matrix | React to an introduction'
+- id: matrix_002
+  alias: matrix_002
   trigger:
     platform: event
     event_type: matrix_command
@@ -35,7 +37,8 @@
       message: "My name is Hassi-o, servant of men ruler of tech."
 
 
-- alias: 'Matrix | Turn on all the things'
+- id: matrix_003
+  alias: matrix_003
   trigger:
     platform: event
     event_type: matrix_command
@@ -58,7 +61,8 @@
         message: "Shining bright like a diamond!"
 
 
-- alias: 'Matrix | React to Cut socket one'
+- id: matrix_004
+  alias: matrix_004
   trigger:
     platform: event
     event_type: matrix_command
@@ -72,7 +76,8 @@
         message: "Socket one killed!"
 
 
-- alias: 'Matrix | React to Cut socket two'
+- id: matrix_005
+  alias: matrix_005
   trigger:
     platform: event
     event_type: matrix_command
@@ -86,7 +91,8 @@
         message: "Socket two killed!"
 
 
-- alias: 'Matrix | React to Cut socket three'
+- id: matrix_006
+  alias: matrix_006
   trigger:
     platform: event
     event_type: matrix_command
@@ -100,7 +106,8 @@
         message: "Socket three killed!"
 
 
-- alias: 'Matrix | React to Cut socket five'
+- id: matrix_007
+  alias: matrix_007
   trigger:
     platform: event
     event_type: matrix_command
@@ -114,7 +121,8 @@
         message: "Socket five killed!"
 
 
-- alias: 'Matrix | React to Cut socket six'
+- id: matrix_008
+  alias: matrix_008
   trigger:
     platform: event
     event_type: matrix_command
@@ -128,7 +136,8 @@
         message: "Socket six killed!"
 
 
-- alias: 'Matrix | React to Cut all power'
+- id: matrix_009
+  alias: matrix_009
   trigger:
     platform: event
     event_type: matrix_command
@@ -147,7 +156,8 @@
         message: "I've cut the power as you requested!"
 
 
-- alias: 'Matrix | React to !reel_in_the_sunscreen'
+- id: matrix_010
+  alias: matrix_010
   trigger:
     platform: event
     event_type: matrix_command
@@ -161,7 +171,8 @@
         message: "As you wish! May the Sun shine freely!"
 
 
-- alias: 'Matrix | React to Attic shutters up'
+- id: matrix_011
+  alias: matrix_011
   trigger:
     platform: event
     event_type: matrix_command
@@ -172,7 +183,8 @@
       entity_id: cover.attic_shutters
 
 
-- alias: 'Matrix | React to Attic shutters down'
+- id: matrix_012
+  alias: matrix_012
   trigger:
     platform: event
     event_type: matrix_command
@@ -183,7 +195,8 @@
       entity_id: cover.attic_shutters
 
 
-- alias: 'Matrix | React to Cheapest local gas'
+- id: matrix_013
+  alias: matrix_013
   trigger:
     platform: event
     event_type: matrix_command
@@ -195,7 +208,8 @@
         message: "Today's gas prices: \nTi (E5): €{{ states('sensor.gas_station_1_euro95') }} \nFi (E5): €{{ states('sensor.gas_station_2_euro95') }} \nTa (E5): €{{ states('sensor.gas_station_3_euro95') }}"
 
 
-- alias: 'Matrix | React to Show me the yield'
+- id: matrix_014
+  alias: matrix_014
   trigger:
     platform: event
     event_type: matrix_command
@@ -207,7 +221,8 @@
         message: "Today's yield: {{ states('sensor.daily_yield') }} Wh \nTotal yield: {{ states('sensor.total_yield') }} kWh"
 
 
-- alias: 'Matrix | React to Confirmed front-door is closed'
+- id: matrix_015
+  alias: matrix_015
   trigger:
     platform: event
     event_type: matrix_command

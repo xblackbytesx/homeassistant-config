@@ -1,0 +1,53 @@
+- platform: template
+  sensors:
+    hue_motion_sensor_hallway_door_illuminance:
+      value_template: "{{ (states('sensor.0x00178801020260c3_illuminance')|float / 1000)|round(0) }}"
+      unit_of_measurement: Lux
+
+    hue_motion_sensor_hallway_stairs_illuminance:
+      value_template: "{{ (states('sensor.0x00178801020282bc_illuminance')|float / 1000)|round(0) }}"
+      unit_of_measurement: Lux
+
+    hue_motion_sensor_kitchen_illuminance:
+      value_template: "{{ (states('sensor.0x0017880102030677_illuminance')|float / 1000)|round(0) }}"
+      unit_of_measurement: Lux
+
+    hue_motion_sensor_sitting_area_illuminance:
+      value_template: "{{ (states('sensor.0x0017880102026161_illuminance')|float / 1000)|round(0) }}"
+      unit_of_measurement: Lux
+
+    hue_motion_sensor_corridor_illuminance:
+      value_template: "{{ (states('sensor.0x00178801020357e5_illuminance')|float / 1000)|round(0) }}"
+      unit_of_measurement: Lux
+
+    sa_dark_enough:
+      value_template: >-
+        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < 10 }}
+
+    kitchen_dark_enough:
+      value_template: >-
+        {{ states('sensor.hue_motion_sensor_kitchen_illuminance')|float < 15 }}
+
+    hw_dark_enough:
+      value_template: >-
+        {{ states('sensor.hue_motion_sensor_hallway_stairs_illuminance')|float < 10 }}
+
+    co_dark_enough:
+      value_template: >-
+        {{ states('sensor.hue_motion_sensor_corridor_illuminance')|float < 10 }}
+
+    bathroom_dark_enough:
+      value_template: >-
+        {{ states('sensor.0x00158d000349234a_illuminance')|float < 100 }}
+
+    attic_dark_enough:
+      value_template: >-
+        {{ states('sensor.0x00158d00036b62d0_illuminance')|float < 100 }}
+
+    office_dark_enough:
+      value_template: >-
+        {{ states('sensor.0x00158d0004499f26_illuminance')|float < 15 }}
+
+    exterior_dark_enough:
+      value_template: >-
+        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < 10 }}

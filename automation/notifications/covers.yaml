@@ -1,20 +1,20 @@
-- alias: "Notify | State | Attic Covers | Up"
-  trigger:
-    platform: state
-    entity_id: cover.attic_shutters
-    to: 'open'
-  action:
-    service: notify.notify_matrix_noisy
-    data:
-      message: "Attic covers have been opened!"
-
-
-- alias: "Notify | State | Attic Covers | Down"
-  trigger:
-    platform: state
-    entity_id: cover.attic_shutters
-    to: 'closed'
-  action:
-    service: notify.notify_matrix_noisy
-    data:
-      message: "Attic covers are now closed!"
+# - alias: "Notify | State | Attic Covers | Up"
+#   trigger:
+#     platform: state
+#     entity_id: cover.attic_shutters
+#     to: 'open'
+#   action:
+#     service: notify.notify_matrix_noisy
+#     data:
+#       message: "Attic covers have been opened!"
+#
+#
+# - alias: "Notify | State | Attic Covers | Down"
+#   trigger:
+#     platform: state
+#     entity_id: cover.attic_shutters
+#     to: 'closed'
+#   action:
+#     service: notify.notify_matrix_noisy
+#     data:
+#       message: "Attic covers are now closed!"

@@ -1,0 +1,116 @@
+- id: mb_001
+  alias: mb_001
+  initial_state: false
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.co_motion_detected
+      to: 'off'
+      for:
+        minutes: 3
+    - platform: state
+      entity_id: binary_sensor.co_dark_enough
+      to: 'off'
+      for:
+        minutes: 5
+  action:
+    service: light.turn_off
+    entity_id: light.lg_mb_all
+
+
+- id: mb_002
+  alias: mb_002
+  initial_state: false
+  trigger:
+    platform: state
+    entity_id: binary_sensor.co_motion_detected
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: binary_sensor.co_dark_enough
+    state: 'on'
+  action:
+    service: light.turn_on
+    entity_id: light.lg_mb_all
+
+
+- id: mb_003
+  alias: mb_003
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "on", "entity_id": "switch.duo_switch_mb_l"}
+  action:
+    service: scene.turn_on
+    entity_id: scene.mb_night
+
+
+- id: mb_004
+  alias: mb_004
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "off", "entity_id": "switch.duo_switch_mb_l"}
+  action:
+    service: light.turn_off
+    entity_id: light.lg_mb_all
+
+
+- id: mb_005
+  alias: mb_005
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "on", "entity_id": "switch.duo_switch_mb_r"}
+  action:
+    service: scene.turn_on
+    entity_id: scene.mb_day
+
+
+- id: mb_006
+  alias: mb_006
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "off", "entity_id": "switch.duo_switch_mb_r"}
+  action:
+    service: light.turn_off
+    entity_id: light.lg_mb_all
+
+
+- id: mb_007
+  alias: mb_007
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "on", "entity_id": "switch.single_switch_mb"}
+  action:
+    service: scene.turn_on
+    entity_id: scene.mb_night
+
+
+- id: mb_008
+  alias: mb_008
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {"state": "off", "entity_id": "switch.single_switch_mb"}
+  action:
+    service: light.turn_off
+    entity_id: light.lg_mb_all
+
+
+- id: mb_009
+  alias: mb_009
+  trigger:
+    platform: state
+    entity_id: light.lg_mb_all
+    to: 'on'
+    for:
+      hours: 1
+      minutes: 00
+  action:
+    - service: light.turn_off
+      entity_id: light.lg_mb_all
+    - service: notify.notify_matrix_noisy
+      data:
+        message: "Shame! You forgot the Master bedroom lights again!"

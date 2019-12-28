@@ -1,0 +1,154 @@
+# Lights
+light.lg_sa_all:
+  icon: mdi:sofa
+light.lg_kitchen_all:
+  icon: mdi:silverware-fork-knife
+light.lg_mb_all:
+  icon: mdi:hotel
+light.lg_lb_all:
+  icon: mdi:hotel
+light.lg_sb_all:
+  icon: mdi:hotel
+light.lg_bathroom_all:
+  icon: mdi:shower
+light.0x0017880103ea3a60_light:
+  friendly_name: Hallway
+light.0x00178801081af093_light:
+  friendly_name: SA | Standing Lamp
+light.0x00178801030a3dde_light:
+  friendly_name: Corridor
+# light.0x086bd7fffe2b8f58_light:
+#   friendly_name: Master bedroom
+light.0x00158d00017934ff_light:
+  friendly_name: Toilet
+light.0x90fd9ffffeea4e5e_light:
+  friendly_name: Master bedroom
+light.0x00178801039d140f_light:
+  friendly_name: Large bedroom
+light.0x00178801023c1a33_light:
+  friendly_name: Small bedroom
+light.0x000b3cfffefab3f6_light:
+  friendly_name: Attic Front
+light.0x086bd7fffe020f14_light:
+  friendly_name: Attic Back
+light.0x00178801023c1b25_light:
+  friendly_name: Office left
+light.0x0017880102460013_light:
+  friendly_name: Office right
+light.lg_ex_all:
+  icon: mdi:tree
+# light.0x086bd7fffe035d36_light:
+#   friendly_name: Front porch
+light.0x00158d00017ab8da_light:
+  friendly_name: Front porch
+light.0x000b57fffee35b50_light:
+  friendly_name: Backyard
+
+
+# Hallway automations
+automation.hw_001:
+  friendly_name: HW | Motion | Lights | Off
+automation.hw_002:
+  friendly_name: HW | Motion | Lights | On
+
+# Toilet automations
+automation.toilet_001:
+  friendly_name: Toilet | Motion | Lights | Off
+automation.toilet_002:
+  friendly_name: Toilet | Motion | Lights | On
+
+# Sitting Area automations
+automation.sa_001:
+  friendly_name: SA | State | Lights | Off
+automation.sa_002:
+  friendly_name: SA | State | Lights | On
+
+# Kitchen automations
+automation.kitchen_001:
+  friendly_name: Kitchen | State | Lights off
+automation.kitchen_002:
+  friendly_name: Kitchen | State | Lights on
+
+# Master bedroom automations
+automation.mb_001:
+  friendly_name: MB | Motion | Lights off
+automation.mb_002:
+  friendly_name: MB | Motion | Lights on
+automation.mb_003:
+  friendly_name: MB | Duo switch | left | On
+automation.mb_004:
+  friendly_name: MB | Duo switch | left | Off
+automation.mb_005:
+  friendly_name: MB | Duo switch | right | On
+automation.mb_006:
+  friendly_name: MB | Duo switch | right | Off
+automation.mb_007:
+  friendly_name: MB | Single switch | On
+automation.mb_008:
+  friendly_name: MB | Single switch | Off
+automation.mb_009:
+  friendly_name: MB | Time | Lights off
+
+# Large bedroom automations
+automation.lb_001:
+  friendly_name: LB | Duo switch | left | On
+automation.lb_002:
+  friendly_name: LB | Duo switch | left | Off
+automation.lb_003:
+  friendly_name: LB | Duo switch | right | On
+automation.lb_004:
+  friendly_name: LB | Duo switch | right | Off
+automation.lb_005:
+  friendly_name: LB | Time | Lights | Off
+
+# Small bedroom automations
+automation.sb_001:
+  friendly_name: SB | Duo switch | left | On
+automation.sb_002:
+  friendly_name: SB | Duo switch | left | Off
+automation.sb_003:
+  friendly_name: SB | Duo switch | right | On
+automation.sb_004:
+  friendly_name: SB | Duo switch | right | Off
+automation.sb_005:
+  friendly_name: SB | Time | Lights | Off
+
+# Corridor automations
+automation.co_001:
+  friendly_name: CO | State | Lights | Off
+automation.co_002:
+  friendly_name: CO | Motion | Lights | On
+
+# Bathroom automations
+automation.bathroom_001:
+  friendly_name: Bathroom | Motion | Lights | Off
+automation.bathroom_002:
+  friendly_name: Bathroom | Switch | Single | L | On
+automation.bathroom_003:
+  friendly_name: Bathroom | Switch | Double | L | On
+automation.bathroom_004:
+  friendly_name: Bathroom | Switch | Single | L | Off
+automation.bathroom_005:
+  friendly_name: Bathroom | Switch | Single | R | On
+automation.bathroom_006:
+  friendly_name: Bathroom | Switch | Double | R | On
+automation.bathroom_007:
+  friendly_name: Bathroom | Switch | Single | R | Off
+
+# Attic automations
+automation.attic_001:
+  friendly_name: Attic | Motion | Lights off
+automation.attic_002:
+  friendly_name: Attic | Motion | Lights on
+
+# Office automations
+automation.office_001:
+  friendly_name: Office | Motion | Lights | Off
+automation.office_002:
+  friendly_name: Office | Motion | Lights | On
+
+# Exterior automations
+automation.ex_001:
+  friendly_name: EX | Time | Lights off
+automation.ex_002:
+  friendly_name: EX | State | Lights on
