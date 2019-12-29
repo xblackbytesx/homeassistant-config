@@ -1,0 +1,13 @@
+sa_illuminance_threshold:
+  name: SA | Illuminance Threshold
+  initial: 10
+  min: 5
+  max: 45
+  step: 1
+
+kitchen_illuminance_threshold:
+  name: Kitchen | Illuminance Threshold
+  initial: 15
+  min: 5
+  max: 45
+  step: 1

@@ -45,6 +45,14 @@ light.0x000b57fffee35b50_light:
   friendly_name: Backyard
 
 
+input_number.sa_illuminance_threshold:
+  friendly_name: Sitting Area
+  icon: mdi:brightness-6
+input_number.kitchen_illuminance_threshold:
+  friendly_name: Kitchen
+  icon: mdi:brightness-6
+
+
 # Hallway automations
 automation.hw_001:
   friendly_name: HW | Motion | Lights | Off

@@ -2,11 +2,11 @@
   sensors:
     sa_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < 10 }}
+        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < states('input_number.sa_illuminance_threshold')| int }}
 
     kitchen_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_kitchen_illuminance')|float < 15 }}
+        {{ states('sensor.hue_motion_sensor_kitchen_illuminance')|float < states('input_number.kitchen_illuminance_threshold')| int }}
 
     hw_dark_enough:
       value_template: >-

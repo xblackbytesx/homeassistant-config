@@ -17,6 +17,11 @@ cards:
     title: Boolean value overrides
     entities:
       - input_boolean.sa_media_status_override
+  - type: entities
+    title: Illuminance threshold overrides
+    entities:
+      - input_number.sa_illuminance_threshold
+      - input_number.kitchen_illuminance_threshold
   - type: entity-button
     entity: binary_sensor.0x00158d0003612f9b_smoke
     show_icon: false
