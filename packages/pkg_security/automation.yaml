@@ -6,7 +6,7 @@
     to: 'on'
   action:
     service: scene.turn_on
-    entity_id: scene.simulate_occupancy
+    entity_id: scene.setup_security_defaults
 
 
 - id: sec_002
@@ -17,11 +17,33 @@
     to: 'off'
   action:
     service: scene.turn_on
-    entity_id: scene.reset_occupancy_simulation
+    entity_id: scene.restore_regular_defaults
 
 
 - id: sec_003
   alias: sec_003
+  trigger:
+    platform: state
+    entity_id: binary_sensor.simulate_occupancy
+    to: 'on'
+  action:
+    service: scene.turn_on
+    entity_id: scene.simulate_occupancy
+
+
+- id: sec_004
+  alias: sec_004
+  trigger:
+    platform: state
+    entity_id: binary_sensor.simulate_occupancy
+    to: 'off'
+  action:
+    service: scene.turn_on
+    entity_id: scene.reset_occupancy_simulation
+
+
+- id: sec_005
+  alias: sec_005
   trigger:
     platform: state
     entity_id:

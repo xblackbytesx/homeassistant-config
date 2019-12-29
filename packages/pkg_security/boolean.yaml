@@ -5,3 +5,7 @@ alarm_armed:
 aggressive_notifications:
   name: Set to true to enable more aggresive notification methods
   initial: off
+
+simulate_occupancy:
+  name: Turn lights on strategically and keep them on
+  initial: off

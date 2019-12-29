@@ -6,6 +6,10 @@ input_boolean.aggressive_notifications:
   friendly_name: Aggressive Notifications
   icon: mdi:bell-ring
 
+input_boolean.simulate_occupancy:
+  friendly_name: Simulate Occupancy
+  icon: mdi:motion-sensor
+
 binary_sensor.0x00158d000446eb21_contact:
   friendly_name: Front door
   device_class: door
@@ -39,10 +43,16 @@ binary_sensor.back_door_open:
   device_class: door
 
 automation.sec_001:
-  friendly_name: SEC | Alarm Armed | Engage Occupancy Sim
+  friendly_name: SEC | Alarm Armed | Setup Security Defaults
 
 automation.sec_002:
-  friendly_name: SEC | Alarm Disarmed | Reset Occupancy Sim
+  friendly_name: SEC | Alarm Disarmed | Restore Regular Defaults
 
 automation.sec_003:
+  friendly_name: SEC | Simulate Occupancy | Engage Occupancy Sim
+
+automation.sec_004:
+  friendly_name: SEC | Real Occupancy | Reset Occupancy Sim
+
+automation.sec_005:
   friendly_name: SEC | Alarm Armed | Aggresive Door/Window Notifications

@@ -1,7 +1,21 @@
-- name: Simulate Occupancy
+- name: Setup security defaults:
   entities:
     input_boolean.aggressive_notifications:
       state: true
+    input_boolean.simulate_occupancy:
+      state: true
+
+
+- name: Restore regular defaults:
+  entities:
+    input_boolean.aggressive_notifications:
+      state: false
+    input_boolean.simulate_occupancy:
+      state: false
+
+
+- name: Simulate Occupancy
+  entities:
     automation.sa_001:
       state: false
     scene.sa_not_watching_tv:
@@ -24,16 +38,12 @@
       state: true
     automation.office_001:
       state: false
-    automation.office_002:
-      state: false
     scene.office_night:
       state: true
 
 
 - name: Reset Occupancy Simulation
   entities:
-    input_boolean.aggressive_notifications:
-      state: false
     automation.sa_001:
       state: true
     automation.kitchen_001:
@@ -47,6 +57,4 @@
     automation.sb_005:
       state: true
     automation.office_001:
-      state: true
-    automation.office_002:
       state: true

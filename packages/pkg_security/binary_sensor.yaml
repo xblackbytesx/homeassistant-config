@@ -8,6 +8,11 @@
       value_template: >-
         {{ is_state('input_boolean.aggressive_notifications', 'on') }}
 
+    simulate_occupancy:
+      value_template: >-
+        {{ is_state('input_boolean.simulate_occupancy', 'on')
+           and is_state('binary_sensor.sa_dark_enough', 'on') }}
+
     front_door_open:
       value_template: >-
         {{ is_state('binary_sensor.0x00158d000446eb21_contact', 'on') }}
