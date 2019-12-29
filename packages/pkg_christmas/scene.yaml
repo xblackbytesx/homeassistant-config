@@ -2,9 +2,19 @@
   entities:
     automation.xmas_004:
       state: false
+    scene.christmas_lighting:
+      state: true
 
 
 - name: Reset Xmas Occupancy Sim
   entities:
     automation.xmas_004:
+      state: true
+
+
+- name: Christmas lighting
+  entities:
+    switch.0x000d6ffffedaf667_switch:
+      state: true
+    switch.0x000d6ffffedc5e05_switch:
       state: true
