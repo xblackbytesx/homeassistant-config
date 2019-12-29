@@ -1,4 +1,4 @@
-- name: Setup security defaults:
+- name: Setup security defaults
   entities:
     input_boolean.aggressive_notifications:
       state: true
@@ -6,7 +6,7 @@
       state: true
 
 
-- name: Restore regular defaults:
+- name: Restore regular defaults
   entities:
     input_boolean.aggressive_notifications:
       state: false
