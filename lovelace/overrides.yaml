@@ -22,6 +22,10 @@ cards:
     entities:
       - input_number.sa_illuminance_threshold
       - input_number.kitchen_illuminance_threshold
+      - input_number.hw_illuminance_threshold
+      - input_number.co_illuminance_threshold
+      - input_number.office_illuminance_threshold
+      - input_number.ex_illuminance_threshold
   - type: entity-button
     entity: binary_sensor.0x00158d0003612f9b_smoke
     show_icon: false

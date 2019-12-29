@@ -51,6 +51,18 @@ input_number.sa_illuminance_threshold:
 input_number.kitchen_illuminance_threshold:
   friendly_name: Kitchen
   icon: mdi:brightness-6
+input_number.hw_illuminance_threshold:
+  friendly_name: Hallway
+  icon: mdi:brightness-6
+input_number.co_illuminance_threshold:
+  friendly_name: Corridor
+  icon: mdi:brightness-6
+input_number.office_illuminance_threshold:
+  friendly_name: Office
+  icon: mdi:brightness-6
+input_number.ex_illuminance_threshold:
+  friendly_name: Exteriror
+  icon: mdi:brightness-6
 
 
 # Hallway automations

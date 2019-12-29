@@ -10,11 +10,11 @@
 
     hw_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_hallway_stairs_illuminance')|float < 10 }}
+        {{ states('sensor.hue_motion_sensor_hallway_stairs_illuminance')|float < states('input_number.hw_illuminance_threshold')| int }}
 
     co_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_corridor_illuminance')|float < 10 }}
+        {{ states('sensor.hue_motion_sensor_corridor_illuminance')|float < states('input_number.co_illuminance_threshold')| int }}
 
     bathroom_dark_enough:
       value_template: >-
@@ -26,8 +26,8 @@
 
     office_dark_enough:
       value_template: >-
-        {{ states('sensor.0x00158d0004499f26_illuminance')|float < 15 }}
+        {{ states('sensor.0x00158d0004499f26_illuminance')|float < states('input_number.office_illuminance_threshold')| int }}
 
     exterior_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < 10 }}
+        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < states('input_number.ex_illuminance_threshold')| int }}
