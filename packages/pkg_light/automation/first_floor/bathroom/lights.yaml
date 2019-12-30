@@ -5,7 +5,7 @@
     entity_id: binary_sensor.bathroom_motion_detected
     to: 'off'
     for:
-      minutes: {{ states('input_number.bathroom_motion_timeout')| int }}
+      minutes: '{{ states('input_number.bathroom_motion_timeout')| int }}'
   action:
     - service: light.turn_off
       entity_id: light.lg_bathroom_all
