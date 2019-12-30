@@ -44,6 +44,7 @@ cards:
         - input_number.hw_motion_timeout
         - input_number.toilet_motion_timeout
         - input_number.co_motion_timeout
+        - input_number.bathroom_motion_timeout
         - input_number.attic_motion_timeout
         - input_number.office_motion_timeout
   - type: entity-button
