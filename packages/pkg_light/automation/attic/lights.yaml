@@ -5,7 +5,7 @@
       entity_id: binary_sensor.attic_motion_detected
       to: 'off'
       for:
-        minutes: "{{ states('input_number.attic_motion_timeout')| int }}"
+        minutes: {{ states('input_number.attic_motion_timeout')| int }}
     - platform: state
       entity_id: binary_sensor.attic_dark_enough
       to: 'off'
