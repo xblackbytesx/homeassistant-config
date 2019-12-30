@@ -65,6 +65,32 @@ input_number.ex_illuminance_threshold:
   icon: mdi:brightness-6
 
 
+input_number.sa_motion_timeout:
+  friendly_name: Sitting Area
+  icon: mdi:timer
+input_number.kitchen_motion_timeout:
+  friendly_name: Kitchen
+  icon: mdi:timer
+input_number.hw_motion_timeout:
+  friendly_name: Hallway
+  icon: mdi:timer
+input_number.toilet_motion_timeout:
+  friendly_name: Toilet
+  icon: mdi:timer
+input_number.co_motion_timeout:
+  friendly_name: Corridor
+  icon: mdi:timer
+input_number.bathroom_motion_timeout:
+  friendly_name: Bathroom
+  icon: mdi:timer
+input_number.attic_motion_timeout:
+  friendly_name: Attic
+  icon: mdi:timer
+input_number.office_motion_timeout:
+  friendly_name: Office
+  icon: mdi:timer
+
+
 # Hallway automations
 automation.hw_001:
   friendly_name: HW | Motion | Lights | Off

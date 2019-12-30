@@ -1,0 +1,55 @@
+sa_motion_timeout:
+  name: SA | Motion Timeout
+  initial: 5
+  min: 1
+  max: 45
+  step: 1
+
+kitchen_motion_timeout:
+  name: Kitchen | Motion Timeout
+  initial: 5
+  min: 1
+  max: 45
+  step: 1
+
+hw_motion_timeout:
+  name: HW | Motion Timeout
+  initial: 5
+  min: 1
+  max: 45
+  step: 1
+
+toilet_motion_timeout:
+  name: Toilet | Motion Timeout
+  initial: 3
+  min: 1
+  max: 45
+  step: 1
+
+co_motion_timeout:
+  name: CO | Motion Timeout
+  initial: 5
+  min: 1
+  max: 45
+  step: 1
+
+bathroom_motion_timeout:
+  name: Bathroom | Motion Timeout
+  initial: 5
+  min: 1
+  max: 45
+  step: 1
+
+attic_motion_timeout:
+  name: Attic | Motion Timeout
+  initial: 3
+  min: 1
+  max: 45
+  step: 1
+
+office_motion_timeout:
+  name: Office | Motion Timeout
+  initial: 5
+  min: 1
+  max: 45
+  step: 1
