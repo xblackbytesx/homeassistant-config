@@ -1,27 +1,25 @@
 - id: xmas_001
   alias: xmas_001
   trigger:
-    platform: state
-    entity_id: binary_sensor.simulate_occupancy
-    to: 'on'
+    - platform: state
+      entity_id: binary_sensor.simulate_occupancy
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.simulate_occupancy
+      to: 'off'
   action:
     service: scene.turn_on
-    entity_id: scene.xmas_occupancy_sim
+    data_template:
+      entity_id: >
+        {% if trigger.to_state.state == 'on' %}
+          scene.xmas_occupancy_sim
+        {% elif trigger.to_state.state == 'off' %}
+          scene.reset_xmas_occupancy_sim
+        {% endif %}
 
 
 - id: xmas_002
   alias: xmas_002
-  trigger:
-    platform: state
-    entity_id: binary_sensor.simulate_occupancy
-    to: 'off'
-  action:
-    service: scene.turn_on
-    entity_id: scene.reset_xmas_occupancy_sim
-
-
-- id: xmas_003
-  alias: xmas_003
   trigger:
     - platform: state
       entity_id:
@@ -37,8 +35,8 @@
     entity_id: scene.christmas_lighting
 
 
-- id: xmas_004
-  alias: xmas_004
+- id: xmas_003
+  alias: xmas_003
   trigger:
     platform: time_pattern
     minutes: '/10'

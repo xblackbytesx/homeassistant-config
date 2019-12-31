@@ -10,20 +10,11 @@
       for:
         minutes: "{{ states('input_number.toilet_motion_timeout')| int }}"
   action:
-    service_template: >
-      {% if trigger.to_state.state == 'on' %}
-        scene.turn_on
-      {% elif trigger.to_state.state == 'off' %}
-        light.turn_off
-      {% endif %}
+    service: script.turn_on
     data_template:
-      entity_id: >
-        {% if trigger.to_state.state == 'on' %}
-          {% if is_state('input_boolean.time_for_dim_scenes', 'on') %}
-            scene.toilet_night
-          {% else %}
-            scene.toilet_day
-          {% endif %}
-        {% elif trigger.to_state.state == 'off' %}
-          light.lg_toilet_all
-        {% endif %}
+      entity_id: script.set_appropriate_scene
+      variables:
+        trigger_to_state: '{{ trigger.to_state.state }}'
+        scene_day: 'scene.toilet_day'
+        scene_night: 'scene.toilet_night'
+        light_group: 'light.lg_toilet_all'
