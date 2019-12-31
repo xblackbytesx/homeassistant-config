@@ -31,18 +31,18 @@
       to: 'right_double'
   action:
     service_template: >
-      {% if (trigger.to_state.state == 'left') or (trigger.to_state.state == 'left_double') and is_state('light.hue_candle_bathroom_l', 'off') %}
+      {% if trigger.to_state.state == 'left' or trigger.to_state.state == 'left_double' and is_state('light.hue_candle_bathroom_l', 'off') %}
         scene.turn_on
-      {% elif (trigger.to_state.state == 'right') or (trigger.to_state.state == 'right_double') and is_state('light.hue_bulb_bathroom_r', 'off') %}
+      {% elif trigger.to_state.state == 'right' or trigger.to_state.state == 'right_double' and is_state('light.hue_bulb_bathroom_r', 'off') %}
         scene.turn_on
       {% else %}
         light.turn_off
       {% endif %}
     data_template:
       entity_id: >
-        {% if (trigger.to_state.state == 'left') or (trigger.to_state.state == 'left_double') %}
-          {% if is_state('light.hue_candle_bathroom_l', 'off')} %}
-            {% if is_state('input_boolean.time_for_dim_scenes', 'on') and (trigger.to_state.state != 'left_double') %}
+        {% if trigger.to_state.state == 'left' or trigger.to_state.state == 'left_double' %}
+          {% if is_state('light.hue_candle_bathroom_l', 'off') %}
+            {% if is_state('input_boolean.time_for_dim_scenes', 'on') and trigger.to_state.state != 'left_double' %}
               scene.bathroom_l_night
             {% else %}
               scene.bathroom_l_day
@@ -50,9 +50,9 @@
           {% else %}
             light.hue_candle_bathroom_l
           {% endif %}
-        {% elif (trigger.to_state.state == 'right') or (trigger.to_state.state == 'right_double') %}
-          {% if is_state('light.hue_bulb_bathroom_r', 'off')} %}
-            {% if is_state('input_boolean.time_for_dim_scenes', 'on') and (trigger.to_state.state != 'right_double') %}
+        {% elif trigger.to_state.state == 'right' or trigger.to_state.state == 'right_double' %}
+          {% if is_state('light.hue_bulb_bathroom_r', 'off') %}
+            {% if is_state('input_boolean.time_for_dim_scenes', 'on') and trigger.to_state.state != 'right_double' %}
               scene.bathroom_r_night
             {% else %}
               scene.bathroom_r_day
