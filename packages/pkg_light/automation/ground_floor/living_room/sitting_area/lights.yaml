@@ -70,11 +70,11 @@
     service: script.turn_on
     data_template:
       entity_id: >
-      {% if trigger.to_state.state == 'brightness_up_click' %}
-        script.light_increase_brightness
-      {% else %}
-        script.light_decrease_brightness
-      {% endif %}
+        {% if trigger.to_state.state == 'brightness_up_click' %}
+          script.light_increase_brightness
+        {% else %}
+          script.light_decrease_brightness
+        {% endif %}
       data:
         variables:
           light_group: 'light.lg_sa_all'
