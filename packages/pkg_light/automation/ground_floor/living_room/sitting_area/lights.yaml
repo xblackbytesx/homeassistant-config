@@ -59,6 +59,7 @@
       to: 'brightness_down_click'
   condition:
     condition: and
+    conditions:
       - condition: state
         entity_id: light.lg_sa_all
         state: 'on'
