@@ -75,29 +75,5 @@
         {% else %}
           script.light_decrease_brightness
         {% endif %}
-      data:
-        variables:
-          light_group: 'light.lg_sa_all'
-
-
-# - id: sa_005
-#   alias: sa_005
-#   trigger:
-#     platform: state
-#     entity_id: sensor.0xccccccfffe40b07b_action
-#     to: 'brightness_down_click'
-#   condition:
-#   condition:
-#     condition: and
-#       - condition: state
-#         entity_id: light.lg_sa_all
-#         state: 'on'
-#       - condition: state
-#         entity_id: binary_sensor.sa_tv_media_playing
-#         state: 'off'
-#   action:
-#     service: script.turn_on
-#     entity_id: script.light_decrease_brightness
-#     data:
-#       variables:
-#         light_group: 'light.lg_sa_all'
+      variables:
+        light_group: 'light.lg_sa_all'

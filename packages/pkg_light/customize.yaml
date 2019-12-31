@@ -108,6 +108,8 @@ automation.sa_001:
   friendly_name: SA | State | Lights | Off
 automation.sa_002:
   friendly_name: SA | State | Lights | On
+automation.sa_004:
+  friendly_name: SA | Button | Control Brightness
 
 # Kitchen automations
 automation.kitchen_001:
