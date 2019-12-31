@@ -99,9 +99,7 @@ automation.hw_002:
 
 # Toilet automations
 automation.toilet_001:
-  friendly_name: Toilet | Motion | Lights | Off
-automation.toilet_002:
-  friendly_name: Toilet | Motion | Lights | On
+  friendly_name: Toilet | Motion | Lights | On/Off
 
 # Sitting Area automations
 automation.sa_001:

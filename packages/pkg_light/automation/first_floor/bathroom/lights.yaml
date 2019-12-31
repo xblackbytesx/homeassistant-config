@@ -42,7 +42,7 @@
       entity_id: >
         {% if trigger.to_state.state == 'left' or trigger.to_state.state == 'left_double' %}
           {% if is_state('light.hue_candle_bathroom_l', 'off') %}
-            {% if is_state('input_boolean.time_for_dim_scenes', 'on') and trigger.to_state.state != 'left_double' %}
+            {% if is_state('input_boolean.time_for_dim_scenes', 'on') and trigger.to_state.state == 'left' %}
               scene.bathroom_l_night
             {% else %}
               scene.bathroom_l_day
@@ -52,7 +52,7 @@
           {% endif %}
         {% elif trigger.to_state.state == 'right' or trigger.to_state.state == 'right_double' %}
           {% if is_state('light.hue_bulb_bathroom_r', 'off') %}
-            {% if is_state('input_boolean.time_for_dim_scenes', 'on') and trigger.to_state.state != 'right_double' %}
+            {% if is_state('input_boolean.time_for_dim_scenes', 'on') and trigger.to_state.state == 'right' %}
               scene.bathroom_r_night
             {% else %}
               scene.bathroom_r_day

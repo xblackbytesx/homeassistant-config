@@ -21,7 +21,7 @@ hw_motion_timeout:
 
 toilet_motion_timeout:
   name: Toilet | Motion Timeout
-  initial: 3
+  initial: 2
   min: 1
   max: 45
   step: 1

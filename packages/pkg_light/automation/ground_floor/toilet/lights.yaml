@@ -3,26 +3,27 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.toilet_motion_detected
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.toilet_motion_detected
       to: 'off'
       for:
         minutes: "{{ states('input_number.toilet_motion_timeout')| int }}"
   action:
-    service: light.turn_off
-    entity_id: light.lg_toilet_all
-
-
-- id: toilet_002
-  alias: toilet_002
-  trigger:
-    platform: state
-    entity_id: binary_sensor.toilet_motion_detected
-    to: 'on'
-  action:
-    service: scene.turn_on
+    service_template: >
+      {% if trigger.to_state.state == 'on' %}
+        scene.turn_on
+      {% elif trigger.to_state.state == 'off' %}
+        light.turn_off
+      {% endif %}
     data_template:
       entity_id: >
-        {% if is_state('input_boolean.time_for_dim_scenes', 'on') %}
-          scene.toilet_night
-        {% else %}
-          scene.toilet_day
+        {% if trigger.to_state.state == 'on' %}
+          {% if is_state('input_boolean.time_for_dim_scenes', 'on') %}
+            scene.toilet_night
+          {% else %}
+            scene.toilet_day
+          {% endif %}
+        {% elif trigger.to_state.state == 'off' %}
+          light.lg_toilet_all
         {% endif %}

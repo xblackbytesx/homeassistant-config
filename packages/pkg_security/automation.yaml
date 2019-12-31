@@ -1,49 +1,45 @@
 - id: sec_001
   alias: sec_001
   trigger:
-    platform: state
-    entity_id: input_boolean.alarm_armed
-    to: 'on'
+    - platform: state
+      entity_id: input_boolean.alarm_armed
+      to: 'on'
+    - platform: state
+      entity_id: input_boolean.alarm_armed
+      to: 'off'
   action:
     service: scene.turn_on
-    entity_id: scene.setup_security_defaults
+    data_template:
+      entity_id: >
+        {% if trigger.to_state.state == 'on' %}
+          scene.setup_security_defaults
+        {% elif trigger.to_state.state == 'off' %}
+          scene.restore_regular_defaults
+        {% endif %}
 
 
 - id: sec_002
   alias: sec_002
   trigger:
-    platform: state
-    entity_id: input_boolean.alarm_armed
-    to: 'off'
+    - platform: state
+      entity_id: binary_sensor.simulate_occupancy
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.simulate_occupancy
+      to: 'off'
   action:
     service: scene.turn_on
-    entity_id: scene.restore_regular_defaults
+    data_template:
+      entity_id: >
+        {% if trigger.to_state.state == 'on' %}
+          scene.simulate_occupancy
+        {% elif trigger.to_state.state == 'off' %}
+          scene.reset_occupancy_simulation
+        {% endif %}
 
 
 - id: sec_003
   alias: sec_003
-  trigger:
-    platform: state
-    entity_id: binary_sensor.simulate_occupancy
-    to: 'on'
-  action:
-    service: scene.turn_on
-    entity_id: scene.simulate_occupancy
-
-
-- id: sec_004
-  alias: sec_004
-  trigger:
-    platform: state
-    entity_id: binary_sensor.simulate_occupancy
-    to: 'off'
-  action:
-    service: scene.turn_on
-    entity_id: scene.reset_occupancy_simulation
-
-
-- id: sec_005
-  alias: sec_005
   trigger:
     platform: state
     entity_id:
@@ -52,7 +48,7 @@
       - binary_sensor.kitchen_window_open
     to: 'on'
     for:
-      minutes: 5
+      minutes: 1
   condition:
     condition: state
     entity_id: binary_sensor.aggressive_notifications
