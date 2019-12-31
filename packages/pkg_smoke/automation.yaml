@@ -21,9 +21,9 @@
     - service: scene.turn_on
       data_template:
         entity_id: >
-          {% if state_attr('trigger.entity_id', 'friendly_name') == 'Living Room' %}
+          {% if state_attr(trigger.entity_id, 'friendly_name') == 'Living Room' %}
             scene.lr_search_mode
-          {% elif state_attr('trigger.entity_id', 'friendly_name') == 'Large Bedroom' %}
+          {% elif state_attr(trigger.entity_id, 'friendly_name') == 'Large Bedroom' %}
             scene.lb_search_mode
           {% endif %}
 

@@ -6,8 +6,8 @@ light_increase_brightness:
       entity_id: '{{ light_group }}'
       transition: '1'
       brightness: >
-        {% if not state_attr('light_group', 'brightness') == None %}
-          {% set n = state_attr('light_group', 'brightness') + 25 %}
+        {% if not state_attr(light_group, 'brightness') == None %}
+          {% set n = state_attr(light_group, 'brightness') + 25 %}
           {% if n > 255 %}
             255
           {% else %}
@@ -26,8 +26,8 @@ light_decrease_brightness:
       entity_id: '{{ light_group }}'
       transition: '1'
       brightness: >
-        {% if not state_attr('light_group', 'brightness') == None %}
-          {% set n = state_attr('light_group', 'brightness') - 25 %}
+        {% if not state_attr(light_group, 'brightness') == None %}
+          {% set n = state_attr(light_group, 'brightness') - 25 %}
           {% if n > 255 %}
             255
           {% else %}
