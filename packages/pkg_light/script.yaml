@@ -1,0 +1,38 @@
+light_increase_brightness:
+  alias: SA | Increase brightness
+  sequence:
+    service: light.turn_on
+    data_template:
+      entity_id: '{{ light_group }}'
+      transition: '1'
+      brightness: >
+        {% if not state_attr('light_group', 'brightness') == None %}
+          {% set n = state_attr('light_group', 'brightness') + 25 %}
+          {% if n > 255 %}
+            255
+          {% else %}
+            {{ n }}
+          {% endif %}
+        {% else %}
+          25
+        {% endif %}
+
+
+light_decrease_brightness:
+  alias: SA | Decrease brightness
+  sequence:
+    service: light.turn_on
+    data_template:
+      entity_id: '{{ light_group }}'
+      transition: '1'
+      brightness: >
+        {% if not state_attr('light_group', 'brightness') == None %}
+          {% set n = state_attr('light_group', 'brightness') - 25 %}
+          {% if n > 255 %}
+            255
+          {% else %}
+            {{ n }}
+          {% endif %}
+        {% else %}
+          0
+        {% endif %}

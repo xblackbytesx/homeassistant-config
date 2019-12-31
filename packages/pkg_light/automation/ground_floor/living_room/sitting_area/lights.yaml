@@ -46,3 +46,39 @@
         {% else %}
           scene.sa_not_watching_tv
         {% endif %}
+
+
+- id: sa_004
+  alias: sa_004
+  trigger:
+    platform: state
+    entity_id: sensor.0xccccccfffe40b07b_action
+    to: 'brightness_up_click'
+  condition:
+    condition: state
+    entity_id: light.lg_sa_all
+    state: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.light_increase_brightness
+    data:
+      variables:
+        light_group: 'light.lg_sa_all'
+
+
+- id: sa_005
+  alias: sa_005
+  trigger:
+    platform: state
+    entity_id: sensor.0xccccccfffe40b07b_action
+    to: 'brightness_down_click'
+  condition:
+    condition: state
+    entity_id: light.lg_sa_all
+    state: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.light_decrease_brightness
+    data:
+      variables:
+        light_group: 'light.lg_sa_all'
