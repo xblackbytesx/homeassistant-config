@@ -50,9 +50,13 @@
       to: 'off'
   action:
     service_template: >
-      {% if trigger.to_state.state == 'on' %}
+      {% if trigger.entity_id == "switch.duo_switch_mb_l" and trigger.to_state.state == 'on' %}
         scene.turn_on
-      {% elif trigger.to_state.state == 'off' %}
+      {% elif trigger.entity_id == "switch.duo_switch_mb_r" and trigger.to_state.state == 'on' %}
+        scene.turn_on
+      {% elif trigger.entity_id == "switch.duo_switch_mb_l" and trigger.to_state.state == 'off' %}
+        light.turn_off
+      {% elif trigger.entity_id == "switch.duo_switch_mb_r" and trigger.to_state.state == 'off' %}
         light.turn_off
       {% endif %}
     data_template:
