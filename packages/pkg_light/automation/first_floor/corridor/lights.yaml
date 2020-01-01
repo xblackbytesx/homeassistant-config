@@ -20,7 +20,7 @@
       entity_id: script.set_dynamic_scene
       variables:
         trigger_to_state: '{{ trigger.to_state.state }}'
-        dark_enough: '{{ states('binary_sensor.co_dark_enough') }}'
+        dark_enough: '{{ states("binary_sensor.co_dark_enough") }}'
         scene_day: 'scene.co_day'
         scene_night: 'scene.co_night'
         light_group: 'light.lg_co_all'
