@@ -121,18 +121,10 @@ automation.mb_001:
 automation.mb_002:
   friendly_name: MB | Motion | Lights on
 automation.mb_003:
-  friendly_name: MB | Duo switch | left | On
+  friendly_name: MB | Duo switch | Light
 automation.mb_004:
-  friendly_name: MB | Duo switch | left | Off
+  friendly_name: MB | Single switch | Light
 automation.mb_005:
-  friendly_name: MB | Duo switch | right | On
-automation.mb_006:
-  friendly_name: MB | Duo switch | right | Off
-automation.mb_007:
-  friendly_name: MB | Single switch | On
-automation.mb_008:
-  friendly_name: MB | Single switch | Off
-automation.mb_009:
   friendly_name: MB | Time | Lights off
 
 # Large bedroom automations

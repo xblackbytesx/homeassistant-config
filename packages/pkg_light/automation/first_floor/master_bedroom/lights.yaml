@@ -66,30 +66,33 @@
         {% endif %}
 
 
-- id: mb_007
-  alias: mb_007
+- id: mb_004
+  alias: mb_004
   trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "on", "entity_id": "switch.single_switch_mb"}
+    - platform: event
+      event_type: button_pressed
+      event_data: {"state": "on", "entity_id": "switch.single_switch_mb"}
+    - platform: event
+      event_type: button_pressed
+      event_data: {"state": "off", "entity_id": "switch.single_switch_mb"}
   action:
-    service: scene.turn_on
-    entity_id: scene.mb_night
+    service_template: >
+      {% if trigger.event.data.state == 'on' %}
+        scene.turn_on
+      {% elif trigger.event.data.state == 'off' %}
+        light.turn_off
+      {% endif %}
+    data_template:
+      entity_id: >
+        {% if trigger.event.data.entity_id == 'switch.single_switch_mb' and trigger.event.data.state == 'on' %}
+          scene.mb_night
+        {% elif trigger.event.data.state == 'off' %}
+          light.lg_mb_all
+        {% endif %}
 
 
-- id: mb_008
-  alias: mb_008
-  trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "off", "entity_id": "switch.single_switch_mb"}
-  action:
-    service: light.turn_off
-    entity_id: light.lg_mb_all
-
-
-- id: mb_009
-  alias: mb_009
+- id: mb_005
+  alias: mb_005
   trigger:
     platform: state
     entity_id: light.lg_mb_all
