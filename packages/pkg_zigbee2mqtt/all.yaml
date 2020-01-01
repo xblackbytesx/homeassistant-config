@@ -38,7 +38,5 @@ panel_iframe:
    icon: 'mdi:graphql'
 
 sensor: !include sensor.yaml
-# binary_sensor: !include binary_sensor.yaml
 switch: !include switch.yaml
 automation: !include automation.yaml
-# light: !include light.yaml

@@ -9,6 +9,8 @@ zigbee2mqtt_rename:
           "old": "{{ states.input_text.zigbee2mqtt_old_name.state | string }}",
           "new": "{{ states.input_text.zigbee2mqtt_new_name.state | string }}"
         }
+
+
 zigbee2mqtt_remove:
   alias: Zigbee2mqtt Remove
   sequence:

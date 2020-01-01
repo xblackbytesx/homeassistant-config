@@ -36,45 +36,34 @@
 - id: mb_003
   alias: mb_003
   trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "on", "entity_id": "switch.duo_switch_mb_l"}
+    - platform: state
+      entity_id: switch.duo_switch_mb_l
+      to: 'on'
+    - platform: state
+      entity_id: switch.duo_switch_mb_l
+      to: 'off'
+    - platform: state
+      entity_id: switch.duo_switch_mb_r
+      to: 'on'
+    - platform: state
+      entity_id: switch.duo_switch_mb_r
+      to: 'off'
   action:
-    service: scene.turn_on
-    entity_id: scene.mb_night
-
-
-- id: mb_004
-  alias: mb_004
-  trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "off", "entity_id": "switch.duo_switch_mb_l"}
-  action:
-    service: light.turn_off
-    entity_id: light.lg_mb_all
-
-
-- id: mb_005
-  alias: mb_005
-  trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "on", "entity_id": "switch.duo_switch_mb_r"}
-  action:
-    service: scene.turn_on
-    entity_id: scene.mb_day
-
-
-- id: mb_006
-  alias: mb_006
-  trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "off", "entity_id": "switch.duo_switch_mb_r"}
-  action:
-    service: light.turn_off
-    entity_id: light.lg_mb_all
+    service_template: >
+      {% if trigger.to_state.state == 'on' %}
+        scene.turn_on
+      {% elif trigger.to_state.state == 'off' %}
+        light.turn_off
+      {% endif %}
+    data_template:
+      entity_id: >
+        {% if trigger.entity_id == "switch.duo_switch_mb_l" and trigger.to_state.state == 'on' %}
+          scene.mb_night
+        {% elif trigger.entity_id == "switch.duo_switch_mb_r" and trigger.to_state.state == 'on' %}
+          scene.mb_day
+        {% elif trigger.to_state.state == 'off'%}
+          light.lg_mb_all
+        {% endif %}
 
 
 - id: mb_007
