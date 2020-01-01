@@ -3,6 +3,9 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.hw_motion_detected
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.hw_motion_detected
       to: 'off'
       for:
         minutes: 3
@@ -12,26 +15,20 @@
       for:
         minutes: 5
   action:
-    service: light.turn_off
-    entity_id: light.lg_hw_all
-
-
-- id: hw_002
-  alias: hw_002
-  trigger:
-    platform: state
-    entity_id: binary_sensor.hw_motion_detected
-    to: 'on'
-  condition:
-    condition: state
-    entity_id: binary_sensor.hw_dark_enough
-    state: 'on'
-  action:
-    service: scene.turn_on
+    service_template: >
+      {% if trigger.to_state.state == 'on' %}
+        scene.turn_on
+      {% elif trigger.to_state.state == 'off' %}
+        light.turn_off
+      {% endif %}
     data_template:
       entity_id: >
-        {% if is_state('input_boolean.time_for_dim_scenes', 'on') %}
-          scene.hw_night
-        {% else %}
-          scene.hw_day
+        {% if trigger.to_state.state == 'on' and is_state('binary_sensor.hw_dark_enough', 'on') %}
+          {% if is_state('input_boolean.time_for_dim_scenes', 'on') %}
+            scene.hw_night
+          {% else %}
+            scene.hw_day
+          {% endif %}
+        {% elif trigger.to_state.state == 'off' %}
+          light.lg_hw_all
         {% endif %}

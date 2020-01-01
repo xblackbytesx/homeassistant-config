@@ -93,9 +93,7 @@ input_number.office_motion_timeout:
 
 # Hallway automations
 automation.hw_001:
-  friendly_name: HW | Motion | Lights | Off
-automation.hw_002:
-  friendly_name: HW | Motion | Lights | On
+  friendly_name: HW | Motion | Light
 
 # Toilet automations
 automation.toilet_001:
@@ -141,9 +139,7 @@ automation.sb_002:
 
 # Corridor automations
 automation.co_001:
-  friendly_name: CO | State | Lights | Off
-automation.co_002:
-  friendly_name: CO | Motion | Lights | On
+  friendly_name: CO | Motion | Light
 
 # Bathroom automations
 automation.bathroom_001:
