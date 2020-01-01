@@ -12,9 +12,10 @@
   action:
     service: script.turn_on
     data_template:
-      entity_id: script.set_appropriate_scene
+      entity_id: script.set_dynamic_scene
       variables:
         trigger_to_state: '{{ trigger.to_state.state }}'
+        dark_enough: 'on'
         scene_day: 'scene.toilet_day'
         scene_night: 'scene.toilet_night'
         light_group: 'light.lg_toilet_all'

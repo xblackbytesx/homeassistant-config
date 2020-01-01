@@ -97,7 +97,7 @@ automation.hw_001:
 
 # Toilet automations
 automation.toilet_001:
-  friendly_name: Toilet | Motion | Lights | On/Off
+  friendly_name: Toilet | Motion | Light
 
 # Sitting Area automations
 automation.sa_001:
@@ -109,9 +109,7 @@ automation.sa_004:
 
 # Kitchen automations
 automation.kitchen_001:
-  friendly_name: Kitchen | State | Lights off
-automation.kitchen_002:
-  friendly_name: Kitchen | State | Lights on
+  friendly_name: Kitchen | State | Light
 
 # Master bedroom automations
 automation.mb_001:
@@ -165,9 +163,7 @@ automation.attic_002:
 
 # Office automations
 automation.office_001:
-  friendly_name: Office | Motion | Lights | Off
-automation.office_002:
-  friendly_name: Office | Motion | Lights | On
+  friendly_name: Office | Motion | Light
 
 # Exterior automations
 automation.ex_001:
