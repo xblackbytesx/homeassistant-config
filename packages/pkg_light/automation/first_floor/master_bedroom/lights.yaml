@@ -36,36 +36,32 @@
 - id: mb_003
   alias: mb_003
   trigger:
-    - platform: state
-      entity_id: switch.duo_switch_mb_l
-      to: 'on'
-    - platform: state
-      entity_id: switch.duo_switch_mb_l
-      to: 'off'
-    - platform: state
-      entity_id: switch.duo_switch_mb_r
-      to: 'on'
-    - platform: state
-      entity_id: switch.duo_switch_mb_r
-      to: 'off'
+    - platform: event
+      event_type: button_pressed
+      event_data: {"state": "on", "entity_id": "switch.duo_switch_mb_l"}
+    - platform: event
+      event_type: button_pressed
+      event_data: {"state": "off", "entity_id": "switch.duo_switch_mb_l"}
+    - platform: event
+      event_type: button_pressed
+      event_data: {"state": "on", "entity_id": "switch.duo_switch_mb_r"}
+    - platform: event
+      event_type: button_pressed
+      event_data: {"state": "off", "entity_id": "switch.duo_switch_mb_r"}
   action:
     service_template: >
-      {% if trigger.entity_id == "switch.duo_switch_mb_l" and trigger.to_state.state == 'on' %}
+      {% if trigger.event.data.state == 'on' %}
         scene.turn_on
-      {% elif trigger.entity_id == "switch.duo_switch_mb_r" and trigger.to_state.state == 'on' %}
-        scene.turn_on
-      {% elif trigger.entity_id == "switch.duo_switch_mb_l" and trigger.to_state.state == 'off' %}
-        light.turn_off
-      {% elif trigger.entity_id == "switch.duo_switch_mb_r" and trigger.to_state.state == 'off' %}
+      {% elif trigger.event.data.state == 'off' %}
         light.turn_off
       {% endif %}
     data_template:
       entity_id: >
-        {% if trigger.entity_id == "switch.duo_switch_mb_l" and trigger.to_state.state == 'on' %}
+        {% if trigger.event.data.entity_id == 'switch.duo_switch_mb_l' and trigger.event.data.state == 'on' %}
           scene.mb_night
-        {% elif trigger.entity_id == "switch.duo_switch_mb_r" and trigger.to_state.state == 'on' %}
+        {% elif trigger.event.data.entity_id == 'switch.duo_switch_mb_r' and trigger.event.data.state == 'on' %}
           scene.mb_day
-        {% elif trigger.to_state.state == 'off'%}
+        {% elif trigger.event.data.state == 'off' %}
           light.lg_mb_all
         {% endif %}
 
