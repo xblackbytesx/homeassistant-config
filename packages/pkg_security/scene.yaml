@@ -28,11 +28,11 @@
       state: true
     automation.mb_002:
       state: true
-    automation.lb_005:
+    automation.lb_002:
       state: false
     scene.lb_day:
       state: true
-    automation.sb_005:
+    automation.sb_002:
       state: false
     scene.sb_night:
       state: true
@@ -52,9 +52,9 @@
       state: false
     automation.mb_002:
       state: false
-    automation.lb_005:
+    automation.lb_002:
       state: true
-    automation.sb_005:
+    automation.sb_002:
       state: true
     automation.office_001:
       state: true

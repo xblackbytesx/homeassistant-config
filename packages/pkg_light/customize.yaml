@@ -129,26 +129,14 @@ automation.mb_005:
 
 # Large bedroom automations
 automation.lb_001:
-  friendly_name: LB | Duo switch | left | On
+  friendly_name: LB | Duo switch | Light
 automation.lb_002:
-  friendly_name: LB | Duo switch | left | Off
-automation.lb_003:
-  friendly_name: LB | Duo switch | right | On
-automation.lb_004:
-  friendly_name: LB | Duo switch | right | Off
-automation.lb_005:
   friendly_name: LB | Time | Lights | Off
 
 # Small bedroom automations
 automation.sb_001:
-  friendly_name: SB | Duo switch | left | On
+  friendly_name: SB | Duo switch | Light
 automation.sb_002:
-  friendly_name: SB | Duo switch | left | Off
-automation.sb_003:
-  friendly_name: SB | Duo switch | right | On
-automation.sb_004:
-  friendly_name: SB | Duo switch | right | Off
-automation.sb_005:
   friendly_name: SB | Time | Lights | Off
 
 # Corridor automations

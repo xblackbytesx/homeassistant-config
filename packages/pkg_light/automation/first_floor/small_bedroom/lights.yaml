@@ -1,49 +1,38 @@
 - id: sb_001
   alias: sb_001
   trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "on", "entity_id": "switch.duo_switch_sb_l"}
+    - platform: event
+      event_type: button_pressed
+      event_data: {"state": "on", "entity_id": "switch.duo_switch_sb_l"}
+    - platform: event
+      event_type: button_pressed
+      event_data: {"state": "off", "entity_id": "switch.duo_switch_sb_l"}
+    - platform: event
+      event_type: button_pressed
+      event_data: {"state": "on", "entity_id": "switch.duo_switch_sb_r"}
+    - platform: event
+      event_type: button_pressed
+      event_data: {"state": "off", "entity_id": "switch.duo_switch_sb_r"}
   action:
-    service: scene.turn_on
-    entity_id: scene.sb_night
+    service_template: >
+      {% if trigger.event.data.state == 'on' %}
+        scene.turn_on
+      {% elif trigger.event.data.state == 'off' %}
+        light.turn_off
+      {% endif %}
+    data_template:
+      entity_id: >
+        {% if trigger.event.data.entity_id == 'switch.duo_switch_sb_l' and trigger.event.data.state == 'on' %}
+          scene.sb_night
+        {% elif trigger.event.data.entity_id == 'switch.duo_switch_sb_r' and trigger.event.data.state == 'on' %}
+          scene.sb_day
+        {% elif trigger.event.data.state == 'off' %}
+          light.lg_sb_all
+        {% endif %}
 
 
 - id: sb_002
   alias: sb_002
-  trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "off", "entity_id": "switch.duo_switch_sb_l"}
-  action:
-    service: light.turn_off
-    entity_id: light.lg_sb_all
-
-
-- id: sb_003
-  alias: sb_003
-  trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "on", "entity_id": "switch.duo_switch_sb_r"}
-  action:
-    service: scene.turn_on
-    entity_id: scene.sb_day
-
-
-- id: sb_004
-  alias: sb_004
-  trigger:
-    platform: event
-    event_type: button_pressed
-    event_data: {"state": "off", "entity_id": "switch.duo_switch_sb_r"}
-  action:
-    service: light.turn_off
-    entity_id: light.lg_sb_all
-
-
-- id: sb_005
-  alias: sb_005
   trigger:
     - platform: state
       entity_id: light.0x00178801023c1a33_light

@@ -12,7 +12,7 @@
       state: false
     automation.lb_004:
       state: false
-    automation.lb_005:
+    automation.lb_002:
       state: false
 
 - name: LB | Reset Default
@@ -27,5 +27,5 @@
       state: true
     automation.lb_004:
       state: true
-    automation.lb_005:
+    automation.lb_002:
       state: true

@@ -32,7 +32,7 @@
       state: false
     automation.sb_004:
       state: false
-    automation.sb_005:
+    automation.sb_002:
       state: false
 
 - name: SB | Reset Default
@@ -47,5 +47,5 @@
       state: true
     automation.sb_004:
       state: true
-    automation.sb_005:
+    automation.sb_002:
       state: true
