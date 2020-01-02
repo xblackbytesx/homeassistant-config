@@ -157,10 +157,8 @@ automation.bathroom_007:
 
 # Attic automations
 automation.attic_001:
-  friendly_name: Attic | Motion | Lights off
-automation.attic_002:
-  friendly_name: Attic | Motion | Lights on
-
+  friendly_name: Attic | Motion | Light
+  
 # Office automations
 automation.office_001:
   friendly_name: Office | Motion | Light

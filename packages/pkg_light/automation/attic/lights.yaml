@@ -3,6 +3,9 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.attic_motion_detected
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.attic_motion_detected
       to: 'off'
       for:
         minutes: "{{ states('input_number.attic_motion_timeout')| int }}"
@@ -12,28 +15,12 @@
       for:
         minutes: 5
   action:
-    service: light.turn_off
-    entity_id: light.lg_attic_all
-
-
-- id: attic_002
-  alias: attic_002
-  trigger:
-    platform: state
-    entity_id: binary_sensor.attic_motion_detected
-    to: 'on'
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: binary_sensor.attic_dark_enough
-        state: 'on'
-      - condition: time
-        after: '06:00:00'
-        before: '02:00:00'
-  action:
-    service: light.turn_on
-    data:
-      entity_id: light.lg_attic_all
-      brightness_pct: 70
-      kelvin: 2700
+    service: script.turn_on
+    data_template:
+      entity_id: script.set_dynamic_scene
+      variables:
+        trigger_to_state: '{{ trigger.to_state.state }}'
+        dark_enough: '{{ states("binary_sensor.attic_dark_enough") }}'
+        scene_day: 'scene.attic_day'
+        scene_night: 'scene.attic_night'
+        light_group: 'light.lg_attic_all'
