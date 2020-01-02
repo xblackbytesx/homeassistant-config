@@ -6,6 +6,7 @@
   action:
     service: shell_command.reboot_dafang
 
+
 - id: Time | Xiaofang 1 | Reboot
   alias: Time | Xiaofang 1 | Reboot
   trigger:
@@ -13,6 +14,7 @@
     at: "2:10:00"
   action:
     service: shell_command.reboot_xiaofang_1
+
 
 - id: Time | Xiaofang 2 | Reboot
   alias: Time | Xiaofang 2 | Reboot
