@@ -15,12 +15,17 @@
       for:
         minutes: 5
   action:
-    service: script.turn_on
-    data_template:
-      entity_id: script.set_dynamic_scene
-      variables:
-        trigger_to_state: '{{ trigger.to_state.state }}'
-        dark_enough: '{{ states("binary_sensor.hw_dark_enough") }}'
-        scene_day: 'scene.hw_day'
-        scene_night: 'scene.hw_night'
-        light_group: 'light.lg_hw_all'
+    - service: script.turn_on
+      data_template:
+        entity_id: script.set_dynamic_scene
+        variables:
+          trigger_to_state: '{{ trigger.to_state.state }}'
+          dark_enough: '{{ states("binary_sensor.hw_dark_enough") }}'
+          scene_day: 'scene.hw_day'
+          scene_night: 'scene.hw_night'
+          light_group: 'light.lg_hw_all'
+    - service_template: >
+        {% if trigger.to_state.state == 'off' %}
+          switch.turn_off
+        {% endif %}
+      entity_id: switch.0x000d6ffffedc5e05_switch

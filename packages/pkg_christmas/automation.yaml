@@ -54,4 +54,3 @@
     service: switch.turn_off
     entity_id:
       - switch.0x000d6ffffedaf667_switch
-      - switch.0x000d6ffffedc5e05_switch
