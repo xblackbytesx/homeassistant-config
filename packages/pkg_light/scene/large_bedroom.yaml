@@ -1,3 +1,31 @@
+- name: LB | Night
+  entities:
+    light.0x00178801039d140f_light:
+      state: true
+      xy_color: [0.137, 0.041]
+      brightness_pct: 90
+      transition: 2
+    light.ledstrip_large_bedroom:
+      state: true
+      xy_color: [0.137, 0.041]
+      brightness_pct: 40
+      transition: 2
+
+
+- name: LB | Day
+  entities:
+    light.0x00178801039d140f_light:
+      state: true
+      xy_color: [0.507, 0.414]
+      brightness_pct: 100
+      transition: 2
+    light.ledstrip_large_bedroom:
+      state: true
+      xy_color: [0.149, 0.291]
+      brightness_pct: 90
+      transition: 2
+
+
 - name: LB | Search Mode
   entities:
     light.lg_lb_all:
@@ -14,6 +42,7 @@
       state: false
     automation.lb_002:
       state: false
+
 
 - name: LB | Reset Default
   entities:
