@@ -13,3 +13,4 @@ fan:
   - platform: xiaomi_miio
     host: !secret sa_air_purifier_ip
     token: !secret sa_air_purifier_token
+    model: zhimi.airpurifier.v3
