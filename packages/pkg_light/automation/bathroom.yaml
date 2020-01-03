@@ -31,12 +31,18 @@
       to: 'right_double'
   action:
     service_template: >
-      {% if trigger.to_state.state == 'left' or trigger.to_state.state == 'left_double' and is_state('light.hue_candle_bathroom_l', 'off') %}
-        scene.turn_on
-      {% elif trigger.to_state.state == 'right' or trigger.to_state.state == 'right_double' and is_state('light.hue_bulb_bathroom_r', 'off') %}
-        scene.turn_on
-      {% else %}
-        light.turn_off
+      {% if trigger.to_state.state == 'left' or trigger.to_state.state == 'left_double' %}
+        {% if is_state('light.hue_candle_bathroom_l', 'off') %}
+          scene.turn_on
+        {% else %}
+          light.turn_off
+        {% endif %}
+      {% elif trigger.to_state.state == 'right' or trigger.to_state.state == 'right_double' %}
+        {% if is_state('light.hue_bulb_bathroom_r', 'off') %}
+          scene.turn_on
+        {% else %}
+          light.turn_off
+        {% endif %}
       {% endif %}
     data_template:
       entity_id: >
@@ -61,89 +67,3 @@
             light.hue_bulb_bathroom_r
           {% endif %}
         {% endif %}
-
-
-# - id: bathroom_004
-#   alias: bathroom_004
-#   trigger:
-#     - platform: state
-#       entity_id: sensor.0x00158d00033e347d_click
-#       to: 'left'
-#     - platform: state
-#       entity_id: sensor.0x00158d00033e347d_click
-#       to: 'right'
-#   condition:
-#     condition: state
-#     data_template:
-#       entity_id: >
-#         {% if (trigger.to_state.state == 'left') or (trigger.to_state.state == 'left_double') %}
-#           light.hue_candle_bathroom_l
-#         {% elif (trigger.to_state.state == 'right') or (trigger.to_state.state == 'right_double') %}
-#           light.hue_candle_bathroom_r
-#         {% endif %}
-#       state: 'on'
-#   action:
-#     service: light.turn_off
-#     data_template:
-#       entity_id: >
-#         {% if (trigger.to_state.state == 'left') %}
-#           light.hue_candle_bathroom_l
-#         {% elif (trigger.to_state.state == 'right') %}
-#           light.hue_candle_bathroom_r
-#         {% endif %}
-
-
-# - id: bathroom_005
-#   alias: bathroom_005
-#   trigger:
-#     platform: state
-#     entity_id: sensor.0x00158d00033e347d_click
-#     to: 'right'
-#   condition:
-#     condition: state
-#     entity_id: light.hue_bulb_bathroom_r
-#     state: 'off'
-#   action:
-#     service: scene.turn_on
-#     data_template:
-#       entity_id: >
-#         {% if is_state('input_boolean.time_for_dim_scenes', 'on') %}
-#           scene.bathroom_r_night
-#         {% else %}
-#           scene.bathroom_r_day
-#         {% endif %}
-
-
-# - id: bathroom_007
-#   alias: bathroom_007
-#   trigger:
-#     platform: state
-#     entity_id: sensor.0x00158d00033e347d_click
-#     to: 'right'
-#   condition:
-#     condition: state
-#     entity_id: light.hue_bulb_bathroom_r
-#     state: 'on'
-#   action:
-#     service: light.turn_off
-#     entity_id: light.hue_bulb_bathroom_r
-
-
-# - id: bathroom_003
-#   alias: bathroom_003
-#   trigger:
-#     - platform: state
-#       entity_id: sensor.0x00158d00033e347d_click
-#       to: 'left_double'
-#     - platform: state
-#       entity_id: sensor.0x00158d00033e347d_click
-#       to: 'right_double'
-#   action:
-#     service: scene.turn_on
-#     data_template:
-#       entity_id: >
-#         {% if trigger.to_state.state == 'left_double' %}
-#           scene.bathroom_l_day
-#         {% elif trigger.to_state.state == 'right_double' %}
-#           scene.bathroom_r_day
-#         {% endif %}

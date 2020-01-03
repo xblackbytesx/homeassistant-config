@@ -143,22 +143,12 @@ automation.co_001:
 automation.bathroom_001:
   friendly_name: Bathroom | Motion | Lights | Off
 automation.bathroom_002:
-  friendly_name: Bathroom | Switch | Single | L | On
-automation.bathroom_003:
-  friendly_name: Bathroom | Switch | Double | L | On
-automation.bathroom_004:
-  friendly_name: Bathroom | Switch | Single | L | Off
-automation.bathroom_005:
-  friendly_name: Bathroom | Switch | Single | R | On
-automation.bathroom_006:
-  friendly_name: Bathroom | Switch | Double | R | On
-automation.bathroom_007:
-  friendly_name: Bathroom | Switch | Single | R | Off
+  friendly_name: Bathroom | Switch | Light
 
 # Attic automations
 automation.attic_001:
   friendly_name: Attic | Motion | Light
-  
+
 # Office automations
 automation.office_001:
   friendly_name: Office | Motion | Light
