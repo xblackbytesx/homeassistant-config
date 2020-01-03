@@ -14,7 +14,9 @@ light.lg_bathroom_all:
 light.0x0017880103ea3a60_light:
   friendly_name: Hallway
 light.0x00178801081af093_light:
-  friendly_name: SA | Standing Lamp
+  friendly_name: SA | Dangling bulb | L
+light.0x00178801089f827b_light:
+  friendly_name: SA | Dangling bulb | R
 light.0x00178801030a3dde_light:
   friendly_name: Corridor
 # light.0x086bd7fffe2b8f58_light:
