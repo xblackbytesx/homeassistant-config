@@ -3,10 +3,9 @@
   trigger:
     - platform: state
       entity_id: input_boolean.alarm_armed
-      to: 'on'
-    - platform: state
-      entity_id: input_boolean.alarm_armed
-      to: 'off'
+      to:
+        - 'on'
+        - 'off'
   action:
     service: scene.turn_on
     data_template:
@@ -23,10 +22,9 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.simulate_occupancy
-      to: 'on'
-    - platform: state
-      entity_id: binary_sensor.simulate_occupancy
-      to: 'off'
+      to:
+        - 'on'
+        - 'off'
   action:
     service: scene.turn_on
     data_template:

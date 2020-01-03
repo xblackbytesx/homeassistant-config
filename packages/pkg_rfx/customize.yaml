@@ -9,7 +9,7 @@ switch.beamer_screen:
 light.dimmable_socket_one:
   friendly_name: Small bedroom lights
   icon: mdi:brightness-6
-  
+
 light.dimmable_socket_two:
   friendly_name: Dimmable 2
   icon: mdi:brightness-6
@@ -18,19 +18,4 @@ cover.attic_shutters:
   friendly_name: Attic Shutters
 
 automation.rfx_001:
-  friendly_name: Event | Button 3-1 pressed | On
-
-automation.rfx_002:
-  friendly_name: Event | Button 3-1 pressed | Off
-
-automation.rfx_003:
-  friendly_name: Event | Button 3-2 pressed | On
-
-automation.rfx_004:
-  friendly_name: Event | Button 3-2 pressed | Off
-
-automation.rfx_005:
-  friendly_name: Event | Button 3-3 pressed | On
-
-automation.rfx_006:
-  friendly_name: Event | Button 3-3 pressed | Off
+  friendly_name: Event | Button press | Switch Socket

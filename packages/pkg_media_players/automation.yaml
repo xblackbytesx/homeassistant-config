@@ -3,7 +3,7 @@
     - platform: time
       at: '20:00:00'
     - platform: time_pattern
-      minutes: '/5'
+      minutes: '/3'
   condition:
     condition: time
     after: '19:59:00'
@@ -19,7 +19,7 @@
     - platform: time
       at: '06:00:00'
     - platform: time_pattern
-      minutes: '/5'
+      minutes: '/3'
   condition:
     condition: time
     after: '05:59:00'

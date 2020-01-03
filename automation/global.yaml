@@ -8,3 +8,15 @@
     data_template:
       name: Automated Backup {{ now().strftime('%Y-%m-%d') }}
       password: !secret snapshot_password
+
+
+- id: global_002
+  alias: global_002
+  initial_state: 'on'
+  trigger:
+   platform: homeassistant
+   event: start
+  action:
+    service: frontend.set_theme
+    data:
+      name: slate

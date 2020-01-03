@@ -53,10 +53,9 @@
   trigger:
     - platform: state
       entity_id: sensor.0xccccccfffe40b07b_action
-      to: 'brightness_up_click'
-    - platform: state
-      entity_id: sensor.0xccccccfffe40b07b_action
-      to: 'brightness_down_click'
+      to:
+        - 'brightness_up_click'
+        - 'brightness_down_click'
   condition:
     condition: and
     conditions:
