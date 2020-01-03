@@ -9,4 +9,7 @@ weather:
   - platform: darksky
     api_key: !secret dark_sky_api_key
 
-sensor: !include sensor.yaml
+fan:
+  - platform: xiaomi_miio
+    host: !secret sa_air_purifier_ip
+    token: !secret sa_air_purifier_token
