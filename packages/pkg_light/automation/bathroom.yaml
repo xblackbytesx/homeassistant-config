@@ -17,13 +17,13 @@
 - id: bathroom_002
   alias: bathroom_002
   trigger:
-    - platform: state
-      entity_id: sensor.0x00158d00033e347d_click
-      to:
-        - 'left'
-        - 'left_double'
-        - 'right'
-        - 'right_double'
+    platform: state
+    entity_id: sensor.0x00158d00033e347d_click
+    to:
+      - 'left'
+      - 'left_double'
+      - 'right'
+      - 'right_double'
   action:
     service_template: >
       {% if trigger.to_state.state == 'left' or trigger.to_state.state == 'left_double' %}
