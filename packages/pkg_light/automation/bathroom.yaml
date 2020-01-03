@@ -19,16 +19,11 @@
   trigger:
     - platform: state
       entity_id: sensor.0x00158d00033e347d_click
-      to: 'left'
-    - platform: state
-      entity_id: sensor.0x00158d00033e347d_click
-      to: 'left_double'
-    - platform: state
-      entity_id: sensor.0x00158d00033e347d_click
-      to: 'right'
-    - platform: state
-      entity_id: sensor.0x00158d00033e347d_click
-      to: 'right_double'
+      to:
+        - 'left'
+        - 'left_double'
+        - 'right'
+        - 'right_double'
   action:
     service_template: >
       {% if trigger.to_state.state == 'left' or trigger.to_state.state == 'left_double' %}
