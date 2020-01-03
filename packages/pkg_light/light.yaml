@@ -33,6 +33,7 @@
     - light.0x00178801081af093_light
     - light.hue_go_closet_l
     - light.hue_go_closet_r
+    - light.0x00178801089f827b_light
     - light.hue_iris_tv_cabinet
     - light.hue_candle_salt_lamp
     - light.lg_sa_led_strips
