@@ -28,3 +28,13 @@ sensor.0x00158d00036bffea_battery:
 sensor.0x00158d0004453420_battery:
   friendly_name: Climate sensor Guest bedroom
   device_class: battery
+
+input_number.kitchen_temperature_threshold:
+  friendly_name: Kitchen
+  icon: mdi:temperature-celcius
+input_number.master_bedroom_temperature_threshold:
+  friendly_name: Master bedroom
+  icon: mdi:temperature-celcius
+input_number.guest_bedroom_temperature_threshold:
+  friendly_name: Guest bedroom
+  icon: mdi:temperature-celcius
