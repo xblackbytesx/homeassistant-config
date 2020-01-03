@@ -1,0 +1,20 @@
+input_number.kitchen_temperature_threshold:
+  name: Kitchen | Temperature Threshold
+  initial: 5
+  min: 1
+  max: 45
+  step: 1
+
+input_number.master_bedroom_temperature_threshold:
+  name: MB | Temperature Threshold
+  initial: 5
+  min: 1
+  max: 45
+  step: 1
+
+input_number.guest_bedroom_temperature_threshold:
+  name: GB | Temperature Threshold
+  initial: 5
+  min: 1
+  max: 45
+  step: 1

@@ -1,0 +1,10 @@
+homeassistant:
+  customize: !include customize.yaml
+
+weather:
+  - platform: darksky
+    api_key: !secret dark_sky_api_key
+
+input_number: !include input_number.yaml
+binary_sensor: !include binary_sensor.yaml
+automation: !include automation.yaml

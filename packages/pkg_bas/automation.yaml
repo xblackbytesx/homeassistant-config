@@ -1,0 +1,34 @@
+- id: climate_001
+  alias: climate_001
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.kitchen_desired_temperature
+      to:
+        - 'on'
+        - 'off'
+    - platform: state
+      entity_id: binary_sensor.master_bedroom_desired_temperature
+      to:
+        - 'on'
+        - 'off'
+    - platform: state
+      entity_id: binary_sensor.guest_bedroom_desired_temperature
+      to:
+        - 'on'
+        - 'off'
+  action:
+    service_template: >
+      {% if trigger_to_state == 'on' %}
+        switch.turn_off
+      {% elif trigger_to_state == 'off' %}
+        switch.turn_on
+      {% endif %}
+    data_template:
+      entity_id: >
+        {% if trigger_entity_id == 'binary_sensor.kitchen_desired_temperature' %}
+          switch.0x00178801020357e5_switch
+        {% elif trigger_entity_id == 'binary_sensor.master_bedroom_desired_temperature' %}
+          switch.0x00178801020357e5_switch
+        {% elif trigger_entity_id == 'binary_sensor.guest_bedroom_desired_temperature' %}
+          switch.0x00178801020357e5_switch
+        {% endif %}

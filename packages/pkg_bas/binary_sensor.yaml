@@ -1,0 +1,11 @@
+- platform: template
+  sensors:
+    kitchen_desired_temperature:
+      value_template: >-
+        {{ states('sensor.0x00158d000349234a_temperature')|float >= states('input_number.kitchen_temperature_threshold')| int }}
+    master_bedroom_desired_temperature:
+      value_template: >-
+        {{ states('sensor.0x00158d000349234a_temperature')|float >= states('input_number.master_bedroom_temperature_threshold')| int }}
+    guest_bedroom_desired_temperature:
+      value_template: >-
+        {{ states('sensor.0x00158d000349234a_temperature')|float >= states('input_number.guest_bedroom_temperature_threshold')| int }}
