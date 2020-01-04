@@ -13,9 +13,10 @@ homeassistant:
     light_package: !include packages/pkg_light/all.yaml
     matrix_package: !include packages/pkg_matrix/all.yaml
     presence_package: !include packages/pkg_presence/all.yaml
-    car_package: !include packages/pkg_car/all.yaml
+    transportation_package: !include packages/pkg_transportation/all.yaml
     climate_package: !include packages/pkg_climate/all.yaml
-    media_players_package: !include packages/pkg_media_players/all.yaml
+    solar_package: !include packages/pkg_solar/all.yaml
+    media_package: !include packages/pkg_media/all.yaml
     camera_package: !include packages/pkg_camera/all.yaml
     network_package: !include packages/pkg_network/all.yaml
     smoke_package: !include packages/pkg_smoke/all.yaml
@@ -24,7 +25,7 @@ homeassistant:
     security_package: !include packages/pkg_security/all.yaml
     shell_commands_package: !include packages/pkg_shell_commands/all.yaml
     speech_package: !include packages/pkg_speech/all.yaml
-    christmas_package: !include packages/pkg_christmas/all.yaml
+    # christmas_package: !include packages/pkg_christmas/all.yaml
 
 hassio:
 config:

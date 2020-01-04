@@ -64,3 +64,14 @@
   destination: !secret home_coordinates
   region: 'EU'
   name: Person two drive Work to Home
+
+- platform: nederlandse_spoorwegen
+  email: !secret ns_email
+  password: !secret ns_password
+  routes:
+    - name: Person one train Home to Work
+      from: !secret home_train_station
+      to: !secret person_one_work_train_station
+    - name: Person one train Work to Home
+      from: !secret person_one_work_train_station
+      to: !secret home_train_station
