@@ -22,31 +22,38 @@ cards:
       - entity: input_boolean.advanced_config
         state: "on"
     card:
-      type: entities
-      title: Illuminance threshold overrides
-      entities:
-        - input_number.sa_illuminance_threshold
-        - input_number.kitchen_illuminance_threshold
-        - input_number.hw_illuminance_threshold
-        - input_number.co_illuminance_threshold
-        - input_number.office_illuminance_threshold
-        - input_number.ex_illuminance_threshold
-  - type: conditional
-    conditions:
-      - entity: input_boolean.advanced_config
-        state: "on"
-    card:
-      type: entities
-      title: Motion timeout overrides
-      entities:
-        - input_number.sa_motion_timeout
-        - input_number.kitchen_motion_timeout
-        - input_number.hw_motion_timeout
-        - input_number.toilet_motion_timeout
-        - input_number.co_motion_timeout
-        - input_number.bathroom_motion_timeout
-        - input_number.attic_motion_timeout
-        - input_number.office_motion_timeout
+      type: custom:fold-entity-row
+      head:
+        type: section
+        label: Override sliders
+      open: false
+      items:
+        - type: custom:fold-entity-row
+          head:
+            type: section
+            label: Motion timeout
+          open: true
+          items:
+            - input_number.sa_motion_timeout
+            - input_number.kitchen_motion_timeout
+            - input_number.hw_motion_timeout
+            - input_number.toilet_motion_timeout
+            - input_number.co_motion_timeout
+            - input_number.bathroom_motion_timeout
+            - input_number.attic_motion_timeout
+            - input_number.office_motion_timeout
+        - type: custom:fold-entity-row
+          head:
+            type: section
+            label: Illuminance threshold
+          open: true
+          items:
+            - input_number.sa_illuminance_threshold
+            - input_number.kitchen_illuminance_threshold
+            - input_number.hw_illuminance_threshold
+            - input_number.co_illuminance_threshold
+            - input_number.office_illuminance_threshold
+            - input_number.ex_illuminance_threshold
   - type: entity-button
     entity: binary_sensor.0x00158d0003612f9b_smoke
     show_icon: false
