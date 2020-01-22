@@ -39,7 +39,7 @@ cp -Rp assets/custom_components/garbage_pickup custom_components/
 
 echo "Installing Decluttering Card"
 mkdir -p www/custom-lovelace/decluttering-card
-wget https://github.com/custom-cards/decluttering-card/raw/master/dist/decluttering-card.js -O www/custom-lovelace/decluttering-card/decluttering-card.js
+wget https://github.com/custom-cards/decluttering-card/releases/download/0.3.0/decluttering-card.js -O www/custom-lovelace/decluttering-card/decluttering-card.js
 
 echo "Installing Upcoming Media Card"
 mkdir -p www/custom-lovelace/upcoming-media-card
