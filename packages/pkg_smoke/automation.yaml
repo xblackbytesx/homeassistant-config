@@ -5,6 +5,7 @@
     entity_id:
       - binary_sensor.lr_smoke_detected
       - binary_sensor.lb_smoke_detected
+      - binary_sensor.sb_smoke_detected
     to: 'on'
   action:
     - service: notify.send_mail
@@ -25,6 +26,8 @@
             scene.lr_search_mode
           {% elif state_attr(trigger.entity_id, 'friendly_name') == 'Large Bedroom' %}
             scene.lb_search_mode
+          {% elif state_attr(trigger.entity_id, 'friendly_name') == 'Small Bedroom' %}
+            scene.sb_search_mode
           {% endif %}
 
 
@@ -54,3 +57,17 @@
         topic: zigbee2mqtt/0x00158d00045cd482/set
     - service: homeassistant.turn_on
       entity_id: binary_sensor.lb_smoke_detected
+
+
+- id: Smoke Alarm | SB | Test
+  alias: Smoke Alarm | SB | Test
+  trigger:
+    platform: event
+    event_type: my_bs_event
+  action:
+    - service: mqtt.publish
+      data:
+        payload: "{\"selftest\": \"\"}"
+        topic: zigbee2mqtt/0x00158d0004117f6f/set
+    - service: homeassistant.turn_on
+      entity_id: binary_sensor.sb_smoke_detected
