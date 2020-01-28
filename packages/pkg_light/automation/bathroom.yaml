@@ -62,3 +62,31 @@
             light.hue_bulb_bathroom_r
           {% endif %}
         {% endif %}
+
+
+- id: bathroom_003
+  alias: bathroom_003
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.bathroom_motion_detected
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.bathroom_motion_detected
+      to: 'off'
+      for:
+        minutes: "{{ states('input_number.bathroom_motion_timeout')| int }}"
+    - platform: state
+      entity_id: binary_sensor.bathroom_dark_enough
+      to: 'off'
+      for:
+        minutes: 5
+  action:
+    service: script.turn_on
+    data_template:
+      entity_id: script.set_dynamic_scene
+      variables:
+        trigger_to_state: '{{ trigger.to_state.state }}'
+        dark_enough: '{{ states("binary_sensor.bathroom_dark_enough") }}'
+        scene_day: 'scene.bathroom_day'
+        scene_night: 'scene.bathroom_night'
+        light_group: 'light.lg_bathroom_all'

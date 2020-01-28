@@ -21,3 +21,17 @@
     light.hue_bulb_bathroom_r:
       state: true
       brightness_pct: 80
+
+- name: Bathroom | Night
+  entities:
+    scene.bathroom_l_night:
+      state: true
+    scene.bathroom_r_night:
+      state: true
+
+- name: Bathroom | Day
+  entities:
+    scene.bathroom_l_day:
+      state: true
+    scene.bathroom_r_day:
+      state: true
