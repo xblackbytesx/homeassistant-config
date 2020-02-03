@@ -5,7 +5,6 @@ rm -rf themes
 rm -rf custom_components
 rm -rf www/custom-lovelace
 rm www/tracker-card.js
-rm lovelace-gen.py
 
 echo "Fetching themes"
 mkdir -p themes
