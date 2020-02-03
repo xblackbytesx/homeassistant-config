@@ -10,6 +10,7 @@ rm lovelace-gen.py
 echo "Fetching themes"
 mkdir -p themes
 wget https://raw.githubusercontent.com/JuanMTech/orange_dark/master/themes/orange_dark.yaml -O themes/orange_dark.yaml
+sed -i 's/Orange Dark/orange_dark/g' themes/orange_dark.yaml
 cp -Rp assets/themes/* themes/
 
 echo "Installing lovelace_gen Component"

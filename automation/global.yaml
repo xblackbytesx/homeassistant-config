@@ -19,4 +19,4 @@
   action:
     service: frontend.set_theme
     data:
-      name: Orange_Dark
+      name: orange_dark
