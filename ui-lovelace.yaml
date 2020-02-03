@@ -3,12 +3,12 @@
 title: Bier Estates
 
 custom_header:
-  compact_mode: true
+  # compact_mode: true
   background: var(--app-header-background-color)
   elements_color: var(--app-header-text-color)
   active_tab_color: var(--state-icon-active-color)
   tab_indicator_color: var(--state-icon-active-color)
-  
+
 resources:
 - url: !file /local/custom-lovelace/decluttering-card/decluttering-card.js
   type: module
