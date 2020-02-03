@@ -45,7 +45,7 @@ recorder:
 #     - yeelight
 
 frontend:
-  themes: !include themes.yaml
+  themes: !include_dir_merge_named themes/
   javascript_version: latest
 
 lovelace_gen:

@@ -1,10 +1,16 @@
 #!/bin/bash
 
 # Remove if exists
+rm -rf themes
 rm -rf custom_components
 rm -rf www/custom-lovelace
 rm www/tracker-card.js
 rm lovelace-gen.py
+
+echo "Fetching themes"
+mkdir -p themes
+wget https://raw.githubusercontent.com/JuanMTech/orange_dark/master/themes/orange_dark.yaml -O themes/orange_dark.yaml
+cp -Rp assets/themes/* themes/
 
 echo "Installing lovelace_gen Component"
 mkdir -p custom_components/lovelace_gen
@@ -40,6 +46,10 @@ cp -Rp assets/custom_components/garbage_pickup custom_components/
 echo "Installing Decluttering Card"
 mkdir -p www/custom-lovelace/decluttering-card
 wget https://github.com/custom-cards/decluttering-card/releases/download/0.3.0/decluttering-card.js -O www/custom-lovelace/decluttering-card/decluttering-card.js
+
+echo "Installing custom-header"
+mkdir -p www/custom-lovelace/custom-header
+wget https://github.com/maykar/custom-header/releases/download/1.3.2/custom-header.js -O www/custom-lovelace/custom-header/custom-header.js
 
 echo "Installing Upcoming Media Card"
 mkdir -p www/custom-lovelace/upcoming-media-card

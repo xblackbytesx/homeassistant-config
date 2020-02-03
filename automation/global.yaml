@@ -19,4 +19,4 @@
   action:
     service: frontend.set_theme
     data:
-      name: slate
+      name: orange_dark
