@@ -2,6 +2,9 @@
 
 type: vertical-stack
 cards:
+  - type: markdown
+    content: >
+      ## Gas Prices
   - type: horizontal-stack
     cards:
       - type: custom:mini-graph-card
