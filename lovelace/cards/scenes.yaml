@@ -1,257 +1,35 @@
 type: vertical-stack
 cards:
-  - type: vertical-stack
-    cards:
-      - type: markdown
-        content: >
-          ## Living room
-      - type: horizontal-stack
-        cards:
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.sa_watching_tv
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.sa_watching_tv
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.sa_not_watching_tv
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.sa_not_watching_tv
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.lr_search_mode
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.lr_search_mode
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.lr_reset_default
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.lr_reset_default
-  - type: vertical-stack
-    cards:
-      - type: markdown
-        content: >
-          ## Large bedroom
-      - type: horizontal-stack
-        cards:
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.lb_night
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.lb_night
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.lb_day
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.lb_day
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.lb_search_mode
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.lb_search_mode
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.lb_reset_default
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.lb_reset_default
-  - type: vertical-stack
-    cards:
-      - type: markdown
-        content: >
-          ## Small bedroom
-      - type: horizontal-stack
-        cards:
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.sb_night
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.sb_night
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.sb_day
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.sb_day
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.sb_search_mode
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.sb_search_mode
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.sb_reset_default
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.sb_reset_default
-  - type: vertical-stack
-    cards:
-      - type: markdown
-        content: >
-          ## Master bedroom
-      - type: horizontal-stack
-        cards:
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.mb_night
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.mb_night
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.mb_day
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.mb_day
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.mb_search_mode
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.mb_search_mode
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.mb_reset_default
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.mb_reset_default
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.mb_night
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.mb_night
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.mb_day
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.mb_day
-  - type: vertical-stack
-    cards:
-      - type: markdown
-        content: >
-          ## Misc
-      - type: horizontal-stack
-        cards:
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.ex_relax
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.ex_relax
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.kitchen_relax
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.kitchen_relax
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.bathroom_night
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.bathroom_night
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: scene.bathroom_day
-                tap_action:
-                  action: call-service
-                  service: scene.turn_on
-                  service_data:
-                    entity_id: scene.bathroom_day
+  - type: custom:decluttering-card
+    template: scene_tile
+    variables:
+      - title: Living Room
+      - entity_1: scene.sa_watching_tv
+      - entity_2: scene.sa_not_watching_tv
+      - entity_3: scene.lr_search_mode
+      - entity_4: scene.lr_reset_default
+  - type: custom:decluttering-card
+    template: scene_tile
+    variables:
+      - title: Large bedroom
+      - entity_1: scene.lb_night
+      - entity_2: scene.lb_day
+      - entity_3: scene.lb_search_mode
+      - entity_4: scene.lb_reset_default
+  - type: custom:decluttering-card
+    template: scene_tile
+    variables:
+      - title: Small bedroom
+      - entity_1: scene.sb_night
+      - entity_2: scene.sb_day
+      - entity_3: scene.sb_search_mode
+      - entity_4: scene.sb_reset_default
+  - type: custom:decluttering-card
+    template: scene_tile
+    variables:
+      - title: Master bedroom
+      - entity_1: scene.mb_night
+      - entity_2: scene.mb_day
+      - entity_3: scene.mb_search_mode
+      - entity_4: scene.mb_reset_default
+      
