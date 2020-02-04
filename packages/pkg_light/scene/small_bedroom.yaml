@@ -28,24 +28,12 @@
       state: false
     automation.sb_002:
       state: false
-    automation.sb_003:
-      state: false
-    automation.sb_004:
-      state: false
-    automation.sb_002:
-      state: false
 
 - name: SB | Reset Default
   entities:
     scene.sb_day:
       state: true
     automation.sb_001:
-      state: true
-    automation.sb_002:
-      state: true
-    automation.sb_003:
-      state: true
-    automation.sb_004:
       state: true
     automation.sb_002:
       state: true
