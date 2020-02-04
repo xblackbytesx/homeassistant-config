@@ -4,7 +4,7 @@ scene_tile:
     cards:
       - type: markdown
         content: >
-          '[[title]]'
+          ## [[title]]
       - type: horizontal-stack
         cards:
           - type: glance
