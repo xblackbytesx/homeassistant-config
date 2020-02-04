@@ -1,13 +1,5 @@
 tts:
   - platform: google_translate
+    base_url: http://10.0.221.10:8123
 
-# Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
-  intents:
-    LivingRoomTemperature:
-     - What is the temperature in the living room
-
-intent_script:
-  LivingRoomTemperature:
-    speech:
-      text: It is currently {{ states.sensor.living_room_thermostat_temperature }} degrees in the living room.

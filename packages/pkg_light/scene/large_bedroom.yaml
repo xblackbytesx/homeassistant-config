@@ -36,12 +36,6 @@
       state: false
     automation.lb_002:
       state: false
-    automation.lb_003:
-      state: false
-    automation.lb_004:
-      state: false
-    automation.lb_002:
-      state: false
 
 
 - name: LB | Reset Default
@@ -49,12 +43,6 @@
     scene.lb_day:
       state: true
     automation.lb_001:
-      state: true
-    automation.lb_002:
-      state: true
-    automation.lb_003:
-      state: true
-    automation.lb_004:
       state: true
     automation.lb_002:
       state: true
