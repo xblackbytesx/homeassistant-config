@@ -41,7 +41,7 @@ cards:
             show_name: false
             show_state: false
             entities:
-              - entity: scene.lr_search_mode
+              - entity: scene.lr_reset_default
                 tap_action:
                   action: call-service
                   service: scene.turn_on
@@ -51,9 +51,29 @@ cards:
     cards:
       - type: markdown
         content: >
-          ## Bedrooms
+          ## Large bedroom
       - type: horizontal-stack
         cards:
+          - type: glance
+            show_name: false
+            show_state: false
+            entities:
+              - entity: scene.lb_night
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.lb_night
+          - type: glance
+            show_name: false
+            show_state: false
+            entities:
+              - entity: scene.lb_day
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.lb_day
           - type: glance
             show_name: false
             show_state: false
@@ -74,6 +94,100 @@ cards:
                   service: scene.turn_on
                   service_data:
                     entity_id: scene.lb_reset_default
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: >
+          ## Small bedroom
+      - type: horizontal-stack
+        cards:
+          - type: glance
+            show_name: false
+            show_state: false
+            entities:
+              - entity: scene.sb_night
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.sb_night
+          - type: glance
+            show_name: false
+            show_state: false
+            entities:
+              - entity: scene.sb_day
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.sb_day
+          - type: glance
+            show_name: false
+            show_state: false
+            entities:
+              - entity: scene.sb_search_mode
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.sb_search_mode
+          - type: glance
+            show_name: false
+            show_state: false
+            entities:
+              - entity: scene.sb_reset_default
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.sb_reset_default
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: >
+          ## Master bedroom
+      - type: horizontal-stack
+        cards:
+          - type: glance
+            show_name: false
+            show_state: false
+            entities:
+              - entity: scene.mb_night
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.mb_night
+          - type: glance
+            show_name: false
+            show_state: false
+            entities:
+              - entity: scene.mb_day
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.mb_day
+          - type: glance
+            show_name: false
+            show_state: false
+            entities:
+              - entity: scene.mb_search_mode
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.mb_search_mode
+          - type: glance
+            show_name: false
+            show_state: false
+            entities:
+              - entity: scene.mb_reset_default
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.mb_reset_default
           - type: glance
             show_name: false
             show_state: false
@@ -98,7 +212,7 @@ cards:
     cards:
       - type: markdown
         content: >
-          ## Bathroom
+          ## Misc
       - type: horizontal-stack
         cards:
           - type: glance

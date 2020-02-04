@@ -166,11 +166,11 @@ automation.ex_002:
 ############ SCENES ############
 ################################
 
-scene.lr_not_watching_tv:
+scene.sa_not_watching_tv:
   friendly_name: Not watching TV
   icon: mdi:television-classic-off
 
-scene.lr_watching_tv:
+scene.sa_watching_tv:
   friendly_name: Watching TV
   icon: mdi:television-classic
 
@@ -211,5 +211,21 @@ scene.sb_search_mode:
   icon: mdi:magnify
 
 scene.sb_reset_default:
+  friendly_name: Reset
+  icon: mdi:cancel
+
+scene.mb_day:
+  friendly_name: Day
+  icon: mdi:weather-sunny
+
+scene.mb_night:
+  friendly_name: Night
+  icon: mdi:weather-night
+
+scene.mb_search_mode:
+  friendly_name: Search Mode
+  icon: mdi:magnify
+
+scene.mb_reset_default:
   friendly_name: Reset
   icon: mdi:cancel
