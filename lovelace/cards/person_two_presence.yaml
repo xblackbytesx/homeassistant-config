@@ -1,5 +1,3 @@
-# lovelace_gen
-
 type: picture-entity
 entity: !secret person_two_device_tracker
 name: !secret person_two_name

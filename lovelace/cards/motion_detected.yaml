@@ -1,5 +1,3 @@
-# lovelace_gen
-
 type: entity-filter
 entities:
   - binary_sensor.hw_motion_detected

@@ -1,5 +1,3 @@
-# lovelace_gen
-
 - type: custom:auto-entities
   show_empty: false
   card:

@@ -1,4 +1,3 @@
-# lovelace_gen
 type: vertical-stack
 cards:
   - type: markdown

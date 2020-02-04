@@ -1,4 +1,2 @@
-# lovelace_gen
-
 type: weather-forecast
 entity: weather.dark_sky

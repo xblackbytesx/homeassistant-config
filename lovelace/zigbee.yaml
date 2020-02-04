@@ -1,5 +1,3 @@
-# lovelace_gen
-
 title: Zigbee Network
 panel: true # this renders the first card on full width, other cards in this view will not be rendered
 cards:

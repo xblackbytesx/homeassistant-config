@@ -1,5 +1,3 @@
-# lovelace_gen
-
 type: horizontal-stack
 cards:
   - type: light

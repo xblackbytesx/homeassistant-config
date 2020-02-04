@@ -1,5 +1,3 @@
-# lovelace_gen
-
 icon: mdi:numeric-0-box
 cards:
   - !include cards/ground_floor_groups.yaml

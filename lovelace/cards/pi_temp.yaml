@@ -1,5 +1,3 @@
-# lovelace_gen
-
 type: sensor
 entity: sensor.cpu_temperature
 name: CPU Temperature

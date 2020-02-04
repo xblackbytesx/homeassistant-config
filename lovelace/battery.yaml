@@ -1,22 +1,56 @@
-# lovelace_gen
-
-{% set sensors = ['Smoke', 'Motion', 'Contact', 'Climate', 'Plant'] %}
-
 title: Battery Stats
 icon: mdi:battery-charging
 cards:
-  {% for s in sensors %}
   - type: custom:auto-entities
     show_empty: false
     card:
       type: entities
-      title: {{ s }} sensor batteries
+      title: Smoke sensor batteries
     filter:
       include:
-        - name: "*{{ s }}*"
+        - name: "*smoke*"
           attributes:
             device_class: battery
-  {% endfor %}
+  - type: custom:auto-entities
+    show_empty: false
+    card:
+      type: entities
+      title: Motion sensor batteries
+    filter:
+      include:
+        - name: "*motion*"
+          attributes:
+            device_class: battery
+  - type: custom:auto-entities
+    show_empty: false
+    card:
+      type: entities
+      title: Contact sensor batteries
+    filter:
+      include:
+        - name: "*contact*"
+          attributes:
+            device_class: battery
+  - type: custom:auto-entities
+    show_empty: false
+    card:
+      type: entities
+      title: Climate sensor batteries
+    filter:
+      include:
+        - name: "*climate*"
+          attributes:
+            device_class: battery
+  - type: custom:auto-entities
+    show_empty: false
+    card:
+      type: entities
+      title: Plant sensor batteries
+    filter:
+      include:
+        - name: "*plant*"
+          attributes:
+            device_class: battery
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

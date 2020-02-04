@@ -1,28 +1,3 @@
-# lovelace_gen
-
-# type: picture-elements
-# image: !file /local/solar_array.jpg
-# elements:
-#   {% macro label(entity, prefix, bottom, left) -%}
-#   - entity: {{ entity }}
-#     type: state-label
-#     prefix: {{ prefix }}
-#     style: { height: 34px, transform: none, position: absolute, bottom: {{ bottom }}px, left: {{ left }}px, font-weight: bold, background: rgba(0,0,0,0.6), border-top-right-radius: 6px, border-bottom-right-radius: 6px, box-sizing: border-box }
-#   {%- endmacro %}
-#   {% macro icon(entity, icon, bottom, left) -%}
-#   - entity: {{ entity }}
-#     type: icon
-#     icon: {{ icon }}
-#     style: { transform: none, position: absolute, bottom: {{ bottom }}px, left: {{ left }}px, background: rgba(0,0,0,0.6), border-top-left-radius: 6px, border-bottom-left-radius: 6px, padding: 5px, box-sizing: border-box, color: yellow }
-#   {%- endmacro %}
-#
-#   {{ label("sensor.pv_power", "Current Power: ", 116, 50) }}
-#   {{ icon("sensor.pv_power", "mdi:white-balance-sunny", 116, 16) }}
-#   {{ label("sensor.daily_yield", "Daily Yield: ", 66, 50) }}
-#   {{ icon("sensor.daily_yield", "mdi:flash", 66, 16) }}
-#   {{ label("sensor.total_yield", "Total Yield: ", 16, 50) }}
-#   {{ icon("sensor.total_yield", "mdi:flash", 16, 16) }}
-
 type: picture-elements
 image: /local/solar_array.jpg
 elements:

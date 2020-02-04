@@ -12,10 +12,10 @@ wget https://raw.githubusercontent.com/JuanMTech/orange_dark/master/themes/orang
 sed -i 's/Orange Dark/orange_dark/g' themes/orange_dark.yaml
 cp -Rp assets/themes/* themes/
 
-echo "Installing lovelace_gen Component"
-mkdir -p custom_components/lovelace_gen
-wget https://raw.githubusercontent.com/thomasloven/hass-lovelace_gen/master/custom_components/lovelace_gen/__init__.py -O custom_components/lovelace_gen/__init__.py
-wget https://raw.githubusercontent.com/thomasloven/hass-lovelace_gen/master/custom_components/lovelace_gen/manifest.json -O custom_components/lovelace_gen/manifest.json
+# echo "Installing lovelace_gen Component"
+# mkdir -p custom_components/lovelace_gen
+# wget https://raw.githubusercontent.com/thomasloven/hass-lovelace_gen/master/custom_components/lovelace_gen/__init__.py -O custom_components/lovelace_gen/__init__.py
+# wget https://raw.githubusercontent.com/thomasloven/hass-lovelace_gen/master/custom_components/lovelace_gen/manifest.json -O custom_components/lovelace_gen/manifest.json
 
 echo "Installing RDW Component"
 mkdir -p custom_components/rdw
@@ -97,4 +97,5 @@ wget https://github.com/azuwis/zigbee2mqtt-networkmap/releases/download/v0.6.0/z
 
 echo "Bump versions in resources"
 EPOCH=$(date +%s)
+git checkout master -- lovelace/resources.yaml
 sed -i 's/\.js/\.js?v='$EPOCH'/g' lovelace/resources.yaml
