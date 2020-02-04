@@ -1,5 +1,5 @@
 type: picture-entity
-title: Dafang
+name: Dafang
 entity: camera.dafang
 camera_view: live
 tap_action:

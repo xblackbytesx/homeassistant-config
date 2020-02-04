@@ -1,5 +1,5 @@
 type: picture-entity
-title: Xiaofang 1
+name: Xiaofang 1
 entity: camera.xiaofang_1
 camera_view: live
 tap_action:
