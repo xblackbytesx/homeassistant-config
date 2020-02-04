@@ -97,4 +97,4 @@ wget https://github.com/azuwis/zigbee2mqtt-networkmap/releases/download/v0.6.0/z
 
 echo "Bump versions in resources"
 EPOCH=$(date +%s)
-sed -i 's/.js/.js?v='$EPOCH'/g' lovelace/resources.yaml
+sed -i 's/\.js/\.js?v='$EPOCH'/g' lovelace/resources.yaml
