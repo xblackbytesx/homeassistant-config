@@ -94,3 +94,7 @@ wget https://github.com/nervetattoo/simple-thermostat/releases/download/0.33.1/s
 echo "Installing ZigBee NetworkMap Card"
 mkdir -p www/custom-lovelace/zigbee2mqtt-networkmap
 wget https://github.com/azuwis/zigbee2mqtt-networkmap/releases/download/v0.6.0/zigbee2mqtt-networkmap.js -O www/custom-lovelace/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js
+
+echo "Bump versions in resources"
+EPOCH=$(date +%s)
+sed -i 's/.js/.js?v='$EPOCH'/g' lovelace/resources.yaml
