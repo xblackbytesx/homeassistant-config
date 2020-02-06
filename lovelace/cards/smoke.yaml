@@ -1,5 +1,7 @@
 type: entities
 title: Smoke alarms
+show_header_toggle: false
 entities:
   - binary_sensor.0x00158d0003612f9b_smoke
   - binary_sensor.0x00158d00045cd482_smoke
+  - binary_sensor.0x00158d0004117f6f_smoke

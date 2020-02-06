@@ -1,5 +1,6 @@
 type: entities
 title: Transmission
+show_header_toggle: false
 entities:
   - sensor.transmission_active_torrents
   - sensor.transmission_down_speed

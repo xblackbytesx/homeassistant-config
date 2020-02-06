@@ -9,6 +9,7 @@ cards:
       - switch.0x000d6ffffea6e967_switch
   - type: entities
     title: Exterior covers
+    show_header_toggle: false
     entities:
       - cover.attic_shutters
   # - !include cards/solar_panels.yaml

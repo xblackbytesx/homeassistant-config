@@ -1,5 +1,6 @@
 type: entities
 title: Garbage Pickup
+show_header_toggle: false
 entities:
   - sensor.garbage_pickup_today
   - sensor.garbage_pickup_upcoming
