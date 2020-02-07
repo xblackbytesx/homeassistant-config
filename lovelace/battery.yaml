@@ -11,6 +11,7 @@ cards:
         - name: "*smoke*"
           attributes:
             device_class: battery
+
   - type: custom:auto-entities
     show_empty: false
     card:
@@ -21,6 +22,7 @@ cards:
         - name: "*motion*"
           attributes:
             device_class: battery
+
   - type: custom:auto-entities
     show_empty: false
     card:
@@ -31,6 +33,7 @@ cards:
         - name: "*contact*"
           attributes:
             device_class: battery
+
   - type: custom:auto-entities
     show_empty: false
     card:
@@ -41,6 +44,7 @@ cards:
         - name: "*climate*"
           attributes:
             device_class: battery
+
   - type: custom:auto-entities
     show_empty: false
     card:
@@ -51,6 +55,7 @@ cards:
         - name: "*plant*"
           attributes:
             device_class: battery
+            
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
