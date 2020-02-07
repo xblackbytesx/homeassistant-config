@@ -4,7 +4,9 @@ cards:
     entity: sensor.sonarr_upcoming_media
     title: Upcoming TV
     image_style: fanart
+    all_shadows: false
   - type: custom:upcoming-media-card
     entity: sensor.radarr_upcoming_media
     title: Upcoming Movies
     image_style: fanart
+    all_shadows: false

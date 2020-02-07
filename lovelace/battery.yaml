@@ -1,60 +1,35 @@
 title: Battery Stats
 icon: mdi:battery-charging
 cards:
-  - type: custom:auto-entities
-    show_empty: false
-    card:
-      type: entities
-      title: Smoke sensor batteries
-    filter:
-      include:
-        - name: "*smoke*"
-          attributes:
-            device_class: battery
+  - type: custom:decluttering-card
+    template: battery_entity
+    variables:
+      - title: Smoke sensor batteries
+      - filter: smoke
 
-  - type: custom:auto-entities
-    show_empty: false
-    card:
-      type: entities
-      title: Motion sensor batteries
-    filter:
-      include:
-        - name: "*motion*"
-          attributes:
-            device_class: battery
+  - type: custom:decluttering-card
+    template: battery_entity
+    variables:
+      - title: Motion sensor batteries
+      - filter: motion
 
-  - type: custom:auto-entities
-    show_empty: false
-    card:
-      type: entities
-      title: Contact sensor batteries
-    filter:
-      include:
-        - name: "*contact*"
-          attributes:
-            device_class: battery
+  - type: custom:decluttering-card
+    template: battery_entity
+    variables:
+      - title: Contact sensor batteries
+      - filter: contact
 
-  - type: custom:auto-entities
-    show_empty: false
-    card:
-      type: entities
-      title: Climate sensor batteries
-    filter:
-      include:
-        - name: "*climate*"
-          attributes:
-            device_class: battery
+  - type: custom:decluttering-card
+    template: battery_entity
+    variables:
+      - title: Climate sensor batteries
+      - filter: climate
 
-  - type: custom:auto-entities
-    show_empty: false
-    card:
-      type: entities
-      title: Plant sensor batteries
-    filter:
-      include:
-        - name: "*plant*"
-          attributes:
-            device_class: battery
+  - type: custom:decluttering-card
+    template: battery_entity
+    variables:
+      - title: Plant sensor batteries
+      - filter: plant
             
   - type: conditional
     conditions:
