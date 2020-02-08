@@ -4,7 +4,7 @@ battery_entity:
     show_empty: false
     card:
       type: entities
-      title: [[tite]]
+      title: [[title]]
     filter:
       include:
         - name: "*[[filter]]*"
