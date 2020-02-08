@@ -4,9 +4,9 @@ battery_entity:
       show_empty: false
       card:
         type: entities
-        title: [[tite]]
+        title: '[[tite]]'
       filter:
         include:
-          - name: "*[[filter]]*"
+          - name: "*'[[filter]]'*"
             attributes:
               device_class: battery
