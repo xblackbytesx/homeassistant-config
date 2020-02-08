@@ -1,12 +1,12 @@
 battery_entity:
   card:
-    - type: custom:auto-entities
-      show_empty: false
-      card:
-        type: entities
-        title: '[[tite]]'
-      filter:
-        include:
-          - name: "*'[[filter]]'*"
-            attributes:
-              device_class: battery
+    type: custom:auto-entities
+    show_empty: false
+    card:
+      type: entities
+      title: [[tite]]
+    filter:
+      include:
+        - name: "*[[filter]]*"
+          attributes:
+            device_class: battery
