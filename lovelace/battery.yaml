@@ -11,31 +11,31 @@ cards:
     template: battery_entity
     variables:
       - title: Smoke sensor batteries
-      - filter: "*smoke*"
+      - filter: "*Smoke*"
 
   - type: custom:decluttering-card
     template: battery_entity
     variables:
       - title: Motion sensor batteries
-      - filter: "*motion*"
+      - filter: "*Motion*"
 
   - type: custom:decluttering-card
     template: battery_entity
     variables:
       - title: Contact sensor batteries
-      - filter: "*contact*"
+      - filter: "*Contact*"
 
   - type: custom:decluttering-card
     template: battery_entity
     variables:
       - title: Climate sensor batteries
-      - filter: "*climate*"
+      - filter: "*Climate*"
 
   - type: custom:decluttering-card
     template: battery_entity
     variables:
       - title: Plant sensor batteries
-      - filter: "*plant*"
+      - filter: "*Plant*"
             
   - type: conditional
     conditions:
