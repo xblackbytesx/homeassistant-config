@@ -7,6 +7,6 @@ battery_entity:
       title: [[title]]
     filter:
       include:
-        - name: "*[[filter]]*"
+        - name: [[filter]]
           attributes:
             device_class: battery

@@ -1,35 +1,45 @@
 title: Battery Stats
 icon: mdi:battery-charging
 cards:
+  - type: custom:auto-entities
+    card:
+      type: entities
+      title: Nearly empty batteries
+    filter:
+      include:
+        - entity_id: "*_battery*"
+          attributes:
+            battery: "< 50"
+
   - type: custom:decluttering-card
     template: battery_entity
     variables:
       - title: Smoke sensor batteries
-      - filter: smoke
+      - filter: "*smoke*"
 
   - type: custom:decluttering-card
     template: battery_entity
     variables:
       - title: Motion sensor batteries
-      - filter: motion
+      - filter: "*motion*"
 
   - type: custom:decluttering-card
     template: battery_entity
     variables:
       - title: Contact sensor batteries
-      - filter: contact
+      - filter: "*contact*"
 
   - type: custom:decluttering-card
     template: battery_entity
     variables:
       - title: Climate sensor batteries
-      - filter: climate
+      - filter: "*climate*"
 
   - type: custom:decluttering-card
     template: battery_entity
     variables:
       - title: Plant sensor batteries
-      - filter: plant
+      - filter: "*plant*"
             
   - type: conditional
     conditions:
