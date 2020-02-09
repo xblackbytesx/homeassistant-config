@@ -1,5 +1,6 @@
 battery_near_empty:
-  - type: custom:auto-entities
+  card:
+    type: custom:auto-entities
     show_empty: false
     card:
       type: entities
