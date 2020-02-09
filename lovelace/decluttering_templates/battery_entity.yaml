@@ -11,17 +11,3 @@ battery_entity:
         - name: '[[filter]]'
           attributes:
             device_class: battery
-
-
-battery_near_empty:
-  - type: custom:auto-entities
-    show_empty: false
-    card:
-      type: entities
-      title: Nearly empty batteries
-      show_header_toggle: false
-    filter:
-      include:
-        - entity_id: "*_battery*"
-          attributes:
-            battery: '[[threshold]]'
