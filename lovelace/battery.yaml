@@ -1,15 +1,11 @@
 title: Battery Stats
 icon: mdi:battery-charging
 cards:
-  - type: custom:auto-entities
-    card:
-      type: entities
-      title: Nearly empty batteries
-    filter:
-      include:
-        - entity_id: "*_battery*"
-          attributes:
-            battery: "< 50"
+  - type: custom:decluttering-card
+    template: battery_near_empty
+    variables:
+      - title: Nearly empty batteries
+      - threshold: "< 50"
 
   - type: custom:decluttering-card
     template: battery_entity
@@ -51,6 +47,7 @@ cards:
       card:
         type: entities
         title: Battery status
+        show_header_toggle: false
       filter:
         include:
           - entity_id: "*_battery*"
