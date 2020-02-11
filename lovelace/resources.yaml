@@ -20,5 +20,3 @@
   type: js
 - url: /local/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
   type: js
-- url: /local/custom-lovelace/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js
-  type: module

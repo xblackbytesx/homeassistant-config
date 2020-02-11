@@ -50,6 +50,7 @@ frontend:
 lovelace:
   mode: yaml
 
+updater:
 mobile_app:
 
 http:
@@ -59,7 +60,14 @@ http:
     - https://google.com
     - https://www.home-assistant.io
 
-updater:
+mqtt:
+  discovery: true
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
 
 binary_sensor: !include binary_sensor.yaml
 automation: !include_dir_merge_list automation/
