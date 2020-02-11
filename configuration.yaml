@@ -60,15 +60,6 @@ http:
     - https://google.com
     - https://www.home-assistant.io
 
-mqtt:
-  discovery: true
-  birth_message:
-    topic: 'hass/status'
-    payload: 'online'
-  will_message:
-    topic: 'hass/status'
-    payload: 'offline'
-
 binary_sensor: !include binary_sensor.yaml
 automation: !include_dir_merge_list automation/
 sensor: !include_dir_merge_list sensor/
