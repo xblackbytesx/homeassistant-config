@@ -55,6 +55,9 @@ binary_sensor.0x00158d000302ec77_occupancy:
 binary_sensor.0x00158d0004499f26_occupancy:
   friendly_name: Office/front
   device_class: motion
+sensor.0x680ae2fffe367f3b_occupancy:
+  friendly_name: Tradfri
+  device_class: motion
 
 
 sensor.0x00178801020260c3_battery:
@@ -98,4 +101,7 @@ sensor.0x00158d000302ec77_battery:
   device_class: battery
 sensor.0x00158d0004499f26_battery:
   friendly_name: Motion sensor Office/front
+  device_class: battery
+sensor.0x680ae2fffe367f3b_battery:
+  friendly_name: Motion sensor Tradfri
   device_class: battery
