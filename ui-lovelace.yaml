@@ -26,3 +26,4 @@ views:
   - !include lovelace/battery.yaml
   - !include lovelace/automation.yaml
   - !include lovelace/overrides.yaml
+  - !include lovelace/zigbee.yaml

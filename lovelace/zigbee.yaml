@@ -25,3 +25,4 @@ cards:
         --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);
         --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);
       }
+  - !include cards/zigbee.yaml
