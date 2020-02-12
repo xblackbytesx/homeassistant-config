@@ -16,16 +16,16 @@
   action:
     service_template: >
       {% if trigger.event.data.state == 'on' %}
-        scene.turn_on
+        script.turn_on
       {% elif trigger.event.data.state == 'off' %}
         light.turn_off
       {% endif %}
     data_template:
       entity_id: >
         {% if trigger.event.data.entity_id == 'switch.duo_switch_sb_l' and trigger.event.data.state == 'on' %}
-          scene.sb_night
+          script.scene_sb_night
         {% elif trigger.event.data.entity_id == 'switch.duo_switch_sb_r' and trigger.event.data.state == 'on' %}
-          scene.sb_day
+          script.scene_sb_day
         {% elif trigger.event.data.state == 'off' %}
           light.lg_sb_all
         {% endif %}
