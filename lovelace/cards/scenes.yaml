@@ -14,10 +14,10 @@ cards:
     variables:
       - title: Large bedroom
       - service: script.turn_on
-      - entity_1: scene_lb_night
-      - entity_2: scene_lb_day
-      - entity_3: scene_lb_search_mode
-      - entity_4: scene_lb_reset_default
+      - entity_1: script.scene_lb_night
+      - entity_2: script.scene_lb_day
+      - entity_3: script.scene_lb_search_mode
+      - entity_4: script.scene_lb_reset_default
   - type: custom:decluttering-card
     template: scene_tile
     variables:
