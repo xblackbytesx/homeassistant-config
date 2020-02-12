@@ -85,6 +85,7 @@
     data_template:
       entity_id: script.set_dynamic_scene
       variables:
+        service: scene.turn_on
         trigger_to_state: '{{ trigger.to_state.state }}'
         dark_enough: '{{ states("binary_sensor.bathroom_dark_enough") }}'
         scene_day: 'scene.bathroom_day'

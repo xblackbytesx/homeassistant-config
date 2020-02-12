@@ -19,15 +19,15 @@
         message: "-----------------------------------------------\n
                   | Smoke has been detected in the {{ state_attr(trigger.entity_id, 'friendly_name') }}! |\n
                   -----------------------------------------------"
-    - service: scene.turn_on
+    - service: script.turn_on
       data_template:
         entity_id: >
           {% if state_attr(trigger.entity_id, 'friendly_name') == 'Living Room' %}
-            scene.lr_search_mode
+            script.scene_lr_search_mode
           {% elif state_attr(trigger.entity_id, 'friendly_name') == 'Large Bedroom' %}
-            scene.lb_search_mode
+            script.scene_lb_search_mode
           {% elif state_attr(trigger.entity_id, 'friendly_name') == 'Small Bedroom' %}
-            scene.sb_search_mode
+            script.scene_sb_search_mode
           {% endif %}
 
 

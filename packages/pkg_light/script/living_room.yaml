@@ -1,0 +1,102 @@
+scene_sa_not_watching_tv:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.0x00178801081af093_light
+        brightness_pct: 50
+    - service: light.turn_on
+      data:
+        entity_id: light.hue_go_closet_l
+        xy_color: [0.236, 0.41]
+        brightness_pct: 45
+    - service: light.turn_on
+      data:
+        entity_id: light.hue_go_closet_r
+        xy_color: [0.311, 0.225]
+        brightness_pct: 45
+    - service: light.turn_on
+      data:
+        entity_id: light.0x00178801089f827b_light
+        brightness_pct: 50
+    - service: light.turn_on
+      data:
+        entity_id: light.hue_iris_tv_cabinet
+        xy_color: [0.631, 0.343]
+        brightness_pct: 45
+    - service: light.turn_on
+      data:
+        entity_id: light.hue_candle_salt_lamp
+        xy_color: [0.632, 0.342]
+        brightness_pct: 75
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_tv_cabinet
+        xy_color: [0.149, 0.291]
+        brightness_pct: 10
+        transition: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_black_cabinet
+        xy_color: [0.149, 0.291]
+        brightness_pct: 10
+        transition: 2
+    
+
+scene_sa_watching_tv:
+  sequence:
+    - service: light.turn_off
+      entity_id: 
+        - light.0x00178801081af093_light
+        - light.hue_go_closet_l
+        - light.hue_go_closet_r
+        - light.0x00178801089f827b_light
+    - service: light.turn_on
+      data:
+        entity_id: light.hue_iris_tv_cabinet
+        brightness_pct: 30
+    - service: light.turn_on
+      data:
+        entity_id: light.hue_candle_salt_lamp
+        brightness_pct: 50
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_tv_cabinet
+        xy_color: [0.701, 0.299]
+        brightness_pct: 5
+        transition: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_black_cabinet
+        xy_color: [0.701, 0.299]
+        brightness_pct: 5
+        transition: 2
+
+
+scene_lr_search_mode:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_lr_all
+        xy_color: [0.311, 0.327]
+        brightness_pct: 100
+    - service: homeassistant.turn_off
+      entity_id: 
+        - automation.sa_001
+        - automation.sa_002
+        - automation.kitchen_001
+        - automation.kitchen_002
+
+
+scene_lr_reset_default:
+  alias: Resets the sitting area default scene
+  sequence:
+    - service: script.turn_on
+      entity_id: 
+        - script.scene_sa_not_watching_tv
+        - script.scene_kitchen_relax
+    - service: homeassistant.turn_on
+      entity_id: 
+        - automation.sa_001
+        - automation.sa_002
+        - automation.kitchen_001
+        - automation.kitchen_002

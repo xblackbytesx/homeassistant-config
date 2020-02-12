@@ -1,39 +1,39 @@
-- name: SB | Night
-  entities:
-    light.0x00178801023c1a33_light:
-      state: true
-      xy_color: [0.137, 0.041]
-      brightness_pct: 60
-      transition: 2
-    light.dimmable_socket_one:
-      state: true
-      brightness_pct: 60
-      transition: 2
+# - name: SB | Night
+#   entities:
+#     light.0x00178801023c1a33_light:
+#       state: true
+#       xy_color: [0.137, 0.041]
+#       brightness_pct: 60
+#       transition: 2
+#     light.dimmable_socket_one:
+#       state: true
+#       brightness_pct: 60
+#       transition: 2
 
-- name: SB | Day
-  entities:
-    light.0x00178801023c1a33_light:
-      state: true
-      xy_color: [0.507, 0.414]
-      brightness_pct: 100
-      transition: 2
+# - name: SB | Day
+#   entities:
+#     light.0x00178801023c1a33_light:
+#       state: true
+#       xy_color: [0.507, 0.414]
+#       brightness_pct: 100
+#       transition: 2
 
-- name: SB | Search Mode
-  entities:
-    light.lg_sb_all:
-      state: true
-      xy_color: [0.311, 0.327]
-      brightness_pct: 100
-    automation.sb_001:
-      state: false
-    automation.sb_002:
-      state: false
+# - name: SB | Search Mode
+#   entities:
+#     light.lg_sb_all:
+#       state: true
+#       xy_color: [0.311, 0.327]
+#       brightness_pct: 100
+#     automation.sb_001:
+#       state: false
+#     automation.sb_002:
+#       state: false
 
-- name: SB | Reset Default
-  entities:
-    scene.sb_day:
-      state: true
-    automation.sb_001:
-      state: true
-    automation.sb_002:
-      state: true
+# - name: SB | Reset Default
+#   entities:
+#     scene.sb_day:
+#       state: true
+#     automation.sb_001:
+#       state: true
+#     automation.sb_002:
+#       state: true

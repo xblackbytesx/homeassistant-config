@@ -38,13 +38,13 @@
         entity_id: binary_sensor.sa_dark_enough
         state: 'on'
   action:
-    service: scene.turn_on
+    service: script.turn_on
     data_template:
       entity_id: >
         {% if is_state('binary_sensor.sa_tv_media_playing', 'on') and is_state('input_boolean.sa_media_status_scene_switching', 'on') %}
-          scene.sa_watching_tv
+          script.scene_sa_watching_tv
         {% else %}
-          scene.sa_not_watching_tv
+          script.scene_sa_not_watching_tv
         {% endif %}
 
 

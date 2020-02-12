@@ -1,5 +1,17 @@
-scene_reset_kitchen:
-  alias: Resets the kitchen default scene
+scene_kitchen_relax:
   sequence:
-    service: scene.turn_on
-    entity_id: scene.kitchen_relax
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_kitchen_table
+        brightness_pct: 50
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_kitchen_counter
+        xy_color: [0.507, 0.414]
+        brightness_pct: 65
+    - service: light.turn_on
+      data:
+        entity_id: ledstrip_kitchen_cabinet
+        xy_color: [0.149, 0.291]
+        brightness_pct: 10
+        transition: 2

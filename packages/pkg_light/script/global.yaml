@@ -3,7 +3,7 @@ set_dynamic_scene:
   sequence:
     service_template: >
       {% if trigger_to_state == 'on' %}
-        scene.turn_on
+        {{ service }}
       {% elif trigger_to_state == 'off' %}
         light.turn_off
       {% endif %}
@@ -14,28 +14,6 @@ set_dynamic_scene:
             {{ scene_night }}
           {% else %}
             {{ scene_day }}
-          {% endif %}
-        {% elif trigger_to_state == 'off' %}
-          {{ light_group }}
-        {% endif %}
-
-
-set_dynamic_script:
-  alias: Global | Set appropriate dynamic script
-  sequence:
-    service_template: >
-      {% if trigger_to_state == 'on' %}
-        script.turn_on
-      {% elif trigger_to_state == 'off' %}
-        light.turn_off
-      {% endif %}
-    data_template:
-      entity_id: >
-        {% if trigger_to_state == 'on' and dark_enough == 'on' %}
-          {% if is_state('input_boolean.time_for_dim_scripts', 'on') %}
-            {{ script_night }}
-          {% else %}
-            {{ script_day }}
           {% endif %}
         {% elif trigger_to_state == 'off' %}
           {{ light_group }}

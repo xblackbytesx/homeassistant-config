@@ -1,5 +1,47 @@
-scene_reset_small_bedroom:
+scene_sb_night:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.0x00178801023c1a33_light
+        xy_color: [0.137, 0.041]
+        brightness_pct: 60
+        transition: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.dimmable_socket_one
+        brightness_pct: 60
+        transition: 2
+
+
+scene_sb_day:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.0x00178801023c1a33_light
+        xy_color: [0.507, 0.414]
+        brightness_pct: 100
+        transition: 2
+
+
+scene_sb_search_mode:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_sb_all
+        xy_color: [0.311, 0.327]
+        brightness_pct: 100
+    - service: homeassistant.turn_off
+      entity_id: 
+        - automation.sb_001
+        - automation.sb_002
+
+
+scene_sb_reset_default:
   alias: Resets the small bedroom default scene
   sequence:
-    service: scene.turn_on
-    entity_id: scene.sb_day
+    - service: script.turn_on
+      entity_id: script.scene_sb_day
+    - service: homeassistant.turn_on
+      entity_id: 
+        - automation.sb_001
+        - automation.sb_002
