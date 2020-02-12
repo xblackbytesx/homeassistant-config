@@ -31,9 +31,9 @@ cards:
     template: scene_tile
     variables:
       - title: Master bedroom
-      - service: scene.turn_on
-      - entity_1: scene.mb_night
-      - entity_2: scene.mb_day
-      - entity_3: scene.mb_search_mode
-      - entity_4: scene.mb_reset_default
+      - service: script.turn_on
+      - entity_1: script.scene_mb_night
+      - entity_2: script.scene_mb_day
+      - entity_3: script.scene_mb_search_mode
+      - entity_4: script.scene_mb_reset_default
       

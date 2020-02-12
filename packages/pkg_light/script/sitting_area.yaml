@@ -36,10 +36,3 @@ light_decrease_brightness:
         {% else %}
           0
         {% endif %}
-        
-
-scene_reset_sitting_area:
-  alias: Resets the sitting area default scene
-  sequence:
-    service: scene.turn_on
-    entity_id: script.scene_sa_not_watching_tv

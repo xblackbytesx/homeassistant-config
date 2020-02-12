@@ -1,5 +1,48 @@
-scene_reset_master_bedroom:
+scene_mb_night:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_mb_all
+        xy_color: [0.507, 0.414]
+        brightness_pct: 50
+        transition: 2
+
+
+scene_mb_day:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_mb_all
+        xy_color: [0.507, 0.414]
+        brightness_pct: 100
+        transition: 2
+
+
+scene_mb_search_mode:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_mb_all
+        xy_color: [0.311, 0.327]
+        brightness_pct: 100
+    - service: homeassistant.turn_off
+      entity_id: 
+        - automation.mb_001
+        - automation.mb_002
+        - automation.mb_003
+        - automation.mb_004
+        - automation.mb_005
+
+
+scene_mb_reset_default:
   alias: Resets the master bedroom default scene
   sequence:
-    service: scene.turn_on
-    entity_id: scene.mb_day
+    - service: script.turn_on
+      entity_id: script.scene_mb_day
+    - service: homeassistant.turn_on
+      entity_id: 
+        - automation.mb_001
+        - automation.mb_002
+        - automation.mb_003
+        - automation.mb_004
+        - automation.mb_005
