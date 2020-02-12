@@ -6,6 +6,7 @@
       brightness_pct: 50
       kelvin: 2700
 
+
 - name: MB | Day
   entities:
     light.lg_mb_all:
@@ -13,3 +14,37 @@
       transition: 1
       brightness_pct: 100
       kelvin: 2700
+
+
+- name: MB | Search Mode
+  entities:
+    light.lg_mb_all:
+      state: true
+      xy_color: [0.311, 0.327]
+      brightness_pct: 100
+    automation.mb_001:
+      state: false
+    automation.mb_002:
+      state: false
+    automation.mb_003:
+      state: false
+    automation.mb_004:
+      state: false
+    automation.mb_005:
+      state: false
+
+
+- name: MB | Reset Default
+  entities:
+    scene.mb_day:
+      state: true
+    automation.mb_001:
+      state: true
+    automation.mb_002:
+      state: true
+    automation.mb_003:
+      state: true
+    automation.mb_004:
+      state: true
+    automation.mb_005:
+      state: true
