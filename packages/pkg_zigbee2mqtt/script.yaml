@@ -10,7 +10,7 @@ zigbee2mqtt_rename:
           "new": "{{ states.input_text.zigbee2mqtt_new_name.state | string }}"
         }
 
-
+        
 zigbee2mqtt_remove:
   alias: Zigbee2mqtt Remove
   sequence:
@@ -18,3 +18,4 @@ zigbee2mqtt_remove:
     data_template:
       topic: zigbee2mqtt/bridge/config/remove
       payload_template: "{{ states.input_text.zigbee2mqtt_remove.state | string }}"
+      

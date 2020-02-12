@@ -86,9 +86,9 @@ echo "Installing Simple Thermostat Card"
 mkdir -p www/custom-lovelace/simple-thermostat
 wget https://github.com/nervetattoo/simple-thermostat/releases/download/0.33.1/simple-thermostat.js -O www/custom-lovelace/simple-thermostat/simple-thermostat.js
 
-echo "Installing ZigBee NetworkMap Card"
-mkdir -p www/custom-lovelace/zigbee2mqtt-networkmap
-wget https://github.com/azuwis/zigbee2mqtt-networkmap/releases/download/v0.6.0/zigbee2mqtt-networkmap.js -O www/custom-lovelace/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js
+# echo "Installing ZigBee NetworkMap Card"
+# mkdir -p www/custom-lovelace/zigbee2mqtt-networkmap
+# wget https://github.com/azuwis/zigbee2mqtt-networkmap/releases/download/v0.6.0/zigbee2mqtt-networkmap.js -O www/custom-lovelace/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js
 
 echo "Bump versions in resources"
 EPOCH=$(date +%s)
