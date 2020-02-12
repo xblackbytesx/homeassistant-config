@@ -43,7 +43,7 @@ scene_lb_search_mode:
         - automation.lb_002
 
 
-scene_reset_large_bedroom:
+scene_lb_reset_default:
   alias: Resets the large bedroom default scene
   sequence:
     - service: script.turn_on

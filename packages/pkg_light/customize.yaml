@@ -182,19 +182,19 @@ scene.lr_reset_default:
   friendly_name: Reset
   icon: mdi:cancel
 
-scene.lb_day:
+script.scene_lb_day:
   friendly_name: Day
   icon: mdi:weather-sunny
 
-scene.lb_night:
+script.scene_lb_night:
   friendly_name: Night
   icon: mdi:weather-night
 
-scene.lb_search_mode:
+script.scene_lb_search_mode:
   friendly_name: Search Mode
   icon: mdi:magnify
 
-scene.lb_reset_default:
+script.scene_lb_reset_default:
   friendly_name: Reset
   icon: mdi:cancel
 
