@@ -4,6 +4,7 @@ cards:
     template: scene_tile
     variables:
       - title: Living Room
+      - service: scene.turn_on
       - entity_1: scene.sa_watching_tv
       - entity_2: scene.sa_not_watching_tv
       - entity_3: scene.lr_search_mode
@@ -12,14 +13,16 @@ cards:
     template: scene_tile
     variables:
       - title: Large bedroom
-      - entity_1: scene.lb_night
-      - entity_2: scene.lb_day
-      - entity_3: scene.lb_search_mode
-      - entity_4: scene.lb_reset_default
+      - service: script.turn_on
+      - entity_1: scene_lb_night
+      - entity_2: scene_lb_day
+      - entity_3: scene_lb_search_mode
+      - entity_4: scene_lb_reset_default
   - type: custom:decluttering-card
     template: scene_tile
     variables:
       - title: Small bedroom
+      - service: scene.turn_on
       - entity_1: scene.sb_night
       - entity_2: scene.sb_day
       - entity_3: scene.sb_search_mode
@@ -28,6 +31,7 @@ cards:
     template: scene_tile
     variables:
       - title: Master bedroom
+      - service: scene.turn_on
       - entity_1: scene.mb_night
       - entity_2: scene.mb_day
       - entity_3: scene.mb_search_mode

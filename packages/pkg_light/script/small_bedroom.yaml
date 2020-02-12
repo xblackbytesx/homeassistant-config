@@ -1,0 +1,5 @@
+scene_reset_small_bedroom:
+  alias: Resets the small bedroom default scene
+  sequence:
+    service: scene.turn_on
+    entity_id: scene.sb_day

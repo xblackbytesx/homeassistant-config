@@ -20,6 +20,28 @@ set_dynamic_scene:
         {% endif %}
 
 
+set_dynamic_script:
+  alias: Global | Set appropriate dynamic script
+  sequence:
+    service_template: >
+      {% if trigger_to_state == 'on' %}
+        script.turn_on
+      {% elif trigger_to_state == 'off' %}
+        light.turn_off
+      {% endif %}
+    data_template:
+      entity_id: >
+        {% if trigger_to_state == 'on' and dark_enough == 'on' %}
+          {% if is_state('input_boolean.time_for_dim_scripts', 'on') %}
+            {{ script_night }}
+          {% else %}
+            {{ script_day }}
+          {% endif %}
+        {% elif trigger_to_state == 'off' %}
+          {{ light_group }}
+        {% endif %}
+
+
 # handle_duo_switch_lights:
 #   alias: Global | Handle Duo Switch lights
 #   sequence:
@@ -38,43 +60,3 @@ set_dynamic_scene:
 #         {% elif trigger_to_state == 'off' %}
 #           light.lg_lb_all
 #         {% endif %}
-
-
-light_increase_brightness:
-  alias: SA | Increase brightness
-  sequence:
-    service: light.turn_on
-    data_template:
-      entity_id: '{{ light_group }}'
-      transition: '1'
-      brightness: >
-        {% if not state_attr(light_group, 'brightness') == None %}
-          {% set n = state_attr(light_group, 'brightness') + 25 %}
-          {% if n > 255 %}
-            255
-          {% else %}
-            {{ n }}
-          {% endif %}
-        {% else %}
-          25
-        {% endif %}
-
-
-light_decrease_brightness:
-  alias: SA | Decrease brightness
-  sequence:
-    service: light.turn_on
-    data_template:
-      entity_id: '{{ light_group }}'
-      transition: '1'
-      brightness: >
-        {% if not state_attr(light_group, 'brightness') == None %}
-          {% set n = state_attr(light_group, 'brightness') - 25 %}
-          {% if n > 255 %}
-            255
-          {% else %}
-            {{ n }}
-          {% endif %}
-        {% else %}
-          0
-        {% endif %}

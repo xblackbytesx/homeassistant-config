@@ -1,0 +1,5 @@
+scene_reset_kitchen:
+  alias: Resets the kitchen default scene
+  sequence:
+    service: scene.turn_on
+    entity_id: scene.kitchen_relax

@@ -1,0 +1,54 @@
+scene_lb_night:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.0x00178801039d140f_light
+        xy_color: [0.137, 0.041]
+        brightness_pct: 90
+        transition: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_large_bedroom
+        xy_color: [0.137, 0.041]
+        brightness_pct: 40
+        transition: 2
+
+
+scene_lb_day:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.0x00178801039d140f_light
+        xy_color: [0.507, 0.414]
+        brightness_pct: 100
+        transition: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_large_bedroom
+        xy_color: [0.149, 0.291]
+        brightness_pct: 90
+        transition: 2
+
+
+scene_lb_search_mode:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_lb_all
+        xy_color: [0.311, 0.327]
+        brightness_pct: 100
+    - service: homeassistant.turn_off
+      entity_id: 
+        - automation.lb_001
+        - automation.lb_002
+
+
+scene_reset_large_bedroom:
+  alias: Resets the large bedroom default scene
+  sequence:
+    - service: script.turn_on
+      entity_id: script.scene_lb_day
+    - service: homeassistant.turn_on
+      entity_id: 
+        - automation.lb_001
+        - automation.lb_002

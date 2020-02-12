@@ -14,7 +14,7 @@ scene_tile:
               - entity: '[[entity_1]]'
                 tap_action:
                   action: call-service
-                  service: scene.turn_on
+                  service: '[[service]]'
                   service_data:
                     entity_id: '[[entity_1]]'
           - type: glance
@@ -24,7 +24,7 @@ scene_tile:
               - entity: '[[entity_2]]'
                 tap_action:
                   action: call-service
-                  service: scene.turn_on
+                  service: '[[service]]'
                   service_data:
                     entity_id: '[[entity_2]]'
           - type: glance
@@ -34,7 +34,7 @@ scene_tile:
               - entity: '[[entity_3]]'
                 tap_action:
                   action: call-service
-                  service: scene.turn_on
+                  service: '[[service]]'
                   service_data:
                     entity_id: '[[entity_3]]'
           - type: glance
@@ -44,6 +44,6 @@ scene_tile:
               - entity: '[[entity_4]]'
                 tap_action:
                   action: call-service
-                  service: scene.turn_on
+                  service: '[[service]]'
                   service_data:
                     entity_id: '[[entity_4]]'

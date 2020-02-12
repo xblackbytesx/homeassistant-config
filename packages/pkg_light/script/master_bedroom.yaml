@@ -1,0 +1,5 @@
+scene_reset_master_bedroom:
+  alias: Resets the master bedroom default scene
+  sequence:
+    service: scene.turn_on
+    entity_id: scene.mb_day
