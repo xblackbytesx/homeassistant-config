@@ -85,7 +85,7 @@
     data_template:
       entity_id: >
         {% if trigger.event.data.entity_id == 'switch.single_switch_mb' and trigger.event.data.state == 'on' %}
-          script.screne_mb_night
+          script.scene_mb_night
         {% elif trigger.event.data.state == 'off' %}
           light.lg_mb_all
         {% endif %}
