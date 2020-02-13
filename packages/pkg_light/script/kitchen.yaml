@@ -11,7 +11,7 @@ scene_kitchen_relax:
         brightness_pct: 65
     - service: light.turn_on
       data:
-        entity_id: ledstrip_kitchen_cabinet
+        entity_id: light.ledstrip_kitchen_cabinet
         xy_color: [0.149, 0.291]
         brightness_pct: 10
         transition: 2
