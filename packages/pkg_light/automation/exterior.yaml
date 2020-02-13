@@ -28,5 +28,5 @@
         after: '15:00:00'
         before: '03:30:00'
   action:
-    service: scene.turn_on
-    entity_id: scene.ex_relax
+    service: script.turn_on
+    entity_id: script.scene_ex_relax

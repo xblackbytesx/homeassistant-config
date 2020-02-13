@@ -51,11 +51,11 @@
         - switch.0x000d6ffffea6df64_switch
         - switch.0x000d6ffffedaf667_switch
         - switch.0x000d6ffffedc5e05_switch
-    - service: scene.turn_on
+    - service: script.turn_on
       entity_id:
-        - scene.sa_not_watching_tv
-        - scene.kitchen_relax
-        - scene.ex_relax
+        - script.scene_sa_not_watching_tv
+        - script.scene_kitchen_relax
+        - script.scene_ex_relax
     - service: notify.notify_matrix_clean
       data:
         message: "Shining bright like a diamond!"
