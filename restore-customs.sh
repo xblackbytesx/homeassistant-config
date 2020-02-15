@@ -4,7 +4,6 @@
 rm -rf themes
 rm -rf custom_components
 rm -rf www/custom-lovelace
-rm www/tracker-card.js
 
 echo "Fetching themes"
 mkdir -p themes
@@ -76,15 +75,15 @@ wget https://raw.githubusercontent.com/thomasloven/lovelace-card-tools/master/ca
 
 echo "Installing Mini Graph Card"
 mkdir -p www/custom-lovelace/lovelace-mini-graph-card
-wget https://github.com/kalkih/mini-graph-card/releases/download/v0.9.1/mini-graph-card-bundle.js -O www/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js
+wget https://github.com/kalkih/mini-graph-card/releases/download/v0.9.2/mini-graph-card-bundle.js -O www/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js
 
 echo "Installing Mini Media Player Card"
 mkdir -p www/custom-lovelace/lovelace-mini-media-player
-wget https://github.com/kalkih/mini-media-player/releases/download/v1.5.2/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
+wget https://github.com/kalkih/mini-media-player/releases/download/v1.6.0/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
 
-echo "Installing Simple Thermostat Card"
-mkdir -p www/custom-lovelace/simple-thermostat
-wget https://github.com/nervetattoo/simple-thermostat/releases/download/0.33.1/simple-thermostat.js -O www/custom-lovelace/simple-thermostat/simple-thermostat.js
+# echo "Installing Simple Thermostat Card"
+# mkdir -p www/custom-lovelace/simple-thermostat
+# wget https://github.com/nervetattoo/simple-thermostat/releases/download/0.33.1/simple-thermostat.js -O www/custom-lovelace/simple-thermostat/simple-thermostat.js
 
 # echo "Installing ZigBee NetworkMap Card"
 # mkdir -p www/custom-lovelace/zigbee2mqtt-networkmap
