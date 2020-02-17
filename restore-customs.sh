@@ -41,9 +41,9 @@ echo "Installing Decluttering Card"
 mkdir -p www/custom-lovelace/decluttering-card
 wget https://github.com/custom-cards/decluttering-card/releases/download/0.3.0/decluttering-card.js -O www/custom-lovelace/decluttering-card/decluttering-card.js
 
-echo "Installing custom-header"
-mkdir -p www/custom-lovelace/custom-header
-wget https://github.com/maykar/custom-header/releases/download/1.3.2/custom-header.js -O www/custom-lovelace/custom-header/custom-header.js
+# echo "Installing custom-header"
+# mkdir -p www/custom-lovelace/custom-header
+# wget https://github.com/maykar/custom-header/releases/download/1.3.2/custom-header.js -O www/custom-lovelace/custom-header/custom-header.js
 
 echo "Installing Upcoming Media Card"
 mkdir -p www/custom-lovelace/upcoming-media-card
