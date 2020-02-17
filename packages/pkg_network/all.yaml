@@ -1,6 +1,9 @@
 homeassistant:
   customize: !include customize.yaml
 
+pi_hole:
+  - host: !secret pihole_ip
+
 transmission:
   host: !secret synology_ip
   username: !secret transmission_user
