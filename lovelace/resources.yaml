@@ -6,8 +6,6 @@
   type: module
 - url: /local/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js
   type: js
-- url: /local/custom-lovelace/button-card/button-card.js
-  type: module
 - url: /local/custom-lovelace/lovelace-bar-card/bar-card.js
   type: js
 - url: /local/custom-lovelace/lovelace-card-tools/card-tools.js

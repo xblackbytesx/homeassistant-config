@@ -57,13 +57,13 @@ echo "Installing Swipe Navigation Card"
 mkdir -p www/custom-lovelace/lovelace-swipe-navigation
 wget https://raw.githubusercontent.com/maykar/lovelace-swipe-navigation/master/swipe-navigation.js -O www/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js
 
-echo "Installing Button Card"
-mkdir -p www/custom-lovelace/button-card
-wget http://www.github.com/custom-cards/button-card/releases/latest/download/button-card.js -O www/custom-lovelace/button-card/button-card.js
+# echo "Installing Button Card"
+# mkdir -p www/custom-lovelace/button-card
+# wget http://www.github.com/custom-cards/button-card/releases/latest/download/button-card.js -O www/custom-lovelace/button-card/button-card.js
 
 echo "Installing Bar Card"
 mkdir -p www/custom-lovelace/lovelace-bar-card
-wget https://raw.githubusercontent.com/custom-cards/bar-card/master/bar-card.js -O www/custom-lovelace/lovelace-bar-card/bar-card.js
+wget https://github.com/custom-cards/bar-card/releases/download/1.7.1/bar-card.js -O www/custom-lovelace/lovelace-bar-card/bar-card.js
 
 echo "Installing Fold-entity Card"
 mkdir -p www/custom-lovelace/lovelace-fold-entity-row
