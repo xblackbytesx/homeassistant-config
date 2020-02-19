@@ -41,10 +41,6 @@ echo "Installing Decluttering Card"
 mkdir -p www/custom-lovelace/decluttering-card
 wget https://github.com/custom-cards/decluttering-card/releases/download/0.3.0/decluttering-card.js -O www/custom-lovelace/decluttering-card/decluttering-card.js
 
-# echo "Installing custom-header"
-# mkdir -p www/custom-lovelace/custom-header
-# wget https://github.com/maykar/custom-header/releases/download/1.3.2/custom-header.js -O www/custom-lovelace/custom-header/custom-header.js
-
 echo "Installing Upcoming Media Card"
 mkdir -p www/custom-lovelace/upcoming-media-card
 wget https://raw.githubusercontent.com/custom-cards/upcoming-media-card/master/upcoming-media-card.js -O www/custom-lovelace/upcoming-media-card/upcoming-media-card.js
@@ -80,14 +76,6 @@ wget https://github.com/kalkih/mini-graph-card/releases/download/v0.9.2/mini-gra
 echo "Installing Mini Media Player Card"
 mkdir -p www/custom-lovelace/lovelace-mini-media-player
 wget https://github.com/kalkih/mini-media-player/releases/download/v1.6.0/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
-
-# echo "Installing Simple Thermostat Card"
-# mkdir -p www/custom-lovelace/simple-thermostat
-# wget https://github.com/nervetattoo/simple-thermostat/releases/download/0.33.1/simple-thermostat.js -O www/custom-lovelace/simple-thermostat/simple-thermostat.js
-
-# echo "Installing ZigBee NetworkMap Card"
-# mkdir -p www/custom-lovelace/zigbee2mqtt-networkmap
-# wget https://github.com/azuwis/zigbee2mqtt-networkmap/releases/download/v0.6.0/zigbee2mqtt-networkmap.js -O www/custom-lovelace/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js
 
 echo "Bump versions in resources"
 EPOCH=$(date +%s)

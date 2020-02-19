@@ -1,15 +1,19 @@
 - id: ex_003
   alias: ex_003
   trigger:
-  - at: '8:00'
     platform: time
+    at: '7:30'
   condition:
-  - condition: time
-    weekday:
-      - mon
-  - condition: template
-    value_template: "{{ not is_state('sensor.garbage_pickup_today', 'Geen') }}"
+    - condition: time
+      weekday:
+        - wed
+    - condition: template
+      value_template: "{{ not is_state('sensor.garbage_pickup_today', 'Geen') }}"
   action:
-    service: notify.notify_matrix_clean
-    data:
-      message: "Vandaag wordt de kliko voor {{ states('sensor.garbage_pickup_today') }} opgehaald!"
+    - service: notify.send_mail
+      data_template:
+        title: "ATTENTIE: Vandaag wordt de kliko voor {{ states('sensor.garbage_pickup_today') }} opgehaald!"
+        message: "Zeg tegen die luie vent van je dat die {{ states('sensor.garbage_pickup_today') }} bak buiten moet!"
+    - service: notify.notify_matrix_clean
+      data:
+        message: "Vandaag wordt de kliko voor {{ states('sensor.garbage_pickup_today') }} opgehaald!"
