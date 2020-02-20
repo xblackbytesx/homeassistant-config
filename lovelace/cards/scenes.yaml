@@ -1,14 +1,25 @@
 type: vertical-stack
 cards:
-  - type: custom:decluttering-card
-    template: scene_tile
-    variables:
-      - title: Living Room
-      - service: script.turn_on
-      - entity_1: script.scene_sa_watching_tv
-      - entity_2: script.scene_sa_not_watching_tv
-      - entity_3: script.scene_lr_search_mode
-      - entity_4: script.scene_lr_reset_default
+  - type: custom:swipe-card
+    cards:
+      - type: custom:decluttering-card
+        template: scene_tile
+        variables:
+          - title: Living Room
+          - service: script.turn_on
+          - entity_1: script.scene_sa_watching_tv
+          - entity_2: script.scene_sa_not_watching_tv
+          - entity_3: script.scene_lr_search_mode
+          - entity_4: script.scene_lr_reset_default
+      - type: custom:decluttering-card
+        template: scene_tile
+        variables:
+          - title: Living Room
+          - service: script.turn_on
+          - entity_1: script.scene_lr_disco_mode
+          - entity_2: script.scene_lr_disco_mode
+          - entity_3: script.scene_lr_disco_mode
+          - entity_4: script.scene_lr_reset_default
   - type: custom:decluttering-card
     template: scene_tile
     variables:
@@ -36,13 +47,4 @@ cards:
       - entity_2: script.scene_mb_day
       - entity_3: script.scene_mb_search_mode
       - entity_4: script.scene_mb_reset_default
-  - type: custom:decluttering-card
-    template: scene_tile
-    variables:
-      - title: Discoooo
-      - service: script.turn_on
-      - entity_1: script.scene_lr_disco_mode
-      - entity_2: script.scene_lr_disco_mode
-      - entity_3: script.scene_lr_disco_mode
-      - entity_4: script.scene_lr_reset_default
       
