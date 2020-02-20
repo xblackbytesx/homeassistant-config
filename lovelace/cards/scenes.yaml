@@ -5,7 +5,7 @@ cards:
       - type: custom:decluttering-card
         template: scene_tile
         variables:
-          - title: Living Room
+          - title: Living Room (1/2)
           - service: script.turn_on
           - entity_1: script.scene_sa_watching_tv
           - entity_2: script.scene_sa_not_watching_tv
@@ -14,11 +14,11 @@ cards:
       - type: custom:decluttering-card
         template: scene_tile
         variables:
-          - title: Living Room
+          - title: Living Room (2/2)
           - service: script.turn_on
           - entity_1: script.scene_lr_disco_mode
-          - entity_2: script.scene_lr_disco_mode
-          - entity_3: script.scene_lr_disco_mode
+          - entity_2: script.scene_empty_slot
+          - entity_3: script.scene_empty_slot
           - entity_4: script.scene_lr_reset_default
   - type: custom:decluttering-card
     template: scene_tile
