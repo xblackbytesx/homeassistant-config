@@ -36,6 +36,7 @@ scene_sa_not_watching_tv:
       data:
         entity_id: light.ledstrip_tv_cabinet
         xy_color: [0.149, 0.291]
+        white_value: 0
         brightness_pct: 10
         transition: 2
         effect: none
@@ -70,6 +71,7 @@ scene_sa_watching_tv:
       data:
         entity_id: light.ledstrip_tv_cabinet
         xy_color: [0.701, 0.299]
+        white_value: 0
         brightness_pct: 5
         transition: 2
         effect: none
@@ -108,15 +110,18 @@ scene_lr_disco_mode:
         - light.0x00178801089f827b_light
     - service: light.turn_on
       data:
-        entity_id: light.ledstrip_tv_cabinet
+        entity_id: 
+          - light.ledstrip_tv_cabinet
+          - light.hue_iris_tv_cabinet
+          - light.hue_candle_salt_lamp
+          - light.hue_go_closet_l
+          - light.hue_go_closet_r
         effect: colorloop
     - service: light.turn_on
       data:
-        entity_id: light.ledstrip_black_cabinet
-        effect: Disco
-    - service: light.turn_on
-      data:
-        entity_id: light.ledstrip_kitchen_cabinet
+        entity_id: 
+          - light.ledstrip_black_cabinet
+          - light.ledstrip_kitchen_cabinet
         effect: Disco
     - service: homeassistant.turn_off
       entity_id: 
