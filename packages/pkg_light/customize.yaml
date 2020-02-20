@@ -222,6 +222,10 @@ script.scene_mb_night:
   friendly_name: Night
   icon: mdi:weather-night
 
+script.scene_lr_search_mode:
+  friendly_name: Party Mode
+  icon: mdi:party-popper
+
 script.scene_mb_search_mode:
   friendly_name: Search Mode
   icon: mdi:magnify

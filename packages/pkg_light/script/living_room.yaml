@@ -9,11 +9,13 @@ scene_sa_not_watching_tv:
         entity_id: light.hue_go_closet_l
         xy_color: [0.236, 0.41]
         brightness_pct: 45
+        effect: none
     - service: light.turn_on
       data:
         entity_id: light.hue_go_closet_r
         xy_color: [0.311, 0.225]
         brightness_pct: 45
+        effect: none
     - service: light.turn_on
       data:
         entity_id: light.0x00178801089f827b_light
@@ -23,23 +25,27 @@ scene_sa_not_watching_tv:
         entity_id: light.hue_iris_tv_cabinet
         xy_color: [0.631, 0.343]
         brightness_pct: 45
+        effect: none
     - service: light.turn_on
       data:
         entity_id: light.hue_candle_salt_lamp
         xy_color: [0.632, 0.342]
         brightness_pct: 75
+        effect: none
     - service: light.turn_on
       data:
         entity_id: light.ledstrip_tv_cabinet
         xy_color: [0.149, 0.291]
         brightness_pct: 10
         transition: 2
+        effect: none
     - service: light.turn_on
       data:
         entity_id: light.ledstrip_black_cabinet
         xy_color: [0.149, 0.291]
         brightness_pct: 10
         transition: 2
+        effect: none
     
 
 scene_sa_watching_tv:
@@ -54,22 +60,26 @@ scene_sa_watching_tv:
       data:
         entity_id: light.hue_iris_tv_cabinet
         brightness_pct: 30
+        effect: none
     - service: light.turn_on
       data:
         entity_id: light.hue_candle_salt_lamp
         brightness_pct: 50
+        effect: none
     - service: light.turn_on
       data:
         entity_id: light.ledstrip_tv_cabinet
         xy_color: [0.701, 0.299]
         brightness_pct: 5
         transition: 2
+        effect: none
     - service: light.turn_on
       data:
         entity_id: light.ledstrip_black_cabinet
         xy_color: [0.701, 0.299]
         brightness_pct: 5
         transition: 2
+        effect: none
 
 
 scene_lr_search_mode:
@@ -79,6 +89,7 @@ scene_lr_search_mode:
         entity_id: light.lg_lr_all
         xy_color: [0.311, 0.327]
         brightness_pct: 100
+        effect: none
     - service: homeassistant.turn_off
       entity_id: 
         - automation.sa_001
