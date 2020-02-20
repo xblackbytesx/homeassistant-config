@@ -103,7 +103,7 @@ scene_lr_disco_mode:
       data:
         entity_id: light.ledstrip_black_cabinet
         effect: Disco
-      - service: light.turn_on
+    - service: light.turn_on
       data:
         entity_id: light.ledstrip_kitchen_cabinet
         effect: Disco
