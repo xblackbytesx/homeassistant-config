@@ -87,6 +87,34 @@ scene_lr_search_mode:
         - automation.kitchen_002
 
 
+scene_lr_disco_mode:
+  sequence:
+    - service: light.turn_off
+      entity_id:
+        - light.lg_kitchen_table
+        - light.lg_kitchen_counter
+        - light.0x00178801081af093_light
+        - light.0x00178801089f827b_light
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_tv_cabinet
+        effect: colorloop
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_black_cabinet
+        effect: Disco
+      - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_kitchen_cabinet
+        effect: Disco
+    - service: homeassistant.turn_off
+      entity_id: 
+        - automation.sa_001
+        - automation.sa_002
+        - automation.kitchen_001
+        - automation.kitchen_002       
+
+
 scene_lr_reset_default:
   alias: Resets the sitting area default scene
   sequence:
