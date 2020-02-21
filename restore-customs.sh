@@ -61,6 +61,10 @@ wget https://raw.githubusercontent.com/bramkragten/swipe-card/master/dist/swipe-
 # mkdir -p www/custom-lovelace/button-card
 # wget http://www.github.com/custom-cards/button-card/releases/latest/download/button-card.js -O www/custom-lovelace/button-card/button-card.js
 
+echo "Installing Vertical Stack in Card Card"
+mkdir -p www/custom-lovelace/vertical-stack-in-card
+wget https://raw.githubusercontent.com/ofekashery/vertical-stack-in-card/master/vertical-stack-in-card.js -O www/custom-lovelace/vertical-stack-in-card/vertical-stack-in-card.js
+
 echo "Installing Bar Card"
 mkdir -p www/custom-lovelace/lovelace-bar-card
 wget https://github.com/custom-cards/bar-card/releases/download/1.7.1/bar-card.js -O www/custom-lovelace/lovelace-bar-card/bar-card.js

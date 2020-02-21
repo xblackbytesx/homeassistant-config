@@ -1,101 +1,88 @@
 type: vertical-stack
 cards:
-  - type: entities
+  - type: custom:vertical-stack-in-card
     title: Synology
-    show_header_toggle: false
-    entities:
-      - sensor.synology_dsm_network_down
-      - sensor.synology_dsm_network_up
-      - sensor.synology_dsm_total_size_volume_1
-      - sensor.synology_dsm_used_space_volume_1
-      - sensor.synology_dsm_status_volume_1
-      - type: custom:fold-entity-row
-        head:
-          type: section
-          label: Disks
-        open: false
-        items:
+    cards:
+      - type: entities
+        # title: Synology
+        show_header_toggle: false
+        entities:
+          - sensor.synology_dsm_network_down
+          - sensor.synology_dsm_network_up
+          - sensor.synology_dsm_total_size_volume_1
+          - sensor.synology_dsm_used_space_volume_1
+          - sensor.synology_dsm_status_volume_1
           - type: custom:fold-entity-row
             head:
               type: section
-              label: /dev/sda
+              label: Schijven
             open: true
             items:
-              - entity: sensor.synology_dsm_status_sda
-                name: Status
-              - entity: sensor.synology_dsm_status_smart_sda
-                name: S.M.A.R.T.
-              - entity: sensor.synology_dsm_exceeded_max_bad_sectors_sda
-                name: Bad sectors
-              - entity: sensor.synology_dsm_below_min_remaining_life_sda
-                name: Lifetime warning
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: /dev/sdb
-            open: true
-            items:
-              - entity: sensor.synology_dsm_status_sdb
-                name: Status
-              - entity: sensor.synology_dsm_status_smart_sdb
-                name: S.M.A.R.T.
-              - entity: sensor.synology_dsm_exceeded_max_bad_sectors_sdb
-                name: Bad sectors
-              - entity: sensor.synology_dsm_below_min_remaining_life_sdb
-                name: Lifetime warning
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: /dev/sdc
-            open: true
-            items:
-              - entity: sensor.synology_dsm_status_sdc
-                name: Status
-              - entity: sensor.synology_dsm_status_smart_sdc
-                name: S.M.A.R.T.
-              - entity: sensor.synology_dsm_exceeded_max_bad_sectors_sdc
-                name: Bad sectors
-              - entity: sensor.synology_dsm_below_min_remaining_life_sdc
-                name: Lifetime warning
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: /dev/sdd
-            open: true
-            items:
-              - entity: sensor.synology_dsm_status_sdd
-                name: Status
-              - entity: sensor.synology_dsm_status_smart_sdd
-                name: S.M.A.R.T.
-              - entity: sensor.synology_dsm_exceeded_max_bad_sectors_sdd
-                name: Bad sectors
-              - entity: sensor.synology_dsm_below_min_remaining_life_sdd
-                name: Lifetime warning
-  - type: custom:bar-card
-    title: CPU
-    entity: sensor.synology_dsm_cpu_load_total
-    height: 32px
-    show_icon: true
-    icon: mdi:chip
-  - type: custom:bar-card
-    title: Memory
-    entity: sensor.synology_dsm_memory_usage_real
-    height: 32px
-    show_icon: true
-    icon: mdi:memory
-  - type: custom:bar-card
-    title: Storage
-    entity: sensor.synology_dsm_volume_used_volume_1
-    height: 32px
-    show_icon: true
-    icon: mdi:harddisk
-  - type: 'custom:mini-graph-card'
-    name: Synology
-    hour24: true
-    points_per_hour: 60
-    hours_to_show: 0.5
-    entities:
-      - entity: sensor.synology_dsm_cpu_load_total
-        name: CPU
-      - entity: sensor.synology_dsm_memory_usage_real
-        title: Geheugen
+              - type: custom:fold-entity-row
+                head: sensor.synology_dsm_status_sda
+                open: false
+                items:
+                  - entity: sensor.synology_dsm_status_smart_sda
+                    name: S.M.A.R.T.
+                  - entity: sensor.synology_dsm_exceeded_max_bad_sectors_sda
+                    name: Bad sectors
+                  - entity: sensor.synology_dsm_below_min_remaining_life_sda
+                    name: Lifetime warning
+              - type: custom:fold-entity-row
+                head: sensor.synology_dsm_status_sdb
+                open: false
+                items:
+                  - entity: sensor.synology_dsm_status_smart_sdb
+                    name: S.M.A.R.T.
+                  - entity: sensor.synology_dsm_exceeded_max_bad_sectors_sdb
+                    name: Bad sectors
+                  - entity: sensor.synology_dsm_below_min_remaining_life_sdb
+                    name: Lifetime warning
+              - type: custom:fold-entity-row
+                head: sensor.synology_dsm_status_sdc
+                open: false
+                items:
+                  - entity: sensor.synology_dsm_status_smart_sdc
+                    name: S.M.A.R.T.
+                  - entity: sensor.synology_dsm_exceeded_max_bad_sectors_sdc
+                    name: Bad sectors
+                  - entity: sensor.synology_dsm_below_min_remaining_life_sdc
+                    name: Lifetime warning
+              - type: custom:fold-entity-row
+                head: sensor.synology_dsm_status_sdd
+                open: false
+                items:
+                  - entity: sensor.synology_dsm_status_smart_sdd
+                    name: S.M.A.R.T.
+                  - entity: sensor.synology_dsm_exceeded_max_bad_sectors_sdd
+                    name: Bad sectors
+                  - entity: sensor.synology_dsm_below_min_remaining_life_sdd
+                    name: Lifetime warning
+      - type: custom:bar-card
+        title: Opslag
+        entity: sensor.synology_dsm_volume_used_volume_1
+        height: 32px
+        show_icon: true
+        icon: mdi:harddisk
+      - type: horizontal-stack
+        cards:
+          - type: 'custom:mini-graph-card'
+            # name: Synology
+            hour24: true
+            points_per_hour: 60
+            hours_to_show: 0.5
+            show:
+                  graph: bar
+            entities:
+              - entity: sensor.synology_dsm_cpu_load_total
+                name: CPU
+          - type: 'custom:mini-graph-card'
+            # name: Synology
+            hour24: true
+            points_per_hour: 60
+            hours_to_show: 0.5
+            show:
+                  graph: bar
+            entities:
+              - entity: sensor.synology_dsm_memory_usage_real
+                name: Geheugen
