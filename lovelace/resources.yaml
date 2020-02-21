@@ -8,6 +8,8 @@
   type: js
 - url: /local/custom-lovelace/swipe-card/swipe-card.js
   type: module
+- url: /local/custom-lovelace/vertical-stack-in-card/vertical-stack-in-card.js
+  type: js
 - url: /local/custom-lovelace/lovelace-bar-card/bar-card.js
   type: js
 - url: /local/custom-lovelace/lovelace-card-tools/card-tools.js
