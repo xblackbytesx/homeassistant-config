@@ -233,7 +233,3 @@ script.scene_mb_search_mode:
 script.scene_mb_reset_default:
   friendly_name: Reset
   icon: mdi:cancel
-
-script.empty_slot:
-  friendly_name: Empty slot
-  icon: mdi:circle-small

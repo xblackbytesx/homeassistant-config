@@ -38,5 +38,3 @@ set_dynamic_scene:
 #         {% elif trigger_to_state == 'off' %}
 #           light.lg_lb_all
 #         {% endif %}
-
-empty_slot:
