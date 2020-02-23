@@ -1,42 +1,54 @@
-#   # ------------------------------------------------------- #
-#   # Notify 21 days before the APK date expires              #
-#   # ------------------------------------------------------- #
-# - alias: APK date expiration notification
-#   trigger:
-#     - platform: template
-#       value_template: "{{ ((as_timestamp(strptime(states('sensor.toyota_auris_expdate'), '%d %b %Y')) / 86400) | int) == ((as_timestamp(strptime(states('sensor.date'), '%Y-%m-%d')) / 86400) | int) + 21 }} }}"
-#   action:
-#     - service: notify.owner
-#       data_template:
-#         title: '*Auto*'
-#         message: De APK keuring verloopt op {{ states.sensor.bmw_expdate.state }}. Plan een APK keuring bij de garage.
-#
-#   # ------------------------------------------------------- #
-#   # Notify when the car's insurance has expired             #
-#   # ------------------------------------------------------- #
-# - alias: Insurance expiration notification
-#   initial_state: True
-#   trigger:
-#     - platform: state
-#       entity_id: sensor.bmw_insured
-#       to: 'False'
-#   action:
-#     - service: notify.owner
-#       data_template:
-#         title: '*Auto*'
-#         message: De auto is niet verzekerd! Sluit een autoverzekering af voordat je ermee de weg op gaat.
-#
-#   # ------------------------------------------------------- #
-#   # Notify when a maintenance recall has been issued        #
-#   # ------------------------------------------------------- #
-# - alias: Recall notification
-#   initial_state: False
-#   trigger:
-#     - platform: state
-#       entity_id: sensor.bmw_recall
-#       to: 'True'
-#   action:
-#     - service: notify.owner
-#       data_template:
-#         title: '*Auto*'
-#         message: Er is een terugroepactie uitgevaardigd voor de auto. Maak een afspraak bij de garage om het probleem te verhelpen.
+  # ------------------------------------------------------- #
+  # Notify 21 days before the APK date expires              #
+  # ------------------------------------------------------- #
+- id: trans_001
+- alias: trans_001
+  trigger:
+    platform: template
+    value_template: "{{ ((as_timestamp(strptime(states('sensor.toyota_prius_expdate'), '%d %b %Y')) / 86400) | int) == ((as_timestamp(strptime(states('sensor.date'), '%Y-%m-%d')) / 86400) | int) + 21 }} }}"
+  action:
+    - service: notify.send_mail
+      data_template:
+        title: "ATTENTIE: De APK van de Prius verloopt bijna"
+        message: "De APK keuring verloopt op {{ states.sensor.toyota_prius_expdate.state }}. Plan een APK keuring bij de garage."
+    - service: notify.notify_matrix_clean
+      data:
+        message: "De APK keuring verloopt op {{ states.sensor.toyota_prius_expdate.state }}. Plan een APK keuring bij de garage."
+
+
+  # ------------------------------------------------------- #
+  # Notify when the car's insurance has expired             #
+  # ------------------------------------------------------- #
+- id: trans_002
+  alias: trans_002
+  trigger:
+    platform: state
+    entity_id: sensor.toyota_prius_insured
+    to: 'False'
+  action:
+    - service: notify.send_mail
+      data_template:
+        title: "ATTENTIE: De Prius is momenteel niet verzekerd"
+        message: "De Prius is momenteel niet verzekerd! Sluit z.s.m. een autoverzekering af voordat je ermee de weg op gaat."
+    - service: notify.notify_matrix_clean
+      data:
+        message: "De Prius is momenteel niet verzekerd! Sluit z.s.m. een autoverzekering af voordat je ermee de weg op gaat."
+
+
+  # ------------------------------------------------------- #
+  # Notify when a maintenance recall has been issued        #
+  # ------------------------------------------------------- #
+- id: trans_003
+  alias: trans_003
+  trigger:
+    platform: state
+    entity_id: sensor.toyota_prius_recall
+    to: 'True'
+  action:
+    - service: notify.send_mail
+      data_template:
+        title: "ATTENTIE: Er is een terugroepactie uitgevaardigd voor de Prius."
+        message: "Er is een terugroepactie uitgevaardigd voor de Prius. Maak een afspraak bij de garage om het probleem te verhelpen."
+    - service: notify.notify_matrix_clean
+      data:
+        message: "Er is een terugroepactie uitgevaardigd voor de Prius. Maak een afspraak bij de garage om het probleem te verhelpen."

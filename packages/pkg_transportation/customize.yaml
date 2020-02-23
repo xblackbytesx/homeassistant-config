@@ -6,3 +6,10 @@ sensor.gas_station_2_euro95:
   icon: mdi:gas-station
 sensor.gas_station_3_euro95:
   icon: mdi:gas-station
+
+automation.trans_001:
+  friendly_name: APK date expiration notification
+automation.trans_002:
+  friendly_name: Insurance expiration notification
+automation.trans_003:
+  friendly_name: Recall notification
