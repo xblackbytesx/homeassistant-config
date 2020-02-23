@@ -1,0 +1,33 @@
+scene_attic_night:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_attic_all
+        brightness_pct: 45
+
+
+scene_attic_day:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_attic_all
+        brightness_pct: 70
+
+
+scene_attic_search_mode:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_attic_all
+        brightness_pct: 100
+    - service: homeassistant.turn_off
+      entity_id: automation.attic_001
+
+
+scene_attic_reset_default:
+  alias: Resets the attic to default scene
+  sequence:
+    - service: script.turn_on
+      entity_id: script.scene_attic_day
+    - service: homeassistant.turn_on
+      entity_id: automation.attic_001

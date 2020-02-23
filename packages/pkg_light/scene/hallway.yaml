@@ -1,15 +1,15 @@
-- name: HW | Night
-  entities:
-    light.lg_hw_all:
-      state: true
-      brightness_pct: 15
-    switch.0x000d6ffffedc5e05_switch:
-      state: true
+# - name: HW | Night
+#   entities:
+#     light.lg_hw_all:
+#       state: true
+#       brightness_pct: 15
+#     switch.0x000d6ffffedc5e05_switch:
+#       state: true
 
-- name: HW | Day
-  entities:
-    light.lg_hw_all:
-      state: true
-      brightness_pct: 45
-    switch.0x000d6ffffedc5e05_switch:
-      state: true
+# - name: HW | Day
+#   entities:
+#     light.lg_hw_all:
+#       state: true
+#       brightness_pct: 45
+#     switch.0x000d6ffffedc5e05_switch:
+#       state: true

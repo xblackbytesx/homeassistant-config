@@ -1,0 +1,33 @@
+scene_office_night:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_office_all
+        brightness_pct: 15
+
+
+scene_office_day:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_office_all
+        brightness_pct: 45
+
+
+scene_office_search_mode:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_office_all
+        brightness_pct: 100
+    - service: homeassistant.turn_off
+      entity_id: automation.office_001
+
+
+scene_office_reset_default:
+  alias: Resets the office to default scene
+  sequence:
+    - service: script.turn_on
+      entity_id: script.scene_office_day
+    - service: homeassistant.turn_on
+      entity_id: automation.office_001

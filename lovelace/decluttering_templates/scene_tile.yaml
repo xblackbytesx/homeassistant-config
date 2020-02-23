@@ -1,6 +1,6 @@
 scene_tile:
   card:
-    type: vertical-stack
+    type: custom:vertical-stack-in-card
     cards:
       - type: markdown
         content: >

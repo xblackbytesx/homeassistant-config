@@ -1,11 +1,11 @@
-- name: Office | Night
-  entities:
-    light.lg_office_all:
-      state: true
-      brightness_pct: 15
+# - name: Office | Night
+#   entities:
+#     light.lg_office_all:
+#       state: true
+#       brightness_pct: 15
 
-- name: Office | Day
-  entities:
-    light.lg_office_all:
-      state: true
-      brightness_pct: 45
+# - name: Office | Day
+#   entities:
+#     light.lg_office_all:
+#       state: true
+#       brightness_pct: 45

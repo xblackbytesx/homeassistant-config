@@ -1,11 +1,11 @@
-- name: Attic | Night
-  entities:
-    light.lg_attic_all:
-      state: true
-      brightness_pct: 45
+# - name: Attic | Night
+#   entities:
+#     light.lg_attic_all:
+#       state: true
+#       brightness_pct: 45
 
-- name: Attic | Day
-  entities:
-    light.lg_attic_all:
-      state: true
-      brightness_pct: 70
+# - name: Attic | Day
+#   entities:
+#     light.lg_attic_all:
+#       state: true
+#       brightness_pct: 70

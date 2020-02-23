@@ -19,9 +19,9 @@
     data_template:
       entity_id: script.set_dynamic_scene
       variables:
-        service: scene.turn_on
+        service: script.turn_on
         trigger_to_state: '{{ trigger.to_state.state }}'
         dark_enough: '{{ states("binary_sensor.attic_dark_enough") }}'
-        scene_day: 'scene.attic_day'
-        scene_night: 'scene.attic_night'
+        scene_day: 'script.scene_attic_day'
+        scene_night: 'script.scene_attic_night'
         light_group: 'light.lg_attic_all'

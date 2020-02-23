@@ -186,6 +186,22 @@ script.scene_lr_reset_default:
   friendly_name: Reset
   icon: mdi:cancel
 
+script.scene_hw_day:
+  friendly_name: Day
+  icon: mdi:weather-sunny
+
+script.scene_hw_night:
+  friendly_name: Night
+  icon: mdi:weather-night
+
+script.scene_hw_search_mode:
+  friendly_name: Search Mode
+  icon: mdi:magnify
+
+script.scene_hw_reset_default:
+  friendly_name: Reset
+  icon: mdi:cancel
+
 script.scene_lb_day:
   friendly_name: Day
   icon: mdi:weather-sunny
@@ -231,5 +247,53 @@ script.scene_mb_search_mode:
   icon: mdi:magnify
 
 script.scene_mb_reset_default:
+  friendly_name: Reset
+  icon: mdi:cancel
+
+script.scene_co_day:
+  friendly_name: Day
+  icon: mdi:weather-sunny
+
+script.scene_co_night:
+  friendly_name: Night
+  icon: mdi:weather-night
+
+script.scene_co_search_mode:
+  friendly_name: Search Mode
+  icon: mdi:magnify
+
+script.scene_co_reset_default:
+  friendly_name: Reset
+  icon: mdi:cancel
+
+script.scene_attic_day:
+  friendly_name: Day
+  icon: mdi:weather-sunny
+
+script.scene_attic_night:
+  friendly_name: Night
+  icon: mdi:weather-night
+
+script.scene_attic_search_mode:
+  friendly_name: Search Mode
+  icon: mdi:magnify
+
+script.scene_attic_reset_default:
+  friendly_name: Reset
+  icon: mdi:cancel
+
+script.scene_office_day:
+  friendly_name: Day
+  icon: mdi:weather-sunny
+
+script.scene_office_night:
+  friendly_name: Night
+  icon: mdi:weather-night
+
+script.scene_office_search_mode:
+  friendly_name: Search Mode
+  icon: mdi:magnify
+
+script.scene_office_reset_default:
   friendly_name: Reset
   icon: mdi:cancel

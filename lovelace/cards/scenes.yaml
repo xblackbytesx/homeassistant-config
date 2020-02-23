@@ -23,6 +23,15 @@ cards:
   - type: custom:decluttering-card
     template: scene_tile
     variables:
+      - title: Hallway
+      - service: script.turn_on
+      - entity_1: script.scene_hw_night
+      - entity_2: script.scene_hw_day
+      - entity_3: script.scene_hw_search_mode
+      - entity_4: script.scene_hw_reset_default
+  - type: custom:decluttering-card
+    template: scene_tile
+    variables:
       - title: Large bedroom
       - service: script.turn_on
       - entity_1: script.scene_lb_night
@@ -47,4 +56,31 @@ cards:
       - entity_2: script.scene_mb_day
       - entity_3: script.scene_mb_search_mode
       - entity_4: script.scene_mb_reset_default
+  - type: custom:decluttering-card
+    template: scene_tile
+    variables:
+      - title: Corridor
+      - service: script.turn_on
+      - entity_1: script.scene_co_night
+      - entity_2: script.scene_co_day
+      - entity_3: script.scene_co_search_mode
+      - entity_4: script.scene_co_reset_default
+  - type: custom:decluttering-card
+    template: scene_tile
+    variables:
+      - title: Attic
+      - service: script.turn_on
+      - entity_1: script.scene_attic_night
+      - entity_2: script.scene_attic_day
+      - entity_3: script.scene_attic_search_mode
+      - entity_4: script.scene_attic_reset_default      
+  - type: custom:decluttering-card
+    template: scene_tile
+    variables:
+      - title: Office
+      - service: script.turn_on
+      - entity_1: script.scene_office_night
+      - entity_2: script.scene_office_day
+      - entity_3: script.scene_office_search_mode
+      - entity_4: script.scene_office_reset_default
       

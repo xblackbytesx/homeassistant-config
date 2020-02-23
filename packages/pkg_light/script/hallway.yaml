@@ -1,0 +1,39 @@
+scene_hw_night:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_hw_all
+        brightness_pct: 15
+    - service: switch.turn_on
+      entity_id: switch.0x000d6ffffedc5e05_switch
+
+
+scene_hw_day:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_hw_all
+        brightness_pct: 45
+    - service: switch.turn_on
+      entity_id: switch.0x000d6ffffedc5e05_switch
+
+
+scene_hw_search_mode:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_hw_all
+        brightness_pct: 100
+    - service: switch.turn_on
+      entity_id: switch.0x000d6ffffedc5e05_switch
+    - service: homeassistant.turn_off
+      entity_id: automation.hw_001
+
+
+scene_hw_reset_default:
+  alias: Resets the hallway to default scene
+  sequence:
+    - service: script.turn_on
+      entity_id: script.scene_hw_day
+    - service: homeassistant.turn_on
+      entity_id: automation.hw_001

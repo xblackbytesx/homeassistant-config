@@ -19,11 +19,11 @@
       data_template:
         entity_id: script.set_dynamic_scene
         variables:
-          service: scene.turn_on
+          service: script.turn_on
           trigger_to_state: '{{ trigger.to_state.state }}'
           dark_enough: '{{ states("binary_sensor.hw_dark_enough") }}'
-          scene_day: 'scene.hw_day'
-          scene_night: 'scene.hw_night'
+          scene_day: 'script.scene_hw_day'
+          scene_night: 'script.scene_hw_night'
           light_group: 'light.lg_hw_all'
     - service_template: >
         {% if trigger.to_state.state == 'off' %}
