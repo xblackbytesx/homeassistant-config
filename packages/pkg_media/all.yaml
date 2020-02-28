@@ -6,6 +6,11 @@ sensor: !include sensor.yaml
 binary_sensor: !include binary_sensor.yaml
 input_boolean: !include boolean.yaml
 automation: !include automation.yaml
+# script: !include script.yaml
+
+spotify:
+  client_id: !secret spotify_client_id
+  client_secret: !secret spotify_client_secret
 
 cast:
   chromecast:

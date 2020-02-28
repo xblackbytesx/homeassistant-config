@@ -35,3 +35,5 @@ cards:
       power_state: false
   - type: media-control
     entity: media_player.playstation_4
+  - type: media-control
+    entity: media_player.spotify_xblackbytesx

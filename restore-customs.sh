@@ -79,7 +79,7 @@ wget https://raw.githubusercontent.com/thomasloven/lovelace-card-tools/master/ca
 
 echo "Installing Mini Graph Card"
 mkdir -p www/custom-lovelace/lovelace-mini-graph-card
-wget https://github.com/kalkih/mini-graph-card/releases/download/v0.9.2/mini-graph-card-bundle.js -O www/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js
+wget https://github.com/kalkih/mini-graph-card/releases/download/v0.9.3/mini-graph-card-bundle.js -O www/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js
 
 echo "Installing Mini Media Player Card"
 mkdir -p www/custom-lovelace/lovelace-mini-media-player

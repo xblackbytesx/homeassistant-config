@@ -1,0 +1,16 @@
+# play_music:
+#   alias: Send Spotify playlist to Chromecast Audio
+#   sequence:
+#     - service: media_player.select_source
+#       entity_id: media_player.yamaha_receiver
+#       source: AV1
+#     - service: media_player.volume_set
+#       entity_id: media_player.yamaha_receiver
+#       volume_level: 0.7
+#     - service: media_player.play_media
+#       entity_id: media_player.living_room_audio
+#       media_content_type: playlist
+#       media_content_id: http://vip-icecast.538.lw.triple-it.nl:80/RADIO538_MP3
+#     - service: media_player.shuffle_set
+#       entity_id: media_player.spotify_xblackbytesx
+#       shuffle: true
