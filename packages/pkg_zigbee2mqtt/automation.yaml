@@ -44,7 +44,6 @@
 
 - id: update_networkmap
   alias: 'Update Zigbee NetworkMap'  
-  hide_entity: true  
   trigger:
     platform: time_pattern
     hours: '/12'
