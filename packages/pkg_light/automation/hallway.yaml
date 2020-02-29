@@ -28,5 +28,7 @@
     - service_template: >
         {% if trigger.to_state.state == 'off' %}
           switch.turn_off
+        {% elif trigger.to_state.state == 'on' %}
+          switch.turn_on
         {% endif %}
       entity_id: switch.0x000d6ffffedc5e05_switch
