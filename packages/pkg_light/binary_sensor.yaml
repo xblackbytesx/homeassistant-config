@@ -2,19 +2,19 @@
   sensors:
     sa_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < states('input_number.sa_illuminance_threshold')| int }}
+        {{ states('sensor.sensor.0x0017880102026161_illuminance')|float < states('input_number.sa_illuminance_threshold')| int }}
 
     kitchen_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_kitchen_illuminance')|float < states('input_number.kitchen_illuminance_threshold')| int }}
+        {{ states('sensor.sensor.0x0017880102030677_illuminance')|float < states('input_number.kitchen_illuminance_threshold')| int }}
 
     hw_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_hallway_stairs_illuminance')|float < states('input_number.hw_illuminance_threshold')| int }}
+        {{ states('sensor.sensor.0x00178801020282bc_illuminance')|float < states('input_number.hw_illuminance_threshold')| int }}
 
     co_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_corridor_illuminance')|float < states('input_number.co_illuminance_threshold')| int }}
+        {{ states('sensor.sensor.0x00178801020357e5_illuminance')|float < states('input_number.co_illuminance_threshold')| int }}
 
     bathroom_dark_enough:
       value_template: >-
@@ -30,4 +30,4 @@
 
     exterior_dark_enough:
       value_template: >-
-        {{ states('sensor.hue_motion_sensor_sitting_area_illuminance')|float < states('input_number.ex_illuminance_threshold')| int }}
+        {{ states('sensor.sensor.0x0017880102026161_illuminance')|float < states('input_number.ex_illuminance_threshold')| int }}
