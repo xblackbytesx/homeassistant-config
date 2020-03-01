@@ -33,8 +33,9 @@
         {% endif %}
       data_template:
         entity_id: >
-          {% if trigger_to_state == 'off' %}
+          {% if trigger_to_state.state == 'off' %}
             switch.0x000d6ffffedc5e05_switch
           {% else %}
             none
           {% endif %}
+          

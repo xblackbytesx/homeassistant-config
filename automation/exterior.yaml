@@ -2,18 +2,18 @@
   alias: ex_003
   trigger:
     platform: time
-    at: '7:30'
+    at: '19:00'
   condition:
     - condition: time
       weekday:
-        - wed
+        - tue
     - condition: template
-      value_template: "{{ not is_state('sensor.garbage_pickup_today', 'Geen') }}"
+      value_template: "{{ not is_state('sensor.garbage_pickup_upcoming', 'Geen') }}"
   action:
     - service: notify.send_mail
       data_template:
-        title: "ATTENTIE: Vandaag wordt de kliko voor {{ states('sensor.garbage_pickup_today') }} opgehaald!"
-        message: "Zeg tegen die luie vent van je dat die {{ states('sensor.garbage_pickup_today') }} bak buiten moet!"
+        title: "ATTENTIE: Morgen wordt de kliko voor {{ states('sensor.garbage_pickup_upcoming') }} opgehaald!"
+        message: "Zeg tegen die luie vent van je dat die {{ states('sensor.garbage_pickup_upcoming') }} bak buiten moet!"
     - service: notify.notify_matrix_clean
       data:
-        message: "Vandaag wordt de kliko voor {{ states('sensor.garbage_pickup_today') }} opgehaald!"
+        message: "Morgen wordt de kliko voor {{ states('sensor.garbage_pickup_upcoming') }} opgehaald!"

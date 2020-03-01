@@ -12,8 +12,7 @@
 - platform: scrape
   resource: !secret gas_station_1_url
   name: Gas station 1 Euro95
-  select: '#station-prijzen > tbody > tr:nth-child(3) > td.literprijs'
-  value_template: '{{ ((value.split("€")[1]) | replace(",", ".")) }}'
+  select: '.taxonomy-term-Euro95 > div:nth-child(2)'
   unit_of_measurement: "€"
   scan_interval: 3600
 

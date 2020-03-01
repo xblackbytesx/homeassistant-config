@@ -1,8 +1,6 @@
-type: vertical-stack
+type: custom:vertical-stack-in-card
+title: Who's home
 cards:
-  - type: markdown
-    content: >
-      ## Who's home
   - type: horizontal-stack
     cards:
       - type: picture-entity
