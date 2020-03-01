@@ -17,6 +17,8 @@ set_dynamic_scene:
           {% endif %}
         {% elif trigger_to_state == 'off' %}
           {{ light_group }}
+        {% else %}
+          none
         {% endif %}
 
 
