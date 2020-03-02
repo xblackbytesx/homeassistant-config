@@ -1,10 +1,8 @@
 scene_tile:
   card:
     type: custom:vertical-stack-in-card
+    title: '[[title]]'
     cards:
-      - type: markdown
-        content: >
-          ## [[title]]
       - type: horizontal-stack
         cards:
           - type: glance

@@ -1,8 +1,6 @@
-type: vertical-stack
+type: custom:vertical-stack-in-card
+title: Gas Prices
 cards:
-  - type: markdown
-    content: >
-      ## Gas Prices
   - type: horizontal-stack
     cards:
       - type: custom:mini-graph-card
