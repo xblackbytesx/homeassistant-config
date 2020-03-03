@@ -1,6 +1,6 @@
 scene_tile:
   card:
-    type: custom:vertical-stack-in-card
+    type: vertical-stack
     title: '[[title]]'
     cards:
       - type: horizontal-stack

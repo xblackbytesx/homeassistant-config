@@ -8,7 +8,7 @@ cards:
       - sensor.netherlands_coronavirus_recovered
       - sensor.netherlands_coronavirus_deaths
   - type: glance
-    title: Netherlands
+    title: Worldwide
     entities:
       - sensor.worldwide_coronavirus_confirmed
       - sensor.worldwide_coronavirus_current
