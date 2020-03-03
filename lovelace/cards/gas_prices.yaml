@@ -1,4 +1,4 @@
-type: custom:vertical-stack-in-card
+type: vertical-stack
 title: Gas Prices
 cards:
   - type: horizontal-stack

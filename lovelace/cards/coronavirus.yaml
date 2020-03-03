@@ -1,0 +1,16 @@
+type: vertical-stack
+cards:
+  - type: glance
+    title: Netherlands
+    entities:
+      - sensor.netherlands_coronavirus_confirmed
+      - sensor.netherlands_coronavirus_current
+      - sensor.netherlands_coronavirus_recovered
+      - sensor.netherlands_coronavirus_deaths
+  - type: glance
+    title: Netherlands
+    entities:
+      - sensor.worldwide_coronavirus_confirmed
+      - sensor.worldwide_coronavirus_current
+      - sensor.worldwide_coronavirus_recovered
+      - sensor.worldwide_coronavirus_deaths

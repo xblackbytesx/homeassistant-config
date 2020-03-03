@@ -1,4 +1,4 @@
-type: custom:vertical-stack-in-card
+type: vertical-stack
 title: Who's home
 cards:
   - type: horizontal-stack
