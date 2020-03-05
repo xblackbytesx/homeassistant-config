@@ -39,10 +39,10 @@ light.0x0017880102460013_light:
   friendly_name: Office right
 light.lg_ex_all:
   icon: mdi:tree
-# light.0x086bd7fffe035d36_light:
-#   friendly_name: Front porch
-light.0x00158d00017ab8da_light:
+light.0x086bd7fffe035d36_light:
   friendly_name: Front porch
+# light.0x00158d00017ab8da_light:
+#   friendly_name: Front porch
 light.0x000b57fffee35b50_light:
   friendly_name: Backyard
 
