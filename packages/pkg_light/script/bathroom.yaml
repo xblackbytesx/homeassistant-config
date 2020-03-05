@@ -1,0 +1,46 @@
+scene_bathroom_l_night:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.hue_candle_bathroom_l
+        brightness_pct: 15
+
+
+scene_bathroom_l_day:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.hue_candle_bathroom_l
+        brightness_pct: 80
+
+
+scene_bathroom_r_night:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.hue_candle_bathroom_r
+        brightness_pct: 15
+
+
+scene_bathroom_r_day:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.hue_candle_bathroom_r
+        brightness_pct: 80
+
+
+scene_bathroom_night:
+  sequence:
+    - service: script.turn_on
+      entity_id: 
+        - script.scene_bathroom_l_night
+        - script.scene_bathroom_r_night
+
+
+scene_bathroom_day:
+  sequence:
+    - service: script.turn_on
+      entity_id: 
+        - script.scene_bathroom_l_day  
+        - script.scene_bathroom_r_day

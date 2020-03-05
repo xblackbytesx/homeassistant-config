@@ -1,0 +1,14 @@
+scene_toilet_night:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_toilet_all
+        brightness_pct: 45
+
+
+scene_toilet_day:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_toilet_all
+        brightness_pct: 70

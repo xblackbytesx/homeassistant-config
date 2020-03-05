@@ -28,13 +28,13 @@
     service_template: >
       {% if trigger.to_state.state == 'left' or trigger.to_state.state == 'left_double' %}
         {% if is_state('light.hue_candle_bathroom_l', 'off') %}
-          scene.turn_on
+          script.turn_on
         {% else %}
           light.turn_off
         {% endif %}
       {% elif trigger.to_state.state == 'right' or trigger.to_state.state == 'right_double' %}
         {% if is_state('light.hue_bulb_bathroom_r', 'off') %}
-          scene.turn_on
+          script.turn_on
         {% else %}
           light.turn_off
         {% endif %}
@@ -44,9 +44,9 @@
         {% if trigger.to_state.state == 'left' or trigger.to_state.state == 'left_double' %}
           {% if is_state('light.hue_candle_bathroom_l', 'off') %}
             {% if is_state('input_boolean.time_for_dim_scenes', 'on') and trigger.to_state.state == 'left' %}
-              scene.bathroom_l_night
+              script.scene_bathroom_l_night
             {% else %}
-              scene.bathroom_l_day
+              script.scene_bathroom_l_day
             {% endif %}
           {% else %}
             light.hue_candle_bathroom_l
@@ -54,9 +54,9 @@
         {% elif trigger.to_state.state == 'right' or trigger.to_state.state == 'right_double' %}
           {% if is_state('light.hue_bulb_bathroom_r', 'off') %}
             {% if is_state('input_boolean.time_for_dim_scenes', 'on') and trigger.to_state.state == 'right' %}
-              scene.bathroom_r_night
+              script.scene_bathroom_r_night
             {% else %}
-              scene.bathroom_r_day
+              script.scene_bathroom_r_day
             {% endif %}
           {% else %}
             light.hue_bulb_bathroom_r
@@ -85,9 +85,9 @@
     data_template:
       entity_id: script.set_dynamic_scene
       variables:
-        service: scene.turn_on
+        service: script.turn_on
         trigger_to_state: '{{ trigger.to_state.state }}'
         dark_enough: '{{ states("binary_sensor.bathroom_dark_enough") }}'
-        scene_day: 'scene.bathroom_day'
-        scene_night: 'scene.bathroom_night'
+        scene_day: 'script.scene_bathroom_day'
+        scene_night: 'script.scene_bathroom_night'
         light_group: 'light.lg_bathroom_all'
