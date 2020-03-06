@@ -2,7 +2,7 @@
   # Notify 21 days before the APK date expires              #
   # ------------------------------------------------------- #
 - id: trans_001
-- alias: trans_001
+  alias: trans_001
   trigger:
     platform: template
     value_template: "{{ ((as_timestamp(strptime(states('sensor.toyota_prius_expdate'), '%d %b %Y')) / 86400) | int) == ((as_timestamp(strptime(states('sensor.date'), '%Y-%m-%d')) / 86400) | int) + 21 }} }}"
