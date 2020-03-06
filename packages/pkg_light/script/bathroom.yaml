@@ -18,7 +18,7 @@ scene_bathroom_r_night:
   sequence:
     - service: light.turn_on
       data:
-        entity_id: light.hue_candle_bathroom_r
+        entity_id: light.hue_bulb_bathroom_r
         brightness_pct: 15
 
 
@@ -26,7 +26,7 @@ scene_bathroom_r_day:
   sequence:
     - service: light.turn_on
       data:
-        entity_id: light.hue_candle_bathroom_r
+        entity_id: light.hue_bulb_bathroom_r
         brightness_pct: 80
 
 
