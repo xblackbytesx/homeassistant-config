@@ -19,10 +19,10 @@ light.0x00178801089f827b_light:
   friendly_name: SA | Dangling bulb | R
 light.0x00178801030a3dde_light:
   friendly_name: Corridor
-# light.0x086bd7fffe2b8f58_light:
-#   friendly_name: Master bedroom
-light.0x00158d00017934ff_light:
+light.0x086bd7fffe2b8f58_light:
   friendly_name: Toilet
+# light.0x00158d00017934ff_light:
+#   friendly_name: Toilet
 light.0x90fd9ffffeea4e5e_light:
   friendly_name: Master bedroom
 light.0x00178801039d140f_light:
