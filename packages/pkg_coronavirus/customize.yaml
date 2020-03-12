@@ -10,6 +10,8 @@ sensor.worldwide_coronavirus_recovered:
 sensor.worldwide_coronavirus_deaths:
   friendly_name: Deaths
   icon: mdi:emoticon-dead-outline
+sensor.worldwide_coronavirus_mortality:
+  icon: mdi:emoticon-dead-outline
 
 sensor.netherlands_coronavirus_confirmed:
   friendly_name: Confirmed
@@ -22,6 +24,8 @@ sensor.netherlands_coronavirus_recovered:
   icon: mdi:emoticon-happy-outline
 sensor.netherlands_coronavirus_deaths:
   friendly_name: Deaths
+  icon: mdi:emoticon-dead-outline
+sensor.netherlands_coronavirus_mortality:
   icon: mdi:emoticon-dead-outline
 
 sensor.italy_coronavirus_confirmed:
@@ -36,6 +40,8 @@ sensor.italy_coronavirus_recovered:
 sensor.italy_coronavirus_deaths:
   friendly_name: Deaths
   icon: mdi:emoticon-dead-outline
+sensor.italy_coronavirus_mortality:
+  icon: mdi:emoticon-dead-outline
 
 sensor.china_coronavirus_confirmed:
   friendly_name: Confirmed
@@ -48,4 +54,6 @@ sensor.china_coronavirus_recovered:
   icon: mdi:emoticon-happy-outline
 sensor.china_coronavirus_deaths:
   friendly_name: Deaths
+  icon: mdi:emoticon-dead-outline
+sensor.china_coronavirus_mortality:
   icon: mdi:emoticon-dead-outline

@@ -1,16 +1,16 @@
 - type: custom:vertical-stack-in-card
   title: Worldwide
   cards:
+    - type: custom:mini-graph-card
+      entities:
+        - sensor.worldwide_coronavirus_mortality
+      line_width: 6
     - type: glance
       entities:
         - sensor.worldwide_coronavirus_confirmed
         - sensor.worldwide_coronavirus_current
         - sensor.worldwide_coronavirus_recovered
         - sensor.worldwide_coronavirus_deaths
-    - type: custom:mini-graph-card
-      entities:
-        - sensor.worldwide_coronavirus_mortality
-      line_width: 6
 
 - type: custom:vertical-stack-in-card
   title: Netherlands
