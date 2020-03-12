@@ -1,0 +1,4 @@
+homeassistant:
+  customize: !include customize.yaml
+
+sensor: !include sensor.yaml

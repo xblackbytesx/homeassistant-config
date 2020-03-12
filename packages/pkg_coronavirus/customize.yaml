@@ -1,0 +1,51 @@
+sensor.worldwide_coronavirus_confirmed:
+  friendly_name: Confirmed
+  icon: mdi:emoticon-neutral-outline
+sensor.worldwide_coronavirus_current:
+  friendly_name: Current
+  icon: mdi:emoticon-frown-outline
+sensor.worldwide_coronavirus_recovered:
+  friendly_name: Recovered
+  icon: mdi:emoticon-happy-outline
+sensor.worldwide_coronavirus_deaths:
+  friendly_name: Deaths
+  icon: mdi:emoticon-dead-outline
+
+sensor.netherlands_coronavirus_confirmed:
+  friendly_name: Confirmed
+  icon: mdi:emoticon-neutral-outline
+sensor.netherlands_coronavirus_current:
+  friendly_name: Current
+  icon: mdi:emoticon-frown-outline
+sensor.netherlands_coronavirus_recovered:
+  friendly_name: Recovered
+  icon: mdi:emoticon-happy-outline
+sensor.netherlands_coronavirus_deaths:
+  friendly_name: Deaths
+  icon: mdi:emoticon-dead-outline
+
+sensor.italy_coronavirus_confirmed:
+  friendly_name: Confirmed
+  icon: mdi:emoticon-neutral-outline
+sensor.italy_coronavirus_current:
+  friendly_name: Current
+  icon: mdi:emoticon-frown-outline
+sensor.italy_coronavirus_recovered:
+  friendly_name: Recovered
+  icon: mdi:emoticon-happy-outline
+sensor.italy_coronavirus_deaths:
+  friendly_name: Deaths
+  icon: mdi:emoticon-dead-outline
+
+sensor.china_coronavirus_confirmed:
+  friendly_name: Confirmed
+  icon: mdi:emoticon-neutral-outline
+sensor.china_coronavirus_current:
+  friendly_name: Current
+  icon: mdi:emoticon-frown-outline
+sensor.china_coronavirus_recovered:
+  friendly_name: Recovered
+  icon: mdi:emoticon-happy-outline
+sensor.china_coronavirus_deaths:
+  friendly_name: Deaths
+  icon: mdi:emoticon-dead-outline

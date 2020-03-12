@@ -1,16 +1,52 @@
-type: vertical-stack
-cards:
+- type: custom:vertical-stack-in-card
+  title: Worldwide
+  cards:
+    - type: glance
+      entities:
+        - sensor.worldwide_coronavirus_confirmed
+        - sensor.worldwide_coronavirus_current
+        - sensor.worldwide_coronavirus_recovered
+        - sensor.worldwide_coronavirus_deaths
+    - type: custom:mini-graph-card
+      entities:
+        - sensor.worldwide_coronavirus_mortality
+      line_width: 6
+
+- type: custom:vertical-stack-in-card
+  title: Netherlands
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.netherlands_coronavirus_mortality
+    line_width: 6
   - type: glance
-    title: Netherlands
     entities:
       - sensor.netherlands_coronavirus_confirmed
       - sensor.netherlands_coronavirus_current
       - sensor.netherlands_coronavirus_recovered
       - sensor.netherlands_coronavirus_deaths
-  - type: glance
-    title: Worldwide
+
+- type: custom:vertical-stack-in-card
+  title: Italy
+  - type: custom:mini-graph-card
     entities:
-      - sensor.worldwide_coronavirus_confirmed
-      - sensor.worldwide_coronavirus_current
-      - sensor.worldwide_coronavirus_recovered
-      - sensor.worldwide_coronavirus_deaths
+      - sensor.italy_coronavirus_mortality
+    line_width: 6
+  - type: glance
+    entities:
+      - sensor.italy_coronavirus_confirmed
+      - sensor.italy_coronavirus_current
+      - sensor.italy_coronavirus_recovered
+      - sensor.italy_coronavirus_deaths
+
+- type: custom:vertical-stack-in-card
+  title: China
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.china_coronavirus_mortality
+    line_width: 6
+  - type: glance
+    entities:
+      - sensor.china_coronavirus_confirmed
+      - sensor.china_coronavirus_current
+      - sensor.china_coronavirus_recovered
+      - sensor.china_coronavirus_deaths

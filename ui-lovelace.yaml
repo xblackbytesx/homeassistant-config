@@ -16,6 +16,7 @@ views:
   - !include lovelace/security.yaml
   - !include lovelace/network.yaml
   - !include lovelace/finance.yaml
+  - !include lovelace/disease.yaml
   - !include lovelace/battery.yaml
   - !include lovelace/automation.yaml
   - !include lovelace/overrides.yaml

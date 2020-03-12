@@ -65,29 +65,3 @@ automation.sa_003:
 
 automation.ex_003:
   friendly_name: Trash collection info
-
-sensor.netherlands_coronavirus_confirmed:
-  friendly_name: Confirmed
-  icon: mdi:emoticon-neutral-outline
-sensor.netherlands_coronavirus_current:
-  friendly_name: Current
-  icon: mdi:emoticon-frown-outline
-sensor.netherlands_coronavirus_recovered:
-  friendly_name: Recovered
-  icon: mdi:emoticon-happy-outline
-sensor.netherlands_coronavirus_deaths:
-  friendly_name: Deaths
-  icon: mdi:emoticon-dead-outline
-  
-sensor.worldwide_coronavirus_confirmed:
-  friendly_name: Confirmed
-  icon: mdi:emoticon-neutral-outline
-sensor.worldwide_coronavirus_current:
-  friendly_name: Current
-  icon: mdi:emoticon-frown-outline
-sensor.worldwide_coronavirus_recovered:
-  friendly_name: Recovered
-  icon: mdi:emoticon-happy-outline
-sensor.worldwide_coronavirus_deaths:
-  friendly_name: Deaths
-  icon: mdi:emoticon-dead-outline
