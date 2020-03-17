@@ -61,8 +61,8 @@ cards:
       type: entities
       title: All ground floor lights
       entities:
-        - light.hue_filament_kitchen_front
-        - light.hue_filament_kitchen_back
+        - light.0x00178801081b61c2_light
+        - light.0x00178801081b3c89_light
         - light.hue_spot_kitchen_counter_1
         - light.hue_spot_kitchen_counter_2
         - light.hue_spot_kitchen_counter_3

@@ -41,8 +41,8 @@
 - platform: group
   name: LG | Kitchen | Table
   entities:
-    - light.hue_filament_kitchen_front
-    - light.hue_filament_kitchen_back
+    - light.0x00178801081b61c2_light
+    - light.0x00178801081b3c89_light
 
 - platform: group
   name: LG | Kitchen | Counter

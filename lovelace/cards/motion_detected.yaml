@@ -60,14 +60,14 @@ card:
 #   - type: state-icon
 #     tap_action:
 #       action: toggle
-#     entity: light.hue_filament_kitchen_back
+#     entity: light.0x00178801081b3c89_light
 #     style:
 #       bottom: 16%
 #       left: 31%
 #   - type: state-icon
 #     tap_action:
 #       action: toggle
-#     entity: light.hue_filament_kitchen_front
+#     entity: light.0x00178801081b61c2_light
 #     style:
 #       bottom: 16%
 #       left: 23.5%

@@ -35,7 +35,7 @@ co_motion_timeout:
 
 bathroom_motion_timeout:
   name: Bathroom | Motion Timeout
-  initial: 30
+  initial: 7
   min: 1
   max: 45
   step: 1
