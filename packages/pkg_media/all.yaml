@@ -17,3 +17,11 @@ cast:
   - host: 10.0.221.26
   chromecast_audio:
   - host: 10.0.221.29
+
+samsungtv:
+  - name: samsung_tv
+    host: !secret smart_tv_ip
+    turn_on_action:
+      - service: wake_on_lan.send_magic_packet
+        data:
+          mac: !secret smart_tv_mac
