@@ -6,7 +6,10 @@
 - platform: yamaha
   host: 10.0.221.23
 
-# - platform: samsungtv
-#   host: 10.0.220.3
-#   port: 55000
-#   mac: !secret samsung_tv_mac_address
+- platform: samsungtv
+  name: samsung_tv
+  host: !secret smart_tv_ip
+  turn_on_action:
+    - service: wake_on_lan.send_magic_packet
+      data:
+        mac: !secret smart_tv_mac
