@@ -19,6 +19,7 @@
       entities:
         - sensor.netherlands_coronavirus_mortality
       line_width: 6
+      line_color: '#FFA500'
     - type: glance
       entities:
         - sensor.netherlands_coronavirus_confirmed
@@ -33,6 +34,7 @@
       entities:
         - sensor.italy_coronavirus_mortality
       line_width: 6
+      line_color: "#FF00FF"
     - type: glance
       entities:
         - sensor.italy_coronavirus_confirmed
@@ -47,6 +49,7 @@
       entities:
         - sensor.spain_coronavirus_mortality
       line_width: 6
+      line_color: "#66ff66"
     - type: glance
       entities:
         - sensor.spain_coronavirus_confirmed
@@ -61,6 +64,7 @@
       entities:
         - sensor.iran_coronavirus_mortality
       line_width: 6
+      line_color: "#B2B200"
     - type: glance
       entities:
         - sensor.iran_coronavirus_confirmed
@@ -75,6 +79,7 @@
       entities:
         - sensor.us_coronavirus_mortality
       line_width: 6
+      line_color: "#3300FF"
     - type: glance
       entities:
         - sensor.us_coronavirus_confirmed
@@ -89,6 +94,7 @@
       entities:
         - sensor.china_coronavirus_mortality
       line_width: 6
+      line_color: "#FF7F50"
     - type: glance
       entities:
         - sensor.china_coronavirus_confirmed
