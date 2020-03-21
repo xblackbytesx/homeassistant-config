@@ -41,6 +41,48 @@
         - sensor.italy_coronavirus_deaths
 
 - type: custom:vertical-stack-in-card
+  title: Spain
+  cards:
+    - type: custom:mini-graph-card
+      entities:
+        - sensor.spain_coronavirus_mortality
+      line_width: 6
+    - type: glance
+      entities:
+        - sensor.spain_coronavirus_confirmed
+        - sensor.spain_coronavirus_current
+        - sensor.spain_coronavirus_recovered
+        - sensor.spain_coronavirus_deaths
+
+- type: custom:vertical-stack-in-card
+  title: Iran
+  cards:
+    - type: custom:mini-graph-card
+      entities:
+        - sensor.iran_coronavirus_mortality
+      line_width: 6
+    - type: glance
+      entities:
+        - sensor.iran_coronavirus_confirmed
+        - sensor.iran_coronavirus_current
+        - sensor.iran_coronavirus_recovered
+        - sensor.iran_coronavirus_deaths
+
+- type: custom:vertical-stack-in-card
+  title: USA
+  cards:
+    - type: custom:mini-graph-card
+      entities:
+        - sensor.us_coronavirus_mortality
+      line_width: 6
+    - type: glance
+      entities:
+        - sensor.us_coronavirus_confirmed
+        - sensor.us_coronavirus_current
+        - sensor.us_coronavirus_recovered
+        - sensor.us_coronavirus_deaths
+
+- type: custom:vertical-stack-in-card
   title: China
   cards:
     - type: custom:mini-graph-card

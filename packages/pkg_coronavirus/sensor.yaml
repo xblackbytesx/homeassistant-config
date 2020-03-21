@@ -10,10 +10,25 @@
         unit_of_measurement: "%"
         value_template: "{{ (states('sensor.netherlands_coronavirus_deaths') | float / states('sensor.netherlands_coronavirus_confirmed') | float) * 100 | round(3) }}"
 
-      italy_coronavirus_mortality:
+      iran_coronavirus_mortality:
         friendly_name: "Mortality Rate"
         unit_of_measurement: "%"
-        value_template: "{{ (states('sensor.italy_coronavirus_deaths') | float / states('sensor.italy_coronavirus_confirmed') | float) * 100 | round(3) }}"
+        value_template: "{{ (states('sensor.iran_coronavirus_deaths') | float / states('sensor.iran_coronavirus_confirmed') | float) * 100 | round(3) }}"
+
+      spain_coronavirus_mortality:
+        friendly_name: "Mortality Rate"
+        unit_of_measurement: "%"
+        value_template: "{{ (states('sensor.spain_coronavirus_deaths') | float / states('sensor.spain_coronavirus_confirmed') | float) * 100 | round(3) }}"
+
+      iran_coronavirus_mortality:
+        friendly_name: "Mortality Rate"
+        unit_of_measurement: "%"
+        value_template: "{{ (states('sensor.iran_coronavirus_deaths') | float / states('sensor.iran_coronavirus_confirmed') | float) * 100 | round(3) }}"
+
+      us_coronavirus_mortality:
+        friendly_name: "Mortality Rate"
+        unit_of_measurement: "%"
+        value_template: "{{ (states('sensor.us_coronavirus_deaths') | float / states('sensor.us_coronavirus_confirmed') | float) * 100 | round(3) }}"
 
       china_coronavirus_mortality:
         friendly_name: "Mortality Rate"

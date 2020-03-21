@@ -43,6 +43,51 @@ sensor.italy_coronavirus_deaths:
 sensor.italy_coronavirus_mortality:
   icon: mdi:emoticon-dead-outline
 
+sensor.spain_coronavirus_confirmed:
+  friendly_name: Confirmed
+  icon: mdi:emoticon-neutral-outline
+sensor.spain_coronavirus_current:
+  friendly_name: Current
+  icon: mdi:emoticon-frown-outline
+sensor.spain_coronavirus_recovered:
+  friendly_name: Recovered
+  icon: mdi:emoticon-happy-outline
+sensor.spain_coronavirus_deaths:
+  friendly_name: Deaths
+  icon: mdi:emoticon-dead-outline
+sensor.spain_coronavirus_mortality:
+  icon: mdi:emoticon-dead-outline
+
+sensor.iran_coronavirus_confirmed:
+  friendly_name: Confirmed
+  icon: mdi:emoticon-neutral-outline
+sensor.iran_coronavirus_current:
+  friendly_name: Current
+  icon: mdi:emoticon-frown-outline
+sensor.iran_coronavirus_recovered:
+  friendly_name: Recovered
+  icon: mdi:emoticon-happy-outline
+sensor.iran_coronavirus_deaths:
+  friendly_name: Deaths
+  icon: mdi:emoticon-dead-outline
+sensor.iran_coronavirus_mortality:
+  icon: mdi:emoticon-dead-outline
+
+sensor.us_coronavirus_confirmed:
+  friendly_name: Confirmed
+  icon: mdi:emoticon-neutral-outline
+sensor.us_coronavirus_current:
+  friendly_name: Current
+  icon: mdi:emoticon-frown-outline
+sensor.us_coronavirus_recovered:
+  friendly_name: Recovered
+  icon: mdi:emoticon-happy-outline
+sensor.us_coronavirus_deaths:
+  friendly_name: Deaths
+  icon: mdi:emoticon-dead-outline
+sensor.us_coronavirus_mortality:
+  icon: mdi:emoticon-dead-outline
+
 sensor.china_coronavirus_confirmed:
   friendly_name: Confirmed
   icon: mdi:emoticon-neutral-outline
