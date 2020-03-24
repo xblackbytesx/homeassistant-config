@@ -1,6 +1,5 @@
 title: Bier Estates
 
-resources: !include lovelace/resources.yaml
 decluttering_templates: !include_dir_merge_named lovelace/decluttering_templates/
 
 views:
