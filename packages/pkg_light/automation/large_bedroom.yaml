@@ -62,7 +62,7 @@
       - 'double'
   action:
     service_template: >
-      {% if is_state('light.lg_mb_all', 'off') %}
+      {% if is_state('light.0x00178801039d140f_light', 'off') %}
         script.turn_on
       {% else %}
         light.turn_off
@@ -70,7 +70,7 @@
     data_template:
       entity_id: >
         {% if trigger.to_state.state == 'single' or trigger.to_state.state == 'double' %}
-          {% if is_state('light.lg_mb_all', 'off') %}
+          {% if is_state('light.0x00178801039d140f_light', 'off') %}
             {% if is_state('input_boolean.time_for_dim_scenes', 'on') and trigger.to_state.state == 'single' %}
               script.scene_lb_night
             {% else %}
