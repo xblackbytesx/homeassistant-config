@@ -77,6 +77,6 @@
               script.scene_lb_day
             {% endif %}
           {% else %}
-            light.lg_mb_all
+            light.lg_lb_all
           {% endif %}
         {% endif %}
