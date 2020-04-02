@@ -1,13 +1,13 @@
-type: picture-elements
-image: /local/moon_phases/space_bg.svg
-elements:
-  - type: image
-    entity: sensor.moon
-    image: "{{ states.sensor.moon_phase.attributes['entity_picture'] }}"
-    style:
-      width: 250px
-      height: 250px
-      position: absolute
-      top: 50%
-      left: 50%
-      transform: translateX(-50%) translateY(-50%);
+- type: picture-elements
+  image: /local/moon_phases/space_bg.svg
+  elements:
+    - type: image
+      entity: sensor.moon
+      image: "{{ states.sensor.moon_phase.attributes['entity_picture'] }}"
+      style:
+        width: 250px
+        height: 250px
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translateX(-50%) translateY(-50%);
