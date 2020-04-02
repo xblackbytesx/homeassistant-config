@@ -1,5 +1,5 @@
 type: picture-elements
-image: /local/space_bg.svg
+image: /local/moon_phases/space_bg.svg
 elements:
   - type: image
     entity: sensor.moon
