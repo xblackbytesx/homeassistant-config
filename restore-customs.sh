@@ -67,7 +67,7 @@ wget https://raw.githubusercontent.com/ofekashery/vertical-stack-in-card/master/
 
 echo "Installing Bar Card"
 mkdir -p www/custom-lovelace/lovelace-bar-card
-wget https://github.com/custom-cards/bar-card/releases/download/1.7.1/bar-card.js -O www/custom-lovelace/lovelace-bar-card/bar-card.js
+wget https://github.com/custom-cards/bar-card/releases/download/2.0.2/bar-card.js -O www/custom-lovelace/lovelace-bar-card/bar-card.js
 
 echo "Installing Fold-entity Card"
 mkdir -p www/custom-lovelace/lovelace-fold-entity-row
@@ -83,7 +83,7 @@ wget https://github.com/kalkih/mini-graph-card/releases/download/v0.9.3/mini-gra
 
 echo "Installing Mini Media Player Card"
 mkdir -p www/custom-lovelace/lovelace-mini-media-player
-wget https://github.com/kalkih/mini-media-player/releases/download/v1.6.0/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
+wget https://github.com/kalkih/mini-media-player/releases/download/v1.7.0/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
 
 echo "Bump versions in resources"
 EPOCH=$(date +%s)
