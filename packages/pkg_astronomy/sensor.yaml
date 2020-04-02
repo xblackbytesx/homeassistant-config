@@ -2,8 +2,7 @@
 
 - platform: template
   sensors:
-    moon_phase:
+    moon_phase_image:
       entity_id: sensor.moon
-      friendly_name: 'Moon phase'
-      value_template: '{{ states.sensor.moon.state }}'
-      entity_picture_template: /local/moon_phases/{{ states.sensor.moon.state }}.svg
+      friendly_name: 'Moon phase image'
+      value_template: '/local/moon_phases/{{ states.sensor.moon.state }}.svg'
