@@ -1,0 +1,13 @@
+type: picture-elements
+image: /local/space_bg.svg
+elements:
+  - type: image
+    entity: sensor.moon
+    image: {{ sensor.moon_phase.entity_picture_template }}
+    style:
+      width: 250px
+      height: 250px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%);
