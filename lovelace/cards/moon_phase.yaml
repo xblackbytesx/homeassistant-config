@@ -3,7 +3,15 @@
   elements:
     - type: image
       entity: sensor.moon
-      image: sensor.moon_phase_image
+      state_image: 
+        "waning_crescent": /local/moon_phases/waning_crescent.svg
+        "third_quarter": /local/moon_phases/third_quarter.svg
+        "waning_gibbous": /local/moon_phases/waning_gibbous.svg
+        "full_moon": /local/moon_phases/full_moon.svg
+        "waxing_gibbous": /local/moon_phases/waxing_gibbous.svg
+        "first_quarter": /local/moon_phases/first_quarter.svg
+        "waxing_crescent": /local/moon_phases/waxing_crescent.svg
+        "new_moon": /local/moon_phases/new_moon.svg
       style:
         width: 250px
         height: 250px
