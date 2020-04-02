@@ -3,7 +3,7 @@ image: /local/space_bg.svg
 elements:
   - type: image
     entity: sensor.moon
-    image: {{ sensor.moon_phase.entity_picture_template }}
+    image: {{ states.sensor.moon_phase.attributes["entity_picture"] }}
     style:
       width: 250px
       height: 250px
