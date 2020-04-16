@@ -2,19 +2,25 @@ type: vertical-stack
 cards:
   - type: custom:mini-graph-card
     entities:
-      - sensor.bitcoin
+      - sensor.btc_price
     name: Bitcoin
     line_color: '#2980b9'
     line_width: 6
   - type: custom:mini-graph-card
     entities:
-      - sensor.ethereum
+      - sensor.eth_price
     name: Ethereum
     line_color: '#b58e31'
     line_width: 6
   - type: custom:mini-graph-card
     entities:
-      - sensor.iota
+      - sensor.miota_price
     name: IOTA
     line_color: '#b93829'
+    line_width: 6
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.xmr_price
+    name: Monero
+    line_color: '#2980b9'
     line_width: 6

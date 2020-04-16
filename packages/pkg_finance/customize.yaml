@@ -1,6 +1,17 @@
-sensor.bitcoin:
+# sensor.bitcoin:
+#   icon: mdi:bitcoin
+# sensor.ethereum:
+#   icon: mdi:ethereum
+# sensor.iota:
+#   icon: mdi:coin
+# sensor.monero:
+#   icon: mdi:coin
+
+sensor.btc_price:
   icon: mdi:bitcoin
-sensor.ethereum:
+sensor.eth_price:
   icon: mdi:ethereum
-sensor.iota:
+sensor.miota_price:
+  icon: mdi:coin
+sensor.xmr_price:
   icon: mdi:coin

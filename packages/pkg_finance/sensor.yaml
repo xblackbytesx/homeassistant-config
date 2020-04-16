@@ -1,11 +1,41 @@
-- platform: coinmarketcap
-  currency_id: 1
-  display_currency: EUR
+# - platform: coinmarketcap
+#   currency_id: 1
+#   display_currency: EUR
 
-- platform: coinmarketcap
-  currency_id: 1027
-  display_currency: EUR
+# - platform: coinmarketcap
+#   currency_id: 1027
+#   display_currency: EUR
 
-- platform: coinmarketcap
-  currency_id: 1720
-  display_currency: EUR
+# - platform: coinmarketcap
+#   currency_id: 1720
+#   display_currency: EUR
+
+- platform: command_line
+  name: coinmarketcap_curl
+  command: !secret cmc_api_call
+  value_template: '{{ value_json.value }}'
+  scan_interval: 600 #10 mins refresh (144 credits / day used)
+  json_attributes:
+    data
+
+- platform: template
+  sensors:
+    btc_price:
+      friendly_name: 'Bitcoin Price'
+      unit_of_measurement: 'EUR'
+      value_template: '{{ ((states.sensor.coinmarketcap_curl.attributes.data.BTC.quote.EUR.price) | float) | round(2) }}'
+
+    eth_price:
+      friendly_name: 'Ethereum Price'
+      unit_of_measurement: 'EUR'
+      value_template: '{{ ((states.sensor.coinmarketcap_curl.attributes.data.ETH.quote.EUR.price) | float) | round(2) }}'
+
+    miota_price:
+      friendly_name: 'IOTA Price'
+      unit_of_measurement: 'EUR'
+      value_template: '{{ ((states.sensor.coinmarketcap_curl.attributes.data.MIOTA.quote.EUR.price) | float) | round(2) }}'
+
+    xmr_price:
+      friendly_name: 'Monero Price'
+      unit_of_measurement: 'EUR'
+      value_template: '{{ ((states.sensor.coinmarketcap_curl.attributes.data.XMR.quote.EUR.price) | float) | round(2) }}'
