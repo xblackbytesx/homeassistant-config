@@ -1,4 +1,7 @@
-# Lights
+##############
+### LIGHTS ###
+##############
+
 light.lg_sa_all:
   icon: mdi:sofa
 light.lg_kitchen_all:
@@ -25,8 +28,6 @@ light.0x00178801030a3dde_light:
   friendly_name: Corridor
 light.0x086bd7fffe2b8f58_light:
   friendly_name: Toilet
-# light.0x00158d00017934ff_light:
-#   friendly_name: Toilet
 light.0x90fd9ffffeea4e5e_light:
   friendly_name: Master bedroom
 light.0x00178801039d140f_light:
@@ -45,8 +46,6 @@ light.lg_ex_all:
   icon: mdi:tree
 light.0x086bd7fffe035d36_light:
   friendly_name: Front porch
-# light.0x00158d00017ab8da_light:
-#   friendly_name: Front porch
 light.0x000b57fffee35b50_light:
   friendly_name: Backyard
 
@@ -301,3 +300,65 @@ script.scene_office_search_mode:
 script.scene_office_reset_default:
   friendly_name: Reset
   icon: mdi:cancel
+
+############################
+### ILLUMINATION SENSORS ###
+############################
+
+sensor.0x00178801020260c3_illuminance:
+  friendly_name: Hallway/door
+  device_class: illuminance
+sensor.0x00178801020282bc_illuminance:
+  friendly_name: Hallway/stairs
+  device_class: illuminance
+sensor.0x00158d000447edb4_illuminance:
+  friendly_name: Toilet
+  device_class: illuminance
+sensor.sa_motion_detected:
+  friendly_name: Sitting Area
+  device_class: illuminance
+sensor.kitchen_motion_detected:
+  friendly_name: Kitchen
+  device_class: illuminance
+sensor.0x0017880102026161_illuminance:
+  friendly_name: Sitting area/screen
+  device_class: illuminance
+sensor.0x00158d00034911fc_illuminance:
+  friendly_name: Sitting area/closet
+  device_class: illuminance
+sensor.0x00158d00033a43ef_illuminance:
+  friendly_name: Kitchen/front
+  device_class: illuminance
+sensor.0x0017880102030677_illuminance:
+  friendly_name: Kitchen/back
+  device_class: illuminance
+sensor.0x00178801020357e5_illuminance:
+  friendly_name: Corridor
+  device_class: illuminance
+sensor.co_motion_detected:
+  friendly_name: Corridor
+  device_class: illuminance
+sensor.attic_motion_detected:
+  friendly_name: Attic
+  device_class: illuminance
+sensor.0x00158d000349234a_illuminance:
+  friendly_name: Bathroom/back
+  device_class: illuminance
+sensor.0x00158d00033aac53_illuminance:
+  friendly_name: Bathroom/front
+  device_class: illuminance
+sensor.bathroom_motion_detected:
+  friendly_name: Bathroom
+  device_class: illuminance
+sensor.0x00158d00036b62d0_illuminance:
+  friendly_name: Attic/stairs
+  device_class: illuminance
+sensor.0x00158d000302ec77_illuminance:
+  friendly_name: Attic/front
+  device_class: illuminance
+sensor.0x00158d0004499f26_illuminance:
+  friendly_name: Office/front
+  device_class: illuminance
+sensor.0x680ae2fffe367f3b_illuminance:
+  friendly_name: Tradfri
+  device_class: illuminance

@@ -39,3 +39,38 @@
       friendly_name: 'Monero Price'
       unit_of_measurement: 'EUR'
       value_template: '{{ ((states.sensor.coinmarketcap_curl.attributes.data.XMR.quote.EUR.price) | float) | round(2) }}'
+
+    btc_owned:
+      friendly_name: 'Bitcoin owned'
+      unit_of_measurement: 'BTC'
+      value_template: !secret btc_owned
+
+    eth_owned:
+      friendly_name: 'Ethereum owned'
+      unit_of_measurement: 'ETH'
+      value_template: !secret eth_owned
+
+    miota_owned:
+      friendly_name: 'IOTA owned'
+      unit_of_measurement: 'MIOTA'
+      value_template: !secret miota_owned
+
+    xmr_owned:
+      friendly_name: 'Monero owned'
+      unit_of_measurement: 'XMR'
+      value_template: !secret xmr_owned
+
+    nxt_owned:
+      friendly_name: 'NXT owned'
+      unit_of_measurement: 'NXT'
+      value_template: !secret nxt_owned
+
+    moon_owned:
+      friendly_name: 'MOON owned'
+      unit_of_measurement: 'MOON'
+      value_template: !secret moon_owned
+
+    crypto_portfolio_value:
+      friendly_name: "Crypto Portfolio Value"
+      unit_of_measurement: "EUR"
+      value_template: !secret crypto_portfolio_sum

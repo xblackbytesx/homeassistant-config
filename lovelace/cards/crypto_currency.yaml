@@ -2,6 +2,12 @@ type: vertical-stack
 cards:
   - type: custom:mini-graph-card
     entities:
+      - sensor.crypto_portfolio_value
+    name: Portfolio value
+    line_color: '#b93829'
+    line_width: 6
+  - type: custom:mini-graph-card
+    entities:
       - sensor.btc_price
     name: Bitcoin
     line_color: '#2980b9'
