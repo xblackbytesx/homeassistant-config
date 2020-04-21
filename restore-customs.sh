@@ -39,7 +39,7 @@ cp -Rp assets/custom_components/garbage_pickup custom_components/
 
 echo "Installing Decluttering Card"
 mkdir -p www/custom-lovelace/decluttering-card
-wget https://github.com/custom-cards/decluttering-card/releases/download/0.3.0/decluttering-card.js -O www/custom-lovelace/decluttering-card/decluttering-card.js
+wget https://github.com/custom-cards/decluttering-card/releases/download/0.6.1/decluttering-card.js -O www/custom-lovelace/decluttering-card/decluttering-card.js
 
 echo "Installing Upcoming Media Card"
 mkdir -p www/custom-lovelace/upcoming-media-card
@@ -67,7 +67,7 @@ wget https://raw.githubusercontent.com/ofekashery/vertical-stack-in-card/master/
 
 echo "Installing Bar Card"
 mkdir -p www/custom-lovelace/lovelace-bar-card
-wget https://github.com/custom-cards/bar-card/releases/download/2.0.2/bar-card.js -O www/custom-lovelace/lovelace-bar-card/bar-card.js
+wget https://github.com/custom-cards/bar-card/releases/download/3.0.9/bar-card.js -O www/custom-lovelace/lovelace-bar-card/bar-card.js
 
 echo "Installing Fold-entity Card"
 mkdir -p www/custom-lovelace/lovelace-fold-entity-row
