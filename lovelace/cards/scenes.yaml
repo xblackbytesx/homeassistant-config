@@ -9,11 +9,10 @@ cards:
       - entity_2: script.scene_sa_not_watching_tv
       - entity_3: script.scene_lr_search_mode
       - entity_4: script.scene_lr_reset_default
-      - service: script.turn_on
-      - entity_1: script.scene_lr_disco_mode
-      - entity_2: script.scene_lr_disco_mode
-      - entity_3: script.scene_lr_disco_mode
-      - entity_4: script.scene_lr_reset_default
+      - entity_5: script.scene_lr_disco_mode
+      - entity_6: script.scene_lr_disco_mode
+      - entity_7: script.scene_lr_disco_mode
+      - entity_8: script.scene_lr_reset_default
   - type: custom:decluttering-card
     template: scene_tile
     variables:
