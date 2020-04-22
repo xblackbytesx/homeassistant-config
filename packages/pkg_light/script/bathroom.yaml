@@ -3,6 +3,7 @@ scene_bathroom_l_night:
     - service: light.turn_on
       data:
         entity_id: light.hue_candle_bathroom_l
+        xy_color: [0.507, 0.414]
         brightness_pct: 15
 
 
@@ -11,6 +12,7 @@ scene_bathroom_l_day:
     - service: light.turn_on
       data:
         entity_id: light.hue_candle_bathroom_l
+        xy_color: [0.507, 0.414]
         brightness_pct: 80
 
 
@@ -19,6 +21,7 @@ scene_bathroom_r_night:
     - service: light.turn_on
       data:
         entity_id: light.hue_bulb_bathroom_r
+        xy_color: [0.507, 0.414]
         brightness_pct: 15
 
 
@@ -27,6 +30,7 @@ scene_bathroom_r_day:
     - service: light.turn_on
       data:
         entity_id: light.hue_bulb_bathroom_r
+        xy_color: [0.507, 0.414]
         brightness_pct: 80
 
 
@@ -44,3 +48,27 @@ scene_bathroom_day:
       entity_id: 
         - script.scene_bathroom_l_day  
         - script.scene_bathroom_r_day
+
+
+scene_bathroom_search_mode:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_bathroom_all
+        xy_color: [0.311, 0.327]
+        brightness_pct: 100
+    - service: homeassistant.turn_off
+      entity_id: 
+        - automation.bathroom_001
+        - automation.bathroom_002
+
+
+scene_bathroom_reset_default:
+  alias: Resets the bathroom default scene
+  sequence:
+    - service: script.turn_on
+      entity_id: script.scene_bathroom_day
+    - service: homeassistant.turn_on
+      entity_id: 
+        - automation.bathroom_001
+        - automation.bathroom_002

@@ -146,9 +146,9 @@ automation.co_001:
 
 # Bathroom automations
 automation.bathroom_001:
-  friendly_name: Bathroom | Motion | Lights | Off
-automation.bathroom_002:
   friendly_name: Bathroom | Switch | Light
+automation.bathroom_002:
+  friendly_name: Bathroom | Motion | Scene
 
 # Attic automations
 automation.attic_001:
@@ -250,6 +250,22 @@ script.scene_mb_search_mode:
   icon: mdi:magnify
 
 script.scene_mb_reset_default:
+  friendly_name: Reset
+  icon: mdi:cancel
+
+script.scene_bathroom_day:
+  friendly_name: Day
+  icon: mdi:weather-sunny
+
+script.scene_bathroom_night:
+  friendly_name: Night
+  icon: mdi:weather-night
+
+script.scene_bathroom_search_mode:
+  friendly_name: Search Mode
+  icon: mdi:magnify
+
+script.scene_bathroom_reset_default:
   friendly_name: Reset
   icon: mdi:cancel
 

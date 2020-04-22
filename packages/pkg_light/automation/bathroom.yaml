@@ -2,22 +2,6 @@
   alias: bathroom_001
   trigger:
     platform: state
-    entity_id: binary_sensor.bathroom_motion_detected
-    to: 'off'
-    for:
-      minutes: "{{ states('input_number.bathroom_motion_timeout')| int }}"
-  action:
-    - service: light.turn_off
-      entity_id: light.lg_bathroom_all
-    - service: notify.notify_matrix_noisy
-      data:
-        message: "Shame! You forgot the Bathroom lights again!"
-
-
-- id: bathroom_002
-  alias: bathroom_002
-  trigger:
-    platform: state
     entity_id: sensor.0x00158d00033e347d_click
     to:
       - 'left'
@@ -64,8 +48,8 @@
         {% endif %}
 
 
-- id: bathroom_003
-  alias: bathroom_003
+- id: bathroom_002
+  alias: bathroom_002
   trigger:
     - platform: state
       entity_id: binary_sensor.bathroom_motion_detected
