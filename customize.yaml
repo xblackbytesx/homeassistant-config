@@ -6,29 +6,62 @@ group.all_automations:
 switch.0x000d6ffffedad23c_switch:
   friendly_name: TV Cabinet
   icon: mdi:power-socket-eu
+binary_sensor.0x000d6ffffedad23c_update_available:
+  friendly_name: Tradfri Outlet TV Cabinet
+sensor.0x000d6ffffedad23c_linkquality:
+  friendly_name: Tradfri Outlet TV Cabinet
+
 #socket 2
 switch.0x000d6ffffea6df64_switch:
   friendly_name: Black Cabinet
   icon: mdi:power-socket-eu
+binary_sensor.0x000d6ffffea6df64_update_available:
+  friendly_name: Tradfri Outlet Black Cabinet
+sensor.0x000d6ffffea6df64_linkquality:
+  friendly_name: Tradfri Outlet Black Cabinet
+
 # Socket 3
 switch.0x000d6ffffea6e967_switch:
   friendly_name: Exterior lighting
   icon: mdi:power-socket-eu
+binary_sensor.0x000d6ffffea6e967_update_available:
+  friendly_name: Tradfri Outlet Exterior
+sensor.0x000d6ffffea6e967_linkquality:
+  friendly_name: Tradfri Outlet Exterior
+
 # Socket 5
 switch.0x000d6ffffedaf667_switch:
   friendly_name: Large bedroom
   icon: mdi:power-socket-eu
+binary_sensor.0x000d6ffffedaf667_update_available:
+  friendly_name: Tradfri Outlet Large bedroom
+sensor.0x000d6ffffedaf667_linkquality:
+  friendly_name: Tradfri Outlet Large bedroom
+
 # Socket 6
 switch.0x000d6ffffedc5e05_switch:
   friendly_name: Small bedroom
   icon: mdi:power-socket-eu
+binary_sensor.0x000d6ffffedc5e05_update_available:
+  friendly_name: Tradfri Outlet Small bedroom
+sensor.0x000d6ffffedc5e05_linkquality:
+  friendly_name: Tradfri Outlet Small bedroom
+
 switch.0x000d6ffffea7daa5_switch:
   friendly_name: Attic/dryer
   icon: mdi:power-socket-eu
+binary_sensor.0x000d6ffffea7daa5_update_available:
+  friendly_name: Tradfri Outlet Attic/Dryer
+sensor.0x000d6ffffea7daa5_linkquality:
+  friendly_name: Tradfri Outlet Attic/Dryer
+
 switch.0x000d6ffffed9d60d_switch:
   friendly_name: Office/desks
   icon: mdi:power-socket-eu
-
+binary_sensor.0x000d6ffffed9d60d_update_available:
+  friendly_name: Tradfri Outlet Office/Desks
+sensor.0x000d6ffffed9d60d_linkquality:
+  friendly_name: Tradfri Outlet Office/Desks
 
 # Battery status
 sensor.0x00158d000313127e_battery:
