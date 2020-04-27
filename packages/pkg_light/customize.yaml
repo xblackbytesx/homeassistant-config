@@ -14,41 +14,121 @@ light.lg_sb_all:
   icon: mdi:hotel
 light.lg_bathroom_all:
   icon: mdi:shower
+
 light.0x0017880103ea3a60_light:
   friendly_name: Hallway
+sensor.0x0017880103ea3a60_linkquality:
+  friendly_name: Hue Bulb Hallway
+binary_sensor.0x0017880103ea3a60_update_available:
+  friendly_name: Hue Bulb Hallway
+
 light.0x00178801081b61c2_light:
   friendly_name: Kitchen | Front
+sensor.0x00178801081b61c2_linkquality:
+  friendly_name: Hue Filament Kitchen Front
+binary_sensor.0x00178801081b61c2_update_available:
+  friendly_name: Hue Filament Kitchen Front
+
 light.0x00178801081b3c89_light:
   friendly_name: Kitchen | Back
+sensor.0x00178801081b3c89_linkquality:
+  friendly_name: Hue Filament Kitchen Back
+binary_sensor.0x00178801081b3c89_update_available:
+  friendly_name: Hue Filament Kitchen Back
+
 light.0x00178801081af093_light:
   friendly_name: SA | Dangling bulb | L
+sensor.0x00178801081af093_linkquality:
+  friendly_name: Hue Filament Dangling Bulb Left
+binary_sensor.0x00178801081af093_update_available:
+  friendly_name: Hue Filament Dangling Bulb Left
+
 light.0x00178801089f827b_light:
   friendly_name: SA | Dangling bulb | R
+sensor.0x00178801089f827b_linkquality:
+  friendly_name: Hue Filament Dangling Bulb Right
+binary_sensor.0x00178801089f827b_update_available:
+  friendly_name: Hue Filament Dangling Bulb RIght
+
 light.0x00178801030a3dde_light:
   friendly_name: Corridor
+sensor.0x00178801030a3dde_linkquality:
+  friendly_name: Hue Bulb Corridor
+binary_sensor.0x00178801030a3dde_update_available:
+  friendly_name: Hue Bulb Corridor
+
 light.0x086bd7fffe2b8f58_light:
   friendly_name: Toilet
+sensor.0x086bd7fffe2b8f58_linkquality:
+  friendly_name: Tradfri Bulb Toilet
+binary_sensor.0x086bd7fffe2b8f58_update_available:
+  friendly_name: Tradfri Bulb Toilet
+
 light.0x90fd9ffffeea4e5e_light:
   friendly_name: Master bedroom
+sensor.00x90fd9ffffeea4e5e_linkquality:
+  friendly_name: Tradfri Bulb Master Bedroom
+binary_sensor.0x90fd9ffffeea4e5e_update_available:
+  friendly_name: Tradfri Bulb Master Bedroom
+
 light.0x00178801039d140f_light:
   friendly_name: Large bedroom
+sensor.0x00178801039d140f_linkquality:
+  friendly_name: Hue Bulb Large Bedroom
+binary_sensor.0x00178801039d140f_update_available:
+  friendly_name: Hue Bulb Large Bedroom
+
 light.0x00178801023c1a33_light:
   friendly_name: Small bedroom
+sensor.0x00178801023c1a33_linkquality:
+  friendly_name: Hue Bulb Small Bedroom
+binary_sensor.0x00178801023c1a33_update_available:
+  friendly_name: Hue Bulb Small Bedroom
+
 light.0x000b3cfffefab3f6_light:
   friendly_name: Attic Front
+sensor.0x000b3cfffefab3f6_linkquality:
+  friendly_name: Tradfri Bulb Attic Front
+binary_sensor.0x000b3cfffefab3f6_update_available:
+  friendly_name: Tradfri Bulb Attic Front
+
 light.0x086bd7fffe020f14_light:
   friendly_name: Attic Back
+sensor.0x086bd7fffe020f14_linkquality:
+  friendly_name: Tradfri Bulb Attic Back
+binary_sensor.0x086bd7fffe020f14_update_available:
+  friendly_name: Tradfri Bulb Attic Back
+
 light.0x00178801023c1b25_light:
   friendly_name: Office left
+sensor.0x00178801023c1b25_linkquality:
+  friendly_name: Hue Bulb Office Left
+binary_sensor.0x00178801023c1b25_update_available:
+  friendly_name: Hue Bulb Office Left
+
 light.0x0017880102460013_light:
   friendly_name: Office right
-light.lg_ex_all:
-  icon: mdi:tree
+sensor.0x0017880102460013_linkquality:
+  friendly_name: Hue Bulb Office Right
+binary_sensor.0x0017880102460013_update_available:
+  friendly_name: Hue Bulb Office Right
+
 light.0x086bd7fffe035d36_light:
   friendly_name: Front porch
+sensor.0x086bd7fffe035d36_linkquality:
+  friendly_name: Tradfri Bulb Front Porch
+binary_sensor.0x086bd7fffe035d36_update_available:
+  friendly_name: Tradfri Bulb Front Porch
+
 light.0x000b57fffee35b50_light:
   friendly_name: Backyard
+sensor.0x000b57fffee35b50_linkquality:
+  friendly_name: Tradfri Bulb Backyard
+binary_sensor.0x000b57fffee35b50_update_available:
+  friendly_name: Tradfri Bulb Backyard
 
+light.lg_ex_all:
+  icon: mdi:tree
 
 input_number.sa_illuminance_threshold:
   friendly_name: Sitting Area
@@ -133,12 +213,16 @@ automation.lb_001:
   friendly_name: LB | Duo switch | Light
 automation.lb_002:
   friendly_name: LB | Time | Lights | Off
+automation.lb_003:
+  friendly_name: LB | Switch | Lights | Toggle
 
 # Small bedroom automations
 automation.sb_001:
   friendly_name: SB | Duo switch | Light
 automation.sb_002:
   friendly_name: SB | Time | Lights | Off
+automation.sb_003:
+  friendly_name: SB | Switch | Lights | Toggle
 
 # Corridor automations
 automation.co_001:
