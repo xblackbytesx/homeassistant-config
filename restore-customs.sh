@@ -85,6 +85,9 @@ echo "Installing Mini Media Player Card"
 mkdir -p www/custom-lovelace/lovelace-mini-media-player
 wget https://github.com/kalkih/mini-media-player/releases/download/v1.7.0/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
 
+echo "Installing Air Purifier Card"
+cp -Rp /config/assets/custom_cards/air-purifier /config/www/custom-lovelace/
+
 echo "Bump versions in resources"
 EPOCH=$(date +%s)
 git checkout master -- lovelace/resources.yaml
