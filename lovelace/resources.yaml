@@ -18,3 +18,5 @@
   type: js
 - url: /local/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
   type: js
+- url: /local/custom-lovelace/air-purifier/card.js
+  type: module
