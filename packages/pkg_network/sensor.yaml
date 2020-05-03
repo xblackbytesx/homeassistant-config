@@ -1,4 +1,4 @@
-- platform: synologydsm
+- platform: synology_dsm
   host: !secret synology_ip
   username: !secret synology_username
   password: !secret synology_password
