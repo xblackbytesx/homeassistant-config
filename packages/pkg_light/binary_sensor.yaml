@@ -26,7 +26,7 @@
 
     toilet_dark_enough:
       value_template: >-
-        {{ state_attr('sensor.0x00158d000447edb4_illuminance', 'illuminance_lux') <= 100 }}
+        {{ state_attr('sensor.0x00158d000447edb4_illuminance', 'illuminance_lux') <= 400 }}
 
     office_dark_enough:
       value_template: >-
