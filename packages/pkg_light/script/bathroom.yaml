@@ -3,7 +3,7 @@ scene_bathroom_l_night:
     - service: light.turn_on
       data:
         entity_id: light.hue_candle_bathroom_l
-        xy_color: [0.507, 0.414]
+        xy_color: [0.464, 0.398]
         brightness_pct: 15
 
 
@@ -12,8 +12,8 @@ scene_bathroom_l_day:
     - service: light.turn_on
       data:
         entity_id: light.hue_candle_bathroom_l
-        xy_color: [0.507, 0.414]
-        brightness_pct: 80
+        xy_color: [0.464, 0.398]
+        brightness_pct: 95
 
 
 scene_bathroom_r_night:
@@ -21,7 +21,7 @@ scene_bathroom_r_night:
     - service: light.turn_on
       data:
         entity_id: light.hue_bulb_bathroom_r
-        xy_color: [0.507, 0.414]
+        xy_color: [0.464, 0.398]
         brightness_pct: 15
 
 
@@ -30,8 +30,8 @@ scene_bathroom_r_day:
     - service: light.turn_on
       data:
         entity_id: light.hue_bulb_bathroom_r
-        xy_color: [0.507, 0.414]
-        brightness_pct: 80
+        xy_color: [0.464, 0.398]
+        brightness_pct: 95
 
 
 scene_bathroom_night:
