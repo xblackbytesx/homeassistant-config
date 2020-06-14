@@ -24,6 +24,10 @@
       value_template: >-
         {{ state_attr('sensor.0x00158d00036b62d0_illuminance', 'illuminance_lux') <= 100 }}
 
+    toilet_dark_enough:
+      value_template: >-
+        {{ state_attr('sensor.0x00158d000447edb4_illuminance', 'illuminance_lux') <= 100 }}
+
     office_dark_enough:
       value_template: >-
         {{ state_attr('sensor.0x00158d0004499f26_illuminance', 'illuminance_lux') <= states('input_number.office_illuminance_threshold')| int }}

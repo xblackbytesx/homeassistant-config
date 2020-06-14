@@ -34,6 +34,11 @@ git clone git@github.com:rgruebel/ha_zigbee2mqtt_networkmap.git custom_component
 mv custom_components/zigbee_networkmap/custom_components/zigbee2mqtt_networkmap custom_components/
 rm -rf custom_components/zigbee_networkmap
 
+echo "Installing HASS Node Red Component"
+git clone git@github.com:zachowj/hass-node-red.git custom_components/hass-node-red
+mv custom_components/hass-node-red/custom_components/nodered custom_components/
+rm -rf custom_components/hass-node-red
+
 echo "Installing Garbage Pickup Component"
 cp -Rp assets/custom_components/garbage_pickup custom_components/
 
@@ -67,7 +72,7 @@ wget https://raw.githubusercontent.com/ofekashery/vertical-stack-in-card/master/
 
 echo "Installing Bar Card"
 mkdir -p www/custom-lovelace/lovelace-bar-card
-wget https://github.com/custom-cards/bar-card/releases/download/3.0.9/bar-card.js -O www/custom-lovelace/lovelace-bar-card/bar-card.js
+wget https://github.com/custom-cards/bar-card/releases/download/3.1.6/bar-card.js -O www/custom-lovelace/lovelace-bar-card/bar-card.js
 
 echo "Installing Fold-entity Card"
 mkdir -p www/custom-lovelace/lovelace-fold-entity-row
@@ -83,7 +88,7 @@ wget https://github.com/kalkih/mini-graph-card/releases/download/v0.9.3/mini-gra
 
 echo "Installing Mini Media Player Card"
 mkdir -p www/custom-lovelace/lovelace-mini-media-player
-wget https://github.com/kalkih/mini-media-player/releases/download/v1.7.0/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
+wget https://github.com/kalkih/mini-media-player/releases/download/v1.9.1/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
 
 echo "Installing Air Purifier Card"
 cp -Rp /config/assets/custom_cards/air-purifier /config/www/custom-lovelace/
