@@ -1,34 +1,34 @@
-- id: lb_001
-  alias: lb_001
-  trigger:
-    - platform: event
-      event_type: button_pressed
-      event_data: {"state": "on", "entity_id": "switch.duo_switch_lb_l"}
-    - platform: event
-      event_type: button_pressed
-      event_data: {"state": "off", "entity_id": "switch.duo_switch_lb_l"}
-    - platform: event
-      event_type: button_pressed
-      event_data: {"state": "on", "entity_id": "switch.duo_switch_lb_r"}
-    - platform: event
-      event_type: button_pressed
-      event_data: {"state": "off", "entity_id": "switch.duo_switch_lb_r"}
-  action:
-    service_template: >
-      {% if trigger.event.data.state == 'on' %}
-        script.turn_on
-      {% elif trigger.event.data.state == 'off' %}
-        light.turn_off
-      {% endif %}
-    data_template:
-      entity_id: >
-        {% if trigger.event.data.entity_id == 'switch.duo_switch_lb_l' and trigger.event.data.state == 'on' %}
-          script.scene_lb_night
-        {% elif trigger.event.data.entity_id == 'switch.duo_switch_lb_r' and trigger.event.data.state == 'on' %}
-          script.scene_lb_day
-        {% elif trigger.event.data.state == 'off' %}
-          light.lg_lb_all
-        {% endif %}
+# - id: lb_001
+#   alias: lb_001
+#   trigger:
+#     - platform: event
+#       event_type: button_pressed
+#       event_data: {"state": "on", "entity_id": "switch.duo_switch_lb_l"}
+#     - platform: event
+#       event_type: button_pressed
+#       event_data: {"state": "off", "entity_id": "switch.duo_switch_lb_l"}
+#     - platform: event
+#       event_type: button_pressed
+#       event_data: {"state": "on", "entity_id": "switch.duo_switch_lb_r"}
+#     - platform: event
+#       event_type: button_pressed
+#       event_data: {"state": "off", "entity_id": "switch.duo_switch_lb_r"}
+#   action:
+#     service_template: >
+#       {% if trigger.event.data.state == 'on' %}
+#         script.turn_on
+#       {% elif trigger.event.data.state == 'off' %}
+#         light.turn_off
+#       {% endif %}
+#     data_template:
+#       entity_id: >
+#         {% if trigger.event.data.entity_id == 'switch.duo_switch_lb_l' and trigger.event.data.state == 'on' %}
+#           script.scene_lb_night
+#         {% elif trigger.event.data.entity_id == 'switch.duo_switch_lb_r' and trigger.event.data.state == 'on' %}
+#           script.scene_lb_day
+#         {% elif trigger.event.data.state == 'off' %}
+#           light.lg_lb_all
+#         {% endif %}
 
 
 - id: lb_002

@@ -1,27 +1,27 @@
-- id: co_001
-  alias: co_001
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.co_motion_detected
-      to: 'on'
-    - platform: state
-      entity_id: binary_sensor.co_motion_detected
-      to: 'off'
-      for:
-        minutes: 3
-    - platform: state
-      entity_id: binary_sensor.co_dark_enough
-      to: 'off'
-      for:
-        minutes: 5
-  action:
-    service: script.turn_on
-    data_template:
-      entity_id: script.set_dynamic_scene
-      variables:
-        service: script.turn_on
-        trigger_to_state: '{{ trigger.to_state.state }}'
-        dark_enough: '{{ states("binary_sensor.co_dark_enough") }}'
-        scene_day: 'script.scene_co_day'
-        scene_night: 'script.scene_co_night'
-        light_group: 'light.lg_co_all'
+# - id: co_001
+#   alias: co_001
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.co_motion_detected
+#       to: 'on'
+#     - platform: state
+#       entity_id: binary_sensor.co_motion_detected
+#       to: 'off'
+#       for:
+#         minutes: 3
+#     - platform: state
+#       entity_id: binary_sensor.co_dark_enough
+#       to: 'off'
+#       for:
+#         minutes: 5
+#   action:
+#     service: script.turn_on
+#     data_template:
+#       entity_id: script.set_dynamic_scene
+#       variables:
+#         service: script.turn_on
+#         trigger_to_state: '{{ trigger.to_state.state }}'
+#         dark_enough: '{{ states("binary_sensor.co_dark_enough") }}'
+#         scene_day: 'script.scene_co_day'
+#         scene_night: 'script.scene_co_night'
+#         light_group: 'light.lg_co_all'

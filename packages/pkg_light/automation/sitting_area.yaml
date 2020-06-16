@@ -16,36 +16,36 @@
     entity_id: light.lg_sa_all
 
 
-- id: sa_002
-  alias: sa_002
-  trigger:
-    - platform: state
-      entity_id:
-        - binary_sensor.sa_motion_detected
-        - binary_sensor.sa_dark_enough
-        - binary_sensor.sa_tv_media_playing
-      to: 'on'
-    - platform: state
-      entity_id: binary_sensor.sa_tv_media_playing
-      to: 'off'
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: binary_sensor.sa_motion_detected
-        state: 'on'
-      - condition: state
-        entity_id: binary_sensor.sa_dark_enough
-        state: 'on'
-  action:
-    service: script.turn_on
-    data_template:
-      entity_id: >
-        {% if is_state('binary_sensor.sa_tv_media_playing', 'on') and is_state('input_boolean.sa_media_status_scene_switching', 'on') %}
-          script.scene_sa_watching_tv
-        {% else %}
-          script.scene_sa_not_watching_tv
-        {% endif %}
+# - id: sa_002
+#   alias: sa_002
+#   trigger:
+#     - platform: state
+#       entity_id:
+#         - binary_sensor.sa_motion_detected
+#         - binary_sensor.sa_dark_enough
+#         - binary_sensor.sa_tv_media_playing
+#       to: 'on'
+#     - platform: state
+#       entity_id: binary_sensor.sa_tv_media_playing
+#       to: 'off'
+#   condition:
+#     condition: and
+#     conditions:
+#       - condition: state
+#         entity_id: binary_sensor.sa_motion_detected
+#         state: 'on'
+#       - condition: state
+#         entity_id: binary_sensor.sa_dark_enough
+#         state: 'on'
+#   action:
+#     service: script.turn_on
+#     data_template:
+#       entity_id: >
+#         {% if is_state('binary_sensor.sa_tv_media_playing', 'on') and is_state('input_boolean.sa_media_status_scene_switching', 'on') %}
+#           script.scene_sa_watching_tv
+#         {% else %}
+#           script.scene_sa_not_watching_tv
+#         {% endif %}
 
 
 - id: sa_004
