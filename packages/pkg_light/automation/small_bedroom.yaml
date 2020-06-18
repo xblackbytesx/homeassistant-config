@@ -52,31 +52,31 @@
       entity_id: "{{ trigger.entity_id }}"
 
 
-- id: sb_003
-  alias: sb_003
-  trigger:
-    platform: state
-    entity_id: sensor.0x00158d000404f97e_click
-    to:
-      - 'single'
-      - 'double'
-  action:
-    - service_template: >
-        {% if is_state('light.0x00178801023c1a33_light', 'off') %}
-          script.turn_on
-        {% else %}
-          light.turn_off
-        {% endif %}
-      data_template:
-        entity_id: >
-          {% if trigger.to_state.state == 'single' or trigger.to_state.state == 'double' %}
-            {% if is_state('light.0x00178801023c1a33_light', 'off') %}
-              {% if is_state('input_boolean.time_for_dim_scenes', 'on') and trigger.to_state.state == 'single' %}
-                script.scene_sb_night
-              {% else %}
-                script.scene_sb_day
-              {% endif %}
-            {% else %}
-              light.lg_sb_all
-            {% endif %}
-          {% endif %}
+# - id: sb_003
+#   alias: sb_003
+#   trigger:
+#     platform: state
+#     entity_id: sensor.0x00158d000404f97e_click
+#     to:
+#       - 'single'
+#       - 'double'
+#   action:
+#     - service_template: >
+#         {% if is_state('light.0x00178801023c1a33_light', 'off') %}
+#           script.turn_on
+#         {% else %}
+#           light.turn_off
+#         {% endif %}
+#       data_template:
+#         entity_id: >
+#           {% if trigger.to_state.state == 'single' or trigger.to_state.state == 'double' %}
+#             {% if is_state('light.0x00178801023c1a33_light', 'off') %}
+#               {% if is_state('input_boolean.time_for_dim_scenes', 'on') and trigger.to_state.state == 'single' %}
+#                 script.scene_sb_night
+#               {% else %}
+#                 script.scene_sb_day
+#               {% endif %}
+#             {% else %}
+#               light.lg_sb_all
+#             {% endif %}
+#           {% endif %}

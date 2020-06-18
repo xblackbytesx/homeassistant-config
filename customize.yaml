@@ -38,6 +38,15 @@ binary_sensor.0x000d6ffffedaf667_update_available:
 sensor.0x000d6ffffedaf667_linkquality:
   friendly_name: Tradfri Outlet Large bedroom
 
+# Socket
+switch.0x086bd7fffe5185b6_switch:
+  friendly_name: Large bedroom Fan
+  icon: mdi:fan
+binary_sensor.0x086bd7fffe5185b6_update_available:
+  friendly_name: Tradfri Outlet Large bedroom Fan
+sensor.0x086bd7fffe5185b6_linkquality:
+  friendly_name: Tradfri Outlet Large bedroom Fan
+
 # Socket 6
 switch.0x000d6ffffedc5e05_switch:
   friendly_name: Small bedroom
@@ -47,6 +56,16 @@ binary_sensor.0x000d6ffffedc5e05_update_available:
 sensor.0x000d6ffffedc5e05_linkquality:
   friendly_name: Tradfri Outlet Small bedroom
 
+# Socket
+switch.0x000b3cfffef7b582_switch:
+  friendly_name: Small bedroom Fan
+  icon: mdi:fan
+binary_sensor.0x000b3cfffef7b582_update_available:
+  friendly_name: Tradfri Outlet Small bedroom Fan
+sensor.0x000b3cfffef7b582_linkquality:
+  friendly_name: Tradfri Outlet Small bedroom Fan
+
+# Socket
 switch.0x000d6ffffea7daa5_switch:
   friendly_name: Attic/dryer
   icon: mdi:power-socket-eu
@@ -55,6 +74,7 @@ binary_sensor.0x000d6ffffea7daa5_update_available:
 sensor.0x000d6ffffea7daa5_linkquality:
   friendly_name: Tradfri Outlet Attic/Dryer
 
+# Socket
 switch.0x000d6ffffed9d60d_switch:
   friendly_name: Office/desks
   icon: mdi:power-socket-eu

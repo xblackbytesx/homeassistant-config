@@ -23,6 +23,9 @@ cards:
     entities:
       - switch.0x000d6ffffedaf667_switch
       - switch.0x000d6ffffedc5e05_switch
+      - switch.0x086bd7fffe5185b6_switch
+      - switch.0x000b3cfffef7b582_switch
+
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
