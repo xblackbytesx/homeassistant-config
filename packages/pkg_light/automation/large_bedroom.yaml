@@ -71,7 +71,7 @@
 #       entity_id: >
 #         {% if trigger.to_state.state == 'single' or trigger.to_state.state == 'double' %}
 #           {% if is_state('light.0x00178801039d140f_light', 'off') %}
-#             {% if is_state('input_boolean.time_for_dim_scenes', 'on') and trigger.to_state.state == 'single' %}
+#             {% if is_state('binary_sensor.time_for_dim_scenes', 'on') and trigger.to_state.state == 'single' %}
 #               script.scene_lb_night
 #             {% else %}
 #               script.scene_lb_day

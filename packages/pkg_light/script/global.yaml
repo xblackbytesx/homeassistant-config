@@ -10,7 +10,7 @@ set_dynamic_scene:
     data_template:
       entity_id: >
         {% if trigger_to_state == 'on' and dark_enough == 'on' %}
-          {% if is_state('input_boolean.time_for_dim_scenes', 'on') %}
+          {% if is_state('binary_sensor.time_for_dim_scenes', 'on') %}
             {{ scene_night }}
           {% else %}
             {{ scene_day }}
