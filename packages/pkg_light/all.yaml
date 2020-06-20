@@ -20,7 +20,6 @@ yeelight:
 
 binary_sensor: !include binary_sensor.yaml
 automation: !include_dir_merge_list automation/
-input_boolean: !include boolean.yaml
 input_number: !include_dir_merge_named input_number/
 light: !include light.yaml
 script: !include_dir_merge_named script/
