@@ -1,4 +1,23 @@
-scene_kitchen_relax:
+scene_kitchen_night:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_kitchen_table
+        brightness_pct: 30
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_kitchen_counter
+        xy_color: [0.507, 0.414]
+        brightness_pct: 45
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_kitchen_cabinet
+        xy_color: [0.149, 0.291]
+        brightness_pct: 5
+        transition: 2
+
+
+scene_kitchen_day:
   sequence:
     - service: light.turn_on
       data:
@@ -15,3 +34,24 @@ scene_kitchen_relax:
         xy_color: [0.149, 0.291]
         brightness_pct: 10
         transition: 2
+
+
+scene_kitchen_search_mode:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.lg_kitchen_all
+        xy_color: [0.311, 0.327]
+        brightness_pct: 100
+        effect: none
+    - service: homeassistant.turn_off
+      entity_id: automation.kitchen_001
+
+
+scene_kitchen_reset_default:
+  alias: Resets the kitchen to default scene
+  sequence:
+    - service: script.turn_on
+      entity_id: script.scene_kitchen_day
+    - service: homeassistant.turn_on
+      entity_id: automation.kitchen_001
