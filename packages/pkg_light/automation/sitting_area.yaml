@@ -1,19 +1,19 @@
-- id: sa_001
-  alias: sa_001
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.sa_motion_detected
-      to: 'off'
-      for:
-        minutes: 3
-    - platform: state
-      entity_id: binary_sensor.sa_dark_enough
-      to: 'off'
-      for:
-        minutes: 5
-  action:
-    service: light.turn_off
-    entity_id: light.lg_sa_all
+# - id: sa_001
+#   alias: sa_001
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.sa_motion_detected
+#       to: 'off'
+#       for:
+#         minutes: 3
+#     - platform: state
+#       entity_id: binary_sensor.sa_dark_enough
+#       to: 'off'
+#       for:
+#         minutes: 5
+#   action:
+#     service: light.turn_off
+#     entity_id: light.lg_sa_all
 
 
 # - id: sa_002
