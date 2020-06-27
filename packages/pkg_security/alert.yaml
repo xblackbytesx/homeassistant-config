@@ -1,43 +1,43 @@
-front_door:
-  name: Front door open
-  message: Front door has been open for a while now, is this right?
-  done_message: Front door has been closed
-  entity_id: binary_sensor.front_door_open
-  state: 'on'
-  repeat:
-    - 5
-    - 10
-  can_acknowledge: true
-  skip_first: true
-  notifiers:
-    - notify_matrix_clean
+# front_door:
+#   name: Front door open
+#   message: Front door has been open for a while now, is this right?
+#   done_message: Front door has been closed
+#   entity_id: binary_sensor.front_door_open
+#   state: 'on'
+#   repeat:
+#     - 5
+#     - 10
+#   can_acknowledge: true
+#   skip_first: true
+#   notifiers:
+#     - notify_matrix_clean
 
 
-kitchen_window:
-  name: Kitchen window open
-  message: Kitchen window has been open for a while now, is this right?
-  done_message: Kitchen window has been closed
-  entity_id: binary_sensor.kitchen_window_open
-  state: 'on'
-  repeat:
-    - 5
-    - 10
-  can_acknowledge: true
-  skip_first: true
-  notifiers:
-    - notify_matrix_clean
+# kitchen_window:
+#   name: Kitchen window open
+#   message: Kitchen window has been open for a while now, is this right?
+#   done_message: Kitchen window has been closed
+#   entity_id: binary_sensor.kitchen_window_open
+#   state: 'on'
+#   repeat:
+#     - 5
+#     - 10
+#   can_acknowledge: true
+#   skip_first: true
+#   notifiers:
+#     - notify_matrix_clean
 
 
-back_door:
-  name: Back door open
-  message: Back door has been open for a while now, is this right?
-  done_message: Back door has been closed
-  entity_id: binary_sensor.back_door_open
-  state: 'on'
-  repeat:
-    - 5
-    - 10
-  can_acknowledge: true
-  skip_first: true
-  notifiers:
-    - notify_matrix_clean
+# back_door:
+#   name: Back door open
+#   message: Back door has been open for a while now, is this right?
+#   done_message: Back door has been closed
+#   entity_id: binary_sensor.back_door_open
+#   state: 'on'
+#   repeat:
+#     - 5
+#     - 10
+#   can_acknowledge: true
+#   skip_first: true
+#   notifiers:
+#     - notify_matrix_clean
