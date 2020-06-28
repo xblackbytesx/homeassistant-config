@@ -28,9 +28,6 @@ binary_sensor.0x00158d00033a43ef_occupancy:
 binary_sensor.0x0017880102030677_occupancy:
   friendly_name: Kitchen/back
   device_class: motion
-binary_sensor.0x680ae2fffe367f3b_occupancy:
-  friendly_name: Kitchen/middle
-  device_class: motion
 binary_sensor.0x00178801020357e5_occupancy:
   friendly_name: Corridor
   device_class: motion
@@ -45,6 +42,9 @@ binary_sensor.0x00158d000349234a_occupancy:
   device_class: motion
 binary_sensor.0x00158d00033aac53_occupancy:
   friendly_name: Bathroom/front
+  device_class: motion
+binary_sensor.0x680ae2fffe367f3b_occupancy:
+  friendly_name: Bathroom/shower
   device_class: motion
 binary_sensor.bathroom_motion_detected:
   friendly_name: Bathroom

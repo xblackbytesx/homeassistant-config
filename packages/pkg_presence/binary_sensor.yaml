@@ -9,8 +9,7 @@
     kitchen_motion_detected:
       value_template: >-
         {{ is_state('binary_sensor.0x0017880102030677_occupancy', 'on')
-           or is_state('binary_sensor.0x00158d00033a43ef_occupancy', 'on')
-           or is_state('binary_sensor.0x680ae2fffe367f3b_occupancy', 'on') }}
+           or is_state('binary_sensor.0x00158d00033a43ef_occupancy', 'on') }}
 
     hw_motion_detected:
       value_template: >-
@@ -28,7 +27,8 @@
     bathroom_motion_detected:
       value_template: >-
         {{ is_state('binary_sensor.0x00158d000349234a_occupancy', 'on')
-           or is_state('binary_sensor.0x00158d00033aac53_occupancy', 'on') }}
+           or is_state('binary_sensor.0x00158d00033aac53_occupancy', 'on')
+           or is_state('binary_sensor.0x680ae2fffe367f3b_occupancy', 'on') }}
 
     attic_motion_detected:
       value_template: >-
