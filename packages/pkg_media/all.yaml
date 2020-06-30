@@ -5,7 +5,6 @@ media_player: !include media_player.yaml
 sensor: !include sensor.yaml
 binary_sensor: !include binary_sensor.yaml
 input_boolean: !include boolean.yaml
-automation: !include automation.yaml
 # script: !include script.yaml
 
 spotify:

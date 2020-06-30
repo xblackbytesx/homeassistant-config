@@ -41,7 +41,7 @@
 #     service: script.turn_on
 #     data_template:
 #       entity_id: >
-#         {% if is_state('binary_sensor.sa_tv_media_playing', 'on') and is_state('input_boolean.sa_media_status_scene_switching', 'on') %}
+#         {% if is_state('binary_sensor.sa_tv_media_playing', 'on') and is_state('binary_sensor.sa_allow_media_status_scene_switching', 'on') %}
 #           script.scene_sa_watching_tv
 #         {% else %}
 #           script.scene_sa_not_watching_tv

@@ -31,11 +31,11 @@
 - platform: tod
   name: Early Evening
   after: '18:00'
-  before: '20:59'
+  before: '19:59'
 
 - platform: tod
   name: Late Evening
-  after: '21:00'
+  after: '20:00'
   before: '22:29'
 
 - platform: tod
@@ -53,4 +53,12 @@
     time_for_dim_scenes:
       value_template: >-
         {{ is_state('binary_sensor.early_night', 'on')
+           or is_state('binary_sensor.late_night', 'on') }}
+
+- platform: template
+  sensors:
+    sa_allow_media_status_scene_switching:
+      value_template: >-
+        {{ is_state('binary_sensor.late_evening', 'on')
+           or is_state('binary_sensor.early_night', 'on')
            or is_state('binary_sensor.late_night', 'on') }}
