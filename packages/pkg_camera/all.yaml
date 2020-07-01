@@ -6,4 +6,4 @@ camera:
     timeout: 15
     verify_ssl: false
 
-automation: !include automation.yaml
+# automation: !include automation.yaml
