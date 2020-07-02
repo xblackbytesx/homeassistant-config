@@ -17,7 +17,6 @@ homeassistant:
     climate_package: !include packages/pkg_climate/all.yaml
     solar_package: !include packages/pkg_solar/all.yaml
     media_package: !include packages/pkg_media/all.yaml
-    camera_package: !include packages/pkg_camera/all.yaml
     network_package: !include packages/pkg_network/all.yaml
     smoke_package: !include packages/pkg_smoke/all.yaml
     plants_package: !include packages/pkg_plants/all.yaml
