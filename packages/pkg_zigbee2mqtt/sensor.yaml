@@ -19,3 +19,10 @@
   state_topic: "zigbee2mqtt/bridge/config"
   value_template: "{{ value_json.coordinator }}"
   icon: mdi:chip
+
+# Custom: Sensor for monitoring the bridge logs
+- platform: mqtt
+  name: Zigbee2mqtt Bridge log
+  state_topic: "zigbee2mqtt/bridge/log"
+  icon: mdi:note-text-outline
+  value_template: "{{ value_json.message }}"
