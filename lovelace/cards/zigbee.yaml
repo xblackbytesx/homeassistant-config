@@ -10,6 +10,9 @@ entities:
   - entity: switch.zigbee2mqtt_main_join
   - entity: timer.zigbee_permit_join
   - type: divider
+  - entity: input_select.zigbee2mqtt_ota_available
+  - entity: switch.zigbee2mqtt_ota_update
+  - type: divider
   - entity: input_text.zigbee2mqtt_old_name
   - entity: input_text.zigbee2mqtt_new_name
   - entity: script.zigbee2mqtt_rename
