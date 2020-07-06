@@ -34,6 +34,7 @@ history:
 # logbook:
 system_health:
 wake_on_lan:
+python_script:
 # map:
 # cloud:
 
