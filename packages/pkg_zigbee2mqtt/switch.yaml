@@ -4,4 +4,19 @@
   command_topic: "zigbee2mqtt/bridge/config/permit_join"
   payload_on: "true"
   payload_off: "false"
+
+- platform: template
+  switches:
+    zigbee2mqtt_ota_update:
+      friendly_name: Update Zigbee device
+      value_template: False
+      icon_template: mdi:update
+      turn_on:
+        - service: mqtt.publish
+          data_template:
+            topic: "zigbee2mqtt/bridge/ota_update/update"
+            payload_template: "{{states.input_select.zigbee2mqtt_ota_available.state}}"
+        - service: python_script.list_zigbee2mqtt_ota  
+      turn_off: 
+        service: python_script.list_zigbee2mqtt_ota
   

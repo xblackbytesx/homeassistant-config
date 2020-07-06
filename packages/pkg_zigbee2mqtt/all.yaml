@@ -12,6 +12,12 @@ input_select:
       - error
     initial: info
     icon: mdi:format-list-bulleted
+  # Custom addition
+  zigbee2mqtt_ota_available:
+      name: Zigbee2mqtt OTA available
+      options:
+        - Press update first...
+      icon: mdi:update
 
 # Input text to input Zigbee2mqtt friendly_name for scripts
 input_text:

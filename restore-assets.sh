@@ -11,3 +11,8 @@ chmod -R 600 ~/.ssh/config ~/.ssh/private
 rm -rf shell_scripts
 cp -Rp assets/shell_scripts .
 chmod +x shell_scripts/*.sh
+
+# Python scripts
+rm -rf python_scripts
+cp -Rp assets/python_scripts .
+chmod +x python_scripts/*.py
