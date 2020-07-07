@@ -1,0 +1,2 @@
+- platform: postcodeloterij
+  postcode: !secret zip_code

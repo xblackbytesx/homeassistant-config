@@ -39,6 +39,11 @@ git clone git@github.com:zachowj/hass-node-red.git custom_components/hass-node-r
 mv custom_components/hass-node-red/custom_components/nodered custom_components/
 rm -rf custom_components/hass-node-red
 
+echo "Installing Postcodeloterij Component"
+mkdir -p custom_components/postcodeloterij
+wget https://raw.githubusercontent.com/kvanhoorn/hass/master/custom_components/postcodeloterij/__init__.py -O custom_components/postcodeloterij/__init__.py
+wget https://raw.githubusercontent.com/kvanhoorn/hass/master/custom_components/postcodeloterij/sensor.py -O custom_components/postcodeloterij/sensor.py
+
 echo "Installing Garbage Pickup Component"
 cp -Rp assets/custom_components/garbage_pickup custom_components/
 
@@ -84,7 +89,7 @@ wget https://raw.githubusercontent.com/thomasloven/lovelace-card-tools/master/ca
 
 echo "Installing Mini Graph Card"
 mkdir -p www/custom-lovelace/lovelace-mini-graph-card
-wget https://github.com/kalkih/mini-graph-card/releases/download/v0.9.3/mini-graph-card-bundle.js -O www/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js
+wget https://github.com/kalkih/mini-graph-card/releases/download/v0.9.4/mini-graph-card-bundle.js -O www/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js
 
 echo "Installing Mini Media Player Card"
 mkdir -p www/custom-lovelace/lovelace-mini-media-player
