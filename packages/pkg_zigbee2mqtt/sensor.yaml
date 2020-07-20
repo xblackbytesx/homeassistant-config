@@ -25,4 +25,4 @@
   name: Zigbee2mqtt Bridge log
   state_topic: "zigbee2mqtt/bridge/log"
   icon: mdi:note-text-outline
-  value_template: "{{ value_json.message }}"
+  value_template: "{{ value_json.message[:250] }}"
