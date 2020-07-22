@@ -11,7 +11,7 @@ cards:
     title: Exterior covers
     show_header_toggle: false
     entities:
-      - cover.attic_shutters
+      - cover.rfy_051c0d_1
   # - !include cards/solar_panels.yaml
   - !include cards/weather.yaml
   - !include cards/car_info.yaml

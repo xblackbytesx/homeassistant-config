@@ -6,7 +6,7 @@ cards:
     entities:
       - switch.beamer_screen
       - switch.sun_screen
-      - cover.attic_shutters
+      - cover.rfy_051c0d_1
   - !include cards/climate.yaml
   - type: custom:air-purifier-card
     entity: fan.xiaomi_miio_device

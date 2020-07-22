@@ -180,7 +180,7 @@
       command: attic_shutters_up
   action:
     - service: cover.open_cover
-      entity_id: cover.attic_shutters
+      entity_id: cover.rfy_051c0d_1
 
 
 - id: matrix_012
@@ -192,7 +192,7 @@
       command: attic_shutters_down
   action:
     - service: cover.close_cover
-      entity_id: cover.attic_shutters
+      entity_id: cover.rfy_051c0d_1
 
 
 - id: matrix_013
