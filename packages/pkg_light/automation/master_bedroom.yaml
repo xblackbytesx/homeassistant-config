@@ -38,16 +38,16 @@
 #   trigger:
 #     - platform: event
 #       event_type: button_pressed
-#       event_data: {"state": "on", "entity_id": "switch.duo_switch_mb_l"}
+#       event_data: {"state": "on", "entity_id": "switch.ac_1b7b65e_2"}
 #     - platform: event
 #       event_type: button_pressed
-#       event_data: {"state": "off", "entity_id": "switch.duo_switch_mb_l"}
+#       event_data: {"state": "off", "entity_id": "switch.ac_1b7b65e_2"}
 #     - platform: event
 #       event_type: button_pressed
-#       event_data: {"state": "on", "entity_id": "switch.duo_switch_mb_r"}
+#       event_data: {"state": "on", "entity_id": "switch.ac_1b7b65e_1"}
 #     - platform: event
 #       event_type: button_pressed
-#       event_data: {"state": "off", "entity_id": "switch.duo_switch_mb_r"}
+#       event_data: {"state": "off", "entity_id": "switch.ac_1b7b65e_1"}
 #   action:
 #     service_template: >
 #       {% if trigger.event.data.state == 'on' %}
@@ -57,9 +57,9 @@
 #       {% endif %}
 #     data_template:
 #       entity_id: >
-#         {% if trigger.event.data.entity_id == 'switch.duo_switch_mb_l' and trigger.event.data.state == 'on' %}
+#         {% if trigger.event.data.entity_id == 'switch.ac_1b7b65e_2' and trigger.event.data.state == 'on' %}
 #           script.scene_mb_night
-#         {% elif trigger.event.data.entity_id == 'switch.duo_switch_mb_r' and trigger.event.data.state == 'on' %}
+#         {% elif trigger.event.data.entity_id == 'switch.ac_1b7b65e_1' and trigger.event.data.state == 'on' %}
 #           script.scene_mb_day
 #         {% elif trigger.event.data.state == 'off' %}
 #           light.lg_mb_all
