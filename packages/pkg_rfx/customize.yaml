@@ -14,7 +14,7 @@ light.dimmable_socket_two:
   friendly_name: Dimmable 2
   icon: mdi:brightness-6
 
-cover.attic_shutters:
+cover.rfy_051c0d_1:
   friendly_name: Attic Shutters
 
 automation.rfx_001:
