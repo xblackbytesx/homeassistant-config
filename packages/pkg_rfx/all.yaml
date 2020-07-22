@@ -3,9 +3,110 @@ homeassistant:
 
 rfxtrx:
   device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11D2A5T-if00-port0
+  devices:
+    # Binary Sensors
+    0b11000001a1dbda0a010f70:
+      name: motion_sensor_sa
+      device_class: motion
 
-binary_sensor: !include binary_sensor.yaml
-light: !include light.yaml
-switch: !include switch.yaml
-cover: !include cover.yaml
-automation: !include automation.yaml
+    0b11000201a1dc7e0a010f70:
+      name: motion_sensor_attic
+      device_class: motion  
+
+    # Light
+    # freq4but1
+    0b110028019c0be20d010f60:
+      name: dimmable_socket_one
+    # freq4but2
+    0b110029019c0be20e010f70:
+      name: dimmable_socket_two
+    # # freq4but3
+    # 0b11002a019c0be20f010f70:
+    #   name: dimmable_socket_three
+    # # freq4but4
+    # 0b11002b019c0be210010f70:
+    #   name: dimmable_socket_four
+
+    # Switch
+    0b11000001abceaa02000070:
+      name: duo_switch_bathroom_l
+      fire_event: true
+    0b11000401abceaa01000060:
+      name: duo_switch_bathroom_r
+      fire_event: true
+    0b11000201b8124202000070:
+      name: duo_switch_lb_l
+      fire_event: true
+    0b11000001b8124201010f70:
+      name: duo_switch_lb_r
+      fire_event: true
+    0b11000201abbdee02010f60:
+      name: duo_switch_sb_l
+      fire_event: true
+    0b11000501abbdee01010f70:
+      name: duo_switch_sb_r
+      fire_event: true
+    0b11000301b7b65e02000070:
+      name: duo_switch_mb_l
+      fire_event: true
+    0b11000401b7b65e01000070:
+      name: duo_switch_mb_r
+      fire_event: true
+    0b11000501a431420a000060:
+      name: single_switch_mb
+      fire_event: true
+  
+    # freq1but1
+    0b110000019c0be201000070:
+      name: beamer_screen
+      fire_event: true
+    # freq1but2
+    0b110002019c0be202010f70:
+      name: sun_screen
+      fire_event: true
+    # freq1but3
+    0b110000019c0be203010f70:
+      name: programmable_three
+      fire_event: true
+    # freq1but4
+    0b110003019c0be204010f70:
+      name: programmable_four
+      fire_event: true
+  
+    # freq2but1
+    0b11001e019c0be205010f70:
+      name: programmable_five
+      fire_event: true
+    # freq2but2
+    0b110020019c0be206010f70:
+      name: programmable_six
+      fire_event: true
+    # freq2but3
+    0b110021019c0be207010f70:
+      name: programmable_seven
+      fire_event: true
+    # freq2but4
+    0b110022019c0be208010f70:
+      name: programmable_eight
+      fire_event: true
+  
+    # freq3but1
+    0b110024019c0be209010f70:
+      name: power_socket_one
+      fire_event: true
+    # freq3but2
+    0b110025019c0be20a010f70:
+      name: power_socket_two
+      fire_event: true
+    # freq3but3
+    0b110026019c0be20b010f60:
+      name: power_socket_three
+      fire_event: true
+    # # freq3but4
+    # 0b110027019c0be20c010f70:
+    #   name: power_socket_four
+
+    # Cover
+    071a0000051C0D01:
+      name: attic_shutters
+      signal_repetitions: 2
