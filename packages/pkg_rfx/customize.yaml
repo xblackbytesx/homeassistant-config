@@ -25,3 +25,11 @@ switch.ac_1b7b65e_1:
   friendly_name: Duo Switch | MB | Right
 switch.ac_1b7b65e_2:
   friendly_name: Duo Switch | MB | Left
+
+
+switch.ac_19c0be2_9:
+  friendly_name: TRX Remote | 3 | 1
+switch.ac_19c0be2_10:
+  friendly_name: TRX Remote | 3 | 2
+switch.ac_19c0be2_11:
+  friendly_name: TRX Remote | 3 | 3

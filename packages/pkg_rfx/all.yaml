@@ -47,10 +47,10 @@ rfxtrx:
       # name: duo_switch_sb_r
       fire_event: true
     0b11000301b7b65e02000070:
-      # name: ac_1b7b65e_2
+      # name: duo_switch_mb_l
       fire_event: true
     0b11000401b7b65e01000070:
-      # name: ac_1b7b65e_1
+      # name: duo_switch_mb_r
       fire_event: true
     0b11000501a431420a000060:
       # name: single_switch_mb
