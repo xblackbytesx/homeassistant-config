@@ -4,8 +4,8 @@ cards:
   - !include cards/people.yaml
   - type: entities
     entities:
-      - switch.beamer_screen
-      - switch.sun_screen
+      - switch.ac_19c0be2_1
+      - switch.ac_19c0be2_2
       - cover.rfy_051c0d_1
   - !include cards/climate.yaml
   - type: custom:air-purifier-card

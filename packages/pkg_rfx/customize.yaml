@@ -1,8 +1,8 @@
-switch.sun_screen:
+switch.ac_19c0be2_2:
   friendly_name: Sunscreen
   icon: mdi:sunglasses
 
-switch.beamer_screen:
+switch.ac_19c0be2_1:
   friendly_name: Beamer screen
   icon: mdi:projector-screen
 

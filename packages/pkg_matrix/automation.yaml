@@ -165,7 +165,7 @@
       command: reel_in_the_sunscreen
   action:
     - service: switch.turn_off
-      entity_id: switch.sun_screen
+      entity_id: switch.ac_19c0be2_2
     - service: notify.notify_matrix_clean
       data:
         message: "As you wish! May the Sun shine freely!"
@@ -230,7 +230,7 @@
       command: front_door_is_closed
   action:
     - service: switch.turn_off
-      entity_id: switch.sun_screen
+      entity_id: switch.ac_19c0be2_2
     - service: notify.notify_matrix_clean
       data:
         message: "Manually acknowledged front-door is closed"
