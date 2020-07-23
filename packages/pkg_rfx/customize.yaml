@@ -6,6 +6,7 @@ switch.ac_19c0be2_1:
   friendly_name: Beamer screen
   icon: mdi:projector-screen
 
+
 light.dimmable_socket_one:
   friendly_name: Small bedroom lights
   icon: mdi:brightness-6
@@ -26,16 +27,10 @@ switch.ac_1b7b65e_1:
 switch.ac_1b7b65e_2:
   friendly_name: Duo Switch | MB | Left
 
-
-switch.ac_19c0be2_1:
-  friendly_name: TRX Remote | 1 | 1
-switch.ac_19c0be2_2:
-  friendly_name: TRX Remote | 1 | 2
 switch.ac_19c0be2_3:
   friendly_name: TRX Remote | 1 | 3
 switch.ac_19c0be2_4:
   friendly_name: TRX Remote | 1 | 4
-
 
 switch.ac_19c0be2_9:
   friendly_name: TRX Remote | 3 | 1
