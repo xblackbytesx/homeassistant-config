@@ -7,13 +7,13 @@ switch.ac_19c0be2_1:
   icon: mdi:projector-screen
 
 
-light.dimmable_socket_one:
-  friendly_name: Small bedroom lights
-  icon: mdi:brightness-6
+# light.dimmable_socket_one:
+#   friendly_name: Small bedroom lights
+#   icon: mdi:brightness-6
 
-light.dimmable_socket_two:
-  friendly_name: Dimmable 2
-  icon: mdi:brightness-6
+# light.dimmable_socket_two:
+#   friendly_name: Dimmable 2
+#   icon: mdi:brightness-6
 
 cover.rfy_051c0d_1:
   friendly_name: Attic Shutters
@@ -38,3 +38,9 @@ switch.ac_19c0be2_10:
   friendly_name: TRX Remote | 3 | 2
 switch.ac_19c0be2_11:
   friendly_name: TRX Remote | 3 | 3
+
+
+switch.ac_19c0be2_13:
+  friendly_name: Small bedroom lights
+  icon: mdi:brightness-6
+  device_class: light
