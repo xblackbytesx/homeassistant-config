@@ -3,63 +3,62 @@ homeassistant:
 
 rfxtrx:
   device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11D2A5T-if00-port0
-  automatic_add: true
   devices:
-    # ####################
-    # ## Binary Sensors ##
-    # ####################
+    ####################
+    ## Binary Sensors ##
+    ####################
 
-    # # motion_sensor_sa
-    # 0b11000001a1dbda0a010f70:
-    #   device_class: motion
+    # motion_sensor_sa
+    0b11000001a1dbda0a010f70:
+      device_class: motion
 
-    # # motion_sensor_attic
-    # 0b11000201a1dc7e0a010f70:
-    #   device_class: motion  
+    # motion_sensor_attic
+    0b11000201a1dc7e0a010f70:
+      device_class: motion  
 
-    # ####################
-    # ###### Light #######
-    # ####################
+    ####################
+    ###### Light #######
+    ####################
 
-    # # freq4but1 - dimmable_socket_one
-    # 0b110028019c0be20d010f60:
-    #   device_class: light
+    # freq4but1 - dimmable_socket_one
+    0b110028019c0be20d010f60:
+      device_class: light
 
-    # # freq4but2 - dimmable_socket_two
-    # 0b110029019c0be20e010f70:
-    #   device_class: light
+    # freq4but2 - dimmable_socket_two
+    0b110029019c0be20e010f70:
+      device_class: light
 
-    # ####################
-    # ###### Switch ######
-    # ####################
+    ####################
+    ###### Switch ######
+    ####################
 
-    # # duo_switch_lb_l
-    # 0b11000201b8124202000070:
-    #   fire_event: true
+    # duo_switch_lb_l
+    0b11000201b8124202000070:
+      fire_event: true
 
-    # # duo_switch_lb_r
-    # 0b11000001b8124201010f70:
-    #   fire_event: true
+    # duo_switch_lb_r
+    0b11000001b8124201010f70:
+      fire_event: true
 
-    # # duo_switch_sb_l
-    # 0b11000201abbdee02010f60:
-    #   fire_event: true
+    # duo_switch_sb_l
+    0b11000201abbdee02010f60:
+      fire_event: true
 
-    # # duo_switch_sb_r
-    # 0b11000501abbdee01010f70:
-    #   fire_event: true
+    # duo_switch_sb_r
+    0b11000501abbdee01010f70:
+      fire_event: true
 
-    # # duo_switch_mb_l
-    # 0b11000301b7b65e02000070:
-    #   fire_event: true
+    # duo_switch_mb_l
+    0b11000301b7b65e02000070:
+      fire_event: true
 
-    # # duo_switch_mb_r
-    # 0b11000401b7b65e01000070:
-    #   fire_event: true
+    # duo_switch_mb_r
+    0b11000401b7b65e01000070:
+      fire_event: true
       
-    # # single_switch_mb
-    # 0b11000501a431420a000060:
-    #   fire_event: true
+    # single_switch_mb
+    0b11000501a431420a000060:
+      fire_event: true
   
     # freq1but1 - beamer_screen
     0b110000019c0be201000070:
