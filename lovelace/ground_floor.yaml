@@ -9,7 +9,7 @@ cards:
       - switch.0x000d6ffffedad23c_switch
       - switch.0x000d6ffffea6df64_switch
       - switch.0x000d6ffffea6e967_switch
-      - light.dimmable_socket_one
+      - switch.ac_19c0be2_13
       - light.dimmable_socket_two
       - switch.ac_19c0be2_1
   - type: entities

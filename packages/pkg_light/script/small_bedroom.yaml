@@ -8,7 +8,7 @@ scene_sb_night:
         transition: 2
     - service: light.turn_on
       data:
-        entity_id: light.dimmable_socket_one
+        entity_id: switch.ac_19c0be2_13
         brightness_pct: 60
         transition: 2
 

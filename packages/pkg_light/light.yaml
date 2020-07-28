@@ -80,7 +80,7 @@
   name: LG | SB | All
   entities:
     - light.0x00178801023c1a33_light
-    - light.dimmable_socket_one
+    - switch.ac_19c0be2_13
 
 - platform: group
   name: LG | LB | All
