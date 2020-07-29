@@ -35,7 +35,7 @@ office_illuminance_threshold:
 
 ex_illuminance_threshold:
   name: Exterior | Illuminance Threshold
-  initial: 5
-  min: 5
-  max: 45
+  initial: 100
+  min: 50
+  max: 150
   step: 1
