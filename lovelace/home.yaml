@@ -23,7 +23,7 @@ cards:
       - switch.0x000d6ffffedc5e05_switch
       - switch.0x000d6ffffea7daa5_switch
       - switch.0x000d6ffffed9d60d_switch
-      - switch.dimmable_socket_one
+      - light.dimmable_socket_one
       - light.dimmable_socket_two
   - type: conditional
     conditions:

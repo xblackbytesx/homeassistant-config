@@ -41,7 +41,7 @@
         hours: 0
         minutes: 45
     - platform: state
-      entity_id: switch.dimmable_socket_one
+      entity_id: light.dimmable_socket_one
       to: 'on'
       for:
         hours: 1

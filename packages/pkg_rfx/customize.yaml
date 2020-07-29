@@ -7,7 +7,7 @@ switch.beamer_screen:
   icon: mdi:projector-screen
 
 
-# switch.dimmable_socket_one:
+# light.dimmable_socket_one:
 #   friendly_name: Small bedroom lights
 #   icon: mdi:brightness-6
 
@@ -40,7 +40,7 @@ switch.beamer_screen1:
   friendly_name: TRX Remote | 3 | 3
 
 
-switch.dimmable_socket_one:
+light.dimmable_socket_one:
   friendly_name: Small bedroom lights
   icon: mdi:brightness-6
   device_class: light
