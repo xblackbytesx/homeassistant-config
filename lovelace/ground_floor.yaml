@@ -9,9 +9,9 @@ cards:
       - switch.0x000d6ffffedad23c_switch
       - switch.0x000d6ffffea6df64_switch
       - switch.0x000d6ffffea6e967_switch
-      - switch.ac_19c0be2_13
+      - switch.dimmable_socket_one
       - light.dimmable_socket_two
-      - switch.ac_19c0be2_1
+      - switch.beamer_screen
   - type: entities
     title: Ground floor doors and windows
     show_header_toggle: false

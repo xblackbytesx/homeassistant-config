@@ -21,7 +21,8 @@ rfxtrx:
     ####################
 
     # freq4but1 - dimmable_socket_one
-    0b110028019c0be20d010f60:
+    #0b110028019c0be20d010f60:
+    0b110028019c0be20d020f70:
       device_class: light
 
     # freq4but2 - dimmable_socket_two

@@ -9,10 +9,10 @@
 #       event_data: {"state": "off", "entity_id": "switch.power_socket_one"}
 #     - platform: event
 #       event_type: button_pressed
-#       event_data: {"state": "on", "entity_id": "switch.ac_19c0be2_10"}
+#       event_data: {"state": "on", "entity_id": "switch.beamer_screen0"}
 #     - platform: event
 #       event_type: button_pressed
-#       event_data: {"state": "off", "entity_id": "switch.ac_19c0be2_10"}
+#       event_data: {"state": "off", "entity_id": "switch.beamer_screen0"}
 #     - platform: event
 #       event_type: button_pressed
 #       event_data: {"state": "on", "entity_id": "switch.power_socket_three"}
@@ -30,7 +30,7 @@
 #       entity_id: >
 #         {% if trigger.event.data.entity_id == 'switch.power_socket_one' %}
 #           switch.0x000d6ffffedad23c_switch
-#         {% elif trigger.event.data.entity_id == 'switch.ac_19c0be2_10' %}
+#         {% elif trigger.event.data.entity_id == 'switch.beamer_screen0' %}
 #           switch.0x000d6ffffea6df64_switch
 #         {% elif trigger.event.data.entity_id == 'switch.power_socket_three' %}
 #           switch.0x000d6ffffea6e967_switch

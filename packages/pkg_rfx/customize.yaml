@@ -1,13 +1,13 @@
-switch.ac_19c0be2_2:
+switch.sunscreen:
   friendly_name: Sunscreen
   icon: mdi:sunglasses
 
-switch.ac_19c0be2_1:
+switch.beamer_screen:
   friendly_name: Beamer screen
   icon: mdi:projector-screen
 
 
-# switch.ac_19c0be2_13:
+# switch.dimmable_socket_one:
 #   friendly_name: Small bedroom lights
 #   icon: mdi:brightness-6
 
@@ -15,7 +15,7 @@ switch.ac_19c0be2_1:
 #   friendly_name: Dimmable 2
 #   icon: mdi:brightness-6
 
-cover.rfy_051c0d_1:
+cover.attic_shutters:
   friendly_name: Attic Shutters
 
 automation.rfx_001:
@@ -34,13 +34,13 @@ switch.ac_19c0be2_4:
 
 switch.ac_19c0be2_9:
   friendly_name: TRX Remote | 3 | 1
-switch.ac_19c0be2_10:
+switch.beamer_screen0:
   friendly_name: TRX Remote | 3 | 2
-switch.ac_19c0be2_11:
+switch.beamer_screen1:
   friendly_name: TRX Remote | 3 | 3
 
 
-switch.ac_19c0be2_13:
+switch.dimmable_socket_one:
   friendly_name: Small bedroom lights
   icon: mdi:brightness-6
   device_class: light

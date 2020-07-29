@@ -5,13 +5,13 @@ cards:
   - type: entities
     title: Exterior switches
     entities:
-      - switch.ac_19c0be2_2
+      - switch.sunscreen
       - switch.0x000d6ffffea6e967_switch
   - type: entities
     title: Exterior covers
     show_header_toggle: false
     entities:
-      - cover.rfy_051c0d_1
+      - cover.attic_shutters
   # - !include cards/solar_panels.yaml
   - !include cards/weather.yaml
   - !include cards/car_info.yaml

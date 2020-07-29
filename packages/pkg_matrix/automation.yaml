@@ -165,7 +165,7 @@
       command: reel_in_the_sunscreen
   action:
     - service: switch.turn_off
-      entity_id: switch.ac_19c0be2_2
+      entity_id: switch.sunscreen
     - service: notify.notify_matrix_clean
       data:
         message: "As you wish! May the Sun shine freely!"
@@ -180,7 +180,7 @@
       command: attic_shutters_up
   action:
     - service: cover.open_cover
-      entity_id: cover.rfy_051c0d_1
+      entity_id: cover.attic_shutters
 
 
 - id: matrix_012
@@ -192,7 +192,7 @@
       command: attic_shutters_down
   action:
     - service: cover.close_cover
-      entity_id: cover.rfy_051c0d_1
+      entity_id: cover.attic_shutters
 
 
 - id: matrix_013
@@ -230,7 +230,7 @@
       command: front_door_is_closed
   action:
     - service: switch.turn_off
-      entity_id: switch.ac_19c0be2_2
+      entity_id: switch.sunscreen
     - service: notify.notify_matrix_clean
       data:
         message: "Manually acknowledged front-door is closed"
