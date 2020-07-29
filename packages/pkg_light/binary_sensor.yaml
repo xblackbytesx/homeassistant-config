@@ -34,4 +34,4 @@
 
     exterior_dark_enough:
       value_template: >-
-        {{ state_attr('sensor.0x0017880102026161_illuminance', 'illuminance_lux') <= states('input_number.ex_illuminance_threshold')| int }}
+        {{ state_attr('sensor.0x001788010647ff92_illuminance', 'illuminance_lux') <= states('input_number.ex_illuminance_threshold')| int }}

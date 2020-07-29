@@ -28,7 +28,7 @@
       value_template: >-
         {{ is_state('binary_sensor.0x00158d000349234a_occupancy', 'on')
            or is_state('binary_sensor.0x00158d00033aac53_occupancy', 'on')
-           or is_state('binary_sensor.0x680ae2fffe367f3b_occupancy', 'on') }}
+           or is_state('binary_sensor.0x680ae2fffe367f3b_occupancy', 'Detected') }}
 
     attic_motion_detected:
       value_template: >-
@@ -38,3 +38,7 @@
     office_motion_detected:
       value_template: >-
         {{ is_state('binary_sensor.0x00158d0004499f26_occupancy', 'on') }}
+      
+    backyard_motion_detected:
+      value_template: >-
+        {{ is_state('binary_sensor.0x001788010647ff92_occupancy', 'on') }}
