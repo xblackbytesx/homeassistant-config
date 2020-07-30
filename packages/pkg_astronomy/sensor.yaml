@@ -6,3 +6,46 @@
       entity_id: sensor.moon
       friendly_name: 'Moon phase image'
       value_template: '/local/moon_phases/{{ states.sensor.moon.state }}.svg'
+
+
+- platform: scrape
+  resource: https://www.timeanddate.com/astronomy/night/@2752240
+  name: Mercury
+  select: '.tb-wc > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(5)'
+  scan_interval: 3600
+
+- platform: scrape
+  resource: https://www.timeanddate.com/astronomy/night/@2752240
+  name: Venus
+  select: '.tb-wc > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(5)'
+  scan_interval: 3600
+
+- platform: scrape
+  resource: !secret planet_visbility_source_url
+  name: Mars
+  select: '.tb-wc > tbody:nth-child(2) > tr:nth-child(3) > td:nth-child(5)'
+  scan_interval: 3600
+
+- platform: scrape
+  resource: !secret planet_visbility_source_url
+  name: Jupiter
+  select: '.tb-wc > tbody:nth-child(2) > tr:nth-child(4) > td:nth-child(5)'
+  scan_interval: 3600
+
+- platform: scrape
+  resource: !secret planet_visbility_source_url
+  name: Saturn
+  select: '.tb-wc > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(5)'
+  scan_interval: 3600
+
+- platform: scrape
+  resource: !secret planet_visbility_source_url
+  name: Uranus
+  select: '.tb-wc > tbody:nth-child(2) > tr:nth-child(6) > td:nth-child(5)'
+  scan_interval: 3600
+
+- platform: scrape
+  resource: !secret planet_visbility_source_url
+  name: Neptune
+  select: '.tb-wc > tbody:nth-child(2) > tr:nth-child(7) > td:nth-child(5)'
+  scan_interval: 3600
