@@ -1,15 +1,15 @@
-- type: entity-filter
-  entities:
-    - sensor.mercury
-    - sensor.venus
-    - sensor.mars
-    - sensor.jupiter
-    - sensor.saturn
-    - sensor.uranus
-    - sensor.neptune
-  state_filter:
-    - "Great visibility"
-    - "Perfect visibility"
-  card:
-    type: glance
-    title: Tonight's observable planets
+type: entity-filter
+entities:
+  - sensor.mercury
+  - sensor.venus
+  - sensor.mars
+  - sensor.jupiter
+  - sensor.saturn
+  - sensor.uranus
+  - sensor.neptune
+state_filter:
+  - "Great visibility"
+  - "Perfect visibility"
+card:
+  type: glance
+  title: Tonight's observable planets

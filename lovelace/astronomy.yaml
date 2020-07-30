@@ -1,5 +1,5 @@
 title: Astronomy
 icon: mdi:weather-night
 cards:
-  !include cards/moon_phase.yaml
-  !include cards/planet_visibility.yaml
+  - !include cards/moon_phase.yaml
+  - !include cards/planet_visibility.yaml
