@@ -95,6 +95,10 @@ echo "Installing Mini Media Player Card"
 mkdir -p www/custom-lovelace/lovelace-mini-media-player
 wget https://github.com/kalkih/mini-media-player/releases/download/v1.9.1/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
 
+echo "Installing Card Mod"
+mkdir -p www/custom-lovelace/card-mod
+wget https://raw.githubusercontent.com/thomasloven/lovelace-card-mod/master/card-mod.js -O www/custom-lovelace/card-mod/card-mod.js
+
 echo "Installing Air Purifier Card"
 cp -Rp /config/assets/custom_cards/air-purifier /config/www/custom-lovelace/
 

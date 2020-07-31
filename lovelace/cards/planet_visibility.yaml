@@ -1,23 +1,30 @@
-type: entity-filter
-entities:
-  - entity: sensor.mercury
-    image: /local/solar_system/mercury.svg
-  - entity: sensor.venus
-    image: /local/solar_system/venus.svg
-  - entity: sensor.mars
-    image: /local/solar_system/mars.svg
-  - entity: sensor.jupiter
-    image: /local/solar_system/jupiter.svg
-  - entity: sensor.saturn
-    image: /local/solar_system/saturn.svg
-  - entity: sensor.uranus
-    image: /local/solar_system/uranus.svg
-  - entity: sensor.neptune
-    image: /local/solar_system/neptune.svg
-state_filter:
-  - "Great visibility"
-  - "Perfect visibility"
+type: custom:mod-card
+style: |
+  ha-card {
+    background: inherit url('/local/moon_phases/space_bg.svg') center bottom no-repeat;
+  }
 card:
-  type: glance
-  title: Tonight's observable planets
-  show_name: false
+  type: entity-filter
+  entities:
+    - entity: sensor.mercury
+      image: /local/solar_system/mercury.svg
+    - entity: sensor.venus
+      image: /local/solar_system/venus.svg
+    - entity: sensor.mars
+      image: /local/solar_system/mars.svg
+    - entity: sensor.jupiter
+      image: /local/solar_system/jupiter.svg
+    - entity: sensor.saturn
+      image: /local/solar_system/saturn.svg
+    - entity: sensor.uranus
+      image: /local/solar_system/uranus.svg
+    - entity: sensor.neptune
+      image: /local/solar_system/neptune.svg
+  state_filter:
+    - "Great visibility"
+    - "Perfect visibility"
+  card:
+    type: glance
+    title: Tonight's observable planets
+    show_name: false
+

@@ -20,3 +20,5 @@
   type: js
 - url: /local/custom-lovelace/air-purifier/air-purifier-card.js
   type: module
+- url: /local/custom-lovelace/card-mod/card-mod.js
+  type: module
