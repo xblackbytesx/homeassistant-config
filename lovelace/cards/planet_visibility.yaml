@@ -27,4 +27,8 @@ card:
     type: glance
     title: Tonight's observable planets
     show_name: false
+    style: |
+      ha-card {
+        background: none;
+      }
 
