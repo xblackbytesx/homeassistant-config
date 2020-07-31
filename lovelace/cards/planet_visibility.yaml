@@ -1,7 +1,7 @@
 type: custom:mod-card
 style: |
   ha-card {
-    background: inherit url('/local/moon_phases/space_bg.svg') center bottom no-repeat;
+    background: transparent url('/local/moon_phases/space_bg.svg') center bottom no-repeat;
   }
 card:
   type: entity-filter
