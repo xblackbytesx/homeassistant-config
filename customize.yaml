@@ -66,6 +66,15 @@ sensor.0x000b3cfffef7b582_linkquality:
   friendly_name: Tradfri Outlet Small bedroom Fan
 
 # Socket
+switch.0xccccccfffeb21d81_switch:
+  friendly_name: Master bedroom Fan
+  icon: mdi:fan
+binary_sensor.0xccccccfffeb21d81_update_available:
+  friendly_name: Tradfri Outlet Master bedroom Fan
+sensor.0xccccccfffeb21d81_linkquality:
+  friendly_name: Tradfri Outlet Master bedroom Fan  
+
+# Socket
 switch.0x000d6ffffea7daa5_switch:
   friendly_name: Attic/dryer
   icon: mdi:power-socket-eu

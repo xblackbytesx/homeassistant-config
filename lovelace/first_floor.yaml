@@ -25,6 +25,7 @@ cards:
       - switch.0x000d6ffffedc5e05_switch
       - switch.0x086bd7fffe5185b6_switch
       - switch.0x000b3cfffef7b582_switch
+      - switch.0xccccccfffeb21d81_switch
 
   - type: conditional
     conditions:
