@@ -66,13 +66,22 @@ sensor.0x000b3cfffef7b582_linkquality:
   friendly_name: Tradfri Outlet Small bedroom Fan
 
 # Socket
+switch.0xccccccfffeb221dd_switch:
+  friendly_name: Master bedroom Fan | L
+  icon: mdi:fan
+binary_sensor.0xccccccfffeb221dd_update_available:
+  friendly_name: Tradfri Outlet Master bedroom Fan | L
+sensor.0xccccccfffeb221dd_linkquality:
+  friendly_name: Tradfri Outlet Master bedroom Fan | L
+
+# Socket
 switch.0xccccccfffeb21d81_switch:
-  friendly_name: Master bedroom Fan
+  friendly_name: Master bedroom Fan | R
   icon: mdi:fan
 binary_sensor.0xccccccfffeb21d81_update_available:
-  friendly_name: Tradfri Outlet Master bedroom Fan
+  friendly_name: Tradfri Outlet Master bedroom Fan | R
 sensor.0xccccccfffeb21d81_linkquality:
-  friendly_name: Tradfri Outlet Master bedroom Fan  
+  friendly_name: Tradfri Outlet Master bedroom Fan | R
 
 # Socket
 switch.0x000d6ffffea7daa5_switch:
