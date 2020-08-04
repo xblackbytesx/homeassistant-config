@@ -1,13 +1,3 @@
-# RDW Info
-- platform: rdw
-  name: !secret car_name
-  plate: !secret car_plate
-  dateformat: '%d %b %Y'
-  sensors:
-    - expdate
-    - insured
-    - recall
-
 # Gas Prices
 - platform: scrape
   resource: !secret gas_station_1_url

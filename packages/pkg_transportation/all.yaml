@@ -1,5 +1,15 @@
 homeassistant:
   customize: !include customize.yaml
 
+rdw:
+  - plate: !secret car_plate
+    name: !secret car_name
+    dateformat: '%d %b %Y'
+    binary_sensors:
+      - insured
+    sensors:
+      - expdate
+      - recall    
+
 sensor: !include sensor.yaml
 automation: !include automation.yaml
