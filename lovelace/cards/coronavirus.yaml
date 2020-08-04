@@ -17,7 +17,7 @@
   cards:
     - type: custom:mini-graph-card
       entities:
-        - sensor.netherlands_coronavirus_mortality
+        - sensor.netherlands_coronavirus_death_per_capita
       line_width: 6
       line_color: '#FFA500'
     - type: glance
@@ -32,7 +32,7 @@
   cards:
     - type: custom:mini-graph-card
       entities:
-        - sensor.italy_coronavirus_mortality
+        - sensor.italy_coronavirus_death_per_capita
       line_width: 6
       line_color: "#FF00FF"
     - type: glance
@@ -47,7 +47,7 @@
   cards:
     - type: custom:mini-graph-card
       entities:
-        - sensor.spain_coronavirus_mortality
+        - sensor.spain_coronavirus_death_per_capita
       line_width: 6
       line_color: "#66ff66"
     - type: glance
@@ -62,7 +62,7 @@
   cards:
     - type: custom:mini-graph-card
       entities:
-        - sensor.iran_coronavirus_mortality
+        - sensor.iran_coronavirus_death_per_capita
       line_width: 6
       line_color: "#B2B200"
     - type: glance
@@ -77,7 +77,7 @@
   cards:
     - type: custom:mini-graph-card
       entities:
-        - sensor.us_coronavirus_mortality
+        - sensor.us_coronavirus_death_per_capita
       line_width: 6
       line_color: "#3300FF"
     - type: glance
@@ -92,7 +92,7 @@
   cards:
     - type: custom:mini-graph-card
       entities:
-        - sensor.china_coronavirus_mortality
+        - sensor.china_coronavirus_death_per_capita
       line_width: 6
       line_color: "#FF7F50"
     - type: glance
