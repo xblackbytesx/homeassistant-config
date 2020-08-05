@@ -1,7 +1,7 @@
 - platform: scrape
-  resource: https://www.worldometers.info/world-population/us-population/
+  resource: https://www.census.gov/popclock/
   name: Population United States
-  select: 'div.table-responsive:nth-child(8) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > strong:nth-child(1)'
+  select: '.pop-count'
   scan_interval: 3600
   headers:
     User-Agent: Mozilla/5.0
