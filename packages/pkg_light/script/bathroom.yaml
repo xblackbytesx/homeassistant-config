@@ -58,9 +58,7 @@ scene_bathroom_search_mode:
         xy_color: [0.311, 0.327]
         brightness_pct: 100
     - service: homeassistant.turn_off
-      entity_id: 
-        - automation.bathroom_001
-        - automation.bathroom_002
+      entity_id: input_boolean.automation_bathroom_light
 
 
 scene_bathroom_reset_default:
@@ -69,6 +67,4 @@ scene_bathroom_reset_default:
     - service: script.turn_on
       entity_id: script.scene_bathroom_day
     - service: homeassistant.turn_on
-      entity_id: 
-        - automation.bathroom_001
-        - automation.bathroom_002
+      entity_id: input_boolean.automation_bathroom_light

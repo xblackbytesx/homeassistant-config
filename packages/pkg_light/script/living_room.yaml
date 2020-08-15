@@ -94,10 +94,8 @@ scene_lr_search_mode:
         effect: none
     - service: homeassistant.turn_off
       entity_id: 
-        - automation.sa_001
-        - automation.sa_002
-        - automation.kitchen_001
-        - automation.kitchen_002
+        - input_boolean.automation_sa_light
+        - input_boolean.automation_kitchen_light
 
 
 scene_lr_disco_mode:
@@ -125,11 +123,8 @@ scene_lr_disco_mode:
         effect: Disco
     - service: homeassistant.turn_off
       entity_id: 
-        - automation.sa_001
-        - automation.sa_002
-        - automation.kitchen_001
-        - automation.kitchen_002       
-
+        - input_boolean.automation_sa_light
+        - input_boolean.automation_kitchen_light
 
 scene_lr_reset_default:
   alias: Resets the sitting area default scene
@@ -140,7 +135,5 @@ scene_lr_reset_default:
         - script.scene_kitchen_relax
     - service: homeassistant.turn_on
       entity_id: 
-        - automation.sa_001
-        - automation.sa_002
-        - automation.kitchen_001
-        - automation.kitchen_002
+        - input_boolean.automation_sa_light
+        - input_boolean.automation_kitchen_light

@@ -9,6 +9,7 @@ cards:
     filter:
       include:
         - entity_id: "automation.hw*"
+        - entity_id: "input_boolean.automation_hw*"
   - type: custom:auto-entities
     show_empty: false
     card:
@@ -17,6 +18,7 @@ cards:
     filter:
       include:
         - entity_id: "automation.sa*"
+        - entity_id: "input_boolean.automation_sa*"
   - type: custom:auto-entities
     show_empty: false
     card:
@@ -25,6 +27,7 @@ cards:
     filter:
       include:
         - entity_id: "automation.kitchen*"
+        - entity_id: "input_boolean.automation_kitchen*"
   - type: custom:auto-entities
     show_empty: false
     card:
@@ -33,6 +36,7 @@ cards:
     filter:
       include:
         - entity_id: "automation.co*"
+        - entity_id: "input_boolean.automation_co*"
   - type: custom:auto-entities
     show_empty: false
     card:
@@ -41,6 +45,7 @@ cards:
     filter:
       include:
         - entity_id: "automation.mb*"
+        - entity_id: "input_boolean.automation_mb*"
   - type: custom:auto-entities
     show_empty: false
     card:
@@ -49,6 +54,7 @@ cards:
     filter:
       include:
         - entity_id: "automation.lb*"
+        - entity_id: "input_boolean.automation_lb*"
   - type: custom:auto-entities
     show_empty: false
     card:
@@ -57,6 +63,7 @@ cards:
     filter:
       include:
         - entity_id: "automation.sb*"
+        - entity_id: "input_boolean.automation_sb*"
   - type: custom:auto-entities
     show_empty: false
     card:
@@ -65,6 +72,7 @@ cards:
     filter:
       include:
         - entity_id: "automation.attic*"
+        - entity_id: "input_boolean.automation_attic*"
   - type: custom:auto-entities
     show_empty: false
     card:
@@ -73,6 +81,7 @@ cards:
     filter:
       include:
         - entity_id: "automation.office*"
+        - entity_id: "input_boolean.automation_office*"
   - type: custom:auto-entities
     show_empty: false
     card:

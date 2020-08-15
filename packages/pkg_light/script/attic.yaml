@@ -21,7 +21,7 @@ scene_attic_search_mode:
         entity_id: light.lg_attic_all
         brightness_pct: 100
     - service: homeassistant.turn_off
-      entity_id: automation.attic_001
+      entity_id: input_boolean.automation_attic_light
 
 
 scene_attic_reset_default:
@@ -30,4 +30,4 @@ scene_attic_reset_default:
     - service: script.turn_on
       entity_id: script.scene_attic_day
     - service: homeassistant.turn_on
-      entity_id: automation.attic_001
+      entity_id: input_boolean.automation_attic_light

@@ -45,7 +45,7 @@ scene_kitchen_search_mode:
         brightness_pct: 100
         effect: none
     - service: homeassistant.turn_off
-      entity_id: automation.kitchen_001
+      entity_id: input_boolean.automation_kitchen_light
 
 
 scene_kitchen_reset_default:
@@ -54,4 +54,4 @@ scene_kitchen_reset_default:
     - service: script.turn_on
       entity_id: script.scene_kitchen_day
     - service: homeassistant.turn_on
-      entity_id: automation.kitchen_001
+      entity_id: input_boolean.automation_kitchen_light

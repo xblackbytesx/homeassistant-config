@@ -27,12 +27,7 @@ scene_mb_search_mode:
         brightness_pct: 100
     - service: homeassistant.turn_off
       entity_id: 
-        - automation.mb_001
-        - automation.mb_002
-        - automation.mb_003
-        - automation.mb_004
-        - automation.mb_005
-
+        - input_boolean.automation_mb_light
 
 scene_mb_reset_default:
   alias: Resets the master bedroom default scene
@@ -41,8 +36,4 @@ scene_mb_reset_default:
       entity_id: script.scene_mb_day
     - service: homeassistant.turn_on
       entity_id: 
-        - automation.mb_001
-        - automation.mb_002
-        - automation.mb_003
-        - automation.mb_004
-        - automation.mb_005
+        - input_boolean.automation_mb_light

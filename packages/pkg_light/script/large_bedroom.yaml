@@ -39,8 +39,7 @@ scene_lb_search_mode:
         brightness_pct: 100
     - service: homeassistant.turn_off
       entity_id: 
-        - automation.lb_001
-        - automation.lb_002
+        - input_boolean.automation_lb_light
 
 
 scene_lb_reset_default:
@@ -50,5 +49,4 @@ scene_lb_reset_default:
       entity_id: script.scene_lb_day
     - service: homeassistant.turn_on
       entity_id: 
-        - automation.lb_001
-        - automation.lb_002
+        - input_boolean.automation_lb_light

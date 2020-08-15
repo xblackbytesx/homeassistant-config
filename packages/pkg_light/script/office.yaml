@@ -21,7 +21,7 @@ scene_office_search_mode:
         entity_id: light.lg_office_all
         brightness_pct: 100
     - service: homeassistant.turn_off
-      entity_id: automation.office_001
+      entity_id: input_boolean.automation_office_light
 
 
 scene_office_reset_default:
@@ -30,4 +30,4 @@ scene_office_reset_default:
     - service: script.turn_on
       entity_id: script.scene_office_day
     - service: homeassistant.turn_on
-      entity_id: automation.office_001
+      entity_id: input_boolean.automation_office_light

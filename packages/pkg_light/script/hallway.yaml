@@ -27,7 +27,7 @@ scene_hw_search_mode:
     - service: switch.turn_on
       entity_id: switch.0x000d6ffffedc5e05_switch
     - service: homeassistant.turn_off
-      entity_id: automation.hw_001
+      entity_id: input_boolean.automation_hw_light
 
 
 scene_hw_reset_default:
@@ -36,4 +36,4 @@ scene_hw_reset_default:
     - service: script.turn_on
       entity_id: script.scene_hw_day
     - service: homeassistant.turn_on
-      entity_id: automation.hw_001
+      entity_id: input_boolean.automation_hw_light
