@@ -132,7 +132,7 @@ scene_lr_reset_default:
     - service: script.turn_on
       entity_id: 
         - script.scene_sa_not_watching_tv
-        - script.scene_kitchen_relax
+        - script.scene_kitchen_day
     - service: homeassistant.turn_on
       entity_id: 
         - input_boolean.automation_sa_light
