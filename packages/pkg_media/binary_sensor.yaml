@@ -2,7 +2,7 @@
   sensors:
     sa_tv_media_playing:
       value_template: >-
-        {{ is_state('media_player.living_room', 'playing')
+        {{ is_state('media_player.xiaomi_tv_box', 'playing')
            or is_state('media_player.kodi', 'playing')
            or is_state('media_player.playstation_4', 'playing')
            or is_state('input_boolean.sa_media_status_override', 'on') }}

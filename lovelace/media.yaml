@@ -18,8 +18,8 @@ cards:
       source: true
       power_state: false
   - type: custom:mini-media-player
-    entity: media_player.living_room
-    icon: mdi:cast-connected
+    entity: media_player.xiaomi_tv_box
+    icon: mdi:android
     artwork: cover
     hide:
       volume: true
