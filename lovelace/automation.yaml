@@ -127,3 +127,4 @@ cards:
       filter:
         include:
           - entity_id: "automation.*"
+          - entity_id: "input_boolean.automation*"

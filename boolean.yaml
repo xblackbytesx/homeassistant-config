@@ -4,6 +4,11 @@ advanced_config:
   icon: mdi:settings-outline
 
 
+automation_toilet_light:
+  name: Toilet light automations
+  initial: on
+  icon: mdi:robot
+
 automation_hw_light:
   name: Hallway light automations
   initial: on
@@ -26,6 +31,11 @@ automation_co_light:
 
 automation_mb_light:
   name: Master Bedroom light automations
+  initial: on
+  icon: mdi:robot
+
+automation_bathroom_light:
+  name: Bathroom light automations
   initial: on
   icon: mdi:robot
 
