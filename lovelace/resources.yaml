@@ -22,7 +22,6 @@
   type: module
 - url: /local/custom-lovelace/card-mod/card-mod.js
   type: module
-
 - url: /local/custom-lovelace/lovelace-layout-card/layout-card.js
   type: module
 - url: /local/custom-lovelace/lovelace-state-switch/state-switch.js
