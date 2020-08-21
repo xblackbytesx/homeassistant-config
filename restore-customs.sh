@@ -72,8 +72,8 @@ mkdir -p www/custom-lovelace/button-card
 wget http://www.github.com/custom-cards/button-card/releases/latest/download/button-card.js -O www/custom-lovelace/button-card/button-card.js
 
 echo "Installing Layout Card"
-mkdir -p www/custom-lovelace/layout-card
-wget https://raw.githubusercontent.com/thomasloven/lovelace-layout-card/master/layout-card.js -O www/custom-lovelace/layout-card/layout-card.js
+mkdir -p www/custom-lovelace/lovelace-layout-card
+wget https://raw.githubusercontent.com/thomasloven/lovelace-layout-card/master/layout-card.js -O www/custom-lovelace/lovelace-layout-card/layout-card.js
 
 echo "Installing Vertical Stack in Card Card"
 mkdir -p www/custom-lovelace/vertical-stack-in-card
