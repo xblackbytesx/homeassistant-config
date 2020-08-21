@@ -17,3 +17,93 @@
 #     - service: media_player.shuffle_set
 #       entity_id: media_player.spotify_xblackbytesx
 #       shuffle: true
+
+#-----------------------------------------------------------
+# Macro script to start Youtube
+# One click to start even if all devices is off
+#-----------------------------------------------------------
+remote_start_app_youtube:
+  alias: Start Youtube
+  sequence:
+    # Turn on the tv (sends a wake on lan that do nothing if tv allready on)
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.yamaha_receiver
+
+    # Select the right input (hdmi) to show the Xiaomi TV Box S
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.yamaha_receiver
+        source: 'HDMI1'
+
+    # Wake up the Xiaomi TV Box S if turned off and go to homescreen, if on, wake up from screensaver
+    - service: androidtv.adb_command
+      data:
+        entity_id: media_player.xiaomi_tv_box
+        command: MENU
+
+    # Start the Youtube App
+    - service: androidtv.adb_command
+      data:
+        entity_id: media_player.xiaomi_tv_box
+        command: "am start -a android.intent.action.VIEW -d -n com.google.android.youtube.tv/com.google.android.apps.youtube.tv.activity.ShellActivity"
+
+#-----------------------------------------------------------
+# Macro script to start Kodi
+# One click to start even if all devices is off
+#-----------------------------------------------------------
+remote_start_app_kodi:
+  alias: Start Kodi
+  sequence:
+    # Turn on the tv (sends a wake on lan that do nothing if tv allready on)
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.yamaha_receiver
+
+    # Select the right input (hdmi) to show the Xiaomi TV Box S
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.yamaha_receiver
+        source: 'HDMI1'
+
+    # Wake up the Xiaomi TV Box S if turned off and go to homescreen, if on, wake up from screensaver
+    - service: androidtv.adb_command
+      data:
+        entity_id: media_player.xiaomi_tv_box
+        command: MENU
+
+    # Start the Kodi App
+    - service: androidtv.adb_command
+      data:
+        entity_id: media_player.xiaomi_tv_box
+        command: "am start -a android.intent.action.VIEW -d -n org.xbmc.kodi/.Splash"
+
+#-----------------------------------------------------------
+# Macro script to start Netflix
+# One click to start even if all devices is off
+#-----------------------------------------------------------
+remote_start_app_netflix:
+  alias: Start Netflix
+  sequence:
+    # Turn on the tv (sends a wake on lan that do nothing if tv allready on)
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.yamaha_receiver
+
+    # Select the right input (hdmi) to show the Xiaomi TV Box S
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.yamaha_receiver
+        source: 'HDMI1'
+
+    # Wake up the Xiaomi TV Box S if turned off and go to homescreen, if on, wake up from screensaver
+    - service: androidtv.adb_command
+      data:
+        entity_id: media_player.xiaomi_tv_box
+        command: MENU
+
+    # Start the Netflix App
+    - service: androidtv.adb_command
+      data:
+        entity_id: media_player.xiaomi_tv_box
+        command: "am start -a android.intent.action.VIEW -d -n com.netflix.ninja/.MainActivity"

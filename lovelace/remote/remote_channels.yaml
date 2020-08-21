@@ -1,0 +1,204 @@
+###################################################################################################
+## TIVO Channel Favorites - REMOTE CONTROLLER
+###################################################################################################
+type: custom:layout-card
+layout: vertical
+min_columns: 1
+max_columns: 1
+max_width: 99%
+cards:
+###################################################################################################
+# 2 row - Media_player.tivo
+###################################################################################################
+  - type: media-control
+    entity: media_player.tivo
+###################################################################################################
+## FAVORITE CHANNELS - ROW 1 - 3 BUTTONS - TIVO Box
+###################################################################################################
+  - type: horizontal-stack
+    cards:
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_svt1.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: SVT1
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_svt2.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: SVT2
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_tv3.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: TV3 HD
+##-------------------------------------------------------------------------------------------------
+## FAVORITE CHANNELS - ROW 2 - 3 BUTTONS
+##-------------------------------------------------------------------------------------------------
+  - type: horizontal-stack
+    cards:
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_tv4.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: TV4 HD
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_kanal5.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: Kanal 5 HD
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_tv6.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: TV6 HD
+##-------------------------------------------------------------------------------------------------
+## FAVORITE CHANNELS - ROW 3 - 3 BUTTONS
+##-------------------------------------------------------------------------------------------------
+  - type: horizontal-stack
+    cards:
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_sjuan.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: Sjuan HD
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_tv8.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: TV8 HD
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_kanal9.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: Kanal 9 HD
+##-------------------------------------------------------------------------------------------------
+## FAVORITE CHANNELS - ROW 4 - 3 BUTTONS
+##-------------------------------------------------------------------------------------------------
+  - type: horizontal-stack
+    cards:
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_tv10.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: TV10 HD
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_kanal-11.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: Kanal 11 HD
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_tv12.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: TV12 HD
+##-------------------------------------------------------------------------------------------------
+## FAVORITE CHANNELS - ROW 5 - 3 BUTTONS
+##-------------------------------------------------------------------------------------------------
+  - type: horizontal-stack
+    cards:
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_mtv_rock.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: MTV Rocks
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_mtv_live.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: MTV Live HD
+    - type: custom:decluttering-card
+      template: button_image
+      variables:
+        - image: tv_vh1.png
+        - border_on: rgb(0,153,204)                           # Tivo Border "on" color blue
+        - tap_action:
+            action: call-service
+            service: media_player.select_source
+            service_data:
+              entity_id: media_player.tivo
+              source: VH1

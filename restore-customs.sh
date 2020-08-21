@@ -67,9 +67,13 @@ wget https://raw.githubusercontent.com/maykar/lovelace-swipe-navigation/master/s
 # mkdir -p www/custom-lovelace/swipe-card
 # wget https://raw.githubusercontent.com/bramkragten/swipe-card/master/dist/swipe-card.js -O www/custom-lovelace/swipe-card/swipe-card.js
 
-# echo "Installing Button Card"
-# mkdir -p www/custom-lovelace/button-card
-# wget http://www.github.com/custom-cards/button-card/releases/latest/download/button-card.js -O www/custom-lovelace/button-card/button-card.js
+echo "Installing Button Card"
+mkdir -p www/custom-lovelace/button-card
+wget http://www.github.com/custom-cards/button-card/releases/latest/download/button-card.js -O www/custom-lovelace/button-card/button-card.js
+
+echo "Installing Layout Card"
+mkdir -p www/custom-lovelace/layout-card
+wget https://raw.githubusercontent.com/thomasloven/lovelace-layout-card/master/layout-card.js -O www/custom-lovelace/layout-card/layout-card.js
 
 echo "Installing Vertical Stack in Card Card"
 mkdir -p www/custom-lovelace/vertical-stack-in-card
@@ -77,7 +81,7 @@ wget https://raw.githubusercontent.com/ofekashery/vertical-stack-in-card/master/
 
 echo "Installing Bar Card"
 mkdir -p www/custom-lovelace/lovelace-bar-card
-wget https://github.com/custom-cards/bar-card/releases/download/3.1.6/bar-card.js -O www/custom-lovelace/lovelace-bar-card/bar-card.js
+wget https://github.com/custom-cards/bar-card/releases/download/3.2.0/bar-card.js -O www/custom-lovelace/lovelace-bar-card/bar-card.js
 
 echo "Installing Fold-entity Card"
 mkdir -p www/custom-lovelace/lovelace-fold-entity-row
@@ -93,11 +97,15 @@ wget https://github.com/kalkih/mini-graph-card/releases/download/v0.9.4/mini-gra
 
 echo "Installing Mini Media Player Card"
 mkdir -p www/custom-lovelace/lovelace-mini-media-player
-wget https://github.com/kalkih/mini-media-player/releases/download/v1.9.1/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
+wget https://github.com/kalkih/mini-media-player/releases/download/v1.10.2/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
 
 echo "Installing Card Mod"
 mkdir -p www/custom-lovelace/card-mod
 wget https://raw.githubusercontent.com/thomasloven/lovelace-card-mod/master/card-mod.js -O www/custom-lovelace/card-mod/card-mod.js
+
+echo "Installing State Switch"
+mkdir -p www/custom-lovelace/lovelace-state-switch
+wget https://raw.githubusercontent.com/thomasloven/lovelace-state-switch/master/state-switch.js -O www/custom-lovelace/lovelace-state-swtich/state-switch.js
 
 echo "Installing Air Purifier Card"
 cp -Rp /config/assets/custom_cards/air-purifier /config/www/custom-lovelace/

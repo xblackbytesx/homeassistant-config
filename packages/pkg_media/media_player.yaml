@@ -9,3 +9,10 @@
 - platform: androidtv
   name: Xiaomi Tv Box
   host: 10.0.221.25
+  exclude_unnamed_apps: true
+  apps:
+    org.xbmc.kodi: "Kodi"
+    com.netflix.ninja: "Netflix"
+    com.spotify.tv.android: "Spotify"
+    com.google.android.tvlauncher: "Homescreen"
+    com.google.android.youtube.tv: "Youtube"
