@@ -14,3 +14,9 @@
   ssl: false
   theaters: false
   max: 10
+
+- platform: template
+  sensors:
+    xiaomi_app:
+      friendly_name: "Xiaomi App"
+      value_template: "{{ state_attr('media_player.xiaomi_tv_box', 'app_name') }}"

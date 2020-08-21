@@ -45,7 +45,7 @@ label_image:
         - border-width: 3px
         - border-color: >
             [[[
-              if (states['sensor.shield_app'].state == "[[name]]")
+              if (states['sensor.xiaomi_app'].state == "[[name]]")
                 return "[[border_active]]";
               return "[[border_on]]";
             ]]]
@@ -75,7 +75,7 @@ button_image:
         - border-width: 3px
         - border-color: >
             [[[
-              if (states['sensor.shield_app'].state == "[[name]]")
+              if (states['sensor.xiaomi_app'].state == "[[name]]")
                 return "[[border_active]]";
               return "[[border_on]]";
             ]]]
@@ -103,7 +103,7 @@ button_icon_and_text:
         - border-width: 3px
         - border-color: >
             [[[
-              if (states['sensor.shield_app'].state == "[[name]]")
+              if (states['sensor.xiaomi_app'].state == "[[name]]")
                 return "[[border_active]]";
               return "[[border_on]]";
             ]]]
