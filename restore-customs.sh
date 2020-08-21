@@ -105,7 +105,7 @@ wget https://raw.githubusercontent.com/thomasloven/lovelace-card-mod/master/card
 
 echo "Installing State Switch"
 mkdir -p www/custom-lovelace/lovelace-state-switch
-wget https://raw.githubusercontent.com/thomasloven/lovelace-state-switch/master/state-switch.js -O www/custom-lovelace/lovelace-state-swtich/state-switch.js
+wget https://raw.githubusercontent.com/thomasloven/lovelace-state-switch/master/state-switch.js -O www/custom-lovelace/lovelace-state-switch/state-switch.js
 
 echo "Installing Air Purifier Card"
 cp -Rp /config/assets/custom_cards/air-purifier /config/www/custom-lovelace/
