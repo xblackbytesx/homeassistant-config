@@ -11,11 +11,6 @@ max_width: 99%
 cards:
   - type: vertical-stack
     cards:
-      - type: custom:decluttering-card
-        template: button_image
-        variables:
-          - image: shield_logo.png
-          - border_on: rgb(118,185,0)                     # Shield Border "on" color green
 ###################################################################################################
 # 2 row - 3 App Buttons using template: button_image
 ###################################################################################################
@@ -35,27 +30,34 @@ cards:
           template: button_image
           variables:
             - name: Kodi
-            - image: tv_kodi.png
+            - image: kodi.svg
             - border_on: rgb(118,185,0)                   # Shield Border "on" color green
             - border_active: rgb(255,0,0)                 # Border "active" color - red
             - tap_action:
                 action: call-service
                 service: script.remote_start_app_kodi
-###################################################################################################
-# 3 row - 3 App Buttons using template: button_image
-###################################################################################################
       - type: horizontal-stack
         cards:
         - type: custom:decluttering-card
           template: button_image
           variables:
             - name: Netflix
-            - image: tv_netflix.png
+            - image: netflix.svg
             - border_on: rgb(118,185,0)                   # Shield Border "on" color green
             - border_active: rgb(255,0,0)                 # Border "active" color - red
             - tap_action:
                 action: call-service
                 service: script.remote_start_app_netflix
+        - type: custom:decluttering-card
+          template: button_image
+          variables:
+            - name: NPO Start
+            - image: npostart.svg
+            - border_on: rgb(118,185,0)                   # Shield Border "on" color green
+            - border_active: rgb(255,0,0)                 # Border "active" color - red
+            - tap_action:
+                action: call-service
+                service: script.remote_start_app_kodi
 ###################################################################################################
 # 4 row - 3 Navigation Buttons using template: button_icon_and_text
 ###################################################################################################
