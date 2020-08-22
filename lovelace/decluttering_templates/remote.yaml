@@ -36,7 +36,7 @@ label_image:
     type: custom:button-card
     color_type: label-card
     show_entity_picture: true
-    entity_picture: '/local/lovelace/remote/[[image]]'
+    entity_picture: '/local/remote/[[image]]'
     styles:
       card:
         - background-color: rgba(56,60,69,1)
@@ -65,7 +65,7 @@ button_image:
     entity: '[[entity]]'
     show_name: false
     show_entity_picture: true
-    entity_picture: '/local/lovelace/remote/[[image]]'
+    entity_picture: '/local/remote/[[image]]'
     tap_action: '[[tap_action]]'
     styles:
       card:
