@@ -25,7 +25,7 @@ cards:
           template: button_image
           variables:
             - name: Youtube
-            - image: tv_youtube2.png
+            - image: youtube.svg
             - border_on: rgb(118,185,0)                   # Shield Border "on" color green
             - border_active: rgb(255,0,0)                 # Border "active" color - red
             - tap_action:
