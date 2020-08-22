@@ -6,7 +6,7 @@ sensor: !include sensor.yaml
 binary_sensor: !include binary_sensor.yaml
 input_boolean: !include boolean.yaml
 input_select: !include input_select.yaml
-# script: !include script.yaml
+script: !include script.yaml
 
 spotify:
   client_id: !secret spotify_client_id
