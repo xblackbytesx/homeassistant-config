@@ -54,8 +54,8 @@
     - service: script.turn_on
       entity_id:
         - script.scene_sa_not_watching_tv
-        - script.scene_kitchen_relax
-        - script.scene_ex_relax
+        - script.scene_kitchen_night
+        - script.scene_ex_night
     - service: notify.notify_matrix_clean
       data:
         message: "Shining bright like a diamond!"

@@ -20,23 +20,3 @@ set_dynamic_scene:
         {% else %}
           none
         {% endif %}
-
-
-# handle_duo_switch_lights:
-#   alias: Global | Handle Duo Switch lights
-#   sequence:
-#     service_template: >
-#       {% if trigger_to_state == 'on' %}
-#         scene.turn_on
-#       {% elif trigger_to_state == 'off' %}
-#         light.turn_off
-#       {% endif %}
-#     data_template:
-#       entity_id: >
-#         {% if trigger_entity_id == 'switch.duo_switch_lb_l' and trigger_to_state == 'on' %}
-#           scene.lb_night
-#         {% elif trigger.event.data.entity_id == 'switch.duo_switch_lb_r' and trigger_to_state == 'on' %}
-#           scene.lb_day
-#         {% elif trigger_to_state == 'off' %}
-#           light.lg_lb_all
-#         {% endif %}

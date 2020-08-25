@@ -58,3 +58,18 @@ automation_office_light:
   name: Office light automations
   initial: on
   icon: mdi:robot
+
+automation_exterior_light:
+  name: Exterior light automations
+  initial: on
+  icon: mdi:robot
+
+automation_backyard_light:
+  name: Backyard light automations
+  initial: on
+  icon: mdi:robot
+
+automation_front_porch_light:
+  name: Front-porch light automations
+  initial: on
+  icon: mdi:robot
