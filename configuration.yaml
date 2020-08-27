@@ -56,7 +56,6 @@ updater:
 mobile_app:
 
 http:
-  base_url: !secret base_url
   cors_allowed_origins:
     - !secret base_url
     - https://google.com
