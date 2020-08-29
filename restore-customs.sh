@@ -12,10 +12,7 @@ sed -i 's/Orange Dark/orange_dark/g' themes/orange_dark.yaml
 cp -Rp assets/themes/* themes/
 
 echo "Installing RDW Component"
-mkdir -p custom_components/rdw
-wget https://raw.githubusercontent.com/eelcohn/home-assistant-rdw/master/__init__.py -O custom_components/rdw/__init__.py
-wget https://raw.githubusercontent.com/eelcohn/home-assistant-rdw/master/sensor.py -O custom_components/rdw/sensor.py
-wget https://raw.githubusercontent.com/eelcohn/home-assistant-rdw/master/manifest.json -O custom_components/rdw/manifest.json
+git clone git@github.com:eelcohn/home-assistant-rdw.git custom_components/rdw
 
 echo "Installing Radarr Component"
 mkdir -p custom_components/radarr_upcoming_media
