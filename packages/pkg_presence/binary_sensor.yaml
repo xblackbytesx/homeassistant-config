@@ -1,10 +1,12 @@
 - platform: template
   sensors:
-    person_one_home: >-
-      {{ is_state('device_tracker.phone_person_one', 'home') }}
+    person_one_home:
+      value_template: >-
+        {{ is_state('device_tracker.phone_person_one', 'home') }}
 
-    person_two_home: >-
-      {{ is_state('device_tracker.phone_person_two', 'home') }}
+    person_two_home:
+      value_template: >-
+        {{ is_state('device_tracker.phone_person_two', 'home') }}
 
     occupants_home:
       value_template: >-
