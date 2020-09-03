@@ -1,6 +1,6 @@
 type: picture-entity
-entity: !secret person_one_device_tracker
+entity: binary_sensor.person_one_home
 name: !secret person_one_name
 state_image:
-  "home": /local/avatars/peter.gif
-  "not_home": /local/avatars/peter_off.gif
+  "on": /local/avatars/peter.gif
+  "off": /local/avatars/peter_off.gif

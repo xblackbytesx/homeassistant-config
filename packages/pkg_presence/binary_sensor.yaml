@@ -1,15 +1,15 @@
 - platform: template
   sensors:
-    occupant_one_home:
-      value_template: !secret occupant_one_device
+    person_one_home: >-
+      {{ is_state('device_tracker.phone_person_one', 'home') }}
 
-    occupant_two_home:
-      value_template: !secret occupant_two_device
+    person_two_home: >-
+      {{ is_state('device_tracker.phone_person_two', 'home') }}
 
     occupants_home:
       value_template: >-
-        {{ is_state('binary_sensor.occupant_one_home', 'on') 
-           and is_state('binary_sensor.occupant_two_home', 'on') }}
+        {{ is_state('binary_sensor.person_one_home', 'on') 
+           or is_state('binary_sensor.person_two_home', 'on') }}
 
     sa_motion_detected:
       value_template: >-

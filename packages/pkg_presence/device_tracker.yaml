@@ -1,5 +1,5 @@
-- platform: nmap_tracker
-  hosts:
-    - 10.0.221.42
-    - 10.0.221.62
-  home_interval: 5
+# - platform: nmap_tracker
+#   hosts:
+#     - 10.0.221.42
+#     - 10.0.221.62
+#   home_interval: 1
