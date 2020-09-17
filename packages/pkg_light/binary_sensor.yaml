@@ -2,36 +2,36 @@
   sensors:
     sa_dark_enough:
       value_template: >-
-        {{ state_attr('sensor.0x0017880102026161_illuminance', 'illuminance_lux') <= states('input_number.sa_illuminance_threshold')| int }}
+        {{ states('sensor.0x0017880102026161_illuminance_lux')|int <= states('input_number.sa_illuminance_threshold')|int }}
 
     kitchen_dark_enough:
       value_template: >-
-        {{ state_attr('sensor.0x0017880102030677_illuminance', 'illuminance_lux') <= states('input_number.kitchen_illuminance_threshold')| int }}
+        {{ states('sensor.0x0017880102030677_illuminance_lux')|int <= states('input_number.kitchen_illuminance_threshold')|int }}
 
     hw_dark_enough:
       value_template: >-
-        {{ state_attr('sensor.0x00178801020282bc_illuminance', 'illuminance_lux') <= states('input_number.hw_illuminance_threshold')| int }}
+        {{ states('sensor.0x00178801020282bc_illuminance_lux')|int <= states('input_number.hw_illuminance_threshold')|int }}
 
     co_dark_enough:
       value_template: >-
-        {{ state_attr('sensor.0x00178801020357e5_illuminance', 'illuminance_lux') <= states('input_number.co_illuminance_threshold')| int }}
+        {{ states('sensor.0x00178801020357e5_illuminance_lux')|int <= states('input_number.co_illuminance_threshold')|int }}
 
     bathroom_dark_enough:
       value_template: >-
-        {{ state_attr('sensor.0x00158d000349234a_illuminance', 'illuminance_lux') <= 100 }}
+        {{ states('sensor.0x00158d000349234a_illuminance_lux')|int <= 100 }}
 
     attic_dark_enough:
       value_template: >-
-        {{ state_attr('sensor.0x00158d00036b62d0_illuminance', 'illuminance_lux') <= 100 }}
+        {{ states('sensor.0x00158d00036b62d0_illuminance_lux')|int <= 100 }}
 
     toilet_dark_enough:
       value_template: >-
-        {{ state_attr('sensor.0x00158d000447edb4_illuminance', 'illuminance_lux') <= 400 }}
+        {{ states('sensor.0x00158d000447edb4_illuminance_lux')|int <= 400 }}
 
     office_dark_enough:
       value_template: >-
-        {{ state_attr('sensor.0x00158d0004499f26_illuminance', 'illuminance_lux') <= states('input_number.office_illuminance_threshold')| int }}
+        {{ states('sensor.0x00158d0004499f26_illuminance_lux')|int <= states('input_number.office_illuminance_threshold')| int }}
 
     exterior_dark_enough:
       value_template: >-
-        {{ state_attr('sensor.0x001788010647ff92_illuminance', 'illuminance_lux') <= states('input_number.ex_illuminance_threshold')| int }}
+        {{ states('sensor.0x001788010647ff92_illuminance_lux') <= states('input_number.ex_illuminance_threshold')| int }}
