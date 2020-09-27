@@ -24,14 +24,16 @@ cards:
   - type: custom:vertical-style-card
     title: Large Bedroom
     cards:
-      - type: button
-        entity: light.lg_mb_all
-        show_name: false
-        show_state: false
-      - type: buttom
-        entity: switch.0x086bd7fffe5185b6_switch
-        show_name: false
-        show_state: false
+      - type: horizontal-stack
+        cards:
+          - type: button
+            entity: light.lg_mb_all
+            show_name: false
+            show_state: false
+          - type: button
+            entity: switch.0x086bd7fffe5185b6_switch
+            show_name: false
+            show_state: false
   - !include cards/first_floor_groups.yaml
   - type: custom:mini-graph-card
     name: Temperature
