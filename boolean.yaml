@@ -1,7 +1,7 @@
 advanced_config:
   name: Show advanced configuration options
   initial: off
-  icon: mdi:settings-outline
+  icon: mdi:cog-outline
 
 
 automation_toilet_light:
