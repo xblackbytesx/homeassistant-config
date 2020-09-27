@@ -2,10 +2,8 @@ title: First Floor
 icon: mdi:numeric-1-box
 cards:
   - type: vertical-stack
+    title: Large Bedroom
     cards:
-      - type: markdown
-        content: >
-          ## Large Bedroom
       - type: horizontal-stack
         cards:
           - type: light
