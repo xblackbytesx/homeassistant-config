@@ -94,7 +94,7 @@ wget https://github.com/kalkih/mini-graph-card/releases/download/v0.9.4/mini-gra
 
 echo "Installing Mini Media Player Card"
 mkdir -p www/custom-lovelace/lovelace-mini-media-player
-wget https://github.com/kalkih/mini-media-player/releases/download/v1.10.2/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
+wget https://github.com/kalkih/mini-media-player/releases/download/v1.11.0/mini-media-player-bundle.js -O www/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
 
 echo "Installing Card Mod"
 mkdir -p www/custom-lovelace/card-mod
