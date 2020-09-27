@@ -1,6 +1,18 @@
 title: First Floor
 icon: mdi:numeric-1-box
 cards:
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: >
+          ## Large Bedroom
+      - type: horizontal-stack
+        cards:
+          - type: light
+            entity: light.lg_mb_all
+          - type: button
+            entity: switch.0x086bd7fffe5185b6_switch
+            show_name: false
   - !include cards/first_floor_groups.yaml
   - type: custom:mini-graph-card
     name: Temperature
