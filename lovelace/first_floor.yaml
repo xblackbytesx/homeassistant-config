@@ -25,33 +25,61 @@ cards:
   - type: custom:vertical-style-card
     title: Master Bedroom
     cards:
-      - type: horizontal-stack
+      - type: custom:swipe-card
+        parameters:
+        spaceBetween: 8
+        scrollbar:
+          hide: false
+          draggable: true
+          snapOnRelease: true
         cards:
-          - type: button
-            entity: light.lg_mb_all
-            show_name: false
-            show_state: false
-      - type: horizontal-stack
-        cards:
-          - type: button
-            entity: switch.0xccccccfffeb221dd_switch
-            show_name: false
-            show_state: false
-          - type: button
-            entity: switch.0xccccccfffeb21d81_switch
-            show_name: false
-            show_state: false
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: button
+                    entity: light.lg_mb_all
+                    show_name: false
+                    show_state: false
+              - type: horizontal-stack
+                cards:
+                  - type: button
+                    entity: switch.0xccccccfffeb221dd_switch
+                    show_name: false
+                    show_state: false
+                  - type: button
+                    entity: switch.0xccccccfffeb21d81_switch
+                    show_name: false
+                    show_state: false
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: button
+                    entity: light.lg_mb_all
+                    show_name: false
+                    show_state: false
+              - type: horizontal-stack
+                cards:
+                  - type: button
+                    entity: switch.0xccccccfffeb221dd_switch
+                    show_name: false
+                    show_state: false
+                  - type: button
+                    entity: switch.0xccccccfffeb21d81_switch
+                    show_name: false
+                    show_state: false
   - type: custom:vertical-style-card
     title: Large Bedroom
     cards:
-      - type: horizontal-stack
-        cards:
-          - type: custom:mini-graph-card
-            name: Temperature
-            entities:
-              - sensor.0x00158d00036bffea_temperature
-              - sensor.0x00158d00036bffea_humidity
-              - sensor.0x00158d00036bffea_pressure
+      # - type: horizontal-stack
+      #   cards:
+      #     - type: custom:mini-graph-card
+      #       name: Temperature
+      #       entities:
+      #         - sensor.0x00158d00036bffea_temperature
+      #         - sensor.0x00158d00036bffea_humidity
+      #         - sensor.0x00158d00036bffea_pressure
       - type: horizontal-stack
         cards:
           - type: button
@@ -67,14 +95,14 @@ cards:
   - type: custom:vertical-style-card
     title: Small Bedroom
     cards:
-      - type: horizontal-stack
-        cards:
-          - type: custom:mini-graph-card
-            name: Temperature
-            entities:
-              - sensor.0x00158d00036bffea_temperature
-              - sensor.0x00158d00036bffea_humidity
-              - sensor.0x00158d00036bffea_pressure
+      # - type: horizontal-stack
+      #   cards:
+      #     - type: custom:mini-graph-card
+      #       name: Temperature
+      #       entities:
+      #         - sensor.0x00158d00036bffea_temperature
+      #         - sensor.0x00158d00036bffea_humidity
+      #         - sensor.0x00158d00036bffea_pressure
       - type: horizontal-stack
         cards:
           - type: button

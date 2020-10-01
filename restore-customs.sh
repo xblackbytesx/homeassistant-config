@@ -56,13 +56,13 @@ echo "Installing Auto-Entities Card"
 mkdir -p www/custom-lovelace/lovelace-auto-entities
 wget https://raw.githubusercontent.com/thomasloven/lovelace-auto-entities/master/auto-entities.js -O www/custom-lovelace/lovelace-auto-entities/auto-entities.js
 
-echo "Installing Swipe Navigation Card"
-mkdir -p www/custom-lovelace/lovelace-swipe-navigation
-wget https://raw.githubusercontent.com/maykar/lovelace-swipe-navigation/master/swipe-navigation.js -O www/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js
+# echo "Installing Swipe Navigation Card"
+# mkdir -p www/custom-lovelace/lovelace-swipe-navigation
+# wget https://raw.githubusercontent.com/maykar/lovelace-swipe-navigation/master/swipe-navigation.js -O www/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js
 
-# echo "Installing Swipe Card"
-# mkdir -p www/custom-lovelace/swipe-card
-# wget https://raw.githubusercontent.com/bramkragten/swipe-card/master/dist/swipe-card.js -O www/custom-lovelace/swipe-card/swipe-card.js
+echo "Installing Swipe Card"
+mkdir -p www/custom-lovelace/swipe-card
+wget https://raw.githubusercontent.com/bramkragten/swipe-card/master/dist/swipe-card.js -O www/custom-lovelace/swipe-card/swipe-card.js
 
 echo "Installing Button Card"
 mkdir -p www/custom-lovelace/button-card
