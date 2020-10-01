@@ -27,11 +27,13 @@ cards:
     cards:
       - type: custom:swipe-card
         parameters:
-        spaceBetween: 8
-        scrollbar:
-          hide: false
-          draggable: true
-          snapOnRelease: true
+          spaceBetween: 8
+          scrollbar:
+            hide: false
+            draggable: true
+            snapOnRelease: true
+          pagination:
+            type: 'bullets'
         cards:
           - type: vertical-stack
             cards:
@@ -53,22 +55,14 @@ cards:
                     show_state: false
           - type: vertical-stack
             cards:
-              - type: horizontal-stack
-                cards:
-                  - type: button
-                    entity: light.lg_mb_all
-                    show_name: false
-                    show_state: false
-              - type: horizontal-stack
-                cards:
-                  - type: button
-                    entity: switch.0xccccccfffeb221dd_switch
-                    show_name: false
-                    show_state: false
-                  - type: button
-                    entity: switch.0xccccccfffeb21d81_switch
-                    show_name: false
-                    show_state: false
+              - type: custom:auto-entities
+                show_empty: false
+                card:
+                  type: entities
+                filter:
+                  include:
+                    - entity_id: "automation.mb*"
+                    - entity_id: "input_boolean.automation_mb*"
   - type: custom:vertical-style-card
     title: Large Bedroom
     cards:
