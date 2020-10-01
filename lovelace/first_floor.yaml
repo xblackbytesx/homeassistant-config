@@ -22,7 +22,7 @@ cards:
   #     - light.lg_mb_all
   #     - switch.0x086bd7fffe5185b6_switch
 
-  - type: custom:vertical-style-card
+  - type: vertical-stack
     title: Master Bedroom
     cards:
       - type: custom:swipe-card
