@@ -31,6 +31,8 @@ cards:
             entity: light.lg_mb_all
             show_name: false
             show_state: false
+      - type: horizontal-stack
+        cards:
           - type: button
             entity: switch.0xccccccfffeb221dd_switch
             show_name: false
@@ -48,6 +50,8 @@ cards:
             entity: light.lg_lb_all
             show_name: false
             show_state: false
+            hold_action:
+              action: more-info
           - type: button
             entity: switch.0x086bd7fffe5185b6_switch
             show_name: false
