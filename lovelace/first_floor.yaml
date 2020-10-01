@@ -47,6 +47,48 @@ cards:
                     entity: switch.0xccccccfffeb21d81_switch
                     show_name: false
                     show_state: false
+              - type: horizontal-stack
+                cards:
+                  - type: glance
+                    show_name: false
+                    show_state: false
+                    entities:
+                      - entity: 'script.scene_mb_night'
+                        tap_action:
+                          action: call-service
+                          service: 'script.turn_on'
+                          service_data:
+                            entity_id: 'cript.scene_mb_night'
+                  - type: glance
+                    show_name: false
+                    show_state: false
+                    entities:
+                      - entity: 'script.scene_mb_day'
+                        tap_action:
+                          action: call-service
+                          service: 'script.turn_on'
+                          service_data:
+                            entity_id: 'script.scene_mb_day'
+                  - type: glance
+                    show_name: false
+                    show_state: false
+                    entities:
+                      - entity: 'script.scene_mb_search_mode'
+                        tap_action:
+                          action: call-service
+                          service: 'script.turn_on'
+                          service_data:
+                            entity_id: 'script.scene_mb_search_mode'
+                  - type: glance
+                    show_name: false
+                    show_state: false
+                    entities:
+                      - entity: 'script.scene_mb_reset_default'
+                        tap_action:
+                          action: call-service
+                          service: 'script.turn_on'
+                          service_data:
+                            entity_id: 'script.scene_mb_reset_default'
           - type: vertical-stack
             cards:
               - type: horizontal-stack
@@ -166,6 +208,48 @@ cards:
                     entity: switch.0x000b3cfffef7b582_switch
                     show_name: false
                     show_state: false
+              - type: horizontal-stack
+                cards:
+                  - type: glance
+                    show_name: false
+                    show_state: false
+                    entities:
+                      - entity: 'script.scene_sb_night'
+                        tap_action:
+                          action: call-service
+                          service: 'script.turn_on'
+                          service_data:
+                            entity_id: 'cript.scene_sb_night'
+                  - type: glance
+                    show_name: false
+                    show_state: false
+                    entities:
+                      - entity: 'script.scene_sb_day'
+                        tap_action:
+                          action: call-service
+                          service: 'script.turn_on'
+                          service_data:
+                            entity_id: 'script.scene_sb_day'
+                  - type: glance
+                    show_name: false
+                    show_state: false
+                    entities:
+                      - entity: 'script.scene_sb_search_mode'
+                        tap_action:
+                          action: call-service
+                          service: 'script.turn_on'
+                          service_data:
+                            entity_id: 'script.scene_sb_search_mode'
+                  - type: glance
+                    show_name: false
+                    show_state: false
+                    entities:
+                      - entity: 'script.scene_sb_reset_default'
+                        tap_action:
+                          action: call-service
+                          service: 'script.turn_on'
+                          service_data:
+                            entity_id: 'script.scene_sb_reset_default'
           - type: vertical-stack
             cards:
               - type: custom:auto-entities
