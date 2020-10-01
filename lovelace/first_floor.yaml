@@ -46,6 +46,14 @@ cards:
     cards:
       - type: horizontal-stack
         cards:
+          - type: custom:mini-graph-card
+            name: Temperature
+            entities:
+              - sensor.0x00158d00036bffea_temperature
+              - sensor.0x00158d00036bffea_humidity
+              - sensor.0x00158d00036bffea_pressure
+      - type: horizontal-stack
+        cards:
           - type: button
             entity: light.lg_lb_all
             show_name: false
@@ -59,6 +67,14 @@ cards:
   - type: custom:vertical-style-card
     title: Small Bedroom
     cards:
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            name: Temperature
+            entities:
+              - sensor.0x00158d00036bffea_temperature
+              - sensor.0x00158d00036bffea_humidity
+              - sensor.0x00158d00036bffea_pressure
       - type: horizontal-stack
         cards:
           - type: button
