@@ -53,9 +53,9 @@ cards:
                 cards:
                   - type: custom:mini-graph-card
                     entities:
-                      - sensor.0x00178801020357e5_temperature
-                      - sensor.0x00178801020357e5_humidity
-                      - sensor.0x00178801020357e5_pressure
+                      - sensor.0x00158d0004453420_temperature
+                      - sensor.0x00158d0004453420_humidity
+                      - sensor.0x00158d0004453420_pressure
           - type: vertical-stack
             cards:
               - type: custom:auto-entities
