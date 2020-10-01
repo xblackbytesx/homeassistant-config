@@ -28,10 +28,6 @@ cards:
       - type: custom:swipe-card
         parameters:
           spaceBetween: 8
-          scrollbar:
-            hide: false
-            draggable: true
-            snapOnRelease: true
           pagination:
             type: 'bullets'
         cards:
