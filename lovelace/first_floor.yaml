@@ -28,8 +28,6 @@ cards:
       - type: custom:swipe-card
         parameters:
           spaceBetween: 8
-          pagination:
-            type: 'bullets'
         cards:
           - type: vertical-stack
             cards:
@@ -74,8 +72,6 @@ cards:
       - type: custom:swipe-card
         parameters:
           spaceBetween: 8
-          pagination:
-            type: 'bullets'
         cards:
           - type: vertical-stack
             cards:
@@ -115,8 +111,6 @@ cards:
       - type: custom:swipe-card
         parameters:
           spaceBetween: 8
-          pagination:
-            type: 'bullets'
         cards:
           - type: vertical-stack
             cards:
