@@ -29,66 +29,17 @@ cards:
         parameters:
           spaceBetween: 8
         cards:
-          - type: vertical-stack
-            cards:
-              - type: horizontal-stack
-                cards:
-                  - type: button
-                    entity: light.lg_mb_all
-                    show_name: false
-                    show_state: false
-              - type: horizontal-stack
-                cards:
-                  - type: button
-                    entity: switch.0xccccccfffeb221dd_switch
-                    show_name: false
-                    show_state: false
-                  - type: button
-                    entity: switch.0xccccccfffeb21d81_switch
-                    show_name: false
-                    show_state: false
-              - type: horizontal-stack
-                cards:
-                  - type: glance
-                    show_name: false
-                    show_state: false
-                    entities:
-                      - entity: 'script.scene_mb_night'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'cript.scene_mb_night'
-                  - type: glance
-                    show_name: false
-                    show_state: false
-                    entities:
-                      - entity: 'script.scene_mb_day'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'script.scene_mb_day'
-                  - type: glance
-                    show_name: false
-                    show_state: false
-                    entities:
-                      - entity: 'script.scene_mb_search_mode'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'script.scene_mb_search_mode'
-                  - type: glance
-                    show_name: false
-                    show_state: false
-                    entities:
-                      - entity: 'script.scene_mb_reset_default'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'script.scene_mb_reset_default'
+          - type: custom:decluttering-card
+            template: slider_button_groups
+            variables:
+              - service: script.turn_on
+              - button_1: light.lg_mb_all
+              - button_2: switch.0xccccccfffeb221dd_switch
+              - button_3: switch.0xccccccfffeb21d81_switch
+              - scene_1: script.scene_mb_night
+              - scene_2: script.scene_mb_day
+              - scene_3: script.scene_mb_search_mode
+              - scene_4: script.scene_mb_reset_default
           - type: vertical-stack
             cards:
               - type: horizontal-stack
