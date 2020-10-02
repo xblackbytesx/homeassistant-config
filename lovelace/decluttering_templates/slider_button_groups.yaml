@@ -8,8 +8,6 @@ slider_button_groups:
             entity: '[[button_1]]'
             show_name: false
             show_state: false
-      - type: horizontal-stack
-        cards:
           - type: button
             entity: '[[button_2]]'
             show_name: false
