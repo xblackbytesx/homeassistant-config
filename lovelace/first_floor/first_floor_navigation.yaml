@@ -31,8 +31,8 @@ cards:
     entity: input_select.first_floor
     states:
       MB:
-        !include master_bedroom.yaml
+        !include first_floor_master_bedroom.yaml
       LB:
-        !include large_bedroom.yaml
+        !include first_floor_large_bedroom.yaml
       SB:
-        !include small_bedroom.yaml
+        !include first_floor_small_bedroom.yaml
