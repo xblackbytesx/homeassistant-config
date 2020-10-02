@@ -10,29 +10,35 @@ cards:
       - type: horizontal-stack
         cards:
           - type: custom:decluttering-card
-            template: first_floor_nav_item
+            template: sub_nav_button
             variables:
-              - name: MB
+              - nav_handler: input_select.first_floor
+              - href: MB
+              - name: Master Bedroom
               - border: rgba(255, 125, 125,1) # pink(ish) color top nav buttons
               - background_active: gray
           - type: custom:decluttering-card
-            template: first_floor_nav_item
+            template: sub_nav_button
             variables:
-              - name: LB
+              - nav_handler: input_select.first_floor
+              - href: LB
+              - name: Large Bedroom
               - border: rgba(255, 125, 125,1) # pink(ish) color top nav buttons
               - background_active: gray
           - type: custom:decluttering-card
-            template: first_floor_nav_item
+            template: sub_nav_button
             variables:
-              - name: SB
+              - nav_handler: input_select.first_floor
+              - href: SB
+              - name: Small Bedroom
               - border: rgba(255, 125, 125,1) # pink(ish) color top nav buttons
               - background_active: gray
   - type: custom:state-switch
     entity: input_select.first_floor
     states:
       MB:
-        !include first_floor_mb.yaml
+        !include master_bedroom.yaml
       LB:
-        !include first_floor_lb.yaml
+        !include large_bedroom.yaml
       SB:
-        !include first_floor_sb.yaml
+        !include small_bedroom.yaml
