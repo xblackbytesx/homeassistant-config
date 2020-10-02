@@ -1,0 +1,7 @@
+first_floor:
+  name: Select room
+  options:
+    - MB
+    - LB
+    - SB
+  initial: MB

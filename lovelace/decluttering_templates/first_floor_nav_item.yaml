@@ -2,14 +2,14 @@ first_floor_nav_item:
   default:
   card:
     type: "custom:button-card"
-    entity: input_select.remote
+    entity: input_select.first_floor
     name: '[[name]]'
     show_icon: false
     tap_action:
       action: call-service
       service: input_select.set_options
       service_data:
-        entity_id: input_select.remote
+        entity_id: input_select.first_floor
         options: "[[name]]"
     styles:
       card:
