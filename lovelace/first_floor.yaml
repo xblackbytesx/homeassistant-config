@@ -58,8 +58,8 @@ cards:
                   show_header_toggle: false
                 filter:
                   include:
-                    - entity_id: "light.*"
-                      name: "Master Bedroom"
+                    - area: Master Bedroom
+                      domain: light
           - type: vertical-stack
             cards:
               - type: custom:auto-entities
@@ -99,17 +99,17 @@ cards:
                       - sensor.0x00158d00036bffea_temperature
                       - sensor.0x00158d00036bffea_humidity
                       - sensor.0x00158d00036bffea_pressure
-              - type: vertical-stack
-                cards:
-                  - type: custom:auto-entities
-                    show_empty: false
-                    card:
-                      type: entities
-                      show_header_toggle: false
-                    filter:
-                      include:
-                        - entity_id: "light.*"
-                          name: "Large Bedroom"
+          - type: vertical-stack
+            cards:
+              - type: custom:auto-entities
+                show_empty: false
+                card:
+                  type: entities
+                  show_header_toggle: false
+                filter:
+                  include:
+                    - area: Large Bedroom
+                      domain: light
           - type: vertical-stack
             cards:
               - type: custom:auto-entities
@@ -148,8 +148,8 @@ cards:
                   show_header_toggle: false
                 filter:
                   include:
-                    - entity_id: "light.*"
-                      name: "Small Bedroom"
+                    - area: Small Bedroom
+                      domain: light
           - type: vertical-stack
             cards:
               - type: custom:auto-entities
