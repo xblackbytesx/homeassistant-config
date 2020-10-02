@@ -1,0 +1,44 @@
+scene_tile_standalone:
+  card:
+    type: horizontal-stack
+    cards:
+      - type: glance
+        show_name: false
+        show_state: false
+        entities:
+          - entity: '[[entity_1]]'
+            tap_action:
+              action: call-service
+              service: '[[service]]'
+              service_data:
+                entity_id: '[[entity_1]]'
+      - type: glance
+        show_name: false
+        show_state: false
+        entities:
+          - entity: '[[entity_2]]'
+            tap_action:
+              action: call-service
+              service: '[[service]]'
+              service_data:
+                entity_id: '[[entity_2]]'
+      - type: glance
+        show_name: false
+        show_state: false
+        entities:
+          - entity: '[[entity_3]]'
+            tap_action:
+              action: call-service
+              service: '[[service]]'
+              service_data:
+                entity_id: '[[entity_3]]'
+      - type: glance
+        show_name: false
+        show_state: false
+        entities:
+          - entity: '[[entity_4]]'
+            tap_action:
+              action: call-service
+              service: '[[service]]'
+              service_data:
+                entity_id: '[[entity_4]]'
