@@ -49,46 +49,42 @@ cards:
                     show_state: false
               - type: horizontal-stack
                 cards:
-                  - type: glance
+                  - type: button
+                    entitiy: script.scene_mb_night
                     show_name: false
                     show_state: false
-                    entities:
-                      - entity: 'script.scene_mb_night'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'cript.scene_mb_night'
-                  - type: glance
+                    tap_action:
+                      action: call-service
+                      service: 'script.turn_on'
+                      service_data:
+                        entity_id: script.scene_mb_night
+                  - type: button
+                    entitiy: script.scene_mb_day
                     show_name: false
                     show_state: false
-                    entities:
-                      - entity: 'script.scene_mb_day'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'script.scene_mb_day'
-                  - type: glance
+                    tap_action:
+                      action: call-service
+                      service: 'script.turn_on'
+                      service_data:
+                        entity_id: script.scene_mb_day
+                  - type: button
+                    entitiy: script.scene_mb_search_mode
                     show_name: false
                     show_state: false
-                    entities:
-                      - entity: 'script.scene_mb_search_mode'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'script.scene_mb_search_mode'
-                  - type: glance
+                    tap_action:
+                      action: call-service
+                      service: 'script.turn_on'
+                      service_data:
+                        entity_id: script.scene_mb_search_mode
+                  - type: button
+                    entitiy: script.scene_mb_reset_default
                     show_name: false
                     show_state: false
-                    entities:
-                      - entity: 'script.scene_mb_reset_default'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'script.scene_mb_reset_default'
+                    tap_action:
+                      action: call-service
+                      service: 'script.turn_on'
+                      service_data:
+                        entity_id: script.scene_mb_reset_default
           - type: vertical-stack
             cards:
               - type: horizontal-stack
