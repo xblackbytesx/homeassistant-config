@@ -55,6 +55,7 @@ cards:
                 show_empty: false
                 card:
                   type: entities
+                  show_header_toggle: false
                 filter:
                   include:
                     - entity_id: "automation.mb*"
@@ -93,6 +94,7 @@ cards:
                 show_empty: false
                 card:
                   type: entities
+                  show_header_toggle: false
                 filter:
                   include:
                     - entity_id: "automation.lb*"
@@ -121,6 +123,7 @@ cards:
                 show_empty: false
                 card:
                   type: entities
+                  show_header_toggle: false
                 filter:
                   include:
                     - entity_id: "automation.lb*"
