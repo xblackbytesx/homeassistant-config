@@ -1,5 +1,5 @@
 slider_button_groups:
-  cards:
+  card:
     type: vertical-stack
     cards:
       - type: horizontal-stack
