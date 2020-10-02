@@ -1,5 +1,5 @@
-path: remote
-icon: mdi:remote
+path: first_floor
+icon: mdi:numeric-1-box
 cards:
   - type: custom:layout-card
     layout: vertical
