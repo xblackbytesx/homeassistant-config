@@ -55,7 +55,7 @@ cards:
                     show_state: false
                     tap_action:
                       action: call-service
-                      service: 'script.turn_on'
+                      service: script.turn_on
                       service_data:
                         entity_id: script.scene_mb_night
                   - type: button
@@ -64,7 +64,7 @@ cards:
                     show_state: false
                     tap_action:
                       action: call-service
-                      service: 'script.turn_on'
+                      service: script.turn_on
                       service_data:
                         entity_id: script.scene_mb_day
                   - type: button
@@ -73,7 +73,7 @@ cards:
                     show_state: false
                     tap_action:
                       action: call-service
-                      service: 'script.turn_on'
+                      service: script.turn_on
                       service_data:
                         entity_id: script.scene_mb_search_mode
                   - type: button
@@ -82,7 +82,7 @@ cards:
                     show_state: false
                     tap_action:
                       action: call-service
-                      service: 'script.turn_on'
+                      service: script.turn_on
                       service_data:
                         entity_id: script.scene_mb_reset_default
           - type: vertical-stack
