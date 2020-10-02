@@ -27,25 +27,25 @@ cards:
                   - sensor.0x00158d0004453420_temperature
                   - sensor.0x00158d0004453420_humidity
                   - sensor.0x00158d0004453420_pressure
-      - type: vertical-stack
-        cards:
-          - type: custom:auto-entities
-            show_empty: false
-            card:
-              type: entities
-              show_header_toggle: false
-            filter:
-              include:
-                - area: Master Bedroom
-                  domain: light
-      - type: vertical-stack
-        cards:
-          - type: custom:auto-entities
-            show_empty: false
-            card:
-              type: entities
-              show_header_toggle: false
-            filter:
-              include:
-                - entity_id: "automation.mb*"
-                - entity_id: "input_boolean.automation_mb*"
+      # - type: vertical-stack
+      #   cards:
+      #     - type: custom:auto-entities
+      #       show_empty: false
+      #       card:
+      #         type: entities
+      #         show_header_toggle: false
+      #       filter:
+      #         include:
+      #           - area: Master Bedroom
+      #             domain: light
+      # - type: vertical-stack
+      #   cards:
+      #     - type: custom:auto-entities
+      #       show_empty: false
+      #       card:
+      #         type: entities
+      #         show_header_toggle: false
+      #       filter:
+      #         include:
+      #           - entity_id: "automation.mb*"
+      #           - entity_id: "input_boolean.automation_mb*"
