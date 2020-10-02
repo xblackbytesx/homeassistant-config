@@ -58,6 +58,17 @@ cards:
                   show_header_toggle: false
                 filter:
                   include:
+                    - entity_id: "light.*"
+                      name: "Master Bedroom"
+          - type: vertical-stack
+            cards:
+              - type: custom:auto-entities
+                show_empty: false
+                card:
+                  type: entities
+                  show_header_toggle: false
+                filter:
+                  include:
                     - entity_id: "automation.mb*"
                     - entity_id: "input_boolean.automation_mb*"
   - type: vertical-stack
@@ -88,6 +99,17 @@ cards:
                       - sensor.0x00158d00036bffea_temperature
                       - sensor.0x00158d00036bffea_humidity
                       - sensor.0x00158d00036bffea_pressure
+              - type: vertical-stack
+                cards:
+                  - type: custom:auto-entities
+                    show_empty: false
+                    card:
+                      type: entities
+                      show_header_toggle: false
+                    filter:
+                      include:
+                        - entity_id: "light.*"
+                          name: "Large Bedroom"
           - type: vertical-stack
             cards:
               - type: custom:auto-entities
@@ -117,6 +139,17 @@ cards:
               - scene_2: script.scene_sb_day
               - scene_3: script.scene_sb_search_mode
               - scene_4: script.scene_sb_reset_default
+          - type: vertical-stack
+            cards:
+              - type: custom:auto-entities
+                show_empty: false
+                card:
+                  type: entities
+                  show_header_toggle: false
+                filter:
+                  include:
+                    - entity_id: "light.*"
+                      name: "Small Bedroom"
           - type: vertical-stack
             cards:
               - type: custom:auto-entities
