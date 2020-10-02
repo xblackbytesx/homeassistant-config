@@ -9,7 +9,7 @@ scene_tile_standalone:
           - entity: '[[entity_1]]'
             tap_action:
               action: call-service
-              service: '[[service]]'
+              service: script.turn_on
               service_data:
                 entity_id: '[[entity_1]]'
       - type: glance
@@ -19,7 +19,7 @@ scene_tile_standalone:
           - entity: '[[entity_2]]'
             tap_action:
               action: call-service
-              service: '[[service]]'
+              service: script.turn_on
               service_data:
                 entity_id: '[[entity_2]]'
       - type: glance
@@ -29,7 +29,7 @@ scene_tile_standalone:
           - entity: '[[entity_3]]'
             tap_action:
               action: call-service
-              service: '[[service]]'
+              service: script.turn_on
               service_data:
                 entity_id: '[[entity_3]]'
       - type: glance
@@ -39,6 +39,6 @@ scene_tile_standalone:
           - entity: '[[entity_4]]'
             tap_action:
               action: call-service
-              service: '[[service]]'
+              service: script.turn_on
               service_data:
                 entity_id: '[[entity_4]]'

@@ -66,66 +66,17 @@ cards:
         parameters:
           spaceBetween: 8
         cards:
-          - type: vertical-stack
-            cards:
-              - type: horizontal-stack
-                cards:
-                  - type: button
-                    entity: light.lg_lb_all
-                    show_name: false
-                    show_state: false
-              - type: horizontal-stack
-                cards:
-                  - type: button
-                    entity: light.lg_lb_all
-                    show_name: false
-                    show_state: false
-                  - type: button
-                    entity: switch.0x086bd7fffe5185b6_switch
-                    show_name: false
-                    show_state: false
-              - type: horizontal-stack
-                cards:
-                  - type: glance
-                    show_name: false
-                    show_state: false
-                    entities:
-                      - entity: 'script.scene_lb_night'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'cript.scene_lb_night'
-                  - type: glance
-                    show_name: false
-                    show_state: false
-                    entities:
-                      - entity: 'script.scene_lb_day'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'script.scene_lb_day'
-                  - type: glance
-                    show_name: false
-                    show_state: false
-                    entities:
-                      - entity: 'script.scene_lb_search_mode'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'script.scene_lb_search_mode'
-                  - type: glance
-                    show_name: false
-                    show_state: false
-                    entities:
-                      - entity: 'script.scene_lb_reset_default'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'script.scene_lb_reset_default'
+          - type: custom:decluttering-card
+            template: slider_button_groups
+            variables:
+              - service: script.turn_on
+              - button_1: light.lg_lb_all
+              - button_2: switch.0x086bd7fffe5185b6_switch
+              - button_3: switch.0x086bd7fffe5185b6_switch
+              - scene_1: script.scene_lb_night
+              - scene_2: script.scene_lb_day
+              - scene_3: script.scene_lb_search_mode
+              - scene_4: script.scene_lb_reset_default
           - type: vertical-stack
             cards:
               - type: horizontal-stack
@@ -153,66 +104,17 @@ cards:
         parameters:
           spaceBetween: 8
         cards:
-          - type: vertical-stack
-            cards:
-              - type: horizontal-stack
-                cards:
-                  - type: button
-                    entity: light.lg_sb_all
-                    show_name: false
-                    show_state: false
-              - type: horizontal-stack
-                cards:
-                  - type: button
-                    entity: light.lg_sb_all
-                    show_name: false
-                    show_state: false
-                  - type: button
-                    entity: switch.0x000b3cfffef7b582_switch
-                    show_name: false
-                    show_state: false
-              - type: horizontal-stack
-                cards:
-                  - type: glance
-                    show_name: false
-                    show_state: false
-                    entities:
-                      - entity: 'script.scene_sb_night'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'cript.scene_sb_night'
-                  - type: glance
-                    show_name: false
-                    show_state: false
-                    entities:
-                      - entity: 'script.scene_sb_day'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'script.scene_sb_day'
-                  - type: glance
-                    show_name: false
-                    show_state: false
-                    entities:
-                      - entity: 'script.scene_sb_search_mode'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'script.scene_sb_search_mode'
-                  - type: glance
-                    show_name: false
-                    show_state: false
-                    entities:
-                      - entity: 'script.scene_sb_reset_default'
-                        tap_action:
-                          action: call-service
-                          service: 'script.turn_on'
-                          service_data:
-                            entity_id: 'script.scene_sb_reset_default'
+          - type: custom:decluttering-card
+            template: slider_button_groups
+            variables:
+              - service: script.turn_on
+              - button_1: light.lg_sb_all
+              - button_2: switch.0x000b3cfffef7b582_switch
+              - button_3: switch.0x000b3cfffef7b582_switch
+              - scene_1: script.scene_sb_night
+              - scene_2: script.scene_sb_day
+              - scene_3: script.scene_sb_search_mode
+              - scene_4: script.scene_sb_reset_default
           - type: vertical-stack
             cards:
               - type: custom:auto-entities
