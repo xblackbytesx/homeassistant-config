@@ -1,0 +1,38 @@
+path: remote
+icon: mdi:remote
+cards:
+  - type: custom:layout-card
+    layout: vertical
+    min_columns: 1
+    max_columns: 1
+    max_width: 99%
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: custom:decluttering-card
+            template: first_floor_nav_item
+            variables:
+              - name: MB
+              - border: rgba(255, 125, 125,1) # pink(ish) color top nav buttons
+              - background_active: gray
+          - type: custom:decluttering-card
+            template: first_floor_nav_item
+            variables:
+              - name: LB
+              - border: rgba(255, 125, 125,1) # pink(ish) color top nav buttons
+              - background_active: gray
+          - type: custom:decluttering-card
+            template: first_floor_nav_item
+            variables:
+              - name: SB
+              - border: rgba(255, 125, 125,1) # pink(ish) color top nav buttons
+              - background_active: gray
+  - type: custom:state-switch
+    entity: input_select.first_floor
+    states:
+      MB:
+        !include master_bedroom.yaml
+      LB:
+        !include large_bedroom.yaml
+      SB:
+        !include small_bedroom.yaml
