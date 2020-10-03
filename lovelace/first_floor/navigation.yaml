@@ -46,3 +46,5 @@ cards:
         !include large_bedroom.yaml
       SB:
         !include small_bedroom.yaml
+      BR:
+        !include bathroom.yaml
