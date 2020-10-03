@@ -11,6 +11,14 @@ sub_nav_button:
       service_data:
         entity_id: '[[nav_handler]]'
         options: "[[href]]"
+    styles:
+      card:
+        - background-color: >
+            [[[
+              if (states['[[nav_handler]]'].state == "[[href]]")
+                return "[[background_active]]";
+              return "rgba(56, 60, 69, 1)";
+            ]]]
 
     # type: "custom:button-card"
     # entity: input_select.first_floor
