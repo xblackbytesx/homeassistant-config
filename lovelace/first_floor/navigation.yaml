@@ -30,6 +30,13 @@ cards:
               - href: SB
               - name: Small Bedroom
               - background_active: gray
+          - type: custom:decluttering-card
+            template: sub_nav_button
+            variables:
+              - nav_handler: input_select.first_floor
+              - href: BR
+              - name: Bathroom
+              - background_active: gray
   - type: custom:state-switch
     entity: input_select.first_floor
     states:

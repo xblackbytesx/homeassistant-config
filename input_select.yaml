@@ -4,4 +4,5 @@ first_floor:
     - MB
     - LB
     - SB
+    - BR
   initial: MB
