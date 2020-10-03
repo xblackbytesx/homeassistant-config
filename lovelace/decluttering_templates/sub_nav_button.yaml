@@ -19,7 +19,7 @@ sub_nav_button:
 
     type: "custom:button-card"
     entity: '[[nav_handler]]'
-    name: '[[href]]'
+    name: '[[name]]'
     show_icon: false
     tap_action:
       action: call-service
@@ -31,7 +31,7 @@ sub_nav_button:
       card:
         - background-color: >
             [[[
-              if (states['"[[nav_handler]]"'].state == "[[href]]")
+              if (states["[[nav_handler]]"].state == "[[href]]")
                 return "[[background_active]]";
                 return "rgba(56, 60, 69, 1)";
             ]]]
