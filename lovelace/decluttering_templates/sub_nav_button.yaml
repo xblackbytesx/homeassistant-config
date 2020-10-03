@@ -18,20 +18,20 @@ sub_nav_button:
     #     }
 
     type: "custom:button-card"
-    entity: input_select.first_floor
-    href: '[[href]]'
+    entity: '[[nav_handler]]'
+    name: '[[href]]'
     show_icon: false
     tap_action:
       action: call-service
       service: input_select.set_options
       service_data:
-        entity_id: input_select.first_floor
+        entity_id: '[[nav_handler]]'
         options: "[[href]]"
     styles:
       card:
         - background-color: >
             [[[
-              if (states['input_select.first_floor'].state == "[[href]]")
+              if (states['"[[nav_handler]]"'].state == "[[href]]")
                 return "[[background_active]]";
-              return "rgba(56, 60, 69, 1)";
+                return "rgba(56, 60, 69, 1)";
             ]]]
