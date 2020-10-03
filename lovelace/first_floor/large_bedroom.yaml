@@ -4,12 +4,12 @@ min_columns: 1
 max_columns: 1
 max_width: 99%
 cards:
-  - type: custom:swipe-card
-    parameters:
-      spaceBetween: 8
+  - type: vertical-stack
+    title: Large Bedroom
     cards:
-      - type: vertical-stack
-        title: Large Bedroom
+      - type: custom:swipe-card
+        parameters:
+          spaceBetween: 8
         cards:
           - type: custom:decluttering-card
             template: slider_button_groups
