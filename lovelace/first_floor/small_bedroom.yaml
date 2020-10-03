@@ -22,18 +22,18 @@ cards:
               - scene_2: script.scene_sb_day
               - scene_3: script.scene_sb_search_mode
               - scene_4: script.scene_sb_reset_default
-      - type: vertical-stack
-        cards:
-          - type: entities
-            show_header_toggle: false
-            entities:
-              - light.0x00178801039d140f_light
-              - light.ledstrip_large_bedroom
-      - type: vertical-stack
-        cards:
-          - type: entities
-            show_header_toggle: false
-            entities:
-              - input_boolean.automation_sb_light
-              - automation.sb_002
-              - automation.smoke_alarm_sb_test
+          - type: vertical-stack
+            cards:
+              - type: entities
+                show_header_toggle: false
+                entities:
+                  - light.0x00178801039d140f_light
+                  - light.ledstrip_large_bedroom
+          - type: vertical-stack
+            cards:
+              - type: entities
+                show_header_toggle: false
+                entities:
+                  - input_boolean.automation_sb_light
+                  - automation.sb_002
+                  - automation.smoke_alarm_sb_test

@@ -22,25 +22,25 @@ cards:
               - scene_2: script.scene_lb_day
               - scene_3: script.scene_lb_search_mode
               - scene_4: script.scene_lb_reset_default
-      - type: vertical-stack
-        cards:
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.0x00158d00036bffea_temperature
-              - sensor.0x00158d00036bffea_humidity
-              - sensor.0x00158d00036bffea_pressure
-      - type: vertical-stack
-        cards:
-          - type: entities
-            show_header_toggle: false
-            entities:
-              - light.0x00178801039d140f_light
-              - light.ledstrip_large_bedroom
-      - type: vertical-stack
-        cards:
-          - type: entities
-            show_header_toggle: false
-            entities:
-              - input_boolean.automation_lb_light
-              - automation.lb_002
-              - automation.smoke_alarm_lb_test
+          - type: vertical-stack
+            cards:
+              - type: custom:mini-graph-card
+                entities:
+                  - sensor.0x00158d00036bffea_temperature
+                  - sensor.0x00158d00036bffea_humidity
+                  - sensor.0x00158d00036bffea_pressure
+          - type: vertical-stack
+            cards:
+              - type: entities
+                show_header_toggle: false
+                entities:
+                  - light.0x00178801039d140f_light
+                  - light.ledstrip_large_bedroom
+          - type: vertical-stack
+            cards:
+              - type: entities
+                show_header_toggle: false
+                entities:
+                  - input_boolean.automation_lb_light
+                  - automation.lb_002
+                  - automation.smoke_alarm_lb_test
