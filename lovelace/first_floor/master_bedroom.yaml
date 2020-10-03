@@ -24,22 +24,24 @@ cards:
               - scene_4: script.scene_mb_reset_default
           - type: vertical-stack
             cards:
-              - type: custom:mini-graph-card
-                entities:
-                  - sensor.0x00158d0004453420_temperature
-                  - sensor.0x00158d0004453420_humidity
-                  - sensor.0x00158d0004453420_pressure
-          - type: vertical-stack
-            cards:
               - type: entities
                 show_header_toggle: false
                 entities:
-                  - light.0x00178801039d140f_light
-                  - light.ledstrip_large_bedroom
+                  - light.0x90fd9ffffeea4e5e_light
           - type: vertical-stack
             cards:
               - type: entities
                 show_header_toggle: false
                 entities:
                   - input_boolean.automation_mb_light
+                  - automation.mb_001
                   - automation.mb_002
+                  - automation.mb_005
+
+  - type: vertical-stack
+    cards:
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.0x00158d0004453420_temperature
+          - sensor.0x00158d0004453420_humidity
+          - sensor.0x00158d0004453420_pressure
