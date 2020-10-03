@@ -4,39 +4,36 @@ min_columns: 1
 max_columns: 1
 max_width: 99%
 cards:
-  - type: vertical-stack
-    title: Small Bedroom
+  - type: custom:swipe-card
+    parameters:
+      spaceBetween: 8
     cards:
-      - type: custom:decluttering-card
-        template: slider_button_groups
-        variables:
-          - service: script.turn_on
-          - button_1: light.lg_sb_all
-          - button_2: switch.0x000b3cfffef7b582_switch
-          - button_3: switch.0x000b3cfffef7b582_switch
-          - scene_1: script.scene_sb_night
-          - scene_2: script.scene_sb_day
-          - scene_3: script.scene_sb_search_mode
-          - scene_4: script.scene_sb_reset_default
-      # - type: vertical-stack
-      #   cards:
-      #     - type: custom:auto-entities
-      #       show_empty: false
-      #       card:
-      #         type: entities
-      #         show_header_toggle: false
-      #       filter:
-      #         include:
-      #           - area: Master Bedroom
-      #             domain: light
-      # - type: vertical-stack
-      #   cards:
-      #     - type: custom:auto-entities
-      #       show_empty: false
-      #       card:
-      #         type: entities
-      #         show_header_toggle: false
-      #       filter:
-      #         include:
-      #           - entity_id: "automation.sb*"
-      #           - entity_id: "input_boolean.automation_sb*"
+      - type: vertical-stack
+        title: Small Bedroom
+        cards:
+          - type: custom:decluttering-card
+            template: slider_button_groups
+            variables:
+              - service: script.turn_on
+              - button_1: light.lg_sb_all
+              - button_2: switch.0x000b3cfffef7b582_switch
+              - button_3: switch.0x000b3cfffef7b582_switch
+              - scene_1: script.scene_sb_night
+              - scene_2: script.scene_sb_day
+              - scene_3: script.scene_sb_search_mode
+              - scene_4: script.scene_sb_reset_default
+      - type: vertical-stack
+        cards:
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - light.0x00178801039d140f_light
+              - light.ledstrip_large_bedroom
+      - type: vertical-stack
+        cards:
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - input_boolean.automation_sb_light
+              - automation.sb_002
+              - automation.smoke_alarm_sb_test
