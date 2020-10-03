@@ -1,40 +1,37 @@
 sub_nav_button:
   default:
   card:
-    type: button
-    entity: '[[nav_handler]]'
-    name: '[[name]]'
-    show_icon: false
-    tap_action:
-      action: call-service
-      service: input_select.set_options
-      service_data:
-        entity_id: '[[nav_handler]]'
-        options: "[[href]]"
-      style: |
-        ha-card {
-          background: {% if (states('[[nav_handler]]').state == "[[href]]") %} green {% endif %};
-        }
-
-    # type: "custom:button-card"
-    # entity: input_select.first_floor
-    # href: '[[href]]'
+    # type: button
+    # entity: '[[nav_handler]]'
+    # name: '[[name]]'
     # show_icon: false
     # tap_action:
     #   action: call-service
     #   service: input_select.set_options
     #   service_data:
-    #     entity_id: input_select.first_floor
+    #     entity_id: '[[nav_handler]]'
     #     options: "[[href]]"
-    # styles:
-    #   card:
-    #     - background-color: >
-    #         [[[
-    #           if (states['input_select.first_floor'].state == "[[href]]")
-    #             return "[[background_active]]";
-    #           return "rgba(56, 60, 69, 1)";
-    #         ]]]
-    #     - border-radius: 20px
-    #     - border-style: solid
-    #     - border-width: 3px
-    #     - border-color: '[[border]]'
+    #   style: |
+    #     ha-card {
+    #       background: {% if (states('[[nav_handler]]').state == '[[href]]') %} green {% endif %};
+    #       background: pink;
+    #     }
+
+    type: "custom:button-card"
+    entity: input_select.first_floor
+    href: '[[href]]'
+    show_icon: false
+    tap_action:
+      action: call-service
+      service: input_select.set_options
+      service_data:
+        entity_id: input_select.first_floor
+        options: "[[href]]"
+    styles:
+      card:
+        - background-color: >
+            [[[
+              if (states['input_select.first_floor'].state == "[[href]]")
+                return "[[background_active]]";
+              return "rgba(56, 60, 69, 1)";
+            ]]]

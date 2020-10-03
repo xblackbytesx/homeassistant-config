@@ -15,7 +15,6 @@ cards:
               - nav_handler: input_select.first_floor
               - href: MB
               - name: Master Bedroom
-              - border: rgba(255, 125, 125,1) # pink(ish) color top nav buttons
               - background_active: gray
           - type: custom:decluttering-card
             template: sub_nav_button
@@ -23,7 +22,6 @@ cards:
               - nav_handler: input_select.first_floor
               - href: LB
               - name: Large Bedroom
-              - border: rgba(255, 125, 125,1) # pink(ish) color top nav buttons
               - background_active: gray
           - type: custom:decluttering-card
             template: sub_nav_button
@@ -31,7 +29,6 @@ cards:
               - nav_handler: input_select.first_floor
               - href: SB
               - name: Small Bedroom
-              - border: rgba(255, 125, 125,1) # pink(ish) color top nav buttons
               - background_active: gray
   - type: custom:state-switch
     entity: input_select.first_floor
