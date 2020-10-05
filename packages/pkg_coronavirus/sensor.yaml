@@ -7,9 +7,10 @@
     User-Agent: Mozilla/5.0
 
 - platform: scrape
-  resource: https://www.worldometers.info/world-population/netherlands-population/
+  resource: https://www.worldpopulationtoday.org/netherlands-population/
   name: Population The Netherlands
-  select: 'div.table-responsive:nth-child(8) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > strong:nth-child(1)'
+  select: '.entry-content > h2:nth-child(2) > strong:nth-child(1)'
+  value_template: '{{ value | replace(",", "")) }}'
   scan_interval: 3600
   headers:
     User-Agent: Mozilla/5.0
