@@ -72,9 +72,9 @@ echo "Installing Layout Card"
 mkdir -p www/custom-lovelace/lovelace-layout-card
 wget https://raw.githubusercontent.com/thomasloven/lovelace-layout-card/master/layout-card.js -O www/custom-lovelace/lovelace-layout-card/layout-card.js
 
-# echo "Installing Vertical Stack in Card Card"
-# mkdir -p www/custom-lovelace/vertical-stack-in-card
-# wget https://raw.githubusercontent.com/ofekashery/vertical-stack-in-card/master/vertical-stack-in-card.js -O www/custom-lovelace/vertical-stack-in-card/vertical-stack-in-card.js
+echo "Installing Vertical Stack in Card Card"
+mkdir -p www/custom-lovelace/vertical-stack-in-card
+wget https://raw.githubusercontent.com/ofekashery/vertical-stack-in-card/master/vertical-stack-in-card.js -O www/custom-lovelace/vertical-stack-in-card/vertical-stack-in-card.js
 
 echo "Installing Vertical Style Card"
 mkdir -p www/custom-lovelace/vertical-style-card
