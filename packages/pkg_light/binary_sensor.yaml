@@ -1,5 +1,13 @@
 - platform: template
   sensors:
+    hw_dark_enough:
+      value_template: >-
+        {{ states('sensor.0x00178801020282bc_illuminance_lux')|int <= states('input_number.hw_illuminance_threshold')|int }}
+
+      toilet_dark_enough:
+        value_template: >-
+          {{ states('sensor.0x00158d000447edb4_illuminance_lux')|int <= 400 }}
+
     sa_dark_enough:
       value_template: >-
         {{ states('sensor.0x0017880102026161_illuminance_lux')|int <= states('input_number.sa_illuminance_threshold')|int }}
@@ -7,10 +15,6 @@
     kitchen_dark_enough:
       value_template: >-
         {{ states('sensor.0x0017880102030677_illuminance_lux')|int <= states('input_number.kitchen_illuminance_threshold')|int }}
-
-    hw_dark_enough:
-      value_template: >-
-        {{ states('sensor.0x00178801020282bc_illuminance_lux')|int <= states('input_number.hw_illuminance_threshold')|int }}
 
     co_dark_enough:
       value_template: >-
@@ -24,10 +28,6 @@
       value_template: >-
         {{ states('sensor.0x00158d00036b62d0_illuminance_lux')|int <= 100 }}
 
-    toilet_dark_enough:
-      value_template: >-
-        {{ states('sensor.0x00158d000447edb4_illuminance_lux')|int <= 400 }}
-
     office_dark_enough:
       value_template: >-
         {{ states('sensor.0x00158d0004499f26_illuminance_lux')|int <= states('input_number.office_illuminance_threshold')| int }}
@@ -36,7 +36,46 @@
       value_template: >-
         {{ states('sensor.0x001788010647ff92_illuminance_lux')|int <= states('input_number.ex_illuminance_threshold')| int }}
 
+    hw_eligable_for_light:
+      value_template: >-
+        {{ is_state('binary_sensor.hw_motion_detected', 'on')
+            and is_state('binary_sensor.hw_dark_enough', 'on') }}
+
+    toilet_eligable_for_light:
+      value_template: >-
+        {{ is_state('binary_sensor.toilet_motion_detected', 'on')
+            and is_state('binary_sensor.toilet_dark_enough', 'on') }}
+
     sa_eligable_for_light:
       value_template: >-
         {{ is_state('binary_sensor.sa_motion_detected', 'on')
-            and is_state('binary_sensor.sa_dark_enough', 'on') }}
+            and is_state('binary_sensor.sa_dark_enough', 'on') }}  
+      
+    kitchen_eligable_for_light:
+      value_template: >-
+        {{ is_state('binary_sensor.kitchen_motion_detected', 'on')
+            and is_state('binary_sensor.kitchen_dark_enough', 'on') }}
+
+    co_eligable_for_light:
+      value_template: >-
+        {{ is_state('binary_sensor.co_motion_detected', 'on')
+            and is_state('binary_sensor.co_dark_enough', 'on') }}
+
+    bathroom_eligable_for_light:
+      value_template: >-
+        {{ is_state('binary_sensor.bathroom_motion_detected', 'on')
+            and is_state('binary_sensor.bathroom_dark_enough', 'on') }}
+
+    attic_eligable_for_light:
+      value_template: >-
+        {{ is_state('binary_sensor.attic_motion_detected', 'on')
+            and is_state('binary_sensor.attic_dark_enough', 'on') }}
+
+    office_eligable_for_light:
+      value_template: >-
+        {{ is_state('binary_sensor.office_motion_detected', 'on')
+            and is_state('binary_sensor.office_dark_enough', 'on') }}
+
+    exterior_eligable_for_light:
+      value_template: >-
+        {{ is_state('binary_sensor.exterior_dark_enough', 'on') }}
