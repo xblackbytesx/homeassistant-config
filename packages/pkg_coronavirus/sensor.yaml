@@ -10,7 +10,7 @@
   resource: https://www.worldpopulationtoday.org/netherlands-population/
   name: Population The Netherlands
   select: '.entry-content > h2:nth-child(2) > strong:nth-child(1)'
-  value_template: '{{ ( value | replace (",", ".")) }}'
+  value_template: '{{ ((value.split(":")[1]) | replace (",", ".")) }}'
   scan_interval: 3600
   headers:
     User-Agent: Mozilla/5.0
