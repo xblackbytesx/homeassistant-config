@@ -4,9 +4,9 @@
       value_template: >-
         {{ states('sensor.0x00178801020282bc_illuminance_lux')|int <= states('input_number.hw_illuminance_threshold')|int }}
 
-      toilet_dark_enough:
-        value_template: >-
-          {{ states('sensor.0x00158d000447edb4_illuminance_lux')|int <= 400 }}
+    toilet_dark_enough:
+      value_template: >-
+        {{ states('sensor.0x00158d000447edb4_illuminance_lux')|int <= 400 }}
 
     sa_dark_enough:
       value_template: >-
