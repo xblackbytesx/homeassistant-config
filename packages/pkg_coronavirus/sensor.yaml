@@ -1,7 +1,8 @@
 - platform: scrape
-  resource: https://www.census.gov/popclock/
+  resource: https://www.worldpopulationtoday.org/netherlands-population/
   name: Population United States
-  select: '.pop-count'
+  select: '.entry-content > h2:nth-child(2) > strong:nth-child(1)'
+  value_template: '{{ ((value.split(":")[1]) | replace (",", "")) }}'
   scan_interval: 3600
   headers:
     User-Agent: Mozilla/5.0
