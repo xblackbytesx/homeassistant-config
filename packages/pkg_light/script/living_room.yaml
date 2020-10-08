@@ -109,7 +109,6 @@ scene_lr_disco_mode:
     - service: light.turn_on
       data:
         entity_id: 
-          - light.ledstrip_tv_cabinet
           - light.hue_iris_tv_cabinet
           - light.hue_candle_salt_lamp
           - light.hue_go_closet_l
@@ -118,6 +117,7 @@ scene_lr_disco_mode:
     - service: light.turn_on
       data:
         entity_id: 
+          - light.ledstrip_tv_cabinet
           - light.ledstrip_black_cabinet
           - light.ledstrip_kitchen_cabinet
         effect: Disco

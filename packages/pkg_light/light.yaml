@@ -1,9 +1,9 @@
-- platform: flux_led
-  devices:
-    10.0.221.31:
-      name: Ledstrip TV Cabinet
-      protocol: 'ledenet'
-      mode: "rgbw"
+# - platform: flux_led
+#   devices:
+#     10.0.221.31:
+#       name: Ledstrip TV Cabinet
+#       protocol: 'ledenet'
+#       mode: "rgbw"
 
 - platform: group
   name: LG | HW | All
