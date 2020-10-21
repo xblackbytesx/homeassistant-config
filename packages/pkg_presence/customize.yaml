@@ -44,6 +44,9 @@ binary_sensor.0x00158d00033aac53_occupancy:
   friendly_name: Bathroom/front
   device_class: motion
 binary_sensor.0x680ae2fffe367f3b_occupancy:
+  friendly_name: Tradfri/Bathroom/shower
+  device_class: motion
+binary_sensor.0x00158d00044d28cf_occupancy:
   friendly_name: Bathroom/shower
   device_class: motion
 binary_sensor.bathroom_motion_detected:
@@ -57,9 +60,6 @@ binary_sensor.0x00158d000302ec77_occupancy:
   device_class: motion
 binary_sensor.0x00158d0004499f26_occupancy:
   friendly_name: Office/front
-  device_class: motion
-sbinary_ensor.0x680ae2fffe367f3b_occupancy:
-  friendly_name: Tradfri
   device_class: motion
 binary_sensor.0x001788010647ff92_occupancy:
   friendly_name: Backyard
@@ -95,6 +95,9 @@ sensor.0x00158d00033aac53_battery:
   device_class: battery
 sensor.0x00158d000349234a_battery:
   friendly_name: Motion sensor Bathroom/back
+  device_class: battery
+sensor.0x00158d00044d28cf_battery:
+  friendly_name: Motion sensor Bathroom/shower
   device_class: battery
 sensor.0x00158d00033e347d_battery:
   friendly_name: Wall switch Large bedroom
