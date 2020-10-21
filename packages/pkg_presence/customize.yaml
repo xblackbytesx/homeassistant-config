@@ -55,6 +55,9 @@ binary_sensor.bathroom_motion_detected:
 binary_sensor.0x00158d00044d216c_occupancy:
   friendly_name: Large Bedroom
   device_class: motion
+binary_sensor.0x00158d00044d34de_occupancy:
+  friendly_name: Small Bedroom
+  device_class: motion
 binary_sensor.0x00158d00036b62d0_occupancy:
   friendly_name: Attic/stairs
   device_class: motion

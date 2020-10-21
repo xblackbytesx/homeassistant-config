@@ -28,6 +28,10 @@
       value_template: >-
         {{ states('sensor.0x00158d00044d216c_occupancy_illuminance')|int <= 15 }}
 
+    sb_dark_enough:
+      value_template: >-
+        {{ states('sensor.0x00158d00044d34de_occupancy_illuminance')|int <= 15 }}
+
     attic_dark_enough:
       value_template: >-
         {{ states('sensor.0x00158d00036b62d0_illuminance')|int <= 100 }}
