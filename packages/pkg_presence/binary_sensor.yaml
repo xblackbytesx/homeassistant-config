@@ -44,6 +44,10 @@
            or is_state('binary_sensor.0x00158d00044d28cf_occupancy', 'on')
            or is_state('binary_sensor.0x680ae2fffe367f3b_occupancy', 'on') }}
 
+    lb_motion_detected:
+      value_template: >-
+        {{ is_state('binary_sensor.0x00158d00044d216c_occupancy', 'on') }}
+
     attic_motion_detected:
       value_template: >-
         {{ is_state('binary_sensor.0x00158d00036b62d0_occupancy', 'on')
