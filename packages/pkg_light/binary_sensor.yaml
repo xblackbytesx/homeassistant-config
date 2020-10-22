@@ -20,17 +20,21 @@
       value_template: >-
         {{ states('sensor.0x00178801020357e5_illuminance_lux')|int <= states('input_number.co_illuminance_threshold')|int }}
 
+    mb_dark_enough:
+      value_template: >-
+        {{ states('sensor.0x00158d00044c977b_illuminance')|int <= 15 }}        
+
     bathroom_dark_enough:
       value_template: >-
         {{ states('sensor.0x00158d000349234a_illuminance')|int <= 100 }}
 
     lb_dark_enough:
       value_template: >-
-        {{ states('sensor.0x00158d00044d216c_occupancy_illuminance')|int <= 15 }}
+        {{ states('sensor.0x00158d00044d216c_illuminance')|int <= 15 }}
 
     sb_dark_enough:
       value_template: >-
-        {{ states('sensor.0x00158d00044d34de_occupancy_illuminance')|int <= 15 }}
+        {{ states('sensor.0x00158d00044d34de_illuminance')|int <= 15 }}
 
     attic_dark_enough:
       value_template: >-

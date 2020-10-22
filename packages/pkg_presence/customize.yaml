@@ -34,8 +34,8 @@ binary_sensor.0x00178801020357e5_occupancy:
 binary_sensor.co_motion_detected:
   friendly_name: Corridor
   device_class: motion
-binary_sensor.attic_motion_detected:
-  friendly_name: Attic
+binary_sensor.0x00158d00044c977b_occupancy:
+  friendly_name: Master Bedroom
   device_class: motion
 binary_sensor.0x00158d000349234a_occupancy:
   friendly_name: Bathroom/back
@@ -63,6 +63,9 @@ binary_sensor.0x00158d00036b62d0_occupancy:
   device_class: motion
 binary_sensor.0x00158d000302ec77_occupancy:
   friendly_name: Attic/front
+  device_class: motion
+binary_sensor.attic_motion_detected:
+  friendly_name: Attic
   device_class: motion
 binary_sensor.0x00158d0004499f26_occupancy:
   friendly_name: Office/front
