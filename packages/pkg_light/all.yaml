@@ -11,6 +11,9 @@ yeelight:
     10.0.221.12:
       name: Ledstrip TV Cabinet
       transition: 1000
+    10.0.221.13:
+      name: Ledstrip Undecided
+      transition: 1000
     10.0.221.37:
       name: Ledstrip Black Cabinet
       transition: 1000
