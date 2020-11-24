@@ -80,3 +80,22 @@
            or is_state('binary_sensor.early_afternoon', 'on')
            or is_state('binary_sensor.late_afternoon', 'on')
            or is_state('binary_sensor.early_evening', 'on') }}
+
+- platform: template
+  sensors:
+    front_door_open:
+      value_template: >-
+        {{ is_state('binary_sensor.0x00158d000446eb21_contact', 'on') }}
+
+    kitchen_window_open:
+      value_template: >-
+        {{ is_state('binary_sensor.0x00158d000446fc0a_contact', 'on') }}
+
+    back_door_open:
+      value_template: >-
+        {{ is_state('binary_sensor.0x00158d000446f39b_contact', 'on') }}
+
+    lr_door_or_window_open:
+      value_template: >-
+        {{ is_state('binary_sensor.kitchen_window_open', 'on')
+          or is_state('binary_sensor.back_door_open', 'on') }}
