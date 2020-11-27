@@ -70,7 +70,8 @@
         {{ is_state('binary_sensor.late_afternoon', 'on')
            or is_state('binary_sensor.early_evening', 'on')
            or is_state('binary_sensor.late_evening', 'on')
-           or is_state('binary_sensor.early_night', 'on') }}
+           or is_state('binary_sensor.early_night', 'on')
+           or is_state('binary_sensor.early_morning', 'on') }}
 
 - platform: template
   sensors:
