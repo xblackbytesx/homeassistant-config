@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Remove if exists
-rm -rf themes
-rm -rf custom_components
-rm -rf www/custom-lovelace
+sudo rm -rf themes
+sudo rm -rf custom_components
+sudo rm -rf www/custom-lovelace
 
 echo "Fetching themes"
 mkdir -p themes

@@ -6,6 +6,12 @@ scene_mb_night:
         xy_color: [0.507, 0.414]
         brightness_pct: 50
         transition: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_large_bedroom
+        xy_color: [0.137, 0.041]
+        brightness_pct: 40
+        transition: 2
 
 
 scene_mb_day:
@@ -15,6 +21,12 @@ scene_mb_day:
         entity_id: light.lg_mb_all
         xy_color: [0.507, 0.414]
         brightness_pct: 100
+        transition: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_undecided
+        xy_color: [0.149, 0.291]
+        brightness_pct: 90
         transition: 2
 
 
@@ -29,6 +41,7 @@ scene_mb_search_mode:
       entity_id: 
         - input_boolean.automation_mb_light
 
+        
 scene_mb_reset_default:
   alias: Resets the master bedroom default scene
   sequence:

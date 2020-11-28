@@ -5,7 +5,7 @@ pi_hole:
   - host: !secret pihole_ip
 
 transmission:
-  host: !secret synology_ip
+  host: !secret transmission_location
   username: !secret transmission_user
   password: !secret transmission_pass
 
