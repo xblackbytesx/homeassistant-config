@@ -6,7 +6,12 @@ scene_mb_night:
         xy_color: [0.507, 0.414]
         brightness_pct: 50
         transition: 2
-
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_large_bedroom
+        xy_color: [0.137, 0.041]
+        brightness_pct: 40
+        transition: 2
 
 scene_mb_day:
   sequence:
@@ -16,6 +21,13 @@ scene_mb_day:
         xy_color: [0.507, 0.414]
         brightness_pct: 100
         transition: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.ledstrip_undecided
+        xy_color: [0.149, 0.291]
+        brightness_pct: 90
+        transition: 2
+  
 
 
 scene_mb_search_mode:
