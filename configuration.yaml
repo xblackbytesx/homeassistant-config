@@ -1,40 +1,45 @@
-homeassistant:
+# homeassistant:
+
+default_config:
+  tts:
+    - platform: google_translate
+
   name: Home
   latitude: !secret latitude
   longitude: !secret longitude
   elevation: 0
   unit_system: metric
   time_zone: Europe/Amsterdam
-  customize: !include customize.yaml
+  # customize: !include customize.yaml
 
-  packages:
-    zigbee2mqtt_package: !include packages/pkg_zigbee2mqtt/all.yaml
-    rfx_package: !include packages/pkg_rfx/all.yaml
-    light_package: !include packages/pkg_light/all.yaml
-    matrix_package: !include packages/pkg_matrix/all.yaml
-    presence_package: !include packages/pkg_presence/all.yaml
-    transportation_package: !include packages/pkg_transportation/all.yaml
-    climate_package: !include packages/pkg_climate/all.yaml
-    solar_package: !include packages/pkg_solar/all.yaml
-    media_package: !include packages/pkg_media/all.yaml
-    network_package: !include packages/pkg_network/all.yaml
-    smoke_package: !include packages/pkg_smoke/all.yaml
-    plants_package: !include packages/pkg_plants/all.yaml
-    finance_package: !include packages/pkg_finance/all.yaml
-    security_package: !include packages/pkg_security/all.yaml
-    astronomy_package: !include packages/pkg_astronomy/all.yaml
-    shell_commands_package: !include packages/pkg_shell_commands/all.yaml
-    speech_package: !include packages/pkg_speech/all.yaml
+  # packages:
+    # zigbee2mqtt_package: !include packages/pkg_zigbee2mqtt/all.yaml
+    # rfx_package: !include packages/pkg_rfx/all.yaml
+    # light_package: !include packages/pkg_light/all.yaml
+    # matrix_package: !include packages/pkg_matrix/all.yaml
+    # presence_package: !include packages/pkg_presence/all.yaml
+    # transportation_package: !include packages/pkg_transportation/all.yaml
+    # climate_package: !include packages/pkg_climate/all.yaml
+    # solar_package: !include packages/pkg_solar/all.yaml
+    # media_package: !include packages/pkg_media/all.yaml
+    # network_package: !include packages/pkg_network/all.yaml
+    # smoke_package: !include packages/pkg_smoke/all.yaml
+    # plants_package: !include packages/pkg_plants/all.yaml
+    # finance_package: !include packages/pkg_finance/all.yaml
+    # security_package: !include packages/pkg_security/all.yaml
+    # astronomy_package: !include packages/pkg_astronomy/all.yaml
+    # shell_commands_package: !include packages/pkg_shell_commands/all.yaml
+    # speech_package: !include packages/pkg_speech/all.yaml
     # christmas_package: !include packages/pkg_christmas/all.yaml
-    coronavirus_package: !include packages/pkg_coronavirus/all.yaml
+    # coronavirus_package: !include packages/pkg_coronavirus/all.yaml
 
-hassio:
+# hassio:
 config:
 history:
 # logbook:
-system_health:
-wake_on_lan:
-python_script:
+# system_health:
+# wake_on_lan:
+# python_script:
 # map:
 # cloud:
 
@@ -45,8 +50,8 @@ recorder:
 #   ignore:
 #     - yeelight
 
-frontend:
-  themes: !include_dir_merge_named themes/
+# frontend:
+#   themes: !include_dir_merge_named themes/
 
 lovelace:
   mode: yaml
@@ -55,14 +60,14 @@ lovelace:
 updater:
 mobile_app:
 
-http:
-  cors_allowed_origins:
-    - !secret base_url
-    - https://google.com
-    - https://www.home-assistant.io
+# http:
+#   cors_allowed_origins:
+#     - !secret base_url
+#     - https://google.com
+#     - https://www.home-assistant.io
 
-binary_sensor: !include binary_sensor.yaml
-automation: !include_dir_merge_list automation/
-sensor: !include_dir_merge_list sensor/
+# binary_sensor: !include binary_sensor.yaml
+# automation: !include_dir_merge_list automation/
+# sensor: !include_dir_merge_list sensor/
 input_boolean: !include boolean.yaml
-input_select: !include input_select.yaml
+# input_select: !include input_select.yaml
