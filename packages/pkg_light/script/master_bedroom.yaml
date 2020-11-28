@@ -25,8 +25,8 @@ scene_mb_day:
     - service: light.turn_on
       data:
         entity_id: light.ledstrip_undecided
-        xy_color: [0.149, 0.291]
-        brightness_pct: 90
+        xy_color: [0.621, 0.367]
+        brightness_pct: 100
         transition: 2
 
 
