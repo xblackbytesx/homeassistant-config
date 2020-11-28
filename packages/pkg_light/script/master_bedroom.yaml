@@ -13,6 +13,7 @@ scene_mb_night:
         brightness_pct: 40
         transition: 2
 
+
 scene_mb_day:
   sequence:
     - service: light.turn_on
@@ -27,7 +28,6 @@ scene_mb_day:
         xy_color: [0.149, 0.291]
         brightness_pct: 90
         transition: 2
-  
 
 
 scene_mb_search_mode:
@@ -41,6 +41,7 @@ scene_mb_search_mode:
       entity_id: 
         - input_boolean.automation_mb_light
 
+        
 scene_mb_reset_default:
   alias: Resets the master bedroom default scene
   sequence:
