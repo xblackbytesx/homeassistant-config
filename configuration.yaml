@@ -1,9 +1,8 @@
-# homeassistant:
-
 default_config:
   tts:
     - platform: google_translate
 
+homeassistant:
   name: Home
   latitude: !secret latitude
   longitude: !secret longitude
@@ -33,15 +32,13 @@ default_config:
     # christmas_package: !include packages/pkg_christmas/all.yaml
     coronavirus_package: !include packages/pkg_coronavirus/all.yaml
 
-# hassio:
 config:
 history:
 # logbook:
 system_health:
 wake_on_lan:
-# python_script:
+python_script:
 # map:
-# cloud:
 
 recorder:
   db_url: !secret database_connection_string
@@ -61,11 +58,11 @@ lovelace:
 updater:
 mobile_app:
 
-# http:
-#   cors_allowed_origins:
-#     - !secret base_url
-#     - https://google.com
-#     - https://www.home-assistant.io
+http:
+  cors_allowed_origins:
+    - !secret base_url
+    - https://google.com
+    - https://www.home-assistant.io
 
 binary_sensor: !include binary_sensor.yaml
 # automation: !include_dir_merge_list automation/

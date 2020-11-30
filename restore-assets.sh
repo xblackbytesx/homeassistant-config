@@ -13,9 +13,9 @@
 # chmod +x shell_scripts/*.sh
 
 # Python scripts
-# rm -rf python_scripts
-# cp -Rp assets/python_scripts .
-# chmod +x python_scripts/*.py
+rm -rf python_scripts
+cp -Rp assets/python_scripts .
+chmod +x python_scripts/*.py
 
 rm www/floorplan_ground_floor.jpg
 cp -Rp assets/img/floorplan_ground_floor.jpg www/
