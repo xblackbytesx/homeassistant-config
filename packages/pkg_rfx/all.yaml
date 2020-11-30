@@ -2,7 +2,7 @@ homeassistant:
   customize: !include customize.yaml
 
 rfxtrx:
-  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11D2A5T-if00-port0
+  device: /dev/ttyRFXtrx
   devices:
     ####################
     ## Binary Sensors ##
