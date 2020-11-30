@@ -109,7 +109,7 @@ mkdir -p www/custom-lovelace/lovelace-state-switch
 wget https://raw.githubusercontent.com/thomasloven/lovelace-state-switch/master/state-switch.js -O www/custom-lovelace/lovelace-state-switch/state-switch.js
 
 echo "Installing Air Purifier Card"
-cp -Rp /config/assets/custom_cards/air-purifier /config/www/custom-lovelace/
+cp -Rp assets/custom_cards/air-purifier www/custom-lovelace/
 
 echo "Bump versions in resources"
 EPOCH=$(date +%s)
