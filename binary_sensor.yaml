@@ -55,16 +55,12 @@
         {{ is_state('binary_sensor.early_night', 'on')
            or is_state('binary_sensor.late_night', 'on') }}
 
-- platform: template
-  sensors:
     sa_allow_media_status_scene_switching:
       value_template: >-
         {{ is_state('binary_sensor.late_evening', 'on')
            or is_state('binary_sensor.early_night', 'on')
            or is_state('binary_sensor.late_night', 'on') }}
 
-- platform: template
-  sensors:
     allow_exterior_lights:
       value_template: >-
         {{ is_state('binary_sensor.late_afternoon', 'on')
@@ -73,8 +69,6 @@
            or is_state('binary_sensor.early_night', 'on')
            or is_state('binary_sensor.early_morning', 'on') }}
 
-- platform: template
-  sensors:
     allow_turning_off_bedroom_lights:
       value_template: >-
         {{ is_state('binary_sensor.late_morning', 'on')
@@ -82,8 +76,6 @@
            or is_state('binary_sensor.late_afternoon', 'on')
            or is_state('binary_sensor.early_evening', 'on') }}
 
-- platform: template
-  sensors:
     front_door_open:
       value_template: >-
         {{ is_state('binary_sensor.0x00158d000446eb21_contact', 'on') }}
