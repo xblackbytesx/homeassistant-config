@@ -3,137 +3,137 @@ homeassistant:
 
 rfxtrx:
   device: /dev/ttyRFXtrx
-  devices:
-    ####################
-    ## Binary Sensors ##
-    ####################
+  # devices:
+  #   ####################
+  #   ## Binary Sensors ##
+  #   ####################
 
-    # motion_sensor_sa
-    0b11000001a1dbda0a010f70:
-      device_class: motion
+  #   # motion_sensor_sa
+  #   0b11000001a1dbda0a010f70:
+  #     device_class: motion
 
-    # motion_sensor_attic
-    0b11000201a1dc7e0a010f70:
-      device_class: motion  
+  #   # motion_sensor_attic
+  #   0b11000201a1dc7e0a010f70:
+  #     device_class: motion  
 
-    ####################
-    ###### Light #######
-    ####################
+  #   ####################
+  #   ###### Light #######
+  #   ####################
 
-    # freq4but1 - dimmable_socket_one
-    #0b110028019c0be20d010f60:
-    0b110028019c0be20d020f70:
-      device_class: light
+  #   # freq4but1 - dimmable_socket_one
+  #   #0b110028019c0be20d010f60:
+  #   0b110028019c0be20d020f70:
+  #     device_class: light
 
-    # freq4but2 - dimmable_socket_two
-    0b110029019c0be20e010f70:
-      device_class: light
+  #   # freq4but2 - dimmable_socket_two
+  #   0b110029019c0be20e010f70:
+  #     device_class: light
 
-    ####################
-    ###### Switch ######
-    ####################
+  #   ####################
+  #   ###### Switch ######
+  #   ####################
 
-    # duo_switch_lb_l
-    0b11000201b8124202000070:
-      fire_event: true
+  #   # duo_switch_lb_l
+  #   0b11000201b8124202000070:
+  #     fire_event: true
 
-    # duo_switch_lb_r
-    0b11000001b8124201010f70:
-      fire_event: true
+  #   # duo_switch_lb_r
+  #   0b11000001b8124201010f70:
+  #     fire_event: true
 
-    # duo_switch_sb_l
-    0b11000201abbdee02010f60:
-      fire_event: true
+  #   # duo_switch_sb_l
+  #   0b11000201abbdee02010f60:
+  #     fire_event: true
 
-    # duo_switch_sb_r
-    0b11000501abbdee01010f70:
-      fire_event: true
+  #   # duo_switch_sb_r
+  #   0b11000501abbdee01010f70:
+  #     fire_event: true
 
-    # duo_switch_mb_l
-    0b11000301b7b65e02000070:
-      fire_event: true
+  #   # duo_switch_mb_l
+  #   0b11000301b7b65e02000070:
+  #     fire_event: true
 
-    # duo_switch_mb_r
-    0b11000401b7b65e01000070:
-      fire_event: true
+  #   # duo_switch_mb_r
+  #   0b11000401b7b65e01000070:
+  #     fire_event: true
       
-    # single_switch_mb
-    0b11000501a431420a000060:
-      fire_event: true
+  #   # single_switch_mb
+  #   0b11000501a431420a000060:
+  #     fire_event: true
   
-    # freq1but1 - beamer_screen
-    0b110000019c0be201000070:
-      fire_event: true
+  #   # freq1but1 - beamer_screen
+  #   0b110000019c0be201000070:
+  #     fire_event: true
 
-    # freq1but2 - sun_screen
-    0b110002019c0be202010f70:
-      fire_event: true
+  #   # freq1but2 - sun_screen
+  #   0b110002019c0be202010f70:
+  #     fire_event: true
 
-    # Cover - attic_shutters
-    071a0000051C0D01:
-      signal_repetitions: 2
+  #   # Cover - attic_shutters
+  #   071a0000051C0D01:
+  #     signal_repetitions: 2
 
-    # # freq1but3
-    # 0b110000019c0be203010f70:
-    #   # name: programmable_three
-    #   fire_event: true
-    #
-    # # freq1but4
-    # 0b110003019c0be204010f70:
-    #   # name: programmable_four
-    #   fire_event: true
-    #
-    # # freq2but1
-    # 0b11001e019c0be205010f70:
-    #   # name: programmable_five
-    #   fire_event: true
-    #
-    # # freq2but2
-    # 0b110020019c0be206010f70:
-    #   # name: programmable_six
-    #   fire_event: true
-    #
-    # # freq2but3
-    # 0b110021019c0be207010f70:
-    #   # name: programmable_seven
-    #   fire_event: true
-    #
-    # # freq2but4
-    # 0b110022019c0be208010f70:
-    #   # name: programmable_eight
-    #   fire_event: true
-    #
-    # # freq3but1
-    # 0b110024019c0be209010f70:
-    #   # name: power_socket_one
-    #   fire_event: true
-    #
-    # # freq3but2
-    # 0b110025019c0be20a010f70:
-    #   # name: power_socket_two
-    #   fire_event: true
-    #
-    # # freq3but3
-    # 0b110026019c0be20b010f60:
-    #   # name: power_socket_three
-    #   fire_event: true
-    #
-    # # freq3but4
-    # 0b110027019c0be20c010f70:
-    #   # name: power_socket_four
+  #   # # freq1but3
+  #   # 0b110000019c0be203010f70:
+  #   #   # name: programmable_three
+  #   #   fire_event: true
+  #   #
+  #   # # freq1but4
+  #   # 0b110003019c0be204010f70:
+  #   #   # name: programmable_four
+  #   #   fire_event: true
+  #   #
+  #   # # freq2but1
+  #   # 0b11001e019c0be205010f70:
+  #   #   # name: programmable_five
+  #   #   fire_event: true
+  #   #
+  #   # # freq2but2
+  #   # 0b110020019c0be206010f70:
+  #   #   # name: programmable_six
+  #   #   fire_event: true
+  #   #
+  #   # # freq2but3
+  #   # 0b110021019c0be207010f70:
+  #   #   # name: programmable_seven
+  #   #   fire_event: true
+  #   #
+  #   # # freq2but4
+  #   # 0b110022019c0be208010f70:
+  #   #   # name: programmable_eight
+  #   #   fire_event: true
+  #   #
+  #   # # freq3but1
+  #   # 0b110024019c0be209010f70:
+  #   #   # name: power_socket_one
+  #   #   fire_event: true
+  #   #
+  #   # # freq3but2
+  #   # 0b110025019c0be20a010f70:
+  #   #   # name: power_socket_two
+  #   #   fire_event: true
+  #   #
+  #   # # freq3but3
+  #   # 0b110026019c0be20b010f60:
+  #   #   # name: power_socket_three
+  #   #   fire_event: true
+  #   #
+  #   # # freq3but4
+  #   # 0b110027019c0be20c010f70:
+  #   #   # name: power_socket_four
 
-    # 0b11000001abceaa02000070:
-    #   # name: duo_switch_bathroom_l
-    #   fire_event: true
-    #
-    # 0b11000401abceaa01000060:
-    #   # name: duo_switch_bathroom_r
-    #   fire_event: true
+  #   # 0b11000001abceaa02000070:
+  #   #   # name: duo_switch_bathroom_l
+  #   #   fire_event: true
+  #   #
+  #   # 0b11000401abceaa01000060:
+  #   #   # name: duo_switch_bathroom_r
+  #   #   fire_event: true
 
-    # # freq4but3
-    # 0b11002a019c0be20f010f70:
-    #   # name: dimmable_socket_three
-    #
-    # # freq4but4
-    # 0b11002b019c0be210010f70:
-    #   # name: dimmable_socket_four
+  #   # # freq4but3
+  #   # 0b11002a019c0be20f010f70:
+  #   #   # name: dimmable_socket_three
+  #   #
+  #   # # freq4but4
+  #   # 0b11002b019c0be210010f70:
+  #   #   # name: dimmable_socket_four

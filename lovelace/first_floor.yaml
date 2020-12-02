@@ -216,7 +216,7 @@ cards:
       type: entities
       title: Large Bedroom lighting
       entities:
-        - light.0x00178801039d140f_light
+        - !secret light_mb_bulb
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
@@ -228,7 +228,7 @@ cards:
         - light.0x00178801030a3dde_light
         - light.hue_candle_bathroom_l
         - light.hue_bulb_bathroom_r
-        - light.0x00178801039d140f_light
+        - !secret light_mb_bulb
         - light.0x90fd9ffffeea4e5e_light
         - light.0x0017880102460013_light
         - light.ledstrip_large_bedroom

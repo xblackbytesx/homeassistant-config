@@ -9,7 +9,7 @@ views:
   - !include lovelace/attic.yaml
   - !include lovelace/exterior.yaml
   - !include lovelace/people.yaml
-  - !include lovelace/plants.yaml
+  # - !include lovelace/plants.yaml
   - !include lovelace/media.yaml
   - !include lovelace/remote/remote_navigation.yaml
   - !include lovelace/scenes.yaml

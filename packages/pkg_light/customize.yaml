@@ -6,14 +6,6 @@ light.lg_sa_all:
   icon: mdi:sofa
 light.lg_kitchen_all:
   icon: mdi:silverware-fork-knife
-light.lg_mb_all:
-  icon: mdi:bed
-light.lg_lb_all:
-  icon: mdi:bed
-light.lg_sb_all:
-  icon: mdi:bed
-light.lg_bathroom_all:
-  icon: mdi:shower
 
 light.0x0017880103ea3a60_light:
   friendly_name: Hallway
@@ -71,14 +63,14 @@ sensor.00x90fd9ffffeea4e5e_linkquality:
 binary_sensor.0x90fd9ffffeea4e5e_update_available:
   friendly_name: Tradfri Bulb Master Bedroom
 
-light.0x00178801039d140f_light:
+!secret light_mb_bulb:
   friendly_name: Large bedroom
 sensor.0x00178801039d140f_linkquality:
   friendly_name: Hue Bulb Large Bedroom
 binary_sensor.0x00178801039d140f_update_available:
   friendly_name: Hue Bulb Large Bedroom
 
-light.0x00178801023c1a33_light:
+!secret light_sb_bulb:
   friendly_name: Small bedroom
 sensor.0x00178801023c1a33_linkquality:
   friendly_name: Hue Bulb Small Bedroom
@@ -227,12 +219,6 @@ automation.sb_003:
 # Corridor automations
 automation.co_001:
   friendly_name: CO | Motion | Light
-
-# Bathroom automations
-automation.bathroom_001:
-  friendly_name: Bathroom | Switch | Light
-automation.bathroom_002:
-  friendly_name: Bathroom | Motion | Scene
 
 # Attic automations
 automation.attic_001:

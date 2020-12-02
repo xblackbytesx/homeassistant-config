@@ -24,7 +24,7 @@ cards:
       - switch.0x000d6ffffea7daa5_switch
       - switch.0x000d6ffffed9d60d_switch
       - light.dimmable_socket_one
-      - light.dimmable_socket_two
+      # - light.dimmable_socket_two
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

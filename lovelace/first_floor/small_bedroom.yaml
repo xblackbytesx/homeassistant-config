@@ -17,7 +17,7 @@ cards:
           - service: script.turn_on
           - button_1: light.lg_sb_all
           - button_2: switch.0x000b3cfffef7b582_switch
-          - button_3: switch.0x000b3cfffef7b582_switch
+          - button_3: light.dimmable_socket_one
           - scene_1: script.scene_sb_night
           - scene_2: script.scene_sb_day
           - scene_3: script.scene_sb_search_mode
@@ -27,13 +27,12 @@ cards:
           - type: entities
             show_header_toggle: false
             entities:
-              - light.0x00178801039d140f_light
-              - light.ledstrip_large_bedroom
+              - !secret light_sb_bulb
+              - light.dimmable_socket_one
       - type: vertical-stack
         cards:
           - type: entities
             show_header_toggle: false
             entities:
               - input_boolean.automation_sb_light
-              - automation.sb_002
               - automation.smoke_alarm_sb_test

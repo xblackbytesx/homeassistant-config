@@ -28,6 +28,7 @@ cards:
             show_header_toggle: false
             entities:
               - light.0x90fd9ffffeea4e5e_light
+              - light.ledstrip_undecided
       - type: vertical-stack
         cards:
           - type: entities

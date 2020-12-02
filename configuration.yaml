@@ -1,6 +1,54 @@
-default_config:
-  tts:
-    - platform: google_translate
+# default_config:
+# Stripped out what I don't use
+automation: !include_dir_merge_list automation/
+# cloud:
+config:
+# counter:
+frontend:
+history:
+# image:
+input_boolean: !include boolean.yaml
+# input_datetime:
+# input_number:
+input_select: !include input_select.yaml
+# input_text:
+logbook:
+# map:
+# media_source:
+mobile_app:
+# person:
+# scene:
+# script:
+# ssdp:
+# sun:
+system_health:
+tag:
+# timer:
+updater:
+# zeroconf:
+zone:
+
+# Additional config:
+binary_sensor: !include binary_sensor.yaml
+
+http:
+  cors_allowed_origins:
+    - !secret base_url
+    - https://google.com
+    - https://www.home-assistant.io
+
+lovelace:
+  mode: yaml
+  resources: !include lovelace/resources.yaml
+
+python_script:
+
+recorder:
+  db_url: !secret database_connection_string
+  purge_keep_days: 4
+
+sensor: !include_dir_merge_list sensor/
+wake_on_lan:
 
 homeassistant:
   name: Home
@@ -31,41 +79,3 @@ homeassistant:
     speech_package: !include packages/pkg_speech/all.yaml
     # christmas_package: !include packages/pkg_christmas/all.yaml
     coronavirus_package: !include packages/pkg_coronavirus/all.yaml
-
-config:
-history:
-# logbook:
-system_health:
-wake_on_lan:
-python_script:
-# map:
-
-recorder:
-  db_url: !secret database_connection_string
-  purge_keep_days: 4
-
-# discovery:
-#   ignore:
-#     - yeelight
-
-# frontend:
-#   themes: !include_dir_merge_named themes/
-
-lovelace:
-  mode: yaml
-  resources: !include lovelace/resources.yaml
-
-updater:
-mobile_app:
-
-http:
-  cors_allowed_origins:
-    - !secret base_url
-    - https://google.com
-    - https://www.home-assistant.io
-
-binary_sensor: !include binary_sensor.yaml
-automation: !include_dir_merge_list automation/
-sensor: !include_dir_merge_list sensor/
-input_boolean: !include boolean.yaml
-input_select: !include input_select.yaml

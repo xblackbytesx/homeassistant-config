@@ -35,6 +35,3 @@ cards:
             show_header_toggle: false
             entities:
               - input_boolean.automation_bathroom_light
-              - automation.bathroom_001
-              - automation.bathroom_002
-              - automation.bathroom_003
