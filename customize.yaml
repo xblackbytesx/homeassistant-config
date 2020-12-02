@@ -5,7 +5,7 @@ group.all_automations:
 # Socket 1
 switch.0x000d6ffffedad23c_switch:
   friendly_name: TV Cabinet
-  icon: mdi:power-socket-eu
+  icon: mdi:tv-classic
 binary_sensor.0x000d6ffffedad23c_update_available:
   friendly_name: Tradfri Outlet TV Cabinet
 sensor.0x000d6ffffedad23c_linkquality:
@@ -32,7 +32,7 @@ sensor.0x000d6ffffea6e967_linkquality:
 # Socket 5
 switch.0x000d6ffffedaf667_switch:
   friendly_name: Large bedroom
-  icon: mdi:power-socket-eu
+  icon: mdi:tv-classic
 binary_sensor.0x000d6ffffedaf667_update_available:
   friendly_name: Tradfri Outlet Large bedroom
 sensor.0x000d6ffffedaf667_linkquality:

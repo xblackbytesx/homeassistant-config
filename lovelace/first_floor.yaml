@@ -96,9 +96,9 @@ cards:
                   - type: custom:mini-graph-card
                     name: Temperature
                     entities:
-                      - sensor.0x00158d00036bffea_temperature
-                      - sensor.0x00158d00036bffea_humidity
-                      - sensor.0x00158d00036bffea_pressure
+                      - !secret temperature_lb
+                      - !secret humidity_lb
+                      - !secret pressure_lb
           - type: vertical-stack
             cards:
               - type: custom:auto-entities
@@ -167,17 +167,17 @@ cards:
   #   name: Temperature
   #   entities:
   #     - sensor.0x00178801020357e5_temperature
-  #     - sensor.0x00158d00036bffea_temperature
+  #     - !secret temperature_lb
   #     - sensor.0x00158d0004453420_temperature
   # - type: custom:mini-graph-card
   #   name: Humidity
   #   entities:
-  #     - sensor.0x00158d00036bffea_humidity
+  #     - !secret humidity_lb
   #     - sensor.0x00158d0004453420_humidity
   # - type: custom:mini-graph-card
   #   name: Pressure
   #   entities:
-  #     - sensor.0x00158d00036bffea_pressure
+  #     - !secret pressure_lb
   #     - sensor.0x00158d0004453420_pressure
   # - type: entities
   #   title: First floor switches

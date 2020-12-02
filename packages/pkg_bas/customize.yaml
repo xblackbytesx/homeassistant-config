@@ -1,20 +1,20 @@
 sensor.0x00178801020357e5_temperature:
   friendly_name: Kitchen
-sensor.0x00158d00036bffea_temperature:
+!secret temperature_lb:
   friendly_name: Master bedroom
 sensor.0x00158d0004453420_temperature:
   friendly_name: Guest bedroom
 
-sensor.0x00158d00036bffea_humidity:
+!secret humidity_lb:
   friendly_name: Kitchen
 sensor.0x00158d0004453420_humidity:
   friendly_name: Master bedroom
 sensor.0x00158d0004453420_humidity:
   friendly_name: Guest bedroom
 
-sensor.0x00158d00036bffea_pressure:
+!secret pressure_lb:
   friendly_name: Kitchen
-sensor.0x00158d00036bffea_pressure:
+!secret pressure_lb:
   friendly_name: Master bedroom
 sensor.0x00158d0004453420_pressure:
   friendly_name: Guest bedroom
