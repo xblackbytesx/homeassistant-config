@@ -1,250 +1,250 @@
-title: First Floor
-icon: mdi:numeric-1-box
-cards:
-  # - type: vertical-stack
-  #   cards:
-  #     - type: markdown
-  #       content: >
-  #         ## Large Bedroom
-  #     - type: horizontal-stack
-  #       cards:
-  #         - type: light
-  #           entity: light.lg_mb_all
-  #         - type: button
-  #           entity: switch.0x086bd7fffe5185b6_switch
-  #           show_name: false
-  # - type: glance
-  #   title: Large Bedroom
-  #   show_name: false
-  #   show_state: false
-  #   columns: 2
-  #   entities:
-  #     - light.lg_mb_all
-  #     - switch.0x086bd7fffe5185b6_switch
+# title: First Floor
+# icon: mdi:numeric-1-box
+# cards:
+#   # - type: vertical-stack
+#   #   cards:
+#   #     - type: markdown
+#   #       content: >
+#   #         ## Large Bedroom
+#   #     - type: horizontal-stack
+#   #       cards:
+#   #         - type: light
+#   #           entity: light.lg_mb_all
+#   #         - type: button
+#   #           entity: switch.0x086bd7fffe5185b6_switch
+#   #           show_name: false
+#   # - type: glance
+#   #   title: Large Bedroom
+#   #   show_name: false
+#   #   show_state: false
+#   #   columns: 2
+#   #   entities:
+#   #     - light.lg_mb_all
+#   #     - switch.0x086bd7fffe5185b6_switch
 
-  - type: vertical-stack
-    title: Master Bedroom
-    cards:
-      - type: custom:swipe-card
-        parameters:
-          spaceBetween: 8
-        cards:
-          - type: custom:decluttering-card
-            template: slider_button_groups
-            variables:
-              - service: script.turn_on
-              - button_1: light.lg_mb_all
-              - button_2: switch.0xccccccfffeb221dd_switch
-              - button_3: switch.0xccccccfffeb21d81_switch
-              - scene_1: script.scene_mb_night
-              - scene_2: script.scene_mb_day
-              - scene_3: script.scene_mb_search_mode
-              - scene_4: script.scene_mb_reset_default
-          - type: vertical-stack
-            cards:
-              - type: horizontal-stack
-                cards:
-                  - type: custom:mini-graph-card
-                    entities:
-                      - sensor.0x00158d0004453420_temperature
-                      - sensor.0x00158d0004453420_humidity
-                      - sensor.0x00158d0004453420_pressure
-          - type: vertical-stack
-            cards:
-              - type: custom:auto-entities
-                show_empty: false
-                card:
-                  type: entities
-                  show_header_toggle: false
-                filter:
-                  include:
-                    - area: Master Bedroom
-                      domain: light
-          - type: vertical-stack
-            cards:
-              - type: custom:auto-entities
-                show_empty: false
-                card:
-                  type: entities
-                  show_header_toggle: false
-                filter:
-                  include:
-                    - entity_id: "automation.mb*"
-                    - entity_id: "input_boolean.automation_mb*"
-  - type: vertical-stack
-    title: Large Bedroom
-    cards:
-      - type: custom:swipe-card
-        parameters:
-          spaceBetween: 8
-        cards:
-          - type: custom:decluttering-card
-            template: slider_button_groups
-            variables:
-              - service: script.turn_on
-              - button_1: light.lg_lb_all
-              - button_2: switch.0x086bd7fffe5185b6_switch
-              - button_3: switch.0x086bd7fffe5185b6_switch
-              - scene_1: script.scene_lb_night
-              - scene_2: script.scene_lb_day
-              - scene_3: script.scene_lb_search_mode
-              - scene_4: script.scene_lb_reset_default
-          - type: vertical-stack
-            cards:
-              - type: horizontal-stack
-                cards:
-                  - type: custom:mini-graph-card
-                    name: Temperature
-                    entities:
-                      - !secret temperature_lb
-                      - !secret humidity_lb
-                      - !secret pressure_lb
-          - type: vertical-stack
-            cards:
-              - type: custom:auto-entities
-                show_empty: false
-                card:
-                  type: entities
-                  show_header_toggle: false
-                filter:
-                  include:
-                    - area: Large Bedroom
-                      domain: light
-          - type: vertical-stack
-            cards:
-              - type: custom:auto-entities
-                show_empty: false
-                card:
-                  type: entities
-                  show_header_toggle: false
-                filter:
-                  include:
-                    - entity_id: "automation.lb*"
-                    - entity_id: "input_boolean.automation_lb*"
-  - type: vertical-stack
-    title: Small Bedroom
-    cards:
-      - type: custom:swipe-card
-        parameters:
-          spaceBetween: 8
-        cards:
-          - type: custom:decluttering-card
-            template: slider_button_groups
-            variables:
-              - service: script.turn_on
-              - button_1: light.lg_sb_all
-              - button_2: switch.0x000b3cfffef7b582_switch
-              - button_3: switch.0x000b3cfffef7b582_switch
-              - scene_1: script.scene_sb_night
-              - scene_2: script.scene_sb_day
-              - scene_3: script.scene_sb_search_mode
-              - scene_4: script.scene_sb_reset_default
-          - type: vertical-stack
-            cards:
-              - type: custom:auto-entities
-                show_empty: false
-                card:
-                  type: entities
-                  show_header_toggle: false
-                filter:
-                  include:
-                    - area: Small Bedroom
-                      domain: light
-          - type: vertical-stack
-            cards:
-              - type: custom:auto-entities
-                show_empty: false
-                card:
-                  type: entities
-                  show_header_toggle: false
-                filter:
-                  include:
-                    - entity_id: "automation.lb*"
-                    - entity_id: "input_boolean.automation_lb*"
+#   - type: vertical-stack
+#     title: Master Bedroom
+#     cards:
+#       - type: custom:swipe-card
+#         parameters:
+#           spaceBetween: 8
+#         cards:
+#           - type: custom:decluttering-card
+#             template: slider_button_groups
+#             variables:
+#               - service: script.turn_on
+#               - button_1: light.lg_mb_all
+#               - button_2: switch.0xccccccfffeb221dd_switch
+#               - button_3: switch.0xccccccfffeb21d81_switch
+#               - scene_1: script.scene_mb_night
+#               - scene_2: script.scene_mb_day
+#               - scene_3: script.scene_mb_search_mode
+#               - scene_4: script.scene_mb_reset_default
+#           - type: vertical-stack
+#             cards:
+#               - type: horizontal-stack
+#                 cards:
+#                   - type: custom:mini-graph-card
+#                     entities:
+#                       - sensor.0x00158d0004453420_temperature
+#                       - sensor.0x00158d0004453420_humidity
+#                       - sensor.0x00158d0004453420_pressure
+#           - type: vertical-stack
+#             cards:
+#               - type: custom:auto-entities
+#                 show_empty: false
+#                 card:
+#                   type: entities
+#                   show_header_toggle: false
+#                 filter:
+#                   include:
+#                     - area: Master Bedroom
+#                       domain: light
+#           - type: vertical-stack
+#             cards:
+#               - type: custom:auto-entities
+#                 show_empty: false
+#                 card:
+#                   type: entities
+#                   show_header_toggle: false
+#                 filter:
+#                   include:
+#                     - entity_id: "automation.mb*"
+#                     - entity_id: "input_boolean.automation_mb*"
+#   - type: vertical-stack
+#     title: Large Bedroom
+#     cards:
+#       - type: custom:swipe-card
+#         parameters:
+#           spaceBetween: 8
+#         cards:
+#           - type: custom:decluttering-card
+#             template: slider_button_groups
+#             variables:
+#               - service: script.turn_on
+#               - button_1: light.lg_lb_all
+#               - button_2: switch.0x086bd7fffe5185b6_switch
+#               - button_3: switch.0x086bd7fffe5185b6_switch
+#               - scene_1: script.scene_lb_night
+#               - scene_2: script.scene_lb_day
+#               - scene_3: script.scene_lb_search_mode
+#               - scene_4: script.scene_lb_reset_default
+#           - type: vertical-stack
+#             cards:
+#               - type: horizontal-stack
+#                 cards:
+#                   - type: custom:mini-graph-card
+#                     name: Temperature
+#                     entities:
+#                       - !secret temperature_lb
+#                       - !secret humidity_lb
+#                       - !secret pressure_lb
+#           - type: vertical-stack
+#             cards:
+#               - type: custom:auto-entities
+#                 show_empty: false
+#                 card:
+#                   type: entities
+#                   show_header_toggle: false
+#                 filter:
+#                   include:
+#                     - area: Large Bedroom
+#                       domain: light
+#           - type: vertical-stack
+#             cards:
+#               - type: custom:auto-entities
+#                 show_empty: false
+#                 card:
+#                   type: entities
+#                   show_header_toggle: false
+#                 filter:
+#                   include:
+#                     - entity_id: "automation.lb*"
+#                     - entity_id: "input_boolean.automation_lb*"
+#   - type: vertical-stack
+#     title: Small Bedroom
+#     cards:
+#       - type: custom:swipe-card
+#         parameters:
+#           spaceBetween: 8
+#         cards:
+#           - type: custom:decluttering-card
+#             template: slider_button_groups
+#             variables:
+#               - service: script.turn_on
+#               - button_1: light.lg_sb_all
+#               - button_2: switch.0x000b3cfffef7b582_switch
+#               - button_3: switch.0x000b3cfffef7b582_switch
+#               - scene_1: script.scene_sb_night
+#               - scene_2: script.scene_sb_day
+#               - scene_3: script.scene_sb_search_mode
+#               - scene_4: script.scene_sb_reset_default
+#           - type: vertical-stack
+#             cards:
+#               - type: custom:auto-entities
+#                 show_empty: false
+#                 card:
+#                   type: entities
+#                   show_header_toggle: false
+#                 filter:
+#                   include:
+#                     - area: Small Bedroom
+#                       domain: light
+#           - type: vertical-stack
+#             cards:
+#               - type: custom:auto-entities
+#                 show_empty: false
+#                 card:
+#                   type: entities
+#                   show_header_toggle: false
+#                 filter:
+#                   include:
+#                     - entity_id: "automation.lb*"
+#                     - entity_id: "input_boolean.automation_lb*"
 
-  # - !include cards/first_floor_groups.yaml
-  # - type: custom:mini-graph-card
-  #   name: Temperature
-  #   entities:
-  #     - sensor.0x00178801020357e5_temperature
-  #     - !secret temperature_lb
-  #     - sensor.0x00158d0004453420_temperature
-  # - type: custom:mini-graph-card
-  #   name: Humidity
-  #   entities:
-  #     - !secret humidity_lb
-  #     - sensor.0x00158d0004453420_humidity
-  # - type: custom:mini-graph-card
-  #   name: Pressure
-  #   entities:
-  #     - !secret pressure_lb
-  #     - sensor.0x00158d0004453420_pressure
-  # - type: entities
-  #   title: First floor switches
-  #   entities:
-  #     - switch.0x000d6ffffedaf667_switch
-  #     - switch.0x000d6ffffedc5e05_switch
-  #     - switch.0x086bd7fffe5185b6_switch
-  #     - switch.0x000b3cfffef7b582_switch
-  #     - switch.0xccccccfffeb221dd_switch
-  #     - switch.0xccccccfffeb21d81_switch
+#   # - !include cards/first_floor_groups.yaml
+#   # - type: custom:mini-graph-card
+#   #   name: Temperature
+#   #   entities:
+#   #     - sensor.0x00178801020357e5_temperature
+#   #     - !secret temperature_lb
+#   #     - sensor.0x00158d0004453420_temperature
+#   # - type: custom:mini-graph-card
+#   #   name: Humidity
+#   #   entities:
+#   #     - !secret humidity_lb
+#   #     - sensor.0x00158d0004453420_humidity
+#   # - type: custom:mini-graph-card
+#   #   name: Pressure
+#   #   entities:
+#   #     - !secret pressure_lb
+#   #     - sensor.0x00158d0004453420_pressure
+#   # - type: entities
+#   #   title: First floor switches
+#   #   entities:
+#   #     - switch.0x000d6ffffedaf667_switch
+#   #     - switch.0x000d6ffffedc5e05_switch
+#   #     - switch.0x086bd7fffe5185b6_switch
+#   #     - switch.0x000b3cfffef7b582_switch
+#   #     - switch.0xccccccfffeb221dd_switch
+#   #     - switch.0xccccccfffeb21d81_switch
 
-  - type: conditional
-    conditions:
-      - entity: input_boolean.advanced_config
-        state: "on"
-    card:
-      type: entities
-      title: Corridor lighting
-      entities:
-        - light.0x00178801030a3dde_light
-  - type: conditional
-    conditions:
-      - entity: input_boolean.advanced_config
-        state: "on"
-    card:
-      type: entities
-      title: Bathroom lighting
-      entities:
-        - light.hue_candle_bathroom_l
-        - light.hue_bulb_bathroom_r
-  - type: conditional
-    conditions:
-      - entity: input_boolean.advanced_config
-        state: "on"
-    card:
-      type: entities
-      title: Large Bedroom lighting
-      entities:
-        - !secret light_mb_bulb
-  - type: conditional
-    conditions:
-      - entity: input_boolean.advanced_config
-        state: "on"
-    card:
-      type: entities
-      title: All first floor lights
-      entities:
-        - light.0x00178801030a3dde_light
-        - light.hue_candle_bathroom_l
-        - light.hue_bulb_bathroom_r
-        - !secret light_mb_bulb
-        - light.0x90fd9ffffeea4e5e_light
-        - light.0x0017880102460013_light
-        - light.ledstrip_large_bedroom
-  - type: conditional
-    conditions:
-      - entity: input_boolean.advanced_config
-        state: "on"
-    card:
-      type: custom:auto-entities
-      show_empty: false
-      card:
-        type: entities
-        title: First floor automations
-      filter:
-        include:
-          - entity_id: "automation.co*"
-          - entity_id: "automation.mb*"
-          - entity_id: "automation.lb*"
-          - entity_id: "automation.bathroom*"
+#   - type: conditional
+#     conditions:
+#       - entity: input_boolean.advanced_config
+#         state: "on"
+#     card:
+#       type: entities
+#       title: Corridor lighting
+#       entities:
+#         - light.0x00178801030a3dde_light
+#   - type: conditional
+#     conditions:
+#       - entity: input_boolean.advanced_config
+#         state: "on"
+#     card:
+#       type: entities
+#       title: Bathroom lighting
+#       entities:
+#         - light.hue_candle_bathroom_l
+#         - light.hue_bulb_bathroom_r
+#   - type: conditional
+#     conditions:
+#       - entity: input_boolean.advanced_config
+#         state: "on"
+#     card:
+#       type: entities
+#       title: Large Bedroom lighting
+#       entities:
+#         - !secret light_mb_bulb
+#   - type: conditional
+#     conditions:
+#       - entity: input_boolean.advanced_config
+#         state: "on"
+#     card:
+#       type: entities
+#       title: All first floor lights
+#       entities:
+#         - light.0x00178801030a3dde_light
+#         - light.hue_candle_bathroom_l
+#         - light.hue_bulb_bathroom_r
+#         - !secret light_mb_bulb
+#         - light.0x90fd9ffffeea4e5e_light
+#         - light.0x0017880102460013_light
+#         - light.ledstrip_large_bedroom
+#   - type: conditional
+#     conditions:
+#       - entity: input_boolean.advanced_config
+#         state: "on"
+#     card:
+#       type: custom:auto-entities
+#       show_empty: false
+#       card:
+#         type: entities
+#         title: First floor automations
+#       filter:
+#         include:
+#           - entity_id: "automation.co*"
+#           - entity_id: "automation.mb*"
+#           - entity_id: "automation.lb*"
+#           - entity_id: "automation.bathroom*"
