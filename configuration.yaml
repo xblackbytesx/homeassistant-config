@@ -57,7 +57,7 @@ homeassistant:
   customize: !include customize.yaml
 
   packages:
-    global_package: !include packages/pkg_glbal/all.yaml
+    global_package: !include packages/pkg_global/all.yaml
     zigbee2mqtt_package: !include packages/pkg_zigbee2mqtt/all.yaml
     rfx_package: !include packages/pkg_rfx/all.yaml
     light_package: !include packages/pkg_light/all.yaml
