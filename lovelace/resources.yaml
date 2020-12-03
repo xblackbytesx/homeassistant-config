@@ -4,10 +4,10 @@
   type: js
 - url: /local/custom-lovelace/lovelace-auto-entities/auto-entities.js?v=1606639294
   type: module
-# - url: /local/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js?v=1606639294
-#   type: module
-- url: /local/custom-lovelace/swipe-card/swipe-card.js?v=1606639294
+- url: /local/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js?v=1606639294
   type: module
+# - url: /local/custom-lovelace/swipe-card/swipe-card.js?v=1606639294
+#   type: module
 - url: /local/custom-lovelace/vertical-stack-in-card/vertical-stack-in-card.js?v=1606639294
   type: js
 - url: /local/custom-lovelace/vertical-style-card/vertical-style-card.js?v=1606639294
