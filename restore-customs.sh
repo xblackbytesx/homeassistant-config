@@ -113,5 +113,5 @@ cp -Rp assets/custom_cards/air-purifier www/custom-lovelace/
 
 echo "Bump versions in resources"
 EPOCH=$(date +%s)
-git checkout lovelace/resources.yaml
+git checkout docker -- lovelace/resources.yaml
 sed -i 's/\.js/\.js?v='$EPOCH'/g' lovelace/resources.yaml
