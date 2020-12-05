@@ -1,18 +1,18 @@
 title: Home
 icon: mdi:home
 cards:
-  - !include cards/people.yaml
+  - !include ../cards/people.yaml
   - type: entities
     entities:
       - switch.beamer_screen
       - switch.sunscreen
       - cover.attic_shutters
-  - !include cards/climate.yaml
+  - !include ../cards/climate.yaml
   - type: custom:air-purifier-card
     entity: fan.xiaomi_miio_device
-  - !include cards/weather.yaml
-  - !include cards/solar_panels.yaml
-  - !include cards/gas_prices.yaml
+  - !include ../cards/weather.yaml
+  - !include ../cards/solar_panels.yaml
+  - !include ../cards/gas_prices.yaml
   - type: entities
     title: Power Sockets
     entities:
@@ -47,13 +47,13 @@ cards:
         - light.ledstrip_tv_cabinet
         - light.ledstrip_black_cabinet
         - light.ledstrip_kitchen_cabinet
-  - !include cards/garbage_schedule.yaml
+  - !include ../cards/garbage_schedule.yaml
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
         state: "on"
     card:
-      !include cards/motion_detected.yaml
+      !include ../cards/motion_detected.yaml
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

@@ -1,7 +1,7 @@
 title: Exterior
 icon: mdi:tree
 cards:
-  - !include cards/exterior_groups.yaml
+  - !include ../cards/exterior_groups.yaml
   - type: entities
     title: Exterior switches
     entities:
@@ -12,10 +12,10 @@ cards:
     show_header_toggle: false
     entities:
       - cover.attic_shutters
-  # - !include cards/solar_panels.yaml
-  - !include cards/weather.yaml
-  - !include cards/car_info.yaml
-  - !include cards/garbage_schedule.yaml
+  # - !include ../cards/solar_panels.yaml
+  - !include ../cards/weather.yaml
+  - !include ../cards/car_info.yaml
+  - !include ../cards/garbage_schedule.yaml
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
@@ -26,7 +26,7 @@ cards:
       entities:
         - light.0x086bd7fffe035d36_light
         - light.0x000b57fffee35b50_light
-  - !include cards/camera_xiaofang_2.yaml
+  - !include ../cards/camera_xiaofang_2.yaml
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

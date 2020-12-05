@@ -1,8 +1,8 @@
 icon: mdi:numeric-0-box
 cards:
-  - !include cards/ground_floor_groups.yaml
-  - !include cards/floorplan_ground_floor.yaml
-  - !include cards/climate.yaml
+  - !include ../cards/ground_floor_groups.yaml
+  - !include ../cards/floorplan_ground_floor.yaml
+  - !include ../cards/climate.yaml
   - type: entities
     title: Ground floor switches
     entities:
@@ -75,8 +75,8 @@ cards:
         - light.ledstrip_black_cabinet
         - light.ledstrip_kitchen_cabinet
         - light.0x0017880103ea3a60_light
-  - !include cards/camera_dafang.yaml
-  - !include cards/camera_xiaofang_1.yaml
+  - !include ../cards/camera_dafang.yaml
+  - !include ../cards/camera_xiaofang_1.yaml
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

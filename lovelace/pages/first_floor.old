@@ -162,7 +162,7 @@
 #                     - entity_id: "automation.lb*"
 #                     - entity_id: "input_boolean.automation_lb*"
 
-#   # - !include cards/first_floor_groups.yaml
+#   # - !include ../cards/first_floor_groups.yaml
 #   # - type: custom:mini-graph-card
 #   #   name: Temperature
 #   #   entities:

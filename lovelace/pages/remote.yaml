@@ -38,6 +38,6 @@ cards:
     entity: input_select.remote
     states:
       XIAOMI:
-        !include remote_xiaomi.yaml
+        !include ../partials/remote_xiaomi.yaml
       CHANNELS:
-        !include remote_channels.yaml
+        !include ../partials/remote_channels.yaml

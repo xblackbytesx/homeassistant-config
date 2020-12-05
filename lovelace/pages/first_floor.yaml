@@ -41,10 +41,10 @@ cards:
     entity: input_select.first_floor
     states:
       MB:
-        !include master_bedroom.yaml
+        !include ../partials/master_bedroom.yaml
       LB:
-        !include large_bedroom.yaml
+        !include ../partials/large_bedroom.yaml
       SB:
-        !include small_bedroom.yaml
+        !include ../partials/small_bedroom.yaml
       BR:
-        !include bathroom.yaml
+        !include ../partials/bathroom.yaml
