@@ -12,7 +12,12 @@
   exclude_unnamed_apps: true
   apps:
     org.xbmc.kodi: "Kodi"
+    org.jellyfin.androidtv: "Jellyfin"
     com.netflix.ninja: "Netflix"
     com.spotify.tv.android: "Spotify"
     com.google.android.tvlauncher: "Homescreen"
     com.google.android.youtube.tv: "Youtube"
+
+- platform: emby
+  host: !secret jellyfin_host
+  api_key: !secret jellyfin_api_key
