@@ -114,9 +114,20 @@ scene_lr_disco_mode:
     #       - light.hue_go_closet_l
     #       - light.hue_go_closet_r
     #     effect: colorloop
+    - service: light.turn_on
+      data:
+        entity_id: 
+          - light.ledstrip_tv_cabinet
+          - light.ledstrip_black_cabinet
+          - light.ledstrip_kitchen_cabinet
+        effect: Disco
+    - service: homeassistant.turn_off
+      entity_id: 
+        - input_boolean.automation_sa_light
+        - input_boolean.automation_kitchen_light
 
     - repeat:
-        count: '40'
+        count: '1'
         sequence:
           - service: light.turn_on
             data:
@@ -157,18 +168,84 @@ scene_lr_disco_mode:
               - light.hue_go_closet_l
           - delay: '1.1'
 
-    - service: light.turn_on
-      data:
-        entity_id: 
-          - light.ledstrip_tv_cabinet
-          - light.ledstrip_black_cabinet
-          - light.ledstrip_kitchen_cabinet
-        effect: Disco
-    - service: homeassistant.turn_off
-      entity_id: 
-        - input_boolean.automation_sa_light
-        - input_boolean.automation_kitchen_light
-  mode: single
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 57
+                - 189
+                - 255
+            entity_id:
+              - light.hue_iris_tv_cabinet
+              - light.hue_go_closet_r
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 162
+                - 255
+                - 71
+            entity_id:
+              - light.hue_candle_salt_lamp
+              - light.hue_go_closet_l
+          - delay: '1.1'
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 162
+                - 255
+                - 71
+            entity_id:
+              - light.hue_iris_tv_cabinet
+              - light.hue_go_closet_r
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 57
+                - 189
+                - 255
+            entity_id:
+              - light.hue_candle_salt_lamp
+              - light.hue_go_closet_l
+          - delay: '1.1'
+
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 255
+                - 50
+                - 135
+            entity_id:
+              - light.hue_iris_tv_cabinet
+              - light.hue_go_closet_r
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 8
+                - 85
+                - 255
+            entity_id:
+              - light.hue_candle_salt_lamp
+              - light.hue_go_closet_l
+          - delay: '1.1'
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 8
+                - 85
+                - 255
+            entity_id:
+              - light.hue_iris_tv_cabinet
+              - light.hue_go_closet_r
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 255
+                - 50
+                - 135
+            entity_id:
+              - light.hue_candle_salt_lamp
+              - light.hue_go_closet_l
+          - delay: '1.1'
+        mode: queued
 
 scene_lr_reset_default:
   alias: Resets the sitting area default scene
