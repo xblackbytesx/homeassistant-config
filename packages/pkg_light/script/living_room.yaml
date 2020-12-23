@@ -127,7 +127,9 @@ scene_lr_disco_mode:
         - input_boolean.automation_kitchen_light
 
     - repeat:
-        count: '1'
+        while:
+          - condition: template
+            value_template: "{{ states.light.ledstrip_tv_cabinet.attributes.effect == Disco }}"
         sequence:
           - service: light.turn_on
             data:
@@ -245,7 +247,7 @@ scene_lr_disco_mode:
               - light.hue_candle_salt_lamp
               - light.hue_go_closet_l
           - delay: '1.1'
-        mode: queued
+  mode: queued
 
 scene_lr_reset_default:
   alias: Resets the sitting area default scene
