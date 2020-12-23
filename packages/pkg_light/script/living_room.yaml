@@ -129,7 +129,7 @@ scene_lr_disco_mode:
     - repeat:
         while:
           - condition: template
-            value_template: "{{ states.light.ledstrip_tv_cabinet.attributes.effect == Disco }}"
+            value_template: "{{ states.light.ledstrip_tv_cabinet.attributes.effect == 'Disco' }}"
         sequence:
           - service: light.turn_on
             data:
