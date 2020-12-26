@@ -20,5 +20,6 @@
 
 - platform: emby
   host: !secret jellyfin_host
+  port: 443
   api_key: !secret jellyfin_api_key
   ssl: true
