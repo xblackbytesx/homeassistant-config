@@ -20,9 +20,10 @@ speedtestdotnet:
     - download
     - upload
 
-synology_dsm:
-  host: !secret synology_host
-  username: !secret synology_username
-  password: !secret synology_password
-  ssl: true
-  verify_ssl: true
+# Again stuff moving to UI config only.
+# synology_dsm:
+#   host: !secret synology_host
+#   username: !secret synology_username
+#   password: !secret synology_password
+#   ssl: true
+#   verify_ssl: true
