@@ -2,10 +2,13 @@ homeassistant:
   customize: !include customize.yaml
 
 pi_hole:
-  - host: !secret pihole_ip
+  - host: !secret pihole_host
+    ssl: true
+    verify_ssl: true
+    api_key: !secret pihole_api
 
 transmission:
-  host: !secret transmission_location
+  host: !secret transmission_host
   username: !secret transmission_user
   password: !secret transmission_pass
 
@@ -21,3 +24,5 @@ synology_dsm:
   host: !secret synology_host
   username: !secret synology_username
   password: !secret synology_password
+  ssl: true
+  verify_ssl: true
