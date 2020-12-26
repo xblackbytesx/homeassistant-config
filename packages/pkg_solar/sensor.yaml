@@ -1,5 +1,5 @@
 - platform: sma
-  host: !secret sma_inverter_ip
+  host: !secret sma_inverter_host
   password: !secret sma_inverter_password
   group: installer
   sensors:

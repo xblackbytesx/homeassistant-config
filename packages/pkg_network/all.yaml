@@ -18,6 +18,6 @@ speedtestdotnet:
     - upload
 
 synology_dsm:
-  host: !secret synology_ip
+  host: !secret synology_host
   username: !secret synology_username
   password: !secret synology_password
