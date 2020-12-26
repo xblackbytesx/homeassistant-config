@@ -1,5 +1,7 @@
 - platform: sma
   host: !secret sma_inverter_host
+  ssl: true
+  verify_ssl: true
   password: !secret sma_inverter_password
   group: installer
   sensors:
