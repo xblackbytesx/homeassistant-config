@@ -22,4 +22,3 @@
   host: !secret jellyfin_host
   api_key: !secret jellyfin_api_key
   ssl: true
-  verify_ssl: true
