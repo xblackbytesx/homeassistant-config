@@ -1,12 +1,12 @@
 type: vertical-stack
 cards:
   - type: custom:upcoming-media-card
-    entity: sensor.sonarr_upcoming_media
+    entity: sensor.sonarr_upcoming
     title: Upcoming TV
     image_style: fanart
     all_shadows: false
   - type: custom:upcoming-media-card
-    entity: sensor.radarr_upcoming_media
+    entity: sensor.radarr_upcoming
     title: Upcoming Movies
     image_style: fanart
     all_shadows: false

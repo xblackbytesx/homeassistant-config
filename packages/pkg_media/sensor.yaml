@@ -1,19 +1,20 @@
-- platform: sonarr_upcoming_media
+- platform: sonarr
   api_key: !secret sonarr_api_key
   host: !secret sonarr_host
-  port: 8989
+  port: 443
+  monitored_conditions:
+    - upcoming
   days: 2
-  ssl: false
-  max: 10
+  ssl: true
 
-- platform: radarr_upcoming_media
+- platform: radarr
   api_key: !secret radarr_api_key
   host: !secret radarr_host
-  port: 8310
+  port: 443
+  monitored_conditions:
+    - upcoming
   days: 120
-  ssl: false
-  theaters: false
-  max: 10
+  ssl: true
 
 - platform: template
   sensors:
