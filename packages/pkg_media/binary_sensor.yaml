@@ -3,6 +3,7 @@
     sa_tv_media_playing:
       value_template: >-
         {{ is_state('media_player.xiaomi_tv_box', 'playing')
+           or is_state_attr('media_player.xiaomi_tv_box','app_name', 'Jellyfin')
            or is_state('media_player.emby_living_room_tv', 'playing')
            or is_state('media_player.kodi', 'playing')
            or is_state('input_boolean.sa_media_status_override', 'on') }}
