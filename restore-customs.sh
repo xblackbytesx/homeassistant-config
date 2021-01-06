@@ -29,7 +29,7 @@ wget https://raw.githubusercontent.com/custom-components/sensor.sonarr_upcoming_
 echo "Installing Mi Heater Component"
 mkdir -p custom_components/miheater
 wget https://raw.githubusercontent.com/ee02217/homeassistant-mi-heater/master/custom_components/miheater/__init__.py -O custom_components/miheater/__init__.py
-wget https://raw.githubusercontent.com/ee02217/homeassistant-mi-heater/master/custom_components/miheater/climate.py -O custom_components/miheater/sensor.py
+wget https://raw.githubusercontent.com/ee02217/homeassistant-mi-heater/master/custom_components/miheater/climate.py -O custom_components/miheater/climate.py
 wget https://raw.githubusercontent.com/ee02217/homeassistant-mi-heater/master/custom_components/miheater/manifest.json -O custom_components/miheater/manifest.json
 wget https://raw.githubusercontent.com/ee02217/homeassistant-mi-heater/master/custom_components/miheater/services.yaml -O custom_components/miheater/services.yaml
 
