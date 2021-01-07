@@ -2,6 +2,8 @@ title: Attic
 icon: mdi:numeric-2-box
 cards:
   - !include ../cards/attic_groups.yaml
+  - type: thermostat
+    entity: climate.zhimi_heater_zb1_64_90_c1_7c_88_d7
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
