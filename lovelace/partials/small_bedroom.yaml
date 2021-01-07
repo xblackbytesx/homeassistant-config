@@ -1,0 +1,38 @@
+type: custom:layout-card
+layout: vertical
+min_columns: 1
+max_columns: 1
+max_width: 99%
+cards:
+  - type: vertical-stack
+    title: Small Bedroom
+    # cards:
+    #   - type: custom:swipe-card
+    #     parameters:
+    #       spaceBetween: 8
+    cards:
+      - type: custom:decluttering-card
+        template: slider_button_groups
+        variables:
+          - service: script.turn_on
+          - button_1: light.lg_sb_all
+          - button_2: switch.0x000b3cfffef7b582_switch
+          - button_3: light.dimmable_socket_one
+          - scene_1: script.scene_sb_night
+          - scene_2: script.scene_sb_day
+          - scene_3: script.scene_sb_search_mode
+          - scene_4: script.scene_sb_reset_default
+      - type: vertical-stack
+        cards:
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - !secret light_sb_bulb
+              - light.dimmable_socket_one
+      - type: vertical-stack
+        cards:
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - input_boolean.automation_sb_light
+              - automation.smoke_alarm_sb_test

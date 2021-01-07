@@ -28,6 +28,7 @@ ipchange.yaml
 entity_registry.yaml
 .config_entries.json
 .storage
+.storageBAK
 certificate.pem
 privkey.pem
 themes
@@ -39,3 +40,4 @@ assets
 shell_scripts
 .ps4-games.json
 remote_bak
+python_scripts

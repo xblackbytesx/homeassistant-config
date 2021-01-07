@@ -1,5 +1,4 @@
 tts:
   - platform: google_translate
-    base_url: http://10.0.221.10:8123
 
 conversation:

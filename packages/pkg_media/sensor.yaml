@@ -1,17 +1,16 @@
 - platform: sonarr_upcoming_media
   api_key: !secret sonarr_api_key
-  host: !secret synology_ip
-  port: 8989
+  host: !secret sonarr_host
+  port: 443
   days: 2
-  ssl: false
-  max: 10
+  ssl: true
 
 - platform: radarr_upcoming_media
   api_key: !secret radarr_api_key
-  host: !secret synology_ip
-  port: 8310
+  host: !secret radarr_host
+  port: 443
   days: 120
-  ssl: false
+  ssl: true
   theaters: false
   max: 10
 

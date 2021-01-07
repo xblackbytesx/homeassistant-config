@@ -1,0 +1,94 @@
+- platform: workday
+  name: Working person one
+  country: NL
+  workdays: !secret person_one_workdays
+
+- platform: workday
+  name: Working person two
+  country: NL
+  workdays: !secret person_two_workdays
+
+- platform: tod
+  name: Early Morning
+  after: '07:00'
+  before: '09:59'
+
+- platform: tod
+  name: Late Morning
+  after: '10:00'
+  before: '11:59'
+
+- platform: tod
+  name: Early Afternoon
+  after: '12:00'
+  before: '14:59'
+
+- platform: tod
+  name: Late Afternoon
+  after: '15:00'
+  before: '17:59'
+
+- platform: tod
+  name: Early Evening
+  after: '18:00'
+  before: '19:59'
+
+- platform: tod
+  name: Late Evening
+  after: '20:00'
+  before: '22:29'
+
+- platform: tod
+  name: Early Night
+  after: '22:30'
+  before: '02:59'
+
+- platform: tod
+  name: Late Night
+  after: '03:00'
+  before: '06:59'
+
+- platform: template
+  sensors:
+    time_for_dim_scenes:
+      value_template: >-
+        {{ is_state('binary_sensor.early_night', 'on')
+           or is_state('binary_sensor.late_night', 'on') }}
+
+    sa_allow_media_status_scene_switching:
+      value_template: >-
+        {{ is_state('binary_sensor.late_evening', 'on')
+           or is_state('binary_sensor.early_night', 'on')
+           or is_state('binary_sensor.late_night', 'on') }}
+
+    allow_exterior_lights:
+      value_template: >-
+        {{ is_state('binary_sensor.late_afternoon', 'on')
+           or is_state('binary_sensor.early_evening', 'on')
+           or is_state('binary_sensor.late_evening', 'on')
+           or is_state('binary_sensor.early_night', 'on')
+           or is_state('binary_sensor.early_morning', 'on') }}
+
+    allow_turning_off_bedroom_lights:
+      value_template: >-
+        {{ is_state('binary_sensor.late_morning', 'on')
+           or is_state('binary_sensor.early_afternoon', 'on')
+           or is_state('binary_sensor.late_afternoon', 'on')
+           or is_state('binary_sensor.early_evening', 'on') }}
+
+    front_door_open:
+      value_template: >-
+        {{ is_state('binary_sensor.0x00158d000446eb21_contact', 'on') }}
+
+    kitchen_window_open:
+      value_template: >-
+        {{ is_state('binary_sensor.0x00158d000446fc0a_contact', 'on') }}
+
+    back_door_open:
+      value_template: >-
+        {{ is_state('binary_sensor.0x00158d000446f39b_contact', 'on') }}
+
+    lr_door_or_window_open:
+      value_template: >-
+        {{ is_state('binary_sensor.kitchen_window_open', 'on')
+          or is_state('binary_sensor.back_door_open', 'on') }}

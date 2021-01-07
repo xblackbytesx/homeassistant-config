@@ -13,3 +13,10 @@ fan:
   - platform: xiaomi_miio
     host: !secret sa_air_purifier_ip
     token: !secret sa_air_purifier_token
+
+climate:
+  - platform: miheater
+    host: !secret miheater_ip
+    token: !secret miheater_token
+    name: xiaomi_heater
+    model: zhimi.heater.zb1

@@ -2,7 +2,7 @@ scene_sb_night:
   sequence:
     - service: light.turn_on
       data:
-        entity_id: light.0x00178801023c1a33_light
+        entity_id: !secret light_sb_bulb
         xy_color: [0.137, 0.041]
         brightness_pct: 60
         transition: 2
@@ -17,7 +17,7 @@ scene_sb_day:
   sequence:
     - service: light.turn_on
       data:
-        entity_id: light.0x00178801023c1a33_light
+        entity_id: !secret light_sb_bulb
         xy_color: [0.507, 0.414]
         brightness_pct: 100
         transition: 2

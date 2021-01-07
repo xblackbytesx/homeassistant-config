@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Remove if exists
-rm -rf themes
-rm -rf custom_components
-rm -rf www/custom-lovelace
+sudo rm -rf themes
+sudo rm -rf custom_components
+sudo rm -rf www/custom-lovelace
 
 echo "Fetching themes"
 mkdir -p themes
@@ -25,6 +25,13 @@ mkdir -p custom_components/sonarr_upcoming_media
 wget https://raw.githubusercontent.com/custom-components/sensor.sonarr_upcoming_media/master/custom_components/sonarr_upcoming_media/__init__.py -O custom_components/sonarr_upcoming_media/__init__.py
 wget https://raw.githubusercontent.com/custom-components/sensor.sonarr_upcoming_media/master/custom_components/sonarr_upcoming_media/sensor.py -O custom_components/sonarr_upcoming_media/sensor.py
 wget https://raw.githubusercontent.com/custom-components/sensor.sonarr_upcoming_media/master/custom_components/sonarr_upcoming_media/manifest.json -O custom_components/sonarr_upcoming_media/manifest.json
+
+echo "Installing Mi Heater Component"
+mkdir -p custom_components/miheater
+wget https://raw.githubusercontent.com/ee02217/homeassistant-mi-heater/master/custom_components/miheater/__init__.py -O custom_components/miheater/__init__.py
+wget https://raw.githubusercontent.com/ee02217/homeassistant-mi-heater/master/custom_components/miheater/climate.py -O custom_components/miheater/climate.py
+wget https://raw.githubusercontent.com/ee02217/homeassistant-mi-heater/master/custom_components/miheater/manifest.json -O custom_components/miheater/manifest.json
+wget https://raw.githubusercontent.com/ee02217/homeassistant-mi-heater/master/custom_components/miheater/services.yaml -O custom_components/miheater/services.yaml
 
 echo "Installing ZigBee NetworkMap Component"
 git clone git@github.com:rgruebel/ha_zigbee2mqtt_networkmap.git custom_components/zigbee_networkmap
@@ -56,13 +63,13 @@ echo "Installing Auto-Entities Card"
 mkdir -p www/custom-lovelace/lovelace-auto-entities
 wget https://raw.githubusercontent.com/thomasloven/lovelace-auto-entities/master/auto-entities.js -O www/custom-lovelace/lovelace-auto-entities/auto-entities.js
 
-# echo "Installing Swipe Navigation Card"
-# mkdir -p www/custom-lovelace/lovelace-swipe-navigation
-# wget https://raw.githubusercontent.com/maykar/lovelace-swipe-navigation/master/swipe-navigation.js -O www/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js
+echo "Installing Swipe Navigation Card"
+mkdir -p www/custom-lovelace/lovelace-swipe-navigation
+wget https://raw.githubusercontent.com/maykar/lovelace-swipe-navigation/master/swipe-navigation.js -O www/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js
 
-echo "Installing Swipe Card"
-mkdir -p www/custom-lovelace/swipe-card
-wget https://raw.githubusercontent.com/bramkragten/swipe-card/master/dist/swipe-card.js -O www/custom-lovelace/swipe-card/swipe-card.js
+# echo "Installing Swipe Card"
+# mkdir -p www/custom-lovelace/swipe-card
+# wget https://raw.githubusercontent.com/bramkragten/swipe-card/master/dist/swipe-card.js -O www/custom-lovelace/swipe-card/swipe-card.js
 
 echo "Installing Button Card"
 mkdir -p www/custom-lovelace/button-card
@@ -109,9 +116,9 @@ mkdir -p www/custom-lovelace/lovelace-state-switch
 wget https://raw.githubusercontent.com/thomasloven/lovelace-state-switch/master/state-switch.js -O www/custom-lovelace/lovelace-state-switch/state-switch.js
 
 echo "Installing Air Purifier Card"
-cp -Rp /config/assets/custom_cards/air-purifier /config/www/custom-lovelace/
+cp -Rp assets/custom_cards/air-purifier www/custom-lovelace/
 
 echo "Bump versions in resources"
 EPOCH=$(date +%s)
-git checkout master -- lovelace/resources.yaml
+git checkout docker -- lovelace/resources.yaml
 sed -i 's/\.js/\.js?v='$EPOCH'/g' lovelace/resources.yaml

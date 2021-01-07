@@ -1,0 +1,94 @@
+icon: mdi:numeric-0-box
+cards:
+  - !include ../cards/ground_floor_groups.yaml
+  - !include ../cards/floorplan_ground_floor.yaml
+  - !include ../cards/climate.yaml
+  - type: entities
+    title: Ground floor switches
+    entities:
+      - switch.0x000d6ffffedad23c_switch
+      - switch.0x000d6ffffea6df64_switch
+      - switch.0x000d6ffffea6e967_switch
+      - light.dimmable_socket_one
+      - switch.beamer_screen
+  - type: entities
+    title: Ground floor doors and windows
+    show_header_toggle: false
+    entities:
+      - binary_sensor.0x00158d000446eb21_contact
+      - binary_sensor.0x00158d000446fc0a_contact
+      - binary_sensor.0x00158d000446f39b_contact
+  - type: entities
+    entities:
+      - binary_sensor.0x00158d0003612f9b_smoke
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: Living room lighting
+      entities:
+        - light.kitchen
+        - light.sitting_area
+        - light.ledstrip_tv_cabinet
+        - light.ledstrip_black_cabinet
+        - light.ledstrip_kitchen_cabinet
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: Hallway lighting
+      entities:
+        - light.lg_hw_all
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: Toilet lighting
+      entities:
+        - light.lg_toilet_all
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: All ground floor lights
+      entities:
+        - light.0x00178801081b61c2_light
+        - light.0x00178801081b3c89_light
+        - light.hue_spot_kitchen_counter_1
+        - light.hue_spot_kitchen_counter_2
+        - light.hue_spot_kitchen_counter_3
+        - light.hue_spot_kitchen_counter_4
+        - light.0x00178801081af093_light
+        - light.hue_iris_tv_cabinet
+        - light.hue_go_closet_l
+        - light.hue_go_closet_r
+        - light.ledstrip_tv_cabinet
+        - light.ledstrip_undecided
+        - light.ledstrip_black_cabinet
+        - light.ledstrip_kitchen_cabinet
+        - light.0x0017880103ea3a60_light
+  - !include ../cards/camera_dafang.yaml
+  - !include ../cards/camera_xiaofang_1.yaml
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: custom:auto-entities
+      show_empty: false
+      card:
+        type: entities
+        title: Ground floor automations
+      filter:
+        include:
+          - entity_id: "automation.hw*"
+          - entity_id: "automation.sa*"
+          - entity_id: "automation.kitchen*"

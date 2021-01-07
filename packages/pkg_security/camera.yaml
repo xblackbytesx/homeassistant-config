@@ -1,5 +1,5 @@
 # - platform: synology
-#   url: !secret synology_url
+#   url: !secret synology_host
 #   username: !secret synology_username
 #   password: !secret synology_password
 #   timeout: 15

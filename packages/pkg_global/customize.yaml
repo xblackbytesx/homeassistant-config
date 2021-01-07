@@ -1,0 +1,138 @@
+group.all_automations:
+  hidden: false
+
+# Power sockets
+# Socket 1
+switch.0x000d6ffffedad23c_switch:
+  friendly_name: TV Cabinet
+  icon: mdi:television-classic
+binary_sensor.0x000d6ffffedad23c_update_available:
+  friendly_name: Tradfri Outlet TV Cabinet
+sensor.0x000d6ffffedad23c_linkquality:
+  friendly_name: Tradfri Outlet TV Cabinet
+
+#socket 2
+switch.0x000d6ffffea6df64_switch:
+  friendly_name: Black Cabinet
+  icon: mdi:power-socket-eu
+binary_sensor.0x000d6ffffea6df64_update_available:
+  friendly_name: Tradfri Outlet Black Cabinet
+sensor.0x000d6ffffea6df64_linkquality:
+  friendly_name: Tradfri Outlet Black Cabinet
+
+# Socket 3
+switch.0x000d6ffffea6e967_switch:
+  friendly_name: Exterior lighting
+  icon: mdi:power-socket-eu
+binary_sensor.0x000d6ffffea6e967_update_available:
+  friendly_name: Tradfri Outlet Exterior
+sensor.0x000d6ffffea6e967_linkquality:
+  friendly_name: Tradfri Outlet Exterior
+
+# Socket 5
+switch.0x000d6ffffedaf667_switch:
+  friendly_name: Large bedroom
+  icon: mdi:television-classic
+binary_sensor.0x000d6ffffedaf667_update_available:
+  friendly_name: Tradfri Outlet Large bedroom
+sensor.0x000d6ffffedaf667_linkquality:
+  friendly_name: Tradfri Outlet Large bedroom
+
+# Socket
+switch.0x086bd7fffe5185b6_switch:
+  friendly_name: Large bedroom Fan
+  icon: mdi:fan
+binary_sensor.0x086bd7fffe5185b6_update_available:
+  friendly_name: Tradfri Outlet Large bedroom Fan
+sensor.0x086bd7fffe5185b6_linkquality:
+  friendly_name: Tradfri Outlet Large bedroom Fan
+
+# Socket 6
+switch.0x000d6ffffedc5e05_switch:
+  friendly_name: Small bedroom
+  icon: mdi:power-socket-eu
+binary_sensor.0x000d6ffffedc5e05_update_available:
+  friendly_name: Tradfri Outlet Small bedroom
+sensor.0x000d6ffffedc5e05_linkquality:
+  friendly_name: Tradfri Outlet Small bedroom
+
+# Socket
+switch.0x000b3cfffef7b582_switch:
+  friendly_name: Small bedroom Fan
+  icon: mdi:fan
+binary_sensor.0x000b3cfffef7b582_update_available:
+  friendly_name: Tradfri Outlet Small bedroom Fan
+sensor.0x000b3cfffef7b582_linkquality:
+  friendly_name: Tradfri Outlet Small bedroom Fan
+
+# Socket
+switch.0xccccccfffeb221dd_switch:
+  friendly_name: Master bedroom Fan | L
+  icon: mdi:fan
+binary_sensor.0xccccccfffeb221dd_update_available:
+  friendly_name: Tradfri Outlet Master bedroom Fan | L
+sensor.0xccccccfffeb221dd_linkquality:
+  friendly_name: Tradfri Outlet Master bedroom Fan | L
+
+# Socket
+switch.0xccccccfffeb21d81_switch:
+  friendly_name: Master bedroom Fan | R
+  icon: mdi:fan
+binary_sensor.0xccccccfffeb21d81_update_available:
+  friendly_name: Tradfri Outlet Master bedroom Fan | R
+sensor.0xccccccfffeb21d81_linkquality:
+  friendly_name: Tradfri Outlet Master bedroom Fan | R
+
+# Socket
+switch.0x000d6ffffea7daa5_switch:
+  friendly_name: Attic/dryer
+  icon: mdi:power-socket-eu
+binary_sensor.0x000d6ffffea7daa5_update_available:
+  friendly_name: Tradfri Outlet Attic/Dryer
+sensor.0x000d6ffffea7daa5_linkquality:
+  friendly_name: Tradfri Outlet Attic/Dryer
+
+# Socket
+switch.0x000d6ffffed9d60d_switch:
+  friendly_name: Office/desks
+  icon: mdi:power-socket-eu
+binary_sensor.0x000d6ffffed9d60d_update_available:
+  friendly_name: Tradfri Outlet Office/Desks
+sensor.0x000d6ffffed9d60d_linkquality:
+  friendly_name: Tradfri Outlet Office/Desks
+
+# Battery status
+sensor.0x00158d000313127e_battery:
+  friendly_name: Vibration sensor 1
+  device_class: battery
+sensor.0x00158d000319ad0f_battery:
+  friendly_name: Vibration sensor 2
+  device_class: battery
+sensor.0xccccccfffe40b07b_battery:
+  friendly_name: Tradfri remote
+  device_class: battery
+sensor.0x00158d00027c3536_battery:
+  friendly_name: Aqara switch 1
+  device_class: battery
+sensor.0x00158d000404f97e_battery:
+  friendly_name: Aqara switch 2
+  device_class: battery
+sensor.0xec1bbdfffed45ff8_battery:
+  friendly_name: Tradfri on/off switch 1
+  device_class: battery
+
+
+sensor.0x00158d00033e347d_click:
+  friendly_name: Wall switch Large bedroom
+
+
+automation.global_001:
+  friendly_name: Global | Create nightly backup
+automation.global_002:
+  friendly_name: Global | Set theme at startup
+
+automation.sa_003:
+  friendly_name: SA | Catflap activity
+
+automation.ex_003:
+  friendly_name: Trash collection info

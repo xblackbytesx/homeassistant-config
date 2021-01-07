@@ -1,4 +1,0 @@
-title: scenes_view
-icon: mdi:image-filter-hdr
-cards:
-  - !include cards/scenes.yaml

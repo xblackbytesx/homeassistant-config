@@ -3,21 +3,21 @@ title: Bier Estates
 decluttering_templates: !include_dir_merge_named lovelace/decluttering_templates/
 
 views:
-  - !include lovelace/home.yaml
-  - !include lovelace/ground_floor.yaml
-  - !include lovelace/first_floor/navigation.yaml
-  - !include lovelace/attic.yaml
-  - !include lovelace/exterior.yaml
-  - !include lovelace/people.yaml
-  - !include lovelace/plants.yaml
-  - !include lovelace/media.yaml
-  - !include lovelace/remote/remote_navigation.yaml
-  - !include lovelace/scenes.yaml
-  - !include lovelace/security.yaml
-  - !include lovelace/network.yaml
-  - !include lovelace/finance.yaml
-  - !include lovelace/astronomy.yaml
-  - !include lovelace/disease.yaml
-  - !include lovelace/battery.yaml
-  - !include lovelace/automation.yaml
-  - !include lovelace/overrides.yaml
+  - !include lovelace/pages/home.yaml
+  - !include lovelace/pages/ground_floor.yaml
+  - !include lovelace/pages/first_floor.yaml
+  - !include lovelace/pages/attic.yaml
+  - !include lovelace/pages/exterior.yaml
+  - !include lovelace/pages/people.yaml
+  # - !include lovelace/pages/plants.yaml
+  - !include lovelace/pages/media.yaml
+  - !include lovelace/pages/remote.yaml
+  - !include lovelace/pages/scenes.yaml
+  - !include lovelace/pages/security.yaml
+  - !include lovelace/pages/network.yaml
+  - !include lovelace/pages/finance.yaml
+  - !include lovelace/pages/astronomy.yaml
+  - !include lovelace/pages/disease.yaml
+  - !include lovelace/pages/battery.yaml
+  - !include lovelace/pages/automation.yaml
+  - !include lovelace/pages/overrides.yaml

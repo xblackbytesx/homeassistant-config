@@ -1,34 +1,34 @@
-- url: /local/custom-lovelace/decluttering-card/decluttering-card.js
+- url: /local/custom-lovelace/decluttering-card/decluttering-card.js?v=1606639294
   type: module
-- url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js
+- url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=1606639294
   type: js
-- url: /local/custom-lovelace/lovelace-auto-entities/auto-entities.js
+- url: /local/custom-lovelace/lovelace-auto-entities/auto-entities.js?v=1606639294
   type: module
-# - url: /local/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js
+- url: /local/custom-lovelace/lovelace-swipe-navigation/swipe-navigation.js?v=1606639294
+  type: module
+# - url: /local/custom-lovelace/swipe-card/swipe-card.js?v=1606639294
 #   type: module
-- url: /local/custom-lovelace/swipe-card/swipe-card.js
-  type: module
-- url: /local/custom-lovelace/vertical-stack-in-card/vertical-stack-in-card.js
+- url: /local/custom-lovelace/vertical-stack-in-card/vertical-stack-in-card.js?v=1606639294
   type: js
-- url: /local/custom-lovelace/vertical-style-card/vertical-style-card.js
+- url: /local/custom-lovelace/vertical-style-card/vertical-style-card.js?v=1606639294
   type: js
-- url: /local/custom-lovelace/lovelace-bar-card/bar-card.js
+- url: /local/custom-lovelace/lovelace-bar-card/bar-card.js?v=1606639294
   type: module
-- url: /local/custom-lovelace/lovelace-card-tools/card-tools.js
+- url: /local/custom-lovelace/lovelace-card-tools/card-tools.js?v=1606639294
   type: module
-- url: /local/custom-lovelace/lovelace-fold-entity-row/fold-entity-row.js
+- url: /local/custom-lovelace/lovelace-fold-entity-row/fold-entity-row.js?v=1606639294
   type: module
-- url: /local/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js
+- url: /local/custom-lovelace/lovelace-mini-graph-card/mini-graph-card-bundle.js?v=1606639294
   type: module
-- url: /local/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js
+- url: /local/custom-lovelace/lovelace-mini-media-player/mini-media-player-bundle.js?v=1606639294
   type: module
-- url: /local/custom-lovelace/air-purifier/air-purifier-card.js
+- url: /local/custom-lovelace/air-purifier/air-purifier-card.js?v=1606639294
   type: module
-- url: /local/custom-lovelace/card-mod/card-mod.js
+- url: /local/custom-lovelace/card-mod/card-mod.js?v=1606639294
   type: module
-- url: /local/custom-lovelace/lovelace-layout-card/layout-card.js
+- url: /local/custom-lovelace/lovelace-layout-card/layout-card.js?v=1606639294
   type: module
-- url: /local/custom-lovelace/lovelace-state-switch/state-switch.js
+- url: /local/custom-lovelace/lovelace-state-switch/state-switch.js?v=1606639294
   type: module
-- url: /local/custom-lovelace/button-card/button-card.js
+- url: /local/custom-lovelace/button-card/button-card.js?v=1606639294
   type: module

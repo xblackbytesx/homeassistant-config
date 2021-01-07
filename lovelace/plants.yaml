@@ -1,4 +1,0 @@
-title: Plants
-icon: mdi:leaf
-cards:
-  !include cards/plants.yaml

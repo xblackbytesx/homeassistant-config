@@ -1,0 +1,44 @@
+title: Attic
+icon: mdi:numeric-2-box
+cards:
+  - !include ../cards/attic_groups.yaml
+  - type: thermostat
+    entity: climate.zhimi_heater_zb1_64_90_c1_7c_88_d7
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: All attic lights
+      entities:
+        - light.0x000b3cfffefab3f6_light
+        - light.0x086bd7fffe020f14_light
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: All office lights
+      entities:
+        - light.0x00178801023c1b25_light
+        - light.0x0017880102460013_light
+  - type: entities
+    title: Attic switches
+    entities:
+      - switch.0x000d6ffffea7daa5_switch
+      - switch.0x000d6ffffed9d60d_switch
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: custom:auto-entities
+      show_empty: false
+      card:
+        type: entities
+        title: Attic automations
+      filter:
+        include:
+          - entity_id: "automation.attic*"

@@ -80,13 +80,13 @@
 - platform: group
   name: LG | SB | All
   entities:
-    - light.0x00178801023c1a33_light
+    - !secret light_sb_bulb
     - light.dimmable_socket_one
 
 - platform: group
   name: LG | LB | All
   entities:
-    - light.0x00178801039d140f_light
+    - !secret light_mb_bulb
     - light.ledstrip_large_bedroom
 
 - platform: group

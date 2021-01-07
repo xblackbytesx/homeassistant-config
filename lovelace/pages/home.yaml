@@ -1,0 +1,88 @@
+title: Home
+icon: mdi:home
+cards:
+  - !include ../cards/people.yaml
+  - type: entities
+    entities:
+      - switch.beamer_screen
+      - switch.sunscreen
+      - cover.attic_shutters
+  - !include ../cards/climate.yaml
+  - type: custom:air-purifier-card
+    entity: fan.xiaomi_miio_device
+  - !include ../cards/weather.yaml
+  - !include ../cards/solar_panels.yaml
+  - !include ../cards/gas_prices.yaml
+  - type: entities
+    title: Power Sockets
+    entities:
+      - switch.0x000d6ffffedad23c_switch
+      - switch.0x000d6ffffea6df64_switch
+      - switch.0x000d6ffffea6e967_switch
+      - switch.0x000d6ffffedaf667_switch
+      - switch.0x000d6ffffedc5e05_switch
+      - switch.0x000d6ffffea7daa5_switch
+      - switch.0x000d6ffffed9d60d_switch
+      - light.dimmable_socket_one
+      # - light.dimmable_socket_two
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: Hallway lighting
+      entities:
+        - light.0x0017880103ea3a60_light
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: Living room lighting
+      entities:
+        - light.kitchen
+        - light.sitting_area
+        - light.ledstrip_tv_cabinet
+        - light.ledstrip_black_cabinet
+        - light.ledstrip_kitchen_cabinet
+  - !include ../cards/garbage_schedule.yaml
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      !include ../cards/motion_detected.yaml
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: Corridor lighting
+      entities:
+        - light.0x00178801030a3dde_light
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: entities
+      title: Exterior lighting
+      entities:
+        - light.0x086bd7fffe035d36_light
+        - light.0x000b57fffee35b50_light
+  - type: conditional
+    conditions:
+      - entity: input_boolean.advanced_config
+        state: "on"
+    card:
+      type: custom:auto-entities
+      show_empty: false
+      card:
+        type: entities
+        title: Programmable switches
+      filter:
+        include:
+          - entity_id: "switch.programmable_*"

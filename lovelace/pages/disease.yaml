@@ -1,0 +1,4 @@
+title: Disease
+icon: mdi:molecule
+cards:
+  !include ../cards/coronavirus.yaml

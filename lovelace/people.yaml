@@ -1,7 +1,0 @@
-title: People
-icon: mdi:account-multiple
-cards:
-  - type: horizontal-stack
-    cards:
-      - !include cards/person_one_info.yaml
-      - !include cards/person_two_info.yaml

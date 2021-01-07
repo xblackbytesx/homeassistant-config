@@ -1,0 +1,8 @@
+homeassistant:
+  customize: !include customize.yaml
+
+automation: !include_dir_merge_list automation/
+input_boolean: !include boolean.yaml
+input_select: !include input_select.yaml
+binary_sensor: !include binary_sensor.yaml
+sensor: !include_dir_merge_list sensor/

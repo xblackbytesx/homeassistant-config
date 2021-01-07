@@ -41,7 +41,7 @@ scene_mb_search_mode:
       entity_id: 
         - input_boolean.automation_mb_light
 
-
+        
 scene_mb_reset_default:
   alias: Resets the master bedroom default scene
   sequence:
