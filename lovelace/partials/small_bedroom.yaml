@@ -36,3 +36,11 @@ cards:
             entities:
               - input_boolean.automation_sb_light
               - automation.smoke_alarm_sb_test
+
+  - type: vertical-stack
+    cards:
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.0x00158d0001dd4719_temperature
+          - sensor.0x00158d0001dd4719_humidity
+          - sensor.0x00158d0001dd4719_pressure
