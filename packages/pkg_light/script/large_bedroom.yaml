@@ -14,7 +14,7 @@ scene_lb_night:
         transition: 2
     - service: light.turn_on
       data:
-        entity_id: light.0x588e81fffed89fc4
+        entity_id: light.0x588e81fffec9e74f
         xy_color: [0.137, 0.041]
         brightness: 254
         transition: 2
@@ -36,7 +36,7 @@ scene_lb_day:
         transition: 2
     - service: light.turn_on
       data:
-        entity_id: light.0x588e81fffed89fc4
+        entity_id: light.0x588e81fffec9e74f
         xy_color: [0.149, 0.291]
         brightness: 254
         transition: 2
