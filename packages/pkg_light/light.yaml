@@ -89,6 +89,7 @@
   entities:
     - !secret light_mb_bulb
     - light.ledstrip_large_bedroom
+    - light.0x588e81fffec9e74f
 
 - platform: group
   name: LG | CO | All

@@ -42,12 +42,6 @@ scene_sb_search_mode:
         entity_id: light.lg_sb_all
         xy_color: [0.311, 0.327]
         brightness_pct: 100
-    - service: light.turn_on
-      data:
-        entity_id: light.0x588e81fffed89fc4
-        xy_color: [0.312, 0.322]
-        brightness: 254
-        transition: 2
     - service: homeassistant.turn_off
       entity_id: 
         - input_boolean.automation_sb_light
