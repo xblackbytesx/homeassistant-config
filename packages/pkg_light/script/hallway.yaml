@@ -4,8 +4,8 @@ scene_hw_night:
       data:
         entity_id: light.lg_hw_all
         brightness_pct: 15
-    # - service: switch.turn_on
-    #   entity_id: switch.0x000d6ffffedc5e05_switch
+    - service: switch.turn_on
+      entity_id: switch.0xec1bbdfffefd5a85_switch
 
 
 scene_hw_day:
@@ -14,8 +14,8 @@ scene_hw_day:
       data:
         entity_id: light.lg_hw_all
         brightness_pct: 45
-    # - service: switch.turn_on
-    #   entity_id: switch.0x000d6ffffedc5e05_switch
+    - service: switch.turn_on
+      entity_id: switch.0xec1bbdfffefd5a85_switch
 
 
 scene_hw_search_mode:
@@ -24,8 +24,8 @@ scene_hw_search_mode:
       data:
         entity_id: light.lg_hw_all
         brightness_pct: 100
-    # - service: switch.turn_on
-    #   entity_id: switch.0x000d6ffffedc5e05_switch
+    - service: switch.turn_on
+      entity_id: switch.0xec1bbdfffefd5a85_switch
     - service: homeassistant.turn_off
       entity_id: input_boolean.automation_hw_light
 
