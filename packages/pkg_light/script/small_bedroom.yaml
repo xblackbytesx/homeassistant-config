@@ -11,6 +11,12 @@ scene_sb_night:
         entity_id: light.dimmable_socket_one
         brightness_pct: 60
         transition: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.0x588e81fffed89fc4
+        xy_color: [0.579, 0.244]
+        brightness: 244
+        transition: 2
 
 
 scene_sb_day:
@@ -21,6 +27,12 @@ scene_sb_day:
         xy_color: [0.507, 0.414]
         brightness_pct: 100
         transition: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.0x588e81fffed89fc4
+        xy_color: [0.579, 0.244]
+        brightness: 254
+        transition: 2
 
 
 scene_sb_search_mode:
@@ -30,6 +42,12 @@ scene_sb_search_mode:
         entity_id: light.lg_sb_all
         xy_color: [0.311, 0.327]
         brightness_pct: 100
+    - service: light.turn_on
+      data:
+        entity_id: light.0x588e81fffed89fc4
+        xy_color: [0.312, 0.322]
+        brightness: 254
+        transition: 2
     - service: homeassistant.turn_off
       entity_id: 
         - input_boolean.automation_sb_light

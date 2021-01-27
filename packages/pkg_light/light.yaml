@@ -81,6 +81,7 @@
   name: LG | SB | All
   entities:
     - !secret light_sb_bulb
+    - light.0x588e81fffed89fc4
     - light.dimmable_socket_one
 
 - platform: group
