@@ -22,6 +22,9 @@ binary_sensor.0x0017880102026161_occupancy:
 binary_sensor.0x00158d00034911fc_occupancy:
   friendly_name: Sitting area/closet
   device_class: motion
+binary_sensor.0x0017880102030677_occupancy:
+  friendly_name: Sitting Area wall
+  device_class: motion
 binary_sensor.0x00158d00033a43ef_occupancy:
   friendly_name: Kitchen/front
   device_class: motion
@@ -96,6 +99,8 @@ sensor.0x0017880102026161_battery:
 sensor.0x00158d00034911fc_battery:
   friendly_name: Motion sensor Sitting area/closet
   device_class: battery
+sensor.0x0017880102030677_battery:
+  friendly_name: Motion sensor Sitting area/wall
 sensor.0x00178801020357e5_battery:
   friendly_name: Motion sensor Corridor
   device_class: battery
