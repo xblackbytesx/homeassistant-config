@@ -36,6 +36,13 @@ http:
     - https://google.com
     - https://www.home-assistant.io
 
+panel_iframe:
+  router:
+    title: "Zigbee"
+    icon: "zigbee"
+    url: !secret zigbee_dashboard_url
+    require_admin: true
+
 lovelace:
   mode: yaml
   resources: !include lovelace/resources.yaml
