@@ -37,9 +37,9 @@ http:
     - https://www.home-assistant.io
 
 panel_iframe:
-  router:
+  zigbee:
     title: "Zigbee"
-    icon: "zigbee"
+    icon: mdi:zigbee
     url: !secret zigbee_dashboard_url
     require_admin: true
 
