@@ -34,7 +34,7 @@ cards:
       - entity_5: script.scene_lb_disco_mode
       - entity_6: script.scene_lb_disco_mode
       - entity_7: script.scene_lb_disco_mode
-      - entity_4: script.scene_lb_reset_default
+      - entity_8: script.scene_lb_reset_default
   - type: custom:decluttering-card
     template: scene_tile
     variables:

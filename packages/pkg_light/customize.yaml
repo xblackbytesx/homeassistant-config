@@ -283,6 +283,10 @@ script.scene_lb_night:
   friendly_name: Night
   icon: mdi:weather-night
 
+script.scene_lb_disco_mode:
+  friendly_name: Disco Mode
+  icon: mdi:party-popper
+
 script.scene_lb_search_mode:
   friendly_name: Search Mode
   icon: mdi:magnify
