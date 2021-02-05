@@ -23,13 +23,17 @@ cards:
       - entity_3: script.scene_hw_search_mode
       - entity_4: script.scene_hw_reset_default
   - type: custom:decluttering-card
-    template: scene_tile
+    template: scene_tile_double
     variables:
       - title: Large bedroom
       - service: script.turn_on
       - entity_1: script.scene_lb_night
       - entity_2: script.scene_lb_day
       - entity_3: script.scene_lb_search_mode
+      - entity_4: script.scene_lb_reset_default
+      - entity_5: script.scene_lb_disco_mode
+      - entity_6: script.scene_lb_disco_mode
+      - entity_7: script.scene_lb_disco_mode
       - entity_4: script.scene_lb_reset_default
   - type: custom:decluttering-card
     template: scene_tile

@@ -42,6 +42,130 @@ scene_lb_day:
         transition: 2
 
 
+scene_lb_disco_mode:
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: 
+        - input_boolean.automation_lb_light
+
+    - service: light.turn_on
+      data:
+        entity_id: 
+          - light.ledstrip_large_bedroom
+        effect: Disco
+
+    - repeat:
+        while:
+          - condition: template
+            value_template: "{{ states.light.ledstrip_large_bedroom.attributes.effect == 'Disco' }}"
+        sequence:
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 255
+                - 10
+                - 10
+            entity_id:
+              - !secret light_mb_bulb
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 0
+                - 0
+                - 255
+            entity_id:
+              - light.0x588e81fffec9e74f
+          - delay: '1.1'
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 0
+                - 0
+                - 255
+            entity_id:
+              - !secret light_mb_bulb
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 255
+                - 10
+                - 10
+            entity_id:
+              - light.0x588e81fffec9e74f
+          - delay: '1.1'
+
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 57
+                - 189
+                - 255
+            entity_id:
+              - !secret light_mb_bulb
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 162
+                - 255
+                - 71
+            entity_id:
+              - light.0x588e81fffec9e74f
+          - delay: '1.1'
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 162
+                - 255
+                - 71
+            entity_id:
+              - !secret light_mb_bulb
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 57
+                - 189
+                - 255
+            entity_id:
+              - light.0x588e81fffec9e74f
+          - delay: '1.1'
+
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 255
+                - 50
+                - 135
+            entity_id:
+              - !secret light_mb_bulb
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 8
+                - 85
+                - 255
+            entity_id:
+              - light.0x588e81fffec9e74f
+          - delay: '1.1'
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 8
+                - 85
+                - 255
+            entity_id:
+              - !secret light_mb_bulb
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 255
+                - 50
+                - 135
+            entity_id:
+              - light.0x588e81fffec9e74f
+          - delay: '1.1'
+  mode: queued
+
+
 scene_lb_search_mode:
   sequence:
     - service: light.turn_on
