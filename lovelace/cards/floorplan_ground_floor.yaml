@@ -11,28 +11,28 @@ elements:
   - type: state-icon
     tap_action:
       action: toggle
-    entity: light.hue_iris_tv_cabinet
+    entity: light.0x00178801001f43af
     style:
       bottom: 12%
       right: 8%
   - type: state-icon
     tap_action:
       action: toggle
-    entity: light.hue_candle_salt_lamp
+    entity: light.0x0017880102634fc4
     style:
       bottom: 12%
       right: 25%
   - type: state-icon
     tap_action:
       action: toggle
-    entity: light.hue_go_closet_l
+    entity: light.0x0017880101182a59
     style:
       top: 22%
       right: 25%
   - type: state-icon
     tap_action:
       action: toggle
-    entity: light.hue_go_closet_r
+    entity: light.0x001788010118b8e1 
     style:
       top: 25%
       right: 17%

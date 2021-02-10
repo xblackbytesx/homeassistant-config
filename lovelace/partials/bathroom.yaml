@@ -27,8 +27,8 @@ cards:
           - type: entities
             show_header_toggle: false
             entities:
-              - light.hue_candle_bathroom_l
-              - light.hue_bulb_bathroom_r
+              - light.0x0017880103612ccb 
+              - light.0x00178801038e968f 
       - type: vertical-stack
         cards:
           - type: entities
