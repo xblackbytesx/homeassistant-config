@@ -77,12 +77,6 @@
     - light.0x00178801030a3dde_light
 
 - platform: group
-  name: LG | Attic | All
-  entities:
-    - light.0x000b3cfffefab3f6_light
-    - light.0x086bd7fffe020f14_light
-
-- platform: group
   name: LG | Office | All
   entities:
     - light.0x00178801023c1b25_light
@@ -111,6 +105,24 @@
   name: lg_bathroom_all
   command_topic: "zigbee2mqtt/lg_bathroom_all/set"
   state_topic: "zigbee2mqtt/lg_bathroom_all"
+  color_temp: true
+  brightness: true
+  rgb: true
+
+- platform: mqtt
+  schema: json
+  name: lg_attic_all
+  command_topic: "zigbee2mqtt/lg_attic_all/set"
+  state_topic: "zigbee2mqtt/lg_attic_all"
+  color_temp: true
+  brightness: true
+  rgb: false
+
+- platform: mqtt
+  schema: json
+  name: lg_office_all
+  command_topic: "zigbee2mqtt/lg_office_all/set"
+  state_topic: "zigbee2mqtt/lg_office_all"
   color_temp: true
   brightness: true
   rgb: true
