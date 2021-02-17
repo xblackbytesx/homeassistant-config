@@ -36,8 +36,7 @@
 - platform: group
   name: LG | Kitchen | All
   entities:
-    - light.lg_kitchen_table
-    - light.lg_kitchen_counter
+    - light.lg_kitchen_zigbee
     - light.ledstrip_kitchen_cabinet
 
 - platform: group
@@ -104,6 +103,15 @@
   color_temp: true
   brightness: true
   rgb: true
+
+- platform: mqtt
+  schema: json
+  name: lg_kitchen_zigbee
+  command_topic: "zigbee2mqtt/lg_kitchen_zigbee/set"
+  state_topic: "zigbee2mqtt/lg_kitchen_zigbee"
+  color_temp: true
+  brightness: true
+  rgb: false
 
 - platform: mqtt
   schema: json
