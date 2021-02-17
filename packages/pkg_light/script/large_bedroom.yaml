@@ -2,7 +2,7 @@ scene_lb_night:
   sequence:
     - service: light.turn_on
       data:
-        entity_id: !secret light_mb_bulb
+        entity_id: light.lg_lb_zigbee
         xy_color: [0.137, 0.041]
         brightness_pct: 90
         transition: 2
@@ -11,12 +11,6 @@ scene_lb_night:
         entity_id: light.ledstrip_large_bedroom
         xy_color: [0.137, 0.041]
         brightness_pct: 40
-        transition: 2
-    - service: light.turn_on
-      data:
-        entity_id: light.0x588e81fffec9e74f
-        xy_color: [0.137, 0.041]
-        brightness: 254
         transition: 2
 
 

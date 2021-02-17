@@ -2,8 +2,8 @@ scene_sb_night:
   sequence:
     - service: light.turn_on
       data:
-        entity_id: !secret light_sb_bulb
-        xy_color: [0.137, 0.041]
+        entity_id: light.lg_sb_zigbee
+        xy_color: [0.579, 0.244]
         brightness_pct: 60
         transition: 2
     - service: light.turn_on
@@ -11,19 +11,13 @@ scene_sb_night:
         entity_id: light.dimmable_socket_one
         brightness_pct: 60
         transition: 2
-    - service: light.turn_on
-      data:
-        entity_id: light.0x588e81fffed89fc4
-        xy_color: [0.579, 0.244]
-        brightness: 244
-        transition: 2
 
 
 scene_sb_day:
   sequence:
     - service: light.turn_on
       data:
-        entity_id: !secret light_sb_bulb
+        entity_id: !secret light_sb_busb
         xy_color: [0.507, 0.414]
         brightness_pct: 100
         transition: 2
@@ -33,6 +27,130 @@ scene_sb_day:
         xy_color: [0.579, 0.244]
         brightness: 254
         transition: 2
+
+
+scene_sb_disco_mode:
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: 
+        - input_boolean.automation_sb_light
+
+    - service: light.turn_on
+      data:
+        entity_id: 
+          - light.ledstrip_large_bedroom
+        effect: Disco
+
+    - repeat:
+        while:
+          - condition: template
+            value_template: "{{ states.light.ledstrip_large_bedroom.attributes.effect == 'Disco' }}"
+        sequence:
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 255
+                - 10
+                - 10
+            entity_id:
+              - !secret light_mb_busb
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 0
+                - 0
+                - 255
+            entity_id:
+              - light.0x588e81fffec9e74f
+          - delay: '1.1'
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 0
+                - 0
+                - 255
+            entity_id:
+              - !secret light_mb_busb
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 255
+                - 10
+                - 10
+            entity_id:
+              - light.0x588e81fffec9e74f
+          - delay: '1.1'
+
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 57
+                - 189
+                - 255
+            entity_id:
+              - !secret light_mb_busb
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 162
+                - 255
+                - 71
+            entity_id:
+              - light.0x588e81fffec9e74f
+          - delay: '1.1'
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 162
+                - 255
+                - 71
+            entity_id:
+              - !secret light_mb_busb
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 57
+                - 189
+                - 255
+            entity_id:
+              - light.0x588e81fffec9e74f
+          - delay: '1.1'
+
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 255
+                - 50
+                - 135
+            entity_id:
+              - !secret light_mb_busb
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 8
+                - 85
+                - 255
+            entity_id:
+              - light.0x588e81fffec9e74f
+          - delay: '1.1'
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 8
+                - 85
+                - 255
+            entity_id:
+              - !secret light_mb_busb
+          - service: light.turn_on
+            data:
+              rgb_color:
+                - 255
+                - 50
+                - 135
+            entity_id:
+              - light.0x588e81fffec9e74f
+          - delay: '1.1'
+  mode: queued
 
 
 scene_sb_search_mode:

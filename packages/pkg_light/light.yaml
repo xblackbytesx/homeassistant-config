@@ -30,12 +30,9 @@
 - platform: group
   name: LG | SA | All
   entities:
-    - light.0x00178801081af093_light
-    - light.0x0017880101182a59
-    - light.0x001788010118b8e1 
-    - light.0x00178801089f827b_light
-    - light.0x00178801001f43af
-    - light.0x0017880102634fc4
+    - light.lg_sa_filament_bulbs
+    - light.lg_sa_white_closet 
+    - light.lg_sa_tv_cabinet
     - light.lg_sa_led_strips
 
 - platform: group
@@ -73,6 +70,33 @@
   name: LG | CO | All
   entities:
     - light.0x00178801030a3dde_light
+
+- platform: mqtt
+  schema: json
+  name: lg_sa_tv_cabinet
+  command_topic: "zigbee2mqtt/lg_sa_tv_cabinet/set"
+  state_topic: "zigbee2mqtt/lg_sa_tv_cabinet"
+  color_temp: true
+  brightness: true
+  rgb: true
+
+- platform: mqtt
+  schema: json
+  name: lg_sa_filament_bulbs
+  command_topic: "zigbee2mqtt/lg_sa_filament_bulbs/set"
+  state_topic: "zigbee2mqtt/lg_sa_filament_bulbs"
+  color_temp: true
+  brightness: true
+  rgb: false
+
+- platform: mqtt
+  schema: json
+  name: lg_sa_white_closet
+  command_topic: "zigbee2mqtt/lg_sa_white_closet/set"
+  state_topic: "zigbee2mqtt/lg_sa_white_closet"
+  color_temp: true
+  brightness: true
+  rgb: true
 
 - platform: mqtt
   schema: json
