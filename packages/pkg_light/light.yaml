@@ -52,12 +52,6 @@
     - light.lg_kitchen_all
 
 - platform: group
-  name: LG | EX | All
-  entities:
-    - light.0x086bd7fffe035d36_light
-    - light.0x000b57fffee35b50_light
-
-- platform: group
   name: LG | MB | All
   entities:
     - light.0x90fd9ffffeea4e5e_light
@@ -102,18 +96,27 @@
 
 - platform: mqtt
   schema: json
-  name: spots_kitchen_counter
-  command_topic: "zigbee2mqtt/spots_kitchen_counter/set"
-  state_topic: "zigbee2mqtt/spots_kitchen_counter"
+  name: lg_kitchen_counter
+  command_topic: "zigbee2mqtt/lg_kitchen_counter/set"
+  state_topic: "zigbee2mqtt/lg_kitchen_counter"
   color_temp: true
   brightness: true
   rgb: false
 
 - platform: mqtt
   schema: json
-  name: kitchen_table
-  command_topic: "zigbee2mqtt/kitchen_table/set"
-  state_topic: "zigbee2mqtt/kitchen_table"
+  name: lg_kitchen_table
+  command_topic: "zigbee2mqtt/lg_kitchen_table/set"
+  state_topic: "zigbee2mqtt/lg_kitchen_table"
+  color_temp: true
+  brightness: true
+  rgb: false
+
+- platform: mqtt
+  schema: json
+  name: lg_ex_all
+  command_topic: "zigbee2mqtt/lg_ex_all/set"
+  state_topic: "zigbee2mqtt/lg_ex_all"
   color_temp: true
   brightness: true
   rgb: false
