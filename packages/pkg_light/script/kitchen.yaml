@@ -2,11 +2,11 @@ scene_kitchen_night:
   sequence:
     - service: light.turn_on
       data:
-        entity_id: light.lg_kitchen_table
+        entity_id: light.kitchen_table
         brightness_pct: 30
     - service: light.turn_on
       data:
-        entity_id: light.lg_kitchen_counter
+        entity_id: light.kitchen_counter
         xy_color: [0.507, 0.414]
         brightness_pct: 45
     - service: light.turn_on
@@ -21,11 +21,11 @@ scene_kitchen_day:
   sequence:
     - service: light.turn_on
       data:
-        entity_id: light.lg_kitchen_table
+        entity_id: light.kitchen_table
         brightness_pct: 50
     - service: light.turn_on
       data:
-        entity_id: light.lg_kitchen_counter
+        entity_id: light.kitchen_counter
         xy_color: [0.507, 0.414]
         brightness_pct: 65
     - service: light.turn_on
