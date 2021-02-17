@@ -60,16 +60,14 @@
 - platform: group
   name: LG | SB | All
   entities:
-    - !secret light_sb_bulb
-    - light.0x588e81fffed89fc4
+    - light.lg_sb_zigbee
     - light.dimmable_socket_one
 
 - platform: group
   name: LG | LB | All
   entities:
-    - !secret light_mb_bulb
+    - light.lg_lb_zigbee
     - light.ledstrip_large_bedroom
-    - light.0x588e81fffec9e74f
 
 - platform: group
   name: LG | CO | All
@@ -99,6 +97,24 @@
   name: lg_bathroom_all
   command_topic: "zigbee2mqtt/lg_bathroom_all/set"
   state_topic: "zigbee2mqtt/lg_bathroom_all"
+  color_temp: true
+  brightness: true
+  rgb: true
+
+- platform: mqtt
+  schema: json
+  name: lg_lb_zigbee
+  command_topic: "zigbee2mqtt/lg_lb_zigbee/set"
+  state_topic: "zigbee2mqtt/lg_lb_zigbee"
+  color_temp: true
+  brightness: true
+  rgb: true
+
+- platform: mqtt
+  schema: json
+  name: lg_sb_zigbee
+  command_topic: "zigbee2mqtt/lg_sb_zigbee/set"
+  state_topic: "zigbee2mqtt/lg_sb_zigbee"
   color_temp: true
   brightness: true
   rgb: true
