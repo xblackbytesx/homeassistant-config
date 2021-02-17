@@ -2,36 +2,25 @@ scene_sa_not_watching_tv:
   sequence:
     - service: light.turn_on
       data:
-        entity_id: light.0x00178801081af093_light
-        brightness_pct: 50
+        entity_id: light.lg_sa_filament_bulbs
+        brightness_pct: 55
     - service: light.turn_on
       data:
         entity_id: light.0x0017880101182a59
         xy_color: [0.236, 0.41]
-        brightness_pct: 45
+        brightness_pct: 50
         effect: none
     - service: light.turn_on
       data:
         entity_id: light.0x001788010118b8e1 
         xy_color: [0.311, 0.225]
-        brightness_pct: 45
-        effect: none
-    - service: light.turn_on
-      data:
-        entity_id: light.0x00178801089f827b_light
         brightness_pct: 50
+        effect: none
     - service: light.turn_on
       data:
-        entity_id: light.0x00178801001f43af
+        entity_id: light.lg_sa_tv_cabinet
         xy_color: [0.631, 0.343]
-        brightness_pct: 45
-        effect: none
-    - service: light.turn_on
-      data:
-        entity_id: light.0x0017880102634fc4
-        xy_color: [0.632, 0.342]
-        brightness_pct: 75
-        effect: none
+        brightness_pct: 55
     - service: light.turn_on
       data:
         entity_id: light.ledstrip_tv_cabinet
@@ -53,20 +42,12 @@ scene_sa_watching_tv:
   sequence:
     - service: light.turn_off
       entity_id: 
-        - light.0x00178801081af093_light
-        - light.0x0017880101182a59
-        - light.0x001788010118b8e1 
-        - light.0x00178801089f827b_light
+        - light.lg_sa_filament_bulbs
+        - light.lg_sa_white_closet
     - service: light.turn_on
       data:
-        entity_id: light.0x00178801001f43af
-        brightness_pct: 30
-        effect: none
-    - service: light.turn_on
-      data:
-        entity_id: light.0x0017880102634fc4
-        brightness_pct: 50
-        effect: none
+        entity_id: light.lg_sa_tv_cabinet
+        brightness_pct: 45
     - service: light.turn_on
       data:
         entity_id: light.ledstrip_tv_cabinet
@@ -132,8 +113,8 @@ scene_lr_disco_mode:
 
     - service: light.turn_off
       entity_id:
-        - light.lg_kitchen_table
-        - light.lg_kitchen_counter
+        - light.kitchen_table
+        - light.kitchen_counter
         - light.0x00178801081af093_light
         - light.0x00178801089f827b_light
 
