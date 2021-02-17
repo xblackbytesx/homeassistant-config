@@ -6,13 +6,13 @@ scene_sa_not_watching_tv:
         brightness_pct: 50
     - service: light.turn_on
       data:
-        entity_id: light.hue_go_closet_l
+        entity_id: light.0x0017880101182a59
         xy_color: [0.236, 0.41]
         brightness_pct: 45
         effect: none
     - service: light.turn_on
       data:
-        entity_id: light.hue_go_closet_r
+        entity_id: light.0x001788010118b8e1 
         xy_color: [0.311, 0.225]
         brightness_pct: 45
         effect: none
@@ -22,13 +22,13 @@ scene_sa_not_watching_tv:
         brightness_pct: 50
     - service: light.turn_on
       data:
-        entity_id: light.hue_iris_tv_cabinet
+        entity_id: light.0x00178801001f43af
         xy_color: [0.631, 0.343]
         brightness_pct: 45
         effect: none
     - service: light.turn_on
       data:
-        entity_id: light.hue_candle_salt_lamp
+        entity_id: light.0x0017880102634fc4
         xy_color: [0.632, 0.342]
         brightness_pct: 75
         effect: none
@@ -54,17 +54,17 @@ scene_sa_watching_tv:
     - service: light.turn_off
       entity_id: 
         - light.0x00178801081af093_light
-        - light.hue_go_closet_l
-        - light.hue_go_closet_r
+        - light.0x0017880101182a59
+        - light.0x001788010118b8e1 
         - light.0x00178801089f827b_light
     - service: light.turn_on
       data:
-        entity_id: light.hue_iris_tv_cabinet
+        entity_id: light.0x00178801001f43af
         brightness_pct: 30
         effect: none
     - service: light.turn_on
       data:
-        entity_id: light.hue_candle_salt_lamp
+        entity_id: light.0x0017880102634fc4
         brightness_pct: 50
         effect: none
     - service: light.turn_on
@@ -157,8 +157,8 @@ scene_lr_disco_mode:
                 - 10
                 - 10
             entity_id:
-              - light.hue_iris_tv_cabinet
-              - light.hue_go_closet_r
+              - light.0x00178801001f43af
+              - light.0x001788010118b8e1 
           - service: light.turn_on
             data:
               rgb_color:
@@ -166,8 +166,8 @@ scene_lr_disco_mode:
                 - 0
                 - 255
             entity_id:
-              - light.hue_candle_salt_lamp
-              - light.hue_go_closet_l
+              - light.0x0017880102634fc4
+              - light.0x0017880101182a59
           - delay: '1.1'
           - service: light.turn_on
             data:
@@ -176,8 +176,8 @@ scene_lr_disco_mode:
                 - 0
                 - 255
             entity_id:
-              - light.hue_iris_tv_cabinet
-              - light.hue_go_closet_r
+              - light.0x00178801001f43af
+              - light.0x001788010118b8e1 
           - service: light.turn_on
             data:
               rgb_color:
@@ -185,8 +185,8 @@ scene_lr_disco_mode:
                 - 10
                 - 10
             entity_id:
-              - light.hue_candle_salt_lamp
-              - light.hue_go_closet_l
+              - light.0x0017880102634fc4
+              - light.0x0017880101182a59
           - delay: '1.1'
 
           - service: light.turn_on
@@ -196,8 +196,8 @@ scene_lr_disco_mode:
                 - 189
                 - 255
             entity_id:
-              - light.hue_iris_tv_cabinet
-              - light.hue_go_closet_r
+              - light.0x00178801001f43af
+              - light.0x001788010118b8e1 
           - service: light.turn_on
             data:
               rgb_color:
@@ -205,8 +205,8 @@ scene_lr_disco_mode:
                 - 255
                 - 71
             entity_id:
-              - light.hue_candle_salt_lamp
-              - light.hue_go_closet_l
+              - light.0x0017880102634fc4
+              - light.0x0017880101182a59
           - delay: '1.1'
           - service: light.turn_on
             data:
@@ -215,8 +215,8 @@ scene_lr_disco_mode:
                 - 255
                 - 71
             entity_id:
-              - light.hue_iris_tv_cabinet
-              - light.hue_go_closet_r
+              - light.0x00178801001f43af
+              - light.0x001788010118b8e1 
           - service: light.turn_on
             data:
               rgb_color:
@@ -224,8 +224,8 @@ scene_lr_disco_mode:
                 - 189
                 - 255
             entity_id:
-              - light.hue_candle_salt_lamp
-              - light.hue_go_closet_l
+              - light.0x0017880102634fc4
+              - light.0x0017880101182a59
           - delay: '1.1'
 
           - service: light.turn_on
@@ -235,8 +235,8 @@ scene_lr_disco_mode:
                 - 50
                 - 135
             entity_id:
-              - light.hue_iris_tv_cabinet
-              - light.hue_go_closet_r
+              - light.0x00178801001f43af
+              - light.0x001788010118b8e1 
           - service: light.turn_on
             data:
               rgb_color:
@@ -244,8 +244,8 @@ scene_lr_disco_mode:
                 - 85
                 - 255
             entity_id:
-              - light.hue_candle_salt_lamp
-              - light.hue_go_closet_l
+              - light.0x0017880102634fc4
+              - light.0x0017880101182a59
           - delay: '1.1'
           - service: light.turn_on
             data:
@@ -254,8 +254,8 @@ scene_lr_disco_mode:
                 - 85
                 - 255
             entity_id:
-              - light.hue_iris_tv_cabinet
-              - light.hue_go_closet_r
+              - light.0x00178801001f43af
+              - light.0x001788010118b8e1 
           - service: light.turn_on
             data:
               rgb_color:
@@ -263,8 +263,8 @@ scene_lr_disco_mode:
                 - 50
                 - 135
             entity_id:
-              - light.hue_candle_salt_lamp
-              - light.hue_go_closet_l
+              - light.0x0017880102634fc4
+              - light.0x0017880101182a59
           - delay: '1.1'
   mode: queued
 

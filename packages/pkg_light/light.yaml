@@ -31,11 +31,11 @@
   name: LG | SA | All
   entities:
     - light.0x00178801081af093_light
-    - light.hue_go_closet_l
-    - light.hue_go_closet_r
+    - light.0x0017880101182a59
+    - light.0x001788010118b8e1 
     - light.0x00178801089f827b_light
-    - light.hue_iris_tv_cabinet
-    - light.hue_candle_salt_lamp
+    - light.0x00178801001f43af
+    - light.0x0017880102634fc4
     - light.lg_sa_led_strips
 
 - platform: group
@@ -85,8 +85,8 @@
 - platform: group
   name: LG | Bathroom | All
   entities:
-    - light.hue_candle_bathroom_l
-    - light.hue_bulb_bathroom_r
+    - light.0x0017880103612ccb 
+    - light.0x00178801038e968f 
 
 - platform: group
   name: LG | Attic | All

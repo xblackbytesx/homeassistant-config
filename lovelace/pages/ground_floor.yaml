@@ -62,14 +62,14 @@ cards:
       entities:
         - light.0x00178801081b61c2_light
         - light.0x00178801081b3c89_light
-        - light.hue_spot_kitchen_counter_1
-        - light.hue_spot_kitchen_counter_2
-        - light.hue_spot_kitchen_counter_3
-        - light.hue_spot_kitchen_counter_4
+        - light.0x0017880102312128
+        - light.0x0017880104c153ff
+        - light.0x001788010489c476
+        - light.0x0017880104c13fde
         - light.0x00178801081af093_light
-        - light.hue_iris_tv_cabinet
-        - light.hue_go_closet_l
-        - light.hue_go_closet_r
+        - light.0x00178801001f43af
+        - light.0x0017880101182a59
+        - light.0x001788010118b8e1 
         - light.ledstrip_tv_cabinet
         - light.ledstrip_undecided
         - light.ledstrip_black_cabinet
