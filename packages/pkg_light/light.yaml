@@ -41,8 +41,8 @@
 - platform: group
   name: LG | Kitchen | All
   entities:
-    - light.kitchen_table
-    - light.kitchen_counter
+    - light.lg_kitchen_table
+    - light.lg_kitchen_counter
     - light.ledstrip_kitchen_cabinet
 
 - platform: group
