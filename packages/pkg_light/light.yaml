@@ -30,9 +30,7 @@
 - platform: group
   name: LG | SA | All
   entities:
-    - light.lg_sa_filament_bulbs
-    - light.lg_sa_white_closet 
-    - light.lg_sa_tv_cabinet
+    - light.lg_sa_zigbee
     - light.lg_sa_led_strips
 
 - platform: group
@@ -70,6 +68,15 @@
   name: LG | CO | All
   entities:
     - light.0x00178801030a3dde_light
+
+- platform: mqtt
+  schema: json
+  name: lg_sa_zigbee
+  command_topic: "zigbee2mqtt/lg_sa_zigbee/set"
+  state_topic: "zigbee2mqtt/lg_sa_zigbee"
+  color_temp: true
+  brightness: true
+  rgb: true
 
 - platform: mqtt
   schema: json
