@@ -14,19 +14,19 @@ cards:
     line_width: 6
   - type: custom:mini-graph-card
     entities:
-      - sensor.coin2_value_etity
+      - sensor.coin2_value_entity
     name: !secret coin2_name
     line_color: '#b58e31'
     line_width: 6
   - type: custom:mini-graph-card
     entities:
-      - !secret coin3_value_etity
+      - !secret coin3_value_entity
     name: !secret coin3_name
     line_color: '#b93829'
     line_width: 6
   - type: custom:mini-graph-card
     entities:
-      - !secret coin5_value_etity
+      - !secret coin5_value_entity
     name: !secret coin5_name
     line_color: '#2980b9'
     line_width: 6
