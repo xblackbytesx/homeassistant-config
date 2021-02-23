@@ -75,8 +75,8 @@ cards:
         - light.ledstrip_black_cabinet
         - light.ledstrip_kitchen_cabinet
         - light.0x0017880103ea3a60_light
-  - !include ../cards/camera_dafang.yaml
-  - !include ../cards/camera_xiaofang_1.yaml
+  - !include ../cards/security/camera_dafang.yaml
+  - !include ../cards/security/camera_xiaofang_1.yaml
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
