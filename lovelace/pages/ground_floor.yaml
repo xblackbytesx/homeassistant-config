@@ -2,7 +2,7 @@ icon: mdi:numeric-0-box
 cards:
   - !include ../cards/ground_floor_groups.yaml
   - !include ../cards/floorplan_ground_floor.yaml
-  - !include ../cards/climate.yaml
+  - !include ../cards/climate/climate.yaml
   - type: entities
     title: Ground floor switches
     entities:

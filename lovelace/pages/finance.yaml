@@ -1,4 +1,4 @@
 title: Finance
 icon: mdi:bitcoin
 cards:
-  - !include ../cards/crypto_currency.yaml
+  - !include ../cards/finance/crypto_currency.yaml

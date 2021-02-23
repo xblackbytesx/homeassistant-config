@@ -7,10 +7,10 @@ cards:
       - switch.beamer_screen
       - switch.sunscreen
       - cover.attic_shutters
-  - !include ../cards/climate.yaml
+  - !include ../cards/climate/climate.yaml
   - type: custom:air-purifier-card
     entity: fan.xiaomi_miio_device
-  - !include ../cards/weather.yaml
+  - !include ../cards/climate/weather.yaml
   - !include ../cards/solar_panels.yaml
   - !include ../cards/gas_prices.yaml
   - type: entities

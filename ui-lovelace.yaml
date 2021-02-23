@@ -8,7 +8,7 @@ views:
   - !include lovelace/pages/first_floor.yaml
   - !include lovelace/pages/attic.yaml
   - !include lovelace/pages/exterior.yaml
-  - !include lovelace/pages/people.yaml
+  # - !include lovelace/pages/people.yaml
   # - !include lovelace/pages/plants.yaml
   - !include lovelace/pages/media.yaml
   - !include lovelace/pages/remote.yaml
@@ -18,6 +18,6 @@ views:
   - !include lovelace/pages/finance.yaml
   - !include lovelace/pages/astronomy.yaml
   - !include lovelace/pages/disease.yaml
-  - !include lovelace/pages/battery.yaml
+  # - !include lovelace/pages/battery.yaml
   - !include lovelace/pages/automation.yaml
   - !include lovelace/pages/overrides.yaml

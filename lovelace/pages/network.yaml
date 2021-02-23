@@ -1,10 +1,8 @@
 title: Network
 icon: mdi:ip-network
 cards:
-  - !include ../cards/speedtest.yaml
-  - !include ../cards/pi_hole.yaml
-  - !include ../cards/transmission.yaml
-  - !include ../cards/upcoming_media.yaml
-  - !include ../cards/synology_dsm.yaml
-  - !include ../cards/pi_temp.yaml
-  - !include ../cards/zigbee.yaml
+  - !include ../cards/network/speedtest.yaml
+  - !include ../cards/network/pi_hole.yaml
+  - !include ../cards/network/transmission.yaml
+  - !include ../cards/media/upcoming_media.yaml
+  - !include ../cards/network/synology_dsm.yaml

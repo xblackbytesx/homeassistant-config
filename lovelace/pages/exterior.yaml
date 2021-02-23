@@ -13,7 +13,7 @@ cards:
     entities:
       - cover.attic_shutters
   # - !include ../cards/solar_panels.yaml
-  - !include ../cards/weather.yaml
+  - !include ../cards/climate/weather.yaml
   - !include ../cards/car_info.yaml
   - !include ../cards/garbage_schedule.yaml
   - type: conditional
