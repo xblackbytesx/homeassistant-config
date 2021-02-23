@@ -13,3 +13,6 @@
     - market: !secret coin4_token
       amount: !secret coin4_owned
       costs: !secret coin4_paid
+    - market: !secret coin5_token
+      amount: !secret coin5_owned
+      costs: !secret coin5_paid

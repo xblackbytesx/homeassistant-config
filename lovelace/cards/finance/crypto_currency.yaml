@@ -14,7 +14,7 @@ cards:
     line_width: 6
   - type: custom:mini-graph-card
     entities:
-      - sensor.coin2_value_entity
+      - !secret coin2_value_entity
     name: !secret coin2_name
     line_color: '#b58e31'
     line_width: 6
