@@ -1,76 +1,15 @@
-# - platform: coinmarketcap
-#   currency_id: 1
-#   display_currency: EUR
-
-# - platform: coinmarketcap
-#   currency_id: 1027
-#   display_currency: EUR
-
-# - platform: coinmarketcap
-#   currency_id: 1720
-#   display_currency: EUR
-
-- platform: command_line
-  name: coinmarketcap_curl
-  command: !secret cmc_api_call
-  value_template: '{{ value_json.value }}'
-  scan_interval: 600 #10 mins refresh (144 credits / day used)
-  json_attributes:
-    data
-
-- platform: template
-  sensors:
-    btc_price:
-      friendly_name: 'Bitcoin Price'
-      unit_of_measurement: 'EUR'
-      value_template: '{{ ((states.sensor.coinmarketcap_curl.attributes.data.BTC.quote.EUR.price) | float) | round(2) }}'
-
-    eth_price:
-      friendly_name: 'Ethereum Price'
-      unit_of_measurement: 'EUR'
-      value_template: '{{ ((states.sensor.coinmarketcap_curl.attributes.data.ETH.quote.EUR.price) | float) | round(2) }}'
-
-    miota_price:
-      friendly_name: 'IOTA Price'
-      unit_of_measurement: 'EUR'
-      value_template: '{{ ((states.sensor.coinmarketcap_curl.attributes.data.MIOTA.quote.EUR.price) | float) | round(2) }}'
-
-    xmr_price:
-      friendly_name: 'Monero Price'
-      unit_of_measurement: 'EUR'
-      value_template: '{{ ((states.sensor.coinmarketcap_curl.attributes.data.XMR.quote.EUR.price) | float) | round(2) }}'
-
-    btc_owned:
-      friendly_name: 'Bitcoin owned'
-      unit_of_measurement: 'BTC'
-      value_template: !secret btc_owned
-
-    eth_owned:
-      friendly_name: 'Ethereum owned'
-      unit_of_measurement: 'ETH'
-      value_template: !secret eth_owned
-
-    miota_owned:
-      friendly_name: 'IOTA owned'
-      unit_of_measurement: 'MIOTA'
-      value_template: !secret miota_owned
-
-    xmr_owned:
-      friendly_name: 'Monero owned'
-      unit_of_measurement: 'XMR'
-      value_template: !secret xmr_owned
-
-    nxt_owned:
-      friendly_name: 'NXT owned'
-      unit_of_measurement: 'NXT'
-      value_template: !secret nxt_owned
-
-    moon_owned:
-      friendly_name: 'MOON owned'
-      unit_of_measurement: 'MOON'
-      value_template: !secret moon_owned
-
-    crypto_portfolio_value:
-      friendly_name: "Crypto Portfolio Value"
-      unit_of_measurement: "EUR"
-      value_template: !secret crypto_portfolio_sum
+- platform: bitvavo
+  scan_interval: 5
+  wallets:
+    - market: !secret coin1_token
+      amount: !secret coin1_owned
+      costs: !secret coin1_paid
+    - market: !secret coin2_token
+      amount: !secret coin2_owned
+      costs: !secret coin2_paid
+    - market: !secret coin3_token
+      amount: !secret coin3_owned
+      costs: !secret coin3_paid
+    - market: !secret coin4_token
+      amount: !secret coin4_owned
+      costs: !secret coin4_paid
