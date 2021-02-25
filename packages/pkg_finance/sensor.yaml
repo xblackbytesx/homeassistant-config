@@ -16,3 +16,11 @@
     - market: !secret coin5_token
       amount: !secret coin5_owned
       costs: !secret coin5_paid
+
+- platform: scrape
+  name: !secret coin3_stake_title
+  unit_of_measurement: !secret coin3_unit_of_measurement
+  resource: !secret coin3_stakeinfo
+  select: !secret coin3_scrape_selector
+  value_template: '{{ float(value) / 1000000 }}'
+  scan_interval: 3600
