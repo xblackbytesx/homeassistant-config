@@ -26,6 +26,7 @@
   scan_interval: 3600
 
 - platform: template
+  sensors:
     crypto_portfolio_value:
       value_template: !secret crypto_portfolio_value
       friendly_name: "Portfolio value"
