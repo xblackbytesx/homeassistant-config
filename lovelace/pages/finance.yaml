@@ -13,10 +13,14 @@ cards:
     cards:
       - type: horizontal-stack
         cards:
-          # - type: sensor
-          #   entity: sensor.crypto_total_profit
-          #   graph: line
-          #   detail: 1
+          - type: sensor
+            entity: sensor.crypto_portfolio_value
+            graph: line
+            detail: 1
+          - type: sensor
+            entity: sensor.crypto_total_profit
+            graph: line
+            detail: 1
           - type: history-graph
             entities:
               - entity: !secret coin1_change_entity

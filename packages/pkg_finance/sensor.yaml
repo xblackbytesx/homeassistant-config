@@ -24,3 +24,15 @@
   select: !secret coin3_scrape_selector
   value_template: '{{ float(value) / 1000000 }}'
   scan_interval: 3600
+
+- platform: template
+    crypto_portfolio_value:
+      value_template: !secret crypto_portfolio_value
+      friendly_name: "Portfolio value"
+      icon_template: mdi:cash
+      unit_of_measurement: '€'
+    crypto_total_profit:
+      value_template: !secret crypto_portfolio_profit
+      friendly_name: "Profit total"
+      icon_template: mdi:cash
+      unit_of_measurement: '€'
