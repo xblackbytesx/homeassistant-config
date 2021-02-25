@@ -1,4 +1,91 @@
+# title: Finance
+# icon: mdi:bitcoin
+# cards:
+#   - !include ../cards/finance/crypto_currency.yaml
+
 title: Finance
-icon: mdi:bitcoin
+path: finance
+panel: true
+icon: 'mdi:bitcoin'
+badges: []
 cards:
-  - !include ../cards/finance/crypto_currency.yaml
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          # - type: sensor
+          #   entity: sensor.crypto_total_profit
+          #   graph: line
+          #   detail: 1
+          - type: history-graph
+            entities:
+              - entity: !secret coin1_change_entity
+                name: !secret coin1_name
+              - entity: !secret coin2_change_entity
+                name: !secret coin2_name
+              - entity: !secret coin3_change_entity
+                name: !secret coin3_name
+              - entity: !secret coin4_change_entity
+                name: !secret coin4_name
+            hours_to_show: 6
+            refresh_interval: 0
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: !secret coin1_profit_entity
+            graph: line
+            name: !secret coin1_profit_label
+          - type: sensor
+            entity: !secret coin1_value_entity
+            graph: line
+            name: Value
+          - type: history-graph
+            entities:
+              - entity: !secret coin1_value_entity
+            hours_to_show: 1
+            refresh_interval: 0
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: !secret coin2_profit_entity
+            graph: line
+            name: !secret coin2_profit_label
+          - type: sensor
+            entity: !secret coin2_value_entity
+            graph: line
+            name: Value
+          - type: history-graph
+            entities:
+              - entity: !secret coin2_value_entity
+            hours_to_show: 1
+            refresh_interval: 0
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: !secret coin3_profit_entity
+            graph: line
+            name: !secret coin3_profit_label
+          - type: sensor
+            entity: !secret coin3_value_entity
+            graph: line
+            name: Value
+          - type: history-graph
+            entities:
+              - entity: !secret coin3_value_entity
+            hours_to_show: 1
+            refresh_interval: 0
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: !secret coin5_profit_entity
+            graph: line
+            name: !secret coin5_profit_label
+          - type: sensor
+            entity: !secret coin5_value_entity
+            graph: line
+            name: Value
+          - type: history-graph
+            entities:
+              - entity: !secret coin5_value_entity
+            hours_to_show: 1
+            refresh_interval: 0
