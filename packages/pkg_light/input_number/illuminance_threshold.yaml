@@ -1,3 +1,10 @@
+hw_illuminance_threshold:
+  name: HW | Illuminance Threshold
+  initial: 10
+  min: 5
+  max: 45
+  step: 1
+
 sa_illuminance_threshold:
   name: SA | Illuminance Threshold
   initial: 10
@@ -8,13 +15,6 @@ sa_illuminance_threshold:
 kitchen_illuminance_threshold:
   name: Kitchen | Illuminance Threshold
   initial: 15
-  min: 5
-  max: 45
-  step: 1
-
-hw_illuminance_threshold:
-  name: HW | Illuminance Threshold
-  initial: 10
   min: 5
   max: 45
   step: 1
@@ -39,3 +39,18 @@ ex_illuminance_threshold:
   min: 50
   max: 150
   step: 1
+
+front_of_property_illuminance_threshold:
+  name: Front of property | Illuminance Threshold
+  initial: 15
+  min: 5
+  max: 45
+  step: 1
+
+back_of_property_illuminance_threshold:
+  name: Back of property | Illuminance Threshold
+  initial: 150
+  min: 50
+  max: 200
+  step: 1
+  

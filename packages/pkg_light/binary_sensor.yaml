@@ -48,6 +48,14 @@
       value_template: >-
         {{ states('sensor.0x001788010647ff92_illuminance_lux')|int <= states('input_number.ex_illuminance_threshold')| int }}
 
+    front_of_property_dark_enough:
+      value_template: >-
+        {{ states('sensor.0x00178801020282bc_illuminance_lux')|int <= states('input_number.front_of_property_illuminance_threshold')| int }}
+
+    back_of_property_dark_enough:
+      value_template: >-
+        {{ states('sensor.0x001788010647ff92_illuminance_lux')|int <= states('input_number.back_of_property_illuminance_threshold')| int }}
+
     # hw_eligable_for_light:
     #   value_template: >-
     #     {{ is_state('binary_sensor.hw_motion_detected', 'on')
