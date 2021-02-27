@@ -50,6 +50,8 @@ cards:
             - input_number.co_illuminance_threshold
             - input_number.office_illuminance_threshold
             - input_number.ex_illuminance_threshold
+            - input_number.front_of_property_illuminance_threshold
+            - input_number.back_of_property_illuminance_threshold
 
   - type: entity-button
     entity: binary_sensor.0x00158d0003612f9b_smoke
