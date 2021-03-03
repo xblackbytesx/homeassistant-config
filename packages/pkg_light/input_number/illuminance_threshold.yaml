@@ -42,15 +42,15 @@ ex_illuminance_threshold:
 
 front_of_property_illuminance_threshold:
   name: Front of property | Illuminance Threshold
-  initial: 15
+  initial: 12
   min: 5
   max: 45
   step: 1
 
 back_of_property_illuminance_threshold:
   name: Back of property | Illuminance Threshold
-  initial: 150
-  min: 50
-  max: 200
-  step: 1
+  initial: 3000
+  min: 1000
+  max: 5000
+  step: 100
   
