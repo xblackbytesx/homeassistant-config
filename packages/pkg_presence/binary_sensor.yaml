@@ -27,7 +27,7 @@
         {{ is_state('binary_sensor.0x0017880102026161_occupancy', 'on')
            or is_state('binary_sensor.0x00158d00034911fc_occupancy', 'on')
            or is_state('binary_sensor.0x0017880102030677_occupancy', 'on')
-           or is_state('binary_sensor.kaku_motion_sa', 'on') }}
+           or is_state('binary_sensor.0x0017880102026161_occupancy', 'on') }}
 
     kitchen_motion_detected:
       value_template: >-
