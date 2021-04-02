@@ -31,6 +31,20 @@ cards:
                 name: !secret coin3_name
               - entity: !secret coin4_change_entity
                 name: !secret coin4_name
+              - entity: !secret coin5_change_entity
+                name: !secret coin5_name
+              - entity: !secret coin6_change_entity
+                name: !secret coin6_name
+              - entity: !secret coin7_change_entity
+                name: !secret coin7_name
+              - entity: !secret coin8_change_entity
+                name: !secret coin8_name
+              - entity: !secret coin9_change_entity
+                name: !secret coin9_name
+              - entity: !secret coin10_change_entity
+                name: !secret coin10_name
+              - entity: !secret coin11_change_entity
+                name: !secret coin11_name
             hours_to_show: 6
             refresh_interval: 0
       - type: horizontal-stack
@@ -81,6 +95,21 @@ cards:
       - type: horizontal-stack
         cards:
           - type: sensor
+            entity: !secret coin4_profit_entity
+            graph: line
+            name: !secret coin4_profit_label
+          - type: sensor
+            entity: !secret coin4_value_entity
+            graph: line
+            name: Value
+          - type: history-graph
+            entities:
+              - entity: !secret coin4_value_entity
+            hours_to_show: 1
+            refresh_interval: 0
+      - type: horizontal-stack
+        cards:
+          - type: sensor
             entity: !secret coin5_profit_entity
             graph: line
             name: !secret coin5_profit_label
@@ -91,5 +120,95 @@ cards:
           - type: history-graph
             entities:
               - entity: !secret coin5_value_entity
+            hours_to_show: 1
+            refresh_interval: 0
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: !secret coin6_profit_entity
+            graph: line
+            name: !secret coin6_profit_label
+          - type: sensor
+            entity: !secret coin6_value_entity
+            graph: line
+            name: Value
+          - type: history-graph
+            entities:
+              - entity: !secret coin6_value_entity
+            hours_to_show: 1
+            refresh_interval: 0
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: !secret coin7_profit_entity
+            graph: line
+            name: !secret coin7_profit_label
+          - type: sensor
+            entity: !secret coin7_value_entity
+            graph: line
+            name: Value
+          - type: history-graph
+            entities:
+              - entity: !secret coin7_value_entity
+            hours_to_show: 1
+            refresh_interval: 0
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: !secret coin8_profit_entity
+            graph: line
+            name: !secret coin8_profit_label
+          - type: sensor
+            entity: !secret coin8_value_entity
+            graph: line
+            name: Value
+          - type: history-graph
+            entities:
+              - entity: !secret coin8_value_entity
+            hours_to_show: 1
+            refresh_interval: 0
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: !secret coin9_profit_entity
+            graph: line
+            name: !secret coin9_profit_label
+          - type: sensor
+            entity: !secret coin9_value_entity
+            graph: line
+            name: Value
+          - type: history-graph
+            entities:
+              - entity: !secret coin9_value_entity
+            hours_to_show: 1
+            refresh_interval: 0
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: !secret coin10_profit_entity
+            graph: line
+            name: !secret coin10_profit_label
+          - type: sensor
+            entity: !secret coin10_value_entity
+            graph: line
+            name: Value
+          - type: history-graph
+            entities:
+              - entity: !secret coin10_value_entity
+            hours_to_show: 1
+            refresh_interval: 0
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: !secret coin11_profit_entity
+            graph: line
+            name: !secret coin11_profit_label
+          - type: sensor
+            entity: !secret coin11_value_entity
+            graph: line
+            name: Value
+          - type: history-graph
+            entities:
+              - entity: !secret coin11_value_entity
             hours_to_show: 1
             refresh_interval: 0

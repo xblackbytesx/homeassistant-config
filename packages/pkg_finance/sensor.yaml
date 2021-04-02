@@ -1,4 +1,4 @@
-- platform: bitvavo
+- platform: coingecko
   scan_interval: 5
   wallets:
     - market: !secret coin1_token
@@ -16,6 +16,24 @@
     - market: !secret coin5_token
       amount: !secret coin5_owned
       costs: !secret coin5_paid
+    - market: !secret coin6_token
+      amount: !secret coin6_owned
+      costs: !secret coin6_paid
+    - market: !secret coin7_token
+      amount: !secret coin7_owned
+      costs: !secret coin7_paid
+    - market: !secret coin8_token
+      amount: !secret coin8_owned
+      costs: !secret coin8_paid
+    - market: !secret coin9_token
+      amount: !secret coin9_owned
+      costs: !secret coin9_paid
+    - market: !secret coin10_token
+      amount: !secret coin10_owned
+      costs: !secret coin10_paid
+    - market: !secret coin11_token
+      amount: !secret coin11_owned
+      costs: !secret coin11_paid
 
 - platform: scrape
   name: !secret coin3_stake_title

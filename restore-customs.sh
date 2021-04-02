@@ -51,8 +51,8 @@ wget https://raw.githubusercontent.com/kvanhoorn/hass/master/custom_components/p
 echo "Installing Garbage Pickup Component"
 cp -Rp assets/custom_components/garbage_pickup custom_components/
 
-echo "Installing Bitvavo Component"
-cp -Rp assets/custom_components/bitvavo custom_components/
+echo "Installing Coingecko Component"
+cp -Rp assets/custom_components/coingecko custom_components/
 
 echo "Installing Decluttering Card"
 mkdir -p www/custom-lovelace/decluttering-card
