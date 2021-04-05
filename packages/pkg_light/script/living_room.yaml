@@ -260,3 +260,71 @@ scene_lr_reset_default:
       entity_id: 
         - input_boolean.automation_sa_light
         - input_boolean.automation_kitchen_light
+
+
+scene_sa_tv_netflix:
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.0x000d6ffffedad23c_switch
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.yamaha_receiver
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.yamaha_receiver
+        source: HDMI1
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.samsung_tv
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.xiaomi_tv_box
+    - service: androidtv.adb_command
+      data:
+        entity_id: media_player.xiaomi_tv_box
+        command: "am start -a android.intent.action.VIEW -d -n com.netflix.ninja/.MainActivity"
+
+
+scene_sa_tv_playstation:
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.0x000d6ffffedad23c_switch
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.yamaha_receiver
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.yamaha_receiver
+        source: AV1
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.samsung_tv
+    - service: media_player.turn_off
+      data:
+        entity_id: media_player.xiaomi_tv_box
+
+
+scene_sa_tv_spotify:
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.0x000d6ffffedad23c_switch
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.yamaha_receiver
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.yamaha_receiver
+        source: Spotify
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.yamaha_receiver
+        volume_level: 0.7
+    - service: media_player.turn_off
+      data:
+        entity_id: media_player.samsung_tv
+    - service: media_player.turn_off
+      data:
+        entity_id: media_player.xiaomi_tv_box
