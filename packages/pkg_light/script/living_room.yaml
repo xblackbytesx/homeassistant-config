@@ -262,7 +262,7 @@ scene_lr_reset_default:
         - input_boolean.automation_kitchen_light
 
 
-scene_sa_tv_netflix:
+sa_tv_netflix:
   sequence:
     - service: switch.turn_on
       data:
@@ -274,6 +274,10 @@ scene_sa_tv_netflix:
       data:
         entity_id: media_player.yamaha_receiver
         source: HDMI1
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.yamaha_receiver
+        volume_level: 0.83
     - service: media_player.turn_on
       data:
         entity_id: media_player.samsung_tv
@@ -286,7 +290,35 @@ scene_sa_tv_netflix:
         command: "am start -a android.intent.action.VIEW -d -n com.netflix.ninja/.MainActivity"
 
 
-scene_sa_tv_playstation:
+sa_tv_youtube:
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.0x000d6ffffedad23c_switch
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.yamaha_receiver
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.yamaha_receiver
+        source: HDMI1
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.yamaha_receiver
+        volume_level: 0.83
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.samsung_tv
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.xiaomi_tv_box
+    - service: androidtv.adb_command
+      data:
+        entity_id: media_player.xiaomi_tv_box
+        command: "am start -a android.intent.action.VIEW -d -n com.google.android.youtube.tv/com.google.android.apps.youtube.tv.activity.ShellActivity"     
+
+
+sa_tv_playstation:
   sequence:
     - service: switch.turn_on
       data:
@@ -298,6 +330,10 @@ scene_sa_tv_playstation:
       data:
         entity_id: media_player.yamaha_receiver
         source: AV1
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.yamaha_receiver
+        volume_level: 0.78
     - service: media_player.turn_on
       data:
         entity_id: media_player.samsung_tv
@@ -306,7 +342,7 @@ scene_sa_tv_playstation:
         entity_id: media_player.xiaomi_tv_box
 
 
-scene_sa_tv_spotify:
+sa_tv_spotify:
   sequence:
     - service: switch.turn_on
       data:
