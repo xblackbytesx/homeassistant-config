@@ -1,48 +1,10 @@
 webhook:
 zigbee2mqtt_networkmap:
 
-# Input select for Zigbee2mqtt debug level
-input_select:
-  zigbee2mqtt_log_level:
-    name: Zigbee2mqtt Log Level
-    options:
-      - debug
-      - info
-      - warn
-      - error
-    initial: info
-    icon: mdi:format-list-bulleted
-  # Custom addition
-  zigbee2mqtt_ota_available:
-      name: Zigbee2mqtt OTA available
-      options:
-        - Press update first...
-      icon: mdi:update
-
-# Input text to input Zigbee2mqtt friendly_name for scripts
-input_text:
-  zigbee2mqtt_old_name:
-    name: Zigbee2mqtt Old Name
-  zigbee2mqtt_new_name:
-    name: Zigbee2mqtt New Name
-  zigbee2mqtt_remove:
-    name: Zigbee2mqtt Remove
-
-# Scripts for renaming & removing devices
-script: !include script.yaml
-
-# Timer for joining time remaining (120 sec = 2 min)
-timer:
-  zigbee_permit_join:
-    name: Time remaining
-    duration: 120
-
 panel_iframe:
  networkmap:
    title: 'Zigbee Map'
    url: '/local/community/zigbee2mqtt_networkmap/map.html'
    icon: 'mdi:graphql'
 
-sensor: !include sensor.yaml
-switch: !include switch.yaml
 automation: !include automation.yaml

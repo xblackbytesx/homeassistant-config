@@ -31,7 +31,7 @@
   alias: Window or door open | Stop Heating
   description: ''
   use_blueprint:
-    path: SmartLiving.Rocks/window-open-climate-off.yaml
+    path: xblackbytesx/window-open-climate-off.yaml
     input:
       window_entity: binary_sensor.lr_door_or_window_open
       climate_target: climate.living_room
@@ -40,7 +40,7 @@
   alias: Window or door open | Stop Purifier
   description: ''
   use_blueprint:
-    path: SmartLiving.Rocks/window-open-climate-off.yaml
+    path: xblackbytesx/window-open-climate-off.yaml
     input:
       window_entity: binary_sensor.lr_door_or_window_open
       climate_target: fan.xiaomi_miio_device_2
