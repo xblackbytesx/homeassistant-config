@@ -1,0 +1,47 @@
+- id: '1617977829904'
+  alias: Low battery level detection & notification for all battery sensors
+  description: ''
+  use_blueprint:
+    path: Sbyx/low-battery-level-detection-notification-for-all-battery-sensors.yaml
+    input:
+      time: '10:00:00'
+      threshold: 15
+      day: 1
+      exclude:
+        entity_id:
+        - sensor.phone_person_one_battery_level
+        - sensor.phone_person_two_battery_level
+      actions:
+      - service: notify.notify_matrix_clean
+        data:
+          message: Battery level(s) of {{sensors}} are extremely low!
+- id: '1617978621558'
+  alias: Turn on light, switch, scene, script or group based on motion and illuminance.
+  description: ''
+  use_blueprint:
+    path: freakshock88/motion_illuminance_activated_entity.yaml
+    input:
+      motion_sensor: binary_sensor.0x00158d0004499f26_occupancy
+      target_entity: script.scene_office_day
+      illuminance_sensor: sensor.0x00158d0004499f26_illuminance
+      illuminance_cutoff: input_number.office_illuminance_threshold
+      blocker_entity: input_boolean.automation_office_light
+      no_motion_wait: input_number.office_motion_timeout
+- id: '1617981303816'
+  alias: Window or door open | Stop Heating
+  description: ''
+  use_blueprint:
+    path: SmartLiving.Rocks/window-open-climate-off.yaml
+    input:
+      window_entity: binary_sensor.lr_door_or_window_open
+      climate_target: climate.living_room
+      minimum_open_time: 90
+- id: '1617983530934'
+  alias: Window or door open | Stop Purifier
+  description: ''
+  use_blueprint:
+    path: SmartLiving.Rocks/window-open-climate-off.yaml
+    input:
+      window_entity: binary_sensor.lr_door_or_window_open
+      climate_target: fan.xiaomi_miio_device_2
+      minimum_open_time: 90
