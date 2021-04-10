@@ -27,7 +27,7 @@ blueprint:
       name: Climate Device
       description: The climate entity that is controlled by the window sensor.
       selector:
-        entity:
+        entity: {}
   source_url: https://community.home-assistant.io/t/window-open-climate-off/257293
 trigger:
 - platform: state
