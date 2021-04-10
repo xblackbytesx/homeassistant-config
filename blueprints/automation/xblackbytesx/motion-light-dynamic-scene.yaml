@@ -1,4 +1,4 @@
-  blueprint:
+blueprint:
   name: Dynamic scene aware motion trigger
   description: "Turn on a light, switch, scene, script or group based on motion detection,\
     \ and low light level.\nThis blueprint uses helper entities you have to create\
