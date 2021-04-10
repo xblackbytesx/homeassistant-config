@@ -28,7 +28,8 @@ blueprint:
       name: Motion entity
       description: This sensor will trigger the turning on of the target entity.
       selector:
-        entity: {}
+        entity:
+          domain: binary_sensor
     target_entity:
       name: Target entity.
       description: The light, switch, scene to turn on (or script to run) when the
@@ -47,28 +48,13 @@ blueprint:
         automation is triggered.
       selector:
         entity: {}
-    target_off_entity:
-      name: (OPTIONAL) Turn-off entity
-      description: If defined, this entity will be turned off instead of the default
-        target entity. This can be helpful when using target entities of type scene
-        or script.
-      default:
-      selector:
-        entity: {}
-    illuminance_entity:
-      name: (OPTIONAL) Illuminance entity
+    sensor_dark_enough:
+      name: (OPTIONAL) Sensor to check if dark enough
       description: This sensor will be used to determine the illumination.
       default:
       selector:
-        entity: {}
-    illuminance_cutoff:
-      name: (OPTIONAL) Illuminance cutoff value
-      description: This input_number will be used to compare to the current illumination
-        to determine if it is low.
-      default:
-      selector:
         entity:
-          domain: input_number
+          domain: binary_sensor
     no_motion_timeout:
       name: (OPTIONAL) Turn off wait time (minutes)
       description: Time in minutes to leave the target entity on after last motion
@@ -84,9 +70,7 @@ variables:
   target_entity: !input 'target_entity'
   target_entity_day_scene: !input 'target_entity_day_scene'
   target_entity_night_scene: !input 'target_entity_night_scene'
-  target_off_entity: !input 'target_off_entity'
-  illuminance_currently: !input 'illuminance_entity'
-  illuminance_cutoff: !input 'illuminance_cutoff'
+  sensor_dark_enough: !input 'sensor_dark_enough'
   no_motion_timeout: !input 'no_motion_timeout'
   entity_domain: '{{ states[target_entity].domain }}'
 trigger:
@@ -95,9 +79,7 @@ trigger:
   to: 'on'
 condition:
 - condition: template
-  value_template: '{{ (states[target_entity].state == ''on'') or (illuminance_currently
-    == none) or (illuminance_cutoff == none) or (states[illuminance_currently].state
-    | int < states[illuminance_cutoff].state | int) }}'
+  value_template: '{{ (states[target_entity].state == ''on'') or (sensor_dark_enough == none) or (states[sensor_dark_enough].state == ''on'') }}'
 action:
 - service: homeassistant.turn_on
   data_template:
@@ -119,7 +101,7 @@ action:
 - choose:
   - conditions:
     - condition: template
-      value_template: '{{ (target_off_entity != none) }}'
+      value_template: '{{ (target_entity != none) }}'
     sequence:
     - service: homeassistant.turn_off
-      entity_id: !input 'target_off_entity'
+      entity_id: !input 'target_entity'
