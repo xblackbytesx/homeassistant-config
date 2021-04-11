@@ -1,0 +1,107 @@
+blueprint:
+  name: '[Z2M] Generic Ikea Remote Control'
+  description: Blueprint for Ikea Remote Controls (On/Off, 5-Button, Shortuct)
+  domain: automation
+  source_url: https://gist.github.com/pavax/4ab861e102a37343fc5c39ea371bfb1a
+  input:
+    remote:
+      name: Remote
+      description: IKEA remote to use (e.g sensor.kitchen_remote_action)
+      selector:
+        entity:
+          integration: mqtt
+          domain: sensor
+    on_button_short:
+      name: '[Normal-Button] On button short'
+      description: Action to run when ON button SHORT press
+      default: []
+      selector:
+        action: {}
+    off_button_short:
+      name: '[Normal-Button] Off button short'
+      description: Action to run when OFF button SHORT pressed
+      default: []
+      selector:
+        action: {}
+    on_button_long:
+      name: '[Normal-Button] On button long'
+      description: Action to run when ON button LONG pressed (brightness up)
+      default: []
+      selector:
+        action: {}
+    off_button_long:
+      name: '[Normal-Button] Off button long'
+      description: Action to run when OFF button LONG pressed (brightness down)
+      default: []
+      selector:
+        action: {}
+    toggle:
+      name: '[5-Button] Toggle'
+      description: Action to run when Toggle Button pressed
+      default: []
+      selector:
+        action: {}
+    arrow_left_click:
+      name: '[5-Button] Arrow Left Click'
+      description: Action to run when Left arrow button SHORT pressed
+      default: []
+      selector:
+        action: {}
+    arrow_right_click:
+      name: '[5-Button] Arrow Right Click'
+      description: Action to run when Right arrow button SHORT pressed
+      default: []
+      selector:
+        action: {}
+    brightness_up_click:
+      name: '[5-Button] Arrow Up Click'
+      description: Action to run when Up arrow (Brightness down) button SHORT pressed
+      default: []
+      selector:
+        action: {}
+    brightness_down_click:
+      name: '[5-Button] Arrow Down Click'
+      description: Action to run when Down arrow (Brightness down) button SHORT pressed
+      default: []
+      selector:
+        action: {}
+mode: restart
+max_exceeded: silent
+trigger:
+- platform: state
+  entity_id: !input 'remote'
+  attribute: action
+variables:
+  command: '{{ trigger.to_state.state }}'
+condition:
+- condition: template
+  value_template: '{{ command != ''''}}'
+action:
+- choose:
+  - conditions:
+    - '{{ command == ''on'' }}'
+    sequence: !input 'on_button_short'
+  - conditions:
+    - '{{ command == ''off'' }}'
+    sequence: !input 'off_button_short'
+  - conditions:
+    - '{{ command == ''brightness_move_up'' }}'
+    sequence: !input 'on_button_long'
+  - conditions:
+    - '{{ command == ''brightness_move_down'' }}'
+    sequence: !input 'off_button_long'
+  - conditions:
+    - '{{ command == ''toggle'' }}'
+    sequence: !input 'toggle'
+  - conditions:
+    - '{{ command == ''arrow_left_click'' }}'
+    sequence: !input 'arrow_left_click'
+  - conditions:
+    - '{{ command == ''arrow_right_click'' }}'
+    sequence: !input 'arrow_right_click'
+  - conditions:
+    - '{{ command == ''brightness_up_click'' }}'
+    sequence: !input 'brightness_up_click'
+  - conditions:
+    - '{{ command == ''brightness_down_click'' }}'
+    sequence: !input 'brightness_down_click'
