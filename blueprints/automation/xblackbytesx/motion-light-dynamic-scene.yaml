@@ -63,6 +63,14 @@ blueprint:
       selector:
         entity:
           domain: input_number
+    additional_off_entity:
+      name: (OPTIONAL) Additional off entity
+      description: If defined, this entity will be turned off instead of the default
+        target entity. This can be helpful when using target entities of type scene
+        or script.
+      default:
+      selector:
+        entity: {}
   source_url: https://gist.github.com/freakshock88/2311759ba64f929f6affad4c0a67110b
 mode: restart
 max_exceeded: silent
@@ -73,6 +81,7 @@ variables:
   sensor_dark_enough: !input 'sensor_dark_enough'
   no_motion_timeout: !input 'no_motion_timeout'
   entity_domain: '{{ states[target_entity].domain }}'
+  additional_off_entity: !input 'additional_off_entity'
 trigger:
   platform: state
   entity_id: !input 'motion_entity'
@@ -101,7 +110,12 @@ action:
 - choose:
   - conditions:
     - condition: template
-      value_template: '{{ (target_entity != none) }}'
+      value_template: '{{ (additional_off_entity != none) }}'
     sequence:
     - service: homeassistant.turn_off
       entity_id: !input 'target_entity'
+    - service: homeassistant.turn_off
+      entity_id: !input 'additional_off_entity'
+  default:
+  - service: homeassistant.turn_off
+    entity_id: !input 'target_entity'
