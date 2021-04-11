@@ -30,6 +30,19 @@ scene_mb_day:
         transition: 2
 
 
+mb_smart_scene:
+  alias: MB | Smart Scene
+  sequence:
+    service: script.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state('binary_sensor.time_for_dim_scenes', 'on') %}
+          script.scene_mb_night
+        {% else %}
+          script.scene_mb_day
+        {% endif %}
+
+
 scene_mb_search_mode:
   sequence:
     - service: light.turn_on

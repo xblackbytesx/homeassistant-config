@@ -14,6 +14,19 @@ scene_co_day:
         brightness_pct: 45
 
 
+co_smart_scene:
+  alias: CO | Smart Scene
+  sequence:
+    service: script.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state('binary_sensor.time_for_dim_scenes', 'on') %}
+          script.scene_co_night
+        {% else %}
+          script.scene_co_day
+        {% endif %}
+
+
 scene_co_search_mode:
   sequence:
     - service: light.turn_on

@@ -18,6 +18,19 @@ scene_hw_day:
       entity_id: switch.0xec1bbdfffefd5a85
 
 
+hw_smart_scene:
+  alias: HW | Smart Scene
+  sequence:
+    service: script.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state('binary_sensor.time_for_dim_scenes', 'on') %}
+          script.scene_hw_night
+        {% else %}
+          script.scene_hw_day
+        {% endif %}
+        
+
 scene_hw_search_mode:
   sequence:
     - service: light.turn_on

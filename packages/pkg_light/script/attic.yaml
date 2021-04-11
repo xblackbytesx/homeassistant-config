@@ -14,6 +14,19 @@ scene_attic_day:
         brightness_pct: 70
 
 
+attic_smart_scene:
+  alias: Attic | Smart Scene
+  sequence:
+    service: script.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state('binary_sensor.time_for_dim_scenes', 'on') %}
+          script.scene_attic_night
+        {% else %}
+          script.scene_attic_day
+        {% endif %}
+
+
 scene_attic_search_mode:
   sequence:
     - service: light.turn_on

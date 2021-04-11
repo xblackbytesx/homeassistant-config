@@ -17,3 +17,16 @@ scene_ex_day:
         transition: 2
     - service: homeassistant.turn_on
       entity_id: switch.0x000d6ffffea6e967_switch
+
+
+ex_smart_scene:
+  alias: EX | Smart Scene
+  sequence:
+    service: script.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state('binary_sensor.time_for_dim_scenes', 'on') %}
+          script.scene_ex_night
+        {% else %}
+          script.scene_ex_day
+        {% endif %}

@@ -12,3 +12,16 @@ scene_toilet_day:
       data:
         entity_id: light.lg_toilet_all
         brightness_pct: 70
+
+
+toilet_smart_scene:
+  alias: Toilet | Smart Scene
+  sequence:
+    service: script.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state('binary_sensor.time_for_dim_scenes', 'on') %}
+          script.scene_toilet_night
+        {% else %}
+          script.scene_toilet_day
+        {% endif %}

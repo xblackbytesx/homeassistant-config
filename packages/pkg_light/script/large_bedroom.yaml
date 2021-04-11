@@ -36,6 +36,19 @@ scene_lb_day:
         transition: 2
 
 
+lb_smart_scene:
+  alias: LB | Smart Scene
+  sequence:
+    service: script.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state('binary_sensor.time_for_dim_scenes', 'on') %}
+          script.scene_lb_night
+        {% else %}
+          script.scene_lb_day
+        {% endif %}
+
+
 scene_lb_disco_mode:
   sequence:
     - service: homeassistant.turn_off
