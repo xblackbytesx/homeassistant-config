@@ -14,7 +14,7 @@ scene_toilet_day:
         brightness_pct: 70
 
 
-toilet_smart_scene:
+scene_toilet_smart:
   alias: Toilet | Smart Scene
   sequence:
     service: script.turn_on

@@ -30,7 +30,7 @@ scene_mb_day:
         transition: 2
 
 
-mb_smart_scene:
+scene_mb_smart:
   alias: MB | Smart Scene
   sequence:
     service: script.turn_on

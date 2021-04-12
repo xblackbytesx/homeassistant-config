@@ -65,7 +65,7 @@ scene_sa_watching_tv:
         effect: none
 
 
-lr_smart_scene:
+scene_lr_smart:
   alias: LR | Smart Scene
   sequence:
     service: script.turn_on

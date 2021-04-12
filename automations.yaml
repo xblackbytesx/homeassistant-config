@@ -15,18 +15,6 @@
       - service: notify.notify_matrix_clean
         data:
           message: Battery level(s) of {{sensors}} are extremely low!
-- id: '1617978621558'
-  alias: 'Motion Light | Office '
-  description: ''
-  use_blueprint:
-    path: freakshock88/motion_illuminance_activated_entity.yaml
-    input:
-      motion_sensor: binary_sensor.0x00158d0004499f26_occupancy
-      target_entity: script.scene_office_day
-      illuminance_sensor: sensor.0x00158d0004499f26_illuminance
-      illuminance_cutoff: input_number.office_illuminance_threshold
-      blocker_entity: input_boolean.automation_office_light
-      no_motion_wait: input_number.office_motion_timeout
 - id: '1617981303816'
   alias: Window or door open | Stop Heating
   description: ''
@@ -53,8 +41,7 @@
     input:
       motion_entity: binary_sensor.hw_motion_detected
       target_entity: light.lg_hw_all
-      target_entity_day_scene: script.scene_hw_day
-      target_entity_night_scene: script.scene_hw_night
+      target_entity_scene: script.scene_hw_smart
       sensor_dark_enough: binary_sensor.hw_dark_enough
       no_motion_timeout: input_number.hw_motion_timeout
       additional_off_entity: switch.0xec1bbdfffefd5a85
@@ -66,8 +53,7 @@
     input:
       motion_entity: binary_sensor.co_motion_detected
       target_entity: light.lg_co_all
-      target_entity_day_scene: script.scene_co_day
-      target_entity_night_scene: script.scene_co_night
+      target_entity_scene: script.scene_co_smart
       sensor_dark_enough: binary_sensor.co_dark_enough
       no_motion_timeout: input_number.co_motion_timeout
 - id: '1618052131786'
@@ -78,8 +64,7 @@
     input:
       motion_entity: binary_sensor.toilet_motion_detected
       target_entity: light.lg_toilet_all
-      target_entity_day_scene: script.scene_toilet_day
-      target_entity_night_scene: script.scene_toilet_night
+      target_entity_scene: script.scene_toilet_smart
       no_motion_timeout: input_number.toilet_motion_timeout
 - id: '1618053623414'
   alias: Bathroom | Dynamic scene aware motion trigger
@@ -89,8 +74,7 @@
     input:
       motion_entity: binary_sensor.bathroom_motion_detected
       target_entity: light.lg_bathroom_all
-      target_entity_day_scene: script.scene_bathroom_day
-      target_entity_night_scene: script.scene_bathroom_night
+      target_entity_scene: script.scene_bathroom_smart
       sensor_dark_enough: binary_sensor.bathroom_dark_enough
       no_motion_timeout: input_number.bathroom_motion_timeout
 - id: '1618053821325'
@@ -101,8 +85,7 @@
     input:
       motion_entity: binary_sensor.kitchen_motion_detected
       target_entity: light.lg_kitchen_all
-      target_entity_day_scene: script.scene_kitchen_day
-      target_entity_night_scene: script.scene_kitchen_night
+      target_entity_scene: script.scene_kitchen_smart
       sensor_dark_enough: binary_sensor.kitchen_dark_enough
       no_motion_timeout: input_number.kitchen_motion_timeout
 - id: '1618072747070'
@@ -113,8 +96,7 @@
     input:
       motion_entity: binary_sensor.attic_motion_detected
       target_entity: light.lg_attic_all
-      target_entity_day_scene: script.scene_attic_day
-      target_entity_night_scene: script.scene_attic_night
+      target_entity_scene: script.scene_attic_smart
       sensor_dark_enough: binary_sensor.attic_dark_enough
       no_motion_timeout: input_number.attic_motion_timeout
 - id: '1618076119249'
@@ -125,8 +107,7 @@
     input:
       motion_entity: binary_sensor.office_motion_detected
       target_entity: light.lg_office_all
-      target_entity_day_scene: script.scene_office_day
-      target_entity_night_scene: script.scene_office_night
+      target_entity_scene: script.scene_office_smart
       sensor_dark_enough: binary_sensor.office_dark_enough
       no_motion_timeout: input_number.office_motion_timeout
 - id: '1618130698559'
@@ -139,7 +120,7 @@
       on_button_short:
       - service: script.turn_on
         target:
-          entity_id: script.lb_smart_scene
+          entity_id: script.lb_smart
       off_button_short:
       - service: light.turn_off
         target:
@@ -162,5 +143,4 @@
       target_entity: light.lg_sa_all
       sensor_dark_enough: binary_sensor.sa_dark_enough
       no_motion_timeout: input_number.sa_motion_timeout
-      target_entity_day_scene: script.lr_smart_scene
-      target_entity_night_scene: script.lr_smart_scene
+      target_entity_scene: script.scene_lr_smart

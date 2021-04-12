@@ -36,7 +36,7 @@ scene_lb_day:
         transition: 2
 
 
-lb_smart_scene:
+scene_lb_smart:
   alias: LB | Smart Scene
   sequence:
     service: script.turn_on

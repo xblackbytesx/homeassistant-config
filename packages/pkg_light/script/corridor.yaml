@@ -14,7 +14,7 @@ scene_co_day:
         brightness_pct: 45
 
 
-co_smart_scene:
+scene_co_smart:
   alias: CO | Smart Scene
   sequence:
     service: script.turn_on

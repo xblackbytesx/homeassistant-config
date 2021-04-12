@@ -14,7 +14,7 @@ scene_attic_day:
         brightness_pct: 70
 
 
-attic_smart_scene:
+scene_attic_smart:
   alias: Attic | Smart Scene
   sequence:
     service: script.turn_on

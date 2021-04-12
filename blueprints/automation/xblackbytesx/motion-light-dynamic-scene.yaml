@@ -36,15 +36,9 @@ blueprint:
         automation is triggered.
       selector:
         entity: {}
-    target_entity_day_scene:
-      name: Target entity day scene.
-      description: The day scene to turn on (or script to run) when the
-        automation is triggered.
-      selector:
-        entity: {}
-    target_entity_night_scene:
-      name: Target entity night scene.
-      description: The night scene to turn on (or script to run) when the
+    target_entity_scene:
+      name: Target entity scene.
+      description: The scene to turn on (or script to run) when the
         automation is triggered.
       selector:
         entity: {}
@@ -76,8 +70,7 @@ mode: restart
 max_exceeded: silent
 variables:
   target_entity: !input 'target_entity'
-  target_entity_day_scene: !input 'target_entity_day_scene'
-  target_entity_night_scene: !input 'target_entity_night_scene'
+  target_entity_scene: !input 'target_entity_scene'
   sensor_dark_enough: !input 'sensor_dark_enough'
   no_motion_timeout: !input 'no_motion_timeout'
   entity_domain: '{{ states[target_entity].domain }}'
@@ -91,13 +84,7 @@ condition:
   value_template: '{{ (states[target_entity].state == ''on'') or (sensor_dark_enough == none) or (states[sensor_dark_enough].state == ''on'') }}'
 action:
 - service: homeassistant.turn_on
-  data_template:
-    entity_id: >
-      {% if is_state('binary_sensor.time_for_dim_scenes', 'on') %}
-        {{ target_entity_night_scene }}
-      {% else %}
-        {{ target_entity_day_scene }}
-      {% endif %}
+  entity_id: !input 'target_entity_scene'
 - condition: template
   value_template: '{{ no_motion_timeout != none }}'
 - wait_for_trigger:

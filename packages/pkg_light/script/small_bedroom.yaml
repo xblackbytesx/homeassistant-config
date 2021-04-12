@@ -29,7 +29,7 @@ scene_sb_day:
         transition: 2
 
 
-sb_smart_scene:
+scene_sb_smart:
   alias: SB | Smart Scene
   sequence:
     service: script.turn_on

@@ -19,7 +19,7 @@ scene_ex_day:
       entity_id: switch.0x000d6ffffea6e967_switch
 
 
-ex_smart_scene:
+scene_ex_smart:
   alias: EX | Smart Scene
   sequence:
     service: script.turn_on

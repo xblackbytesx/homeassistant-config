@@ -18,7 +18,7 @@ scene_hw_day:
       entity_id: switch.0xec1bbdfffefd5a85
 
 
-hw_smart_scene:
+scene_hw_smart:
   alias: HW | Smart Scene
   sequence:
     service: script.turn_on

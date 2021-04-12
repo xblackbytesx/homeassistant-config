@@ -14,7 +14,7 @@ scene_office_day:
         brightness_pct: 45
 
 
-office_smart_scene:
+scene_office_smart:
   alias: Office | Smart Scene
   sequence:
     service: script.turn_on

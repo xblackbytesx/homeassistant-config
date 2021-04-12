@@ -50,7 +50,7 @@ scene_bathroom_day:
         - script.scene_bathroom_r_day
 
 
-bathroom_smart_scene:
+scene_bathroom_smart:
   alias: Bathroom | Smart Scene
   sequence:
     service: script.turn_on
