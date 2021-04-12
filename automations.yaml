@@ -43,7 +43,7 @@
     path: xblackbytesx/window-open-climate-off.yaml
     input:
       window_entity: binary_sensor.lr_door_or_window_open
-      climate_target: fan.xiaomi_miio_device_2
+      climate_target: fan.xiaomi_miio_device
       minimum_open_time: 90
 - id: '1618048599345'
   alias: HW | Dynamic scene aware motion trigger
@@ -139,7 +139,7 @@
       on_button_short:
       - service: script.turn_on
         target:
-          entity_id: script.scene_lb_day
+          entity_id: script.lb_smart_scene
       off_button_short:
       - service: light.turn_off
         target:
@@ -148,3 +148,19 @@
       - service: script.turn_on
         target:
           entity_id: script.scene_lb_night
+      off_button_long:
+      - service: light.turn_off
+        target:
+          entity_id: light.lg_lb_all
+- id: '1618207100979'
+  alias: SA | Dynamic scene aware motion trigger
+  description: ''
+  use_blueprint:
+    path: xblackbytesx/motion-light-dynamic-scene.yaml
+    input:
+      motion_entity: binary_sensor.sa_motion_detected
+      target_entity: light.lg_sa_all
+      sensor_dark_enough: binary_sensor.sa_dark_enough
+      no_motion_timeout: input_number.sa_motion_timeout
+      target_entity_day_scene: script.lr_smart_scene
+      target_entity_night_scene: script.lr_smart_scene
