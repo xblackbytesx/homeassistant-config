@@ -116,11 +116,11 @@
   use_blueprint:
     path: pavax/z2m-ikea-remote-controls.yaml
     input:
-      remote: sensor.0x588e81fffe3ec5eb_click
+      remote: sensor.0x588e81fffe3ec5eb_action
       on_button_short:
       - service: script.turn_on
         target:
-          entity_id: script.lb_smart
+          entity_id: script.scene_lb_smart
       off_button_short:
       - service: light.turn_off
         target:
@@ -144,3 +144,68 @@
       sensor_dark_enough: binary_sensor.sa_dark_enough
       no_motion_timeout: input_number.sa_motion_timeout
       target_entity_scene: script.scene_lr_smart
+- id: '1618253152030'
+  alias: MB | Generic Ikea Remote Control
+  description: ''
+  use_blueprint:
+    path: pavax/z2m-ikea-remote-controls.yaml
+    input:
+      remote: sensor.0x588e81fffe3567ee_action
+      on_button_short:
+      - service: script.turn_on
+        target:
+          entity_id: script.scene_mb_smart
+      off_button_short:
+      - service: light.turn_off
+        target:
+          entity_id: light.lg_mb_all
+      on_button_long:
+      - service: script.turn_on
+        target:
+          entity_id: script.scene_mb_smart
+      off_button_long:
+      - service: light.turn_off
+        target:
+          entity_id: light.lg_mb_all
+- id: '1618253524498'
+  alias: MB | Person1 | Generic Ikea Remote Control
+  description: ''
+  use_blueprint:
+    path: pavax/z2m-ikea-remote-controls.yaml
+    input:
+      remote: sensor.0x680ae2fffeacab80_action
+      on_button_short:
+      - service: script.turn_on
+        target:
+          entity_id: script.scene_mb_smart
+      off_button_short:
+      - service: light.turn_off
+        target:
+          entity_id: light.lg_mb_all
+- id: '1618253650053'
+  alias: MB | Person 2 | Generic Ikea Remote Control
+  description: ''
+  use_blueprint:
+    path: pavax/z2m-ikea-remote-controls.yaml
+    input:
+      remote: sensor.0x588e81fffe21f051_action
+      on_button_short:
+      - service: script.turn_on
+        target:
+          entity_id: script.scene_mb_smart
+      off_button_short:
+      - service: light.turn_off
+        target:
+          entity_id: light.lg_mb_all
+- id: '1618268774748'
+  alias: Exterior | Dynamic scene aware motion trigger
+  description: ''
+  use_blueprint:
+    path: xblackbytesx/motion-light-dynamic-scene.yaml
+    input:
+      motion_entity: binary_sensor.allow_exterior_lights
+      target_entity: light.lg_ex_all
+      target_entity_scene: script.scene_ex_smart
+      sensor_dark_enough: binary_sensor.exterior_dark_enough
+      no_motion_timeout: input_number.hw_motion_timeout
+      additional_off_entity: ' switch.0x000d6ffffea6e967_switch'
