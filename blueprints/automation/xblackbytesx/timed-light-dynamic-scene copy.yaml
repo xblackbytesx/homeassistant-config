@@ -1,0 +1,122 @@
+blueprint:
+  name: Dynamic scene aware time trigger
+  description: "Turn on a light, switch, scene, script or group based on motion detection,\
+    \ and low light level.\nThis blueprint uses helper entities you have to create\
+    \ yourself for some input values, to be able to dynamically set limits.  For instructions\
+    \ on creating the helper entities take a look in the Home Assistant Community\
+    \ forum topic: https://community.home-assistant.io/t/turn-on-light-switch-scene-or-script-based-on-motion-and-illuminance-more-conditions/257085\n\
+    \nRequired entities:\n  - Motion sensor (single sensor or group)\n  - Target entity\
+    \ (light, switch, scene or script)\n\n\nOptional features:\n- You can set a cutoff\
+    \ entity of which the value determines whether the illuminance level is low and\
+    \ the automation needs to trigger. - You can define a blocking entity, which blocks\
+    \ the automation from running when this entity's state is on. - You van define\
+    \ a turn-off blocking entity, which blocks the entity from turning off after the\
+    \ set delay. - Time limits can also be defined to limit the time before and after\
+    \ the automation should trigger. - If you want the entity to turn off after a\
+    \ certain amount of minutes, you can use the Wait Time input. - If you want another\
+    \ entity than the target_entity to turn off after the delay, you can define a\
+    \ separate Turn-off entity. - If you do not enable the optional entities the automation\
+    \ will skip these conditions.\n\n\nOptional entities:\n- Illuminance sensor (sensor\
+    \ in illuminance class)\n- Illuminance cutoff value  (input_number)\n- Blocking\
+    \ entity (any entity with state on/off)\n- Time limit before (input_datetime)\n\
+    - Time limit after (input_datetime)\n- Turn off wait time [in minutes!] (input_number)\
+    \ - will not work with script or scene target entities.\n- Turn off entity (any\
+    \ entity_id)\n"
+  domain: automation
+  input:
+    trigger_entity:
+      name: Trigger entity
+      description: This sensor will trigger the turning on of the target entity.
+      selector:
+        entity:
+          domain: binary_sensor
+    periodic_trigger_check:
+      name: Time for the automation to re-run
+      description: Time in minutes to re-run the automation
+      default: 2
+      selector:
+        number:
+          min: 1
+          max: 20
+          unit_of_measurement: minutes
+          mode: slider
+          step: 1
+    target_entity:
+      name: Target entity.
+      description: The light, switch, scene to turn on (or script to run) when the
+        automation is triggered.
+      selector:
+        entity: {}
+    target_entity_scene:
+      name: Target entity scene.
+      description: The scene to turn on (or script to run) when the
+        automation is triggered.
+      selector:
+        entity: {}
+    binary_condition:
+      name: (OPTIONAL) Any binary condition you wish to check for
+      description: This sensor will be used to check any binary condition.
+      default:
+      selector:
+        entity:
+          domain: binary_sensor
+    no_motion_timeout:
+      name: (OPTIONAL) Turn off wait time (minutes)
+      description: Time in minutes to leave the target entity on after last motion
+        is detected. If not used entity will not auto turn off.
+      default:
+      selector:
+        entity:
+          domain: input_number
+    additional_off_entity:
+      name: (OPTIONAL) Additional off entity
+      description: If defined, this entity will be turned off instead of the default
+        target entity. This can be helpful when using target entities of type scene
+        or script.
+      default:
+      selector:
+        entity: {}
+  source_url: https://gist.github.com/freakshock88/2311759ba64f929f6affad4c0a67110b
+mode: restart
+max_exceeded: silent
+variables:
+  periodic_trigger_check: !input 'periodic_trigger_check'
+  target_entity: !input 'target_entity'
+  target_entity_scene: !input 'target_entity_scene'
+  binary_condition: !input 'binary_condition'
+  no_motion_timeout: !input 'no_motion_timeout'
+  entity_domain: '{{ states[target_entity].domain }}'
+  additional_off_entity: !input 'additional_off_entity'
+trigger:
+  - platform: state
+    entity_id: !input 'trigger_entity'
+    to: 'on'
+  - platform: time_pattern
+    minutes: '/{{periodic_trigger_check}}'
+condition:
+- condition: template].state == ''on'') or (binary_condition == none)
+  value_template: '{{ (states[target_entity].state == ''on'') or (binary_condition == none) or (states[binary_condition].state == ''on'') }}'
+action:
+- service: homeassistant.turn_on
+  entity_id: !input 'target_entity_scene'
+- condition: template
+  value_template: '{{ no_motion_timeout != none }}'
+- wait_for_trigger:
+    platform: state
+    entity_id: !input 'trigger_entity'
+    from: 'on'
+    to: 'off'
+- delay:
+    minutes: '{{ states[no_motion_timeout].state | int }}'
+- choose:
+  - conditions:
+    - condition: template
+      value_template: '{{ (additional_off_entity != none) }}'
+    sequence:
+    - service: homeassistant.turn_off
+      entity_id: !input 'target_entity'
+    - service: homeassistant.turn_off
+      entity_id: !input 'additional_off_entity'
+  default:
+  - service: homeassistant.turn_off
+    entity_id: !input 'target_entity'
