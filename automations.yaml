@@ -16,7 +16,7 @@
         data:
           message: Battery level(s) of {{sensors}} are extremely low!
 - id: '1617981303816'
-  alias: Window or door open | Stop Heating
+  alias: LR | Window or door open | Stop Heating
   description: ''
   use_blueprint:
     path: xblackbytesx/window-open-climate-off.yaml
@@ -25,7 +25,7 @@
       climate_target: climate.living_room
       minimum_open_time: 90
 - id: '1617983530934'
-  alias: Window or door open | Stop Purifier
+  alias: LR | Window or door open | Stop Purifier
   description: ''
   use_blueprint:
     path: xblackbytesx/window-open-climate-off.yaml
@@ -209,3 +209,163 @@
       sensor_dark_enough: binary_sensor.exterior_dark_enough
       no_motion_timeout: input_number.hw_motion_timeout
       additional_off_entity: ' switch.0x000d6ffffea6e967_switch'
+- id: '1618299730580'
+  alias: Office | Power Switch | Generic Ikea Remote Control
+  description: ''
+  use_blueprint:
+    path: pavax/z2m-ikea-remote-controls.yaml
+    input:
+      on_button_short:
+      - service: switch.turn_on
+        target:
+          entity_id: switch.0x000d6ffffed9d60d_switch
+      remote: sensor.0x588e81fffe210c82_action
+      off_button_short:
+      - service: switch.turn_off
+        target:
+          entity_id: switch.0x000d6ffffed9d60d_switch
+- id: '1618299962333'
+  alias: Dryer | Power Switch | Generic Ikea Remote Control
+  description: ''
+  use_blueprint:
+    path: pavax/z2m-ikea-remote-controls.yaml
+    input:
+      remote: sensor.0xec1bbdfffed45ff8_action
+      on_button_short:
+      - service: switch.turn_on
+        target:
+          entity_id: switch.0x000d6ffffea7daa5_switch
+      off_button_short:
+      - service: switch.turn_off
+        target:
+          entity_id: switch.0x000d6ffffea7daa5_switch
+- id: '1618343026702'
+  alias: SA | TV Switch | Generic Ikea Remote Control
+  description: ''
+  use_blueprint:
+    path: pavax/z2m-ikea-remote-controls.yaml
+    input:
+      remote: sensor.0x680ae2fffe4d9610_action
+      on_button_short:
+      - service: switch.turn_on
+        target:
+          entity_id: switch.0x000d6ffffedad23c_switch
+      off_button_short:
+      - service: switch.turn_off
+        target:
+          entity_id: switch.0x000d6ffffedad23c_switch
+- id: '1618343140289'
+  alias: LR | Black Cabinet Switch | Generic Ikea Remote Control
+  description: ''
+  use_blueprint:
+    path: pavax/z2m-ikea-remote-controls.yaml
+    input:
+      remote: sensor.0x588e81fffe0656b2_action
+      on_button_short:
+      - service: switch.turn_on
+        target:
+          entity_id: switch.0x000d6ffffea6df64_switch
+      off_button_short:
+      - service: switch.turn_off
+        target:
+          entity_id: switch.0x000d6ffffea6df64_switch
+- id: '1618394577352'
+  alias: EX | Timed dynamic scene
+  description: ''
+  use_blueprint:
+    path: xblackbytesx/timed-dynamic-scene.yaml
+    input:
+      motion_entity: binary_sensor.allow_exterior_lights
+      periodic_trigger_check: 3
+      target_entity: light.lg_ex_all
+      target_entity_scene: script.scene_ex_smart
+      sensor_dark_enough: binary_sensor.exterior_dark_enough
+      no_motion_timeout: input_number.hw_motion_timeout
+      additional_off_entity: switch.0x000d6ffffea6e967_switch
+- id: '1618671825914'
+  alias: SA | Lights
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.sa_motion_detected
+    to: 'on'
+    from: 'off'
+  - platform: state
+    entity_id: binary_sensor.sa_tv_media_playing
+    to: 'on'
+    from: 'off'
+  - platform: state
+    entity_id: binary_sensor.sa_dark_enough
+    to: 'on'
+    from: 'off'
+  - platform: state
+    entity_id: binary_sensor.sa_motion_detected
+    to: 'off'
+    from: 'on'
+    for: 00:05:00
+  - platform: state
+    entity_id: binary_sensor.sa_tv_media_playing
+    from: 'on'
+    to: 'off'
+  - platform: state
+    entity_id: binary_sensor.sa_dark_enough
+    from: 'on'
+    to: 'off'
+    for: 00:05:00
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: or
+        conditions:
+        - condition: state
+          entity_id: binary_sensor.sa_motion_detected
+          state: 'off'
+        - condition: state
+          entity_id: binary_sensor.sa_dark_enough
+          state: 'off'
+      sequence:
+      - service: light.turn_off
+        target:
+          entity_id: light.lg_sa_all
+    default:
+    - service: script.turn_on
+      target:
+        entity_id: script.scene_lr_smart
+  mode: restart
+- id: '1618689298301'
+  alias: EX | Lights
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.allow_exterior_lights
+    from: 'off'
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.allow_exterior_lights
+    from: 'on'
+    to: 'off'
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: or
+        conditions:
+        - condition: state
+          entity_id: binary_sensor.allow_exterior_lights
+          state: 'off'
+        - condition: state
+          entity_id: binary_sensor.exterior_dark_enough
+          state: 'off'
+      sequence:
+      - service: light.turn_off
+        target:
+          entity_id: light.lg_ex_all
+      - service: switch.turn_off
+        target:
+          entity_id: switch.0x000d6ffffea6e967_switch
+    default:
+    - service: script.turn_on
+      target:
+        entity_id: script.scene_ex_smart
+  mode: single
