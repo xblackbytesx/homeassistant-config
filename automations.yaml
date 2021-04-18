@@ -133,17 +133,6 @@
       - service: light.turn_off
         target:
           entity_id: light.lg_lb_all
-- id: '1618207100979'
-  alias: SA | Dynamic scene aware motion trigger
-  description: ''
-  use_blueprint:
-    path: xblackbytesx/motion-light-dynamic-scene.yaml
-    input:
-      motion_entity: binary_sensor.sa_motion_detected
-      target_entity: light.lg_sa_all
-      sensor_dark_enough: binary_sensor.sa_dark_enough
-      no_motion_timeout: input_number.sa_motion_timeout
-      target_entity_scene: script.scene_lr_smart
 - id: '1618253152030'
   alias: MB | Generic Ikea Remote Control
   description: ''
@@ -197,18 +186,6 @@
       - service: light.turn_off
         target:
           entity_id: light.lg_mb_all
-- id: '1618268774748'
-  alias: Exterior | Dynamic scene aware motion trigger
-  description: ''
-  use_blueprint:
-    path: xblackbytesx/motion-light-dynamic-scene.yaml
-    input:
-      motion_entity: binary_sensor.allow_exterior_lights
-      target_entity: light.lg_ex_all
-      target_entity_scene: script.scene_ex_smart
-      sensor_dark_enough: binary_sensor.exterior_dark_enough
-      no_motion_timeout: input_number.hw_motion_timeout
-      additional_off_entity: ' switch.0x000d6ffffea6e967_switch'
 - id: '1618299730580'
   alias: Office | Power Switch | Generic Ikea Remote Control
   description: ''
@@ -269,19 +246,6 @@
       - service: switch.turn_off
         target:
           entity_id: switch.0x000d6ffffea6df64_switch
-- id: '1618394577352'
-  alias: EX | Timed dynamic scene
-  description: ''
-  use_blueprint:
-    path: xblackbytesx/timed-dynamic-scene.yaml
-    input:
-      motion_entity: binary_sensor.allow_exterior_lights
-      periodic_trigger_check: 3
-      target_entity: light.lg_ex_all
-      target_entity_scene: script.scene_ex_smart
-      sensor_dark_enough: binary_sensor.exterior_dark_enough
-      no_motion_timeout: input_number.hw_motion_timeout
-      additional_off_entity: switch.0x000d6ffffea6e967_switch
 - id: '1618671825914'
   alias: SA | Lights
   description: ''
@@ -343,6 +307,14 @@
     to: 'on'
   - platform: state
     entity_id: binary_sensor.allow_exterior_lights
+    from: 'on'
+    to: 'off'
+  - platform: state
+    entity_id: binary_sensor.exterior_dark_enough
+    from: 'off'
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.exterior_dark_enough
     from: 'on'
     to: 'off'
   condition: []
