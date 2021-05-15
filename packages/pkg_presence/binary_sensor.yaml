@@ -69,7 +69,7 @@
 
     office_motion_detected:
       value_template: >-
-        {{ is_state('binary_sensor.motion_office_front_occupancy', 'on'
+        {{ is_state('binary_sensor.motion_office_front_occupancy', 'on')
            or is_state('binary_sensor.motion_office_back_occupancy', 'on') }}
       
     backyard_motion_detected:
