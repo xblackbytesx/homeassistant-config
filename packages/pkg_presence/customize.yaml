@@ -7,7 +7,7 @@ binary_sensor.0x00178801020260c3_occupancy:
 binary_sensor.0x00178801020282bc_occupancy:
   friendly_name: Hallway/stairs
   device_class: motion
-binary_sensor.0x00158d000447edb4_occupancy:
+binary_sensor.motion_toilet_occupancy:
   friendly_name: Toilet
   device_class: motion
 binary_sensor.sa_motion_detected:
@@ -19,15 +19,21 @@ binary_sensor.kitchen_motion_detected:
 binary_sensor.0x0017880102026161_occupancy:
   friendly_name: Sitting area/screen
   device_class: motion
-binary_sensor.0x00158d00034911fc_occupancy:
+
+# 0x00158d00034911fc
+binary_sensor.motion_sitting_area_closet_occupancy:
   friendly_name: Sitting area/closet
   device_class: motion
+
 binary_sensor.0x0017880102030677_occupancy:
   friendly_name: Sitting Area wall
   device_class: motion
-binary_sensor.0x00158d00033a43ef_occupancy:
+
+# 0x00158d00033a43ef
+binary_sensor.motion_kitchen_front_occupancy:
   friendly_name: Kitchen/front
   device_class: motion
+  
 binary_sensor.0x0017880102030677_occupancy:
   friendly_name: Kitchen/back
   device_class: motion
@@ -37,42 +43,60 @@ binary_sensor.0x00178801020357e5_occupancy:
 binary_sensor.co_motion_detected:
   friendly_name: Corridor
   device_class: motion
-binary_sensor.0x00158d00044c977b_occupancy:
+
+# 0x00158d00044c977b
+binary_sensor.motion_master_bedroom_occupancy:
   friendly_name: Master Bedroom
   device_class: motion
-binary_sensor.0x00158d000349234a_occupancy:
+
+# 0x00158d000349234a
+binary_sensor.motion_bathroom_back_occupancy:
   friendly_name: Bathroom/back
   device_class: motion
-binary_sensor.0x00158d00033aac53_occupancy:
+
+binary_sensor.motion_bathroom_front_occupancy:
   friendly_name: Bathroom/front
   device_class: motion
 binary_sensor.0x680ae2fffe367f3b_occupancy:
   friendly_name: Tradfri/Bathroom/shower
   device_class: motion
-binary_sensor.0x00158d00044d28cf_occupancy:
+binary_sensor.motion_bathroom_shower_occupancy:
   friendly_name: Bathroom/shower
   device_class: motion
 binary_sensor.bathroom_motion_detected:
   friendly_name: Bathroom
   device_class: motion
-binary_sensor.0x00158d00044d216c_occupancy:
+
+# 0x00158d00044d216c
+binary_sensor.motion_large_bedroom_occupancy:
   friendly_name: Large Bedroom
   device_class: motion
-binary_sensor.0x00158d00044d34de_occupancy:
+
+# 0x00158d00044d34de
+binary_sensor.motion_small_bedroom_occupancy:
   friendly_name: Small Bedroom
   device_class: motion
+
 binary_sensor.0x00158d00036b62d0_occupancy:
   friendly_name: Attic/stairs
   device_class: motion
-binary_sensor.0x00158d000302ec77_occupancy:
+binary_sensor.motion_attic_front_occupancy:
   friendly_name: Attic/front
   device_class: motion
 binary_sensor.attic_motion_detected:
   friendly_name: Attic
   device_class: motion
-binary_sensor.0x00158d0004499f26_occupancy:
+
+# 0x00158d0004499f26
+binary_sensor.motion_office_back_occupancy:
+  friendly_name: Office/back
+  device_class: motion
+
+# 0x00158d0006791e09
+binary_sensor.motion_office_front_occupancy:
   friendly_name: Office/front
   device_class: motion
+
 binary_sensor.0x001788010647ff92_occupancy:
   friendly_name: Backyard
   device_class: motion
@@ -84,10 +108,13 @@ sensor.0x00178801020260c3_battery:
 sensor.0x00178801020282bc_battery:
   friendly_name: Motion sensor Hallway/stairs
   device_class: battery
-sensor.0x00158d000447edb4_battery:
+
+# 0x00158d000447edb4
+sensor.motion_toilet_battery:
   friendly_name: Motion sensor Toilet
   device_class: battery
-sensor.0x00158d00033a43ef_battery:
+
+sensor.motion_kitchen_front_battery:
   friendly_name: Motion sensor Kitchen/front
   device_class: battery
 sensor.0x0017880102030677_battery:
@@ -96,7 +123,7 @@ sensor.0x0017880102030677_battery:
 sensor.0x0017880102026161_battery:
   friendly_name: Motion sensor Sitting area/screen
   device_class: battery
-sensor.0x00158d00034911fc_battery:
+sensor.motion_sitting_area_closet_battery:
   friendly_name: Motion sensor Sitting area/closet
   device_class: battery
 sensor.0x0017880102030677_battery:
@@ -104,25 +131,36 @@ sensor.0x0017880102030677_battery:
 sensor.0x00178801020357e5_battery:
   friendly_name: Motion sensor Corridor
   device_class: battery
-sensor.0x00158d00033aac53_battery:
+
+# 0x00158d00033aac53
+sensor.motion_bathroom_front_battery:
   friendly_name: Motion sensor Bathroom/front
   device_class: battery
-sensor.0x00158d000349234a_battery:
+
+sensor.motion_bathroom_back_battery:
   friendly_name: Motion sensor Bathroom/back
   device_class: battery
-sensor.0x00158d00044d28cf_battery:
+
+# 0x00158d00044d28cf
+sensor.motion_bathroom_shower_battery:
   friendly_name: Motion sensor Bathroom/shower
   device_class: battery
+
 sensor.0x00158d00033e347d_battery:
   friendly_name: Wall switch Large bedroom
   device_class: battery
-sensor.0x00158d00036b62d0_battery:
+
+# 0x00158d00036b62d0
+sensor.motion_attic_stairs_battery:
   friendly_name: Motion sensor Attic/stairs
   device_class: battery
-sensor.0x00158d000302ec77_battery:
+
+# 0x00158d000302ec77
+sensor.motion_attic_front_battery:
   friendly_name: Motion sensor Attic/front
   device_class: battery
-sensor.0x00158d0004499f26_battery:
+  
+sensor.motion_office_back_battery:
   friendly_name: Motion sensor Office/front
   device_class: battery
 sensor.0x680ae2fffe367f3b_battery:

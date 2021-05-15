@@ -401,7 +401,7 @@ sensor.0x00178801020260c3_illuminance:
 sensor.0x00178801020282bc_illuminance:
   friendly_name: Hallway/stairs
   device_class: illuminance
-sensor.0x00158d000447edb4_illuminance:
+sensor.motion_toilet_illuminance:
   friendly_name: Toilet
   device_class: illuminance
 sensor.sa_motion_detected:
@@ -413,10 +413,10 @@ sensor.kitchen_motion_detected:
 sensor.0x0017880102026161_illuminance:
   friendly_name: Sitting area/screen
   device_class: illuminance
-sensor.0x00158d00034911fc_illuminance:
+sensor.motion_sitting_area_closet_illuminance:
   friendly_name: Sitting area/closet
   device_class: illuminance
-sensor.0x00158d00033a43ef_illuminance:
+sensor.motion_kitchen_front_illuminance:
   friendly_name: Kitchen/front
   device_class: illuminance
 sensor.0x0017880102030677_illuminance:
@@ -431,10 +431,10 @@ sensor.co_motion_detected:
 sensor.attic_motion_detected:
   friendly_name: Attic
   device_class: illuminance
-sensor.0x00158d000349234a_illuminance:
+sensor.motion_bathroom_back_illuminance:
   friendly_name: Bathroom/back
   device_class: illuminance
-sensor.0x00158d00033aac53_illuminance:
+sensor.motion_bathroom_front_illuminance:
   friendly_name: Bathroom/front
   device_class: illuminance
 sensor.bathroom_motion_detected:
@@ -443,10 +443,10 @@ sensor.bathroom_motion_detected:
 sensor.0x00158d00036b62d0_illuminance:
   friendly_name: Attic/stairs
   device_class: illuminance
-sensor.0x00158d000302ec77_illuminance:
+sensor.motion_attic_front_illuminance:
   friendly_name: Attic/front
   device_class: illuminance
-sensor.0x00158d0004499f26_illuminance:
+sensor.motion_office_back_illuminance:
   friendly_name: Office/front
   device_class: illuminance
 sensor.0x680ae2fffe367f3b_illuminance:

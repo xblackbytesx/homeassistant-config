@@ -6,7 +6,7 @@
 
     toilet_dark_enough:
       value_template: >-
-        {{ states('sensor.0x00158d000447edb4_illuminance')|int <= 400 }}
+        {{ states('sensor.motion_toilet_illuminance')|int <= 400 }}
 
     sa_dark_enough:
       value_template: >-
@@ -22,19 +22,19 @@
 
     mb_dark_enough:
       value_template: >-
-        {{ states('sensor.0x00158d00044c977b_illuminance')|int <= 15 }}        
+        {{ states('sensor.motion_master_bedroom_illuminance')|int <= 15 }}        
 
     bathroom_dark_enough:
       value_template: >-
-        {{ states('sensor.0x00158d000349234a_illuminance')|int <= 100 }}
+        {{ states('sensor.motion_bathroom_back_illuminance')|int <= 100 }}
 
     lb_dark_enough:
       value_template: >-
-        {{ states('sensor.0x00158d00044d216c_illuminance')|int <= 15 }}
+        {{ states('sensor.motion_large_bedroom_illuminance')|int <= 15 }}
 
     sb_dark_enough:
       value_template: >-
-        {{ states('sensor.0x00158d00044d34de_illuminance')|int <= 15 }}
+        {{ states('sensor.motion_small_bedroom_illuminance')|int <= 15 }}
 
     attic_dark_enough:
       value_template: >-
@@ -42,7 +42,7 @@
 
     office_dark_enough:
       value_template: >-
-        {{ states('sensor.0x00158d0004499f26_illuminance')|int <= states('input_number.office_illuminance_threshold')| int }}
+        {{ states('sensor.motion_office_back_illuminance')|int <= states('input_number.office_illuminance_threshold')| int }}
 
     exterior_dark_enough:
       value_template: >-

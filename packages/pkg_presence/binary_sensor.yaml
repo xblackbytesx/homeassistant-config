@@ -20,19 +20,19 @@
 
     toilet_motion_detected:
       value_template: >-
-        {{ is_state('binary_sensor.0x00158d000447edb4_occupancy', 'on') }}
+        {{ is_state('binary_sensor.motion_toilet_occupancy', 'on') }}
 
     sa_motion_detected:
       value_template: >-
         {{ is_state('binary_sensor.0x0017880102026161_occupancy', 'on')
-           or is_state('binary_sensor.0x00158d00034911fc_occupancy', 'on')
+           or is_state('binary_sensor.motion_sitting_area_closet_occupancy', 'on')
            or is_state('binary_sensor.0x0017880102030677_occupancy', 'on')
            or is_state('binary_sensor.0x0017880102026161_occupancy', 'on') }}
 
     kitchen_motion_detected:
       value_template: >-
         {{ is_state('binary_sensor.0x0017880102030677_occupancy', 'on')
-           or is_state('binary_sensor.0x00158d00033a43ef_occupancy', 'on') }}
+           or is_state('binary_sensor.motion_kitchen_front_occupancy', 'on') }}
 
     lr_motion_detected:
       value_template: >-
@@ -45,31 +45,32 @@
 
     mb_motion_detected:
       value_template: >-
-        {{ is_state('binary_sensor.0x00158d00044c977b_occupancy', 'on') }}
+        {{ is_state('binary_sensor.motion_master_bedroom_occupancy', 'on') }}
 
     bathroom_motion_detected:
       value_template: >-
-        {{ is_state('binary_sensor.0x00158d000349234a_occupancy', 'on')
-           or is_state('binary_sensor.0x00158d00033aac53_occupancy', 'on')
-           or is_state('binary_sensor.0x00158d00044d28cf_occupancy', 'on')
+        {{ is_state('binary_sensor.motion_bathroom_back_occupancy', 'on')
+           or is_state('binary_sensor.motion_bathroom_front_occupancy', 'on')
+           or is_state('binary_sensor.motion_bathroom_shower_occupancy', 'on')
            or is_state('binary_sensor.0x680ae2fffe367f3b_occupancy', 'on') }}
 
     lb_motion_detected:
       value_template: >-
-        {{ is_state('binary_sensor.0x00158d00044d216c_occupancy', 'on') }}
+        {{ is_state('binary_sensor.motion_large_bedroom_occupancy', 'on') }}
 
     sb_motion_detected:
       value_template: >-
-        {{ is_state('binary_sensor.0x00158d00044d34de_occupancy', 'on') }}
+        {{ is_state('binary_sensor.motion_small_bedroom_occupancy', 'on') }}
         
     attic_motion_detected:
       value_template: >-
         {{ is_state('binary_sensor.0x00158d00036b62d0_occupancy', 'on')
-           or is_state('binary_sensor.0x00158d000302ec77_occupancy', 'on') }}
+           or is_state('binary_sensor.motion_attic_front_occupancy', 'on') }}
 
     office_motion_detected:
       value_template: >-
-        {{ is_state('binary_sensor.0x00158d0004499f26_occupancy', 'on') }}
+        {{ is_state('binary_sensor.motion_office_front_occupancy', 'on'
+           or is_state('binary_sensor.motion_office_back_occupancy', 'on') }}
       
     backyard_motion_detected:
       value_template: >-

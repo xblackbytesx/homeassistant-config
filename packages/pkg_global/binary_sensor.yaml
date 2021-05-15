@@ -92,3 +92,11 @@
       value_template: >-
         {{ is_state('binary_sensor.kitchen_window_open', 'on')
           or is_state('binary_sensor.back_door_open', 'on') }}
+
+# # Temporary workaround until TOD is fixed:
+# template:
+# - binary_sensor:
+#   - name: Night Time
+#     unique_id: night_time
+#     state: >
+#       {{ not '06:30' <= as_timestamp(now()) | timestamp_custom('%H:%M') <= '23:00' }}
