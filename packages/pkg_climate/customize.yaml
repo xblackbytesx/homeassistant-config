@@ -1,40 +1,54 @@
 sensor.motion_hallway_stairs_temperature:
   friendly_name: Hallway
+
+
 sensor.motion_kitchen_back_temperature:
   friendly_name: Kitchen
+
+
 sensor.motion_sitting_area_screen_temperature:
   friendly_name: Sitting Area
+
+
 sensor.motion_corridor_temperature:
   friendly_name: Corridor
-sensor.0x00158d00036bffea_temperature:
+
+
+# 0x00158d00036bffea
+sensor.temperature_large_bedroom_temperature:
   friendly_name: Large bedroom
-sensor.0x00158d0004453420_temperature:
+sensor.temperature_large_bedroom_humidity:
+  friendly_name: Large bedroom
+sensor.temperature_large_bedroom_pressure:
+  friendly_name: Large bedroom
+sensor.temperature_large_bedroom_battery:
+  friendly_name: Climate sensor Large bedroom
+  device_class: battery
+
+
+# 0x00158d0004453420
+sensor.temperature_master_bedroom_temperature:
   friendly_name: Master bedroom
-sensor.0x00158d0001dd4719_temperature:
+sensor.temperature_master_bedroom_humidity:
+  friendly_name: Master bedroom
+sensor.temperature_master_bedroom_pressure:
+  friendly_name: Master bedroom
+sensor.temperature_master_bedroom_battery:
+  friendly_name: Climate sensor Master bedroom
+  device_class: battery
+
+
+# 0x00158d0001dd4719
+sensor.temperature_small_bedroom_temperature:
   friendly_name: Small bedroom
+sensor.temperature_small_bedroom_humidity:
+  friendly_name: Small bedroom
+sensor.temperature_small_bedroom_pressure:
+  friendly_name: Small bedroom
+sensor.temperature_small_bedroom_battery:
+  friendly_name: Climate sensor Small bedroom
+  device_class: battery
+
 
 sensor.living_room_thermostat_humidity:
   friendly_name: Humidity
-sensor.0x00158d00036bffea_humidity:
-  friendly_name: Large bedroom
-sensor.0x00158d0004453420_humidity:
-  friendly_name: Master bedroom
-sensor.0x00158d0001dd4719_humidity:
-  friendly_name: Small bedroom
-
-sensor.0x00158d00036bffea_pressure:
-  friendly_name: Large bedroom
-sensor.0x00158d0004453420_pressure:
-  friendly_name: Master bedroom
-sensor.0x00158d0001dd4719_pressure:
-  friendly_name: Small bedroom
-
-sensor.0x00158d00036bffea_battery:
-  friendly_name: Climate sensor Large bedroom
-  device_class: battery
-sensor.0x00158d0004453420_battery:
-  friendly_name: Climate sensor Master bedroom
-  device_class: battery
-sensor.0x00158d0001dd4719_battery:
-  friendly_name: Climate sensor Small bedroom
-  device_class: battery

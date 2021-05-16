@@ -2,6 +2,6 @@ type: entities
 title: Doors and windows
 show_header_toggle: false
 entities:
-  - binary_sensor.0x00158d000446eb21_contact
-  - binary_sensor.0x00158d000446fc0a_contact
-  - binary_sensor.0x00158d000446f39b_contact
+  - binary_sensor.contact_front_door_contact
+  - binary_sensor.contact_kitchen_window_contact
+  - binary_sensor.contact_back_door_contact

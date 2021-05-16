@@ -2,51 +2,66 @@ input_boolean.alarm_armed:
   friendly_name: Alarm Armed
   icon: mdi:shield-home
 
+
 input_boolean.aggressive_notifications:
   friendly_name: Aggressive Notifications
   icon: mdi:bell-ring
+
 
 input_boolean.simulate_occupancy:
   friendly_name: Simulate Occupancy
   icon: mdi:motion-sensor
 
-binary_sensor.0x00158d000446eb21_contact:
-  friendly_name: Front door
-  device_class: door
-binary_sensor.0x00158d000446fc0a_contact:
-  friendly_name: Kitchen window
-  device_class: window
-binary_sensor.0x00158d000446f39b_contact:
-  friendly_name: Back door
-  device_class: door
-
-sensor.0x00158d000446eb21_battery:
-  friendly_name: Contact sensor Front door
-  device_class: battery
-sensor.0x00158d000446fc0a_battery:
-  friendly_name: Contact sensor Kitchen window
-  device_class: battery
-sensor.0x00158d000446f39b_battery:
-  friendly_name: Contact sensor Back door
-  device_class: battery
 
 binary_sensor.front_door_open:
   friendly_name: Front door
   device_class: door
 
+
 binary_sensor.kitchen_window_open:
   friendly_name: Kitchen window
   device_class: window
+  
 
 binary_sensor.back_door_open:
   friendly_name: Back door
   device_class: door
 
+
+# 0x00158d000446eb21
+binary_sensor.contact_front_door_contact:
+  friendly_name: Front door
+  device_class: door
+sensor.contact_front_door_battery:
+  friendly_name: Contact sensor Front door
+  device_class: battery
+
+
+# 0x00158d000446fc0a
+binary_sensor.contact_kitchen_window_contact:
+  friendly_name: Kitchen window
+  device_class: window
+sensor.contact_kitchen_window_battery:
+  friendly_name: Contact sensor Kitchen window
+  device_class: battery
+
+
+# 0x00158d000446f39b
+binary_sensor.contact_back_door_contact:
+  friendly_name: Back door
+  device_class: door
+sensor.contact_back_door_battery:
+  friendly_name: Contact sensor Back door
+  device_class: battery
+
+
 automation.sec_001:
   friendly_name: SEC | Alarm Armed/Disarmed | Set Scene
 
+
 automation.sec_002:
   friendly_name: SEC | Simulate Occupancy | Set Scene
+
 
 automation.sec_003:
   friendly_name: SEC | Alarm Armed | Aggresive Door/Window Notifications

@@ -41,6 +41,6 @@ cards:
     cards:
       - type: custom:mini-graph-card
         entities:
-          - sensor.0x00158d0001dd4719_temperature
-          - sensor.0x00158d0001dd4719_humidity
-          - sensor.0x00158d0001dd4719_pressure
+          - sensor.temperature_small_bedroom_temperature
+          - sensor.temperature_small_bedroom_humidity
+          - sensor.temperature_small_bedroom_pressure
