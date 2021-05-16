@@ -2,12 +2,12 @@
   sensors:
     lr_smoke_detected:
       value_template: >-
-        {{ is_state('binary_sensor.0x00158d0003612f9b_smoke', 'on') }}
+        {{ is_state('binary_sensor.smoke_living_room_smoke', 'on') }}
 
     lb_smoke_detected:
       value_template: >-
-        {{ is_state('binary_sensor.0x00158d00045cd482_smoke', 'on') }}
+        {{ is_state('binary_sensor.smoke_large_bedroom_smoke', 'on') }}
 
     sb_smoke_detected:
       value_template: >-
-        {{ is_state('binary_sensor.0x00158d0004117f6f_smoke', 'on') }}
+        {{ is_state('binary_sensor.smoke_small_bedroom_smoke', 'on') }}

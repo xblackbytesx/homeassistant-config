@@ -1,23 +1,29 @@
-binary_sensor.0x00158d0003612f9b_smoke:
+# 0x00158d0003612f9b
+binary_sensor.smoke_living_room_smoke:
   friendly_name: Living Room
   device_class: smoke
-sensor.0x00158d0003612f9b_battery:
+sensor.smoke_living_room_battery:
   friendly_name: Smoke Alarm Living Room
   device_class: battery
 
-binary_sensor.0x00158d00045cd482_smoke:
+
+# 0x00158d00045cd482
+binary_sensor.smoke_large_bedroom_smoke:
   friendly_name: Large Bedroom
   device_class: smoke
-sensor.0x00158d00045cd482_battery:
+sensor.smoke_large_bedroom_battery:
   friendly_name: Smoke Alarm Large Bedroom
   device_class: battery
 
-binary_sensor.0x00158d0004117f6f_smoke:
+
+# 0x00158d0004117f6f
+binary_sensor.smoke_small_bedroom_smoke:
   friendly_name: Small Bedroom
   device_class: smoke
-sensor.0x00158d0004117f6f_battery:
+sensor.smoke_small_bedroom_battery:
   friendly_name: Smoke Alarm Small Bedroom
   device_class: battery
+
 
 binary_sensor.lr_smoke_detected:
   friendly_name: Living Room

@@ -20,7 +20,7 @@ cards:
       - binary_sensor.contact_back_door_contact
   - type: entities
     entities:
-      - binary_sensor.0x00158d0003612f9b_smoke
+      - binary_sensor.smoke_living_room_smoke
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config

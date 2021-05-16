@@ -54,7 +54,7 @@ cards:
             - input_number.back_of_property_illuminance_threshold
 
   - type: entity-button
-    entity: binary_sensor.0x00158d0003612f9b_smoke
+    entity: binary_sensor.smoke_living_room_smoke
     show_icon: false
     tap_action:
         action: call-service
@@ -62,7 +62,7 @@ cards:
         service_data:
           entity_id: automation.smoke_alarm_lr_test
   - type: entity-button
-    entity: binary_sensor.0x00158d00045cd482_smoke
+    entity: binary_sensor.smoke_large_bedroom_smoke
     show_icon: false
     tap_action:
         action: call-service
@@ -70,7 +70,7 @@ cards:
         service_data:
           entity_id: automation.smoke_alarm_lb_test
   - type: entity-button
-    entity: binary_sensor.0x00158d0004117f6f_smoke
+    entity: binary_sensor.smoke_small_bedroom_smoke
     show_icon: false
     tap_action:
         action: call-service

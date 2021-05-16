@@ -40,7 +40,7 @@
     - service: mqtt.publish
       data:
         payload: "{\"selftest\": \"\"}"
-        topic: zigbee2mqtt/0x00158d0003612f9b/set
+        topic: zigbee2mqtt/smoke_living_room/set
     - service: homeassistant.turn_on
       entity_id: binary_sensor.lr_smoke_detected
 
@@ -54,7 +54,7 @@
     - service: mqtt.publish
       data:
         payload: "{\"selftest\": \"\"}"
-        topic: zigbee2mqtt/0x00158d00045cd482/set
+        topic: zigbee2mqtt/smoke_large_bedroom/set
     - service: homeassistant.turn_on
       entity_id: binary_sensor.lb_smoke_detected
 
@@ -68,6 +68,6 @@
     - service: mqtt.publish
       data:
         payload: "{\"selftest\": \"\"}"
-        topic: zigbee2mqtt/0x00158d0004117f6f/set
+        topic: zigbee2mqtt/smoke_small_bedroom/set
     - service: homeassistant.turn_on
       entity_id: binary_sensor.sb_smoke_detected
