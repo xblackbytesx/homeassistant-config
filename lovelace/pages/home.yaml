@@ -16,13 +16,13 @@ cards:
   - type: entities
     title: Power Sockets
     entities:
-      - switch.power_tv_cabinet_switch
-      - switch.power_black_cabinet_switch
-      - switch.power_exterior_switch
-      - switch.power_large_bedroom_switch
-      - switch.power_small_bedroom_switch
-      - switch.power_attic_dryer_switch
-      - switch.power_office_desks_switch
+      - switch.power_tv_cabinet
+      - switch.power_black_cabinet
+      - switch.power_exterior
+      - switch.power_large_bedroom
+      - switch.power_small_bedroom
+      - switch.power_attic_dryer
+      - switch.power_office_desks
       - light.dimmable_socket_one
       # - light.dimmable_socket_two
   - type: conditional

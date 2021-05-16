@@ -4,7 +4,7 @@ group.all_automations:
 
 # Power sockets
 # 0x000d6ffffedad23c
-switch.power_tv_cabinet_switch:
+switch.power_tv_cabinet:
   friendly_name: TV Cabinet
   icon: mdi:television-classic
 binary_sensor.power_tv_cabinet_update_available:
@@ -14,7 +14,7 @@ sensor.power_tv_cabinet_linkquality:
 
 
 # 0x000d6ffffea6df64
-switch.power_black_cabinet_switch:
+switch.power_black_cabinet:
   friendly_name: Black Cabinet
   icon: mdi:power-socket-eu
 binary_sensor.power_black_cabinet_update_available:
@@ -24,7 +24,7 @@ sensor.power_black_cabinet_linkquality:
 
 
 # 0x000d6ffffea6e967
-switch.power_exterior_switch:
+switch.power_exterior:
   friendly_name: Exterior lighting
   icon: mdi:power-socket-eu
 binary_sensor.power_exterior_update_available:
@@ -34,7 +34,7 @@ sensor.power_exterior_linkquality:
 
 
 # 0x000d6ffffedaf667
-switch.power_large_bedroom_switch:
+switch.power_large_bedroom:
   friendly_name: Large bedroom
   icon: mdi:television-classic
 binary_sensor.power_large_bedroom_update_available:
@@ -44,7 +44,7 @@ sensor.power_large_bedroom_linkquality:
 
 
 # 0x086bd7fffe5185b6
-switch.power_large_bedroom_fan_switch:
+switch.power_large_bedroom_fan:
   friendly_name: Large bedroom Fan
   icon: mdi:fan
 binary_sensor.power_large_bedroom_fan_update_available:
@@ -54,7 +54,7 @@ sensor.power_large_bedroom_fan_linkquality:
 
 
 # 0x000d6ffffedc5e05
-switch.power_small_bedroom_switch:
+switch.power_small_bedroom:
   friendly_name: Small bedroom
   icon: mdi:power-socket-eu
 binary_sensor.power_small_bedroom_update_available:
@@ -64,7 +64,7 @@ sensor.power_small_bedroom_linkquality:
 
 
 # 0x000b3cfffef7b582
-switch.power_small_bedroom_fan_switch:
+switch.power_small_bedroom_fan:
   friendly_name: Small bedroom Fan
   icon: mdi:fan
 binary_sensor.power_small_bedroom_fan_update_available:
@@ -74,7 +74,7 @@ sensor.power_small_bedroom_fan_linkquality:
 
 
 # 0xccccccfffeb221dd
-switch.power_master_bedroom_fan_l_switch:
+switch.power_master_bedroom_fan_l:
   friendly_name: Master bedroom Fan | L
   icon: mdi:fan
 binary_sensor.power_master_bedroom_fan_l_update_available:
@@ -84,7 +84,7 @@ sensor.power_master_bedroom_fan_l_linkquality:
 
 
 # 0xccccccfffeb21d81
-switch.power_master_bedroom_fan_r_switch:
+switch.power_master_bedroom_fan_r:
   friendly_name: Master bedroom Fan | R
   icon: mdi:fan
 binary_sensor.power_master_bedroom_fan_r_update_available:
@@ -94,7 +94,7 @@ sensor.power_master_bedroom_fan_r_linkquality:
 
 
 # 0x000d6ffffea7daa5
-switch.power_attic_dryer_switch:
+switch.power_attic_dryer:
   friendly_name: Attic/dryer
   icon: mdi:power-socket-eu
 binary_sensor.power_attic_dryer_update_available:
@@ -104,7 +104,7 @@ sensor.power_attic_dryer_linkquality:
 
 
 # 0x000d6ffffed9d60d
-switch.power_office_desks_switch:
+switch.power_office_desks:
   friendly_name: Office/desks
   icon: mdi:power-socket-eu
 binary_sensor.power_office_desks_update_available:

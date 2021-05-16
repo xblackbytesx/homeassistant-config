@@ -6,7 +6,7 @@ cards:
     title: Exterior switches
     entities:
       - switch.sunscreen
-      - switch.power_exterior_switch
+      - switch.power_exterior
   - type: entities
     title: Exterior covers
     show_header_toggle: false

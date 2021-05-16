@@ -14,5 +14,5 @@
 
 - name: Christmas lighting
   entities:
-    switch.power_large_bedroom_switch:
+    switch.power_large_bedroom:
       state: true

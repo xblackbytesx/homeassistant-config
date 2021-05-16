@@ -47,10 +47,10 @@
   action:
     - service: switch.turn_ion
       entity_id:
-        - switch.power_tv_cabinet_switch
-        - switch.power_black_cabinet_switch
-        - switch.power_large_bedroom_switch
-        - switch.power_small_bedroom_switch
+        - switch.power_tv_cabinet
+        - switch.power_black_cabinet
+        - switch.power_large_bedroom
+        - switch.power_small_bedroom
     - service: script.turn_on
       entity_id:
         - script.scene_sa_not_watching_tv
@@ -70,7 +70,7 @@
       command: cut_socket_one
   action:
     - service: switch.turn_off
-      entity_id: switch.power_tv_cabinet_switch
+      entity_id: switch.power_tv_cabinet
     - service: notify.notify_matrix_clean
       data:
         message: "Socket one killed!"
@@ -85,7 +85,7 @@
       command: cut_socket_two
   action:
     - service: switch.turn_off
-      entity_id: switch.power_black_cabinet_switch
+      entity_id: switch.power_black_cabinet
     - service: notify.notify_matrix_clean
       data:
         message: "Socket two killed!"
@@ -100,7 +100,7 @@
       command: cut_socket_three
   action:
     - service: switch.turn_off
-      entity_id: switch.power_exterior_switch
+      entity_id: switch.power_exterior
     - service: notify.notify_matrix_clean
       data:
         message: "Socket three killed!"
@@ -115,7 +115,7 @@
       command: cut_socket_five
   action:
     - service: switch.turn_off
-      entity_id: switch.power_large_bedroom_switch
+      entity_id: switch.power_large_bedroom
     - service: notify.notify_matrix_clean
       data:
         message: "Socket five killed!"
@@ -130,7 +130,7 @@
       command: cut_socket_six
   action:
     - service: switch.turn_off
-      entity_id: switch.power_small_bedroom_switch
+      entity_id: switch.power_small_bedroom
     - service: notify.notify_matrix_clean
       data:
         message: "Socket six killed!"
@@ -146,11 +146,11 @@
   action:
     - service: switch.turn_off
       entity_id:
-        - switch.power_tv_cabinet_switch
-        - switch.power_black_cabinet_switch
-        - switch.power_exterior_switch
-        - switch.power_large_bedroom_switch
-        - switch.power_small_bedroom_switch
+        - switch.power_tv_cabinet
+        - switch.power_black_cabinet
+        - switch.power_exterior
+        - switch.power_large_bedroom
+        - switch.power_small_bedroom
     - service: notify.notify_matrix_clean
       data:
         message: "I've cut the power as you requested!"

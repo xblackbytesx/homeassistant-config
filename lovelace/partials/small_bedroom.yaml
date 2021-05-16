@@ -16,7 +16,7 @@ cards:
         variables:
           - service: script.turn_on
           - button_1: light.lg_sb_all
-          - button_2: switch.power_small_bedroom_fan_switch
+          - button_2: switch.power_small_bedroom_fan
           - button_3: light.dimmable_socket_one
           - scene_1: script.scene_sb_night
           - scene_2: script.scene_sb_day

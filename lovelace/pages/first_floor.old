@@ -11,7 +11,7 @@
 #   #         - type: light
 #   #           entity: light.lg_mb_all
 #   #         - type: button
-#   #           entity: switch.power_large_bedroom_fan_switch
+#   #           entity: switch.power_large_bedroom_fan
 #   #           show_name: false
 #   # - type: glance
 #   #   title: Large Bedroom
@@ -20,7 +20,7 @@
 #   #   columns: 2
 #   #   entities:
 #   #     - light.lg_mb_all
-#   #     - switch.power_large_bedroom_fan_switch
+#   #     - switch.power_large_bedroom_fan
 
 #   - type: vertical-stack
 #     title: Master Bedroom
@@ -34,8 +34,8 @@
 #             variables:
 #               - service: script.turn_on
 #               - button_1: light.lg_mb_all
-#               - button_2: switch.power_master_bedroom_fan_l_switch
-#               - button_3: switch.power_master_bedroom_fan_r_switch
+#               - button_2: switch.power_master_bedroom_fan_l
+#               - button_3: switch.power_master_bedroom_fan_r
 #               - scene_1: script.scene_mb_night
 #               - scene_2: script.scene_mb_day
 #               - scene_3: script.scene_mb_search_mode
@@ -83,8 +83,8 @@
 #             variables:
 #               - service: script.turn_on
 #               - button_1: light.lg_lb_all
-#               - button_2: switch.power_large_bedroom_fan_switch
-#               - button_3: switch.power_large_bedroom_fan_switch
+#               - button_2: switch.power_large_bedroom_fan
+#               - button_3: switch.power_large_bedroom_fan
 #               - scene_1: script.scene_lb_night
 #               - scene_2: script.scene_lb_day
 #               - scene_3: script.scene_lb_search_mode
@@ -133,8 +133,8 @@
 #             variables:
 #               - service: script.turn_on
 #               - button_1: light.lg_sb_all
-#               - button_2: switch.power_small_bedroom_fan_switch
-#               - button_3: switch.power_small_bedroom_fan_switch
+#               - button_2: switch.power_small_bedroom_fan
+#               - button_3: switch.power_small_bedroom_fan
 #               - scene_1: script.scene_sb_night
 #               - scene_2: script.scene_sb_day
 #               - scene_3: script.scene_sb_search_mode
@@ -182,12 +182,12 @@
 #   # - type: entities
 #   #   title: First floor switches
 #   #   entities:
-#   #     - switch.power_large_bedroom_switch
-#   #     - switch.power_small_bedroom_switch
-#   #     - switch.power_large_bedroom_fan_switch
-#   #     - switch.power_small_bedroom_fan_switch
-#   #     - switch.power_master_bedroom_fan_l_switch
-#   #     - switch.power_master_bedroom_fan_r_switch
+#   #     - switch.power_large_bedroom
+#   #     - switch.power_small_bedroom
+#   #     - switch.power_large_bedroom_fan
+#   #     - switch.power_small_bedroom_fan
+#   #     - switch.power_master_bedroom_fan_l
+#   #     - switch.power_master_bedroom_fan_r
 
 #   - type: conditional
 #     conditions:

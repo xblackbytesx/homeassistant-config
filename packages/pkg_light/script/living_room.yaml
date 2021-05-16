@@ -279,7 +279,7 @@ sa_tv_netflix:
   sequence:
     - service: switch.turn_on
       data:
-        entity_id: switch.power_tv_cabinet_switch
+        entity_id: switch.power_tv_cabinet
     - service: media_player.turn_on
       data:
         entity_id: media_player.yamaha_receiver
@@ -307,7 +307,7 @@ sa_tv_youtube:
   sequence:
     - service: switch.turn_on
       data:
-        entity_id: switch.power_tv_cabinet_switch
+        entity_id: switch.power_tv_cabinet
     - service: media_player.turn_on
       data:
         entity_id: media_player.yamaha_receiver
@@ -335,7 +335,7 @@ sa_tv_playstation:
   sequence:
     - service: switch.turn_on
       data:
-        entity_id: switch.power_tv_cabinet_switch
+        entity_id: switch.power_tv_cabinet
     - service: media_player.turn_on
       data:
         entity_id: media_player.yamaha_receiver
@@ -359,7 +359,7 @@ sa_tv_spotify:
   sequence:
     - service: switch.turn_on
       data:
-        entity_id: switch.power_tv_cabinet_switch
+        entity_id: switch.power_tv_cabinet
     - service: media_player.turn_on
       data:
         entity_id: media_player.yamaha_receiver

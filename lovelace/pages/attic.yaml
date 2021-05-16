@@ -27,8 +27,8 @@ cards:
   - type: entities
     title: Attic switches
     entities:
-      - switch.power_attic_dryer_switch
-      - switch.power_office_desks_switch
+      - switch.power_attic_dryer
+      - switch.power_office_desks
   - type: conditional
     conditions:
       - entity: input_boolean.advanced_config
