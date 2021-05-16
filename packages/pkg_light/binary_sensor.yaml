@@ -2,7 +2,7 @@
   sensors:
     hw_dark_enough:
       value_template: >-
-        {{ states('sensor.0x00178801020282bc_illuminance_lux')|int <= states('input_number.hw_illuminance_threshold')|int }}
+        {{ states('sensor.motion_hallway_stairs_illuminance_lux')|int <= states('input_number.hw_illuminance_threshold')|int }}
 
     toilet_dark_enough:
       value_template: >-
@@ -10,15 +10,15 @@
 
     sa_dark_enough:
       value_template: >-
-        {{ states('sensor.0x0017880102026161_illuminance_lux')|int <= states('input_number.sa_illuminance_threshold')|int }}
+        {{ states('sensor.motion_sitting_area_screen_illuminance_lux')|int <= states('input_number.sa_illuminance_threshold')|int }}
 
     kitchen_dark_enough:
       value_template: >-
-        {{ states('sensor.0x0017880102030677_illuminance_lux')|int <= states('input_number.kitchen_illuminance_threshold')|int }}
+        {{ states('sensor.motion_kitchen_back_illuminance_lux')|int <= states('input_number.kitchen_illuminance_threshold')|int }}
 
     co_dark_enough:
       value_template: >-
-        {{ states('sensor.0x00178801020357e5_illuminance_lux')|int <= states('input_number.co_illuminance_threshold')|int }}
+        {{ states('sensor.motion_corridor_illuminance_lux')|int <= states('input_number.co_illuminance_threshold')|int }}
 
     mb_dark_enough:
       value_template: >-
@@ -46,15 +46,15 @@
 
     exterior_dark_enough:
       value_template: >-
-        {{ states('sensor.0x001788010647ff92_illuminance_lux')|int <= states('input_number.ex_illuminance_threshold')| int }}
+        {{ states('sensor.motion_backyard_illuminance_lux')|int <= states('input_number.ex_illuminance_threshold')| int }}
 
     front_of_property_dark_enough:
       value_template: >-
-        {{ states('sensor.0x00178801020282bc_illuminance_lux')|int <= states('input_number.front_of_property_illuminance_threshold')| int }}
+        {{ states('sensor.motion_hallway_stairs_illuminance_lux')|int <= states('input_number.front_of_property_illuminance_threshold')| int }}
 
     back_of_property_dark_enough:
       value_template: >-
-        {{ states('sensor.0x001788010647ff92_illuminance_lux')|int <= states('input_number.back_of_property_illuminance_threshold')| int }}
+        {{ states('sensor.motion_backyard_illuminance_lux')|int <= states('input_number.back_of_property_illuminance_threshold')| int }}
 
     # hw_eligable_for_light:
     #   value_template: >-

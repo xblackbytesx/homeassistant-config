@@ -1,4 +1,4 @@
-sensor.0x00178801020357e5_temperature:
+sensor.motion_corridor_temperature:
   friendly_name: Kitchen
 sensor.0x00158d00036bffea_temperature:
   friendly_name: Master bedroom

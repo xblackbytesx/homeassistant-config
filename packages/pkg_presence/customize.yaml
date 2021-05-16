@@ -24,19 +24,19 @@ binary_sensor.bathroom_motion_detected:
 
 
 # 0x00178801020260c3
-binary_sensor.0x00178801020260c3_occupancy:
+binary_sensor.motion_hallway_door_occupancy:
   friendly_name: Hallway/door
   device_class: motion
-sensor.0x00178801020260c3_battery:
+sensor.motion_hallway_door_battery:
   friendly_name: Motion sensor Hallway/door
   device_class: battery
 
 
 # 0x00178801020282bc
-binary_sensor.0x00178801020282bc_occupancy:
+binary_sensor.motion_hallway_stairs_occupancy:
   friendly_name: Hallway/stairs
   device_class: motion
-sensor.0x00178801020282bc_battery:
+sensor.motion_hallway_stairs_battery:
   friendly_name: Motion sensor Hallway/stairs
   device_class: battery
 
@@ -51,10 +51,10 @@ sensor.motion_toilet_battery:
 
 
 # 0x0017880102026161
-binary_sensor.0x0017880102026161_occupancy:
+binary_sensor.motion_sitting_area_screen_occupancy:
   friendly_name: Sitting area/screen
   device_class: motion
-sensor.0x0017880102026161_battery:
+sensor.motion_sitting_area_screen_battery:
   friendly_name: Motion sensor Sitting area/screen
   device_class: battery
 
@@ -68,15 +68,6 @@ sensor.motion_sitting_area_closet_battery:
   device_class: battery
 
 
-# 0x0017880102030677
-binary_sensor.0x0017880102030677_occupancy:
-  friendly_name: Sitting Area wall
-  device_class: motion
-sensor.0x0017880102030677_battery:
-  friendly_name: Motion sensor Sitting area/wall
-  device_class: battery
-
-
 # 0x00158d00033a43ef
 binary_sensor.motion_kitchen_front_occupancy:
   friendly_name: Kitchen/front
@@ -87,19 +78,19 @@ sensor.motion_kitchen_front_battery:
 
 
 # 0x0017880102030677
-binary_sensor.0x0017880102030677_occupancy:
+binary_sensor.motion_kitchen_back_occupancy:
   friendly_name: Kitchen/back
   device_class: motion
-sensor.0x0017880102030677_battery:
+sensor.motion_kitchen_back_battery:
   friendly_name: Motion sensor Kitchen/back
   device_class: battery
 
 
 # 0x00178801020357e5
-binary_sensor.0x00178801020357e5_occupancy:
+binary_sensor.motion_corridor_occupancy:
   friendly_name: Corridor
   device_class: motion
-sensor.0x00178801020357e5_battery:
+sensor.motion_corridor_battery:
   friendly_name: Motion sensor Corridor
   device_class: battery
 
@@ -204,10 +195,10 @@ sensor.motion_office_front_battery:
 
 
 # 0x001788010647ff92
-binary_sensor.0x001788010647ff92_occupancy:
+binary_sensor.motion_backyard_occupancy:
   friendly_name: Backyard
   device_class: motion
-sensor.0x001788010647ff92_battery:
+sensor.motion_backyard_battery:
   friendly_name: Motion sensor Backyard
   device_class: battery
 

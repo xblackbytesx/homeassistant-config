@@ -6,9 +6,9 @@ cards:
   - type: entities
     title: Ground floor switches
     entities:
-      - switch.0x000d6ffffedad23c_switch
-      - switch.0x000d6ffffea6df64_switch
-      - switch.0x000d6ffffea6e967_switch
+      - switch.power_tv_cabinet_switch
+      - switch.power_black_cabinet_switch
+      - switch.power_exterior_switch
       - light.dimmable_socket_one
       - switch.beamer_screen
   - type: entities

@@ -1,10 +1,10 @@
-sensor.0x00178801020282bc_temperature:
+sensor.motion_hallway_stairs_temperature:
   friendly_name: Hallway
-sensor.0x0017880102030677_temperature:
+sensor.motion_kitchen_back_temperature:
   friendly_name: Kitchen
-sensor.0x0017880102026161_temperature:
+sensor.motion_sitting_area_screen_temperature:
   friendly_name: Sitting Area
-sensor.0x00178801020357e5_temperature:
+sensor.motion_corridor_temperature:
   friendly_name: Corridor
 sensor.0x00158d00036bffea_temperature:
   friendly_name: Large bedroom
