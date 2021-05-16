@@ -6,7 +6,7 @@ scene_ex_night:
         brightness_pct: 45
         transition: 2
     - service: homeassistant.turn_on
-      entity_id: switch.0x000d6ffffea6e967_switch
+      entity_id: switch.power_exterior_switch
 
 scene_ex_day:
   sequence:
@@ -16,7 +16,7 @@ scene_ex_day:
         brightness_pct: 45
         transition: 2
     - service: homeassistant.turn_on
-      entity_id: switch.0x000d6ffffea6e967_switch
+      entity_id: switch.power_exterior_switch
 
 
 scene_ex_smart:

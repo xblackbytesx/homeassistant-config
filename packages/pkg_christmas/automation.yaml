@@ -53,4 +53,4 @@
   action:
     service: switch.turn_off
     entity_id:
-      - switch.0x000d6ffffedaf667_switch
+      - switch.power_large_bedroom_switch

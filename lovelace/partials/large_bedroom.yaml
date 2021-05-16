@@ -16,8 +16,8 @@ cards:
         variables:
           - service: script.turn_on
           - button_1: light.lg_lb_all
-          - button_2: switch.0x086bd7fffe5185b6_switch
-          - button_3: switch.0x000d6ffffedaf667_switch
+          - button_2: switch.power_large_bedroom_fan_switch
+          - button_3: switch.power_large_bedroom_switch
           - scene_1: script.scene_lb_night
           - scene_2: script.scene_lb_day
           - scene_3: script.scene_lb_search_mode

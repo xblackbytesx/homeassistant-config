@@ -1,105 +1,117 @@
 group.all_automations:
   hidden: false
 
+
 # Power sockets
-# Socket 1
-switch.0x000d6ffffedad23c_switch:
+# 0x000d6ffffedad23c
+switch.power_tv_cabinet_switch:
   friendly_name: TV Cabinet
   icon: mdi:television-classic
-binary_sensor.0x000d6ffffedad23c_update_available:
+binary_sensor.power_tv_cabinet_update_available:
   friendly_name: Tradfri Outlet TV Cabinet
-sensor.0x000d6ffffedad23c_linkquality:
+sensor.power_tv_cabinet_linkquality:
   friendly_name: Tradfri Outlet TV Cabinet
 
-#socket 2
-switch.0x000d6ffffea6df64_switch:
+
+# 0x000d6ffffea6df64
+switch.power_black_cabinet_switch:
   friendly_name: Black Cabinet
   icon: mdi:power-socket-eu
-binary_sensor.0x000d6ffffea6df64_update_available:
+binary_sensor.power_black_cabinet_update_available:
   friendly_name: Tradfri Outlet Black Cabinet
-sensor.0x000d6ffffea6df64_linkquality:
+sensor.power_black_cabinet_linkquality:
   friendly_name: Tradfri Outlet Black Cabinet
 
-# Socket 3
-switch.0x000d6ffffea6e967_switch:
+
+# 0x000d6ffffea6e967
+switch.power_exterior_switch:
   friendly_name: Exterior lighting
   icon: mdi:power-socket-eu
-binary_sensor.0x000d6ffffea6e967_update_available:
+binary_sensor.power_exterior_update_available:
   friendly_name: Tradfri Outlet Exterior
-sensor.0x000d6ffffea6e967_linkquality:
+sensor.power_exterior_linkquality:
   friendly_name: Tradfri Outlet Exterior
 
-# Socket 5
-switch.0x000d6ffffedaf667_switch:
+
+# 0x000d6ffffedaf667
+switch.power_large_bedroom_switch:
   friendly_name: Large bedroom
   icon: mdi:television-classic
-binary_sensor.0x000d6ffffedaf667_update_available:
+binary_sensor.power_large_bedroom_update_available:
   friendly_name: Tradfri Outlet Large bedroom
-sensor.0x000d6ffffedaf667_linkquality:
+sensor.power_large_bedroom_linkquality:
   friendly_name: Tradfri Outlet Large bedroom
 
-# Socket
-switch.0x086bd7fffe5185b6_switch:
+
+# 0x086bd7fffe5185b6
+switch.power_large_bedroom_fan_switch:
   friendly_name: Large bedroom Fan
   icon: mdi:fan
-binary_sensor.0x086bd7fffe5185b6_update_available:
+binary_sensor.power_large_bedroom_fan_update_available:
   friendly_name: Tradfri Outlet Large bedroom Fan
-sensor.0x086bd7fffe5185b6_linkquality:
+sensor.power_large_bedroom_fan_linkquality:
   friendly_name: Tradfri Outlet Large bedroom Fan
 
-# Socket 6
-switch.0x000d6ffffedc5e05_switch:
+
+# 0x000d6ffffedc5e05
+switch.power_small_bedroom_switch:
   friendly_name: Small bedroom
   icon: mdi:power-socket-eu
-binary_sensor.0x000d6ffffedc5e05_update_available:
+binary_sensor.power_small_bedroom_update_available:
   friendly_name: Tradfri Outlet Small bedroom
-sensor.0x000d6ffffedc5e05_linkquality:
+sensor.power_small_bedroom_linkquality:
   friendly_name: Tradfri Outlet Small bedroom
 
-# Socket
-switch.0x000b3cfffef7b582_switch:
+
+# 0x000b3cfffef7b582
+switch.power_small_bedroom_fan_switch:
   friendly_name: Small bedroom Fan
   icon: mdi:fan
-binary_sensor.0x000b3cfffef7b582_update_available:
+binary_sensor.power_small_bedroom_fan_update_available:
   friendly_name: Tradfri Outlet Small bedroom Fan
-sensor.0x000b3cfffef7b582_linkquality:
+sensor.power_small_bedroom_fan_linkquality:
   friendly_name: Tradfri Outlet Small bedroom Fan
 
-# Socket
-switch.0xccccccfffeb221dd_switch:
+
+# 0xccccccfffeb221dd
+switch.power_master_bedroom_fan_l_switch:
   friendly_name: Master bedroom Fan | L
   icon: mdi:fan
-binary_sensor.0xccccccfffeb221dd_update_available:
+binary_sensor.power_master_bedroom_fan_l_update_available:
   friendly_name: Tradfri Outlet Master bedroom Fan | L
-sensor.0xccccccfffeb221dd_linkquality:
+sensor.power_master_bedroom_fan_l_linkquality:
   friendly_name: Tradfri Outlet Master bedroom Fan | L
 
-# Socket
-switch.0xccccccfffeb21d81_switch:
+
+# 0xccccccfffeb21d81
+switch.power_master_bedroom_fan_r_switch:
   friendly_name: Master bedroom Fan | R
   icon: mdi:fan
-binary_sensor.0xccccccfffeb21d81_update_available:
+binary_sensor.power_master_bedroom_fan_r_update_available:
   friendly_name: Tradfri Outlet Master bedroom Fan | R
-sensor.0xccccccfffeb21d81_linkquality:
+sensor.power_master_bedroom_fan_r_linkquality:
   friendly_name: Tradfri Outlet Master bedroom Fan | R
 
-# Socket
-switch.0x000d6ffffea7daa5_switch:
+
+# 0x000d6ffffea7daa5
+switch.power_attic_dryer_switch:
   friendly_name: Attic/dryer
   icon: mdi:power-socket-eu
-binary_sensor.0x000d6ffffea7daa5_update_available:
+binary_sensor.power_attic_dryer_update_available:
   friendly_name: Tradfri Outlet Attic/Dryer
-sensor.0x000d6ffffea7daa5_linkquality:
+sensor.power_attic_dryer_linkquality:
   friendly_name: Tradfri Outlet Attic/Dryer
 
-# Socket
-switch.0x000d6ffffed9d60d_switch:
+
+# 0x000d6ffffed9d60d
+switch.power_office_desks_switch:
   friendly_name: Office/desks
   icon: mdi:power-socket-eu
-binary_sensor.0x000d6ffffed9d60d_update_available:
+binary_sensor.power_office_desks_update_available:
   friendly_name: Tradfri Outlet Office/Desks
-sensor.0x000d6ffffed9d60d_linkquality:
+sensor.power_office_desks_linkquality:
   friendly_name: Tradfri Outlet Office/Desks
+
 
 # Battery status
 sensor.0x00158d000313127e_battery:

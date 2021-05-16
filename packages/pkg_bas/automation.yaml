@@ -26,9 +26,9 @@
     data_template:
       entity_id: >
         {% if trigger_entity_id == 'binary_sensor.kitchen_desired_temperature' %}
-          switch.0x00178801020357e5_switch
+          switch.motion_corridor_switch
         {% elif trigger_entity_id == 'binary_sensor.master_bedroom_desired_temperature' %}
-          switch.0x00178801020357e5_switch
+          switch.motion_corridor_switch
         {% elif trigger_entity_id == 'binary_sensor.guest_bedroom_desired_temperature' %}
-          switch.0x00178801020357e5_switch
+          switch.motion_corridor_switch
         {% endif %}

@@ -395,10 +395,10 @@ script.scene_office_reset_default:
 ### ILLUMINATION SENSORS ###
 ############################
 
-sensor.0x00178801020260c3_illuminance:
+sensor.motion_hallway_door_illuminance:
   friendly_name: Hallway/door
   device_class: illuminance
-sensor.0x00178801020282bc_illuminance:
+sensor.motion_hallway_stairs_illuminance:
   friendly_name: Hallway/stairs
   device_class: illuminance
 sensor.motion_toilet_illuminance:
@@ -410,7 +410,7 @@ sensor.sa_motion_detected:
 sensor.kitchen_motion_detected:
   friendly_name: Kitchen
   device_class: illuminance
-sensor.0x0017880102026161_illuminance:
+sensor.motion_sitting_area_screen_illuminance:
   friendly_name: Sitting area/screen
   device_class: illuminance
 sensor.motion_sitting_area_closet_illuminance:
@@ -419,10 +419,10 @@ sensor.motion_sitting_area_closet_illuminance:
 sensor.motion_kitchen_front_illuminance:
   friendly_name: Kitchen/front
   device_class: illuminance
-sensor.0x0017880102030677_illuminance:
+sensor.motion_kitchen_back_illuminance:
   friendly_name: Kitchen/back
   device_class: illuminance
-sensor.0x00178801020357e5_illuminance:
+sensor.motion_corridor_illuminance:
   friendly_name: Corridor
   device_class: illuminance
 sensor.co_motion_detected:

@@ -11,7 +11,7 @@
 #   #         - type: light
 #   #           entity: light.lg_mb_all
 #   #         - type: button
-#   #           entity: switch.0x086bd7fffe5185b6_switch
+#   #           entity: switch.power_large_bedroom_fan_switch
 #   #           show_name: false
 #   # - type: glance
 #   #   title: Large Bedroom
@@ -20,7 +20,7 @@
 #   #   columns: 2
 #   #   entities:
 #   #     - light.lg_mb_all
-#   #     - switch.0x086bd7fffe5185b6_switch
+#   #     - switch.power_large_bedroom_fan_switch
 
 #   - type: vertical-stack
 #     title: Master Bedroom
@@ -34,8 +34,8 @@
 #             variables:
 #               - service: script.turn_on
 #               - button_1: light.lg_mb_all
-#               - button_2: switch.0xccccccfffeb221dd_switch
-#               - button_3: switch.0xccccccfffeb21d81_switch
+#               - button_2: switch.power_master_bedroom_fan_l_switch
+#               - button_3: switch.power_master_bedroom_fan_r_switch
 #               - scene_1: script.scene_mb_night
 #               - scene_2: script.scene_mb_day
 #               - scene_3: script.scene_mb_search_mode
@@ -83,8 +83,8 @@
 #             variables:
 #               - service: script.turn_on
 #               - button_1: light.lg_lb_all
-#               - button_2: switch.0x086bd7fffe5185b6_switch
-#               - button_3: switch.0x086bd7fffe5185b6_switch
+#               - button_2: switch.power_large_bedroom_fan_switch
+#               - button_3: switch.power_large_bedroom_fan_switch
 #               - scene_1: script.scene_lb_night
 #               - scene_2: script.scene_lb_day
 #               - scene_3: script.scene_lb_search_mode
@@ -133,8 +133,8 @@
 #             variables:
 #               - service: script.turn_on
 #               - button_1: light.lg_sb_all
-#               - button_2: switch.0x000b3cfffef7b582_switch
-#               - button_3: switch.0x000b3cfffef7b582_switch
+#               - button_2: switch.power_small_bedroom_fan_switch
+#               - button_3: switch.power_small_bedroom_fan_switch
 #               - scene_1: script.scene_sb_night
 #               - scene_2: script.scene_sb_day
 #               - scene_3: script.scene_sb_search_mode
@@ -166,7 +166,7 @@
 #   # - type: custom:mini-graph-card
 #   #   name: Temperature
 #   #   entities:
-#   #     - sensor.0x00178801020357e5_temperature
+#   #     - sensor.motion_corridor_temperature
 #   #     - !secret temperature_lb
 #   #     - sensor.0x00158d0004453420_temperature
 #   # - type: custom:mini-graph-card
@@ -182,12 +182,12 @@
 #   # - type: entities
 #   #   title: First floor switches
 #   #   entities:
-#   #     - switch.0x000d6ffffedaf667_switch
-#   #     - switch.0x000d6ffffedc5e05_switch
-#   #     - switch.0x086bd7fffe5185b6_switch
-#   #     - switch.0x000b3cfffef7b582_switch
-#   #     - switch.0xccccccfffeb221dd_switch
-#   #     - switch.0xccccccfffeb21d81_switch
+#   #     - switch.power_large_bedroom_switch
+#   #     - switch.power_small_bedroom_switch
+#   #     - switch.power_large_bedroom_fan_switch
+#   #     - switch.power_small_bedroom_fan_switch
+#   #     - switch.power_master_bedroom_fan_l_switch
+#   #     - switch.power_master_bedroom_fan_r_switch
 
 #   - type: conditional
 #     conditions:
