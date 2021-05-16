@@ -247,7 +247,7 @@
         target:
           entity_id: switch.0x000d6ffffea6df64_switch
 - id: '1618671825914'
-  alias: SA | Lights
+  alias: SA | Smart Scene
   description: ''
   trigger:
   - platform: state
@@ -340,4 +340,99 @@
     - service: script.turn_on
       target:
         entity_id: script.scene_ex_smart
+  mode: single
+- id: '1618832529405'
+  alias: LB | Fan | Generic Ikea Remote Control
+  description: ''
+  use_blueprint:
+    path: pavax/z2m-ikea-remote-controls.yaml
+    input:
+      remote: sensor.0x680ae2fffe4b23fd_action
+      on_button_short:
+      - type: turn_on
+        device_id: 2f5a54dfc2cf4ffe85023b7f0fb89ef8
+        entity_id: switch.0x086bd7fffe5185b6_switch
+        domain: switch
+      off_button_short:
+      - type: turn_off
+        device_id: 2f5a54dfc2cf4ffe85023b7f0fb89ef8
+        entity_id: switch.0x086bd7fffe5185b6_switch
+        domain: switch
+- id: '1618832780984'
+  alias: SB | Fan | Generic Ikea Remote Control
+  description: ''
+  use_blueprint:
+    path: pavax/z2m-ikea-remote-controls.yaml
+    input:
+      remote: sensor.0x680ae2fffeaa1661_action
+      on_button_short:
+      - type: turn_on
+        device_id: 97b88140e062437ba546e3b5936bf4bd
+        entity_id: switch.0x000b3cfffef7b582_switch
+        domain: switch
+      off_button_short:
+      - type: turn_off
+        device_id: 97b88140e062437ba546e3b5936bf4bd
+        entity_id: switch.0x000b3cfffef7b582_switch
+        domain: switch
+- id: '1618849119911'
+  alias: LB | Auto light off
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.lb_motion_detected
+    to: 'on'
+    from: 'off'
+  - platform: state
+    entity_id: binary_sensor.lb_motion_detected
+    from: 'on'
+    to: 'off'
+    for: 00:10:00
+  - platform: state
+    entity_id: binary_sensor.lb_dark_enough
+    from: 'off'
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.lb_dark_enough
+    from: 'on'
+    to: 'off'
+    for: 00:05:00
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: and
+        conditions:
+        - condition: state
+          entity_id: binary_sensor.lb_dark_enough
+          state: 'on'
+        - condition: state
+          entity_id: binary_sensor.lb_motion_detected
+          state: 'on'
+      sequence:
+      - service: script.turn_on
+        target:
+          entity_id: script.scene_lb_smart
+    - conditions:
+      - condition: and
+        conditions:
+        - condition: state
+          entity_id: binary_sensor.lb_motion_detected
+          state: 'off'
+        - condition: state
+          entity_id: binary_sensor.allow_turning_off_bedroom_lights
+          state: 'on'
+      - condition: and
+        conditions:
+        - condition: state
+          entity_id: binary_sensor.lb_dark_enough
+          state: 'off'
+        - condition: state
+          entity_id: binary_sensor.allow_turning_off_bedroom_lights
+          state: 'on'
+      sequence:
+      - service: light.turn_off
+        target:
+          entity_id: light.lg_lb_all
+    default: []
   mode: single
