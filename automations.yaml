@@ -207,7 +207,7 @@
   use_blueprint:
     path: pavax/z2m-ikea-remote-controls.yaml
     input:
-      remote: sensor.0xec1bbdfffed45ff8_action
+      remote: sensor.switch_attic_dryer_action
       on_button_short:
       - service: switch.turn_on
         target:

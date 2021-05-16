@@ -117,20 +117,35 @@ sensor.power_office_desks_linkquality:
 sensor.0x00158d000313127e_battery:
   friendly_name: Vibration sensor 1
   device_class: battery
+
+
 sensor.0x00158d000319ad0f_battery:
   friendly_name: Vibration sensor 2
   device_class: battery
+
+
 sensor.0xccccccfffe40b07b_battery:
   friendly_name: Tradfri remote
   device_class: battery
+
+
 sensor.0x00158d00027c3536_battery:
   friendly_name: Aqara switch 1
   device_class: battery
+
+
 sensor.0x00158d000404f97e_battery:
   friendly_name: Aqara switch 2
   device_class: battery
-sensor.0xec1bbdfffed45ff8_battery:
-  friendly_name: Tradfri on/off switch 1
+
+
+# 0xec1bbdfffed45ff8
+sensor.switch_attic_dryer_click:
+  friendly_name: Attic/dryer
+sensor.switch_attic_dryer_action:
+  friendly_name: Attic/dryer
+sensor.switch_attic_dryer_battery:
+  friendly_name: Attic/dryer
   device_class: battery
 
 
