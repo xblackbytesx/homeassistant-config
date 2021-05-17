@@ -60,11 +60,20 @@ sensor.motion_sitting_area_screen_battery:
 
 
 # 0x00158d00034911fc
-binary_sensor.motion_sitting_area_closet_occupancy:
-  friendly_name: Sitting area/closet
+binary_sensor.motion_sitting_area_closet_l_occupancy:
+  friendly_name: Sitting area/closet Left
   device_class: motion
-sensor.motion_sitting_area_closet_battery:
-  friendly_name: Motion sensor Sitting area/closet
+sensor.motion_sitting_area_closet_l_battery:
+  friendly_name: Motion sensor Sitting area/closet Left
+  device_class: battery
+
+
+# 0x00158d00067919e7
+binary_sensor.motion_sitting_area_closet_r_occupancy:
+  friendly_name: Sitting area/closet Right
+  device_class: motion
+sensor.motion_sitting_area_closet_r_battery:
+  friendly_name: Motion sensor Sitting area/closet Right
   device_class: battery
 
 

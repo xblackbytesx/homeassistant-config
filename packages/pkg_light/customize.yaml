@@ -413,7 +413,7 @@ sensor.kitchen_motion_detected:
 sensor.motion_sitting_area_screen_illuminance:
   friendly_name: Sitting area/screen
   device_class: illuminance
-sensor.motion_sitting_area_closet_illuminance:
+sensor.motion_sitting_area_closet_l_illuminance:
   friendly_name: Sitting area/closet
   device_class: illuminance
 sensor.motion_kitchen_front_illuminance:
