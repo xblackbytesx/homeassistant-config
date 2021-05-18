@@ -50,6 +50,15 @@ sensor.motion_toilet_battery:
   device_class: battery
 
 
+# 0x00158d00068ba758
+binary_sensor.motion_sitting_area_black_cabinet_occupancy:
+  friendly_name: Sitting area/black cabinet
+  device_class: motion
+sensor.motion_sitting_area__black_cabinet_battery:
+  friendly_name: Motion sensor Sitting area/black cabinet
+  device_class: battery
+
+
 # 0x0017880102026161
 binary_sensor.motion_sitting_area_screen_occupancy:
   friendly_name: Sitting area/screen

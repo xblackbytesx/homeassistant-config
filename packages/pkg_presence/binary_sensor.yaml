@@ -24,7 +24,8 @@
 
     sa_motion_detected:
       value_template: >-
-        {{ is_state('binary_sensor.motion_sitting_area_screen_occupancy', 'on')
+        {{ is_state('binary_sensor.motion_sitting_area_black_cabinet_occupancy', 'on')
+        or is_state('binary_sensor.motion_sitting_area_screen_occupancy', 'on')
         or is_state('binary_sensor.motion_sitting_area_closet_l_occupancy', 'on') 
         or is_state('binary_sensor.motion_sitting_area_closet_r_occupancy', 'on') }}
 
