@@ -56,7 +56,8 @@
 
     lb_motion_detected:
       value_template: >-
-        {{ is_state('binary_sensor.motion_large_bedroom_occupancy', 'on') }}
+        {{ is_state('binary_sensor.motion_large_bedroom_closet_occupancy', 'on') 
+           or is_state('binary_sensor.motion_large_bedroom_bed_occupancy', 'on') }}
 
     sb_motion_detected:
       value_template: >-

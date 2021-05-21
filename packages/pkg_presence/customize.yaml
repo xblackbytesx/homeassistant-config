@@ -159,11 +159,20 @@ sensor.motion_bathroom_shower_battery:
 
 
 # 0x00158d00044d216c
-binary_sensor.motion_large_bedroom_occupancy:
+binary_sensor.motion_large_bedroom_closet_occupancy:
   friendly_name: Large Bedroom
   device_class: motion
-sensor.motion_large_bedroom_battery:
+sensor.motion_large_bedroom_closet_battery:
   friendly_name: Motion sensor Large Bedroom
+  device_class: battery
+
+
+# 0x00158d0006796377
+binary_sensor.motion_large_bedroom_bed_occupancy:
+  friendly_name: Large Bedroom/bed
+  device_class: motion
+sensor.motion_large_bedroom_bed_battery:
+  friendly_name: Motion sensor Large Bedroom/bed
   device_class: battery
 
 

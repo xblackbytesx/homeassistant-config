@@ -30,7 +30,7 @@
 
     lb_dark_enough:
       value_template: >-
-        {{ states('sensor.motion_large_bedroom_illuminance')|int <= 15 }}
+        {{ states('sensor.motion_large_bedroom_closet_illuminance')|int <= 15 }}
 
     sb_dark_enough:
       value_template: >-
