@@ -65,7 +65,7 @@
         
     attic_motion_detected:
       value_template: >-
-        {{ is_state('binary_sensor.0x00158d00036b62d0_occupancy', 'on')
+        {{ is_state('binary_sensor.motion_attic_stairs_occupancy', 'on')
            or is_state('binary_sensor.motion_attic_front_occupancy', 'on') }}
 
     office_motion_detected:

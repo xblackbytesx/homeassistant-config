@@ -440,9 +440,11 @@ sensor.motion_bathroom_front_illuminance:
 sensor.bathroom_motion_detected:
   friendly_name: Bathroom
   device_class: illuminance
-sensor.0x00158d00036b62d0_illuminance:
+
+sensor.motion_attic_stairs_illuminance:
   friendly_name: Attic/stairs
   device_class: illuminance
+  
 sensor.motion_attic_front_illuminance:
   friendly_name: Attic/front
   device_class: illuminance
