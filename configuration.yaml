@@ -85,4 +85,8 @@ homeassistant:
     # christmas_package: !include packages/pkg_christmas/all.yaml
     coronavirus_package: !include packages/pkg_coronavirus/all.yaml
 
+octoprint:
+  host: !secret octoprint_host
+  api_key: !secret octoprint_api_key
+
 automation: !include automations.yaml
