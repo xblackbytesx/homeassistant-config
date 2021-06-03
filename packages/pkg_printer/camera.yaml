@@ -1,0 +1,8 @@
+# - platform: mjpeg
+#   name: OctoPrint MJPEG
+#   still_image_url: !secret octoprint_snapshot_url
+#   mjpeg_url: !secret octoprint_stream_url
+
+- platform: ffmpeg
+  name: Octoprint
+  input: !secret octoprint_stream_url
