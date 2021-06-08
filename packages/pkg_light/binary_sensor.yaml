@@ -56,46 +56,33 @@
       value_template: >-
         {{ states('sensor.motion_backyard_illuminance_lux')|int <= states('input_number.back_of_property_illuminance_threshold')| int }}
 
-    # hw_eligable_for_light:
-    #   value_template: >-
-    #     {{ is_state('binary_sensor.hw_motion_detected', 'on')
-    #         and is_state('binary_sensor.hw_dark_enough', 'on') }}
+    time_for_dim_scenes:
+      value_template: >-
+        {{ is_state('binary_sensor.early_night', 'on')
+           or is_state('binary_sensor.late_night', 'on') }}
 
-    # toilet_eligable_for_light:
-    #   value_template: >-
-    #     {{ is_state('binary_sensor.toilet_motion_detected', 'on')
-    #         and is_state('binary_sensor.toilet_dark_enough', 'on') }}
+    sa_allow_media_status_scene_switching:
+      value_template: >-
+        {{ is_state('binary_sensor.late_evening', 'on')
+           or is_state('binary_sensor.early_night', 'on')
+           or is_state('binary_sensor.late_night', 'on') }}
 
-    # sa_eligable_for_light:
-    #   value_template: >-
-    #     {{ is_state('binary_sensor.sa_motion_detected', 'on')
-    #         and is_state('binary_sensor.sa_dark_enough', 'on') }}  
-      
-    # kitchen_eligable_for_light:
-    #   value_template: >-
-    #     {{ is_state('binary_sensor.kitchen_motion_detected', 'on')
-    #         and is_state('binary_sensor.kitchen_dark_enough', 'on') }}
+    allow_exterior_lights:
+      value_template: >-
+        {{ is_state('binary_sensor.late_afternoon', 'on')
+           or is_state('binary_sensor.early_evening', 'on')
+           or is_state('binary_sensor.late_evening', 'on')
+           or is_state('binary_sensor.early_night', 'on')
+           or is_state('binary_sensor.early_morning', 'on') }}
 
-    # co_eligable_for_light:
-    #   value_template: >-
-    #     {{ is_state('binary_sensor.co_motion_detected', 'on')
-    #         and is_state('binary_sensor.co_dark_enough', 'on') }}
+    allow_turning_off_bedroom_lights:
+      value_template: >-
+        {{ is_state('binary_sensor.late_morning', 'on')
+           or is_state('binary_sensor.early_afternoon', 'on')
+           or is_state('binary_sensor.late_afternoon', 'on')
+           or is_state('binary_sensor.early_evening', 'on') }}
 
-    # bathroom_eligable_for_light:
-    #   value_template: >-
-    #     {{ is_state('binary_sensor.bathroom_motion_detected', 'on')
-    #         and is_state('binary_sensor.bathroom_dark_enough', 'on') }}
-
-    # attic_eligable_for_light:
-    #   value_template: >-
-    #     {{ is_state('binary_sensor.attic_motion_detected', 'on')
-    #         and is_state('binary_sensor.attic_dark_enough', 'on') }}
-
-    # office_eligable_for_light:
-    #   value_template: >-
-    #     {{ is_state('binary_sensor.office_motion_detected', 'on')
-    #         and is_state('binary_sensor.office_dark_enough', 'on') }}
-
-    # exterior_eligable_for_light:
-    #   value_template: >-
-    #     {{ is_state('binary_sensor.exterior_dark_enough', 'on') }}
+- platform: tod
+  name: bathroom_dim_scene
+  after: '06:29'
+  before: '09:59'
