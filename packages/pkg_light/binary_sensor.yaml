@@ -84,5 +84,5 @@
 
 - platform: tod
   name: bathroom_dim_scene
-  after: '06:29'
-  before: '09:59'
+  after: '23:00'
+  before: '6:29'
