@@ -44,7 +44,7 @@
       target_entity_scene: script.scene_hw_smart
       sensor_dark_enough: binary_sensor.hw_dark_enough
       no_motion_timeout: input_number.hw_motion_timeout
-      additional_off_entity: switch.0xec1bbdfffefd5a85
+      additional_off_entity: switch.power_hallway_mirror
 - id: '1618049197942'
   alias: CO | Dynamic scene aware motion trigger
   description: ''
