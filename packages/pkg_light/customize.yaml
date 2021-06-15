@@ -91,7 +91,7 @@ sensor.0x086bd7fffe020f14_linkquality:
 binary_sensor.0x086bd7fffe020f14_update_available:
   friendly_name: Tradfri Bulb Attic Back
 
-light.0x00178801023c1b25_light:
+light.bulb_hue_office_left:
   friendly_name: Office left
 sensor.0x00178801023c1b25_linkquality:
   friendly_name: Hue Bulb Office Left

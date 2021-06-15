@@ -22,7 +22,7 @@ cards:
       type: entities
       title: All office lights
       entities:
-        - light.0x00178801023c1b25_light
+        - light.bulb_hue_office_left
         - light.0x0017880102460013_light
   - type: entities
     title: Attic switches
