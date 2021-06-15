@@ -216,7 +216,7 @@
 #       type: entities
 #       title: Large Bedroom lighting
 #       entities:
-#         - !secret light_mb_bulb
+#         - light.bulb_hue_large_bedroom
 #   - type: conditional
 #     conditions:
 #       - entity: input_boolean.advanced_config
@@ -228,7 +228,7 @@
 #         - light.0x00178801030a3dde_light
 #         - light.0x0017880103612ccb 
 #         - light.0x00178801038e968f 
-#         - !secret light_mb_bulb
+#         - light.bulb_hue_large_bedroom
 #         - light.0x90fd9ffffeea4e5e_light
 #         - light.0x0017880102460013_light
 #         - light.ledstrip_large_bedroom

@@ -27,7 +27,7 @@ cards:
           - type: entities
             show_header_toggle: false
             entities:
-              - !secret light_mb_bulb
+              - light.bulb_hue_large_bedroom
               - light.ledstrip_large_bedroom
       - type: vertical-stack
         cards:

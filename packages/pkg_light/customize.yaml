@@ -63,11 +63,11 @@ sensor.00x90fd9ffffeea4e5e_linkquality:
 binary_sensor.0x90fd9ffffeea4e5e_update_available:
   friendly_name: Tradfri Bulb Master Bedroom
 
-!secret light_mb_bulb:
+light.bulb_hue_large_bedroom:
   friendly_name: Large bedroom
-sensor.0x00178801039d140f_linkquality:
+sensor.bulb_hue_large_bedroom_linkquality:
   friendly_name: Hue Bulb Large Bedroom
-binary_sensor.0x00178801039d140f_update_available:
+binary_sensor.bulb_hue_large_bedroom_update_available:
   friendly_name: Hue Bulb Large Bedroom
 
 !secret light_sb_bulb:
@@ -93,9 +93,9 @@ binary_sensor.0x086bd7fffe020f14_update_available:
 
 light.bulb_hue_office_left:
   friendly_name: Office left
-sensor.0x00178801023c1b25_linkquality:
+sensor.bulb_hue_office_left_linkquality:
   friendly_name: Hue Bulb Office Left
-binary_sensor.0x00178801023c1b25_update_available:
+binary_sensor.bulb_hue_office_left_update_available:
   friendly_name: Hue Bulb Office Left
 
 light.0x0017880102460013_light:

@@ -18,7 +18,7 @@ scene_lb_day:
   sequence:
     - service: light.turn_on
       data:
-        entity_id: !secret light_mb_bulb
+        entity_id: light.bulb_hue_large_bedroom
         xy_color: [0.507, 0.414]
         brightness_pct: 100
         transition: 2
@@ -73,7 +73,7 @@ scene_lb_disco_mode:
                 - 10
                 - 10
             entity_id:
-              - !secret light_mb_bulb
+              - light.bulb_hue_large_bedroom
           - service: light.turn_on
             data:
               rgb_color:
@@ -90,7 +90,7 @@ scene_lb_disco_mode:
                 - 0
                 - 255
             entity_id:
-              - !secret light_mb_bulb
+              - light.bulb_hue_large_bedroom
           - service: light.turn_on
             data:
               rgb_color:
@@ -108,7 +108,7 @@ scene_lb_disco_mode:
                 - 189
                 - 255
             entity_id:
-              - !secret light_mb_bulb
+              - light.bulb_hue_large_bedroom
           - service: light.turn_on
             data:
               rgb_color:
@@ -125,7 +125,7 @@ scene_lb_disco_mode:
                 - 255
                 - 71
             entity_id:
-              - !secret light_mb_bulb
+              - light.bulb_hue_large_bedroom
           - service: light.turn_on
             data:
               rgb_color:
@@ -143,7 +143,7 @@ scene_lb_disco_mode:
                 - 50
                 - 135
             entity_id:
-              - !secret light_mb_bulb
+              - light.bulb_hue_large_bedroom
           - service: light.turn_on
             data:
               rgb_color:
@@ -160,7 +160,7 @@ scene_lb_disco_mode:
                 - 85
                 - 255
             entity_id:
-              - !secret light_mb_bulb
+              - light.bulb_hue_large_bedroom
           - service: light.turn_on
             data:
               rgb_color:
