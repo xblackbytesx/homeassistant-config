@@ -13,7 +13,7 @@
 - platform: group
   name: LG | Toilet | All
   entities:
-    - light.0x086bd7fffe2b8f58_light
+    - light.bulb_tradfri_toilet_light
 
 - platform: group
   name: LG | SA | LED strips

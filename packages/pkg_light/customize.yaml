@@ -49,11 +49,11 @@ sensor.0x00178801030a3dde_linkquality:
 binary_sensor.0x00178801030a3dde_update_available:
   friendly_name: Hue Bulb Corridor
 
-light.0x086bd7fffe2b8f58_light:
+light.bulb_tradfri_toilet_light:
   friendly_name: Toilet
-sensor.0x086bd7fffe2b8f58_linkquality:
+sensor.bulb_tradfri_toilet_linkquality:
   friendly_name: Tradfri Bulb Toilet
-binary_sensor.0x086bd7fffe2b8f58_update_available:
+binary_sensor.bulb_tradfri_toilet_update_available:
   friendly_name: Tradfri Bulb Toilet
 
 light.0x90fd9ffffeea4e5e_light:
