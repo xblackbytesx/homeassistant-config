@@ -66,7 +66,7 @@ cards:
         - light.0x0017880104c153ff
         - light.0x001788010489c476
         - light.0x0017880104c13fde
-        - light.0x00178801081af093_light
+        - light.bulb_hue_sitting_area_l
         - light.0x00178801001f43af
         - light.0x0017880101182a59
         - light.0x001788010118b8e1 

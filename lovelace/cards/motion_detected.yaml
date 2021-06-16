@@ -53,7 +53,7 @@ card:
 #   - type: state-icon
 #     tap_action:
 #       action: toggle
-#     entity: light.0x00178801081af093_light
+#     entity: light.bulb_hue_sitting_area_l
 #     style:
 #       top: 23%
 #       right: 32.6%
