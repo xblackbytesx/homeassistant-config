@@ -55,6 +55,24 @@ sensor.contact_back_door_battery:
   device_class: battery
 
 
+# 0x00158d0006c4ce7a
+binary_sensor.contact_master_bedroom_contact:
+  friendly_name: Master bedroom window
+  device_class: window
+sensor.contact_master_bedroom_window_battery:
+  friendly_name: Contact sensor Master bedroom window
+  device_class: battery
+
+
+# 0x00158d0006bed40a
+binary_sensor.contact_large_bedroom_contact:
+  friendly_name: Large bedroom window
+  device_class: window
+sensor.contact_large_bedroom_window_battery:
+  friendly_name: Contact sensor Large bedroom window
+  device_class: battery
+
+
 automation.sec_001:
   friendly_name: SEC | Alarm Armed/Disarmed | Set Scene
 
