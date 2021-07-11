@@ -5,3 +5,5 @@ entities:
   - binary_sensor.contact_front_door_contact
   - binary_sensor.contact_kitchen_window_contact
   - binary_sensor.contact_back_door_contact
+  - binary_sensor.contact_master_bedroom_window_contact
+  - binary_sensor.contact_large_bedroom_window_contact
